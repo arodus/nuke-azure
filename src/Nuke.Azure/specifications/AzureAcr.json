@@ -1,20 +1,22 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/helm.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/network-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/pack.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/replication.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/repository.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/task.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/webhook.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/config/content-trust.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/helm/repo.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/task/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/acr/task/identity.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/repository.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/webhook.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/replication.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/pack.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/helm.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/task.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/config/content-trust.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/config/retention.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/task/timer.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/task/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/task/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/acr/helm/repo.yml"
   ],
   "name": "AzureAcr",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cli-latest",
@@ -144,7 +146,7 @@
             "type": "string",
             "format": "--ignore-errors {value}",
             "secret": false,
-            "help": "Ignore errors, displaying them only at the final."
+            "help": "Provide all health checks, even if errors are found."
           },
           {
             "name": "Name",
@@ -233,11 +235,11 @@
             "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
-            "name": "StorageAccountName",
+            "name": "Tags",
             "type": "string",
-            "format": "--storage-account-name {value}",
+            "format": "--tags {value}",
             "secret": false,
-            "help": "Provide the name of an existing storage account if you're recreating a container registry over a previous registry created storage account. Only applicable to Classic SKU."
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
             "name": "DefaultAction",
@@ -633,13 +635,6 @@
             "help": "The SKU of the container registry."
           },
           {
-            "name": "StorageAccountName",
-            "type": "string",
-            "format": "--storage-account-name {value}",
-            "secret": false,
-            "help": "Provide the name of an existing storage account if you're recreating a container registry over a previous registry created storage account. Only applicable to Classic SKU."
-          },
-          {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
@@ -680,311 +675,6 @@
             "format": "--set {value}",
             "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "Config",
-      "definiteArgument": "acr config",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "CredentialRenew",
-      "definiteArgument": "acr credential renew",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "PasswordName",
-            "type": "AcrCredentialRenewPasswordName",
-            "format": "--password-name {value}",
-            "secret": true,
-            "help": "The name of password to regenerate."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "CredentialShow",
-      "definiteArgument": "acr credential show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HelmDelete",
-      "definiteArgument": "acr helm delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "The password used to log into a container registry."
-          },
-          {
-            "name": "Prov",
-            "type": "string",
-            "format": "--prov {value}",
-            "secret": false,
-            "help": "Only delete the provenance file."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "secret": false,
-            "help": "The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource."
-          },
-          {
-            "name": "Username",
-            "type": "string",
-            "format": "--username {value}",
-            "secret": false,
-            "help": "The username used to log into a container registry."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "secret": false,
-            "help": "The helm chart version."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "secret": false,
-            "help": "Do not prompt for confirmation."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HelmList",
-      "definiteArgument": "acr helm list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "The password used to log into a container registry."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "secret": false,
-            "help": "The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource."
-          },
-          {
-            "name": "Username",
-            "type": "string",
-            "format": "--username {value}",
-            "secret": false,
-            "help": "The username used to log into a container registry."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HelmPush",
-      "definiteArgument": "acr helm push",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Force",
-            "type": "string",
-            "format": "--force {value}",
-            "secret": false,
-            "help": "Overwrite the existing chart package."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "The password used to log into a container registry."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "secret": false,
-            "help": "The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource."
-          },
-          {
-            "name": "Username",
-            "type": "string",
-            "format": "--username {value}",
-            "secret": false,
-            "help": "The username used to log into a container registry."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HelmShow",
-      "definiteArgument": "acr helm show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "The password used to log into a container registry."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Suffix",
-            "type": "string",
-            "format": "--suffix {value}",
-            "secret": false,
-            "help": "The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource."
-          },
-          {
-            "name": "Username",
-            "type": "string",
-            "format": "--username {value}",
-            "secret": false,
-            "help": "The username used to log into a container registry."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "secret": false,
-            "help": "The helm chart version."
           },
           {
             "name": "Subscription",
@@ -1114,320 +804,6 @@
             "format": "--vnet-name {value}",
             "secret": false,
             "help": "Name of a virtual network."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "PackBuild",
-      "definiteArgument": "acr pack build",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Image",
-            "type": "string",
-            "format": "--image {value}",
-            "secret": false,
-            "help": "The name and tag of the image using the format: '-t repo/image:tag'."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "AuthMode",
-            "type": "AcrAuthMode",
-            "format": "--auth-mode {value}",
-            "secret": false,
-            "help": "Auth mode of the source registry."
-          },
-          {
-            "name": "Builder",
-            "type": "string",
-            "format": "--builder {value}",
-            "secret": false,
-            "help": "The name and tag of a Buildpack builder image."
-          },
-          {
-            "name": "NoFormat",
-            "type": "bool",
-            "format": "--no-format",
-            "secret": false,
-            "help": "Indicates whether the logs should be displayed in raw format."
-          },
-          {
-            "name": "NoLogs",
-            "type": "bool",
-            "format": "--no-logs",
-            "secret": false,
-            "help": "Do not show logs after successfully queuing the build."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "secret": false,
-            "help": "Do not wait for the run to complete and return immediately after queuing the run."
-          },
-          {
-            "name": "Platform",
-            "type": "string",
-            "format": "--platform {value}",
-            "secret": false,
-            "help": "The platform where build/task is run, Eg, 'windows' and 'linux'. When it's used in build commands, it also can be specified in 'os/arch/variant' format for the resulting image. Eg, linux/arm/v7. The 'arch' and 'variant' parts are optional."
-          },
-          {
-            "name": "Pull",
-            "type": "string",
-            "format": "--pull {value}",
-            "secret": false,
-            "help": "Pull the latest builder and run images before use."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Timeout",
-            "type": "string",
-            "format": "--timeout {value}",
-            "secret": false,
-            "help": "The timeout in seconds."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReplicationCreate",
-      "definiteArgument": "acr replication create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the replication. Default to the location name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReplicationDelete",
-      "definiteArgument": "acr replication delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the replication."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReplicationList",
-      "definiteArgument": "acr replication list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReplicationShow",
-      "definiteArgument": "acr replication show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the replication."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ReplicationUpdate",
-      "definiteArgument": "acr replication update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the replication."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           },
           {
             "name": "Subscription",
@@ -1937,808 +1313,6 @@
       }
     },
     {
-      "postfix": "TaskCancelRun",
-      "definiteArgument": "acr task cancel-run",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "RunId",
-            "type": "string",
-            "format": "--run-id {value}",
-            "secret": false,
-            "help": "The unique run identifier."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskCreate",
-      "definiteArgument": "acr task create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Context",
-            "type": "string",
-            "format": "--context {value}",
-            "secret": false,
-            "help": "The full URL to the source code repository (Requires '.git' suffix for a github repo). If '/dev/null' is specified, the value will be set to None and ignored."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Arg",
-            "type": "string",
-            "format": "--arg {value}",
-            "secret": false,
-            "help": "Build argument in '--arg name[=value]' format. Multiples supported by passing '--arg` multiple times."
-          },
-          {
-            "name": "AssignIdentity",
-            "type": "string",
-            "format": "--assign-identity {value}",
-            "secret": false,
-            "help": "Assigns managed identities to the task. Use '[system]' to refer to the system-assigned identity or a resource ID to refer to a user-assigned identity."
-          },
-          {
-            "name": "AuthMode",
-            "type": "AcrAuthMode",
-            "format": "--auth-mode {value}",
-            "secret": false,
-            "help": "Auth mode of the source registry."
-          },
-          {
-            "name": "BaseImageTriggerEnabled",
-            "type": "bool",
-            "format": "--base-image-trigger-enabled",
-            "secret": false,
-            "help": "Indicates whether the base image trigger is enabled."
-          },
-          {
-            "name": "BaseImageTriggerName",
-            "type": "string",
-            "format": "--base-image-trigger-name {value}",
-            "secret": false,
-            "help": "The name of the base image trigger."
-          },
-          {
-            "name": "BaseImageTriggerType",
-            "type": "AcrTaskBaseImageTriggerType",
-            "format": "--base-image-trigger-type {value}",
-            "secret": false,
-            "help": "The type of the auto trigger for base image dependency updates."
-          },
-          {
-            "name": "Branch",
-            "type": "string",
-            "format": "--branch {value}",
-            "secret": false,
-            "help": "The source control branch name."
-          },
-          {
-            "name": "Cmd",
-            "type": "string",
-            "format": "--cmd {value}",
-            "secret": false,
-            "help": "Commands to execute."
-          },
-          {
-            "name": "CommitTriggerEnabled",
-            "type": "bool",
-            "format": "--commit-trigger-enabled",
-            "secret": false,
-            "help": "Indicates whether the source control commit trigger is enabled."
-          },
-          {
-            "name": "Cpu",
-            "type": "string",
-            "format": "--cpu {value}",
-            "secret": false,
-            "help": "The CPU configuration in terms of number of cores required for the run."
-          },
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "secret": false,
-            "help": "The relative path of the the task/docker file to the source code root folder. Task files must be suffixed with '.yaml' or piped from the standard input using '-'."
-          },
-          {
-            "name": "GitAccessToken",
-            "type": "string",
-            "format": "--git-access-token {value}",
-            "secret": false,
-            "help": "The access token used to access the source control provider."
-          },
-          {
-            "name": "Image",
-            "type": "string",
-            "format": "--image {value}",
-            "secret": false,
-            "help": "The name and tag of the image using the format: '-t repo/image:tag'. Multiple tags are supported by passing -t multiple times."
-          },
-          {
-            "name": "NoCache",
-            "type": "bool",
-            "format": "--no-cache",
-            "secret": false,
-            "help": "Indicates whether the image cache is enabled."
-          },
-          {
-            "name": "NoPush",
-            "type": "bool",
-            "format": "--no-push",
-            "secret": false,
-            "help": "Indicates whether the image built should be pushed to the registry."
-          },
-          {
-            "name": "Platform",
-            "type": "string",
-            "format": "--platform {value}",
-            "secret": false,
-            "help": "The platform where build/task is run, Eg, 'windows' and 'linux'. When it's used in build commands, it also can be specified in 'os/arch/variant' format for the resulting image. Eg, linux/arm/v7. The 'arch' and 'variant' parts are optional."
-          },
-          {
-            "name": "PullRequestTriggerEnabled",
-            "type": "bool",
-            "format": "--pull-request-trigger-enabled",
-            "secret": false,
-            "help": "Indicates whether the source control pull request trigger is enabled."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SecretArg",
-            "type": "string",
-            "format": "--secret-arg {value}",
-            "secret": true,
-            "help": "Secret build argument in '--secret-arg name[=value]' format. Multiples supported by passing --secret-arg multiple times."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Task value in '--set name[=value]' format. Multiples supported by passing --set multiple times."
-          },
-          {
-            "name": "SetSecret",
-            "type": "string",
-            "format": "--set-secret {value}",
-            "secret": true,
-            "help": "Secret task value in '--set-secret name[=value]' format. Multiples supported by passing --set-secret multiple times."
-          },
-          {
-            "name": "SourceTriggerName",
-            "type": "string",
-            "format": "--source-trigger-name {value}",
-            "secret": false,
-            "help": "The name of the source trigger."
-          },
-          {
-            "name": "Status",
-            "type": "AcrTaskStatus",
-            "format": "--status {value}",
-            "secret": false,
-            "help": "The current status of task."
-          },
-          {
-            "name": "Target",
-            "type": "string",
-            "format": "--target {value}",
-            "secret": false,
-            "help": "The name of the target build stage."
-          },
-          {
-            "name": "Timeout",
-            "type": "string",
-            "format": "--timeout {value}",
-            "secret": false,
-            "help": "The timeout in seconds."
-          },
-          {
-            "name": "Values",
-            "type": "string",
-            "format": "--values {value}",
-            "secret": false,
-            "help": "The task values/parameters file path relative to the source context."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskDelete",
-      "definiteArgument": "acr task delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskList",
-      "definiteArgument": "acr task list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskListRuns",
-      "definiteArgument": "acr task list-runs",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Image",
-            "type": "string",
-            "format": "--image {value}",
-            "secret": false,
-            "help": "The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the task."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "RunStatus",
-            "type": "AcrTaskListRunsRunStatus",
-            "format": "--run-status {value}",
-            "secret": false,
-            "help": "The current status of run."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "secret": false,
-            "help": "Limit the number of latest runs in the results."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskLogs",
-      "definiteArgument": "acr task logs",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Image",
-            "type": "string",
-            "format": "--image {value}",
-            "secret": false,
-            "help": "The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the task."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "RunId",
-            "type": "string",
-            "format": "--run-id {value}",
-            "secret": false,
-            "help": "The unique run identifier."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskRun",
-      "definiteArgument": "acr task run",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "NoLogs",
-            "type": "bool",
-            "format": "--no-logs",
-            "secret": false,
-            "help": "Do not show logs after successfully queuing the build."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "secret": false,
-            "help": "Do not wait for the run to complete and return immediately after queuing the run."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Task value in '--set name[=value]' format. Multiples supported by passing --set multiple times."
-          },
-          {
-            "name": "SetSecret",
-            "type": "string",
-            "format": "--set-secret {value}",
-            "secret": true,
-            "help": "Secret task value in '--set-secret name[=value]' format. Multiples supported by passing --set-secret multiple times."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskShow",
-      "definiteArgument": "acr task show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WithSecureProperties",
-            "type": "string",
-            "format": "--with-secure-properties {value}",
-            "secret": false,
-            "help": "Indicates whether the secure properties of a task should be returned."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskShowRun",
-      "definiteArgument": "acr task show-run",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "RunId",
-            "type": "string",
-            "format": "--run-id {value}",
-            "secret": false,
-            "help": "The unique run identifier."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskUpdate",
-      "definiteArgument": "acr task update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Arg",
-            "type": "string",
-            "format": "--arg {value}",
-            "secret": false,
-            "help": "Build argument in '--arg name[=value]' format. Multiples supported by passing '--arg` multiple times."
-          },
-          {
-            "name": "AuthMode",
-            "type": "AcrAuthMode",
-            "format": "--auth-mode {value}",
-            "secret": false,
-            "help": "Auth mode of the source registry."
-          },
-          {
-            "name": "BaseImageTriggerEnabled",
-            "type": "bool",
-            "format": "--base-image-trigger-enabled",
-            "secret": false,
-            "help": "Indicates whether the base image trigger is enabled."
-          },
-          {
-            "name": "BaseImageTriggerType",
-            "type": "AcrTaskBaseImageTriggerType",
-            "format": "--base-image-trigger-type {value}",
-            "secret": false,
-            "help": "The type of the auto trigger for base image dependency updates."
-          },
-          {
-            "name": "Branch",
-            "type": "string",
-            "format": "--branch {value}",
-            "secret": false,
-            "help": "The source control branch name."
-          },
-          {
-            "name": "CommitTriggerEnabled",
-            "type": "bool",
-            "format": "--commit-trigger-enabled",
-            "secret": false,
-            "help": "Indicates whether the source control commit trigger is enabled."
-          },
-          {
-            "name": "Context",
-            "type": "string",
-            "format": "--context {value}",
-            "secret": false,
-            "help": "The full URL to the source code repository (Requires '.git' suffix for a github repo). If '/dev/null' is specified, the value will be set to None and ignored."
-          },
-          {
-            "name": "Cpu",
-            "type": "string",
-            "format": "--cpu {value}",
-            "secret": false,
-            "help": "The CPU configuration in terms of number of cores required for the run."
-          },
-          {
-            "name": "File",
-            "type": "string",
-            "format": "--file {value}",
-            "secret": false,
-            "help": "The relative path of the the task/docker file to the source code root folder. Task files must be suffixed with '.yaml' or piped from the standard input using '-'."
-          },
-          {
-            "name": "GitAccessToken",
-            "type": "string",
-            "format": "--git-access-token {value}",
-            "secret": false,
-            "help": "The access token used to access the source control provider."
-          },
-          {
-            "name": "Image",
-            "type": "string",
-            "format": "--image {value}",
-            "secret": false,
-            "help": "The name and tag of the image using the format: '-t repo/image:tag'. Multiple tags are supported by passing -t multiple times."
-          },
-          {
-            "name": "NoCache",
-            "type": "bool",
-            "format": "--no-cache",
-            "secret": false,
-            "help": "Indicates whether the image cache is enabled."
-          },
-          {
-            "name": "NoPush",
-            "type": "bool",
-            "format": "--no-push",
-            "secret": false,
-            "help": "Indicates whether the image built should be pushed to the registry."
-          },
-          {
-            "name": "Platform",
-            "type": "string",
-            "format": "--platform {value}",
-            "secret": false,
-            "help": "The platform where build/task is run, Eg, 'windows' and 'linux'. When it's used in build commands, it also can be specified in 'os/arch/variant' format for the resulting image. Eg, linux/arm/v7. The 'arch' and 'variant' parts are optional."
-          },
-          {
-            "name": "PullRequestTriggerEnabled",
-            "type": "bool",
-            "format": "--pull-request-trigger-enabled",
-            "secret": false,
-            "help": "Indicates whether the source control pull request trigger is enabled."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SecretArg",
-            "type": "string",
-            "format": "--secret-arg {value}",
-            "secret": true,
-            "help": "Secret build argument in '--secret-arg name[=value]' format. Multiples supported by passing --secret-arg multiple times."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Task value in '--set name[=value]' format. Multiples supported by passing --set multiple times."
-          },
-          {
-            "name": "SetSecret",
-            "type": "string",
-            "format": "--set-secret {value}",
-            "secret": true,
-            "help": "Secret task value in '--set-secret name[=value]' format. Multiples supported by passing --set-secret multiple times."
-          },
-          {
-            "name": "Status",
-            "type": "AcrTaskStatus",
-            "format": "--status {value}",
-            "secret": false,
-            "help": "The current status of task."
-          },
-          {
-            "name": "Target",
-            "type": "string",
-            "format": "--target {value}",
-            "secret": false,
-            "help": "The name of the target build stage."
-          },
-          {
-            "name": "Timeout",
-            "type": "string",
-            "format": "--timeout {value}",
-            "secret": false,
-            "help": "The timeout in seconds."
-          },
-          {
-            "name": "Values",
-            "type": "string",
-            "format": "--values {value}",
-            "secret": false,
-            "help": "The task values/parameters file path relative to the source context."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskUpdateRun",
-      "definiteArgument": "acr task update-run",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "RunId",
-            "type": "string",
-            "format": "--run-id {value}",
-            "secret": false,
-            "help": "The unique run identifier."
-          },
-          {
-            "name": "NoArchive",
-            "type": "bool",
-            "format": "--no-archive",
-            "secret": false,
-            "help": "Indicates whether the run should be archived."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "WebhookCreate",
       "definiteArgument": "acr webhook create",
       "settingsClass": {
@@ -2799,11 +1373,11 @@
             "type": "string",
             "format": "--scope {value}",
             "secret": false,
-            "help": "The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories."
+            "help": "The scope of repositories where the event can be triggered. For example, 'foo:\\*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories."
           },
           {
             "name": "Status",
-            "type": "AcrTaskStatus",
+            "type": "AcrWebhookStatus",
             "format": "--status {value}",
             "secret": false,
             "help": "Indicates whether the webhook is enabled."
@@ -3081,11 +1655,11 @@
             "type": "string",
             "format": "--scope {value}",
             "secret": false,
-            "help": "The scope of repositories where the event can be triggered. For example, 'foo:*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories."
+            "help": "The scope of repositories where the event can be triggered. For example, 'foo:\\*' means events for all tags under repository 'foo'. 'foo:bar' means events for 'foo:bar' only. 'foo' is equivalent to 'foo:latest'. Empty means events for all repositories."
           },
           {
             "name": "Status",
-            "type": "AcrTaskStatus",
+            "type": "AcrWebhookStatus",
             "format": "--status {value}",
             "secret": false,
             "help": "Indicates whether the webhook is enabled."
@@ -3143,14 +1717,71 @@
       }
     },
     {
-      "postfix": "ConfigContentTrustShow",
-      "definiteArgument": "acr config content-trust show",
+      "postfix": "ReplicationCreate",
+      "definiteArgument": "acr replication create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the replication. Default to the location name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReplicationDelete",
+      "definiteArgument": "acr replication delete",
       "settingsClass": {
         "properties": [
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the replication."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
             "secret": false,
             "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
           },
@@ -3172,14 +1803,14 @@
       }
     },
     {
-      "postfix": "ConfigContentTrustUpdate",
-      "definiteArgument": "acr config content-trust update",
+      "postfix": "ReplicationList",
+      "definiteArgument": "acr replication list",
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
+            "name": "Registry",
             "type": "string",
-            "format": "--name {value}",
+            "format": "--registry {value}",
             "secret": false,
             "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
           },
@@ -3189,13 +1820,6 @@
             "format": "--resource-group {value}",
             "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Status",
-            "type": "AcrTaskStatus",
-            "format": "--status {value}",
-            "secret": false,
-            "help": "Indicates whether content-trust is enabled or disabled."
           },
           {
             "name": "Subscription",
@@ -3208,8 +1832,278 @@
       }
     },
     {
-      "postfix": "HelmRepoAdd",
-      "definiteArgument": "acr helm repo add",
+      "postfix": "ReplicationShow",
+      "definiteArgument": "acr replication show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the replication."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReplicationUpdate",
+      "definiteArgument": "acr replication update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the replication."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PackBuild",
+      "definiteArgument": "acr pack build",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Builder",
+            "type": "string",
+            "format": "--builder {value}",
+            "secret": false,
+            "help": "The name and tag of a Buildpack builder image."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "secret": false,
+            "help": "The name and tag of the image using the format: '-t repo/image:tag'."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "AuthMode",
+            "type": "AcrAuthMode",
+            "format": "--auth-mode {value}",
+            "secret": false,
+            "help": "Auth mode of the source registry."
+          },
+          {
+            "name": "NoFormat",
+            "type": "bool",
+            "format": "--no-format",
+            "secret": false,
+            "help": "Indicates whether the logs should be displayed in raw format."
+          },
+          {
+            "name": "NoLogs",
+            "type": "bool",
+            "format": "--no-logs",
+            "secret": false,
+            "help": "Do not show logs after successfully queuing the build."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the run to complete and return immediately after queuing the run."
+          },
+          {
+            "name": "Platform",
+            "type": "string",
+            "format": "--platform {value}",
+            "secret": false,
+            "help": "The platform where build/task is run, Eg, 'windows' and 'linux'. When it's used in build commands, it also can be specified in 'os/arch/variant' format for the resulting image. Eg, linux/arm/v7. The 'arch' and 'variant' parts are optional."
+          },
+          {
+            "name": "Pull",
+            "type": "string",
+            "format": "--pull {value}",
+            "secret": false,
+            "help": "Pull the latest builder and run images before use."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "secret": false,
+            "help": "The timeout in seconds."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HelmDelete",
+      "definiteArgument": "acr helm delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The password used to log into a container registry."
+          },
+          {
+            "name": "Prov",
+            "type": "string",
+            "format": "--prov {value}",
+            "secret": false,
+            "help": "Only delete the provenance file."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Suffix",
+            "type": "string",
+            "format": "--suffix {value}",
+            "secret": false,
+            "help": "The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource."
+          },
+          {
+            "name": "Username",
+            "type": "string",
+            "format": "--username {value}",
+            "secret": false,
+            "help": "The username used to log into a container registry."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "secret": false,
+            "help": "The helm chart version."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HelmList",
+      "definiteArgument": "acr helm list",
       "settingsClass": {
         "properties": [
           {
@@ -3246,6 +2140,1528 @@
             "format": "--username {value}",
             "secret": false,
             "help": "The username used to log into a container registry."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HelmPush",
+      "definiteArgument": "acr helm push",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Force",
+            "type": "string",
+            "format": "--force {value}",
+            "secret": false,
+            "help": "Overwrite the existing chart package."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The password used to log into a container registry."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Suffix",
+            "type": "string",
+            "format": "--suffix {value}",
+            "secret": false,
+            "help": "The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource."
+          },
+          {
+            "name": "Username",
+            "type": "string",
+            "format": "--username {value}",
+            "secret": false,
+            "help": "The username used to log into a container registry."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HelmShow",
+      "definiteArgument": "acr helm show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The password used to log into a container registry."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Suffix",
+            "type": "string",
+            "format": "--suffix {value}",
+            "secret": false,
+            "help": "The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource."
+          },
+          {
+            "name": "Username",
+            "type": "string",
+            "format": "--username {value}",
+            "secret": false,
+            "help": "The username used to log into a container registry."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "secret": false,
+            "help": "The helm chart version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CredentialRenew",
+      "definiteArgument": "acr credential renew",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "PasswordName",
+            "type": "AcrCredentialRenewPasswordName",
+            "format": "--password-name {value}",
+            "secret": true,
+            "help": "The name of password to regenerate."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CredentialShow",
+      "definiteArgument": "acr credential show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Config",
+      "definiteArgument": "acr config",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "TaskCancelRun",
+      "definiteArgument": "acr task cancel-run",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "The unique run identifier."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskCreate",
+      "definiteArgument": "acr task create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Context",
+            "type": "string",
+            "format": "--context {value}",
+            "secret": false,
+            "help": "The full URL to the source code repository (Requires '.git' suffix for a github repo). If '/dev/null' is specified, the value will be set to None and ignored."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Arg",
+            "type": "string",
+            "format": "--arg {value}",
+            "secret": false,
+            "help": "Build argument in '--arg name[=value]' format. Multiples supported by passing '--arg` multiple times."
+          },
+          {
+            "name": "AssignIdentity",
+            "type": "string",
+            "format": "--assign-identity {value}",
+            "secret": false,
+            "help": "Assigns managed identities to the task. Use '[system]' to refer to the system-assigned identity or a resource ID to refer to a user-assigned identity. Please see <a href=\"https://aka.ms/acr/tasks/task-create-managed-identity\">https://aka.ms/acr/tasks/task-create-managed-identity</a> for more information."
+          },
+          {
+            "name": "AuthMode",
+            "type": "AcrAuthMode",
+            "format": "--auth-mode {value}",
+            "secret": false,
+            "help": "Auth mode of the source registry."
+          },
+          {
+            "name": "BaseImageTriggerEnabled",
+            "type": "bool",
+            "format": "--base-image-trigger-enabled",
+            "secret": false,
+            "help": "Indicates whether the base image trigger is enabled."
+          },
+          {
+            "name": "BaseImageTriggerName",
+            "type": "string",
+            "format": "--base-image-trigger-name {value}",
+            "secret": false,
+            "help": "The name of the base image trigger."
+          },
+          {
+            "name": "BaseImageTriggerType",
+            "type": "AcrTaskBaseImageTriggerType",
+            "format": "--base-image-trigger-type {value}",
+            "secret": false,
+            "help": "The type of the auto trigger for base image dependency updates."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "The source control branch name."
+          },
+          {
+            "name": "Cmd",
+            "type": "string",
+            "format": "--cmd {value}",
+            "secret": false,
+            "help": "Commands to execute."
+          },
+          {
+            "name": "CommitTriggerEnabled",
+            "type": "bool",
+            "format": "--commit-trigger-enabled",
+            "secret": false,
+            "help": "Indicates whether the source control commit trigger is enabled."
+          },
+          {
+            "name": "Cpu",
+            "type": "string",
+            "format": "--cpu {value}",
+            "secret": false,
+            "help": "The CPU configuration in terms of number of cores required for the run."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "secret": false,
+            "help": "The relative path of the the task/docker file to the source code root folder. Task files must be suffixed with '.yaml' or piped from the standard input using '-'."
+          },
+          {
+            "name": "GitAccessToken",
+            "type": "string",
+            "format": "--git-access-token {value}",
+            "secret": false,
+            "help": "The access token used to access the source control provider."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "secret": false,
+            "help": "The name and tag of the image using the format: '-t repo/image:tag'. Multiple tags are supported by passing -t multiple times."
+          },
+          {
+            "name": "NoCache",
+            "type": "bool",
+            "format": "--no-cache",
+            "secret": false,
+            "help": "Indicates whether the image cache is enabled."
+          },
+          {
+            "name": "NoPush",
+            "type": "bool",
+            "format": "--no-push",
+            "secret": false,
+            "help": "Indicates whether the image built should be pushed to the registry."
+          },
+          {
+            "name": "Platform",
+            "type": "string",
+            "format": "--platform {value}",
+            "secret": false,
+            "help": "The platform where build/task is run, Eg, 'windows' and 'linux'. When it's used in build commands, it also can be specified in 'os/arch/variant' format for the resulting image. Eg, linux/arm/v7. The 'arch' and 'variant' parts are optional."
+          },
+          {
+            "name": "PullRequestTriggerEnabled",
+            "type": "bool",
+            "format": "--pull-request-trigger-enabled",
+            "secret": false,
+            "help": "Indicates whether the source control pull request trigger is enabled. The trigger is disabled by default."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Schedule",
+            "type": "string",
+            "format": "--schedule {value}",
+            "secret": false,
+            "help": "Schedule for a timer trigger represented as a cron expression. An optional trigger name can be specified using `--schedule name:schedule` format. Multiples supported by passing --schedule multiple times."
+          },
+          {
+            "name": "SecretArg",
+            "type": "string",
+            "format": "--secret-arg {value}",
+            "secret": true,
+            "help": "Secret build argument in '--secret-arg name[=value]' format. Multiples supported by passing --secret-arg multiple times."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Task value in '--set name[=value]' format. Multiples supported by passing --set multiple times."
+          },
+          {
+            "name": "SetSecret",
+            "type": "string",
+            "format": "--set-secret {value}",
+            "secret": true,
+            "help": "Secret task value in '--set-secret name[=value]' format. Multiples supported by passing --set-secret multiple times."
+          },
+          {
+            "name": "SourceTriggerName",
+            "type": "string",
+            "format": "--source-trigger-name {value}",
+            "secret": false,
+            "help": "The name of the source trigger."
+          },
+          {
+            "name": "Status",
+            "type": "AcrWebhookStatus",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "The current status of task."
+          },
+          {
+            "name": "Target",
+            "type": "string",
+            "format": "--target {value}",
+            "secret": false,
+            "help": "The name of the target build stage."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "secret": false,
+            "help": "The timeout in seconds."
+          },
+          {
+            "name": "UpdateTriggerEndpoint",
+            "type": "string",
+            "format": "--update-trigger-endpoint {value}",
+            "secret": false,
+            "help": "The full URL of the endpoint to receive base image update trigger notifications."
+          },
+          {
+            "name": "UpdateTriggerPayloadType",
+            "type": "AcrTaskUpdateTriggerPayloadType",
+            "format": "--update-trigger-payload-type {value}",
+            "secret": false,
+            "help": "Indicates whether to include metadata about the base image trigger in the payload alongwith the update trigger token, when a notification is sent."
+          },
+          {
+            "name": "Values",
+            "type": "string",
+            "format": "--values {value}",
+            "secret": false,
+            "help": "The task values/parameters file path relative to the source context."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskDelete",
+      "definiteArgument": "acr task delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskList",
+      "definiteArgument": "acr task list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskListRuns",
+      "definiteArgument": "acr task list-runs",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "secret": false,
+            "help": "The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "RunStatus",
+            "type": "AcrTaskListRunsRunStatus",
+            "format": "--run-status {value}",
+            "secret": false,
+            "help": "The current status of run."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Limit the number of latest runs in the results."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskLogs",
+      "definiteArgument": "acr task logs",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "secret": false,
+            "help": "The name of the image. May include a tag in the format 'name:tag' or digest in the format 'name@digest'."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "The unique run identifier."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskRun",
+      "definiteArgument": "acr task run",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Arg",
+            "type": "string",
+            "format": "--arg {value}",
+            "secret": false,
+            "help": "Build argument in '--arg name[=value]' format. Multiples supported by passing '--arg` multiple times."
+          },
+          {
+            "name": "Context",
+            "type": "string",
+            "format": "--context {value}",
+            "secret": false,
+            "help": "The full URL to the source code repository (Requires '.git' suffix for a github repo). If '/dev/null' is specified, the value will be set to None and ignored."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "secret": false,
+            "help": "The relative path of the the task/docker file to the source code root folder. Task files must be suffixed with '.yaml' or piped from the standard input using '-'."
+          },
+          {
+            "name": "NoLogs",
+            "type": "bool",
+            "format": "--no-logs",
+            "secret": false,
+            "help": "Do not show logs after successfully queuing the build."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the run to complete and return immediately after queuing the run."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SecretArg",
+            "type": "string",
+            "format": "--secret-arg {value}",
+            "secret": true,
+            "help": "Secret build argument in '--secret-arg name[=value]' format. Multiples supported by passing --secret-arg multiple times."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Task value in '--set name[=value]' format. Multiples supported by passing --set multiple times."
+          },
+          {
+            "name": "SetSecret",
+            "type": "string",
+            "format": "--set-secret {value}",
+            "secret": true,
+            "help": "Secret task value in '--set-secret name[=value]' format. Multiples supported by passing --set-secret multiple times."
+          },
+          {
+            "name": "Target",
+            "type": "string",
+            "format": "--target {value}",
+            "secret": false,
+            "help": "The name of the target build stage."
+          },
+          {
+            "name": "UpdateTriggerToken",
+            "type": "string",
+            "format": "--update-trigger-token {value}",
+            "secret": false,
+            "help": "The payload that will be passed back alongwith the base image trigger notification."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskShow",
+      "definiteArgument": "acr task show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "WithSecureProperties",
+            "type": "string",
+            "format": "--with-secure-properties {value}",
+            "secret": false,
+            "help": "Indicates whether the secure properties of a task should be returned."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskShowRun",
+      "definiteArgument": "acr task show-run",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "The unique run identifier."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskUpdate",
+      "definiteArgument": "acr task update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Arg",
+            "type": "string",
+            "format": "--arg {value}",
+            "secret": false,
+            "help": "Build argument in '--arg name[=value]' format. Multiples supported by passing '--arg` multiple times."
+          },
+          {
+            "name": "AuthMode",
+            "type": "AcrAuthMode",
+            "format": "--auth-mode {value}",
+            "secret": false,
+            "help": "Auth mode of the source registry."
+          },
+          {
+            "name": "BaseImageTriggerEnabled",
+            "type": "bool",
+            "format": "--base-image-trigger-enabled",
+            "secret": false,
+            "help": "Indicates whether the base image trigger is enabled."
+          },
+          {
+            "name": "BaseImageTriggerType",
+            "type": "AcrTaskBaseImageTriggerType",
+            "format": "--base-image-trigger-type {value}",
+            "secret": false,
+            "help": "The type of the auto trigger for base image dependency updates."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "The source control branch name."
+          },
+          {
+            "name": "CommitTriggerEnabled",
+            "type": "bool",
+            "format": "--commit-trigger-enabled",
+            "secret": false,
+            "help": "Indicates whether the source control commit trigger is enabled."
+          },
+          {
+            "name": "Context",
+            "type": "string",
+            "format": "--context {value}",
+            "secret": false,
+            "help": "The full URL to the source code repository (Requires '.git' suffix for a github repo). If '/dev/null' is specified, the value will be set to None and ignored."
+          },
+          {
+            "name": "Cpu",
+            "type": "string",
+            "format": "--cpu {value}",
+            "secret": false,
+            "help": "The CPU configuration in terms of number of cores required for the run."
+          },
+          {
+            "name": "File",
+            "type": "string",
+            "format": "--file {value}",
+            "secret": false,
+            "help": "The relative path of the the task/docker file to the source code root folder. Task files must be suffixed with '.yaml' or piped from the standard input using '-'."
+          },
+          {
+            "name": "GitAccessToken",
+            "type": "string",
+            "format": "--git-access-token {value}",
+            "secret": false,
+            "help": "The access token used to access the source control provider."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "secret": false,
+            "help": "The name and tag of the image using the format: '-t repo/image:tag'. Multiple tags are supported by passing -t multiple times."
+          },
+          {
+            "name": "NoCache",
+            "type": "bool",
+            "format": "--no-cache",
+            "secret": false,
+            "help": "Indicates whether the image cache is enabled."
+          },
+          {
+            "name": "NoPush",
+            "type": "bool",
+            "format": "--no-push",
+            "secret": false,
+            "help": "Indicates whether the image built should be pushed to the registry."
+          },
+          {
+            "name": "Platform",
+            "type": "string",
+            "format": "--platform {value}",
+            "secret": false,
+            "help": "The platform where build/task is run, Eg, 'windows' and 'linux'. When it's used in build commands, it also can be specified in 'os/arch/variant' format for the resulting image. Eg, linux/arm/v7. The 'arch' and 'variant' parts are optional."
+          },
+          {
+            "name": "PullRequestTriggerEnabled",
+            "type": "bool",
+            "format": "--pull-request-trigger-enabled",
+            "secret": false,
+            "help": "Indicates whether the source control pull request trigger is enabled. The trigger is disabled by default."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SecretArg",
+            "type": "string",
+            "format": "--secret-arg {value}",
+            "secret": true,
+            "help": "Secret build argument in '--secret-arg name[=value]' format. Multiples supported by passing --secret-arg multiple times."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Task value in '--set name[=value]' format. Multiples supported by passing --set multiple times."
+          },
+          {
+            "name": "SetSecret",
+            "type": "string",
+            "format": "--set-secret {value}",
+            "secret": true,
+            "help": "Secret task value in '--set-secret name[=value]' format. Multiples supported by passing --set-secret multiple times."
+          },
+          {
+            "name": "Status",
+            "type": "AcrWebhookStatus",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "The current status of task."
+          },
+          {
+            "name": "Target",
+            "type": "string",
+            "format": "--target {value}",
+            "secret": false,
+            "help": "The name of the target build stage."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "secret": false,
+            "help": "The timeout in seconds."
+          },
+          {
+            "name": "UpdateTriggerEndpoint",
+            "type": "string",
+            "format": "--update-trigger-endpoint {value}",
+            "secret": false,
+            "help": "The full URL of the endpoint to receive base image update trigger notifications."
+          },
+          {
+            "name": "UpdateTriggerPayloadType",
+            "type": "AcrTaskUpdateTriggerPayloadType",
+            "format": "--update-trigger-payload-type {value}",
+            "secret": false,
+            "help": "Indicates whether to include metadata about the base image trigger in the payload alongwith the update trigger token, when a notification is sent."
+          },
+          {
+            "name": "Values",
+            "type": "string",
+            "format": "--values {value}",
+            "secret": false,
+            "help": "The task values/parameters file path relative to the source context."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskUpdateRun",
+      "definiteArgument": "acr task update-run",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "The unique run identifier."
+          },
+          {
+            "name": "NoArchive",
+            "type": "bool",
+            "format": "--no-archive",
+            "secret": false,
+            "help": "Indicates whether the run should be archived."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigContentTrustShow",
+      "definiteArgument": "acr config content-trust show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigContentTrustUpdate",
+      "definiteArgument": "acr config content-trust update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Status",
+            "type": "AcrWebhookStatus",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "Indicates whether content-trust is enabled."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigRetentionShow",
+      "definiteArgument": "acr config retention show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigRetentionUpdate",
+      "definiteArgument": "acr config retention update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Type",
+            "type": "AcrConfigRetentionUpdateType",
+            "format": "--type {value}",
+            "secret": false,
+            "help": "The type of retention policy."
+          },
+          {
+            "name": "Days",
+            "type": "string",
+            "format": "--days {value}",
+            "secret": false,
+            "help": "The number of days to retain an untagged manifest after which it gets purged (Range: 0 to 365). Value \"0\" will delete untagged manifests immediately."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Status",
+            "type": "AcrWebhookStatus",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "Indicates whether retention policy is enabled."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskTimerAdd",
+      "definiteArgument": "acr task timer add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Schedule",
+            "type": "string",
+            "format": "--schedule {value}",
+            "secret": false,
+            "help": "The schedule of the timer trigger represented as a cron expression."
+          },
+          {
+            "name": "TimerName",
+            "type": "string",
+            "format": "--timer-name {value}",
+            "secret": false,
+            "help": "The name of the timer trigger."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Indicates whether the timer trigger is enabled."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskTimerList",
+      "definiteArgument": "acr task timer list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskTimerRemove",
+      "definiteArgument": "acr task timer remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "TimerName",
+            "type": "string",
+            "format": "--timer-name {value}",
+            "secret": false,
+            "help": "The name of the timer trigger."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskTimerUpdate",
+      "definiteArgument": "acr task timer update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "TimerName",
+            "type": "string",
+            "format": "--timer-name {value}",
+            "secret": false,
+            "help": "The name of the timer trigger."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Indicates whether the timer trigger is enabled."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Schedule",
+            "type": "string",
+            "format": "--schedule {value}",
+            "secret": false,
+            "help": "The schedule of the timer trigger represented as a cron expression."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskIdentityAssign",
+      "definiteArgument": "acr task identity assign",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Identities",
+            "type": "string",
+            "format": "--identities {value}",
+            "secret": false,
+            "help": "Assigns managed identities to the task. Use '[system]' to refer to the system-assigned identity or a resource ID to refer to a user-assigned identity."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskIdentityRemove",
+      "definiteArgument": "acr task identity remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "Identities",
+            "type": "string",
+            "format": "--identities {value}",
+            "secret": false,
+            "help": "Assigns managed identities to the task. Use '[system]' to refer to the system-assigned identity or a resource ID to refer to a user-assigned identity."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TaskIdentityShow",
+      "definiteArgument": "acr task identity show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the task."
+          },
+          {
+            "name": "Registry",
+            "type": "string",
+            "format": "--registry {value}",
+            "secret": false,
+            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Subscription",
@@ -3302,7 +3718,7 @@
             "type": "string",
             "format": "--use-identity {value}",
             "secret": false,
-            "help": "The task managed identity used for the credential. Use '[system]' to refer to the system-assigned identity or a client id to refer to a user-assigned identity."
+            "help": "The task managed identity used for the credential. Use '[system]' to refer to the system-assigned identity or a client id to refer to a user-assigned identity. Please see <a href=\"https://aka.ms/acr/tasks/cross-registry-authentication\">https://aka.ms/acr/tasks/cross-registry-authentication</a> for more information."
           },
           {
             "name": "Username",
@@ -3445,7 +3861,7 @@
             "type": "string",
             "format": "--use-identity {value}",
             "secret": false,
-            "help": "The task managed identity used for the credential. Use '[system]' to refer to the system-assigned identity or a client id to refer to a user-assigned identity."
+            "help": "The task managed identity used for the credential. Use '[system]' to refer to the system-assigned identity or a client id to refer to a user-assigned identity. Please see <a href=\"https://aka.ms/acr/tasks/cross-registry-authentication\">https://aka.ms/acr/tasks/cross-registry-authentication</a> for more information."
           },
           {
             "name": "Username",
@@ -3465,8 +3881,8 @@
       }
     },
     {
-      "postfix": "TaskIdentityAssign",
-      "definiteArgument": "acr task identity assign",
+      "postfix": "HelmRepoAdd",
+      "definiteArgument": "acr helm repo add",
       "settingsClass": {
         "properties": [
           {
@@ -3474,21 +3890,14 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "The name of the task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
             "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
           },
           {
-            "name": "Identities",
+            "name": "Password",
             "type": "string",
-            "format": "--identities {value}",
-            "secret": false,
-            "help": "Assigns managed identities to the task. Use '[system]' to refer to the system-assigned identity or a resource ID to refer to a user-assigned identity."
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The password used to log into a container registry."
           },
           {
             "name": "ResourceGroup",
@@ -3498,83 +3907,18 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Subscription",
+            "name": "Suffix",
             "type": "string",
-            "format": "--subscription {value}",
+            "format": "--suffix {value}",
             "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskIdentityRemove",
-      "definiteArgument": "acr task identity remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the task."
+            "help": "The tenant suffix in registry login server. You may specify '--suffix tenant' if your registry login server is in the format 'registry-tenant.azurecr.io'. Applicable if you're accessing the registry from a different subscription or you have permission to access images but not the permission to manage the registry resource."
           },
           {
-            "name": "Registry",
+            "name": "Username",
             "type": "string",
-            "format": "--registry {value}",
+            "format": "--username {value}",
             "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "Identities",
-            "type": "string",
-            "format": "--identities {value}",
-            "secret": false,
-            "help": "Assigns managed identities to the task. Use '[system]' to refer to the system-assigned identity or a resource ID to refer to a user-assigned identity."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TaskIdentityShow",
-      "definiteArgument": "acr task identity show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the task."
-          },
-          {
-            "name": "Registry",
-            "type": "string",
-            "format": "--registry {value}",
-            "secret": false,
-            "help": "The name of the container registry. You can configure the default registry name using `az configure --defaults acr=&amp;lt;registry name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+            "help": "The username used to log into a container registry."
           },
           {
             "name": "Subscription",
@@ -3649,17 +3993,34 @@
       ]
     },
     {
-      "name": "AcrCredentialRenewPasswordName",
-      "values": [
-        "password",
-        "password2"
-      ]
-    },
-    {
       "name": "AcrRepositoryOrderby",
       "values": [
         "time_asc",
         "time_desc"
+      ]
+    },
+    {
+      "name": "AcrWebhookActions",
+      "values": [
+        "chart_delete",
+        "chart_push",
+        "delete",
+        "push",
+        "quarantine"
+      ]
+    },
+    {
+      "name": "AcrWebhookStatus",
+      "values": [
+        "disabled",
+        "enabled"
+      ]
+    },
+    {
+      "name": "AcrCredentialRenewPasswordName",
+      "values": [
+        "password",
+        "password2"
       ]
     },
     {
@@ -3670,10 +4031,10 @@
       ]
     },
     {
-      "name": "AcrTaskStatus",
+      "name": "AcrTaskUpdateTriggerPayloadType",
       "values": [
-        "disabled",
-        "enabled"
+        "default",
+        "token"
       ]
     },
     {
@@ -3690,13 +4051,9 @@
       ]
     },
     {
-      "name": "AcrWebhookActions",
+      "name": "AcrConfigRetentionUpdateType",
       "values": [
-        "chart_delete",
-        "chart_push",
-        "delete",
-        "push",
-        "quarantine"
+        "untaggedmanifests"
       ]
     }
   ]

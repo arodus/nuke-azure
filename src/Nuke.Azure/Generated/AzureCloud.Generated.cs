@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCloud.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -61,7 +61,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureCloudListSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureCloudListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudListSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -80,7 +79,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureCloudListSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureCloudListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudListSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -112,7 +110,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureCloudListProfilesSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudListProfilesSettings.Query"/></li>
         ///     <li><c>--show-all</c> via <see cref="AzureCloudListProfilesSettings.ShowAll"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudListProfilesSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudListProfilesSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -133,7 +130,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureCloudListProfilesSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudListProfilesSettings.Query"/></li>
         ///     <li><c>--show-all</c> via <see cref="AzureCloudListProfilesSettings.ShowAll"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudListProfilesSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudListProfilesSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -175,7 +171,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureCloudRegisterSettings.Output"/></li>
         ///     <li><c>--profile</c> via <see cref="AzureCloudRegisterSettings.Profile"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudRegisterSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudRegisterSettings.Subscription"/></li>
         ///     <li><c>--suffix-acr-login-server-endpoint</c> via <see cref="AzureCloudRegisterSettings.SuffixAcrLoginServerEndpoint"/></li>
         ///     <li><c>--suffix-azure-datalake-analytics-catalog-and-job-endpoint</c> via <see cref="AzureCloudRegisterSettings.SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint"/></li>
         ///     <li><c>--suffix-azure-datalake-store-file-system-endpoint</c> via <see cref="AzureCloudRegisterSettings.SuffixAzureDatalakeStoreFileSystemEndpoint"/></li>
@@ -212,7 +207,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureCloudRegisterSettings.Output"/></li>
         ///     <li><c>--profile</c> via <see cref="AzureCloudRegisterSettings.Profile"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudRegisterSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudRegisterSettings.Subscription"/></li>
         ///     <li><c>--suffix-acr-login-server-endpoint</c> via <see cref="AzureCloudRegisterSettings.SuffixAcrLoginServerEndpoint"/></li>
         ///     <li><c>--suffix-azure-datalake-analytics-catalog-and-job-endpoint</c> via <see cref="AzureCloudRegisterSettings.SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint"/></li>
         ///     <li><c>--suffix-azure-datalake-store-file-system-endpoint</c> via <see cref="AzureCloudRegisterSettings.SuffixAzureDatalakeStoreFileSystemEndpoint"/></li>
@@ -250,7 +244,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureCloudSetSettings.Output"/></li>
         ///     <li><c>--profile</c> via <see cref="AzureCloudSetSettings.Profile"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudSetSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudSetSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudSetSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -271,7 +264,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureCloudSetSettings.Output"/></li>
         ///     <li><c>--profile</c> via <see cref="AzureCloudSetSettings.Profile"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudSetSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudSetSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudSetSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -302,7 +294,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureCloudShowSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureCloudShowSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudShowSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudShowSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -322,7 +313,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureCloudShowSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureCloudShowSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudShowSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudShowSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -353,7 +343,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureCloudUnregisterSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureCloudUnregisterSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudUnregisterSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudUnregisterSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudUnregisterSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -373,7 +362,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureCloudUnregisterSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureCloudUnregisterSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudUnregisterSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudUnregisterSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureCloudUnregisterSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -415,7 +403,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureCloudUpdateSettings.Output"/></li>
         ///     <li><c>--profile</c> via <see cref="AzureCloudUpdateSettings.Profile"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudUpdateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudUpdateSettings.Subscription"/></li>
         ///     <li><c>--suffix-acr-login-server-endpoint</c> via <see cref="AzureCloudUpdateSettings.SuffixAcrLoginServerEndpoint"/></li>
         ///     <li><c>--suffix-azure-datalake-analytics-catalog-and-job-endpoint</c> via <see cref="AzureCloudUpdateSettings.SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint"/></li>
         ///     <li><c>--suffix-azure-datalake-store-file-system-endpoint</c> via <see cref="AzureCloudUpdateSettings.SuffixAzureDatalakeStoreFileSystemEndpoint"/></li>
@@ -452,7 +439,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureCloudUpdateSettings.Output"/></li>
         ///     <li><c>--profile</c> via <see cref="AzureCloudUpdateSettings.Profile"/></li>
         ///     <li><c>--query</c> via <see cref="AzureCloudUpdateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCloudUpdateSettings.Subscription"/></li>
         ///     <li><c>--suffix-acr-login-server-endpoint</c> via <see cref="AzureCloudUpdateSettings.SuffixAcrLoginServerEndpoint"/></li>
         ///     <li><c>--suffix-azure-datalake-analytics-catalog-and-job-endpoint</c> via <see cref="AzureCloudUpdateSettings.SuffixAzureDatalakeAnalyticsCatalogAndJobEndpoint"/></li>
         ///     <li><c>--suffix-azure-datalake-store-file-system-endpoint</c> via <see cref="AzureCloudUpdateSettings.SuffixAzureDatalakeStoreFileSystemEndpoint"/></li>
@@ -482,10 +468,6 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureCloudTasks.AzureCloudPath;
         public override Action<OutputType, string> CustomLogger => AzureCloudTasks.AzureCloudLogger;
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -509,7 +491,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("cloud list")
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -542,10 +523,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ShowAll { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -571,7 +548,6 @@ namespace Nuke.Azure
               .Add("cloud list-profiles")
               .Add("--name {value}", Name)
               .Add("--show-all {value}", ShowAll)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -668,10 +644,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string SuffixStorageEndpoint { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -713,7 +685,6 @@ namespace Nuke.Azure
               .Add("--suffix-keyvault-dns {value}", SuffixKeyvaultDns)
               .Add("--suffix-sql-server-hostname {value}", SuffixSqlServerHostname)
               .Add("--suffix-storage-endpoint {value}", SuffixStorageEndpoint)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -746,10 +717,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual CloudProfile Profile { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -775,7 +742,6 @@ namespace Nuke.Azure
               .Add("cloud set")
               .Add("--name {value}", Name)
               .Add("--profile {value}", Profile)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -804,10 +770,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -832,7 +794,6 @@ namespace Nuke.Azure
             arguments
               .Add("cloud show")
               .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -861,10 +822,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -889,7 +846,6 @@ namespace Nuke.Azure
             arguments
               .Add("cloud unregister")
               .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -986,10 +942,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string SuffixStorageEndpoint { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -1031,7 +983,6 @@ namespace Nuke.Azure
               .Add("--suffix-keyvault-dns {value}", SuffixKeyvaultDns)
               .Add("--suffix-sql-server-hostname {value}", SuffixSqlServerHostname)
               .Add("--suffix-storage-endpoint {value}", SuffixStorageEndpoint)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1049,30 +1000,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureCloudListSettingsExtensions
     {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCloudListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudListSettings SetSubscription(this AzureCloudListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCloudListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudListSettings ResetSubscription(this AzureCloudListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureCloudListSettings.Debug"/></em></p>
@@ -1248,30 +1175,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ShowAll = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCloudListProfilesSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudListProfilesSettings SetSubscription(this AzureCloudListProfilesSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCloudListProfilesSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudListProfilesSettings ResetSubscription(this AzureCloudListProfilesSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1837,30 +1740,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCloudRegisterSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudRegisterSettings SetSubscription(this AzureCloudRegisterSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCloudRegisterSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudRegisterSettings ResetSubscription(this AzureCloudRegisterSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureCloudRegisterSettings.Debug"/></em></p>
@@ -2039,30 +1918,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCloudSetSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudSetSettings SetSubscription(this AzureCloudSetSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCloudSetSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudSetSettings ResetSubscription(this AzureCloudSetSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureCloudSetSettings.Debug"/></em></p>
@@ -2217,30 +2072,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCloudShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudShowSettings SetSubscription(this AzureCloudShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCloudShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudShowSettings ResetSubscription(this AzureCloudShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureCloudShowSettings.Debug"/></em></p>
@@ -2392,30 +2223,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCloudUnregisterSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudUnregisterSettings SetSubscription(this AzureCloudUnregisterSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCloudUnregisterSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudUnregisterSettings ResetSubscription(this AzureCloudUnregisterSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2978,30 +2785,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SuffixStorageEndpoint = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCloudUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudUpdateSettings SetSubscription(this AzureCloudUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCloudUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCloudUpdateSettings ResetSubscription(this AzureCloudUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

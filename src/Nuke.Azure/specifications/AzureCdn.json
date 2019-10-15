@@ -1,12 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/custom-domain.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/edge-node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/endpoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/origin.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cdn/profile.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cdn.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cdn/custom-domain.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cdn/profile.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cdn/endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cdn/edge-node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cdn/origin.yml"
   ],
   "name": "AzureCdn",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest",
@@ -338,10 +338,250 @@
       }
     },
     {
-      "postfix": "EdgeNodeList",
-      "definiteArgument": "cdn edge-node list",
+      "postfix": "ProfileCreate",
+      "definiteArgument": "cdn profile create",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Sku",
+            "type": "CdnProfileCreateSku",
+            "format": "--sku {value}",
+            "secret": false,
+            "help": "The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileDelete",
+      "definiteArgument": "cdn profile delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileList",
+      "definiteArgument": "cdn profile list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileShow",
+      "definiteArgument": "cdn profile show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileUpdate",
+      "definiteArgument": "cdn profile update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProfileUsage",
+      "definiteArgument": "cdn profile usage",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the CDN profile which is unique within the resource group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
           {
             "name": "Subscription",
             "type": "string",
@@ -994,6 +1234,21 @@
       }
     },
     {
+      "postfix": "EdgeNodeList",
+      "definiteArgument": "cdn edge-node list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "OriginList",
       "definiteArgument": "cdn origin list",
       "settingsClass": {
@@ -1079,261 +1334,6 @@
           }
         ]
       }
-    },
-    {
-      "postfix": "ProfileCreate",
-      "definiteArgument": "cdn profile create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Sku",
-            "type": "CdnProfileCreateSku",
-            "format": "--sku {value}",
-            "secret": false,
-            "help": "The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProfileDelete",
-      "definiteArgument": "cdn profile delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProfileList",
-      "definiteArgument": "cdn profile list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProfileShow",
-      "definiteArgument": "cdn profile show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProfileUpdate",
-      "definiteArgument": "cdn profile update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProfileUsage",
-      "definiteArgument": "cdn profile usage",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the CDN profile which is unique within the resource group."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
     }
   ],
   "commonTaskProperties": [
@@ -1375,15 +1375,6 @@
   ],
   "enumerations": [
     {
-      "name": "CdnEndpointQueryStringCaching",
-      "values": [
-        "bypasscaching",
-        "ignorequerystring",
-        "notset",
-        "usequerystring"
-      ]
-    },
-    {
       "name": "CdnProfileCreateSku",
       "values": [
         "custom_verizon",
@@ -1392,6 +1383,15 @@
         "standard_chinacdn",
         "standard_microsoft",
         "standard_verizon"
+      ]
+    },
+    {
+      "name": "CdnEndpointQueryStringCaching",
+      "values": [
+        "bypasscaching",
+        "ignorequerystring",
+        "notset",
+        "usequerystring"
       ]
     }
   ]

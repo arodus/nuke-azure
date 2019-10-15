@@ -1,0 +1,3011 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/release.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/runs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/pool.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/queue.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/variable.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/variable-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/agent.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/build.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/release/definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/build/tag.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/build/definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/variable-group/variable.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/runs/artifact.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/pipelines/runs/tag.yml"
+  ],
+  "name": "AzurePipelines",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/pipelines?view=azure-cli-latest",
+  "help": "Manage Azure Pipelines.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Create",
+      "definiteArgument": "pipelines create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the new pipeline."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch name for which the pipeline will be configured. If omitted, it will be auto-detected from local repository."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description for the new pipeline."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "QueueId",
+            "type": "string",
+            "format": "--queue-id {value}",
+            "secret": false,
+            "help": "Id of the queue in the available agent pools. Will be auto detected if not specified."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Repository for which the pipeline needs to be configured. Can be clone url of the git repository or name of the repository for a Azure Repos or Owner/RepoName in case of GitHub repository. If omitted it will be auto-detected from the remote url of local git repository. If name is mentioned instead of url, --repository-type argument is also required."
+          },
+          {
+            "name": "RepositoryType",
+            "type": "PipelinesCreateRepositoryType",
+            "format": "--repository-type {value}",
+            "secret": false,
+            "help": "Type of repository. If omitted, it will be auto-detected from remote url of local repository. 'tfsgit' for Azure Repos, 'github' for GitHub repository."
+          },
+          {
+            "name": "ServiceConnection",
+            "type": "string",
+            "format": "--service-connection {value}",
+            "secret": false,
+            "help": "Id of the Service connection created for the repository for GitHub repository. Use command az devops service-endpoint -h for creating/listing service_connections. Not required for Azure Repos."
+          },
+          {
+            "name": "SkipFirstRun",
+            "type": "bool",
+            "format": "--skip-first-run",
+            "secret": false,
+            "help": "Specify this flag to prevent the first run being triggered by the command. Command will return a pipeline if run is skipped else it will output a pipeline run."
+          },
+          {
+            "name": "YamlPath",
+            "type": "string",
+            "format": "--yaml-path {value}",
+            "secret": false,
+            "help": "Path of the pipelines yaml file in the repo (if yaml is already present in the repo)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "pipelines delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pipeline."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "pipelines list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Limit results to pipelines with this name or starting with this name. Examples: \"FabCI\" or \"Fab\\*\"."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "QueryOrder",
+            "type": "PipelinesListQueryOrder",
+            "format": "--query-order {value}",
+            "secret": false,
+            "help": "Order of the results."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Limit results to pipelines associated with this repository."
+          },
+          {
+            "name": "RepositoryType",
+            "type": "PipelinesRepositoryType",
+            "format": "--repository-type {value}",
+            "secret": false,
+            "help": "Limit results to pipelines associated with this repository type. It is mandatory to pass 'repository' argument along with this argument."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of pipelines to list."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Run",
+      "definiteArgument": "pipelines run",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Name of the branch on which the pipeline run is to be queued. Example: refs/heads/master or master or refs/pull/1/merge."
+          },
+          {
+            "name": "CommitId",
+            "type": "string",
+            "format": "--commit-id {value}",
+            "secret": false,
+            "help": "Commit-id on which the pipeline run is to be queued."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pipeline to queue. Required if --name is not supplied."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the pipeline to queue. Ignored if --id is supplied."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the pipeline results page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Variables",
+            "type": "List<string>",
+            "format": "--variables {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space separated \"name=value\" pairs for the variables you would like to set."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "pipelines show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pipeline."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the pipeline. Ignored if --id is supplied."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the pipeline summary page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "pipelines update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch name for which the pipeline will be configured."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description to be updated for the pipeline."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Id of the pipeline to update."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the pipeline to update."
+          },
+          {
+            "name": "NewName",
+            "type": "string",
+            "format": "--new-name {value}",
+            "secret": false,
+            "help": "New updated name of the pipeline."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "QueueId",
+            "type": "string",
+            "format": "--queue-id {value}",
+            "secret": false,
+            "help": "Queue id of the agent pool where the pipeline needs to run."
+          },
+          {
+            "name": "YamlPath",
+            "type": "string",
+            "format": "--yaml-path {value}",
+            "secret": false,
+            "help": "Path of the pipelines yaml file in the repo."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReleaseCreate",
+      "definiteArgument": "pipelines release create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ArtifactMetadataList",
+            "type": "List<string>",
+            "format": "--artifact-metadata-list {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space separated \"alias=version_id\" pairs."
+          },
+          {
+            "name": "DefinitionId",
+            "type": "string",
+            "format": "--definition-id {value}",
+            "secret": false,
+            "help": "ID of the definition to create. Required if --definition-name is not supplied."
+          },
+          {
+            "name": "DefinitionName",
+            "type": "string",
+            "format": "--definition-name {value}",
+            "secret": false,
+            "help": "Name of the definition to create. Ignored if --definition-id is supplied."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description of the release."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the release results page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReleaseList",
+      "definiteArgument": "pipelines release list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DefinitionId",
+            "type": "string",
+            "format": "--definition-id {value}",
+            "secret": false,
+            "help": "ID of definition to list releases for."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "SourceBranch",
+            "type": "string",
+            "format": "--source-branch {value}",
+            "secret": false,
+            "help": "Filter releases for this branch."
+          },
+          {
+            "name": "Status",
+            "type": "string",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "Limit to releases with this status."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of releases to list. Default is 50."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReleaseShow",
+      "definiteArgument": "pipelines release show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the release."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the release results page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunsList",
+      "definiteArgument": "pipelines runs list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Filter by builds for this branch."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PipelineIds",
+            "type": "string",
+            "format": "--pipeline-ids {value}",
+            "secret": false,
+            "help": "ID of definition to list builds for."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "QueryOrder",
+            "type": "PipelinesRunsListQueryOrder",
+            "format": "--query-order {value}",
+            "secret": false,
+            "help": "Order of pipeline runs."
+          },
+          {
+            "name": "Reason",
+            "type": "PipelinesRunsReason",
+            "format": "--reason {value}",
+            "secret": false,
+            "help": "Limit to builds with this reason."
+          },
+          {
+            "name": "RequestedFor",
+            "type": "string",
+            "format": "--requested-for {value}",
+            "secret": false,
+            "help": "Limit to builds requested for this user or group."
+          },
+          {
+            "name": "Result",
+            "type": "PipelinesRunsResult",
+            "format": "--result {value}",
+            "secret": false,
+            "help": "Limit to builds with this result."
+          },
+          {
+            "name": "Status",
+            "type": "PipelinesRunsStatus",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "Limit to builds with this status."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Limit to builds with each of the specified tags. Space separated."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of builds to list."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunsShow",
+      "definiteArgument": "pipelines runs show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pipeline run."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the build results page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolList",
+      "definiteArgument": "pipelines pool list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Action",
+            "type": "PipelinesPoolAction",
+            "format": "--action {value}",
+            "secret": false,
+            "help": "Filter the list with user action permitted."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "Filter the list with matching pool name."
+          },
+          {
+            "name": "PoolType",
+            "type": "PipelinesPoolListPoolType",
+            "format": "--pool-type {value}",
+            "secret": false,
+            "help": "Filter the list with type of pool."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolShow",
+      "definiteArgument": "pipelines pool show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Id of the pool to list the details."
+          },
+          {
+            "name": "Action",
+            "type": "PipelinesPoolAction",
+            "format": "--action {value}",
+            "secret": false,
+            "help": "Filter the list with user action permitted."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueList",
+      "definiteArgument": "pipelines queue list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Action",
+            "type": "PipelinesPoolAction",
+            "format": "--action {value}",
+            "secret": false,
+            "help": "Filter by whether the calling user has use or manage permissions."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "QueueName",
+            "type": "string",
+            "format": "--queue-name {value}",
+            "secret": false,
+            "help": "Filter the list with matching queue name regex. e.g. \\*ubuntu\\* for queue with name 'Hosted Ubuntu 1604'."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "QueueShow",
+      "definiteArgument": "pipelines queue show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Id of the agent queue to get information about."
+          },
+          {
+            "name": "Action",
+            "type": "PipelinesPoolAction",
+            "format": "--action {value}",
+            "secret": false,
+            "help": "Filter by whether the calling user has use or manage permissions."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableCreate",
+      "definiteArgument": "pipelines variable create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the variable."
+          },
+          {
+            "name": "AllowOverride",
+            "type": "bool",
+            "format": "--allow-override",
+            "secret": false,
+            "help": "Indicates whether the value can be set at queue time."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PipelineId",
+            "type": "string",
+            "format": "--pipeline-id {value}",
+            "secret": false,
+            "help": "Id of the pipeline."
+          },
+          {
+            "name": "PipelineName",
+            "type": "string",
+            "format": "--pipeline-name {value}",
+            "secret": false,
+            "help": "Name of the pipeline. Ignored if --pipeline-id parameter is supplied."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Secret",
+            "type": "bool",
+            "format": "--secret",
+            "secret": true,
+            "help": "Indicates whether the variable's value is a secret."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "secret": false,
+            "help": "Value of the variable. For secret variables, if --value parameter is not given, it will be picked from environment variable prefixed with &lt;problematic ids=\"id58\" refid=\"id57\"&gt;AZURE_DEVOPS_EXT_PIPELINE_VAR_&lt;/problematic&gt; or user will be prompted to enter it via standard input. e.g. A variable named `MySecret` can be input using environment variable AZURE_DEVOPS_EXT_PIPELINE_VAR_MySecret."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableDelete",
+      "definiteArgument": "pipelines variable delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the variable to delete."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PipelineId",
+            "type": "string",
+            "format": "--pipeline-id {value}",
+            "secret": false,
+            "help": "Id of the pipeline."
+          },
+          {
+            "name": "PipelineName",
+            "type": "string",
+            "format": "--pipeline-name {value}",
+            "secret": false,
+            "help": "Name of the pipeline."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableList",
+      "definiteArgument": "pipelines variable list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PipelineId",
+            "type": "string",
+            "format": "--pipeline-id {value}",
+            "secret": false,
+            "help": "Id of the pipeline."
+          },
+          {
+            "name": "PipelineName",
+            "type": "string",
+            "format": "--pipeline-name {value}",
+            "secret": false,
+            "help": "Name of the pipeline. Ignored if --pipeline-id parameter is supplied."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableUpdate",
+      "definiteArgument": "pipelines variable update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the variable."
+          },
+          {
+            "name": "AllowOverride",
+            "type": "bool",
+            "format": "--allow-override",
+            "secret": false,
+            "help": "Indicates whether the value can be set at queue time."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "NewName",
+            "type": "string",
+            "format": "--new-name {value}",
+            "secret": false,
+            "help": "New name of the variable."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PipelineId",
+            "type": "string",
+            "format": "--pipeline-id {value}",
+            "secret": false,
+            "help": "Id of the pipeline."
+          },
+          {
+            "name": "PipelineName",
+            "type": "string",
+            "format": "--pipeline-name {value}",
+            "secret": false,
+            "help": "Name of the pipeline. Ignored if --pipeline-id parameter is supplied."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "PromptValue",
+            "type": "bool",
+            "format": "--prompt-value",
+            "secret": false,
+            "help": "Set it to True to update the value of a secret variable using environment variable or prompt via standard input."
+          },
+          {
+            "name": "Secret",
+            "type": "bool",
+            "format": "--secret",
+            "secret": true,
+            "help": "If the value of the variable is a secret."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "secret": false,
+            "help": "New value of the variable. For secret variables, use --prompt-value parameter, to be prompted to enter it via standard input. For non-interactive consoles it can be picked from environment variable prefixed with &lt;problematic ids=\"id60\" refid=\"id59\"&gt;AZURE_DEVOPS_EXT_PIPELINE_VAR_&lt;/problematic&gt; e.g. A variable nameed `MySecret` can be input using environment variable AZURE_DEVOPS_EXT_PIPELINE_VAR_MySecret."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableGroupCreate",
+      "definiteArgument": "pipelines variable-group create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the variable group."
+          },
+          {
+            "name": "Variables",
+            "type": "string",
+            "format": "--variables {value}",
+            "secret": false,
+            "help": "Variables in format key=value space separated pairs. Secret variables should be managed using `az pipelines variable-group variable` commands."
+          },
+          {
+            "name": "Authorize",
+            "type": "bool",
+            "format": "--authorize",
+            "secret": false,
+            "help": "Whether the variable group should be accessible by all pipelines."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description of the variable group."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableGroupDelete",
+      "definiteArgument": "pipelines variable-group delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GroupId",
+            "type": "string",
+            "format": "--group-id {value}",
+            "secret": false,
+            "help": "Id of the variable group."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableGroupList",
+      "definiteArgument": "pipelines variable-group list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Action",
+            "type": "PipelinesPoolAction",
+            "format": "--action {value}",
+            "secret": false,
+            "help": "Action filter for the variable group. It specifies the action which can be performed on the variable groups."
+          },
+          {
+            "name": "ContinuationToken",
+            "type": "string",
+            "format": "--continuation-token {value}",
+            "secret": false,
+            "help": "Gets the variable groups after the continuation token provided."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "GroupName",
+            "type": "string",
+            "format": "--group-name {value}",
+            "secret": false,
+            "help": "Name of the variable group. Wildcards are accepted. e.g. var_group\\*."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "QueryOrder",
+            "type": "PipelinesVariableGroupListQueryOrder",
+            "format": "--query-order {value}",
+            "secret": false,
+            "help": "Gets the results in the defined order."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Number of variable groups to get."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableGroupShow",
+      "definiteArgument": "pipelines variable-group show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GroupId",
+            "type": "string",
+            "format": "--group-id {value}",
+            "secret": false,
+            "help": "ID of the variable group."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableGroupUpdate",
+      "definiteArgument": "pipelines variable-group update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GroupId",
+            "type": "string",
+            "format": "--group-id {value}",
+            "secret": false,
+            "help": "Id of the variable group."
+          },
+          {
+            "name": "Authorize",
+            "type": "bool",
+            "format": "--authorize",
+            "secret": false,
+            "help": "Whether the variable group should be accessible by all pipelines."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "New description of the variable group."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "New name of the variable group."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AgentList",
+      "definiteArgument": "pipelines agent list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "secret": false,
+            "help": "The agent pool containing the agents."
+          },
+          {
+            "name": "AgentName",
+            "type": "string",
+            "format": "--agent-name {value}",
+            "secret": false,
+            "help": "Filter on agent name."
+          },
+          {
+            "name": "Demands",
+            "type": "string",
+            "format": "--demands {value}",
+            "secret": false,
+            "help": "Filter by demands the agents can satisfy. Comma separated list."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "IncludeAssignedRequest",
+            "type": "bool",
+            "format": "--include-assigned-request",
+            "secret": false,
+            "help": "Whether to include details about the agents' current work."
+          },
+          {
+            "name": "IncludeCapabilities",
+            "type": "bool",
+            "format": "--include-capabilities",
+            "secret": false,
+            "help": "Whether to include the agents' capabilities in the response."
+          },
+          {
+            "name": "IncludeLastCompletedRequest",
+            "type": "bool",
+            "format": "--include-last-completed-request",
+            "secret": false,
+            "help": "Whether to include details about the agents' most recent completed work."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AgentShow",
+      "definiteArgument": "pipelines agent show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AgentId",
+            "type": "string",
+            "format": "--agent-id {value}",
+            "secret": false,
+            "help": "The agent ID to get information about."
+          },
+          {
+            "name": "PoolId",
+            "type": "string",
+            "format": "--pool-id {value}",
+            "secret": false,
+            "help": "The agent pool containing the agent."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "IncludeAssignedRequest",
+            "type": "bool",
+            "format": "--include-assigned-request",
+            "secret": false,
+            "help": "Whether to include details about the agents' current work."
+          },
+          {
+            "name": "IncludeCapabilities",
+            "type": "bool",
+            "format": "--include-capabilities",
+            "secret": false,
+            "help": "Whether to include the agents' capabilities in the response."
+          },
+          {
+            "name": "IncludeLastCompletedRequest",
+            "type": "bool",
+            "format": "--include-last-completed-request",
+            "secret": false,
+            "help": "Whether to include details about the agents' most recent completed work."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildList",
+      "definiteArgument": "pipelines build list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Filter by builds for this branch."
+          },
+          {
+            "name": "DefinitionIds",
+            "type": "string",
+            "format": "--definition-ids {value}",
+            "secret": false,
+            "help": "IDs (space separated) of definitions to list builds for."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Reason",
+            "type": "PipelinesRunsReason",
+            "format": "--reason {value}",
+            "secret": false,
+            "help": "Limit to builds with this reason."
+          },
+          {
+            "name": "RequestedFor",
+            "type": "string",
+            "format": "--requested-for {value}",
+            "secret": false,
+            "help": "Limit to builds requested for this user or group."
+          },
+          {
+            "name": "Result",
+            "type": "PipelinesRunsResult",
+            "format": "--result {value}",
+            "secret": false,
+            "help": "Limit to builds with this result."
+          },
+          {
+            "name": "Status",
+            "type": "PipelinesRunsStatus",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "Limit to builds with this status."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Limit to builds with each of the specified tags. Space separated."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of builds to list."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildQueue",
+      "definiteArgument": "pipelines build queue",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch to build. Required if there is not a default branch set up on the definition. Example: refs/heads/master or master or refs/pull/1/merge."
+          },
+          {
+            "name": "CommitId",
+            "type": "string",
+            "format": "--commit-id {value}",
+            "secret": false,
+            "help": "Commit ID of the branch to build."
+          },
+          {
+            "name": "DefinitionId",
+            "type": "string",
+            "format": "--definition-id {value}",
+            "secret": false,
+            "help": "ID of the definition to queue. Required if --name is not supplied."
+          },
+          {
+            "name": "DefinitionName",
+            "type": "string",
+            "format": "--definition-name {value}",
+            "secret": false,
+            "help": "Name of the definition to queue. Ignored if --id is supplied."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the build results page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "QueueId",
+            "type": "string",
+            "format": "--queue-id {value}",
+            "secret": false,
+            "help": "Queue Id of the pool that will be used to queue the build."
+          },
+          {
+            "name": "Variables",
+            "type": "List<string>",
+            "format": "--variables {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space separated \"name=value\" pairs for the variables you would like to set."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildShow",
+      "definiteArgument": "pipelines build show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the build."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the build results page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReleaseDefinitionList",
+      "definiteArgument": "pipelines release definition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ArtifactSourceId",
+            "type": "string",
+            "format": "--artifact-source-id {value}",
+            "secret": false,
+            "help": "Limit results to definitions associated with this artifact_source_id. e.g. For build it would be {projectGuid}:{BuildDefinitionId}, for Jenkins it would be {JenkinsConnectionId}:{JenkinsDefinitionId}, for TfsOnPrem it would be {TfsOnPremConnectionId}:{ProjectName}:{TfsOnPremDefinitionId}. For third-party artifacts e.g. TeamCity, BitBucket you may refer 'uniqueSourceIdentifier' inside vss-extension.json at <a href=\"https://github.com/Microsoft/vsts-rm-extensions/blob/master/Extensions\">https://github.com/Microsoft/vsts-rm-extensions/blob/master/Extensions</a>."
+          },
+          {
+            "name": "ArtifactType",
+            "type": "PipelinesReleaseDefinitionListArtifactType",
+            "format": "--artifact-type {value}",
+            "secret": false,
+            "help": "Release definitions with given artifactType will be returned."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Limit results to definitions with this name or contains this name. Example: \"FabCI\"."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of definitions to list."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ReleaseDefinitionShow",
+      "definiteArgument": "pipelines release definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the definition."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the definition. Ignored if --id is supplied."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the definition summary page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTagAdd",
+      "definiteArgument": "pipelines build tag add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BuildId",
+            "type": "string",
+            "format": "--build-id {value}",
+            "secret": false,
+            "help": "ID of the build."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Tag(s) to be added to the build. [Comma seperated values]."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTagDelete",
+      "definiteArgument": "pipelines build tag delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BuildId",
+            "type": "string",
+            "format": "--build-id {value}",
+            "secret": false,
+            "help": "ID of the build."
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "format": "--tag {value}",
+            "secret": false,
+            "help": "Tag to be deleted from the build."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildTagList",
+      "definiteArgument": "pipelines build tag list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BuildId",
+            "type": "string",
+            "format": "--build-id {value}",
+            "secret": false,
+            "help": "ID of the build."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildDefinitionList",
+      "definiteArgument": "pipelines build definition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Limit results to definitions with this name or starting with this name. Examples: \"FabCI\" or \"Fab\\*\"."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Limit results to definitions associated with this repository."
+          },
+          {
+            "name": "RepositoryType",
+            "type": "PipelinesRepositoryType",
+            "format": "--repository-type {value}",
+            "secret": false,
+            "help": "Limit results to definitions associated with this repository type. It is mandatory to pass 'repository' argument along with this argument."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of definitions to list."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BuildDefinitionShow",
+      "definiteArgument": "pipelines build definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the definition."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the definition. Ignored if --id is supplied."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the definition summary page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableGroupVariableCreate",
+      "definiteArgument": "pipelines variable-group variable create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GroupId",
+            "type": "string",
+            "format": "--group-id {value}",
+            "secret": false,
+            "help": "Id of the variable group."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the variable."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Secret",
+            "type": "bool",
+            "format": "--secret",
+            "secret": true,
+            "help": "If the value of the variable is a secret."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "secret": false,
+            "help": "Value of the variable. For secret variables, if --value parameter is not given, it will be picked from environment variable prefixed with AZURE_DEVOPS_EXT_PIPELINE_VAR_ or user will be prompted to enter it via standard input. e.g. PersonalAccessToken can be input using environment variable AZURE_DEVOPS_EXT_PIPELINE_VAR_PersonalAccessToken."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableGroupVariableDelete",
+      "definiteArgument": "pipelines variable-group variable delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GroupId",
+            "type": "string",
+            "format": "--group-id {value}",
+            "secret": false,
+            "help": "Id of the variable group."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the variable."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableGroupVariableList",
+      "definiteArgument": "pipelines variable-group variable list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GroupId",
+            "type": "string",
+            "format": "--group-id {value}",
+            "secret": false,
+            "help": "Id of the variable group."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VariableGroupVariableUpdate",
+      "definiteArgument": "pipelines variable-group variable update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GroupId",
+            "type": "string",
+            "format": "--group-id {value}",
+            "secret": false,
+            "help": "Id of the variable group."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the variable."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "NewName",
+            "type": "string",
+            "format": "--new-name {value}",
+            "secret": false,
+            "help": "New name of the variable."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "PromptValue",
+            "type": "bool",
+            "format": "--prompt-value",
+            "secret": false,
+            "help": "Set it to True to update the value of a secret variable using environment variable or prompt via standard input."
+          },
+          {
+            "name": "Secret",
+            "type": "bool",
+            "format": "--secret",
+            "secret": true,
+            "help": "If the value of the variable is a secret."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "secret": false,
+            "help": "New value of the variable. For secret variables, if --value parameter is not given, it will be picked from environment variable prefixed with AZURE_DEVOPS_EXT_PIPELINE_VAR_ or user will be prompted to enter it via standard input. e.g. PersonalAccessToken can be input using environment variable AZURE_DEVOPS_EXT_PIPELINE_VAR_PersonalAccessToken."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunsArtifactDownload",
+      "definiteArgument": "pipelines runs artifact download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ArtifactName",
+            "type": "string",
+            "format": "--artifact-name {value}",
+            "secret": false,
+            "help": "Name of the artifact to download."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "secret": false,
+            "help": "Path to download the artifact into."
+          },
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "ID of the run that the artifact is associated to."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunsArtifactList",
+      "definiteArgument": "pipelines runs artifact list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "ID of the run that the artifact is associated to."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunsArtifactUpload",
+      "definiteArgument": "pipelines runs artifact upload",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ArtifactName",
+            "type": "string",
+            "format": "--artifact-name {value}",
+            "secret": false,
+            "help": "Name of the artifact to upload."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "secret": false,
+            "help": "Path to upload the artifact from."
+          },
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "ID of the run that the artifact is associated to."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunsTagAdd",
+      "definiteArgument": "pipelines runs tag add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "ID of the pipeline run."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Tag(s) to be added to the pipeline run. [Comma seperated values]."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunsTagDelete",
+      "definiteArgument": "pipelines runs tag delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "ID of the pipeline run."
+          },
+          {
+            "name": "Tag",
+            "type": "string",
+            "format": "--tag {value}",
+            "secret": false,
+            "help": "Tag to be deleted from the pipeline run."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunsTagList",
+      "definiteArgument": "pipelines runs tag list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RunId",
+            "type": "string",
+            "format": "--run-id {value}",
+            "secret": false,
+            "help": "ID of the  pipeline run."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "secret": false,
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "secret": false,
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "AzureOutput",
+      "format": "--output {value}",
+      "secret": false,
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "secret": false,
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "secret": false,
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "PipelinesCreateRepositoryType",
+      "values": [
+        "github",
+        "tfsgit"
+      ]
+    },
+    {
+      "name": "PipelinesRepositoryType",
+      "values": [
+        "bitbucket",
+        "git",
+        "github",
+        "githubenterprise",
+        "svn",
+        "tfsgit",
+        "tfsversioncontrol"
+      ]
+    },
+    {
+      "name": "PipelinesListQueryOrder",
+      "values": [
+        "modifiedasc",
+        "modifieddesc",
+        "nameasc",
+        "namedesc",
+        "none"
+      ]
+    },
+    {
+      "name": "PipelinesRunsListQueryOrder",
+      "values": [
+        "finishtimeasc",
+        "finishtimedesc",
+        "queuetimeasc",
+        "queuetimedesc",
+        "starttimeasc",
+        "starttimedesc"
+      ]
+    },
+    {
+      "name": "PipelinesVariableGroupListQueryOrder",
+      "values": [
+        "asc",
+        "desc"
+      ]
+    },
+    {
+      "name": "PipelinesRunsReason",
+      "values": [
+        "all",
+        "batchedci",
+        "buildcompletion",
+        "checkinshelveset",
+        "individualci",
+        "manual",
+        "pullrequest",
+        "schedule",
+        "triggered",
+        "usercreated",
+        "validateshelveset"
+      ]
+    },
+    {
+      "name": "PipelinesRunsResult",
+      "values": [
+        "canceled",
+        "failed",
+        "none",
+        "partiallysucceeded",
+        "succeeded"
+      ]
+    },
+    {
+      "name": "PipelinesRunsStatus",
+      "values": [
+        "all",
+        "cancelling",
+        "completed",
+        "inprogress",
+        "none",
+        "notstarted",
+        "postponed"
+      ]
+    },
+    {
+      "name": "PipelinesPoolAction",
+      "values": [
+        "manage",
+        "none",
+        "use"
+      ]
+    },
+    {
+      "name": "PipelinesPoolListPoolType",
+      "values": [
+        "automation",
+        "deployment"
+      ]
+    },
+    {
+      "name": "PipelinesReleaseDefinitionListArtifactType",
+      "values": [
+        "build",
+        "externaltfsbuild",
+        "git",
+        "github",
+        "jenkins",
+        "tfvc"
+      ]
+    }
+  ]
+}

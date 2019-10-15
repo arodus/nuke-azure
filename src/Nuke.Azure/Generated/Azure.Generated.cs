@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/Azure.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -64,7 +64,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureConfigureSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureConfigureSettings.Query"/></li>
         ///     <li><c>--scope</c> via <see cref="AzureConfigureSettings.Scope"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureConfigureSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureConfigureSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -86,7 +85,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureConfigureSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureConfigureSettings.Query"/></li>
         ///     <li><c>--scope</c> via <see cref="AzureConfigureSettings.Scope"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureConfigureSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureConfigureSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -116,7 +114,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureFeedbackSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureFeedbackSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureFeedbackSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureFeedbackSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureFeedbackSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -135,7 +132,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureFeedbackSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureFeedbackSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureFeedbackSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureFeedbackSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureFeedbackSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -165,7 +161,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureFindSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureFindSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureFindSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureFindSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureFindSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -184,7 +179,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureFindSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureFindSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureFindSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureFindSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureFindSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -215,7 +209,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureInteractiveSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureInteractiveSettings.Query"/></li>
         ///     <li><c>--style</c> via <see cref="AzureInteractiveSettings.Style"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureInteractiveSettings.Subscription"/></li>
         ///     <li><c>--update</c> via <see cref="AzureInteractiveSettings.Update"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureInteractiveSettings.Verbose"/></li>
         ///   </ul>
@@ -236,7 +229,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureInteractiveSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureInteractiveSettings.Query"/></li>
         ///     <li><c>--style</c> via <see cref="AzureInteractiveSettings.Style"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureInteractiveSettings.Subscription"/></li>
         ///     <li><c>--update</c> via <see cref="AzureInteractiveSettings.Update"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureInteractiveSettings.Verbose"/></li>
         ///   </ul>
@@ -271,7 +263,6 @@ namespace Nuke.Azure
         ///     <li><c>--password</c> via <see cref="AzureLoginSettings.Password"/></li>
         ///     <li><c>--query</c> via <see cref="AzureLoginSettings.Query"/></li>
         ///     <li><c>--service-principal</c> via <see cref="AzureLoginSettings.ServicePrincipal"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureLoginSettings.Subscription"/></li>
         ///     <li><c>--tenant</c> via <see cref="AzureLoginSettings.Tenant"/></li>
         ///     <li><c>--use-cert-sn-issuer</c> via <see cref="AzureLoginSettings.UseCertSnIssuer"/></li>
         ///     <li><c>--use-device-code</c> via <see cref="AzureLoginSettings.UseDeviceCode"/></li>
@@ -298,7 +289,6 @@ namespace Nuke.Azure
         ///     <li><c>--password</c> via <see cref="AzureLoginSettings.Password"/></li>
         ///     <li><c>--query</c> via <see cref="AzureLoginSettings.Query"/></li>
         ///     <li><c>--service-principal</c> via <see cref="AzureLoginSettings.ServicePrincipal"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureLoginSettings.Subscription"/></li>
         ///     <li><c>--tenant</c> via <see cref="AzureLoginSettings.Tenant"/></li>
         ///     <li><c>--use-cert-sn-issuer</c> via <see cref="AzureLoginSettings.UseCertSnIssuer"/></li>
         ///     <li><c>--use-device-code</c> via <see cref="AzureLoginSettings.UseDeviceCode"/></li>
@@ -332,7 +322,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureLogoutSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureLogoutSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureLogoutSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureLogoutSettings.Subscription"/></li>
         ///     <li><c>--username</c> via <see cref="AzureLogoutSettings.Username"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureLogoutSettings.Verbose"/></li>
         ///   </ul>
@@ -352,7 +341,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureLogoutSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureLogoutSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureLogoutSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureLogoutSettings.Subscription"/></li>
         ///     <li><c>--username</c> via <see cref="AzureLogoutSettings.Username"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureLogoutSettings.Verbose"/></li>
         ///   </ul>
@@ -504,10 +492,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual ConfigureScope Scope { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -534,7 +518,6 @@ namespace Nuke.Azure
               .Add("--defaults {value}", Defaults, "{key}={value}", separator: ' ')
               .Add("--list-defaults", ListDefaults)
               .Add("--scope {value}", Scope)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -559,10 +542,6 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureTasks.AzurePath;
         public override Action<OutputType, string> CustomLogger => AzureTasks.AzureLogger;
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -586,7 +565,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("feedback")
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -611,10 +589,6 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureTasks.AzurePath;
         public override Action<OutputType, string> CustomLogger => AzureTasks.AzureLogger;
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -638,7 +612,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("find")
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -671,10 +644,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Update { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -700,7 +669,6 @@ namespace Nuke.Azure
               .Add("interactive")
               .Add("--style {value}", Style)
               .Add("--update {value}", Update)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -757,10 +725,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual bool? Identity { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -792,7 +756,6 @@ namespace Nuke.Azure
               .Add("--use-device-code {value}", UseDeviceCode)
               .Add("--username {value}", Username)
               .Add("--identity", Identity)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -821,10 +784,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Username { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -849,7 +808,6 @@ namespace Nuke.Azure
             arguments
               .Add("logout")
               .Add("--username {value}", Username)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1151,30 +1109,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConfigureSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConfigureSettings SetSubscription(this AzureConfigureSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConfigureSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConfigureSettings ResetSubscription(this AzureConfigureSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureConfigureSettings.Debug"/></em></p>
@@ -1305,30 +1239,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureFeedbackSettingsExtensions
     {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureFeedbackSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureFeedbackSettings SetSubscription(this AzureFeedbackSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureFeedbackSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureFeedbackSettings ResetSubscription(this AzureFeedbackSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureFeedbackSettings.Debug"/></em></p>
@@ -1459,30 +1369,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureFindSettingsExtensions
     {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureFindSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureFindSettings SetSubscription(this AzureFindSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureFindSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureFindSettings ResetSubscription(this AzureFindSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureFindSettings.Debug"/></em></p>
@@ -1658,30 +1544,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Update = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureInteractiveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureInteractiveSettings SetSubscription(this AzureInteractiveSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureInteractiveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureInteractiveSettings ResetSubscription(this AzureInteractiveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2106,30 +1968,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureLoginSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureLoginSettings SetSubscription(this AzureLoginSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureLoginSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureLoginSettings ResetSubscription(this AzureLoginSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureLoginSettings.Debug"/></em></p>
@@ -2281,30 +2119,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Username = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureLogoutSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureLogoutSettings SetSubscription(this AzureLogoutSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureLogoutSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureLogoutSettings ResetSubscription(this AzureLogoutSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

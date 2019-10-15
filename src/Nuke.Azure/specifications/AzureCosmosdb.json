@@ -1,11 +1,33 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cosmosdb.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cosmosdb/collection.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cosmosdb/database.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cosmosdb/keys.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/cosmosdb/network-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/collection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/table.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/mongodb.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/cassandra.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/gremlin.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/database.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/sql.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/keys.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/gremlin/graph.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/gremlin/database.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/mongodb/collection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/mongodb/database.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/table/throughput.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/cassandra/table.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/cassandra/keyspace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/sql/database.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/sql/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/gremlin/database/throughput.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/gremlin/graph/throughput.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/mongodb/database/throughput.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/mongodb/collection/throughput.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/cassandra/keyspace/throughput.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/cassandra/table/throughput.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/sql/database/throughput.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/cosmosdb/sql/container/throughput.yml"
   ],
   "name": "AzureCosmosdb",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/cosmosdb?view=azure-cli-latest",
@@ -378,7 +400,7 @@
         "properties": [
           {
             "name": "KeyKind",
-            "type": "CosmosdbRegenerateKeyKeyKind",
+            "type": "CosmosdbKeyKind",
             "format": "--key-kind {value}",
             "secret": false,
             "help": "The access key to regenerate."
@@ -591,7 +613,7 @@
             "type": "string",
             "format": "--default-ttl {value}",
             "secret": false,
-            "help": "Default TTL."
+            "help": "Default TTL. Provide 0 to disable."
           },
           {
             "name": "IndexingPolicy",
@@ -897,7 +919,7 @@
             "type": "string",
             "format": "--default-ttl {value}",
             "secret": false,
-            "help": "Default TTL."
+            "help": "Default TTL. Provide 0 to disable."
           },
           {
             "name": "IndexingPolicy",
@@ -950,6 +972,303 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "NetworkRuleAdd",
+      "definiteArgument": "cosmosdb network-rule add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "Name or ID of the subnet."
+          },
+          {
+            "name": "IgnoreMissingVnetServiceEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-vnet-service-endpoint",
+            "secret": false,
+            "help": "Create firewall rule before the virtual network has vnet service endpoint enabled."
+          },
+          {
+            "name": "VirtualNetwork",
+            "type": "string",
+            "format": "--virtual-network {value}",
+            "secret": false,
+            "help": "The name of the VNET, which must be provided in conjunction with the name of the subnet."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleList",
+      "definiteArgument": "cosmosdb network-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "NetworkRuleRemove",
+      "definiteArgument": "cosmosdb network-rule remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "Name or ID of the subnet."
+          },
+          {
+            "name": "VirtualNetwork",
+            "type": "string",
+            "format": "--virtual-network {value}",
+            "secret": false,
+            "help": "The name of the VNET, which must be provided in conjunction with the name of the subnet."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Cosmos DB database account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TableCreate",
+      "definiteArgument": "cosmosdb table create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of Table (RU/s). Default value is 400."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TableDelete",
+      "definiteArgument": "cosmosdb table delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TableList",
+      "definiteArgument": "cosmosdb table list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TableShow",
+      "definiteArgument": "cosmosdb table show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Mongodb",
+      "definiteArgument": "cosmosdb mongodb",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "Cassandra",
+      "definiteArgument": "cosmosdb cassandra",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "Gremlin",
+      "definiteArgument": "cosmosdb gremlin",
+      "settingsClass": {}
     },
     {
       "postfix": "DatabaseCreate",
@@ -1202,6 +1521,11 @@
       }
     },
     {
+      "postfix": "Sql",
+      "definiteArgument": "cosmosdb sql",
+      "settingsClass": {}
+    },
+    {
       "postfix": "KeysList",
       "definiteArgument": "cosmosdb keys list",
       "settingsClass": {
@@ -1211,7 +1535,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the Cosmos DB database account."
+            "help": "Cosmosdb account name."
           },
           {
             "name": "ResourceGroup",
@@ -1219,6 +1543,13 @@
             "format": "--resource-group {value}",
             "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Type",
+            "type": "CosmosdbKeysListType",
+            "format": "--type {value}",
+            "secret": false,
+            "help": "The type of account key."
           },
           {
             "name": "Subscription",
@@ -1231,30 +1562,16 @@
       }
     },
     {
-      "postfix": "NetworkRuleAdd",
-      "definiteArgument": "cosmosdb network-rule add",
+      "postfix": "KeysRegenerate",
+      "definiteArgument": "cosmosdb keys regenerate",
       "settingsClass": {
         "properties": [
           {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
+            "name": "KeyKind",
+            "type": "CosmosdbKeyKind",
+            "format": "--key-kind {value}",
             "secret": false,
-            "help": "Name or ID of the subnet."
-          },
-          {
-            "name": "IgnoreMissingVnetServiceEndpoint",
-            "type": "bool",
-            "format": "--ignore-missing-vnet-service-endpoint",
-            "secret": false,
-            "help": "Create firewall rule before the virtual network has vnet service endpoint enabled."
-          },
-          {
-            "name": "VirtualNetwork",
-            "type": "string",
-            "format": "--virtual-network {value}",
-            "secret": false,
-            "help": "The name of the VNET, which must be provided in conjunction with the name of the subnet."
+            "help": "The access key to regenerate."
           },
           {
             "name": "Ids",
@@ -1289,16 +1606,101 @@
       }
     },
     {
-      "postfix": "NetworkRuleList",
-      "definiteArgument": "cosmosdb network-rule list",
+      "postfix": "GremlinGraphCreate",
+      "definiteArgument": "cosmosdb gremlin graph create",
       "settingsClass": {
         "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the Cosmos DB database account."
+            "help": "Graph name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Idx",
+            "type": "string",
+            "format": "--idx {value}",
+            "secret": false,
+            "help": "Indexing Policy, you can enter it as a string or as a file, e.g., --idx @policy-file.json or --idx \"{\"indexingMode\": \"consistent\", \"includedPaths\": [{\"path\": \"/\\*\", \"indexes\": [{\"dataType\": \"String\", \"kind\": \"Range\"}]}], \"excludedPaths\": [{ \"path\": \"/headquarters/employees/?\"}]}\"."
+          },
+          {
+            "name": "PartitionKeyPath",
+            "type": "string",
+            "format": "--partition-key-path {value}",
+            "secret": false,
+            "help": "Partition Key Path, e.g., '/address/zipcode'."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of Gremlin graph (RU/s). Default value is 400."
+          },
+          {
+            "name": "Ttl",
+            "type": "string",
+            "format": "--ttl {value}",
+            "secret": false,
+            "help": "Default TTL. If the value is missing or set to \"-1\", items don't expire. If the value is set to \"n\", items will expire \"n\" seconds after last modified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinGraphDelete",
+      "definiteArgument": "cosmosdb gremlin graph delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Graph name."
           },
           {
             "name": "ResourceGroup",
@@ -1318,38 +1720,23 @@
       }
     },
     {
-      "postfix": "NetworkRuleRemove",
-      "definiteArgument": "cosmosdb network-rule remove",
+      "postfix": "GremlinGraphList",
+      "definiteArgument": "cosmosdb gremlin graph list",
       "settingsClass": {
         "properties": [
           {
-            "name": "Subnet",
+            "name": "AccountName",
             "type": "string",
-            "format": "--subnet {value}",
+            "format": "--account-name {value}",
             "secret": false,
-            "help": "Name or ID of the subnet."
+            "help": "Cosmosdb account name."
           },
           {
-            "name": "VirtualNetwork",
+            "name": "DatabaseName",
             "type": "string",
-            "format": "--virtual-network {value}",
+            "format": "--database-name {value}",
             "secret": false,
-            "help": "The name of the VNET, which must be provided in conjunction with the name of the subnet."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the Cosmos DB database account."
+            "help": "Database name."
           },
           {
             "name": "ResourceGroup",
@@ -1357,6 +1744,2178 @@
             "format": "--resource-group {value}",
             "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinGraphShow",
+      "definiteArgument": "cosmosdb gremlin graph show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Graph name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinGraphUpdate",
+      "definiteArgument": "cosmosdb gremlin graph update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Graph name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Idx",
+            "type": "string",
+            "format": "--idx {value}",
+            "secret": false,
+            "help": "Indexing Policy, you can enter it as a string or as a file, e.g., --idx @policy-file.json or --idx \"{\"indexingMode\": \"consistent\", \"includedPaths\": [{\"path\": \"/\\*\", \"indexes\": [{\"dataType\": \"String\", \"kind\": \"Range\"}]}], \"excludedPaths\": [{ \"path\": \"/headquarters/employees/?\"}]}\"."
+          },
+          {
+            "name": "Ttl",
+            "type": "string",
+            "format": "--ttl {value}",
+            "secret": false,
+            "help": "Default TTL. If the value is missing or set to \"-1\", items don't expire. If the value is set to \"n\", items will expire \"n\" seconds after last modified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinDatabaseCreate",
+      "definiteArgument": "cosmosdb gremlin database create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput Gremlin database (RU/s). Default value is 400."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinDatabaseDelete",
+      "definiteArgument": "cosmosdb gremlin database delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinDatabaseList",
+      "definiteArgument": "cosmosdb gremlin database list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinDatabaseShow",
+      "definiteArgument": "cosmosdb gremlin database show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbCollectionCreate",
+      "definiteArgument": "cosmosdb mongodb collection create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Collection name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Shard",
+            "type": "string",
+            "format": "--shard {value}",
+            "secret": false,
+            "help": "Sharding key path."
+          },
+          {
+            "name": "Idx",
+            "type": "string",
+            "format": "--idx {value}",
+            "secret": false,
+            "help": "Indexes, you can enter it as a string or as a file, e.g., --idx @indexes-file.json or --idx \"[{\"key\": {\"keys\": [\"_ts\"]},\"options\": {\"expireAfterSeconds\": 1000}}, {\"key\": {\"keys\": [\"user_id\", \"user_address\"]}, \"options\": {\"unique\": \"true\"}}]\"."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of MongoDB collection (RU/s). Default value is 400."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbCollectionDelete",
+      "definiteArgument": "cosmosdb mongodb collection delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Collection name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbCollectionList",
+      "definiteArgument": "cosmosdb mongodb collection list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbCollectionShow",
+      "definiteArgument": "cosmosdb mongodb collection show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Collection name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbCollectionUpdate",
+      "definiteArgument": "cosmosdb mongodb collection update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Collection name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Idx",
+            "type": "string",
+            "format": "--idx {value}",
+            "secret": false,
+            "help": "Indexes, you can enter it as a string or as a file, e.g., --idx @indexes-file.json or --idx \"[{\"key\": {\"keys\": [\"_ts\"]},\"options\": {\"expireAfterSeconds\": 1000}}, {\"key\": {\"keys\": [\"user_id\", \"user_address\"]}, \"options\": {\"unique\": \"true\"}}]\"."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbDatabaseCreate",
+      "definiteArgument": "cosmosdb mongodb database create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of MongoDB database (RU/s). Default value is 400."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbDatabaseDelete",
+      "definiteArgument": "cosmosdb mongodb database delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbDatabaseList",
+      "definiteArgument": "cosmosdb mongodb database list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbDatabaseShow",
+      "definiteArgument": "cosmosdb mongodb database show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TableThroughputShow",
+      "definiteArgument": "cosmosdb table throughput show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TableThroughputUpdate",
+      "definiteArgument": "cosmosdb table throughput update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of Table (RU/s)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraTableCreate",
+      "definiteArgument": "cosmosdb cassandra table create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "KeyspaceName",
+            "type": "string",
+            "format": "--keyspace-name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Schema",
+            "type": "string",
+            "format": "--schema {value}",
+            "secret": false,
+            "help": "Schema, you can enter it as a string or as a file, e.g., --schema @schema-file.json or --schema \"{\"columns\": [{\"name\": \"columnA\",\"type\": \"uuid\"}, {\"name\": \"columnB\",\"type\": \"Ascii\"}],\"partitionKeys\": [{\"name\": \"columnA\"}]}\"."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of Cassandra table (RU/s). Default value is 400."
+          },
+          {
+            "name": "Ttl",
+            "type": "string",
+            "format": "--ttl {value}",
+            "secret": false,
+            "help": "Default TTL. If the value is missing or set to \"-1\", items don't expire. If the value is set to \"n\", items will expire \"n\" seconds after last modified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraTableDelete",
+      "definiteArgument": "cosmosdb cassandra table delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "KeyspaceName",
+            "type": "string",
+            "format": "--keyspace-name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraTableList",
+      "definiteArgument": "cosmosdb cassandra table list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "KeyspaceName",
+            "type": "string",
+            "format": "--keyspace-name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraTableShow",
+      "definiteArgument": "cosmosdb cassandra table show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "KeyspaceName",
+            "type": "string",
+            "format": "--keyspace-name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraTableUpdate",
+      "definiteArgument": "cosmosdb cassandra table update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "KeyspaceName",
+            "type": "string",
+            "format": "--keyspace-name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Schema",
+            "type": "string",
+            "format": "--schema {value}",
+            "secret": false,
+            "help": "Schema, you can enter it as a string or as a file, e.g., --schema @schema-file.json or --schema \"{\"columns\": [{\"name\": \"columnA\",\"type\": \"uuid\"}, {\"name\": \"columnB\",\"type\": \"Ascii\"}],\"partitionKeys\": [{\"name\": \"columnA\"}]}\"."
+          },
+          {
+            "name": "Ttl",
+            "type": "string",
+            "format": "--ttl {value}",
+            "secret": false,
+            "help": "Default TTL. If the value is missing or set to \"-1\", items don't expire. If the value is set to \"n\", items will expire \"n\" seconds after last modified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraKeyspaceCreate",
+      "definiteArgument": "cosmosdb cassandra keyspace create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of Cassandra keyspace (RU/s). Default value is 400."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraKeyspaceDelete",
+      "definiteArgument": "cosmosdb cassandra keyspace delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraKeyspaceList",
+      "definiteArgument": "cosmosdb cassandra keyspace list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraKeyspaceShow",
+      "definiteArgument": "cosmosdb cassandra keyspace show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlDatabaseCreate",
+      "definiteArgument": "cosmosdb sql database create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of SQL database (RU/s). Default value is 400."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlDatabaseDelete",
+      "definiteArgument": "cosmosdb sql database delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlDatabaseList",
+      "definiteArgument": "cosmosdb sql database list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlDatabaseShow",
+      "definiteArgument": "cosmosdb sql database show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlContainerCreate",
+      "definiteArgument": "cosmosdb sql container create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Idx",
+            "type": "string",
+            "format": "--idx {value}",
+            "secret": false,
+            "help": "Indexing Policy, you can enter it as a string or as a file, e.g., --idx @policy-file.json or --idx \"{\"indexingMode\": \"consistent\", \"includedPaths\": [{\"path\": \"/\\*\", \"indexes\": [{\"dataType\": \"String\", \"kind\": \"Range\"}]}], \"excludedPaths\": [{ \"path\": \"/headquarters/employees/?\"}]}\"."
+          },
+          {
+            "name": "PartitionKeyPath",
+            "type": "string",
+            "format": "--partition-key-path {value}",
+            "secret": false,
+            "help": "Partition Key Path, e.g., '/address/zipcode'."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of SQL container (RU/s). Default value is 400."
+          },
+          {
+            "name": "Ttl",
+            "type": "string",
+            "format": "--ttl {value}",
+            "secret": false,
+            "help": "Default TTL. If the value is missing or set to \"-1\", items don't expire. If the value is set to \"n\", items will expire \"n\" seconds after last modified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlContainerDelete",
+      "definiteArgument": "cosmosdb sql container delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlContainerList",
+      "definiteArgument": "cosmosdb sql container list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlContainerShow",
+      "definiteArgument": "cosmosdb sql container show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlContainerUpdate",
+      "definiteArgument": "cosmosdb sql container update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Idx",
+            "type": "string",
+            "format": "--idx {value}",
+            "secret": false,
+            "help": "Indexing Policy, you can enter it as a string or as a file, e.g., --idx @policy-file.json or --idx \"{\"indexingMode\": \"consistent\", \"includedPaths\": [{\"path\": \"/\\*\", \"indexes\": [{\"dataType\": \"String\", \"kind\": \"Range\"}]}], \"excludedPaths\": [{ \"path\": \"/headquarters/employees/?\"}]}\"."
+          },
+          {
+            "name": "Ttl",
+            "type": "string",
+            "format": "--ttl {value}",
+            "secret": false,
+            "help": "Default TTL. If the value is missing or set to \"-1\", items don't expire. If the value is set to \"n\", items will expire \"n\" seconds after last modified time."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinDatabaseThroughputShow",
+      "definiteArgument": "cosmosdb gremlin database throughput show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinDatabaseThroughputUpdate",
+      "definiteArgument": "cosmosdb gremlin database throughput update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of Gremlin database (RU/s)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinGraphThroughputShow",
+      "definiteArgument": "cosmosdb gremlin graph throughput show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Grapth name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GremlinGraphThroughputUpdate",
+      "definiteArgument": "cosmosdb gremlin graph throughput update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Grapth name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput Gremlin graph (RU/s)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbDatabaseThroughputShow",
+      "definiteArgument": "cosmosdb mongodb database throughput show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbDatabaseThroughputUpdate",
+      "definiteArgument": "cosmosdb mongodb database throughput update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of MongoDB database (RU/s)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbCollectionThroughputShow",
+      "definiteArgument": "cosmosdb mongodb collection throughput show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Collection name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MongodbCollectionThroughputUpdate",
+      "definiteArgument": "cosmosdb mongodb collection throughput update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Collection name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of MongoDB collection (RU/s)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraKeyspaceThroughputShow",
+      "definiteArgument": "cosmosdb cassandra keyspace throughput show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraKeyspaceThroughputUpdate",
+      "definiteArgument": "cosmosdb cassandra keyspace throughput update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of Cassandra keyspace (RU/s)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraTableThroughputShow",
+      "definiteArgument": "cosmosdb cassandra table throughput show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "KeyspaceName",
+            "type": "string",
+            "format": "--keyspace-name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CassandraTableThroughputUpdate",
+      "definiteArgument": "cosmosdb cassandra table throughput update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "KeyspaceName",
+            "type": "string",
+            "format": "--keyspace-name {value}",
+            "secret": false,
+            "help": "Keyspace name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Table name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of Cassandra table (RU/s)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlDatabaseThroughputShow",
+      "definiteArgument": "cosmosdb sql database throughput show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlDatabaseThroughputUpdate",
+      "definiteArgument": "cosmosdb sql database throughput update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of SQL database (RU/s)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlContainerThroughputShow",
+      "definiteArgument": "cosmosdb sql container throughput show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SqlContainerThroughputUpdate",
+      "definiteArgument": "cosmosdb sql container throughput update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "Cosmosdb account name."
+          },
+          {
+            "name": "DatabaseName",
+            "type": "string",
+            "format": "--database-name {value}",
+            "secret": false,
+            "help": "Database name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Container name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Throughput",
+            "type": "string",
+            "format": "--throughput {value}",
+            "secret": false,
+            "help": "The throughput of SQL container (RU/s)."
           },
           {
             "name": "Subscription",
@@ -1426,12 +3985,20 @@
       ]
     },
     {
-      "name": "CosmosdbRegenerateKeyKeyKind",
+      "name": "CosmosdbKeyKind",
       "values": [
         "primary",
         "primaryreadonly",
         "secondary",
         "secondaryreadonly"
+      ]
+    },
+    {
+      "name": "CosmosdbKeysListType",
+      "values": [
+        "connection-strings",
+        "keys",
+        "read-only-keys"
       ]
     }
   ]

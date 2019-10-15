@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/disk.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/disk.yml"
   ],
   "name": "AzureDisk",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/disk?view=azure-cli-latest",
@@ -110,6 +110,13 @@
             "format": "--tags {value}",
             "secret": false,
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "UploadSizeBytes",
+            "type": "string",
+            "format": "--upload-size-bytes {value}",
+            "secret": false,
+            "help": "The size (in bytes) of the contents of the upload including the VHD footer. Min value: 20972032. Max value: 35183298347520."
           },
           {
             "name": "Zone",

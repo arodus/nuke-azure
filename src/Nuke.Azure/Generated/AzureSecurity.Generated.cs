@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSecurity.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -85,6 +85,416 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureSecuritySettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurity(CombinatorialConfigure<AzureSecuritySettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureSecurity, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityDiscoveredSecuritySolutionList(AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityDiscoveredSecuritySolutionListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityDiscoveredSecuritySolutionList(Configure<AzureSecurityDiscoveredSecuritySolutionListSettings> configurator)
+        {
+            return AzureSecurityDiscoveredSecuritySolutionList(configurator(new AzureSecurityDiscoveredSecuritySolutionListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityDiscoveredSecuritySolutionListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityDiscoveredSecuritySolutionList(CombinatorialConfigure<AzureSecurityDiscoveredSecuritySolutionListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityDiscoveredSecuritySolutionList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityDiscoveredSecuritySolutionShow(AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityDiscoveredSecuritySolutionShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityDiscoveredSecuritySolutionShow(Configure<AzureSecurityDiscoveredSecuritySolutionShowSettings> configurator)
+        {
+            return AzureSecurityDiscoveredSecuritySolutionShow(configurator(new AzureSecurityDiscoveredSecuritySolutionShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityDiscoveredSecuritySolutionShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityDiscoveredSecuritySolutionShow(CombinatorialConfigure<AzureSecurityDiscoveredSecuritySolutionShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityDiscoveredSecuritySolutionShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityJitPolicyList(AzureSecurityJitPolicyListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityJitPolicyListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityJitPolicyListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityJitPolicyListSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureSecurityJitPolicyListSettings.Location"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityJitPolicyListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityJitPolicyListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityJitPolicyListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityJitPolicyListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityJitPolicyListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityJitPolicyList(Configure<AzureSecurityJitPolicyListSettings> configurator)
+        {
+            return AzureSecurityJitPolicyList(configurator(new AzureSecurityJitPolicyListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityJitPolicyListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityJitPolicyListSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureSecurityJitPolicyListSettings.Location"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityJitPolicyListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityJitPolicyListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityJitPolicyListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityJitPolicyListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityJitPolicyListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityJitPolicyListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityJitPolicyList(CombinatorialConfigure<AzureSecurityJitPolicyListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityJitPolicyList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityJitPolicyShow(AzureSecurityJitPolicyShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityJitPolicyShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityJitPolicyShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityJitPolicyShowSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureSecurityJitPolicyShowSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityJitPolicyShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityJitPolicyShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityJitPolicyShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityJitPolicyShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityJitPolicyShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityJitPolicyShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityJitPolicyShow(Configure<AzureSecurityJitPolicyShowSettings> configurator)
+        {
+            return AzureSecurityJitPolicyShow(configurator(new AzureSecurityJitPolicyShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityJitPolicyShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityJitPolicyShowSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureSecurityJitPolicyShowSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityJitPolicyShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityJitPolicyShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityJitPolicyShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityJitPolicyShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityJitPolicyShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityJitPolicyShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityJitPolicyShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityJitPolicyShow(CombinatorialConfigure<AzureSecurityJitPolicyShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityJitPolicyShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecuritySettingList(AzureSecuritySettingListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecuritySettingListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecuritySettingListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecuritySettingListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecuritySettingListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecuritySettingListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecuritySettingListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecuritySettingListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecuritySettingList(Configure<AzureSecuritySettingListSettings> configurator)
+        {
+            return AzureSecuritySettingList(configurator(new AzureSecuritySettingListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecuritySettingListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecuritySettingListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecuritySettingListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecuritySettingListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecuritySettingListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecuritySettingListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecuritySettingListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecuritySettingList(CombinatorialConfigure<AzureSecuritySettingListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecuritySettingList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecuritySettingShow(AzureSecuritySettingShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecuritySettingShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecuritySettingShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecuritySettingShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecuritySettingShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecuritySettingShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecuritySettingShowSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecuritySettingShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecuritySettingShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecuritySettingShow(Configure<AzureSecuritySettingShowSettings> configurator)
+        {
+            return AzureSecuritySettingShow(configurator(new AzureSecuritySettingShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecuritySettingShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecuritySettingShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecuritySettingShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecuritySettingShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecuritySettingShowSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecuritySettingShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecuritySettingShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecuritySettingShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecuritySettingShow(CombinatorialConfigure<AzureSecuritySettingShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecuritySettingShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityLocationList(AzureSecurityLocationListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityLocationListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityLocationListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityLocationListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityLocationListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityLocationListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityLocationListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityLocationListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityLocationList(Configure<AzureSecurityLocationListSettings> configurator)
+        {
+            return AzureSecurityLocationList(configurator(new AzureSecurityLocationListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityLocationListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityLocationListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityLocationListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityLocationListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityLocationListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityLocationListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityLocationListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityLocationList(CombinatorialConfigure<AzureSecurityLocationListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityLocationList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityLocationShow(AzureSecurityLocationShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityLocationShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityLocationShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityLocationShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityLocationShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityLocationShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityLocationShowSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityLocationShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityLocationShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityLocationShow(Configure<AzureSecurityLocationShowSettings> configurator)
+        {
+            return AzureSecurityLocationShow(configurator(new AzureSecurityLocationShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityLocationShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityLocationShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityLocationShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityLocationShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityLocationShowSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityLocationShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityLocationShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityLocationShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityLocationShow(CombinatorialConfigure<AzureSecurityLocationShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityLocationShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage your security posture with Azure Security Center.</p>
@@ -250,159 +660,6 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureSecurityAlertUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityAlertUpdate(CombinatorialConfigure<AzureSecurityAlertUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureSecurityAlertUpdate, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingList(AzureSecurityAutoProvisioningSettingListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityAutoProvisioningSettingListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingList(Configure<AzureSecurityAutoProvisioningSettingListSettings> configurator)
-        {
-            return AzureSecurityAutoProvisioningSettingList(configurator(new AzureSecurityAutoProvisioningSettingListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityAutoProvisioningSettingListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityAutoProvisioningSettingList(CombinatorialConfigure<AzureSecurityAutoProvisioningSettingListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityAutoProvisioningSettingList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingShow(AzureSecurityAutoProvisioningSettingShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityAutoProvisioningSettingShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingShow(Configure<AzureSecurityAutoProvisioningSettingShowSettings> configurator)
-        {
-            return AzureSecurityAutoProvisioningSettingShow(configurator(new AzureSecurityAutoProvisioningSettingShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityAutoProvisioningSettingShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityAutoProvisioningSettingShow(CombinatorialConfigure<AzureSecurityAutoProvisioningSettingShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityAutoProvisioningSettingShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingUpdate(AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityAutoProvisioningSettingUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--auto-provision</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.AutoProvision"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingUpdate(Configure<AzureSecurityAutoProvisioningSettingUpdateSettings> configurator)
-        {
-            return AzureSecurityAutoProvisioningSettingUpdate(configurator(new AzureSecurityAutoProvisioningSettingUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--auto-provision</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.AutoProvision"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityAutoProvisioningSettingUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityAutoProvisioningSettingUpdate(CombinatorialConfigure<AzureSecurityAutoProvisioningSettingUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityAutoProvisioningSettingUpdate, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage your security posture with Azure Security Center.</p>
@@ -613,675 +870,6 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureSecurityContactShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityContactShow(CombinatorialConfigure<AzureSecurityContactShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureSecurityContactShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityDiscoveredSecuritySolutionList(AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityDiscoveredSecuritySolutionListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityDiscoveredSecuritySolutionList(Configure<AzureSecurityDiscoveredSecuritySolutionListSettings> configurator)
-        {
-            return AzureSecurityDiscoveredSecuritySolutionList(configurator(new AzureSecurityDiscoveredSecuritySolutionListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityDiscoveredSecuritySolutionListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityDiscoveredSecuritySolutionList(CombinatorialConfigure<AzureSecurityDiscoveredSecuritySolutionListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityDiscoveredSecuritySolutionList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityDiscoveredSecuritySolutionShow(AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityDiscoveredSecuritySolutionShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityDiscoveredSecuritySolutionShow(Configure<AzureSecurityDiscoveredSecuritySolutionShowSettings> configurator)
-        {
-            return AzureSecurityDiscoveredSecuritySolutionShow(configurator(new AzureSecurityDiscoveredSecuritySolutionShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityDiscoveredSecuritySolutionShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityDiscoveredSecuritySolutionShow(CombinatorialConfigure<AzureSecurityDiscoveredSecuritySolutionShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityDiscoveredSecuritySolutionShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityExternalSecuritySolutionList(AzureSecurityExternalSecuritySolutionListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityExternalSecuritySolutionListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityExternalSecuritySolutionList(Configure<AzureSecurityExternalSecuritySolutionListSettings> configurator)
-        {
-            return AzureSecurityExternalSecuritySolutionList(configurator(new AzureSecurityExternalSecuritySolutionListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityExternalSecuritySolutionListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityExternalSecuritySolutionList(CombinatorialConfigure<AzureSecurityExternalSecuritySolutionListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityExternalSecuritySolutionList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityExternalSecuritySolutionShow(AzureSecurityExternalSecuritySolutionShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityExternalSecuritySolutionShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityExternalSecuritySolutionShow(Configure<AzureSecurityExternalSecuritySolutionShowSettings> configurator)
-        {
-            return AzureSecurityExternalSecuritySolutionShow(configurator(new AzureSecurityExternalSecuritySolutionShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityExternalSecuritySolutionShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityExternalSecuritySolutionShow(CombinatorialConfigure<AzureSecurityExternalSecuritySolutionShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityExternalSecuritySolutionShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityJitPolicyList(AzureSecurityJitPolicyListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityJitPolicyListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityJitPolicyListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityJitPolicyListSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureSecurityJitPolicyListSettings.Location"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityJitPolicyListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityJitPolicyListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityJitPolicyListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityJitPolicyListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityJitPolicyListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityJitPolicyList(Configure<AzureSecurityJitPolicyListSettings> configurator)
-        {
-            return AzureSecurityJitPolicyList(configurator(new AzureSecurityJitPolicyListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityJitPolicyListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityJitPolicyListSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureSecurityJitPolicyListSettings.Location"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityJitPolicyListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityJitPolicyListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityJitPolicyListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityJitPolicyListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityJitPolicyListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityJitPolicyListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityJitPolicyList(CombinatorialConfigure<AzureSecurityJitPolicyListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityJitPolicyList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityJitPolicyShow(AzureSecurityJitPolicyShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityJitPolicyShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityJitPolicyShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityJitPolicyShowSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureSecurityJitPolicyShowSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityJitPolicyShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityJitPolicyShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityJitPolicyShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityJitPolicyShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityJitPolicyShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityJitPolicyShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityJitPolicyShow(Configure<AzureSecurityJitPolicyShowSettings> configurator)
-        {
-            return AzureSecurityJitPolicyShow(configurator(new AzureSecurityJitPolicyShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityJitPolicyShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityJitPolicyShowSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureSecurityJitPolicyShowSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityJitPolicyShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityJitPolicyShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityJitPolicyShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityJitPolicyShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityJitPolicyShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityJitPolicyShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityJitPolicyShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityJitPolicyShow(CombinatorialConfigure<AzureSecurityJitPolicyShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityJitPolicyShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityLocationList(AzureSecurityLocationListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityLocationListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityLocationListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityLocationListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityLocationListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityLocationListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityLocationListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityLocationListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityLocationList(Configure<AzureSecurityLocationListSettings> configurator)
-        {
-            return AzureSecurityLocationList(configurator(new AzureSecurityLocationListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityLocationListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityLocationListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityLocationListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityLocationListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityLocationListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityLocationListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityLocationListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityLocationList(CombinatorialConfigure<AzureSecurityLocationListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityLocationList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityLocationShow(AzureSecurityLocationShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityLocationShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityLocationShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityLocationShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityLocationShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityLocationShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityLocationShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityLocationShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityLocationShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityLocationShow(Configure<AzureSecurityLocationShowSettings> configurator)
-        {
-            return AzureSecurityLocationShow(configurator(new AzureSecurityLocationShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityLocationShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityLocationShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityLocationShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityLocationShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityLocationShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityLocationShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityLocationShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityLocationShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityLocationShow(CombinatorialConfigure<AzureSecurityLocationShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityLocationShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityPricingCreate(AzureSecurityPricingCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityPricingCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityPricingCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityPricingCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingCreateSettings.Subscription"/></li>
-        ///     <li><c>--tier</c> via <see cref="AzureSecurityPricingCreateSettings.Tier"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityPricingCreate(Configure<AzureSecurityPricingCreateSettings> configurator)
-        {
-            return AzureSecurityPricingCreate(configurator(new AzureSecurityPricingCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityPricingCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityPricingCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingCreateSettings.Subscription"/></li>
-        ///     <li><c>--tier</c> via <see cref="AzureSecurityPricingCreateSettings.Tier"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityPricingCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityPricingCreate(CombinatorialConfigure<AzureSecurityPricingCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityPricingCreate, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityPricingList(AzureSecurityPricingListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityPricingListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityPricingList(Configure<AzureSecurityPricingListSettings> configurator)
-        {
-            return AzureSecurityPricingList(configurator(new AzureSecurityPricingListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityPricingListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityPricingList(CombinatorialConfigure<AzureSecurityPricingListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityPricingList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecurityPricingShow(AzureSecurityPricingShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecurityPricingShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityPricingShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityPricingShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecurityPricingShow(Configure<AzureSecurityPricingShowSettings> configurator)
-        {
-            return AzureSecurityPricingShow(configurator(new AzureSecurityPricingShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecurityPricingShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityPricingShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecurityPricingShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityPricingShow(CombinatorialConfigure<AzureSecurityPricingShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecurityPricingShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecuritySettingList(AzureSecuritySettingListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecuritySettingListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecuritySettingListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecuritySettingListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecuritySettingListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecuritySettingListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecuritySettingListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecuritySettingListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecuritySettingList(Configure<AzureSecuritySettingListSettings> configurator)
-        {
-            return AzureSecuritySettingList(configurator(new AzureSecuritySettingListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecuritySettingListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecuritySettingListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecuritySettingListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecuritySettingListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecuritySettingListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecuritySettingListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecuritySettingListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecuritySettingList(CombinatorialConfigure<AzureSecuritySettingListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecuritySettingList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSecuritySettingShow(AzureSecuritySettingShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSecuritySettingShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecuritySettingShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecuritySettingShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecuritySettingShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecuritySettingShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecuritySettingShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecuritySettingShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecuritySettingShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSecuritySettingShow(Configure<AzureSecuritySettingShowSettings> configurator)
-        {
-            return AzureSecuritySettingShow(configurator(new AzureSecuritySettingShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage your security posture with Azure Security Center.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureSecuritySettingShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSecuritySettingShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureSecuritySettingShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSecuritySettingShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSecuritySettingShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSecuritySettingShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSecuritySettingShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSecuritySettingShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecuritySettingShow(CombinatorialConfigure<AzureSecuritySettingShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSecuritySettingShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage your security posture with Azure Security Center.</p>
@@ -1693,6 +1281,418 @@ namespace Nuke.Azure
         {
             return configurator.Invoke(AzureSecurityWorkspaceSettingShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
         }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingList(AzureSecurityAutoProvisioningSettingListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityAutoProvisioningSettingListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingList(Configure<AzureSecurityAutoProvisioningSettingListSettings> configurator)
+        {
+            return AzureSecurityAutoProvisioningSettingList(configurator(new AzureSecurityAutoProvisioningSettingListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityAutoProvisioningSettingListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityAutoProvisioningSettingList(CombinatorialConfigure<AzureSecurityAutoProvisioningSettingListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityAutoProvisioningSettingList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingShow(AzureSecurityAutoProvisioningSettingShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityAutoProvisioningSettingShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingShow(Configure<AzureSecurityAutoProvisioningSettingShowSettings> configurator)
+        {
+            return AzureSecurityAutoProvisioningSettingShow(configurator(new AzureSecurityAutoProvisioningSettingShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityAutoProvisioningSettingShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityAutoProvisioningSettingShow(CombinatorialConfigure<AzureSecurityAutoProvisioningSettingShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityAutoProvisioningSettingShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingUpdate(AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityAutoProvisioningSettingUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--auto-provision</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.AutoProvision"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityAutoProvisioningSettingUpdate(Configure<AzureSecurityAutoProvisioningSettingUpdateSettings> configurator)
+        {
+            return AzureSecurityAutoProvisioningSettingUpdate(configurator(new AzureSecurityAutoProvisioningSettingUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--auto-provision</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.AutoProvision"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityAutoProvisioningSettingUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityAutoProvisioningSettingUpdate(CombinatorialConfigure<AzureSecurityAutoProvisioningSettingUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityAutoProvisioningSettingUpdate, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityExternalSecuritySolutionList(AzureSecurityExternalSecuritySolutionListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityExternalSecuritySolutionListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityExternalSecuritySolutionList(Configure<AzureSecurityExternalSecuritySolutionListSettings> configurator)
+        {
+            return AzureSecurityExternalSecuritySolutionList(configurator(new AzureSecurityExternalSecuritySolutionListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityExternalSecuritySolutionListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityExternalSecuritySolutionListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityExternalSecuritySolutionList(CombinatorialConfigure<AzureSecurityExternalSecuritySolutionListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityExternalSecuritySolutionList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityExternalSecuritySolutionShow(AzureSecurityExternalSecuritySolutionShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityExternalSecuritySolutionShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityExternalSecuritySolutionShow(Configure<AzureSecurityExternalSecuritySolutionShowSettings> configurator)
+        {
+            return AzureSecurityExternalSecuritySolutionShow(configurator(new AzureSecurityExternalSecuritySolutionShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityExternalSecuritySolutionShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityExternalSecuritySolutionShow(CombinatorialConfigure<AzureSecurityExternalSecuritySolutionShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityExternalSecuritySolutionShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityPricingCreate(AzureSecurityPricingCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityPricingCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityPricingCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityPricingCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingCreateSettings.Subscription"/></li>
+        ///     <li><c>--tier</c> via <see cref="AzureSecurityPricingCreateSettings.Tier"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityPricingCreate(Configure<AzureSecurityPricingCreateSettings> configurator)
+        {
+            return AzureSecurityPricingCreate(configurator(new AzureSecurityPricingCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityPricingCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityPricingCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingCreateSettings.Subscription"/></li>
+        ///     <li><c>--tier</c> via <see cref="AzureSecurityPricingCreateSettings.Tier"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityPricingCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityPricingCreate(CombinatorialConfigure<AzureSecurityPricingCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityPricingCreate, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityPricingList(AzureSecurityPricingListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityPricingListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityPricingList(Configure<AzureSecurityPricingListSettings> configurator)
+        {
+            return AzureSecurityPricingList(configurator(new AzureSecurityPricingListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityPricingListSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityPricingList(CombinatorialConfigure<AzureSecurityPricingListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityPricingList, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSecurityPricingShow(AzureSecurityPricingShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSecurityPricingShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityPricingShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityPricingShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSecurityPricingShow(Configure<AzureSecurityPricingShowSettings> configurator)
+        {
+            return AzureSecurityPricingShow(configurator(new AzureSecurityPricingShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage your security posture with Azure Security Center.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/security?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureSecurityPricingShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSecurityPricingShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureSecurityPricingShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSecurityPricingShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSecurityPricingShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSecurityPricingShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSecurityPricingShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSecurityPricingShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSecurityPricingShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureSecurityPricingShow(CombinatorialConfigure<AzureSecurityPricingShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSecurityPricingShow, AzureSecurityLogger, degreeOfParallelism, completeOnFailure);
+        }
     }
     #region AzureSecuritySettings
     /// <summary>
@@ -1732,6 +1732,467 @@ namespace Nuke.Azure
         {
             arguments
               .Add("security")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityDiscoveredSecuritySolutionListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityDiscoveredSecuritySolutionListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security discovered-security-solution list")
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityDiscoveredSecuritySolutionShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityDiscoveredSecuritySolutionShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name of the resource to be fetched.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security discovered-security-solution show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityJitPolicyListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityJitPolicyListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Location of the resource.
+        /// </summary>
+        public virtual string Location { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security jit-policy list")
+              .Add("--location {value}", Location)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityJitPolicyShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityJitPolicyShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Location of the resource.
+        /// </summary>
+        public virtual string Location { get; internal set; }
+        /// <summary>
+        ///   Name of the resource to be fetched.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security jit-policy show")
+              .Add("--location {value}", Location)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecuritySettingListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecuritySettingListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security setting list")
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecuritySettingShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecuritySettingShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name of the resource to be fetched.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security setting show")
+              .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityLocationListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityLocationListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security location list")
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityLocationShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityLocationShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name of the resource to be fetched.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security location show")
+              .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1932,177 +2393,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--status {value}", Status)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityAutoProvisioningSettingListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityAutoProvisioningSettingListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security auto-provisioning-setting list")
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityAutoProvisioningSettingShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityAutoProvisioningSettingShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name of the resource to be fetched.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security auto-provisioning-setting show")
-              .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityAutoProvisioningSettingUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityAutoProvisioningSettingUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Automatic provisioning toggle. possible values are "on" or "off".
-        /// </summary>
-        public virtual string AutoProvision { get; internal set; }
-        /// <summary>
-        ///   Name of the resource to be fetched.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security auto-provisioning-setting update")
-              .Add("--auto-provision {value}", AutoProvision)
-              .Add("--name {value}", Name)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2345,762 +2635,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("security contact show")
-              .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityDiscoveredSecuritySolutionListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityDiscoveredSecuritySolutionListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security discovered-security-solution list")
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityDiscoveredSecuritySolutionShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityDiscoveredSecuritySolutionShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name of the resource to be fetched.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security discovered-security-solution show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityExternalSecuritySolutionListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityExternalSecuritySolutionListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security external-security-solution list")
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityExternalSecuritySolutionShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityExternalSecuritySolutionShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name of the resource to be fetched.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security external-security-solution show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityJitPolicyListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityJitPolicyListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Location of the resource.
-        /// </summary>
-        public virtual string Location { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security jit-policy list")
-              .Add("--location {value}", Location)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityJitPolicyShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityJitPolicyShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Location of the resource.
-        /// </summary>
-        public virtual string Location { get; internal set; }
-        /// <summary>
-        ///   Name of the resource to be fetched.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security jit-policy show")
-              .Add("--location {value}", Location)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityLocationListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityLocationListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security location list")
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityLocationShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityLocationShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name of the resource to be fetched.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security location show")
-              .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityPricingCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityPricingCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name of the resource to be fetched.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Pricing tier type.
-        /// </summary>
-        public virtual string Tier { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security pricing create")
-              .Add("--name {value}", Name)
-              .Add("--tier {value}", Tier)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityPricingListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityPricingListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security pricing list")
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecurityPricingShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecurityPricingShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name of the resource to be fetched.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security pricing show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecuritySettingListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecuritySettingListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security setting list")
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSecuritySettingShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSecuritySettingShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSecurity executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
-        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
-        /// <summary>
-        ///   Name of the resource to be fetched.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("security setting show")
               .Add("--name {value}", Name)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
@@ -3573,6 +3107,472 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureSecurityAutoProvisioningSettingListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityAutoProvisioningSettingListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security auto-provisioning-setting list")
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityAutoProvisioningSettingShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityAutoProvisioningSettingShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name of the resource to be fetched.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security auto-provisioning-setting show")
+              .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityAutoProvisioningSettingUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityAutoProvisioningSettingUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Automatic provisioning toggle. possible values are "on" or "off".
+        /// </summary>
+        public virtual string AutoProvision { get; internal set; }
+        /// <summary>
+        ///   Name of the resource to be fetched.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security auto-provisioning-setting update")
+              .Add("--auto-provision {value}", AutoProvision)
+              .Add("--name {value}", Name)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityExternalSecuritySolutionListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityExternalSecuritySolutionListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security external-security-solution list")
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityExternalSecuritySolutionShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityExternalSecuritySolutionShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name of the resource to be fetched.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security external-security-solution show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityPricingCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityPricingCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name of the resource to be fetched.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Pricing tier type.
+        /// </summary>
+        public virtual string Tier { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security pricing create")
+              .Add("--name {value}", Name)
+              .Add("--tier {value}", Tier)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityPricingListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityPricingListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security pricing list")
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSecurityPricingShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSecurityPricingShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSecurity executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSecurityTasks.AzureSecurityPath;
+        public override Action<OutputType, string> CustomLogger => AzureSecurityTasks.AzureSecurityLogger;
+        /// <summary>
+        ///   Name of the resource to be fetched.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("security pricing show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureSecuritySettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureSecurityTasks"/>.
@@ -3695,6 +3695,1454 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureSecuritySettings ResetVerbose(this AzureSecuritySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityDiscoveredSecuritySolutionListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityDiscoveredSecuritySolutionListSettingsExtensions
+    {
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetSubscription(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetSubscription(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetDebug(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetDebug(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetHelp(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetHelp(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetOutput(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetOutput(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetQuery(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetQuery(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetVerbose(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetVerbose(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityDiscoveredSecuritySolutionShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityDiscoveredSecuritySolutionShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetName(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetName(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetResourceGroup(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetResourceGroup(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetSubscription(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetSubscription(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetDebug(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetDebug(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetHelp(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetHelp(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetOutput(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetOutput(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetQuery(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetQuery(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetVerbose(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetVerbose(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityJitPolicyListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityJitPolicyListSettingsExtensions
+    {
+        #region Location
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Location"/></em></p>
+        ///   <p>Location of the resource.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings SetLocation(this AzureSecurityJitPolicyListSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Location"/></em></p>
+        ///   <p>Location of the resource.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings ResetLocation(this AzureSecurityJitPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings SetResourceGroup(this AzureSecurityJitPolicyListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings ResetResourceGroup(this AzureSecurityJitPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings SetSubscription(this AzureSecurityJitPolicyListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings ResetSubscription(this AzureSecurityJitPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings SetDebug(this AzureSecurityJitPolicyListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings ResetDebug(this AzureSecurityJitPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings SetHelp(this AzureSecurityJitPolicyListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings ResetHelp(this AzureSecurityJitPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings SetOutput(this AzureSecurityJitPolicyListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings ResetOutput(this AzureSecurityJitPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings SetQuery(this AzureSecurityJitPolicyListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings ResetQuery(this AzureSecurityJitPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings SetVerbose(this AzureSecurityJitPolicyListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyListSettings ResetVerbose(this AzureSecurityJitPolicyListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityJitPolicyShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityJitPolicyShowSettingsExtensions
+    {
+        #region Location
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Location"/></em></p>
+        ///   <p>Location of the resource.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings SetLocation(this AzureSecurityJitPolicyShowSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Location"/></em></p>
+        ///   <p>Location of the resource.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings ResetLocation(this AzureSecurityJitPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings SetName(this AzureSecurityJitPolicyShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings ResetName(this AzureSecurityJitPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings SetResourceGroup(this AzureSecurityJitPolicyShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings ResetResourceGroup(this AzureSecurityJitPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings SetSubscription(this AzureSecurityJitPolicyShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings ResetSubscription(this AzureSecurityJitPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings SetDebug(this AzureSecurityJitPolicyShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings ResetDebug(this AzureSecurityJitPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings SetHelp(this AzureSecurityJitPolicyShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings ResetHelp(this AzureSecurityJitPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings SetOutput(this AzureSecurityJitPolicyShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings ResetOutput(this AzureSecurityJitPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings SetQuery(this AzureSecurityJitPolicyShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings ResetQuery(this AzureSecurityJitPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings SetVerbose(this AzureSecurityJitPolicyShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityJitPolicyShowSettings ResetVerbose(this AzureSecurityJitPolicyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecuritySettingListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecuritySettingListSettingsExtensions
+    {
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings SetSubscription(this AzureSecuritySettingListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings ResetSubscription(this AzureSecuritySettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings SetDebug(this AzureSecuritySettingListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings ResetDebug(this AzureSecuritySettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings SetHelp(this AzureSecuritySettingListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings ResetHelp(this AzureSecuritySettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings SetOutput(this AzureSecuritySettingListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings ResetOutput(this AzureSecuritySettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings SetQuery(this AzureSecuritySettingListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings ResetQuery(this AzureSecuritySettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings SetVerbose(this AzureSecuritySettingListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingListSettings ResetVerbose(this AzureSecuritySettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecuritySettingShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecuritySettingShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings SetName(this AzureSecuritySettingShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings ResetName(this AzureSecuritySettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings SetSubscription(this AzureSecuritySettingShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings ResetSubscription(this AzureSecuritySettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings SetDebug(this AzureSecuritySettingShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings ResetDebug(this AzureSecuritySettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings SetHelp(this AzureSecuritySettingShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings ResetHelp(this AzureSecuritySettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings SetOutput(this AzureSecuritySettingShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings ResetOutput(this AzureSecuritySettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings SetQuery(this AzureSecuritySettingShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings ResetQuery(this AzureSecuritySettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings SetVerbose(this AzureSecuritySettingShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecuritySettingShowSettings ResetVerbose(this AzureSecuritySettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityLocationListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityLocationListSettingsExtensions
+    {
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings SetSubscription(this AzureSecurityLocationListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings ResetSubscription(this AzureSecurityLocationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings SetDebug(this AzureSecurityLocationListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings ResetDebug(this AzureSecurityLocationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings SetHelp(this AzureSecurityLocationListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings ResetHelp(this AzureSecurityLocationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings SetOutput(this AzureSecurityLocationListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings ResetOutput(this AzureSecurityLocationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings SetQuery(this AzureSecurityLocationListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings ResetQuery(this AzureSecurityLocationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings SetVerbose(this AzureSecurityLocationListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationListSettings ResetVerbose(this AzureSecurityLocationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityLocationShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityLocationShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings SetName(this AzureSecurityLocationShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings ResetName(this AzureSecurityLocationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings SetSubscription(this AzureSecurityLocationShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings ResetSubscription(this AzureSecurityLocationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings SetDebug(this AzureSecurityLocationShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings ResetDebug(this AzureSecurityLocationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings SetHelp(this AzureSecurityLocationShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings ResetHelp(this AzureSecurityLocationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings SetOutput(this AzureSecurityLocationShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings ResetOutput(this AzureSecurityLocationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings SetQuery(this AzureSecurityLocationShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings ResetQuery(this AzureSecurityLocationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings SetVerbose(this AzureSecurityLocationShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityLocationShowSettings ResetVerbose(this AzureSecurityLocationShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4373,540 +5821,6 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureSecurityAlertUpdateSettings ResetVerbose(this AzureSecurityAlertUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityAutoProvisioningSettingListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityAutoProvisioningSettingListSettingsExtensions
-    {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings SetSubscription(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings ResetSubscription(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings SetDebug(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings ResetDebug(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings SetHelp(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings ResetHelp(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings SetOutput(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings ResetOutput(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings SetQuery(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings ResetQuery(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings SetVerbose(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingListSettings ResetVerbose(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityAutoProvisioningSettingShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityAutoProvisioningSettingShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings SetName(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings ResetName(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings SetSubscription(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings ResetSubscription(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings SetDebug(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings ResetDebug(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings SetHelp(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings ResetHelp(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings SetOutput(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings ResetOutput(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings SetQuery(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings ResetQuery(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings SetVerbose(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingShowSettings ResetVerbose(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityAutoProvisioningSettingUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityAutoProvisioningSettingUpdateSettingsExtensions
-    {
-        #region AutoProvision
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.AutoProvision"/></em></p>
-        ///   <p>Automatic provisioning toggle. possible values are "on" or "off".</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetAutoProvision(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string autoProvision)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoProvision = autoProvision;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.AutoProvision"/></em></p>
-        ///   <p>Automatic provisioning toggle. possible values are "on" or "off".</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetAutoProvision(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AutoProvision = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetName(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetName(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetSubscription(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetSubscription(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetDebug(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetDebug(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetHelp(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetHelp(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetOutput(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetOutput(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetQuery(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetQuery(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetVerbose(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetVerbose(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5691,2392 +6605,6 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureSecurityContactShowSettings ResetVerbose(this AzureSecurityContactShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityDiscoveredSecuritySolutionListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityDiscoveredSecuritySolutionListSettingsExtensions
-    {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetSubscription(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetSubscription(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetDebug(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetDebug(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetHelp(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetHelp(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetOutput(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetOutput(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetQuery(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetQuery(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings SetVerbose(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionListSettings ResetVerbose(this AzureSecurityDiscoveredSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityDiscoveredSecuritySolutionShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityDiscoveredSecuritySolutionShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetName(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetName(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetResourceGroup(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetResourceGroup(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetSubscription(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetSubscription(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetDebug(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetDebug(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetHelp(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetHelp(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetOutput(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetOutput(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetQuery(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetQuery(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings SetVerbose(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityDiscoveredSecuritySolutionShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityDiscoveredSecuritySolutionShowSettings ResetVerbose(this AzureSecurityDiscoveredSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityExternalSecuritySolutionListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityExternalSecuritySolutionListSettingsExtensions
-    {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings SetSubscription(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings ResetSubscription(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings SetDebug(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings ResetDebug(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings SetHelp(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings ResetHelp(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings SetOutput(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings ResetOutput(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings SetQuery(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings ResetQuery(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings SetVerbose(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionListSettings ResetVerbose(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityExternalSecuritySolutionShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityExternalSecuritySolutionShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings SetName(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings ResetName(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings SetResourceGroup(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings ResetResourceGroup(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings SetSubscription(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings ResetSubscription(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings SetDebug(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings ResetDebug(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings SetHelp(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings ResetHelp(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings SetOutput(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings ResetOutput(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings SetQuery(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings ResetQuery(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings SetVerbose(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityExternalSecuritySolutionShowSettings ResetVerbose(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityJitPolicyListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityJitPolicyListSettingsExtensions
-    {
-        #region Location
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Location"/></em></p>
-        ///   <p>Location of the resource.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings SetLocation(this AzureSecurityJitPolicyListSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Location"/></em></p>
-        ///   <p>Location of the resource.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings ResetLocation(this AzureSecurityJitPolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings SetResourceGroup(this AzureSecurityJitPolicyListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings ResetResourceGroup(this AzureSecurityJitPolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings SetSubscription(this AzureSecurityJitPolicyListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings ResetSubscription(this AzureSecurityJitPolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings SetDebug(this AzureSecurityJitPolicyListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings ResetDebug(this AzureSecurityJitPolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings SetHelp(this AzureSecurityJitPolicyListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings ResetHelp(this AzureSecurityJitPolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings SetOutput(this AzureSecurityJitPolicyListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings ResetOutput(this AzureSecurityJitPolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings SetQuery(this AzureSecurityJitPolicyListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings ResetQuery(this AzureSecurityJitPolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings SetVerbose(this AzureSecurityJitPolicyListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyListSettings ResetVerbose(this AzureSecurityJitPolicyListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityJitPolicyShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityJitPolicyShowSettingsExtensions
-    {
-        #region Location
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Location"/></em></p>
-        ///   <p>Location of the resource.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings SetLocation(this AzureSecurityJitPolicyShowSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Location"/></em></p>
-        ///   <p>Location of the resource.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings ResetLocation(this AzureSecurityJitPolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings SetName(this AzureSecurityJitPolicyShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings ResetName(this AzureSecurityJitPolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings SetResourceGroup(this AzureSecurityJitPolicyShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings ResetResourceGroup(this AzureSecurityJitPolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings SetSubscription(this AzureSecurityJitPolicyShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings ResetSubscription(this AzureSecurityJitPolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings SetDebug(this AzureSecurityJitPolicyShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings ResetDebug(this AzureSecurityJitPolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings SetHelp(this AzureSecurityJitPolicyShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings ResetHelp(this AzureSecurityJitPolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings SetOutput(this AzureSecurityJitPolicyShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings ResetOutput(this AzureSecurityJitPolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings SetQuery(this AzureSecurityJitPolicyShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings ResetQuery(this AzureSecurityJitPolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityJitPolicyShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings SetVerbose(this AzureSecurityJitPolicyShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityJitPolicyShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityJitPolicyShowSettings ResetVerbose(this AzureSecurityJitPolicyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityLocationListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityLocationListSettingsExtensions
-    {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings SetSubscription(this AzureSecurityLocationListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings ResetSubscription(this AzureSecurityLocationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings SetDebug(this AzureSecurityLocationListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings ResetDebug(this AzureSecurityLocationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings SetHelp(this AzureSecurityLocationListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings ResetHelp(this AzureSecurityLocationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings SetOutput(this AzureSecurityLocationListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings ResetOutput(this AzureSecurityLocationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings SetQuery(this AzureSecurityLocationListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings ResetQuery(this AzureSecurityLocationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings SetVerbose(this AzureSecurityLocationListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationListSettings ResetVerbose(this AzureSecurityLocationListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityLocationShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityLocationShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings SetName(this AzureSecurityLocationShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings ResetName(this AzureSecurityLocationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings SetSubscription(this AzureSecurityLocationShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings ResetSubscription(this AzureSecurityLocationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings SetDebug(this AzureSecurityLocationShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings ResetDebug(this AzureSecurityLocationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings SetHelp(this AzureSecurityLocationShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings ResetHelp(this AzureSecurityLocationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings SetOutput(this AzureSecurityLocationShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings ResetOutput(this AzureSecurityLocationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings SetQuery(this AzureSecurityLocationShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings ResetQuery(this AzureSecurityLocationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityLocationShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings SetVerbose(this AzureSecurityLocationShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityLocationShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityLocationShowSettings ResetVerbose(this AzureSecurityLocationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityPricingCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityPricingCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings SetName(this AzureSecurityPricingCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings ResetName(this AzureSecurityPricingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tier
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Tier"/></em></p>
-        ///   <p>Pricing tier type.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings SetTier(this AzureSecurityPricingCreateSettings toolSettings, string tier)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tier = tier;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Tier"/></em></p>
-        ///   <p>Pricing tier type.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings ResetTier(this AzureSecurityPricingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tier = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings SetResourceGroup(this AzureSecurityPricingCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings ResetResourceGroup(this AzureSecurityPricingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings SetSubscription(this AzureSecurityPricingCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings ResetSubscription(this AzureSecurityPricingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings SetDebug(this AzureSecurityPricingCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings ResetDebug(this AzureSecurityPricingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings SetHelp(this AzureSecurityPricingCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings ResetHelp(this AzureSecurityPricingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings SetOutput(this AzureSecurityPricingCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings ResetOutput(this AzureSecurityPricingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings SetQuery(this AzureSecurityPricingCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings ResetQuery(this AzureSecurityPricingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings SetVerbose(this AzureSecurityPricingCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingCreateSettings ResetVerbose(this AzureSecurityPricingCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityPricingListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityPricingListSettingsExtensions
-    {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings SetSubscription(this AzureSecurityPricingListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings ResetSubscription(this AzureSecurityPricingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings SetDebug(this AzureSecurityPricingListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings ResetDebug(this AzureSecurityPricingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings SetHelp(this AzureSecurityPricingListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings ResetHelp(this AzureSecurityPricingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings SetOutput(this AzureSecurityPricingListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings ResetOutput(this AzureSecurityPricingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings SetQuery(this AzureSecurityPricingListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings ResetQuery(this AzureSecurityPricingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings SetVerbose(this AzureSecurityPricingListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingListSettings ResetVerbose(this AzureSecurityPricingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecurityPricingShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecurityPricingShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings SetName(this AzureSecurityPricingShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings ResetName(this AzureSecurityPricingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings SetResourceGroup(this AzureSecurityPricingShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings ResetResourceGroup(this AzureSecurityPricingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings SetSubscription(this AzureSecurityPricingShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings ResetSubscription(this AzureSecurityPricingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings SetDebug(this AzureSecurityPricingShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings ResetDebug(this AzureSecurityPricingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings SetHelp(this AzureSecurityPricingShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings ResetHelp(this AzureSecurityPricingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings SetOutput(this AzureSecurityPricingShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings ResetOutput(this AzureSecurityPricingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings SetQuery(this AzureSecurityPricingShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings ResetQuery(this AzureSecurityPricingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings SetVerbose(this AzureSecurityPricingShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecurityPricingShowSettings ResetVerbose(this AzureSecurityPricingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecuritySettingListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecuritySettingListSettingsExtensions
-    {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings SetSubscription(this AzureSecuritySettingListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings ResetSubscription(this AzureSecuritySettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings SetDebug(this AzureSecuritySettingListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings ResetDebug(this AzureSecuritySettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings SetHelp(this AzureSecuritySettingListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings ResetHelp(this AzureSecuritySettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings SetOutput(this AzureSecuritySettingListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings ResetOutput(this AzureSecuritySettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings SetQuery(this AzureSecuritySettingListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings ResetQuery(this AzureSecuritySettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings SetVerbose(this AzureSecuritySettingListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingListSettings ResetVerbose(this AzureSecuritySettingListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSecuritySettingShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSecurityTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSecuritySettingShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings SetName(this AzureSecuritySettingShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Name"/></em></p>
-        ///   <p>Name of the resource to be fetched.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings ResetName(this AzureSecuritySettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings SetSubscription(this AzureSecuritySettingShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings ResetSubscription(this AzureSecuritySettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings SetDebug(this AzureSecuritySettingShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings ResetDebug(this AzureSecuritySettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings SetHelp(this AzureSecuritySettingShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings ResetHelp(this AzureSecuritySettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings SetOutput(this AzureSecuritySettingShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings ResetOutput(this AzureSecuritySettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings SetQuery(this AzureSecuritySettingShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings ResetQuery(this AzureSecuritySettingShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSecuritySettingShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings SetVerbose(this AzureSecuritySettingShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSecuritySettingShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSecuritySettingShowSettings ResetVerbose(this AzureSecuritySettingShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -9525,6 +8053,1478 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureSecurityWorkspaceSettingShowSettings ResetVerbose(this AzureSecurityWorkspaceSettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityAutoProvisioningSettingListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityAutoProvisioningSettingListSettingsExtensions
+    {
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings SetSubscription(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings ResetSubscription(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings SetDebug(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings ResetDebug(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings SetHelp(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings ResetHelp(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings SetOutput(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings ResetOutput(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings SetQuery(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings ResetQuery(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings SetVerbose(this AzureSecurityAutoProvisioningSettingListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingListSettings ResetVerbose(this AzureSecurityAutoProvisioningSettingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityAutoProvisioningSettingShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityAutoProvisioningSettingShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings SetName(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings ResetName(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings SetSubscription(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings ResetSubscription(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings SetDebug(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings ResetDebug(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings SetHelp(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings ResetHelp(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings SetOutput(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings ResetOutput(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings SetQuery(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings ResetQuery(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings SetVerbose(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingShowSettings ResetVerbose(this AzureSecurityAutoProvisioningSettingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityAutoProvisioningSettingUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityAutoProvisioningSettingUpdateSettingsExtensions
+    {
+        #region AutoProvision
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.AutoProvision"/></em></p>
+        ///   <p>Automatic provisioning toggle. possible values are "on" or "off".</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetAutoProvision(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string autoProvision)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoProvision = autoProvision;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.AutoProvision"/></em></p>
+        ///   <p>Automatic provisioning toggle. possible values are "on" or "off".</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetAutoProvision(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoProvision = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetName(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetName(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetSubscription(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetSubscription(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetDebug(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetDebug(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetHelp(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetHelp(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetOutput(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetOutput(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetQuery(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetQuery(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings SetVerbose(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityAutoProvisioningSettingUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityAutoProvisioningSettingUpdateSettings ResetVerbose(this AzureSecurityAutoProvisioningSettingUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityExternalSecuritySolutionListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityExternalSecuritySolutionListSettingsExtensions
+    {
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings SetSubscription(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings ResetSubscription(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings SetDebug(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings ResetDebug(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings SetHelp(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings ResetHelp(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings SetOutput(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings ResetOutput(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings SetQuery(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings ResetQuery(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings SetVerbose(this AzureSecurityExternalSecuritySolutionListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionListSettings ResetVerbose(this AzureSecurityExternalSecuritySolutionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityExternalSecuritySolutionShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityExternalSecuritySolutionShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings SetName(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings ResetName(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings SetResourceGroup(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings ResetResourceGroup(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings SetSubscription(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings ResetSubscription(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings SetDebug(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings ResetDebug(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings SetHelp(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings ResetHelp(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings SetOutput(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings ResetOutput(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings SetQuery(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings ResetQuery(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings SetVerbose(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityExternalSecuritySolutionShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityExternalSecuritySolutionShowSettings ResetVerbose(this AzureSecurityExternalSecuritySolutionShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityPricingCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityPricingCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings SetName(this AzureSecurityPricingCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings ResetName(this AzureSecurityPricingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tier
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Tier"/></em></p>
+        ///   <p>Pricing tier type.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings SetTier(this AzureSecurityPricingCreateSettings toolSettings, string tier)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tier = tier;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Tier"/></em></p>
+        ///   <p>Pricing tier type.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings ResetTier(this AzureSecurityPricingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tier = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings SetResourceGroup(this AzureSecurityPricingCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings ResetResourceGroup(this AzureSecurityPricingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings SetSubscription(this AzureSecurityPricingCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings ResetSubscription(this AzureSecurityPricingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings SetDebug(this AzureSecurityPricingCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings ResetDebug(this AzureSecurityPricingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings SetHelp(this AzureSecurityPricingCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings ResetHelp(this AzureSecurityPricingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings SetOutput(this AzureSecurityPricingCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings ResetOutput(this AzureSecurityPricingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings SetQuery(this AzureSecurityPricingCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings ResetQuery(this AzureSecurityPricingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings SetVerbose(this AzureSecurityPricingCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingCreateSettings ResetVerbose(this AzureSecurityPricingCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityPricingListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityPricingListSettingsExtensions
+    {
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings SetSubscription(this AzureSecurityPricingListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings ResetSubscription(this AzureSecurityPricingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings SetDebug(this AzureSecurityPricingListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings ResetDebug(this AzureSecurityPricingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings SetHelp(this AzureSecurityPricingListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings ResetHelp(this AzureSecurityPricingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings SetOutput(this AzureSecurityPricingListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings ResetOutput(this AzureSecurityPricingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings SetQuery(this AzureSecurityPricingListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings ResetQuery(this AzureSecurityPricingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings SetVerbose(this AzureSecurityPricingListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingListSettings ResetVerbose(this AzureSecurityPricingListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSecurityPricingShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSecurityTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSecurityPricingShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings SetName(this AzureSecurityPricingShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Name"/></em></p>
+        ///   <p>Name of the resource to be fetched.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings ResetName(this AzureSecurityPricingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings SetResourceGroup(this AzureSecurityPricingShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings ResetResourceGroup(this AzureSecurityPricingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings SetSubscription(this AzureSecurityPricingShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings ResetSubscription(this AzureSecurityPricingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings SetDebug(this AzureSecurityPricingShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings ResetDebug(this AzureSecurityPricingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings SetHelp(this AzureSecurityPricingShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings ResetHelp(this AzureSecurityPricingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings SetOutput(this AzureSecurityPricingShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings ResetOutput(this AzureSecurityPricingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings SetQuery(this AzureSecurityPricingShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings ResetQuery(this AzureSecurityPricingShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSecurityPricingShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings SetVerbose(this AzureSecurityPricingShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSecurityPricingShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSecurityPricingShowSettings ResetVerbose(this AzureSecurityPricingShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

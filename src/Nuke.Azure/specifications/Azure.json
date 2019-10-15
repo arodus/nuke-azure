@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/reference-index.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/reference-index.yml"
   ],
   "name": "Azure",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest",
@@ -35,13 +35,6 @@
             "format": "--scope {value}",
             "secret": false,
             "help": "Scope of defaults. Using \"local\" for settings only effective under current folder."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -49,32 +42,12 @@
     {
       "postfix": "Feedback",
       "definiteArgument": "feedback",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
+      "settingsClass": {}
     },
     {
       "postfix": "Find",
       "definiteArgument": "find",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
+      "settingsClass": {}
     },
     {
       "postfix": "Interactive",
@@ -94,13 +67,6 @@
             "format": "--update {value}",
             "secret": false,
             "help": "Update the Interactive extension to the latest available."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -165,13 +131,6 @@
             "format": "--identity",
             "secret": false,
             "help": "Log in using the Virtual Machine's identity."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -187,13 +146,6 @@
             "format": "--username {value}",
             "secret": false,
             "help": "Account user, if missing, logout the current active account."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

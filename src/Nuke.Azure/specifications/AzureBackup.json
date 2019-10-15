@@ -1,17 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/item.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/protection.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/recoverypoint.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/restore.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/vault.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/restore/files.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/backup/vault/backup-properties.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/recoverypoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/restore.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/protection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/item.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/vault.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/restore/files.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/backup/vault/backup-properties.yml"
   ],
   "name": "AzureBackup",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/backup?view=azure-cli-latest",
@@ -24,8 +24,8 @@
       "settingsClass": {}
     },
     {
-      "postfix": "ContainerList",
-      "definiteArgument": "backup container list",
+      "postfix": "JobList",
+      "definiteArgument": "backup job list",
       "settingsClass": {
         "properties": [
           {
@@ -43,6 +43,34 @@
             "help": "Name of the Recovery services vault."
           },
           {
+            "name": "EndDate",
+            "type": "string",
+            "format": "--end-date {value}",
+            "secret": false,
+            "help": "The end date of the range in UTC (d-m-Y)."
+          },
+          {
+            "name": "Operation",
+            "type": "BackupJobListOperation",
+            "format": "--operation {value}",
+            "secret": false,
+            "help": "User initiated operation."
+          },
+          {
+            "name": "StartDate",
+            "type": "string",
+            "format": "--start-date {value}",
+            "secret": false,
+            "help": "The start date of the range in UTC (d-m-Y)."
+          },
+          {
+            "name": "Status",
+            "type": "BackupJobListStatus",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "Status of the Job."
+          },
+          {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
@@ -53,8 +81,8 @@
       }
     },
     {
-      "postfix": "ContainerShow",
-      "definiteArgument": "backup container show",
+      "postfix": "JobShow",
+      "definiteArgument": "backup job show",
       "settingsClass": {
         "properties": [
           {
@@ -62,7 +90,492 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the container. You can use the backup container list command to get the name of a container."
+            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobStop",
+      "definiteArgument": "backup job stop",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobWait",
+      "definiteArgument": "backup job wait",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+          },
+          {
+            "name": "Timeout",
+            "type": "string",
+            "format": "--timeout {value}",
+            "secret": false,
+            "help": "Maximum time, in seconds, to wait before aborting."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RecoverypointList",
+      "definiteArgument": "backup recoverypoint list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "secret": false,
+            "help": "Name of the container."
+          },
+          {
+            "name": "ItemName",
+            "type": "string",
+            "format": "--item-name {value}",
+            "secret": false,
+            "help": "Name of the backed up item."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          },
+          {
+            "name": "EndDate",
+            "type": "string",
+            "format": "--end-date {value}",
+            "secret": false,
+            "help": "The end date of the range in UTC (d-m-Y)."
+          },
+          {
+            "name": "StartDate",
+            "type": "string",
+            "format": "--start-date {value}",
+            "secret": false,
+            "help": "The start date of the range in UTC (d-m-Y)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RecoverypointShow",
+      "definiteArgument": "backup recoverypoint show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "secret": false,
+            "help": "Name of the container."
+          },
+          {
+            "name": "ItemName",
+            "type": "string",
+            "format": "--item-name {value}",
+            "secret": false,
+            "help": "Name of the backed up item."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the recovery point. You can use the backup recovery point list command to get the name of a backed up item."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RestoreRestoreDisks",
+      "definiteArgument": "backup restore restore-disks",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "secret": false,
+            "help": "Name of the container."
+          },
+          {
+            "name": "ItemName",
+            "type": "string",
+            "format": "--item-name {value}",
+            "secret": false,
+            "help": "Name of the backed up item."
+          },
+          {
+            "name": "RpName",
+            "type": "string",
+            "format": "--rp-name {value}",
+            "secret": false,
+            "help": "Name of the recovery point."
+          },
+          {
+            "name": "StorageAccount",
+            "type": "string",
+            "format": "--storage-account {value}",
+            "secret": false,
+            "help": "Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info."
+          },
+          {
+            "name": "RestoreToStagingStorageAccount",
+            "type": "bool",
+            "format": "--restore-to-staging-storage-account",
+            "secret": false,
+            "help": "Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false."
+          },
+          {
+            "name": "TargetResourceGroup",
+            "type": "string",
+            "format": "--target-resource-group {value}",
+            "secret": false,
+            "help": "Use this to specify the target resource group in which the restored disks will be saved."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProtectionBackupNow",
+      "definiteArgument": "backup protection backup-now",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "secret": false,
+            "help": "Name of the container."
+          },
+          {
+            "name": "ItemName",
+            "type": "string",
+            "format": "--item-name {value}",
+            "secret": false,
+            "help": "Name of the backed up item."
+          },
+          {
+            "name": "RetainUntil",
+            "type": "string",
+            "format": "--retain-until {value}",
+            "secret": false,
+            "help": "The date until which this backed up copy will be available for retrieval, in UTC (d-m-Y)."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProtectionCheckVm",
+      "definiteArgument": "backup protection check-vm",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "VmId",
+            "type": "string",
+            "format": "--vm-id {value}",
+            "secret": false,
+            "help": "ID of the virtual machine to be checked for protection."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProtectionDisable",
+      "definiteArgument": "backup protection disable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ContainerName",
+            "type": "string",
+            "format": "--container-name {value}",
+            "secret": false,
+            "help": "Name of the container."
+          },
+          {
+            "name": "ItemName",
+            "type": "string",
+            "format": "--item-name {value}",
+            "secret": false,
+            "help": "Name of the backed up item."
+          },
+          {
+            "name": "DeleteBackupData",
+            "type": "bool",
+            "format": "--delete-backup-data",
+            "secret": false,
+            "help": "Option to delete existing backed up data in the Recovery services vault."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ProtectionEnableForVm",
+      "definiteArgument": "backup protection enable-for-vm",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "PolicyName",
+            "type": "string",
+            "format": "--policy-name {value}",
+            "secret": false,
+            "help": "Name of the backup policy."
+          },
+          {
+            "name": "Vm",
+            "type": "string",
+            "format": "--vm {value}",
+            "secret": false,
+            "help": "Name or ID of the Virtual Machine to be protected."
           },
           {
             "name": "Ids",
@@ -242,51 +755,30 @@
       }
     },
     {
-      "postfix": "JobList",
-      "definiteArgument": "backup job list",
+      "postfix": "VaultCreate",
+      "definiteArgument": "backup vault create",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          },
           {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "EndDate",
-            "type": "string",
-            "format": "--end-date {value}",
-            "secret": false,
-            "help": "The end date of the range in UTC (d-m-Y)."
-          },
-          {
-            "name": "Operation",
-            "type": "BackupJobListOperation",
-            "format": "--operation {value}",
-            "secret": false,
-            "help": "User initiated operation."
-          },
-          {
-            "name": "StartDate",
-            "type": "string",
-            "format": "--start-date {value}",
-            "secret": false,
-            "help": "The start date of the range in UTC (d-m-Y)."
-          },
-          {
-            "name": "Status",
-            "type": "BackupJobListStatus",
-            "format": "--status {value}",
-            "secret": false,
-            "help": "Status of the Job."
           },
           {
             "name": "Subscription",
@@ -299,16 +791,23 @@
       }
     },
     {
-      "postfix": "JobShow",
-      "definiteArgument": "backup job show",
+      "postfix": "VaultDelete",
+      "definiteArgument": "backup vault delete",
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
+            "name": "Force",
             "type": "string",
-            "format": "--name {value}",
+            "format": "--force {value}",
             "secret": false,
-            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+            "help": "Force completion of the requested action."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
           },
           {
             "name": "Ids",
@@ -319,6 +818,13 @@
             "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
@@ -331,29 +837,37 @@
             "format": "--subscription {value}",
             "secret": false,
             "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
           }
         ]
       }
     },
     {
-      "postfix": "JobStop",
-      "definiteArgument": "backup job stop",
+      "postfix": "VaultList",
+      "definiteArgument": "backup vault list",
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--name {value}",
+            "format": "--resource-group {value}",
             "secret": false,
-            "help": "Name of the job. You can use the backup job list command to get the name of a job."
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VaultShow",
+      "definiteArgument": "backup vault show",
+      "settingsClass": {
+        "properties": [
           {
             "name": "Ids",
             "type": "List<string>",
@@ -363,6 +877,13 @@
             "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Recovery services vault."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
@@ -375,6 +896,21 @@
             "format": "--subscription {value}",
             "secret": false,
             "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ContainerList",
+      "definiteArgument": "backup container list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "VaultName",
@@ -382,13 +918,20 @@
             "format": "--vault-name {value}",
             "secret": false,
             "help": "Name of the Recovery services vault."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
     },
     {
-      "postfix": "JobWait",
-      "definiteArgument": "backup job wait",
+      "postfix": "ContainerShow",
+      "definiteArgument": "backup container show",
       "settingsClass": {
         "properties": [
           {
@@ -396,14 +939,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the job. You can use the backup job list command to get the name of a job."
-          },
-          {
-            "name": "Timeout",
-            "type": "string",
-            "format": "--timeout {value}",
-            "secret": false,
-            "help": "Maximum time, in seconds, to wait before aborting."
+            "help": "Name of the container. You can use the backup container list command to get the name of a container."
           },
           {
             "name": "Ids",
@@ -675,535 +1211,6 @@
             "format": "--vault-name {value}",
             "secret": false,
             "help": "Name of the Recovery services vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProtectionBackupNow",
-      "definiteArgument": "backup protection backup-now",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ContainerName",
-            "type": "string",
-            "format": "--container-name {value}",
-            "secret": false,
-            "help": "Name of the container."
-          },
-          {
-            "name": "ItemName",
-            "type": "string",
-            "format": "--item-name {value}",
-            "secret": false,
-            "help": "Name of the backed up item."
-          },
-          {
-            "name": "RetainUntil",
-            "type": "string",
-            "format": "--retain-until {value}",
-            "secret": false,
-            "help": "The date until which this backed up copy will be available for retrieval, in UTC (d-m-Y)."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProtectionCheckVm",
-      "definiteArgument": "backup protection check-vm",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "VmId",
-            "type": "string",
-            "format": "--vm-id {value}",
-            "secret": false,
-            "help": "ID of the virtual machine to be checked for protection."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProtectionDisable",
-      "definiteArgument": "backup protection disable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ContainerName",
-            "type": "string",
-            "format": "--container-name {value}",
-            "secret": false,
-            "help": "Name of the container."
-          },
-          {
-            "name": "ItemName",
-            "type": "string",
-            "format": "--item-name {value}",
-            "secret": false,
-            "help": "Name of the backed up item."
-          },
-          {
-            "name": "DeleteBackupData",
-            "type": "bool",
-            "format": "--delete-backup-data",
-            "secret": false,
-            "help": "Option to delete existing backed up data in the Recovery services vault."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "secret": false,
-            "help": "Do not prompt for confirmation."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ProtectionEnableForVm",
-      "definiteArgument": "backup protection enable-for-vm",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "PolicyName",
-            "type": "string",
-            "format": "--policy-name {value}",
-            "secret": false,
-            "help": "Name of the backup policy."
-          },
-          {
-            "name": "Vm",
-            "type": "string",
-            "format": "--vm {value}",
-            "secret": false,
-            "help": "Name or ID of the Virtual Machine to be protected."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RecoverypointList",
-      "definiteArgument": "backup recoverypoint list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ContainerName",
-            "type": "string",
-            "format": "--container-name {value}",
-            "secret": false,
-            "help": "Name of the container."
-          },
-          {
-            "name": "ItemName",
-            "type": "string",
-            "format": "--item-name {value}",
-            "secret": false,
-            "help": "Name of the backed up item."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "EndDate",
-            "type": "string",
-            "format": "--end-date {value}",
-            "secret": false,
-            "help": "The end date of the range in UTC (d-m-Y)."
-          },
-          {
-            "name": "StartDate",
-            "type": "string",
-            "format": "--start-date {value}",
-            "secret": false,
-            "help": "The start date of the range in UTC (d-m-Y)."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RecoverypointShow",
-      "definiteArgument": "backup recoverypoint show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ContainerName",
-            "type": "string",
-            "format": "--container-name {value}",
-            "secret": false,
-            "help": "Name of the container."
-          },
-          {
-            "name": "ItemName",
-            "type": "string",
-            "format": "--item-name {value}",
-            "secret": false,
-            "help": "Name of the backed up item."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the recovery point. You can use the backup recovery point list command to get the name of a backed up item."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RestoreRestoreDisks",
-      "definiteArgument": "backup restore restore-disks",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ContainerName",
-            "type": "string",
-            "format": "--container-name {value}",
-            "secret": false,
-            "help": "Name of the container."
-          },
-          {
-            "name": "ItemName",
-            "type": "string",
-            "format": "--item-name {value}",
-            "secret": false,
-            "help": "Name of the backed up item."
-          },
-          {
-            "name": "RpName",
-            "type": "string",
-            "format": "--rp-name {value}",
-            "secret": false,
-            "help": "Name of the recovery point."
-          },
-          {
-            "name": "StorageAccount",
-            "type": "string",
-            "format": "--storage-account {value}",
-            "secret": false,
-            "help": "Name or ID of the staging storage account. The VM configuration will be restored to this storage account. See the help for --restore-to-staging-storage-account parameter for more info."
-          },
-          {
-            "name": "RestoreToStagingStorageAccount",
-            "type": "bool",
-            "format": "--restore-to-staging-storage-account",
-            "secret": false,
-            "help": "Use this flag when you want disks to be restored to the staging storage account using the --storage-account parameter. When not specified, disks will be restored to their original storage accounts. Default: false."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "VaultCreate",
-      "definiteArgument": "backup vault create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "VaultDelete",
-      "definiteArgument": "backup vault delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Force",
-            "type": "string",
-            "format": "--force {value}",
-            "secret": false,
-            "help": "Force completion of the requested action."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "secret": false,
-            "help": "Do not prompt for confirmation."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "VaultList",
-      "definiteArgument": "backup vault list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "VaultShow",
-      "definiteArgument": "backup vault show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the Recovery services vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

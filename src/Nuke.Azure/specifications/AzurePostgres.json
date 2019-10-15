@@ -1,14 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/postgres.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/postgres/db.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/postgres/server-logs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/postgres/server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/postgres/server/configuration.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/postgres/server/firewall-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/postgres/server/replica.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/postgres/server/vnet-rule.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/postgres.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/postgres/server-logs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/postgres/db.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/postgres/server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/postgres/server/vnet-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/postgres/server/replica.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/postgres/server/configuration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/postgres/server/firewall-rule.yml"
   ],
   "name": "AzurePostgres",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest",
@@ -19,6 +19,93 @@
       "postfix": "",
       "definiteArgument": "postgres",
       "settingsClass": {}
+    },
+    {
+      "postfix": "ServerLogsDownload",
+      "definiteArgument": "postgres server-logs download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "List<string>",
+            "format": "--name {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of log filenames on the server to download."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "secret": false,
+            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerLogsList",
+      "definiteArgument": "postgres server-logs list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "secret": false,
+            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
+          },
+          {
+            "name": "FileLastWritten",
+            "type": "string",
+            "format": "--file-last-written {value}",
+            "secret": false,
+            "help": "Integer in hours to indicate file last modify time, default value is 72."
+          },
+          {
+            "name": "FilenameContains",
+            "type": "string",
+            "format": "--filename-contains {value}",
+            "secret": false,
+            "help": "The pattern that file name should match."
+          },
+          {
+            "name": "MaxFileSize",
+            "type": "string",
+            "format": "--max-file-size {value}",
+            "secret": false,
+            "help": "The file size limitation to filter files."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "DbCreate",
@@ -179,93 +266,6 @@
       }
     },
     {
-      "postfix": "ServerLogsDownload",
-      "definiteArgument": "postgres server-logs download",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "List<string>",
-            "format": "--name {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated list of log filenames on the server to download."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "secret": false,
-            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerLogsList",
-      "definiteArgument": "postgres server-logs list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "secret": false,
-            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
-          },
-          {
-            "name": "FileLastWritten",
-            "type": "string",
-            "format": "--file-last-written {value}",
-            "secret": false,
-            "help": "Integer in hours to indicate file last modify time, default value is 72."
-          },
-          {
-            "name": "FilenameContains",
-            "type": "string",
-            "format": "--filename-contains {value}",
-            "secret": false,
-            "help": "The pattern that file name should match."
-          },
-          {
-            "name": "MaxFileSize",
-            "type": "string",
-            "format": "--max-file-size {value}",
-            "secret": false,
-            "help": "The file size limitation to filter files."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "ServerCreate",
       "definiteArgument": "postgres server create",
       "settingsClass": {
@@ -292,6 +292,13 @@
             "help": "The name of the sku. Follows the convention {pricing tier}_{compute generation}_{vCores} in shorthand. Examples: B_Gen5_1, GP_Gen5_4, MO_Gen5_16."
           },
           {
+            "name": "AutoGrow",
+            "type": "PostgresServerAutoGrow",
+            "format": "--auto-grow {value}",
+            "secret": false,
+            "help": "Enable or disable autogrow of the storage. Default value is Enabled."
+          },
+          {
             "name": "BackupRetention",
             "type": "string",
             "format": "--backup-retention {value}",
@@ -300,7 +307,7 @@
           },
           {
             "name": "GeoRedundantBackup",
-            "type": "PostgresServerCreateGeoRedundantBackup",
+            "type": "PostgresServerAutoGrow",
             "format": "--geo-redundant-backup {value}",
             "secret": false,
             "help": "Enable or disable geo-redundant backups. Default value is Disabled. Not supported in Basic pricing tier."
@@ -314,7 +321,7 @@
           },
           {
             "name": "SslEnforcement",
-            "type": "PostgresServerCreateGeoRedundantBackup",
+            "type": "PostgresServerAutoGrow",
             "format": "--ssl-enforcement {value}",
             "secret": false,
             "help": "Enable or disable ssl enforcement for connections to server. Default is Enabled."
@@ -654,6 +661,13 @@
             "help": "The password of the administrator. Minimum 8 characters and maximum 128 characters. Password must contain characters from three of the following categories: English uppercase letters, English lowercase letters, numbers, and non-alphanumeric characters."
           },
           {
+            "name": "AutoGrow",
+            "type": "PostgresServerAutoGrow",
+            "format": "--auto-grow {value}",
+            "secret": false,
+            "help": "Enable or disable autogrow of the storage. Default value is Enabled."
+          },
+          {
             "name": "BackupRetention",
             "type": "string",
             "format": "--backup-retention {value}",
@@ -669,7 +683,7 @@
           },
           {
             "name": "SslEnforcement",
-            "type": "PostgresServerCreateGeoRedundantBackup",
+            "type": "PostgresServerAutoGrow",
             "format": "--ssl-enforcement {value}",
             "secret": false,
             "help": "Enable or disable ssl enforcement for connections to server. Default is Enabled."
@@ -809,6 +823,419 @@
             "format": "--timeout {value}",
             "secret": false,
             "help": "Maximum wait in seconds."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleCreate",
+      "definiteArgument": "postgres server vnet-rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "secret": false,
+            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "secret": false,
+            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "secret": false,
+            "help": "The virtual network name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleDelete",
+      "definiteArgument": "postgres server vnet-rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "secret": false,
+            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleList",
+      "definiteArgument": "postgres server vnet-rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "secret": false,
+            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleShow",
+      "definiteArgument": "postgres server vnet-rule show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "secret": false,
+            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerVnetRuleUpdate",
+      "definiteArgument": "postgres server vnet-rule update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "secret": false,
+            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "secret": false,
+            "help": "The virtual network name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the vnet rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "secret": false,
+            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerReplicaCreate",
+      "definiteArgument": "postgres server replica create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SourceServer",
+            "type": "string",
+            "format": "--source-server {value}",
+            "secret": false,
+            "help": "The name or resource ID of the master server to the create replica for."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "SkuName",
+            "type": "string",
+            "format": "--sku-name {value}",
+            "secret": false,
+            "help": "The name of the sku. Follows the convention {pricing tier}_{compute generation}_{vCores} in shorthand. Examples: B_Gen5_1, GP_Gen5_4, MO_Gen5_16."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerReplicaList",
+      "definiteArgument": "postgres server replica list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServerName",
+            "type": "string",
+            "format": "--server-name {value}",
+            "secret": false,
+            "help": "Name of the master server."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServerReplicaStop",
+      "definiteArgument": "postgres server replica stop",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1212,412 +1639,6 @@
           }
         ]
       }
-    },
-    {
-      "postfix": "ServerReplicaCreate",
-      "definiteArgument": "postgres server replica create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SourceServer",
-            "type": "string",
-            "format": "--source-server {value}",
-            "secret": false,
-            "help": "The name or resource ID of the master server to the create replica for."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "secret": false,
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerReplicaList",
-      "definiteArgument": "postgres server replica list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "secret": false,
-            "help": "Name of the master server."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerReplicaStop",
-      "definiteArgument": "postgres server replica stop",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "secret": false,
-            "help": "Do not prompt for confirmation."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleCreate",
-      "definiteArgument": "postgres server vnet-rule create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the vnet rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "secret": false,
-            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "secret": false,
-            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
-          },
-          {
-            "name": "IgnoreMissingEndpoint",
-            "type": "bool",
-            "format": "--ignore-missing-endpoint",
-            "secret": false,
-            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "secret": false,
-            "help": "The virtual network name."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleDelete",
-      "definiteArgument": "postgres server vnet-rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the vnet rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "secret": false,
-            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleList",
-      "definiteArgument": "postgres server vnet-rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "secret": false,
-            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleShow",
-      "definiteArgument": "postgres server vnet-rule show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the vnet rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "secret": false,
-            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServerVnetRuleUpdate",
-      "definiteArgument": "postgres server vnet-rule update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "secret": false,
-            "help": "Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided."
-          },
-          {
-            "name": "IgnoreMissingEndpoint",
-            "type": "bool",
-            "format": "--ignore-missing-endpoint",
-            "secret": false,
-            "help": "Create vnet rule before virtual network has vnet service endpoint enabled."
-          },
-          {
-            "name": "VnetName",
-            "type": "string",
-            "format": "--vnet-name {value}",
-            "secret": false,
-            "help": "The virtual network name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the vnet rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServerName",
-            "type": "string",
-            "format": "--server-name {value}",
-            "secret": false,
-            "help": "Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
     }
   ],
   "commonTaskProperties": [
@@ -1659,7 +1680,7 @@
   ],
   "enumerations": [
     {
-      "name": "PostgresServerCreateGeoRedundantBackup",
+      "name": "PostgresServerAutoGrow",
       "values": [
         "disabled",
         "enabled"

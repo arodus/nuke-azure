@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAks.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -121,6 +121,7 @@ namespace Nuke.Azure
         ///     <li><c>--aad-server-app-secret</c> via <see cref="AzureAksCreateSettings.AadServerAppSecret"/></li>
         ///     <li><c>--aad-tenant-id</c> via <see cref="AzureAksCreateSettings.AadTenantId"/></li>
         ///     <li><c>--admin-username</c> via <see cref="AzureAksCreateSettings.AdminUsername"/></li>
+        ///     <li><c>--attach-acr</c> via <see cref="AzureAksCreateSettings.AttachAcr"/></li>
         ///     <li><c>--client-secret</c> via <see cref="AzureAksCreateSettings.ClientSecret"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureAksCreateSettings.Debug"/></li>
         ///     <li><c>--disable-rbac</c> via <see cref="AzureAksCreateSettings.DisableRbac"/></li>
@@ -132,17 +133,21 @@ namespace Nuke.Azure
         ///     <li><c>--generate-ssh-keys</c> via <see cref="AzureAksCreateSettings.GenerateSshKeys"/></li>
         ///     <li><c>--help</c> via <see cref="AzureAksCreateSettings.Help"/></li>
         ///     <li><c>--kubernetes-version</c> via <see cref="AzureAksCreateSettings.KubernetesVersion"/></li>
+        ///     <li><c>--load-balancer-managed-outbound-ip-count</c> via <see cref="AzureAksCreateSettings.LoadBalancerManagedOutboundIpCount"/></li>
+        ///     <li><c>--load-balancer-outbound-ip-prefixes</c> via <see cref="AzureAksCreateSettings.LoadBalancerOutboundIpPrefixes"/></li>
+        ///     <li><c>--load-balancer-outbound-ips</c> via <see cref="AzureAksCreateSettings.LoadBalancerOutboundIps"/></li>
+        ///     <li><c>--load-balancer-sku</c> via <see cref="AzureAksCreateSettings.LoadBalancerSku"/></li>
         ///     <li><c>--location</c> via <see cref="AzureAksCreateSettings.Location"/></li>
         ///     <li><c>--max-pods</c> via <see cref="AzureAksCreateSettings.MaxPods"/></li>
         ///     <li><c>--name</c> via <see cref="AzureAksCreateSettings.Name"/></li>
         ///     <li><c>--network-plugin</c> via <see cref="AzureAksCreateSettings.NetworkPlugin"/></li>
         ///     <li><c>--network-policy</c> via <see cref="AzureAksCreateSettings.NetworkPolicy"/></li>
-        ///     <li><c>--node-count</c> via <see cref="AzureAksCreateSettings.NodeCount"/></li>
-        ///     <li><c>--node-osdisk-size</c> via <see cref="AzureAksCreateSettings.NodeOsdiskSize"/></li>
-        ///     <li><c>--nodepool-name</c> via <see cref="AzureAksCreateSettings.NodepoolName"/></li>
-        ///     <li><c>--node-vm-size</c> via <see cref="AzureAksCreateSettings.NodeVmSize"/></li>
         ///     <li><c>--no-ssh-key</c> via <see cref="AzureAksCreateSettings.NoSshKey"/></li>
         ///     <li><c>--no-wait</c> via <see cref="AzureAksCreateSettings.NoWait"/></li>
+        ///     <li><c>--node-count</c> via <see cref="AzureAksCreateSettings.NodeCount"/></li>
+        ///     <li><c>--node-osdisk-size</c> via <see cref="AzureAksCreateSettings.NodeOsdiskSize"/></li>
+        ///     <li><c>--node-vm-size</c> via <see cref="AzureAksCreateSettings.NodeVmSize"/></li>
+        ///     <li><c>--nodepool-name</c> via <see cref="AzureAksCreateSettings.NodepoolName"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAksCreateSettings.Output"/></li>
         ///     <li><c>--pod-cidr</c> via <see cref="AzureAksCreateSettings.PodCidr"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAksCreateSettings.Query"/></li>
@@ -154,6 +159,7 @@ namespace Nuke.Azure
         ///     <li><c>--subscription</c> via <see cref="AzureAksCreateSettings.Subscription"/></li>
         ///     <li><c>--tags</c> via <see cref="AzureAksCreateSettings.Tags"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAksCreateSettings.Verbose"/></li>
+        ///     <li><c>--vm-set-type</c> via <see cref="AzureAksCreateSettings.VmSetType"/></li>
         ///     <li><c>--vnet-subnet-id</c> via <see cref="AzureAksCreateSettings.VnetSubnetId"/></li>
         ///     <li><c>--workspace-resource-id</c> via <see cref="AzureAksCreateSettings.WorkspaceResourceId"/></li>
         ///   </ul>
@@ -174,6 +180,7 @@ namespace Nuke.Azure
         ///     <li><c>--aad-server-app-secret</c> via <see cref="AzureAksCreateSettings.AadServerAppSecret"/></li>
         ///     <li><c>--aad-tenant-id</c> via <see cref="AzureAksCreateSettings.AadTenantId"/></li>
         ///     <li><c>--admin-username</c> via <see cref="AzureAksCreateSettings.AdminUsername"/></li>
+        ///     <li><c>--attach-acr</c> via <see cref="AzureAksCreateSettings.AttachAcr"/></li>
         ///     <li><c>--client-secret</c> via <see cref="AzureAksCreateSettings.ClientSecret"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureAksCreateSettings.Debug"/></li>
         ///     <li><c>--disable-rbac</c> via <see cref="AzureAksCreateSettings.DisableRbac"/></li>
@@ -185,17 +192,21 @@ namespace Nuke.Azure
         ///     <li><c>--generate-ssh-keys</c> via <see cref="AzureAksCreateSettings.GenerateSshKeys"/></li>
         ///     <li><c>--help</c> via <see cref="AzureAksCreateSettings.Help"/></li>
         ///     <li><c>--kubernetes-version</c> via <see cref="AzureAksCreateSettings.KubernetesVersion"/></li>
+        ///     <li><c>--load-balancer-managed-outbound-ip-count</c> via <see cref="AzureAksCreateSettings.LoadBalancerManagedOutboundIpCount"/></li>
+        ///     <li><c>--load-balancer-outbound-ip-prefixes</c> via <see cref="AzureAksCreateSettings.LoadBalancerOutboundIpPrefixes"/></li>
+        ///     <li><c>--load-balancer-outbound-ips</c> via <see cref="AzureAksCreateSettings.LoadBalancerOutboundIps"/></li>
+        ///     <li><c>--load-balancer-sku</c> via <see cref="AzureAksCreateSettings.LoadBalancerSku"/></li>
         ///     <li><c>--location</c> via <see cref="AzureAksCreateSettings.Location"/></li>
         ///     <li><c>--max-pods</c> via <see cref="AzureAksCreateSettings.MaxPods"/></li>
         ///     <li><c>--name</c> via <see cref="AzureAksCreateSettings.Name"/></li>
         ///     <li><c>--network-plugin</c> via <see cref="AzureAksCreateSettings.NetworkPlugin"/></li>
         ///     <li><c>--network-policy</c> via <see cref="AzureAksCreateSettings.NetworkPolicy"/></li>
-        ///     <li><c>--node-count</c> via <see cref="AzureAksCreateSettings.NodeCount"/></li>
-        ///     <li><c>--node-osdisk-size</c> via <see cref="AzureAksCreateSettings.NodeOsdiskSize"/></li>
-        ///     <li><c>--nodepool-name</c> via <see cref="AzureAksCreateSettings.NodepoolName"/></li>
-        ///     <li><c>--node-vm-size</c> via <see cref="AzureAksCreateSettings.NodeVmSize"/></li>
         ///     <li><c>--no-ssh-key</c> via <see cref="AzureAksCreateSettings.NoSshKey"/></li>
         ///     <li><c>--no-wait</c> via <see cref="AzureAksCreateSettings.NoWait"/></li>
+        ///     <li><c>--node-count</c> via <see cref="AzureAksCreateSettings.NodeCount"/></li>
+        ///     <li><c>--node-osdisk-size</c> via <see cref="AzureAksCreateSettings.NodeOsdiskSize"/></li>
+        ///     <li><c>--node-vm-size</c> via <see cref="AzureAksCreateSettings.NodeVmSize"/></li>
+        ///     <li><c>--nodepool-name</c> via <see cref="AzureAksCreateSettings.NodepoolName"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAksCreateSettings.Output"/></li>
         ///     <li><c>--pod-cidr</c> via <see cref="AzureAksCreateSettings.PodCidr"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAksCreateSettings.Query"/></li>
@@ -207,6 +218,7 @@ namespace Nuke.Azure
         ///     <li><c>--subscription</c> via <see cref="AzureAksCreateSettings.Subscription"/></li>
         ///     <li><c>--tags</c> via <see cref="AzureAksCreateSettings.Tags"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAksCreateSettings.Verbose"/></li>
+        ///     <li><c>--vm-set-type</c> via <see cref="AzureAksCreateSettings.VmSetType"/></li>
         ///     <li><c>--vnet-subnet-id</c> via <see cref="AzureAksCreateSettings.VnetSubnetId"/></li>
         ///     <li><c>--workspace-resource-id</c> via <see cref="AzureAksCreateSettings.WorkspaceResourceId"/></li>
         ///   </ul>
@@ -409,6 +421,7 @@ namespace Nuke.Azure
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--admin</c> via <see cref="AzureAksGetCredentialsSettings.Admin"/></li>
+        ///     <li><c>--context</c> via <see cref="AzureAksGetCredentialsSettings.Context"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureAksGetCredentialsSettings.Debug"/></li>
         ///     <li><c>--file</c> via <see cref="AzureAksGetCredentialsSettings.File"/></li>
         ///     <li><c>--help</c> via <see cref="AzureAksGetCredentialsSettings.Help"/></li>
@@ -433,6 +446,7 @@ namespace Nuke.Azure
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--admin</c> via <see cref="AzureAksGetCredentialsSettings.Admin"/></li>
+        ///     <li><c>--context</c> via <see cref="AzureAksGetCredentialsSettings.Context"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureAksGetCredentialsSettings.Debug"/></li>
         ///     <li><c>--file</c> via <see cref="AzureAksGetCredentialsSettings.File"/></li>
         ///     <li><c>--help</c> via <see cref="AzureAksGetCredentialsSettings.Help"/></li>
@@ -863,9 +877,9 @@ namespace Nuke.Azure
         ///     <li><c>--debug</c> via <see cref="AzureAksScaleSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureAksScaleSettings.Help"/></li>
         ///     <li><c>--name</c> via <see cref="AzureAksScaleSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureAksScaleSettings.NoWait"/></li>
         ///     <li><c>--node-count</c> via <see cref="AzureAksScaleSettings.NodeCount"/></li>
         ///     <li><c>--nodepool-name</c> via <see cref="AzureAksScaleSettings.NodepoolName"/></li>
-        ///     <li><c>--no-wait</c> via <see cref="AzureAksScaleSettings.NoWait"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAksScaleSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAksScaleSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureAksScaleSettings.ResourceGroup"/></li>
@@ -887,9 +901,9 @@ namespace Nuke.Azure
         ///     <li><c>--debug</c> via <see cref="AzureAksScaleSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureAksScaleSettings.Help"/></li>
         ///     <li><c>--name</c> via <see cref="AzureAksScaleSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureAksScaleSettings.NoWait"/></li>
         ///     <li><c>--node-count</c> via <see cref="AzureAksScaleSettings.NodeCount"/></li>
         ///     <li><c>--nodepool-name</c> via <see cref="AzureAksScaleSettings.NodepoolName"/></li>
-        ///     <li><c>--no-wait</c> via <see cref="AzureAksScaleSettings.NoWait"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAksScaleSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAksScaleSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureAksScaleSettings.ResourceGroup"/></li>
@@ -953,6 +967,71 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureAksShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureAksShow(CombinatorialConfigure<AzureAksShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureAksShow, AzureAksLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kubernetes Services.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureAksUpdate(AzureAksUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureAksUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kubernetes Services.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--attach-acr</c> via <see cref="AzureAksUpdateSettings.AttachAcr"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureAksUpdateSettings.Debug"/></li>
+        ///     <li><c>--detach-acr</c> via <see cref="AzureAksUpdateSettings.DetachAcr"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAksUpdateSettings.Help"/></li>
+        ///     <li><c>--load-balancer-managed-outbound-ip-count</c> via <see cref="AzureAksUpdateSettings.LoadBalancerManagedOutboundIpCount"/></li>
+        ///     <li><c>--load-balancer-outbound-ip-prefixes</c> via <see cref="AzureAksUpdateSettings.LoadBalancerOutboundIpPrefixes"/></li>
+        ///     <li><c>--load-balancer-outbound-ips</c> via <see cref="AzureAksUpdateSettings.LoadBalancerOutboundIps"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAksUpdateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureAksUpdateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAksUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAksUpdateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureAksUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureAksUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAksUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureAksUpdate(Configure<AzureAksUpdateSettings> configurator)
+        {
+            return AzureAksUpdate(configurator(new AzureAksUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kubernetes Services.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--attach-acr</c> via <see cref="AzureAksUpdateSettings.AttachAcr"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureAksUpdateSettings.Debug"/></li>
+        ///     <li><c>--detach-acr</c> via <see cref="AzureAksUpdateSettings.DetachAcr"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAksUpdateSettings.Help"/></li>
+        ///     <li><c>--load-balancer-managed-outbound-ip-count</c> via <see cref="AzureAksUpdateSettings.LoadBalancerManagedOutboundIpCount"/></li>
+        ///     <li><c>--load-balancer-outbound-ip-prefixes</c> via <see cref="AzureAksUpdateSettings.LoadBalancerOutboundIpPrefixes"/></li>
+        ///     <li><c>--load-balancer-outbound-ips</c> via <see cref="AzureAksUpdateSettings.LoadBalancerOutboundIps"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAksUpdateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureAksUpdateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAksUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAksUpdateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureAksUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureAksUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAksUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureAksUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureAksUpdate(CombinatorialConfigure<AzureAksUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureAksUpdate, AzureAksLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Kubernetes Services.</p>
@@ -1043,6 +1122,7 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
+        ///     <li><c>--control-plane-only</c> via <see cref="AzureAksUpgradeSettings.ControlPlaneOnly"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureAksUpgradeSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureAksUpgradeSettings.Help"/></li>
         ///     <li><c>--kubernetes-version</c> via <see cref="AzureAksUpgradeSettings.KubernetesVersion"/></li>
@@ -1067,6 +1147,7 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
+        ///     <li><c>--control-plane-only</c> via <see cref="AzureAksUpgradeSettings.ControlPlaneOnly"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureAksUpgradeSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureAksUpgradeSettings.Help"/></li>
         ///     <li><c>--kubernetes-version</c> via <see cref="AzureAksUpgradeSettings.KubernetesVersion"/></li>
@@ -1400,6 +1481,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string AdminUsername { get; internal set; }
         /// <summary>
+        ///   Grant the 'acrpull' role assignment to the ACR specified by name or resource ID.
+        /// </summary>
+        public virtual string AttachAcr { get; internal set; }
+        /// <summary>
         ///   Secret associated with the service principal. This argument is required if `--service-principal` is specified.
         /// </summary>
         public virtual string ClientSecret { get; internal set; }
@@ -1436,6 +1521,22 @@ namespace Nuke.Azure
         ///   Version of Kubernetes to use for creating the cluster, such as "1.11.8" or "1.12.6".
         /// </summary>
         public virtual string KubernetesVersion { get; internal set; }
+        /// <summary>
+        ///   Load balancer managed outbound IP count.
+        /// </summary>
+        public virtual string LoadBalancerManagedOutboundIpCount { get; internal set; }
+        /// <summary>
+        ///   Load balancer outbound IP prefix resource IDs.
+        /// </summary>
+        public virtual string LoadBalancerOutboundIpPrefixes { get; internal set; }
+        /// <summary>
+        ///   Load balancer outbound IP resource IDs.
+        /// </summary>
+        public virtual string LoadBalancerOutboundIps { get; internal set; }
+        /// <summary>
+        ///   Azure Load Balancer SKU selection for your cluster. basic or standard.
+        /// </summary>
+        public virtual string LoadBalancerSku { get; internal set; }
         /// <summary>
         ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
         /// </summary>
@@ -1501,6 +1602,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Tags { get; internal set; }
         /// <summary>
+        ///   Agent pool vm set type. VirtualMachineScaleSets or AvailabilitySet.
+        /// </summary>
+        public virtual string VmSetType { get; internal set; }
+        /// <summary>
         ///   The ID of a subnet in an existing VNet into which to deploy the cluster.
         /// </summary>
         public virtual string VnetSubnetId { get; internal set; }
@@ -1543,6 +1648,7 @@ namespace Nuke.Azure
               .Add("--aad-server-app-secret {value}", AadServerAppSecret, secret: true)
               .Add("--aad-tenant-id {value}", AadTenantId)
               .Add("--admin-username {value}", AdminUsername)
+              .Add("--attach-acr {value}", AttachAcr)
               .Add("--client-secret {value}", ClientSecret, secret: true)
               .Add("--disable-rbac {value}", DisableRbac)
               .Add("--dns-name-prefix {value}", DnsNamePrefix)
@@ -1552,6 +1658,10 @@ namespace Nuke.Azure
               .Add("--enable-rbac {value}", EnableRbac)
               .Add("--generate-ssh-keys {value}", GenerateSshKeys)
               .Add("--kubernetes-version {value}", KubernetesVersion)
+              .Add("--load-balancer-managed-outbound-ip-count {value}", LoadBalancerManagedOutboundIpCount)
+              .Add("--load-balancer-outbound-ip-prefixes {value}", LoadBalancerOutboundIpPrefixes)
+              .Add("--load-balancer-outbound-ips {value}", LoadBalancerOutboundIps)
+              .Add("--load-balancer-sku {value}", LoadBalancerSku)
               .Add("--location {value}", Location)
               .Add("--max-pods {value}", MaxPods)
               .Add("--network-plugin {value}", NetworkPlugin)
@@ -1568,6 +1678,7 @@ namespace Nuke.Azure
               .Add("--skip-subnet-role-assignment {value}", SkipSubnetRoleAssignment)
               .Add("--ssh-key-value {value}", SshKeyValue)
               .Add("--tags {value}", Tags)
+              .Add("--vm-set-type {value}", VmSetType)
               .Add("--vnet-subnet-id {value}", VnetSubnetId)
               .Add("--workspace-resource-id {value}", WorkspaceResourceId)
               .Add("--subscription {value}", Subscription)
@@ -1835,6 +1946,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Admin { get; internal set; }
         /// <summary>
+        ///   If specified, overwrite the default context name.
+        /// </summary>
+        public virtual string Context { get; internal set; }
+        /// <summary>
         ///   Kubernetes configuration file to update. Use "-" to print YAML to stdout instead.
         /// </summary>
         public virtual string File { get; internal set; }
@@ -1873,6 +1988,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--admin {value}", Admin)
+              .Add("--context {value}", Context)
               .Add("--file {value}", File)
               .Add("--overwrite-existing {value}", OverwriteExisting)
               .Add("--subscription {value}", Subscription)
@@ -2089,7 +2205,7 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary>
-        ///   The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified.
+        ///   The resource group to create the ACI container groups. Use the MC_\* resource group if it is not specified.
         /// </summary>
         public virtual string AciResourceGroup { get; internal set; }
         /// <summary>
@@ -2109,7 +2225,7 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ImageTag { get; internal set; }
         /// <summary>
-        ///   The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.
+        ///   The location to create the ACI container groups. Use the location of the MC_\* resource group if it is not specified.
         /// </summary>
         public virtual string Location { get; internal set; }
         /// <summary>
@@ -2513,6 +2629,98 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureAksUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureAksTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAksUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureAks executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureAksTasks.AzureAksPath;
+        public override Action<OutputType, string> CustomLogger => AzureAksTasks.AzureAksLogger;
+        /// <summary>
+        ///   Name of the managed cluster.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Grant the 'acrpull' role assignment to the ACR specified by name or resource ID.
+        /// </summary>
+        public virtual string AttachAcr { get; internal set; }
+        /// <summary>
+        ///   Disable the 'acrpull' role assignment to the ACR specified by name or resource ID.
+        /// </summary>
+        public virtual string DetachAcr { get; internal set; }
+        /// <summary>
+        ///   Load balancer managed outbound IP count.
+        /// </summary>
+        public virtual string LoadBalancerManagedOutboundIpCount { get; internal set; }
+        /// <summary>
+        ///   Load balancer outbound IP prefix resource IDs.
+        /// </summary>
+        public virtual string LoadBalancerOutboundIpPrefixes { get; internal set; }
+        /// <summary>
+        ///   Load balancer outbound IP resource IDs.
+        /// </summary>
+        public virtual string LoadBalancerOutboundIps { get; internal set; }
+        /// <summary>
+        ///   Do not wait for the long-running operation to finish.
+        /// </summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("aks update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--attach-acr {value}", AttachAcr)
+              .Add("--detach-acr {value}", DetachAcr)
+              .Add("--load-balancer-managed-outbound-ip-count {value}", LoadBalancerManagedOutboundIpCount)
+              .Add("--load-balancer-outbound-ip-prefixes {value}", LoadBalancerOutboundIpPrefixes)
+              .Add("--load-balancer-outbound-ips {value}", LoadBalancerOutboundIps)
+              .Add("--no-wait", NoWait)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureAksUpdateCredentialsSettings
     /// <summary>
     ///   Used within <see cref="AzureAksTasks"/>.
@@ -2647,6 +2855,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary>
+        ///   Upgrade the cluster control plane only. If not specified, both control plane AND all node pools will be upgraded.
+        /// </summary>
+        public virtual string ControlPlaneOnly { get; internal set; }
+        /// <summary>
         ///   Do not wait for the long-running operation to finish.
         /// </summary>
         public virtual bool? NoWait { get; internal set; }
@@ -2685,6 +2897,7 @@ namespace Nuke.Azure
               .Add("--kubernetes-version {value}", KubernetesVersion)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--control-plane-only {value}", ControlPlaneOnly)
               .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
               .Add("--subscription {value}", Subscription)
@@ -2720,7 +2933,7 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary>
-        ///   The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified.
+        ///   The resource group to create the ACI container groups. Use the MC_\* resource group if it is not specified.
         /// </summary>
         public virtual string AciResourceGroup { get; internal set; }
         /// <summary>
@@ -2740,7 +2953,7 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ImageTag { get; internal set; }
         /// <summary>
-        ///   The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.
+        ///   The location to create the ACI container groups. Use the location of the MC_\* resource group if it is not specified.
         /// </summary>
         public virtual string Location { get; internal set; }
         /// <summary>
@@ -3423,6 +3636,30 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AttachAcr
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksCreateSettings.AttachAcr"/></em></p>
+        ///   <p>Grant the 'acrpull' role assignment to the ACR specified by name or resource ID.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings SetAttachAcr(this AzureAksCreateSettings toolSettings, string attachAcr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AttachAcr = attachAcr;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksCreateSettings.AttachAcr"/></em></p>
+        ///   <p>Grant the 'acrpull' role assignment to the ACR specified by name or resource ID.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetAttachAcr(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AttachAcr = null;
+            return toolSettings;
+        }
+        #endregion
         #region ClientSecret
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAksCreateSettings.ClientSecret"/></em></p>
@@ -3693,6 +3930,102 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.KubernetesVersion = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LoadBalancerManagedOutboundIpCount
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksCreateSettings.LoadBalancerManagedOutboundIpCount"/></em></p>
+        ///   <p>Load balancer managed outbound IP count.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings SetLoadBalancerManagedOutboundIpCount(this AzureAksCreateSettings toolSettings, string loadBalancerManagedOutboundIpCount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerManagedOutboundIpCount = loadBalancerManagedOutboundIpCount;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksCreateSettings.LoadBalancerManagedOutboundIpCount"/></em></p>
+        ///   <p>Load balancer managed outbound IP count.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetLoadBalancerManagedOutboundIpCount(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerManagedOutboundIpCount = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LoadBalancerOutboundIpPrefixes
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksCreateSettings.LoadBalancerOutboundIpPrefixes"/></em></p>
+        ///   <p>Load balancer outbound IP prefix resource IDs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings SetLoadBalancerOutboundIpPrefixes(this AzureAksCreateSettings toolSettings, string loadBalancerOutboundIpPrefixes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerOutboundIpPrefixes = loadBalancerOutboundIpPrefixes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksCreateSettings.LoadBalancerOutboundIpPrefixes"/></em></p>
+        ///   <p>Load balancer outbound IP prefix resource IDs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetLoadBalancerOutboundIpPrefixes(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerOutboundIpPrefixes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LoadBalancerOutboundIps
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksCreateSettings.LoadBalancerOutboundIps"/></em></p>
+        ///   <p>Load balancer outbound IP resource IDs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings SetLoadBalancerOutboundIps(this AzureAksCreateSettings toolSettings, string loadBalancerOutboundIps)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerOutboundIps = loadBalancerOutboundIps;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksCreateSettings.LoadBalancerOutboundIps"/></em></p>
+        ///   <p>Load balancer outbound IP resource IDs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetLoadBalancerOutboundIps(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerOutboundIps = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LoadBalancerSku
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksCreateSettings.LoadBalancerSku"/></em></p>
+        ///   <p>Azure Load Balancer SKU selection for your cluster. basic or standard.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings SetLoadBalancerSku(this AzureAksCreateSettings toolSettings, string loadBalancerSku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerSku = loadBalancerSku;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksCreateSettings.LoadBalancerSku"/></em></p>
+        ///   <p>Azure Load Balancer SKU selection for your cluster. basic or standard.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetLoadBalancerSku(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerSku = null;
             return toolSettings;
         }
         #endregion
@@ -4176,6 +4509,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmSetType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksCreateSettings.VmSetType"/></em></p>
+        ///   <p>Agent pool vm set type. VirtualMachineScaleSets or AvailabilitySet.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings SetVmSetType(this AzureAksCreateSettings toolSettings, string vmSetType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmSetType = vmSetType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksCreateSettings.VmSetType"/></em></p>
+        ///   <p>Agent pool vm set type. VirtualMachineScaleSets or AvailabilitySet.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksCreateSettings ResetVmSetType(this AzureAksCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmSetType = null;
             return toolSettings;
         }
         #endregion
@@ -5464,6 +5821,30 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region Context
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksGetCredentialsSettings.Context"/></em></p>
+        ///   <p>If specified, overwrite the default context name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksGetCredentialsSettings SetContext(this AzureAksGetCredentialsSettings toolSettings, string context)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Context = context;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksGetCredentialsSettings.Context"/></em></p>
+        ///   <p>If specified, overwrite the default context name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksGetCredentialsSettings ResetContext(this AzureAksGetCredentialsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Context = null;
+            return toolSettings;
+        }
+        #endregion
         #region File
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAksGetCredentialsSettings.File"/></em></p>
@@ -6299,7 +6680,7 @@ namespace Nuke.Azure
         #region AciResourceGroup
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAksInstallConnectorSettings.AciResourceGroup"/></em></p>
-        ///   <p>The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified.</p>
+        ///   <p>The resource group to create the ACI container groups. Use the MC_\* resource group if it is not specified.</p>
         /// </summary>
         [Pure]
         public static AzureAksInstallConnectorSettings SetAciResourceGroup(this AzureAksInstallConnectorSettings toolSettings, string aciResourceGroup)
@@ -6310,7 +6691,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureAksInstallConnectorSettings.AciResourceGroup"/></em></p>
-        ///   <p>The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified.</p>
+        ///   <p>The resource group to create the ACI container groups. Use the MC_\* resource group if it is not specified.</p>
         /// </summary>
         [Pure]
         public static AzureAksInstallConnectorSettings ResetAciResourceGroup(this AzureAksInstallConnectorSettings toolSettings)
@@ -6419,7 +6800,7 @@ namespace Nuke.Azure
         #region Location
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAksInstallConnectorSettings.Location"/></em></p>
-        ///   <p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p>
+        ///   <p>The location to create the ACI container groups. Use the location of the MC_\* resource group if it is not specified.</p>
         /// </summary>
         [Pure]
         public static AzureAksInstallConnectorSettings SetLocation(this AzureAksInstallConnectorSettings toolSettings, string location)
@@ -6430,7 +6811,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureAksInstallConnectorSettings.Location"/></em></p>
-        ///   <p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p>
+        ///   <p>The location to create the ACI container groups. Use the location of the MC_\* resource group if it is not specified.</p>
         /// </summary>
         [Pure]
         public static AzureAksInstallConnectorSettings ResetLocation(this AzureAksInstallConnectorSettings toolSettings)
@@ -7878,6 +8259,385 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureAksUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureAksTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAksUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the managed cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetName(this AzureAksUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the managed cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetName(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetResourceGroup(this AzureAksUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetResourceGroup(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AttachAcr
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.AttachAcr"/></em></p>
+        ///   <p>Grant the 'acrpull' role assignment to the ACR specified by name or resource ID.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetAttachAcr(this AzureAksUpdateSettings toolSettings, string attachAcr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AttachAcr = attachAcr;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.AttachAcr"/></em></p>
+        ///   <p>Grant the 'acrpull' role assignment to the ACR specified by name or resource ID.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetAttachAcr(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AttachAcr = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DetachAcr
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.DetachAcr"/></em></p>
+        ///   <p>Disable the 'acrpull' role assignment to the ACR specified by name or resource ID.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetDetachAcr(this AzureAksUpdateSettings toolSettings, string detachAcr)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DetachAcr = detachAcr;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.DetachAcr"/></em></p>
+        ///   <p>Disable the 'acrpull' role assignment to the ACR specified by name or resource ID.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetDetachAcr(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DetachAcr = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LoadBalancerManagedOutboundIpCount
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.LoadBalancerManagedOutboundIpCount"/></em></p>
+        ///   <p>Load balancer managed outbound IP count.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetLoadBalancerManagedOutboundIpCount(this AzureAksUpdateSettings toolSettings, string loadBalancerManagedOutboundIpCount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerManagedOutboundIpCount = loadBalancerManagedOutboundIpCount;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.LoadBalancerManagedOutboundIpCount"/></em></p>
+        ///   <p>Load balancer managed outbound IP count.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetLoadBalancerManagedOutboundIpCount(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerManagedOutboundIpCount = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LoadBalancerOutboundIpPrefixes
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.LoadBalancerOutboundIpPrefixes"/></em></p>
+        ///   <p>Load balancer outbound IP prefix resource IDs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetLoadBalancerOutboundIpPrefixes(this AzureAksUpdateSettings toolSettings, string loadBalancerOutboundIpPrefixes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerOutboundIpPrefixes = loadBalancerOutboundIpPrefixes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.LoadBalancerOutboundIpPrefixes"/></em></p>
+        ///   <p>Load balancer outbound IP prefix resource IDs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetLoadBalancerOutboundIpPrefixes(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerOutboundIpPrefixes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region LoadBalancerOutboundIps
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.LoadBalancerOutboundIps"/></em></p>
+        ///   <p>Load balancer outbound IP resource IDs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetLoadBalancerOutboundIps(this AzureAksUpdateSettings toolSettings, string loadBalancerOutboundIps)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerOutboundIps = loadBalancerOutboundIps;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.LoadBalancerOutboundIps"/></em></p>
+        ///   <p>Load balancer outbound IP resource IDs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetLoadBalancerOutboundIps(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LoadBalancerOutboundIps = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetNoWait(this AzureAksUpdateSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetNoWait(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureAksUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings EnableNoWait(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureAksUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings DisableNoWait(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureAksUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ToggleNoWait(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetSubscription(this AzureAksUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetSubscription(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetDebug(this AzureAksUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetDebug(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetHelp(this AzureAksUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetHelp(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetOutput(this AzureAksUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetOutput(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetQuery(this AzureAksUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetQuery(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings SetVerbose(this AzureAksUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpdateSettings ResetVerbose(this AzureAksUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureAksUpdateCredentialsSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureAksTasks"/>.
@@ -8442,6 +9202,30 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ControlPlaneOnly
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAksUpgradeSettings.ControlPlaneOnly"/></em></p>
+        ///   <p>Upgrade the cluster control plane only. If not specified, both control plane AND all node pools will be upgraded.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpgradeSettings SetControlPlaneOnly(this AzureAksUpgradeSettings toolSettings, string controlPlaneOnly)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ControlPlaneOnly = controlPlaneOnly;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAksUpgradeSettings.ControlPlaneOnly"/></em></p>
+        ///   <p>Upgrade the cluster control plane only. If not specified, both control plane AND all node pools will be upgraded.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAksUpgradeSettings ResetControlPlaneOnly(this AzureAksUpgradeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ControlPlaneOnly = null;
+            return toolSettings;
+        }
+        #endregion
         #region NoWait
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAksUpgradeSettings.NoWait"/></em></p>
@@ -8728,7 +9512,7 @@ namespace Nuke.Azure
         #region AciResourceGroup
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.AciResourceGroup"/></em></p>
-        ///   <p>The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified.</p>
+        ///   <p>The resource group to create the ACI container groups. Use the MC_\* resource group if it is not specified.</p>
         /// </summary>
         [Pure]
         public static AzureAksUpgradeConnectorSettings SetAciResourceGroup(this AzureAksUpgradeConnectorSettings toolSettings, string aciResourceGroup)
@@ -8739,7 +9523,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.AciResourceGroup"/></em></p>
-        ///   <p>The resource group to create the ACI container groups. Use the MC_* resource group if it is not specified.</p>
+        ///   <p>The resource group to create the ACI container groups. Use the MC_\* resource group if it is not specified.</p>
         /// </summary>
         [Pure]
         public static AzureAksUpgradeConnectorSettings ResetAciResourceGroup(this AzureAksUpgradeConnectorSettings toolSettings)
@@ -8848,7 +9632,7 @@ namespace Nuke.Azure
         #region Location
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAksUpgradeConnectorSettings.Location"/></em></p>
-        ///   <p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p>
+        ///   <p>The location to create the ACI container groups. Use the location of the MC_\* resource group if it is not specified.</p>
         /// </summary>
         [Pure]
         public static AzureAksUpgradeConnectorSettings SetLocation(this AzureAksUpgradeConnectorSettings toolSettings, string location)
@@ -8859,7 +9643,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureAksUpgradeConnectorSettings.Location"/></em></p>
-        ///   <p>The location to create the ACI container groups. Use the location of the MC_* resource group if it is not specified.</p>
+        ///   <p>The location to create the ACI container groups. Use the location of the MC_\* resource group if it is not specified.</p>
         /// </summary>
         [Pure]
         public static AzureAksUpgradeConnectorSettings ResetLocation(this AzureAksUpgradeConnectorSettings toolSettings)

@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureExtension.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -65,7 +65,6 @@ namespace Nuke.Azure
         ///     <li><c>--pip-proxy</c> via <see cref="AzureExtensionAddSettings.PipProxy"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionAddSettings.Query"/></li>
         ///     <li><c>--source</c> via <see cref="AzureExtensionAddSettings.Source"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionAddSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionAddSettings.Verbose"/></li>
         ///     <li><c>--yes</c> via <see cref="AzureExtensionAddSettings.Yes"/></li>
         ///   </ul>
@@ -89,7 +88,6 @@ namespace Nuke.Azure
         ///     <li><c>--pip-proxy</c> via <see cref="AzureExtensionAddSettings.PipProxy"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionAddSettings.Query"/></li>
         ///     <li><c>--source</c> via <see cref="AzureExtensionAddSettings.Source"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionAddSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionAddSettings.Verbose"/></li>
         ///     <li><c>--yes</c> via <see cref="AzureExtensionAddSettings.Yes"/></li>
         ///   </ul>
@@ -120,7 +118,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureExtensionListSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureExtensionListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionListSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -139,7 +136,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureExtensionListSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureExtensionListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionListSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -170,7 +166,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureExtensionListAvailableSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionListAvailableSettings.Query"/></li>
         ///     <li><c>--show-details</c> via <see cref="AzureExtensionListAvailableSettings.ShowDetails"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionListAvailableSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionListAvailableSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -190,7 +185,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureExtensionListAvailableSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionListAvailableSettings.Query"/></li>
         ///     <li><c>--show-details</c> via <see cref="AzureExtensionListAvailableSettings.ShowDetails"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionListAvailableSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionListAvailableSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -221,7 +215,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureExtensionRemoveSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureExtensionRemoveSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionRemoveSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionRemoveSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionRemoveSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -241,7 +234,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureExtensionRemoveSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureExtensionRemoveSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionRemoveSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionRemoveSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionRemoveSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -272,7 +264,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureExtensionShowSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureExtensionShowSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionShowSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionShowSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -292,7 +283,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureExtensionShowSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureExtensionShowSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionShowSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionShowSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -325,7 +315,6 @@ namespace Nuke.Azure
         ///     <li><c>--pip-extra-index-urls</c> via <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/></li>
         ///     <li><c>--pip-proxy</c> via <see cref="AzureExtensionUpdateSettings.PipProxy"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionUpdateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionUpdateSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionUpdateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -347,7 +336,6 @@ namespace Nuke.Azure
         ///     <li><c>--pip-extra-index-urls</c> via <see cref="AzureExtensionUpdateSettings.PipExtraIndexUrls"/></li>
         ///     <li><c>--pip-proxy</c> via <see cref="AzureExtensionUpdateSettings.PipProxy"/></li>
         ///     <li><c>--query</c> via <see cref="AzureExtensionUpdateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureExtensionUpdateSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureExtensionUpdateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -392,10 +380,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string PipProxy { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -424,7 +408,6 @@ namespace Nuke.Azure
               .Add("--yes {value}", Yes)
               .Add("--pip-extra-index-urls {value}", PipExtraIndexUrls, separator: ' ')
               .Add("--pip-proxy {value}", PipProxy)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -449,10 +432,6 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureExtensionTasks.AzureExtensionPath;
         public override Action<OutputType, string> CustomLogger => AzureExtensionTasks.AzureExtensionLogger;
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -476,7 +455,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("extension list")
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -505,10 +483,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual bool? ShowDetails { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -533,7 +507,6 @@ namespace Nuke.Azure
             arguments
               .Add("extension list-available")
               .Add("--show-details", ShowDetails)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -562,10 +535,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -590,7 +559,6 @@ namespace Nuke.Azure
             arguments
               .Add("extension remove")
               .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -619,10 +587,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -647,7 +611,6 @@ namespace Nuke.Azure
             arguments
               .Add("extension show")
               .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -685,10 +648,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string PipProxy { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -715,7 +674,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--pip-extra-index-urls {value}", PipExtraIndexUrls, separator: ' ')
               .Add("--pip-proxy {value}", PipProxy)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -910,30 +868,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionAddSettings SetSubscription(this AzureExtensionAddSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureExtensionAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionAddSettings ResetSubscription(this AzureExtensionAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureExtensionAddSettings.Debug"/></em></p>
@@ -1064,30 +998,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureExtensionListSettingsExtensions
     {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureExtensionListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionListSettings SetSubscription(this AzureExtensionListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureExtensionListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionListSettings ResetSubscription(this AzureExtensionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureExtensionListSettings.Debug"/></em></p>
@@ -1275,30 +1185,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureExtensionListAvailableSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionListAvailableSettings SetSubscription(this AzureExtensionListAvailableSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureExtensionListAvailableSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionListAvailableSettings ResetSubscription(this AzureExtensionListAvailableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureExtensionListAvailableSettings.Debug"/></em></p>
@@ -1453,30 +1339,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureExtensionRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionRemoveSettings SetSubscription(this AzureExtensionRemoveSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureExtensionRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionRemoveSettings ResetSubscription(this AzureExtensionRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureExtensionRemoveSettings.Debug"/></em></p>
@@ -1628,30 +1490,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureExtensionShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionShowSettings SetSubscription(this AzureExtensionShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureExtensionShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionShowSettings ResetSubscription(this AzureExtensionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -1911,30 +1749,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.PipProxy = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureExtensionUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionUpdateSettings SetSubscription(this AzureExtensionUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureExtensionUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureExtensionUpdateSettings ResetSubscription(this AzureExtensionUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion

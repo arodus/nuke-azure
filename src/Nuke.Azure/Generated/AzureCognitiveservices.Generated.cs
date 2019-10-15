@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCognitiveservices.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -109,6 +109,7 @@ namespace Nuke.Azure
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--api-properties</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.ApiProperties"/></li>
+        ///     <li><c>--custom-domain</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.CustomDomain"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.Help"/></li>
         ///     <li><c>--kind</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.Kind"/></li>
@@ -136,6 +137,7 @@ namespace Nuke.Azure
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--api-properties</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.ApiProperties"/></li>
+        ///     <li><c>--custom-domain</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.CustomDomain"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.Help"/></li>
         ///     <li><c>--kind</c> via <see cref="AzureCognitiveservicesAccountCreateSettings.Kind"/></li>
@@ -489,6 +491,8 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
+        ///     <li><c>--api-properties</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.ApiProperties"/></li>
+        ///     <li><c>--custom-domain</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.CustomDomain"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.Help"/></li>
         ///     <li><c>--name</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.Name"/></li>
@@ -512,6 +516,8 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
+        ///     <li><c>--api-properties</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.ApiProperties"/></li>
+        ///     <li><c>--custom-domain</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.CustomDomain"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.Help"/></li>
         ///     <li><c>--name</c> via <see cref="AzureCognitiveservicesAccountUpdateSettings.Name"/></li>
@@ -527,6 +533,177 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureCognitiveservicesAccountUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureCognitiveservicesAccountUpdate(CombinatorialConfigure<AzureCognitiveservicesAccountUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureCognitiveservicesAccountUpdate, AzureCognitiveservicesLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Cognitive Services accounts.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountNetworkRuleAdd(AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureCognitiveservicesAccountNetworkRuleAddSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Cognitive Services accounts.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Help"/></li>
+        ///     <li><c>--ip-address</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.IpAddress"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountNetworkRuleAdd(Configure<AzureCognitiveservicesAccountNetworkRuleAddSettings> configurator)
+        {
+            return AzureCognitiveservicesAccountNetworkRuleAdd(configurator(new AzureCognitiveservicesAccountNetworkRuleAddSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Cognitive Services accounts.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Help"/></li>
+        ///     <li><c>--ip-address</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.IpAddress"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureCognitiveservicesAccountNetworkRuleAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureCognitiveservicesAccountNetworkRuleAdd(CombinatorialConfigure<AzureCognitiveservicesAccountNetworkRuleAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureCognitiveservicesAccountNetworkRuleAdd, AzureCognitiveservicesLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Cognitive Services accounts.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountNetworkRuleList(AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureCognitiveservicesAccountNetworkRuleListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Cognitive Services accounts.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountNetworkRuleList(Configure<AzureCognitiveservicesAccountNetworkRuleListSettings> configurator)
+        {
+            return AzureCognitiveservicesAccountNetworkRuleList(configurator(new AzureCognitiveservicesAccountNetworkRuleListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Cognitive Services accounts.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureCognitiveservicesAccountNetworkRuleListSettings Settings, IReadOnlyCollection<Output> Output)> AzureCognitiveservicesAccountNetworkRuleList(CombinatorialConfigure<AzureCognitiveservicesAccountNetworkRuleListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureCognitiveservicesAccountNetworkRuleList, AzureCognitiveservicesLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Cognitive Services accounts.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountNetworkRuleRemove(AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureCognitiveservicesAccountNetworkRuleRemoveSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Cognitive Services accounts.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Help"/></li>
+        ///     <li><c>--ip-address</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.IpAddress"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureCognitiveservicesAccountNetworkRuleRemove(Configure<AzureCognitiveservicesAccountNetworkRuleRemoveSettings> configurator)
+        {
+            return AzureCognitiveservicesAccountNetworkRuleRemove(configurator(new AzureCognitiveservicesAccountNetworkRuleRemoveSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Cognitive Services accounts.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cognitiveservices?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Help"/></li>
+        ///     <li><c>--ip-address</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.IpAddress"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureCognitiveservicesAccountNetworkRuleRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureCognitiveservicesAccountNetworkRuleRemove(CombinatorialConfigure<AzureCognitiveservicesAccountNetworkRuleRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureCognitiveservicesAccountNetworkRuleRemove, AzureCognitiveservicesLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Cognitive Services accounts.</p>
@@ -725,13 +902,17 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary>
-        ///   The Sku of cognitive services account.
+        ///   Name of the Sku of cognitive services account.
         /// </summary>
         public virtual string Sku { get; internal set; }
         /// <summary>
         ///   Api properties in JSON format or a=b c=d format. Some cognitive services (i.e. QnA Maker) require extra api properties to create the account.
         /// </summary>
         public virtual string ApiProperties { get; internal set; }
+        /// <summary>
+        ///   User domain assigned to the account. Name is the CNAME source.
+        /// </summary>
+        public virtual string CustomDomain { get; internal set; }
         /// <summary>
         ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
         /// </summary>
@@ -774,6 +955,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--sku {value}", Sku)
               .Add("--api-properties {value}", ApiProperties)
+              .Add("--custom-domain {value}", CustomDomain)
               .Add("--tags {value}", Tags)
               .Add("--yes {value}", Yes)
               .Add("--subscription {value}", Subscription)
@@ -1176,7 +1358,15 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary>
-        ///   The Sku of cognitive services account.
+        ///   Api properties in JSON format or a=b c=d format. Some cognitive services (i.e. QnA Maker) require extra api properties to create the account.
+        /// </summary>
+        public virtual string ApiProperties { get; internal set; }
+        /// <summary>
+        ///   User domain assigned to the account. Name is the CNAME source.
+        /// </summary>
+        public virtual string CustomDomain { get; internal set; }
+        /// <summary>
+        ///   Name of the Sku of cognitive services account.
         /// </summary>
         public virtual string Sku { get; internal set; }
         /// <summary>
@@ -1213,8 +1403,226 @@ namespace Nuke.Azure
               .Add("cognitiveservices account update")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--api-properties {value}", ApiProperties)
+              .Add("--custom-domain {value}", CustomDomain)
               .Add("--sku {value}", Sku)
               .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountNetworkRuleAddSettings
+    /// <summary>
+    ///   Used within <see cref="AzureCognitiveservicesTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCognitiveservicesAccountNetworkRuleAddSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureCognitiveservices executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureCognitiveservicesTasks.AzureCognitiveservicesPath;
+        public override Action<OutputType, string> CustomLogger => AzureCognitiveservicesTasks.AzureCognitiveservicesLogger;
+        /// <summary>
+        ///   Cognitive service account name.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   IPv4 address or CIDR range.
+        /// </summary>
+        public virtual string IpAddress { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.
+        /// </summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary>
+        ///   Name of a virtual network.
+        /// </summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cognitiveservices account network-rule add")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--ip-address {value}", IpAddress)
+              .Add("--subnet {value}", Subnet)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountNetworkRuleListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureCognitiveservicesTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCognitiveservicesAccountNetworkRuleListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureCognitiveservices executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureCognitiveservicesTasks.AzureCognitiveservicesPath;
+        public override Action<OutputType, string> CustomLogger => AzureCognitiveservicesTasks.AzureCognitiveservicesLogger;
+        /// <summary>
+        ///   Cognitive service account name.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cognitiveservices account network-rule list")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountNetworkRuleRemoveSettings
+    /// <summary>
+    ///   Used within <see cref="AzureCognitiveservicesTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCognitiveservicesAccountNetworkRuleRemoveSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureCognitiveservices executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureCognitiveservicesTasks.AzureCognitiveservicesPath;
+        public override Action<OutputType, string> CustomLogger => AzureCognitiveservicesTasks.AzureCognitiveservicesLogger;
+        /// <summary>
+        ///   Cognitive service account name.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   IPv4 address or CIDR range.
+        /// </summary>
+        public virtual string IpAddress { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.
+        /// </summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary>
+        ///   Name of a virtual network.
+        /// </summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cognitiveservices account network-rule remove")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--ip-address {value}", IpAddress)
+              .Add("--subnet {value}", Subnet)
+              .Add("--vnet-name {value}", VnetName)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1639,7 +2047,7 @@ namespace Nuke.Azure
         #region Sku
         /// <summary>
         ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountCreateSettings.Sku"/></em></p>
-        ///   <p>The Sku of cognitive services account.</p>
+        ///   <p>Name of the Sku of cognitive services account.</p>
         /// </summary>
         [Pure]
         public static AzureCognitiveservicesAccountCreateSettings SetSku(this AzureCognitiveservicesAccountCreateSettings toolSettings, string sku)
@@ -1650,7 +2058,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountCreateSettings.Sku"/></em></p>
-        ///   <p>The Sku of cognitive services account.</p>
+        ///   <p>Name of the Sku of cognitive services account.</p>
         /// </summary>
         [Pure]
         public static AzureCognitiveservicesAccountCreateSettings ResetSku(this AzureCognitiveservicesAccountCreateSettings toolSettings)
@@ -1681,6 +2089,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ApiProperties = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CustomDomain
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountCreateSettings.CustomDomain"/></em></p>
+        ///   <p>User domain assigned to the account. Name is the CNAME source.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountCreateSettings SetCustomDomain(this AzureCognitiveservicesAccountCreateSettings toolSettings, string customDomain)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomDomain = customDomain;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountCreateSettings.CustomDomain"/></em></p>
+        ///   <p>User domain assigned to the account. Name is the CNAME source.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountCreateSettings ResetCustomDomain(this AzureCognitiveservicesAccountCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomDomain = null;
             return toolSettings;
         }
         #endregion
@@ -3122,10 +3554,58 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region ApiProperties
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountUpdateSettings.ApiProperties"/></em></p>
+        ///   <p>Api properties in JSON format or a=b c=d format. Some cognitive services (i.e. QnA Maker) require extra api properties to create the account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountUpdateSettings SetApiProperties(this AzureCognitiveservicesAccountUpdateSettings toolSettings, string apiProperties)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ApiProperties = apiProperties;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountUpdateSettings.ApiProperties"/></em></p>
+        ///   <p>Api properties in JSON format or a=b c=d format. Some cognitive services (i.e. QnA Maker) require extra api properties to create the account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountUpdateSettings ResetApiProperties(this AzureCognitiveservicesAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ApiProperties = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CustomDomain
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountUpdateSettings.CustomDomain"/></em></p>
+        ///   <p>User domain assigned to the account. Name is the CNAME source.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountUpdateSettings SetCustomDomain(this AzureCognitiveservicesAccountUpdateSettings toolSettings, string customDomain)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomDomain = customDomain;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountUpdateSettings.CustomDomain"/></em></p>
+        ///   <p>User domain assigned to the account. Name is the CNAME source.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountUpdateSettings ResetCustomDomain(this AzureCognitiveservicesAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CustomDomain = null;
+            return toolSettings;
+        }
+        #endregion
         #region Sku
         /// <summary>
         ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountUpdateSettings.Sku"/></em></p>
-        ///   <p>The Sku of cognitive services account.</p>
+        ///   <p>Name of the Sku of cognitive services account.</p>
         /// </summary>
         [Pure]
         public static AzureCognitiveservicesAccountUpdateSettings SetSku(this AzureCognitiveservicesAccountUpdateSettings toolSettings, string sku)
@@ -3136,7 +3616,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountUpdateSettings.Sku"/></em></p>
-        ///   <p>The Sku of cognitive services account.</p>
+        ///   <p>Name of the Sku of cognitive services account.</p>
         /// </summary>
         [Pure]
         public static AzureCognitiveservicesAccountUpdateSettings ResetSku(this AzureCognitiveservicesAccountUpdateSettings toolSettings)
@@ -3308,6 +3788,756 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureCognitiveservicesAccountUpdateSettings ResetVerbose(this AzureCognitiveservicesAccountUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountNetworkRuleAddSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureCognitiveservicesTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCognitiveservicesAccountNetworkRuleAddSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Name"/></em></p>
+        ///   <p>Cognitive service account name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetName(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Name"/></em></p>
+        ///   <p>Cognitive service account name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetName(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetResourceGroup(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetResourceGroup(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IpAddress
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.IpAddress"/></em></p>
+        ///   <p>IPv4 address or CIDR range.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetIpAddress(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string ipAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IpAddress = ipAddress;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.IpAddress"/></em></p>
+        ///   <p>IPv4 address or CIDR range.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetIpAddress(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetSubnet(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetSubnet(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.VnetName"/></em></p>
+        ///   <p>Name of a virtual network.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetVnetName(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.VnetName"/></em></p>
+        ///   <p>Name of a virtual network.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetVnetName(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetSubscription(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetSubscription(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetDebug(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetDebug(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetHelp(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetHelp(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetOutput(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetOutput(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetQuery(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetQuery(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings SetVerbose(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleAddSettings ResetVerbose(this AzureCognitiveservicesAccountNetworkRuleAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountNetworkRuleListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureCognitiveservicesTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCognitiveservicesAccountNetworkRuleListSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Name"/></em></p>
+        ///   <p>Cognitive service account name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings SetName(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Name"/></em></p>
+        ///   <p>Cognitive service account name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings ResetName(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings SetResourceGroup(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings ResetResourceGroup(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings SetSubscription(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings ResetSubscription(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings SetDebug(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings ResetDebug(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings SetHelp(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings ResetHelp(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings SetOutput(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings ResetOutput(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings SetQuery(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings ResetQuery(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings SetVerbose(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleListSettings ResetVerbose(this AzureCognitiveservicesAccountNetworkRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCognitiveservicesAccountNetworkRuleRemoveSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureCognitiveservicesTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCognitiveservicesAccountNetworkRuleRemoveSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Name"/></em></p>
+        ///   <p>Cognitive service account name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetName(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Name"/></em></p>
+        ///   <p>Cognitive service account name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetName(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetResourceGroup(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetResourceGroup(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IpAddress
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.IpAddress"/></em></p>
+        ///   <p>IPv4 address or CIDR range.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetIpAddress(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string ipAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IpAddress = ipAddress;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.IpAddress"/></em></p>
+        ///   <p>IPv4 address or CIDR range.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetIpAddress(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetSubnet(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetSubnet(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.VnetName"/></em></p>
+        ///   <p>Name of a virtual network.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetVnetName(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.VnetName"/></em></p>
+        ///   <p>Name of a virtual network.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetVnetName(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetSubscription(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetSubscription(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetDebug(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetDebug(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetHelp(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetHelp(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetOutput(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetOutput(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetQuery(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetQuery(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings SetVerbose(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCognitiveservicesAccountNetworkRuleRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCognitiveservicesAccountNetworkRuleRemoveSettings ResetVerbose(this AzureCognitiveservicesAccountNetworkRuleRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

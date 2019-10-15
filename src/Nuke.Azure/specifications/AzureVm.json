@@ -1,21 +1,23 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/availability-set.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/boot-diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/diagnostics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/encryption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/extension.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/image.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/nic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/run-command.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/secret.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/unmanaged-disk.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/vm/extension/image.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/secret.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/extension.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/availability-set.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/nic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/unmanaged-disk.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/boot-diagnostics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/run-command.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/encryption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/host.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/host/group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/vm/extension/image.yml"
   ],
   "name": "AzureVm",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest",
@@ -137,20 +139,6 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "AttachDataDisks",
-            "type": "string",
-            "format": "--attach-data-disks {value}",
-            "secret": false,
-            "help": "Attach existing data disks to the VM. Can use the name or ID of a managed disk or the URI to an unmanaged disk VHD."
-          },
-          {
-            "name": "AttachOsDisk",
-            "type": "string",
-            "format": "--attach-os-disk {value}",
-            "secret": false,
-            "help": "Attach an existing OS disk to the VM. Can use the name or ID of a managed disk or the URI to an unmanaged disk VHD."
-          },
-          {
             "name": "AvailabilitySet",
             "type": "string",
             "format": "--availability-set {value}",
@@ -179,6 +167,13 @@
             "help": "Custom init script file or text (cloud-init, cloud-config, etc..)."
           },
           {
+            "name": "EvictionPolicy",
+            "type": "VmCreateEvictionPolicy",
+            "format": "--eviction-policy {value}",
+            "secret": false,
+            "help": "The eviction policy for the low priority virtual machine."
+          },
+          {
             "name": "Image",
             "type": "string",
             "format": "--image {value}",
@@ -200,6 +195,13 @@
             "help": "Location in which to create VM and related resources. If default location is not configured, will default to the resource group's location."
           },
           {
+            "name": "MaxBilling",
+            "type": "string",
+            "format": "--max-billing {value}",
+            "secret": false,
+            "help": "The maximum price (in US Dollars) you are willing to pay for a low priority VM/VMSS. -1 indicates that the low priority VM/VMSS should not be evicted for price reasons."
+          },
+          {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
@@ -214,6 +216,13 @@
             "help": "The name or ID of the proximity placement group the VM should be associated with."
           },
           {
+            "name": "Priority",
+            "type": "VmCreatePriority",
+            "format": "--priority {value}",
+            "secret": false,
+            "help": "Priority. Use 'Low' to run short-lived workloads in a cost-effective way."
+          },
+          {
             "name": "Secrets",
             "type": "string",
             "format": "--secrets {value}",
@@ -225,7 +234,7 @@
             "type": "string",
             "format": "--size {value}",
             "secret": false,
-            "help": "The VM size to be created. See <a href=\"https://azure.microsoft.com/en-us/pricing/details/virtual-machines/\">https://azure.microsoft.com/en-us/pricing/details/virtual-machines/</a> for size info."
+            "help": "The VM size to be created. See <a href=\"https://azure.microsoft.com/pricing/details/virtual-machines/\">https://azure.microsoft.com/pricing/details/virtual-machines/</a> for size info."
           },
           {
             "name": "Tags",
@@ -243,7 +252,7 @@
           },
           {
             "name": "Zone",
-            "type": "VmCreateZone",
+            "type": "VmZone",
             "format": "--zone {value}",
             "secret": false,
             "help": "Availability zone into which to provision the resource."
@@ -290,6 +299,20 @@
             "separator": " ",
             "secret": false,
             "help": "Space-separated list of SSH public keys or public key file paths."
+          },
+          {
+            "name": "Host",
+            "type": "string",
+            "format": "--host {value}",
+            "secret": false,
+            "help": "Name or ID of the dedicated host this VM will reside in. If a name is specified, a host group must be specified via `--host-group`."
+          },
+          {
+            "name": "HostGroup",
+            "type": "string",
+            "format": "--host-group {value}",
+            "secret": false,
+            "help": "Name of the dedicated host group containing the dedicated host this VM will reside in."
           },
           {
             "name": "AssignIdentity",
@@ -438,6 +461,20 @@
             "format": "--vnet-name {value}",
             "secret": false,
             "help": "Name of the virtual network when creating a new one or referencing an existing one."
+          },
+          {
+            "name": "AttachDataDisks",
+            "type": "string",
+            "format": "--attach-data-disks {value}",
+            "secret": false,
+            "help": "Attach existing data disks to the VM. Can use the name or ID of a managed disk or the URI to an unmanaged disk VHD."
+          },
+          {
+            "name": "AttachOsDisk",
+            "type": "string",
+            "format": "--attach-os-disk {value}",
+            "secret": false,
+            "help": "Attach an existing OS disk to the VM. Can use the name or ID of a managed disk or the URI to an unmanaged disk VHD."
           },
           {
             "name": "DataDiskCaching",
@@ -918,7 +955,7 @@
             "type": "string",
             "format": "--port {value}",
             "secret": false,
-            "help": "The port or port range (ex: 80-100) to open inbound traffic to. Use '*' to allow traffic to all ports."
+            "help": "The port or port range (ex: 80-100) to open inbound traffic to. Use '\\*' to allow traffic to all ports."
           },
           {
             "name": "ApplyToSubnet",
@@ -1484,373 +1521,30 @@
       }
     },
     {
-      "postfix": "AvailabilitySetConvert",
-      "definiteArgument": "vm availability-set convert",
+      "postfix": "SecretAdd",
+      "definiteArgument": "vm secret add",
       "settingsClass": {
         "properties": [
           {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
+            "name": "Certificate",
+            "type": "string",
+            "format": "--certificate {value}",
             "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+            "help": "Key vault certificate name or its full secret URL."
           },
           {
-            "name": "Name",
+            "name": "Keyvault",
             "type": "string",
-            "format": "--name {value}",
+            "format": "--keyvault {value}",
             "secret": false,
-            "help": "Name of the availability set."
+            "help": "Name or ID of the key vault."
           },
           {
-            "name": "ResourceGroup",
+            "name": "CertificateStore",
             "type": "string",
-            "format": "--resource-group {value}",
+            "format": "--certificate-store {value}",
             "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AvailabilitySetCreate",
-      "definiteArgument": "vm availability-set create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the availability set."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "secret": false,
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "PlatformFaultDomainCount",
-            "type": "string",
-            "format": "--platform-fault-domain-count {value}",
-            "secret": false,
-            "help": "Fault Domain count."
-          },
-          {
-            "name": "PlatformUpdateDomainCount",
-            "type": "string",
-            "format": "--platform-update-domain-count {value}",
-            "secret": false,
-            "help": "Update Domain count. If unspecified, the server will pick the most optimal number like 5."
-          },
-          {
-            "name": "Ppg",
-            "type": "string",
-            "format": "--ppg {value}",
-            "secret": false,
-            "help": "The name or ID of the proximity placement group the availability set should be associated with."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Unmanaged",
-            "type": "string",
-            "format": "--unmanaged {value}",
-            "secret": false,
-            "help": "Contained VMs should use unmanaged disks."
-          },
-          {
-            "name": "Validate",
-            "type": "string",
-            "format": "--validate {value}",
-            "secret": false,
-            "help": "Generate and validate the ARM template without creating any resources."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AvailabilitySetDelete",
-      "definiteArgument": "vm availability-set delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the availability set."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AvailabilitySetList",
-      "definiteArgument": "vm availability-set list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AvailabilitySetListSizes",
-      "definiteArgument": "vm availability-set list-sizes",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the availability set."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AvailabilitySetShow",
-      "definiteArgument": "vm availability-set show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the availability set."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AvailabilitySetUpdate",
-      "definiteArgument": "vm availability-set update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the availability set."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BootDiagnosticsDisable",
-      "definiteArgument": "vm boot-diagnostics disable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "BootDiagnosticsEnable",
-      "definiteArgument": "vm boot-diagnostics enable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Storage",
-            "type": "string",
-            "format": "--storage {value}",
-            "secret": false,
-            "help": "Name or URI of a storage account (e.g. <a href=\"https://your_storage_account_name.blob.core.windows.net/\">https://your_storage_account_name.blob.core.windows.net/</a>)."
+            "help": "Windows certificate store names. Default: My."
           },
           {
             "name": "Ids",
@@ -1885,18 +1579,54 @@
       }
     },
     {
-      "postfix": "BootDiagnosticsGetBootLog",
-      "definiteArgument": "vm boot-diagnostics get-boot-log",
+      "postfix": "SecretFormat",
+      "definiteArgument": "vm secret format",
       "settingsClass": {
         "properties": [
           {
-            "name": "Ids",
+            "name": "Secrets",
             "type": "List<string>",
-            "format": "--ids {value}",
+            "format": "--secrets {value}",
             "separator": " ",
             "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+            "help": "Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query \"[?attributes.enabled].id\" -o tsv'."
           },
+          {
+            "name": "CertificateStore",
+            "type": "string",
+            "format": "--certificate-store {value}",
+            "secret": false,
+            "help": "Windows certificate store names. Default: My."
+          },
+          {
+            "name": "Keyvault",
+            "type": "string",
+            "format": "--keyvault {value}",
+            "secret": false,
+            "help": "Name or ID of the key vault."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SecretList",
+      "definiteArgument": "vm secret list",
+      "settingsClass": {
+        "properties": [
           {
             "name": "Name",
             "type": "string",
@@ -1922,377 +1652,24 @@
       }
     },
     {
-      "postfix": "DiagnosticsGetDefaultConfig",
-      "definiteArgument": "vm diagnostics get-default-config",
+      "postfix": "SecretRemove",
+      "definiteArgument": "vm secret remove",
       "settingsClass": {
         "properties": [
           {
-            "name": "IsWindowsOs",
+            "name": "Keyvault",
             "type": "string",
-            "format": "--is-windows-os {value}",
+            "format": "--keyvault {value}",
             "secret": false,
-            "help": "For Windows VMs."
+            "help": "Name or ID of the key vault."
           },
           {
-            "name": "Subscription",
+            "name": "Certificate",
             "type": "string",
-            "format": "--subscription {value}",
+            "format": "--certificate {value}",
             "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiagnosticsSet",
-      "definiteArgument": "vm diagnostics set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Settings",
-            "type": "string",
-            "format": "--settings {value}",
-            "secret": false,
-            "help": "Json string or a file path, which defines data to be collected."
+            "help": "Key vault certificate name or its full secret URL."
           },
-          {
-            "name": "NoAutoUpgrade",
-            "type": "bool",
-            "format": "--no-auto-upgrade",
-            "secret": false,
-            "help": "If set, the extension service will not automatically pick or upgrade to the latest minor version, even if the extension is redeployed."
-          },
-          {
-            "name": "ProtectedSettings",
-            "type": "string",
-            "format": "--protected-settings {value}",
-            "secret": false,
-            "help": "Json string or a file path containing private configurations such as storage account keys, etc."
-          },
-          {
-            "name": "Version",
-            "type": "string",
-            "format": "--version {value}",
-            "secret": false,
-            "help": "Version of the diagnostics extension. Will use the latest if not specfied."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "secret": false,
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiskAttach",
-      "definiteArgument": "vm disk attach",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "secret": false,
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Caching",
-            "type": "VmCreateOsDiskCaching",
-            "format": "--caching {value}",
-            "secret": false,
-            "help": "Disk caching policy."
-          },
-          {
-            "name": "EnableWriteAccelerator",
-            "type": "string",
-            "format": "--enable-write-accelerator {value}",
-            "secret": false,
-            "help": "Enable write accelerator."
-          },
-          {
-            "name": "Lun",
-            "type": "string",
-            "format": "--lun {value}",
-            "secret": false,
-            "help": "0-based logical unit number (LUN). Max value depends on the Virtual Machine size."
-          },
-          {
-            "name": "New",
-            "type": "string",
-            "format": "--new {value}",
-            "secret": false,
-            "help": "Create a new disk."
-          },
-          {
-            "name": "SizeGb",
-            "type": "string",
-            "format": "--size-gb {value}",
-            "secret": false,
-            "help": "Size in GB. Max size: 4095 GB (certain preview disks can be larger)."
-          },
-          {
-            "name": "Sku",
-            "type": "VmDiskAttachSku",
-            "format": "--sku {value}",
-            "secret": false,
-            "help": "Underlying storage SKU."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name or ID of the managed disk."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiskDetach",
-      "definiteArgument": "vm disk detach",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The data disk name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "VmName",
-            "type": "string",
-            "format": "--vm-name {value}",
-            "secret": false,
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EncryptionDisable",
-      "definiteArgument": "vm encryption disable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Force",
-            "type": "string",
-            "format": "--force {value}",
-            "secret": false,
-            "help": "Continue by ignoring client side validation errors."
-          },
-          {
-            "name": "VolumeType",
-            "type": "VmEncryptionVolumeType",
-            "format": "--volume-type {value}",
-            "secret": false,
-            "help": "Type of volume that the encryption operation is performed on."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EncryptionEnable",
-      "definiteArgument": "vm encryption enable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DiskEncryptionKeyvault",
-            "type": "string",
-            "format": "--disk-encryption-keyvault {value}",
-            "secret": false,
-            "help": "Name or ID of the key vault where the generated encryption key will be placed."
-          },
-          {
-            "name": "EncryptFormatAll",
-            "type": "string",
-            "format": "--encrypt-format-all {value}",
-            "secret": false,
-            "help": "Encrypts-formats data disks instead of encrypting them. Encrypt-formatting is a lot faster than in-place encryption but wipes out the partition getting encrypt-formatted."
-          },
-          {
-            "name": "Force",
-            "type": "string",
-            "format": "--force {value}",
-            "secret": false,
-            "help": "Continue by ignoring client side validation errors."
-          },
-          {
-            "name": "KeyEncryptionAlgorithm",
-            "type": "string",
-            "format": "--key-encryption-algorithm {value}",
-            "secret": false,
-            "help": ""
-          },
-          {
-            "name": "KeyEncryptionKey",
-            "type": "string",
-            "format": "--key-encryption-key {value}",
-            "secret": false,
-            "help": "Key vault key name or URL used to encrypt the disk encryption key."
-          },
-          {
-            "name": "KeyEncryptionKeyvault",
-            "type": "string",
-            "format": "--key-encryption-keyvault {value}",
-            "secret": false,
-            "help": "Name or ID of the key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`."
-          },
-          {
-            "name": "VolumeType",
-            "type": "VmEncryptionVolumeType",
-            "format": "--volume-type {value}",
-            "secret": false,
-            "help": "Type of volume that the encryption operation is performed on."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "AadClientCertThumbprint",
-            "type": "string",
-            "format": "--aad-client-cert-thumbprint {value}",
-            "secret": false,
-            "help": "Thumbprint of the AAD app certificate with permissions to write secrets to the key vault."
-          },
-          {
-            "name": "AadClientId",
-            "type": "string",
-            "format": "--aad-client-id {value}",
-            "secret": false,
-            "help": "Client ID of an AAD app with permissions to write secrets to the key vault."
-          },
-          {
-            "name": "AadClientSecret",
-            "type": "string",
-            "format": "--aad-client-secret {value}",
-            "secret": true,
-            "help": "Client secret of the AAD app with permissions to write secrets to the key vault."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EncryptionShow",
-      "definiteArgument": "vm encryption show",
-      "settingsClass": {
-        "properties": [
           {
             "name": "Ids",
             "type": "List<string>",
@@ -2657,31 +2034,58 @@
       }
     },
     {
-      "postfix": "IdentityAssign",
-      "definiteArgument": "vm identity assign",
+      "postfix": "DiskAttach",
+      "definiteArgument": "vm disk attach",
       "settingsClass": {
         "properties": [
           {
-            "name": "Identities",
-            "type": "List<string>",
-            "format": "--identities {value}",
-            "separator": " ",
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
             "secret": false,
-            "help": "Space-separated identities to assign. Use '[system]' to refer to the system assigned identity. Default: '[system]'."
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Role",
-            "type": "string",
-            "format": "--role {value}",
+            "name": "Caching",
+            "type": "VmCreateOsDiskCaching",
+            "format": "--caching {value}",
             "secret": false,
-            "help": "Role name or id the system assigned identity will have."
+            "help": "Disk caching policy."
           },
           {
-            "name": "Scope",
+            "name": "EnableWriteAccelerator",
             "type": "string",
-            "format": "--scope {value}",
+            "format": "--enable-write-accelerator {value}",
             "secret": false,
-            "help": "Scope that the system assigned identity can access."
+            "help": "Enable write accelerator."
+          },
+          {
+            "name": "Lun",
+            "type": "string",
+            "format": "--lun {value}",
+            "secret": false,
+            "help": "0-based logical unit number (LUN). Max value depends on the Virtual Machine size."
+          },
+          {
+            "name": "New",
+            "type": "string",
+            "format": "--new {value}",
+            "secret": false,
+            "help": "Create a new disk."
+          },
+          {
+            "name": "SizeGb",
+            "type": "string",
+            "format": "--size-gb {value}",
+            "secret": false,
+            "help": "Size in GB. Max size: 4095 GB (certain preview disks can be larger)."
+          },
+          {
+            "name": "Sku",
+            "type": "VmDiskAttachSku",
+            "format": "--sku {value}",
+            "secret": false,
+            "help": "Underlying storage SKU."
           },
           {
             "name": "Ids",
@@ -2696,7 +2100,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+            "help": "The name or ID of the managed disk."
           },
           {
             "name": "ResourceGroup",
@@ -2716,32 +2120,16 @@
       }
     },
     {
-      "postfix": "IdentityRemove",
-      "definiteArgument": "vm identity remove",
+      "postfix": "DiskDetach",
+      "definiteArgument": "vm disk detach",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Identities",
-            "type": "List<string>",
-            "format": "--identities {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated identities to remove. Use '[system]' to refer to the system assigned identity. Default: '[system]'."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+            "help": "The data disk name."
           },
           {
             "name": "ResourceGroup",
@@ -2751,41 +2139,11 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "Subscription",
+            "name": "VmName",
             "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityShow",
-      "definiteArgument": "vm identity show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
+            "format": "--vm-name {value}",
             "secret": false,
             "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Subscription",
@@ -3035,6 +2393,326 @@
       }
     },
     {
+      "postfix": "AvailabilitySetConvert",
+      "definiteArgument": "vm availability-set convert",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the availability set."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AvailabilitySetCreate",
+      "definiteArgument": "vm availability-set create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the availability set."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "PlatformFaultDomainCount",
+            "type": "string",
+            "format": "--platform-fault-domain-count {value}",
+            "secret": false,
+            "help": "Fault Domain count."
+          },
+          {
+            "name": "PlatformUpdateDomainCount",
+            "type": "string",
+            "format": "--platform-update-domain-count {value}",
+            "secret": false,
+            "help": "Update Domain count. If unspecified, the server will pick the most optimal number like 5."
+          },
+          {
+            "name": "Ppg",
+            "type": "string",
+            "format": "--ppg {value}",
+            "secret": false,
+            "help": "The name or ID of the proximity placement group the availability set should be associated with."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Unmanaged",
+            "type": "string",
+            "format": "--unmanaged {value}",
+            "secret": false,
+            "help": "Contained VMs should use unmanaged disks."
+          },
+          {
+            "name": "Validate",
+            "type": "string",
+            "format": "--validate {value}",
+            "secret": false,
+            "help": "Generate and validate the ARM template without creating any resources."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AvailabilitySetDelete",
+      "definiteArgument": "vm availability-set delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the availability set."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AvailabilitySetList",
+      "definiteArgument": "vm availability-set list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AvailabilitySetListSizes",
+      "definiteArgument": "vm availability-set list-sizes",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the availability set."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AvailabilitySetShow",
+      "definiteArgument": "vm availability-set show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the availability set."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AvailabilitySetUpdate",
+      "definiteArgument": "vm availability-set update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the availability set."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "NicAdd",
       "definiteArgument": "vm nic add",
       "settingsClass": {
@@ -3229,31 +2907,118 @@
       }
     },
     {
-      "postfix": "RunCommandInvoke",
-      "definiteArgument": "vm run-command invoke",
+      "postfix": "DiagnosticsGetDefaultConfig",
+      "definiteArgument": "vm diagnostics get-default-config",
       "settingsClass": {
         "properties": [
           {
-            "name": "CommandId",
+            "name": "IsWindowsOs",
             "type": "string",
-            "format": "--command-id {value}",
+            "format": "--is-windows-os {value}",
             "secret": false,
-            "help": "The command id."
+            "help": "For Windows VMs."
           },
           {
-            "name": "Parameters",
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticsSet",
+      "definiteArgument": "vm diagnostics set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Settings",
+            "type": "string",
+            "format": "--settings {value}",
+            "secret": false,
+            "help": "Json string or a file path, which defines data to be collected."
+          },
+          {
+            "name": "NoAutoUpgrade",
+            "type": "bool",
+            "format": "--no-auto-upgrade",
+            "secret": false,
+            "help": "If set, the extension service will not automatically pick or upgrade to the latest minor version, even if the extension is redeployed."
+          },
+          {
+            "name": "ProtectedSettings",
+            "type": "string",
+            "format": "--protected-settings {value}",
+            "secret": false,
+            "help": "Json string or a file path containing private configurations such as storage account keys, etc."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "secret": false,
+            "help": "Version of the diagnostics extension. Will use the latest if not specfied."
+          },
+          {
+            "name": "Ids",
             "type": "List<string>",
-            "format": "--parameters {value}",
+            "format": "--ids {value}",
             "separator": " ",
             "secret": false,
-            "help": "Space-separated parameters in the format of '[name=]value'."
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
           },
           {
-            "name": "Scripts",
+            "name": "ResourceGroup",
             "type": "string",
-            "format": "--scripts {value}",
+            "format": "--resource-group {value}",
             "secret": false,
-            "help": "Script lines separated by whites spaces. Use @{file} to load from a file."
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VmName",
+            "type": "string",
+            "format": "--vm-name {value}",
+            "secret": false,
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityAssign",
+      "definiteArgument": "vm identity assign",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Identities",
+            "type": "List<string>",
+            "format": "--identities {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated identities to assign. Use '[system]' to refer to the system assigned identity. Default: '[system]'."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "secret": false,
+            "help": "Role name or id the system assigned identity will have."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "secret": false,
+            "help": "Scope that the system assigned identity can access."
           },
           {
             "name": "Ids",
@@ -3288,81 +3053,17 @@
       }
     },
     {
-      "postfix": "RunCommandList",
-      "definiteArgument": "vm run-command list",
+      "postfix": "IdentityRemove",
+      "definiteArgument": "vm identity remove",
       "settingsClass": {
         "properties": [
           {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
+            "name": "Identities",
+            "type": "List<string>",
+            "format": "--identities {value}",
+            "separator": " ",
             "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "RunCommandShow",
-      "definiteArgument": "vm run-command show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CommandId",
-            "type": "string",
-            "format": "--command-id {value}",
-            "secret": false,
-            "help": "The command id."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretAdd",
-      "definiteArgument": "vm secret add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Certificate",
-            "type": "string",
-            "format": "--certificate {value}",
-            "secret": false,
-            "help": "Key vault certificate name or its full secret URL."
-          },
-          {
-            "name": "Keyvault",
-            "type": "string",
-            "format": "--keyvault {value}",
-            "secret": false,
-            "help": "Name or ID of the key vault."
-          },
-          {
-            "name": "CertificateStore",
-            "type": "string",
-            "format": "--certificate-store {value}",
-            "secret": false,
-            "help": "Windows certificate store names. Default: My."
+            "help": "Space-separated identities to remove. Use '[system]' to refer to the system assigned identity. Default: '[system]'."
           },
           {
             "name": "Ids",
@@ -3397,97 +3098,10 @@
       }
     },
     {
-      "postfix": "SecretFormat",
-      "definiteArgument": "vm secret format",
+      "postfix": "IdentityShow",
+      "definiteArgument": "vm identity show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "Secrets",
-            "type": "List<string>",
-            "format": "--secrets {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated list of key vault secret URIs. Perhaps, produced by 'az keyvault secret list-versions --vault-name vaultname -n cert1 --query \"[?attributes.enabled].id\" -o tsv'."
-          },
-          {
-            "name": "CertificateStore",
-            "type": "string",
-            "format": "--certificate-store {value}",
-            "secret": false,
-            "help": "Windows certificate store names. Default: My."
-          },
-          {
-            "name": "Keyvault",
-            "type": "string",
-            "format": "--keyvault {value}",
-            "secret": false,
-            "help": "Name or ID of the key vault."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretList",
-      "definiteArgument": "vm secret list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SecretRemove",
-      "definiteArgument": "vm secret remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Keyvault",
-            "type": "string",
-            "format": "--keyvault {value}",
-            "secret": false,
-            "help": "Name or ID of the key vault."
-          },
-          {
-            "name": "Certificate",
-            "type": "string",
-            "format": "--certificate {value}",
-            "secret": false,
-            "help": "Key vault certificate name or its full secret URL."
-          },
           {
             "name": "Ids",
             "type": "List<string>",
@@ -3632,6 +3246,124 @@
       "definiteArgument": "vm unmanaged-disk list",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BootDiagnosticsDisable",
+      "definiteArgument": "vm boot-diagnostics disable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BootDiagnosticsEnable",
+      "definiteArgument": "vm boot-diagnostics enable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Storage",
+            "type": "string",
+            "format": "--storage {value}",
+            "secret": false,
+            "help": "Name or URI of a storage account (e.g. <a href=\"https://your_storage_account_name.blob.core.windows.net/\">https://your_storage_account_name.blob.core.windows.net/</a>)."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "BootDiagnosticsGetBootLog",
+      "definiteArgument": "vm boot-diagnostics get-boot-log",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -3812,6 +3544,855 @@
             "format": "--subscription {value}",
             "secret": false,
             "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunCommandInvoke",
+      "definiteArgument": "vm run-command invoke",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CommandId",
+            "type": "string",
+            "format": "--command-id {value}",
+            "secret": false,
+            "help": "The command id."
+          },
+          {
+            "name": "Parameters",
+            "type": "List<string>",
+            "format": "--parameters {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated parameters in the format of '[name=]value'."
+          },
+          {
+            "name": "Scripts",
+            "type": "List<string>",
+            "format": "--scripts {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated script lines. Use @{file} to load script from a file."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunCommandList",
+      "definiteArgument": "vm run-command list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RunCommandShow",
+      "definiteArgument": "vm run-command show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CommandId",
+            "type": "string",
+            "format": "--command-id {value}",
+            "secret": false,
+            "help": "The command id."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EncryptionDisable",
+      "definiteArgument": "vm encryption disable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Force",
+            "type": "string",
+            "format": "--force {value}",
+            "secret": false,
+            "help": "Continue by ignoring client side validation errors."
+          },
+          {
+            "name": "VolumeType",
+            "type": "VmEncryptionVolumeType",
+            "format": "--volume-type {value}",
+            "secret": false,
+            "help": "Type of volume that the encryption operation is performed on."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EncryptionEnable",
+      "definiteArgument": "vm encryption enable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DiskEncryptionKeyvault",
+            "type": "string",
+            "format": "--disk-encryption-keyvault {value}",
+            "secret": false,
+            "help": "Name or ID of the key vault where the generated encryption key will be placed."
+          },
+          {
+            "name": "EncryptFormatAll",
+            "type": "string",
+            "format": "--encrypt-format-all {value}",
+            "secret": false,
+            "help": "Encrypts-formats data disks instead of encrypting them. Encrypt-formatting is a lot faster than in-place encryption but wipes out the partition getting encrypt-formatted."
+          },
+          {
+            "name": "Force",
+            "type": "string",
+            "format": "--force {value}",
+            "secret": false,
+            "help": "Continue by ignoring client side validation errors."
+          },
+          {
+            "name": "KeyEncryptionAlgorithm",
+            "type": "string",
+            "format": "--key-encryption-algorithm {value}",
+            "secret": false,
+            "help": ""
+          },
+          {
+            "name": "KeyEncryptionKey",
+            "type": "string",
+            "format": "--key-encryption-key {value}",
+            "secret": false,
+            "help": "Key vault key name or URL used to encrypt the disk encryption key."
+          },
+          {
+            "name": "KeyEncryptionKeyvault",
+            "type": "string",
+            "format": "--key-encryption-keyvault {value}",
+            "secret": false,
+            "help": "Name or ID of the key vault containing the key encryption key used to encrypt the disk encryption key. If missing, CLI will use `--disk-encryption-keyvault`."
+          },
+          {
+            "name": "VolumeType",
+            "type": "VmEncryptionVolumeType",
+            "format": "--volume-type {value}",
+            "secret": false,
+            "help": "Type of volume that the encryption operation is performed on."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "AadClientCertThumbprint",
+            "type": "string",
+            "format": "--aad-client-cert-thumbprint {value}",
+            "secret": false,
+            "help": "Thumbprint of the AAD app certificate with permissions to write secrets to the key vault."
+          },
+          {
+            "name": "AadClientId",
+            "type": "string",
+            "format": "--aad-client-id {value}",
+            "secret": false,
+            "help": "Client ID of an AAD app with permissions to write secrets to the key vault."
+          },
+          {
+            "name": "AadClientSecret",
+            "type": "string",
+            "format": "--aad-client-secret {value}",
+            "secret": true,
+            "help": "Client secret of the AAD app with permissions to write secrets to the key vault."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EncryptionShow",
+      "definiteArgument": "vm encryption show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the Virtual Machine. You can configure the default using `az configure --defaults vm=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostCreate",
+      "definiteArgument": "vm host create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HostGroup",
+            "type": "string",
+            "format": "--host-group {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Sku",
+            "type": "VmHostCreateSku",
+            "format": "--sku {value}",
+            "secret": false,
+            "help": "Sku of the dedicated host."
+          },
+          {
+            "name": "AutoReplace",
+            "type": "bool",
+            "format": "--auto-replace",
+            "secret": false,
+            "help": "Replace the host automatically if a failure occurs."
+          },
+          {
+            "name": "LicenseType",
+            "type": "VmHostCreateLicenseType",
+            "format": "--license-type {value}",
+            "secret": false,
+            "help": "The software license type that will be applied to the VMs deployed on the dedicated host."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`. Otherwise, location will default to the resource group's location."
+          },
+          {
+            "name": "PlatformFaultDomain",
+            "type": "string",
+            "format": "--platform-fault-domain {value}",
+            "secret": false,
+            "help": "Fault domain of the host within a group. Allowed values: 0, 1, 2."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostDelete",
+      "definiteArgument": "vm host delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "HostGroup",
+            "type": "string",
+            "format": "--host-group {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostGetInstanceView",
+      "definiteArgument": "vm host get-instance-view",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HostGroup",
+            "type": "string",
+            "format": "--host-group {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostList",
+      "definiteArgument": "vm host list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HostGroup",
+            "type": "string",
+            "format": "--host-group {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostShow",
+      "definiteArgument": "vm host show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HostGroup",
+            "type": "string",
+            "format": "--host-group {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostUpdate",
+      "definiteArgument": "vm host update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HostGroup",
+            "type": "string",
+            "format": "--host-group {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostGroupCreate",
+      "definiteArgument": "vm host group create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`. Otherwise, location will default to the resource group's location."
+          },
+          {
+            "name": "PlatformFaultDomainCount",
+            "type": "int",
+            "format": "--platform-fault-domain-count {value}",
+            "secret": false,
+            "help": "Number of fault domains that the host group can span. Allowed values: 1, 2, 3."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Zone",
+            "type": "VmZone",
+            "format": "--zone {value}",
+            "secret": false,
+            "help": "Availability zone into which to provision the resource."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostGroupDelete",
+      "definiteArgument": "vm host group delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostGroupList",
+      "definiteArgument": "vm host group list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostGroupShow",
+      "definiteArgument": "vm host group show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HostGroupUpdate",
+      "definiteArgument": "vm host group update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the Dedicated Host Group."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           }
         ]
       }
@@ -4035,6 +4616,13 @@
   ],
   "enumerations": [
     {
+      "name": "VmCreateEvictionPolicy",
+      "values": [
+        "deallocate",
+        "delete"
+      ]
+    },
+    {
       "name": "VmLicenseType",
       "values": [
         "none",
@@ -4043,7 +4631,22 @@
       ]
     },
     {
-      "name": "VmCreateZone",
+      "name": "VmHostCreateLicenseType",
+      "values": [
+        "none",
+        "windows_server_hybrid",
+        "windows_server_perpetual"
+      ]
+    },
+    {
+      "name": "VmCreatePriority",
+      "values": [
+        "low",
+        "regular"
+      ]
+    },
+    {
+      "name": "VmZone",
       "values": [
         "1",
         "2",
@@ -4101,6 +4704,14 @@
         "standardssd_lrs",
         "standard_lrs",
         "ultrassd_lrs"
+      ]
+    },
+    {
+      "name": "VmHostCreateSku",
+      "values": [
+        "dsv3-type1",
+        "esv3-type1",
+        "fsv2-type2"
       ]
     },
     {

@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureManagedapp.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -61,8 +61,8 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureManagedappCreateSettings.Help"/></li>
         ///     <li><c>--kind</c> via <see cref="AzureManagedappCreateSettings.Kind"/></li>
         ///     <li><c>--location</c> via <see cref="AzureManagedappCreateSettings.Location"/></li>
-        ///     <li><c>--managedapp-definition-id</c> via <see cref="AzureManagedappCreateSettings.ManagedappDefinitionId"/></li>
         ///     <li><c>--managed-rg-id</c> via <see cref="AzureManagedappCreateSettings.ManagedRgId"/></li>
+        ///     <li><c>--managedapp-definition-id</c> via <see cref="AzureManagedappCreateSettings.ManagedappDefinitionId"/></li>
         ///     <li><c>--name</c> via <see cref="AzureManagedappCreateSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureManagedappCreateSettings.Output"/></li>
         ///     <li><c>--parameters</c> via <see cref="AzureManagedappCreateSettings.Parameters"/></li>
@@ -92,8 +92,8 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureManagedappCreateSettings.Help"/></li>
         ///     <li><c>--kind</c> via <see cref="AzureManagedappCreateSettings.Kind"/></li>
         ///     <li><c>--location</c> via <see cref="AzureManagedappCreateSettings.Location"/></li>
-        ///     <li><c>--managedapp-definition-id</c> via <see cref="AzureManagedappCreateSettings.ManagedappDefinitionId"/></li>
         ///     <li><c>--managed-rg-id</c> via <see cref="AzureManagedappCreateSettings.ManagedRgId"/></li>
+        ///     <li><c>--managedapp-definition-id</c> via <see cref="AzureManagedappCreateSettings.ManagedappDefinitionId"/></li>
         ///     <li><c>--name</c> via <see cref="AzureManagedappCreateSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureManagedappCreateSettings.Output"/></li>
         ///     <li><c>--parameters</c> via <see cref="AzureManagedappCreateSettings.Parameters"/></li>

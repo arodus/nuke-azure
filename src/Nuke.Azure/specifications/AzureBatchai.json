@@ -1,16 +1,16 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai/cluster.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai/experiment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai/file-server.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai/workspace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai/cluster/file.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai/cluster/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai/job/file.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/batchai/job/node.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai/experiment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai/workspace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai/cluster.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai/file-server.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai/cluster/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai/cluster/file.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai/job/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/batchai/job/file.yml"
   ],
   "name": "AzureBatchai",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/batchai?view=azure-cli-latest",
@@ -35,450 +35,6 @@
             "format": "--subscription {value}",
             "secret": false,
             "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterAutoScale",
-      "definiteArgument": "batchai cluster auto-scale",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Max",
-            "type": "int",
-            "format": "--max {value}",
-            "secret": false,
-            "help": "Maximum number of nodes."
-          },
-          {
-            "name": "Min",
-            "type": "int",
-            "format": "--min {value}",
-            "secret": false,
-            "help": "Minimum number of nodes."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterCreate",
-      "definiteArgument": "batchai cluster create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
-          },
-          {
-            "name": "GenerateSshKeys",
-            "type": "string",
-            "format": "--generate-ssh-keys {value}",
-            "secret": false,
-            "help": "Generate SSH public and private key files in ~/.ssh directory (if missing)."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "Optional password for the admin user account to be created on each compute node."
-          },
-          {
-            "name": "SshKey",
-            "type": "string",
-            "format": "--ssh-key {value}",
-            "secret": false,
-            "help": "Optional SSH public key value or path. If ommited and no password specified, default SSH key (~/.ssh/id_rsa.pub) will be used."
-          },
-          {
-            "name": "UserName",
-            "type": "string",
-            "format": "--user-name {value}",
-            "secret": false,
-            "help": "Name of admin user account to be created on each compute node. If the value is not provided and no user configuration is provided in the config file, current user's name will be used."
-          },
-          {
-            "name": "ConfigFile",
-            "type": "string",
-            "format": "--config-file {value}",
-            "secret": false,
-            "help": "A path to a json file containing cluster create parameters (json representation of azure.mgmt.batchai.models.ClusterCreateParameters)."
-          },
-          {
-            "name": "UseAutoStorage",
-            "type": "string",
-            "format": "--use-auto-storage {value}",
-            "secret": false,
-            "help": "If provided, the command will create a storage account in a new or existing resource group named \"batchaiautostorage\". It will also create Azure File Share with name \"batchaishare\", Azure Blob Container with name \"batchaicontainer\". The File Share and Blob Container will be mounted on each cluster node at $AZ_BATCHAI_MOUNT_ROOT/autoafs and $AZ_BATCHAI_MOUNT_ROOT/autobfs. If the resource group already exists and contains an approapriate storage account belonging to the same region as cluster, this command will reuse existing storage account."
-          },
-          {
-            "name": "AfsMountPath",
-            "type": "string",
-            "format": "--afs-mount-path {value}",
-            "secret": false,
-            "help": "Relative mount path for Azure File share. The file share will be available at $AZ_BATCHAI_MOUNT_ROOT/&lt;relative_mount_path&gt; folder."
-          },
-          {
-            "name": "AfsName",
-            "type": "string",
-            "format": "--afs-name {value}",
-            "secret": false,
-            "help": "Name of Azure File Share to be mounted on each cluster node. Must be used in conjunction with --storage-account-name. Multiple shares can be mounted using configuration file (see --config-file option)."
-          },
-          {
-            "name": "BfsMountPath",
-            "type": "string",
-            "format": "--bfs-mount-path {value}",
-            "secret": false,
-            "help": "Relative mount path for Azure Storage container. The container will be available at $AZ_BATCHAI_MOUNT_ROOT/&lt;relative_mount_path&gt; folder."
-          },
-          {
-            "name": "BfsName",
-            "type": "string",
-            "format": "--bfs-name {value}",
-            "secret": false,
-            "help": "Name of Azure Storage container to be mounted on each cluster node. Must be used in conjunction with --storage-account-name. Multiple containers can be mounted using configuration file (see --config-file option)."
-          },
-          {
-            "name": "StorageAccountKey",
-            "type": "string",
-            "format": "--storage-account-key {value}",
-            "secret": false,
-            "help": "Storage account key. Required if the storage account belongs to a different subscription. Can be specified using AZURE_BATCHAI_STORAGE_KEY environment variable."
-          },
-          {
-            "name": "StorageAccountName",
-            "type": "string",
-            "format": "--storage-account-name {value}",
-            "secret": false,
-            "help": "Storage account name for Azure File Shares and/or Azure Storage Containers to be mounted on each cluster node. Can be specified using AZURE_BATCHAI_STORAGE_ACCOUNT environment variable."
-          },
-          {
-            "name": "Nfs",
-            "type": "string",
-            "format": "--nfs {value}",
-            "secret": false,
-            "help": "Name or ARM ID of a file server to be mounted on each cluster node. You need to provide full ARM ID if the file server belongs to a different workspace. Multiple NFS can be mounted using configuration file (see --config-file option)."
-          },
-          {
-            "name": "NfsMountPath",
-            "type": "string",
-            "format": "--nfs-mount-path {value}",
-            "secret": false,
-            "help": "Relative mount path for NFS. The NFS will be available at $AZ_BATCHAI_MOUNT_ROOT/&lt;relative_mount_path&gt; folder."
-          },
-          {
-            "name": "CustomImage",
-            "type": "string",
-            "format": "--custom-image {value}",
-            "secret": false,
-            "help": "ARM ID of a virtual machine image to be used for nodes creation. Note, you need to provide --image containing information about the base image used for this image creation."
-          },
-          {
-            "name": "Image",
-            "type": "string",
-            "format": "--image {value}",
-            "secret": false,
-            "help": "Operation system image for cluster nodes. The value may contain an alias (UbuntuLTS, UbuntuDSVM) or specify image details in the form \"publisher:offer:sku:version\". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image."
-          },
-          {
-            "name": "Max",
-            "type": "string",
-            "format": "--max {value}",
-            "secret": false,
-            "help": "Max nodes count for the auto-scale cluster."
-          },
-          {
-            "name": "Min",
-            "type": "string",
-            "format": "--min {value}",
-            "secret": false,
-            "help": "Min nodes count for the auto-scale cluster."
-          },
-          {
-            "name": "Target",
-            "type": "int",
-            "format": "--target {value}",
-            "secret": false,
-            "help": "Number of nodes which should be allocated immediately after cluster creation. If the cluster is in auto-scale mode, BatchAI can change the number of nodes later based on number of running and queued jobs."
-          },
-          {
-            "name": "VmPriority",
-            "type": "BatchaiClusterCreateVmPriority",
-            "format": "--vm-priority {value}",
-            "secret": false,
-            "help": "VM priority."
-          },
-          {
-            "name": "VmSize",
-            "type": "string",
-            "format": "--vm-size {value}",
-            "secret": false,
-            "help": "VM size for cluster nodes (e.g. Standard_NC6 for 1 GPU node)."
-          },
-          {
-            "name": "SetupTask",
-            "type": "string",
-            "format": "--setup-task {value}",
-            "secret": false,
-            "help": "A command line which should be executed on each compute node when it's got allocated or rebooted. The task is executed in a bash subshell under root account."
-          },
-          {
-            "name": "SetupTaskOutput",
-            "type": "string",
-            "format": "--setup-task-output {value}",
-            "secret": false,
-            "help": "Directory path to store where setup-task's logs. Note, Batch AI will create several helper directories under this path. The created directories are reported as stdOutErrPathSuffix by 'az cluster show' command."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "secret": false,
-            "help": "ARM ID of a virtual network subnet to put the cluster in."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterDelete",
-      "definiteArgument": "batchai cluster delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "secret": false,
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "secret": false,
-            "help": "Do not prompt for confirmation."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterList",
-      "definiteArgument": "batchai cluster list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterResize",
-      "definiteArgument": "batchai cluster resize",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Target",
-            "type": "string",
-            "format": "--target {value}",
-            "secret": false,
-            "help": "Target number of compute nodes."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterShow",
-      "definiteArgument": "batchai cluster show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
           }
         ]
       }
@@ -625,257 +181,6 @@
             "format": "--name {value}",
             "secret": false,
             "help": "Name of experiment."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "FileServerCreate",
-      "definiteArgument": "batchai file-server create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of file server."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure a default value by setting up default workspace using `az batchai workspace set-default`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name or ARM ID of the workspace. You can configure default workspace using `az batchai workspace set-default`."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "secret": false,
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "VmSize",
-            "type": "string",
-            "format": "--vm-size {value}",
-            "secret": false,
-            "help": "VM size."
-          },
-          {
-            "name": "GenerateSshKeys",
-            "type": "string",
-            "format": "--generate-ssh-keys {value}",
-            "secret": false,
-            "help": "Generate SSH public and private key files in ~/.ssh directory (if missing)."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "Optional password for the admin user created on the NFS node."
-          },
-          {
-            "name": "SshKey",
-            "type": "string",
-            "format": "--ssh-key {value}",
-            "secret": false,
-            "help": "Optional SSH public key value or path. If ommited and no password specified, default SSH key (~/.ssh/id_rsa.pub) will be used."
-          },
-          {
-            "name": "UserName",
-            "type": "string",
-            "format": "--user-name {value}",
-            "secret": false,
-            "help": "Name of admin user account to be created on NFS node. If the value is not provided and no user configuration is provided in the config file, current user's name will be used."
-          },
-          {
-            "name": "ConfigFile",
-            "type": "string",
-            "format": "--config-file {value}",
-            "secret": false,
-            "help": "A path to a json file containing file server create parameters (json representation of azure.mgmt.batchai.models.FileServerCreateParameters). Note, parameters given via command line will overwrite parameters specified in the configuration file."
-          },
-          {
-            "name": "CachingType",
-            "type": "BatchaiFileServerCreateCachingType",
-            "format": "--caching-type {value}",
-            "secret": false,
-            "help": "Caching type for premium disks. If not provided via command line or in configuration file, no caching will be used."
-          },
-          {
-            "name": "DiskCount",
-            "type": "int",
-            "format": "--disk-count {value}",
-            "secret": false,
-            "help": "Number of disks."
-          },
-          {
-            "name": "DiskSize",
-            "type": "string",
-            "format": "--disk-size {value}",
-            "secret": false,
-            "help": "Disk size in Gb."
-          },
-          {
-            "name": "StorageSku",
-            "type": "BatchaiFileServerCreateStorageSku",
-            "format": "--storage-sku {value}",
-            "secret": false,
-            "help": "The sku of storage account to persist VM."
-          },
-          {
-            "name": "Subnet",
-            "type": "string",
-            "format": "--subnet {value}",
-            "secret": false,
-            "help": "ARM ID of a virtual network subnet to put the file server in. If not provided via command line or in the configuration file, Batch AI will create a new virtual network and subnet under your subscription."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "FileServerDelete",
-      "definiteArgument": "batchai file-server delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "secret": false,
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "Yes",
-            "type": "string",
-            "format": "--yes {value}",
-            "secret": false,
-            "help": "Do not prompt for confirmation."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of file server."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "FileServerList",
-      "definiteArgument": "batchai file-server list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "FileServerShow",
-      "definiteArgument": "batchai file-server show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of file server."
           },
           {
             "name": "ResourceGroup",
@@ -1436,14 +741,72 @@
       }
     },
     {
-      "postfix": "ClusterFileList",
-      "definiteArgument": "batchai cluster file list",
+      "postfix": "ClusterAutoScale",
+      "definiteArgument": "batchai cluster auto-scale",
       "settingsClass": {
         "properties": [
           {
-            "name": "Cluster",
+            "name": "Max",
+            "type": "int",
+            "format": "--max {value}",
+            "secret": false,
+            "help": "Maximum number of nodes."
+          },
+          {
+            "name": "Min",
+            "type": "int",
+            "format": "--min {value}",
+            "secret": false,
+            "help": "Minimum number of nodes."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
             "type": "string",
-            "format": "--cluster {value}",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterCreate",
+      "definiteArgument": "batchai cluster create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
             "secret": false,
             "help": "Name of cluster."
           },
@@ -1462,18 +825,172 @@
             "help": "Name of workspace."
           },
           {
-            "name": "Expiry",
+            "name": "GenerateSshKeys",
             "type": "string",
-            "format": "--expiry {value}",
+            "format": "--generate-ssh-keys {value}",
             "secret": false,
-            "help": "Time in minutes for how long generated download URLs should remain valid."
+            "help": "Generate SSH public and private key files in ~/.ssh directory (if missing)."
           },
           {
-            "name": "Path",
+            "name": "Password",
             "type": "string",
-            "format": "--path {value}",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "Optional password for the admin user account to be created on each compute node."
+          },
+          {
+            "name": "SshKey",
+            "type": "string",
+            "format": "--ssh-key {value}",
             "secret": false,
-            "help": "Relative path of a subfolder inside of the node setup task output directory."
+            "help": "Optional SSH public key value or path. If ommited and no password specified, default SSH key (~/.ssh/id_rsa.pub) will be used."
+          },
+          {
+            "name": "UserName",
+            "type": "string",
+            "format": "--user-name {value}",
+            "secret": false,
+            "help": "Name of admin user account to be created on each compute node. If the value is not provided and no user configuration is provided in the config file, current user's name will be used."
+          },
+          {
+            "name": "ConfigFile",
+            "type": "string",
+            "format": "--config-file {value}",
+            "secret": false,
+            "help": "A path to a json file containing cluster create parameters (json representation of azure.mgmt.batchai.models.ClusterCreateParameters)."
+          },
+          {
+            "name": "UseAutoStorage",
+            "type": "string",
+            "format": "--use-auto-storage {value}",
+            "secret": false,
+            "help": "If provided, the command will create a storage account in a new or existing resource group named \"batchaiautostorage\". It will also create Azure File Share with name \"batchaishare\", Azure Blob Container with name \"batchaicontainer\". The File Share and Blob Container will be mounted on each cluster node at $AZ_BATCHAI_MOUNT_ROOT/autoafs and $AZ_BATCHAI_MOUNT_ROOT/autobfs. If the resource group already exists and contains an approapriate storage account belonging to the same region as cluster, this command will reuse existing storage account."
+          },
+          {
+            "name": "AfsMountPath",
+            "type": "string",
+            "format": "--afs-mount-path {value}",
+            "secret": false,
+            "help": "Relative mount path for Azure File share. The file share will be available at $AZ_BATCHAI_MOUNT_ROOT/&lt;relative_mount_path&gt; folder."
+          },
+          {
+            "name": "AfsName",
+            "type": "string",
+            "format": "--afs-name {value}",
+            "secret": false,
+            "help": "Name of Azure File Share to be mounted on each cluster node. Must be used in conjunction with --storage-account-name. Multiple shares can be mounted using configuration file (see --config-file option)."
+          },
+          {
+            "name": "BfsMountPath",
+            "type": "string",
+            "format": "--bfs-mount-path {value}",
+            "secret": false,
+            "help": "Relative mount path for Azure Storage container. The container will be available at $AZ_BATCHAI_MOUNT_ROOT/&lt;relative_mount_path&gt; folder."
+          },
+          {
+            "name": "BfsName",
+            "type": "string",
+            "format": "--bfs-name {value}",
+            "secret": false,
+            "help": "Name of Azure Storage container to be mounted on each cluster node. Must be used in conjunction with --storage-account-name. Multiple containers can be mounted using configuration file (see --config-file option)."
+          },
+          {
+            "name": "StorageAccountKey",
+            "type": "string",
+            "format": "--storage-account-key {value}",
+            "secret": false,
+            "help": "Storage account key. Required if the storage account belongs to a different subscription. Can be specified using AZURE_BATCHAI_STORAGE_KEY environment variable."
+          },
+          {
+            "name": "StorageAccountName",
+            "type": "string",
+            "format": "--storage-account-name {value}",
+            "secret": false,
+            "help": "Storage account name for Azure File Shares and/or Azure Storage Containers to be mounted on each cluster node. Can be specified using AZURE_BATCHAI_STORAGE_ACCOUNT environment variable."
+          },
+          {
+            "name": "Nfs",
+            "type": "string",
+            "format": "--nfs {value}",
+            "secret": false,
+            "help": "Name or ARM ID of a file server to be mounted on each cluster node. You need to provide full ARM ID if the file server belongs to a different workspace. Multiple NFS can be mounted using configuration file (see --config-file option)."
+          },
+          {
+            "name": "NfsMountPath",
+            "type": "string",
+            "format": "--nfs-mount-path {value}",
+            "secret": false,
+            "help": "Relative mount path for NFS. The NFS will be available at $AZ_BATCHAI_MOUNT_ROOT/&lt;relative_mount_path&gt; folder."
+          },
+          {
+            "name": "CustomImage",
+            "type": "string",
+            "format": "--custom-image {value}",
+            "secret": false,
+            "help": "ARM ID of a virtual machine image to be used for nodes creation. Note, you need to provide --image containing information about the base image used for this image creation."
+          },
+          {
+            "name": "Image",
+            "type": "string",
+            "format": "--image {value}",
+            "secret": false,
+            "help": "Operation system image for cluster nodes. The value may contain an alias (UbuntuLTS, UbuntuDSVM) or specify image details in the form \"publisher:offer:sku:version\". If image configuration is not provided via command line or configuration file, Batch AI will choose default OS image."
+          },
+          {
+            "name": "Max",
+            "type": "string",
+            "format": "--max {value}",
+            "secret": false,
+            "help": "Max nodes count for the auto-scale cluster."
+          },
+          {
+            "name": "Min",
+            "type": "string",
+            "format": "--min {value}",
+            "secret": false,
+            "help": "Min nodes count for the auto-scale cluster."
+          },
+          {
+            "name": "Target",
+            "type": "int",
+            "format": "--target {value}",
+            "secret": false,
+            "help": "Number of nodes which should be allocated immediately after cluster creation. If the cluster is in auto-scale mode, BatchAI can change the number of nodes later based on number of running and queued jobs."
+          },
+          {
+            "name": "VmPriority",
+            "type": "BatchaiClusterCreateVmPriority",
+            "format": "--vm-priority {value}",
+            "secret": false,
+            "help": "VM priority."
+          },
+          {
+            "name": "VmSize",
+            "type": "string",
+            "format": "--vm-size {value}",
+            "secret": false,
+            "help": "VM size for cluster nodes (e.g. Standard_NC6 for 1 GPU node)."
+          },
+          {
+            "name": "SetupTask",
+            "type": "string",
+            "format": "--setup-task {value}",
+            "secret": false,
+            "help": "A command line which should be executed on each compute node when it's got allocated or rebooted. The task is executed in a bash subshell under root account."
+          },
+          {
+            "name": "SetupTaskOutput",
+            "type": "string",
+            "format": "--setup-task-output {value}",
+            "secret": false,
+            "help": "Directory path to store where setup-task's logs. Note, Batch AI will create several helper directories under this path. The created directories are reported as stdOutErrPathSuffix by 'az cluster show' command."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "ARM ID of a virtual network subnet to put the cluster in."
           },
           {
             "name": "Subscription",
@@ -1481,6 +998,439 @@
             "format": "--subscription {value}",
             "secret": false,
             "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterDelete",
+      "definiteArgument": "batchai cluster delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterList",
+      "definiteArgument": "batchai cluster list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterResize",
+      "definiteArgument": "batchai cluster resize",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Target",
+            "type": "string",
+            "format": "--target {value}",
+            "secret": false,
+            "help": "Target number of compute nodes."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterShow",
+      "definiteArgument": "batchai cluster show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FileServerCreate",
+      "definiteArgument": "batchai file-server create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of file server."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure a default value by setting up default workspace using `az batchai workspace set-default`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name or ARM ID of the workspace. You can configure default workspace using `az batchai workspace set-default`."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "VmSize",
+            "type": "string",
+            "format": "--vm-size {value}",
+            "secret": false,
+            "help": "VM size."
+          },
+          {
+            "name": "GenerateSshKeys",
+            "type": "string",
+            "format": "--generate-ssh-keys {value}",
+            "secret": false,
+            "help": "Generate SSH public and private key files in ~/.ssh directory (if missing)."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "Optional password for the admin user created on the NFS node."
+          },
+          {
+            "name": "SshKey",
+            "type": "string",
+            "format": "--ssh-key {value}",
+            "secret": false,
+            "help": "Optional SSH public key value or path. If ommited and no password specified, default SSH key (~/.ssh/id_rsa.pub) will be used."
+          },
+          {
+            "name": "UserName",
+            "type": "string",
+            "format": "--user-name {value}",
+            "secret": false,
+            "help": "Name of admin user account to be created on NFS node. If the value is not provided and no user configuration is provided in the config file, current user's name will be used."
+          },
+          {
+            "name": "ConfigFile",
+            "type": "string",
+            "format": "--config-file {value}",
+            "secret": false,
+            "help": "A path to a json file containing file server create parameters (json representation of azure.mgmt.batchai.models.FileServerCreateParameters). Note, parameters given via command line will overwrite parameters specified in the configuration file."
+          },
+          {
+            "name": "CachingType",
+            "type": "BatchaiFileServerCreateCachingType",
+            "format": "--caching-type {value}",
+            "secret": false,
+            "help": "Caching type for premium disks. If not provided via command line or in configuration file, no caching will be used."
+          },
+          {
+            "name": "DiskCount",
+            "type": "int",
+            "format": "--disk-count {value}",
+            "secret": false,
+            "help": "Number of disks."
+          },
+          {
+            "name": "DiskSize",
+            "type": "string",
+            "format": "--disk-size {value}",
+            "secret": false,
+            "help": "Disk size in Gb."
+          },
+          {
+            "name": "StorageSku",
+            "type": "BatchaiFileServerCreateStorageSku",
+            "format": "--storage-sku {value}",
+            "secret": false,
+            "help": "The sku of storage account to persist VM."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "ARM ID of a virtual network subnet to put the file server in. If not provided via command line or in the configuration file, Batch AI will create a new virtual network and subnet under your subscription."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FileServerDelete",
+      "definiteArgument": "batchai file-server delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of file server."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FileServerList",
+      "definiteArgument": "batchai file-server list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "FileServerShow",
+      "definiteArgument": "batchai file-server show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of file server."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
           }
         ]
       }
@@ -1567,6 +1517,177 @@
             "format": "--cluster {value}",
             "secret": false,
             "help": "Name of cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterFileList",
+      "definiteArgument": "batchai cluster file list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Cluster",
+            "type": "string",
+            "format": "--cluster {value}",
+            "secret": false,
+            "help": "Name of cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          },
+          {
+            "name": "Expiry",
+            "type": "string",
+            "format": "--expiry {value}",
+            "secret": false,
+            "help": "Time in minutes for how long generated download URLs should remain valid."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "secret": false,
+            "help": "Relative path of a subfolder inside of the node setup task output directory."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobNodeExec",
+      "definiteArgument": "batchai job node exec",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Experiment",
+            "type": "string",
+            "format": "--experiment {value}",
+            "secret": false,
+            "help": "Name of experiment."
+          },
+          {
+            "name": "Job",
+            "type": "string",
+            "format": "--job {value}",
+            "secret": false,
+            "help": "Name of job."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "Name of workspace."
+          },
+          {
+            "name": "Address",
+            "type": "string",
+            "format": "--address {value}",
+            "secret": false,
+            "help": "Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side. e.g. -L 8080:localhost:8080."
+          },
+          {
+            "name": "Exec",
+            "type": "string",
+            "format": "--exec {value}",
+            "secret": false,
+            "help": "Optional command line to be executed on the node. If not provided, the command will perform ports forwarding only."
+          },
+          {
+            "name": "NodeId",
+            "type": "string",
+            "format": "--node-id {value}",
+            "secret": false,
+            "help": "ID of the node to forward the ports to. If not provided, the command will be executed on the first available node."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "Optional password to establish SSH connection."
+          },
+          {
+            "name": "SshPrivateKey",
+            "type": "string",
+            "format": "--ssh-private-key {value}",
+            "secret": false,
+            "help": "Optional SSH private key path to establish SSH connection. If omitted, the default SSH private key will be used."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "JobNodeList",
+      "definiteArgument": "batchai job node list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Experiment",
+            "type": "string",
+            "format": "--experiment {value}",
+            "secret": false,
+            "help": "Name of experiment."
+          },
+          {
+            "name": "Job",
+            "type": "string",
+            "format": "--job {value}",
+            "secret": false,
+            "help": "Name of job."
           },
           {
             "name": "ResourceGroup",
@@ -1709,127 +1830,6 @@
             "format": "--path {value}",
             "secret": false,
             "help": "Relative path in the given output directory."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobNodeExec",
-      "definiteArgument": "batchai job node exec",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Experiment",
-            "type": "string",
-            "format": "--experiment {value}",
-            "secret": false,
-            "help": "Name of experiment."
-          },
-          {
-            "name": "Job",
-            "type": "string",
-            "format": "--job {value}",
-            "secret": false,
-            "help": "Name of job."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
-          },
-          {
-            "name": "Address",
-            "type": "string",
-            "format": "--address {value}",
-            "secret": false,
-            "help": "Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side. e.g. -L 8080:localhost:8080."
-          },
-          {
-            "name": "Exec",
-            "type": "string",
-            "format": "--exec {value}",
-            "secret": false,
-            "help": "Optional command line to be executed on the node. If not provided, the command will perform ports forwarding only."
-          },
-          {
-            "name": "NodeId",
-            "type": "string",
-            "format": "--node-id {value}",
-            "secret": false,
-            "help": "ID of the node to forward the ports to. If not provided, the command will be executed on the first available node."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "Optional password to establish SSH connection."
-          },
-          {
-            "name": "SshPrivateKey",
-            "type": "string",
-            "format": "--ssh-private-key {value}",
-            "secret": false,
-            "help": "Optional SSH private key path to establish SSH connection. If omitted, the default SSH private key will be used."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "JobNodeList",
-      "definiteArgument": "batchai job node list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Experiment",
-            "type": "string",
-            "format": "--experiment {value}",
-            "secret": false,
-            "help": "Name of experiment."
-          },
-          {
-            "name": "Job",
-            "type": "string",
-            "format": "--job {value}",
-            "secret": false,
-            "help": "Name of job."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Workspace",
-            "type": "string",
-            "format": "--workspace {value}",
-            "secret": false,
-            "help": "Name of workspace."
           },
           {
             "name": "Subscription",

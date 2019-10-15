@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ppg.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ppg.yml"
   ],
   "name": "AzurePpg",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/ppg?view=azure-cli-latest",
@@ -43,10 +43,10 @@
           },
           {
             "name": "Type",
-            "type": "PpgCreateType",
+            "type": "string",
             "format": "--type {value}",
             "secret": false,
-            "help": "The type of the proximity placement group."
+            "help": "The type of the proximity placement group. Allowed values: Standard."
           },
           {
             "name": "Subscription",
@@ -231,15 +231,6 @@
       "format": "--verbose {value}",
       "secret": false,
       "help": "Increase logging verbosity. Use --debug for full debug logs."
-    }
-  ],
-  "enumerations": [
-    {
-      "name": "PpgCreateType",
-      "values": [
-        "standard",
-        "ultra"
-      ]
     }
   ]
 }

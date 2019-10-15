@@ -1,22 +1,23 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/digitaltwin.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/dps.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/hub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/digitaltwin/key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/digitaltwin/repository.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/dps/access-policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/dps/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/dps/linked-hub.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/hub/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/hub/consumer-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/hub/devicestream.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/hub/job.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/hub/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/hub/route.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/iot/hub/routing-endpoint.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/pnp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/dps.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/hub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/dps/access-policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/dps/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/dps/linked-hub.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/hub/job.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/hub/devicestream.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/hub/route.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/hub/routing-endpoint.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/hub/message-enrichment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/hub/consumer-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/hub/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/hub/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/pnp/repository.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/iot/pnp/key.yml"
   ],
   "name": "AzureIot",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/iot?view=azure-cli-latest",
@@ -29,8 +30,8 @@
       "settingsClass": {}
     },
     {
-      "postfix": "Digitaltwin",
-      "definiteArgument": "iot digitaltwin",
+      "postfix": "Pnp",
+      "definiteArgument": "iot pnp",
       "settingsClass": {}
     },
     {
@@ -678,367 +679,6 @@
             "format": "--set {value}",
             "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinKeyCreate",
-      "definiteArgument": "iot digitaltwin key create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "RepoId",
-            "type": "string",
-            "format": "--repo-id {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Id."
-          },
-          {
-            "name": "Role",
-            "type": "IotDigitaltwinKeyRole",
-            "format": "--role {value}",
-            "secret": false,
-            "help": "User role of the access key for the given DigitalTwin repository."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinKeyDelete",
-      "definiteArgument": "iot digitaltwin key delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "KeyId",
-            "type": "string",
-            "format": "--key-id {value}",
-            "secret": false,
-            "help": "Access key for the given DigitalTwin repository."
-          },
-          {
-            "name": "RepoId",
-            "type": "string",
-            "format": "--repo-id {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinKeyList",
-      "definiteArgument": "iot digitaltwin key list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "RepoId",
-            "type": "string",
-            "format": "--repo-id {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinKeyShow",
-      "definiteArgument": "iot digitaltwin key show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "KeyId",
-            "type": "string",
-            "format": "--key-id {value}",
-            "secret": false,
-            "help": "Access key for the given DigitalTwin repository."
-          },
-          {
-            "name": "RepoId",
-            "type": "string",
-            "format": "--repo-id {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinKeyUpdate",
-      "definiteArgument": "iot digitaltwin key update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "KeyId",
-            "type": "string",
-            "format": "--key-id {value}",
-            "secret": false,
-            "help": "Access key for the given DigitalTwin repository."
-          },
-          {
-            "name": "RepoId",
-            "type": "string",
-            "format": "--repo-id {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Id."
-          },
-          {
-            "name": "Role",
-            "type": "IotDigitaltwinKeyRole",
-            "format": "--role {value}",
-            "secret": false,
-            "help": "User role of the access key for the given DigitalTwin repository."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinRepositoryCreate",
-      "definiteArgument": "iot digitaltwin repository create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Name."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinRepositoryDelete",
-      "definiteArgument": "iot digitaltwin repository delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "RepoId",
-            "type": "string",
-            "format": "--repo-id {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinRepositoryGetProvisionStatus",
-      "definiteArgument": "iot digitaltwin repository get-provision-status",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "ProvisioningState",
-            "type": "string",
-            "format": "--provisioning-State {value}",
-            "secret": false,
-            "help": "Provisioning state of the DigitalTwin repository."
-          },
-          {
-            "name": "RepoId",
-            "type": "string",
-            "format": "--repo-id {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinRepositoryList",
-      "definiteArgument": "iot digitaltwin repository list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinRepositoryShow",
-      "definiteArgument": "iot digitaltwin repository show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "RepoId",
-            "type": "string",
-            "format": "--repo-id {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DigitaltwinRepositoryUpdate",
-      "definiteArgument": "iot digitaltwin repository update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Endpoint",
-            "type": "string",
-            "format": "--endpoint {value}",
-            "secret": false,
-            "help": "DigitalTwin endpoint."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Name."
-          },
-          {
-            "name": "RepoId",
-            "type": "string",
-            "format": "--repo-id {value}",
-            "secret": false,
-            "help": "DigitalTwin repository Id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1803,574 +1443,6 @@
       }
     },
     {
-      "postfix": "HubCertificateCreate",
-      "definiteArgument": "iot hub certificate create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "A friendly name for the certificate."
-          },
-          {
-            "name": "Path",
-            "type": "string",
-            "format": "--path {value}",
-            "secret": false,
-            "help": "The path to the file containing the certificate."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubCertificateDelete",
-      "definiteArgument": "iot hub certificate delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Etag",
-            "type": "string",
-            "format": "--etag {value}",
-            "secret": false,
-            "help": "Entity Tag (etag) of the object."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "A friendly name for the certificate."
-          },
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubCertificateGenerateVerificationCode",
-      "definiteArgument": "iot hub certificate generate-verification-code",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Etag",
-            "type": "string",
-            "format": "--etag {value}",
-            "secret": false,
-            "help": "Entity Tag (etag) of the object."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "A friendly name for the certificate."
-          },
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubCertificateList",
-      "definiteArgument": "iot hub certificate list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubCertificateShow",
-      "definiteArgument": "iot hub certificate show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "A friendly name for the certificate."
-          },
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubCertificateUpdate",
-      "definiteArgument": "iot hub certificate update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Etag",
-            "type": "string",
-            "format": "--etag {value}",
-            "secret": false,
-            "help": "Entity Tag (etag) of the object."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "A friendly name for the certificate."
-          },
-          {
-            "name": "Path",
-            "type": "string",
-            "format": "--path {value}",
-            "secret": false,
-            "help": "The path to the file containing the certificate."
-          },
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubCertificateVerify",
-      "definiteArgument": "iot hub certificate verify",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Etag",
-            "type": "string",
-            "format": "--etag {value}",
-            "secret": false,
-            "help": "Entity Tag (etag) of the object."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "A friendly name for the certificate."
-          },
-          {
-            "name": "Path",
-            "type": "string",
-            "format": "--path {value}",
-            "secret": false,
-            "help": "The path to the file containing the certificate."
-          },
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubConsumerGroupCreate",
-      "definiteArgument": "iot hub consumer-group create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Event hub consumer group name."
-          },
-          {
-            "name": "EventHubName",
-            "type": "string",
-            "format": "--event-hub-name {value}",
-            "secret": false,
-            "help": "Event hub endpoint name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubConsumerGroupDelete",
-      "definiteArgument": "iot hub consumer-group delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventHubName",
-            "type": "string",
-            "format": "--event-hub-name {value}",
-            "secret": false,
-            "help": "Event hub endpoint name."
-          },
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Event hub consumer group name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubConsumerGroupList",
-      "definiteArgument": "iot hub consumer-group list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventHubName",
-            "type": "string",
-            "format": "--event-hub-name {value}",
-            "secret": false,
-            "help": "Event hub endpoint name."
-          },
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubConsumerGroupShow",
-      "definiteArgument": "iot hub consumer-group show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EventHubName",
-            "type": "string",
-            "format": "--event-hub-name {value}",
-            "secret": false,
-            "help": "Event hub endpoint name."
-          },
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Event hub consumer group name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubDevicestreamShow",
-      "definiteArgument": "iot hub devicestream show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "HubJobCancel",
       "definiteArgument": "iot hub job cancel",
       "settingsClass": {
@@ -2496,60 +1568,10 @@
       }
     },
     {
-      "postfix": "HubPolicyCreate",
-      "definiteArgument": "iot hub policy create",
+      "postfix": "HubDevicestreamShow",
+      "definiteArgument": "iot hub devicestream show",
       "settingsClass": {
         "properties": [
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Shared access policy name."
-          },
-          {
-            "name": "Permissions",
-            "type": "string",
-            "format": "--permissions {value}",
-            "secret": false,
-            "help": "Permissions of shared access policy. Use space-separated list for multiple permissions. Possible values: RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubPolicyDelete",
-      "definiteArgument": "iot hub policy delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
           {
             "name": "Ids",
             "type": "List<string>",
@@ -2563,146 +1585,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Shared access policy name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubPolicyList",
-      "definiteArgument": "iot hub policy list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
             "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubPolicyRenewKey",
-      "definiteArgument": "iot hub policy renew-key",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "RenewKey",
-            "type": "IotHubPolicyRenewKeyRenewKey",
-            "format": "--renew-key {value}",
-            "secret": false,
-            "help": "Regenerate keys."
-          },
-          {
-            "name": "NoWait",
-            "type": "bool",
-            "format": "--no-wait",
-            "secret": false,
-            "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Shared access policy name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "HubPolicyShow",
-      "definiteArgument": "iot hub policy show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "HubName",
-            "type": "string",
-            "format": "--hub-name {value}",
-            "secret": false,
-            "help": "IoT Hub name."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Shared access policy name."
           },
           {
             "name": "ResourceGroup",
@@ -3284,6 +2167,1313 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "HubMessageEnrichmentCreate",
+      "definiteArgument": "iot hub message-enrichment create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Endpoints",
+            "type": "string",
+            "format": "--endpoints {value}",
+            "secret": false,
+            "help": "Endpoint(s) to apply enrichments to. Use a space-separated list for multiple endpoints."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "The enrichment's key."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "secret": false,
+            "help": "The enrichment's value."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubMessageEnrichmentDelete",
+      "definiteArgument": "iot hub message-enrichment delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "The enrichment's key."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubMessageEnrichmentList",
+      "definiteArgument": "iot hub message-enrichment list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubMessageEnrichmentUpdate",
+      "definiteArgument": "iot hub message-enrichment update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Endpoints",
+            "type": "string",
+            "format": "--endpoints {value}",
+            "secret": false,
+            "help": "Endpoint(s) to apply enrichments to. Use a space-separated list for multiple endpoints."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "The enrichment's key."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "secret": false,
+            "help": "The enrichment's value."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubConsumerGroupCreate",
+      "definiteArgument": "iot hub consumer-group create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Event hub consumer group name."
+          },
+          {
+            "name": "EventHubName",
+            "type": "string",
+            "format": "--event-hub-name {value}",
+            "secret": false,
+            "help": "Event hub endpoint name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubConsumerGroupDelete",
+      "definiteArgument": "iot hub consumer-group delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EventHubName",
+            "type": "string",
+            "format": "--event-hub-name {value}",
+            "secret": false,
+            "help": "Event hub endpoint name."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Event hub consumer group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubConsumerGroupList",
+      "definiteArgument": "iot hub consumer-group list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EventHubName",
+            "type": "string",
+            "format": "--event-hub-name {value}",
+            "secret": false,
+            "help": "Event hub endpoint name."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubConsumerGroupShow",
+      "definiteArgument": "iot hub consumer-group show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EventHubName",
+            "type": "string",
+            "format": "--event-hub-name {value}",
+            "secret": false,
+            "help": "Event hub endpoint name."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Event hub consumer group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubCertificateCreate",
+      "definiteArgument": "iot hub certificate create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "A friendly name for the certificate."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "secret": false,
+            "help": "The path to the file containing the certificate."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubCertificateDelete",
+      "definiteArgument": "iot hub certificate delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Etag",
+            "type": "string",
+            "format": "--etag {value}",
+            "secret": false,
+            "help": "Entity Tag (etag) of the object."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "A friendly name for the certificate."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubCertificateGenerateVerificationCode",
+      "definiteArgument": "iot hub certificate generate-verification-code",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Etag",
+            "type": "string",
+            "format": "--etag {value}",
+            "secret": false,
+            "help": "Entity Tag (etag) of the object."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "A friendly name for the certificate."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubCertificateList",
+      "definiteArgument": "iot hub certificate list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubCertificateShow",
+      "definiteArgument": "iot hub certificate show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "A friendly name for the certificate."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubCertificateUpdate",
+      "definiteArgument": "iot hub certificate update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Etag",
+            "type": "string",
+            "format": "--etag {value}",
+            "secret": false,
+            "help": "Entity Tag (etag) of the object."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "A friendly name for the certificate."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "secret": false,
+            "help": "The path to the file containing the certificate."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubCertificateVerify",
+      "definiteArgument": "iot hub certificate verify",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Etag",
+            "type": "string",
+            "format": "--etag {value}",
+            "secret": false,
+            "help": "Entity Tag (etag) of the object."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "A friendly name for the certificate."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "secret": false,
+            "help": "The path to the file containing the certificate."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubPolicyCreate",
+      "definiteArgument": "iot hub policy create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Shared access policy name."
+          },
+          {
+            "name": "Permissions",
+            "type": "string",
+            "format": "--permissions {value}",
+            "secret": false,
+            "help": "Permissions of shared access policy. Use space-separated list for multiple permissions. Possible values: RegistryRead, RegistryWrite, ServiceConnect, DeviceConnect."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubPolicyDelete",
+      "definiteArgument": "iot hub policy delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Shared access policy name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubPolicyList",
+      "definiteArgument": "iot hub policy list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubPolicyRenewKey",
+      "definiteArgument": "iot hub policy renew-key",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RenewKey",
+            "type": "IotHubPolicyRenewKeyRenewKey",
+            "format": "--renew-key {value}",
+            "secret": false,
+            "help": "Regenerate keys."
+          },
+          {
+            "name": "NoWait",
+            "type": "bool",
+            "format": "--no-wait",
+            "secret": false,
+            "help": "Do not wait for the long-running operation to finish."
+          },
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Shared access policy name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HubPolicyShow",
+      "definiteArgument": "iot hub policy show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HubName",
+            "type": "string",
+            "format": "--hub-name {value}",
+            "secret": false,
+            "help": "IoT Hub name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Shared access policy name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpRepositoryCreate",
+      "definiteArgument": "iot pnp repository create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Name."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpRepositoryDelete",
+      "definiteArgument": "iot pnp repository delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RepoId",
+            "type": "string",
+            "format": "--repo-id {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Id."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpRepositoryGetProvisionStatus",
+      "definiteArgument": "iot pnp repository get-provision-status",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ProvisioningState",
+            "type": "string",
+            "format": "--provisioning-State {value}",
+            "secret": false,
+            "help": "Provisioning state of an IoT Plug and Play repository."
+          },
+          {
+            "name": "RepoId",
+            "type": "string",
+            "format": "--repo-id {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Id."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpRepositoryList",
+      "definiteArgument": "iot pnp repository list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpRepositoryShow",
+      "definiteArgument": "iot pnp repository show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RepoId",
+            "type": "string",
+            "format": "--repo-id {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Id."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpRepositoryUpdate",
+      "definiteArgument": "iot pnp repository update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Name."
+          },
+          {
+            "name": "RepoId",
+            "type": "string",
+            "format": "--repo-id {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Id."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpKeyCreate",
+      "definiteArgument": "iot pnp key create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RepoId",
+            "type": "string",
+            "format": "--repo-id {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Id."
+          },
+          {
+            "name": "Role",
+            "type": "IotPnpKeyRole",
+            "format": "--role {value}",
+            "secret": false,
+            "help": "User role of the access key for the given IoT Plug and Play repository."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpKeyDelete",
+      "definiteArgument": "iot pnp key delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KeyId",
+            "type": "string",
+            "format": "--key-id {value}",
+            "secret": false,
+            "help": "Access key for the given IoT Plug and Play repository."
+          },
+          {
+            "name": "RepoId",
+            "type": "string",
+            "format": "--repo-id {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Id."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpKeyList",
+      "definiteArgument": "iot pnp key list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RepoId",
+            "type": "string",
+            "format": "--repo-id {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Id."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpKeyShow",
+      "definiteArgument": "iot pnp key show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KeyId",
+            "type": "string",
+            "format": "--key-id {value}",
+            "secret": false,
+            "help": "Access key for the given IoT Plug and Play repository."
+          },
+          {
+            "name": "RepoId",
+            "type": "string",
+            "format": "--repo-id {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Id."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PnpKeyUpdate",
+      "definiteArgument": "iot pnp key update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "KeyId",
+            "type": "string",
+            "format": "--key-id {value}",
+            "secret": false,
+            "help": "Access key for the given IoT Plug and Play repository."
+          },
+          {
+            "name": "RepoId",
+            "type": "string",
+            "format": "--repo-id {value}",
+            "secret": false,
+            "help": "IoT Plug and Play repository Id."
+          },
+          {
+            "name": "Role",
+            "type": "IotPnpKeyRole",
+            "format": "--role {value}",
+            "secret": false,
+            "help": "User role of the access key for the given IoT Plug and Play repository."
+          },
+          {
+            "name": "Endpoint",
+            "type": "string",
+            "format": "--endpoint {value}",
+            "secret": false,
+            "help": "IoT Plug and Play endpoint."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -3350,14 +3540,6 @@
       ]
     },
     {
-      "name": "IotDigitaltwinKeyRole",
-      "values": [
-        "admin",
-        "contributer",
-        "reader"
-      ]
-    },
-    {
       "name": "IotDpsAccessPolicyRights",
       "values": [
         "deviceconnect",
@@ -3366,14 +3548,6 @@
         "registrationstatusread",
         "registrationstatuswrite",
         "serviceconfig"
-      ]
-    },
-    {
-      "name": "IotHubPolicyRenewKeyRenewKey",
-      "values": [
-        "primary",
-        "secondary",
-        "swap"
       ]
     },
     {
@@ -3400,6 +3574,22 @@
       "values": [
         "avro",
         "json"
+      ]
+    },
+    {
+      "name": "IotHubPolicyRenewKeyRenewKey",
+      "values": [
+        "primary",
+        "secondary",
+        "swap"
+      ]
+    },
+    {
+      "name": "IotPnpKeyRole",
+      "values": [
+        "admin",
+        "contributer",
+        "reader"
       ]
     }
   ]

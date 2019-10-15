@@ -1,10 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/image.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/image/template.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/image/template/customizer.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/image/template/output.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/image.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/image/template.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/image/template/output.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/image/template/customizer.yml"
   ],
   "name": "AzureImage",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest",
@@ -722,6 +722,202 @@
       }
     },
     {
+      "postfix": "TemplateOutputAdd",
+      "definiteArgument": "image template output add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ArtifactTags",
+            "type": "string",
+            "format": "--artifact-tags {value}",
+            "secret": false,
+            "help": "Tags that will be applied to the output artifact once it has been created by the distributor. space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "OutputName",
+            "type": "string",
+            "format": "--output-name {value}",
+            "secret": false,
+            "help": "Name of the image builder run output. Defaults to the name of the managed image or sig image definition."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "ManagedImage",
+            "type": "string",
+            "format": "--managed-image {value}",
+            "secret": false,
+            "help": "Name or ID of the customized managed image to be created."
+          },
+          {
+            "name": "ManagedImageLocation",
+            "type": "string",
+            "format": "--managed-image-location {value}",
+            "secret": false,
+            "help": "Location where the customized image will be created. Defaults to resource group's location."
+          },
+          {
+            "name": "GalleryImageDefinition",
+            "type": "string",
+            "format": "--gallery-image-definition {value}",
+            "secret": false,
+            "help": "Name or ID of the existing SIG image definition to create the customized image version with."
+          },
+          {
+            "name": "GalleryName",
+            "type": "string",
+            "format": "--gallery-name {value}",
+            "secret": false,
+            "help": "Shared image gallery name, if image definition name and not ID was provided."
+          },
+          {
+            "name": "GalleryReplicationRegions",
+            "type": "List<string>",
+            "format": "--gallery-replication-regions {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of regions to replicate the image version into. Defaults to resource group's location."
+          },
+          {
+            "name": "IsVhd",
+            "type": "string",
+            "format": "--is-vhd {value}",
+            "secret": false,
+            "help": "The output is a VHD distributor."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateOutputClear",
+      "definiteArgument": "image template output clear",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TemplateOutputRemove",
+      "definiteArgument": "image template output remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "OutputName",
+            "type": "string",
+            "format": "--output-name {value}",
+            "secret": false,
+            "help": "Name of the image builder run output."
+          },
+          {
+            "name": "Defer",
+            "type": "string",
+            "format": "--defer {value}",
+            "secret": false,
+            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the image template."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "TemplateCustomizerAdd",
       "definiteArgument": "image template customizer add",
       "settingsClass": {
@@ -892,202 +1088,6 @@
             "format": "--customizer-name {value}",
             "secret": false,
             "help": "Name of the customizer."
-          },
-          {
-            "name": "Defer",
-            "type": "string",
-            "format": "--defer {value}",
-            "secret": false,
-            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the image template."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TemplateOutputAdd",
-      "definiteArgument": "image template output add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ArtifactTags",
-            "type": "string",
-            "format": "--artifact-tags {value}",
-            "secret": false,
-            "help": "Tags that will be applied to the output artifact once it has been created by the distributor. space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Defer",
-            "type": "string",
-            "format": "--defer {value}",
-            "secret": false,
-            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
-          },
-          {
-            "name": "OutputName",
-            "type": "string",
-            "format": "--output-name {value}",
-            "secret": false,
-            "help": "Name of the image builder run output. Defaults to the name of the managed image or sig image definition."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the image template."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "ManagedImage",
-            "type": "string",
-            "format": "--managed-image {value}",
-            "secret": false,
-            "help": "Name or ID of the customized managed image to be created."
-          },
-          {
-            "name": "ManagedImageLocation",
-            "type": "string",
-            "format": "--managed-image-location {value}",
-            "secret": false,
-            "help": "Location where the customized image will be created. Defaults to resource group's location."
-          },
-          {
-            "name": "GalleryImageDefinition",
-            "type": "string",
-            "format": "--gallery-image-definition {value}",
-            "secret": false,
-            "help": "Name or ID of the existing SIG image definition to create the customized image version with."
-          },
-          {
-            "name": "GalleryName",
-            "type": "string",
-            "format": "--gallery-name {value}",
-            "secret": false,
-            "help": "Shared image gallery name, if image definition name and not ID was provided."
-          },
-          {
-            "name": "GalleryReplicationRegions",
-            "type": "List<string>",
-            "format": "--gallery-replication-regions {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated list of regions to replicate the image version into. Defaults to resource group's location."
-          },
-          {
-            "name": "IsVhd",
-            "type": "string",
-            "format": "--is-vhd {value}",
-            "secret": false,
-            "help": "The output is a VHD distributor."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TemplateOutputClear",
-      "definiteArgument": "image template output clear",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Defer",
-            "type": "string",
-            "format": "--defer {value}",
-            "secret": false,
-            "help": "Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the image template."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TemplateOutputRemove",
-      "definiteArgument": "image template output remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "OutputName",
-            "type": "string",
-            "format": "--output-name {value}",
-            "secret": false,
-            "help": "Name of the image builder run output."
           },
           {
             "name": "Defer",

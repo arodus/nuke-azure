@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzurePpg.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -348,9 +348,9 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Tags { get; internal set; }
         /// <summary>
-        ///   The type of the proximity placement group.
+        ///   The type of the proximity placement group. Allowed values: Standard.
         /// </summary>
-        public virtual PpgCreateType Type { get; internal set; }
+        public virtual string Type { get; internal set; }
         /// <summary>
         ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
         /// </summary>
@@ -764,10 +764,10 @@ namespace Nuke.Azure
         #region Type
         /// <summary>
         ///   <p><em>Sets <see cref="AzurePpgCreateSettings.Type"/></em></p>
-        ///   <p>The type of the proximity placement group.</p>
+        ///   <p>The type of the proximity placement group. Allowed values: Standard.</p>
         /// </summary>
         [Pure]
-        public static AzurePpgCreateSettings SetType(this AzurePpgCreateSettings toolSettings, PpgCreateType type)
+        public static AzurePpgCreateSettings SetType(this AzurePpgCreateSettings toolSettings, string type)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Type = type;
@@ -775,7 +775,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzurePpgCreateSettings.Type"/></em></p>
-        ///   <p>The type of the proximity placement group.</p>
+        ///   <p>The type of the proximity placement group. Allowed values: Standard.</p>
         /// </summary>
         [Pure]
         public static AzurePpgCreateSettings ResetType(this AzurePpgCreateSettings toolSettings)
@@ -1809,20 +1809,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-    }
-    #endregion
-    #region PpgCreateType
-    /// <summary>
-    ///   Used within <see cref="AzurePpgTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    [TypeConverter(typeof(TypeConverter<PpgCreateType>))]
-    public partial class PpgCreateType : Enumeration
-    {
-        public static PpgCreateType standard = new PpgCreateType { Value = "standard" };
-        public static PpgCreateType ultra = new PpgCreateType { Value = "ultra" };
     }
     #endregion
 }

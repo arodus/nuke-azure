@@ -1,13 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/deploymentmanager.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/deploymentmanager/artifact-source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/deploymentmanager/rollout.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/deploymentmanager/service-topology.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/deploymentmanager/service-unit.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/deploymentmanager/service.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/deploymentmanager/step.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/deploymentmanager.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/deploymentmanager/artifact-source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/deploymentmanager/rollout.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/deploymentmanager/service.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/deploymentmanager/step.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/deploymentmanager/service-unit.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/deploymentmanager/service-topology.yml"
   ],
   "name": "AzureDeploymentmanager",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest",
@@ -352,462 +352,6 @@
             "format": "--yes {value}",
             "secret": false,
             "help": "Do not prompt for confirmation."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServiceTopologyCreate",
-      "definiteArgument": "deploymentmanager service-topology create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the service topology."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ArtifactSource",
-            "type": "string",
-            "format": "--artifact-source {value}",
-            "secret": false,
-            "help": "The name or resource identifier of the artifact source."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServiceTopologyDelete",
-      "definiteArgument": "deploymentmanager service-topology delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the service topology."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServiceTopologyShow",
-      "definiteArgument": "deploymentmanager service-topology show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the service topology."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServiceTopologyUpdate",
-      "definiteArgument": "deploymentmanager service-topology update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the service topology."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ArtifactSource",
-            "type": "string",
-            "format": "--artifact-source {value}",
-            "secret": false,
-            "help": "The name or resource identifier of the artifact source."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServiceUnitCreate",
-      "definiteArgument": "deploymentmanager service-unit create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ParametersPath",
-            "type": "string",
-            "format": "--parameters-path {value}",
-            "secret": false,
-            "help": "The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "TemplatePath",
-            "type": "string",
-            "format": "--template-path {value}",
-            "secret": false,
-            "help": "The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "DeploymentMode",
-            "type": "DeploymentmanagerServiceUnitDeploymentMode",
-            "format": "--deployment-mode {value}",
-            "secret": false,
-            "help": "The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the service unit."
-          },
-          {
-            "name": "ServiceName",
-            "type": "string",
-            "format": "--service-name {value}",
-            "secret": false,
-            "help": "The name of the service."
-          },
-          {
-            "name": "ServiceTopologyName",
-            "type": "string",
-            "format": "--service-topology-name {value}",
-            "secret": false,
-            "help": "The name of the service topology."
-          },
-          {
-            "name": "TargetResourceGroup",
-            "type": "string",
-            "format": "--target-resource-group {value}",
-            "secret": false,
-            "help": "The resource group where the resources in the service unit should be deployed to."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServiceUnitDelete",
-      "definiteArgument": "deploymentmanager service-unit delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the service unit."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServiceName",
-            "type": "string",
-            "format": "--service-name {value}",
-            "secret": false,
-            "help": "The name of the service."
-          },
-          {
-            "name": "ServiceTopologyName",
-            "type": "string",
-            "format": "--service-topology-name {value}",
-            "secret": false,
-            "help": "The name of the service topology."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServiceUnitShow",
-      "definiteArgument": "deploymentmanager service-unit show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the service unit."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServiceName",
-            "type": "string",
-            "format": "--service-name {value}",
-            "secret": false,
-            "help": "The name of the service."
-          },
-          {
-            "name": "ServiceTopologyName",
-            "type": "string",
-            "format": "--service-topology-name {value}",
-            "secret": false,
-            "help": "The name of the service topology."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ServiceUnitUpdate",
-      "definiteArgument": "deploymentmanager service-unit update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the service unit."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ServiceName",
-            "type": "string",
-            "format": "--service-name {value}",
-            "secret": false,
-            "help": "The name of the service."
-          },
-          {
-            "name": "ServiceTopologyName",
-            "type": "string",
-            "format": "--service-topology-name {value}",
-            "secret": false,
-            "help": "The name of the service topology."
-          },
-          {
-            "name": "DeploymentMode",
-            "type": "DeploymentmanagerServiceUnitDeploymentMode",
-            "format": "--deployment-mode {value}",
-            "secret": false,
-            "help": "The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete."
-          },
-          {
-            "name": "ParametersPath",
-            "type": "string",
-            "format": "--parameters-path {value}",
-            "secret": false,
-            "help": "The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "TargetResourceGroup",
-            "type": "string",
-            "format": "--target-resource-group {value}",
-            "secret": false,
-            "help": "The resource group where the resources in the service unit should be deployed to."
-          },
-          {
-            "name": "TemplatePath",
-            "type": "string",
-            "format": "--template-path {value}",
-            "secret": false,
-            "help": "The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
           },
           {
             "name": "Subscription",
@@ -1173,6 +717,462 @@
             "format": "--resource-group {value}",
             "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceUnitCreate",
+      "definiteArgument": "deploymentmanager service-unit create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ParametersPath",
+            "type": "string",
+            "format": "--parameters-path {value}",
+            "secret": false,
+            "help": "The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "TemplatePath",
+            "type": "string",
+            "format": "--template-path {value}",
+            "secret": false,
+            "help": "The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "DeploymentMode",
+            "type": "DeploymentmanagerServiceUnitDeploymentMode",
+            "format": "--deployment-mode {value}",
+            "secret": false,
+            "help": "The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the service unit."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "secret": false,
+            "help": "The name of the service."
+          },
+          {
+            "name": "ServiceTopologyName",
+            "type": "string",
+            "format": "--service-topology-name {value}",
+            "secret": false,
+            "help": "The name of the service topology."
+          },
+          {
+            "name": "TargetResourceGroup",
+            "type": "string",
+            "format": "--target-resource-group {value}",
+            "secret": false,
+            "help": "The resource group where the resources in the service unit should be deployed to."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceUnitDelete",
+      "definiteArgument": "deploymentmanager service-unit delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the service unit."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "secret": false,
+            "help": "The name of the service."
+          },
+          {
+            "name": "ServiceTopologyName",
+            "type": "string",
+            "format": "--service-topology-name {value}",
+            "secret": false,
+            "help": "The name of the service topology."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceUnitShow",
+      "definiteArgument": "deploymentmanager service-unit show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the service unit."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "secret": false,
+            "help": "The name of the service."
+          },
+          {
+            "name": "ServiceTopologyName",
+            "type": "string",
+            "format": "--service-topology-name {value}",
+            "secret": false,
+            "help": "The name of the service topology."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceUnitUpdate",
+      "definiteArgument": "deploymentmanager service-unit update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the service unit."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceName",
+            "type": "string",
+            "format": "--service-name {value}",
+            "secret": false,
+            "help": "The name of the service."
+          },
+          {
+            "name": "ServiceTopologyName",
+            "type": "string",
+            "format": "--service-topology-name {value}",
+            "secret": false,
+            "help": "The name of the service topology."
+          },
+          {
+            "name": "DeploymentMode",
+            "type": "DeploymentmanagerServiceUnitDeploymentMode",
+            "format": "--deployment-mode {value}",
+            "secret": false,
+            "help": "The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete."
+          },
+          {
+            "name": "ParametersPath",
+            "type": "string",
+            "format": "--parameters-path {value}",
+            "secret": false,
+            "help": "The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "TargetResourceGroup",
+            "type": "string",
+            "format": "--target-resource-group {value}",
+            "secret": false,
+            "help": "The resource group where the resources in the service unit should be deployed to."
+          },
+          {
+            "name": "TemplatePath",
+            "type": "string",
+            "format": "--template-path {value}",
+            "secret": false,
+            "help": "The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceTopologyCreate",
+      "definiteArgument": "deploymentmanager service-topology create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the service topology."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ArtifactSource",
+            "type": "string",
+            "format": "--artifact-source {value}",
+            "secret": false,
+            "help": "The name or resource identifier of the artifact source."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceTopologyDelete",
+      "definiteArgument": "deploymentmanager service-topology delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the service topology."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceTopologyShow",
+      "definiteArgument": "deploymentmanager service-topology show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the service topology."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ServiceTopologyUpdate",
+      "definiteArgument": "deploymentmanager service-topology update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the service topology."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ArtifactSource",
+            "type": "string",
+            "format": "--artifact-source {value}",
+            "secret": false,
+            "help": "The name or resource identifier of the artifact source."
           },
           {
             "name": "Tags",

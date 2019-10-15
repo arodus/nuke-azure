@@ -1,0 +1,330 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/managedservices.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/managedservices/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/managedservices/definition.yml"
+  ],
+  "name": "AzureManagedservices",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/managedservices?view=azure-cli-latest",
+  "help": "Manage the registration assignments and definitions in Azure.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "",
+      "definiteArgument": "managedservices",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "AssignmentCreate",
+      "definiteArgument": "managedservices assignment create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Definition",
+            "type": "string",
+            "format": "--definition {value}",
+            "secret": false,
+            "help": "The fully qualified resource id of the registration definition."
+          },
+          {
+            "name": "AssignmentId",
+            "type": "string",
+            "format": "--assignment-id {value}",
+            "secret": false,
+            "help": "Can be used to override the generated registration assignment id."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentDelete",
+      "definiteArgument": "managedservices assignment delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Assignment",
+            "type": "string",
+            "format": "--assignment {value}",
+            "secret": false,
+            "help": "The identifier (guid) or the fully qualified resource id of the registration assignment. When resource id is used, subscription id and resource group parameters are ignored."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentList",
+      "definiteArgument": "managedservices assignment list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "IncludeDefinition",
+            "type": "bool",
+            "format": "--include-definition",
+            "secret": false,
+            "help": "When provided, gets the associated registration definition details."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AssignmentShow",
+      "definiteArgument": "managedservices assignment show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Assignment",
+            "type": "string",
+            "format": "--assignment {value}",
+            "secret": false,
+            "help": "The identifier (guid) or the fully qualified resource id of the registration assignment. When resource id is used, subscription id and resource group parameters are ignored."
+          },
+          {
+            "name": "IncludeDefinition",
+            "type": "bool",
+            "format": "--include-definition",
+            "secret": false,
+            "help": "When provided, gets the associated registration definition details."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionCreate",
+      "definiteArgument": "managedservices definition create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the registration definition."
+          },
+          {
+            "name": "PrincipalId",
+            "type": "string",
+            "format": "--principal-id {value}",
+            "secret": false,
+            "help": "The principal id."
+          },
+          {
+            "name": "RoleDefinitionId",
+            "type": "string",
+            "format": "--role-definition-id {value}",
+            "secret": false,
+            "help": "The role definition id."
+          },
+          {
+            "name": "TenantId",
+            "type": "string",
+            "format": "--tenant-id {value}",
+            "secret": false,
+            "help": "The managed by tenant id."
+          },
+          {
+            "name": "DefinitionId",
+            "type": "string",
+            "format": "--definition-id {value}",
+            "secret": false,
+            "help": "Can be used to override the generated registration definition id."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "The friendly description."
+          },
+          {
+            "name": "PlanName",
+            "type": "string",
+            "format": "--plan-name {value}",
+            "secret": false,
+            "help": "The plan name."
+          },
+          {
+            "name": "PlanProduct",
+            "type": "string",
+            "format": "--plan-product {value}",
+            "secret": false,
+            "help": "The plan product."
+          },
+          {
+            "name": "PlanPublisher",
+            "type": "string",
+            "format": "--plan-publisher {value}",
+            "secret": false,
+            "help": "The plan publisher."
+          },
+          {
+            "name": "PlanVersion",
+            "type": "string",
+            "format": "--plan-version {value}",
+            "secret": false,
+            "help": "The plan version."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionDelete",
+      "definiteArgument": "managedservices definition delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Definition",
+            "type": "string",
+            "format": "--definition {value}",
+            "secret": false,
+            "help": "The identifier (guid) or the fully qualified resource id of the registration definition. When resource id is used, subscription id and resource group parameters are ignored."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionList",
+      "definiteArgument": "managedservices definition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionShow",
+      "definiteArgument": "managedservices definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Definition",
+            "type": "string",
+            "format": "--definition {value}",
+            "secret": false,
+            "help": "The identifier (guid) or the fully qualified resource id of the registration definition. When resource id is used, subscription id and resource group parameters are ignored."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "secret": false,
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "secret": false,
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "AzureOutput",
+      "format": "--output {value}",
+      "secret": false,
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "secret": false,
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "secret": false,
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ]
+}

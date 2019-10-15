@@ -1,10 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/hdinsight.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/hdinsight/application.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/hdinsight/oms.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/hdinsight/script-action.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/hdinsight.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/hdinsight/script-action.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/hdinsight/monitor.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/hdinsight/application.yml"
   ],
   "name": "AzureHdinsight",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest",
@@ -38,6 +38,13 @@
             "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
+            "name": "NoValidationTimeout",
+            "type": "bool",
+            "format": "--no-validation-timeout",
+            "secret": false,
+            "help": "Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted."
+          },
+          {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
@@ -56,14 +63,14 @@
             "type": "string",
             "format": "--type {value}",
             "secret": false,
-            "help": "Type of HDInsight cluster, like: hadoop, interactivehive, hbase, kafka, storm, spark, rserver, mlservices. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types</a>."
+            "help": "Type of HDInsight cluster, like: hadoop, interactivehive, hbase, kafka, storm, spark, rserver, mlservices. See also: <a href=\"https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types\">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types</a>."
           },
           {
             "name": "ClusterConfigurations",
             "type": "string",
             "format": "--cluster-configurations {value}",
             "secret": false,
-            "help": "Extra configurations of various components, in JSON."
+            "help": "Extra configurations of various components. Configurations may be supplied from a file using the `@{path}` syntax or a JSON string. See also: <a href=\"https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-bootstrap\">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-bootstrap</a>."
           },
           {
             "name": "ClusterTier",
@@ -77,21 +84,21 @@
             "type": "string",
             "format": "--component-version {value}",
             "secret": false,
-            "help": "The versions of various Hadoop components, in space-separated versions in 'component=version' format. Example: Spark=2.0 Hadoop=2.7.3 See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions</a>."
+            "help": "The versions of various Hadoop components, in space-separated versions in 'component=version' format. Example: Spark=2.0 Hadoop=2.7.3 See also: <a href=\"https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions\">https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions</a>."
           },
           {
             "name": "Esp",
-            "type": "bool",
-            "format": "--esp",
+            "type": "string",
+            "format": "--esp {value}",
             "secret": false,
-            "help": "Specify to create cluster with Enterprise Security Package."
+            "help": "Specify to create cluster with Enterprise Security Package. If omitted, creating cluster with Enterprise Security Package will not not allowed."
           },
           {
             "name": "Version",
             "type": "string",
             "format": "--version {value}",
             "secret": false,
-            "help": "The HDInsight cluster version. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions</a>."
+            "help": "The HDInsight cluster version. See also: <a href=\"https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions\">https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions</a>."
           },
           {
             "name": "EncryptionAlgorithm",
@@ -161,7 +168,7 @@
             "type": "string",
             "format": "--http-password {value}",
             "secret": true,
-            "help": "HTTP password for the cluster."
+            "help": "HTTP password for the cluster. Will prompt if not given."
           },
           {
             "name": "HttpUser",
@@ -196,19 +203,19 @@
             "type": "string",
             "format": "--edgenode-size {value}",
             "secret": false,
-            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
+            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
           },
           {
             "name": "HeadnodeSize",
             "type": "string",
             "format": "--headnode-size {value}",
             "secret": false,
-            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
+            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
           },
           {
-            "name": "Size",
+            "name": "WorkernodeCount",
             "type": "string",
-            "format": "--size {value}",
+            "format": "--workernode-count {value}",
             "secret": false,
             "help": "The number of worker nodes in the cluster."
           },
@@ -238,14 +245,14 @@
             "type": "string",
             "format": "--workernode-size {value}",
             "secret": false,
-            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
+            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
           },
           {
             "name": "ZookeepernodeSize",
             "type": "string",
             "format": "--zookeepernode-size {value}",
             "secret": false,
-            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
+            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
           },
           {
             "name": "SshPassword",
@@ -290,18 +297,18 @@
             "help": "User-assigned managed identity with access to the storage account filesystem. Only required when storage account type is Azure Data Lake Storage Gen2."
           },
           {
-            "name": "StorageDefaultContainer",
+            "name": "StorageContainer",
             "type": "string",
-            "format": "--storage-default-container {value}",
+            "format": "--storage-container {value}",
             "secret": false,
             "help": "The storage container the cluster will use. Uses the cluster name if none was specified. (WASB only)."
           },
           {
-            "name": "StorageDefaultFilesystem",
+            "name": "StorageFilesystem",
             "type": "string",
-            "format": "--storage-default-filesystem {value}",
+            "format": "--storage-filesystem {value}",
             "secret": false,
-            "help": "The storage filesystem the cluster will use. (DFS only)."
+            "help": "The storage filesystem the cluster will use. Uses the cluster name if none was specified. (DFS only)."
           },
           {
             "name": "Subscription",
@@ -420,18 +427,18 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
+            "name": "WorkernodeCount",
+            "type": "string",
+            "format": "--workernode-count {value}",
+            "secret": false,
+            "help": "The target worker node instance count for the operation."
+          },
+          {
             "name": "NoWait",
             "type": "bool",
             "format": "--no-wait",
             "secret": false,
             "help": "Do not wait for the long-running operation to finish."
-          },
-          {
-            "name": "TargetInstanceCount",
-            "type": "string",
-            "format": "--target-instance-count {value}",
-            "secret": false,
-            "help": "The target instance count for the operation."
           },
           {
             "name": "Subscription",
@@ -651,8 +658,238 @@
       }
     },
     {
-      "postfix": "ApplicationCreate",
-      "definiteArgument": "hdinsight application create",
+      "postfix": "ScriptActionDelete",
+      "definiteArgument": "hdinsight script-action delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the script."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ScriptActionExecute",
+      "definiteArgument": "hdinsight script-action execute",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the script action."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Roles",
+            "type": "string",
+            "format": "--roles {value}",
+            "secret": false,
+            "help": "A space-delimited list of roles (nodes) where the script will be executed. Valid roles are headnode, workernode, zookeepernode, edgenode."
+          },
+          {
+            "name": "ScriptUri",
+            "type": "string",
+            "format": "--script-uri {value}",
+            "secret": false,
+            "help": "The URI to the script."
+          },
+          {
+            "name": "PersistOnSuccess",
+            "type": "string",
+            "format": "--persist-on-success {value}",
+            "secret": false,
+            "help": "If the scripts needs to be persisted."
+          },
+          {
+            "name": "ScriptParameters",
+            "type": "string",
+            "format": "--script-parameters {value}",
+            "secret": false,
+            "help": "The parameters for the script."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ScriptActionList",
+      "definiteArgument": "hdinsight script-action list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ScriptActionListExecutionHistory",
+      "definiteArgument": "hdinsight script-action list-execution-history",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ScriptActionPromote",
+      "definiteArgument": "hdinsight script-action promote",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ExecutionId",
+            "type": "string",
+            "format": "--execution-id {value}",
+            "secret": false,
+            "help": "The script execution id."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ScriptActionShowExecutionDetails",
+      "definiteArgument": "hdinsight script-action show-execution-details",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ExecutionId",
+            "type": "string",
+            "format": "--execution-id {value}",
+            "secret": false,
+            "help": "The script execution id."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MonitorDisable",
+      "definiteArgument": "hdinsight monitor disable",
       "settingsClass": {
         "properties": [
           {
@@ -670,6 +907,135 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MonitorEnable",
+      "definiteArgument": "hdinsight monitor enable",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Workspace",
+            "type": "string",
+            "format": "--workspace {value}",
+            "secret": false,
+            "help": "The name, resource ID or workspace ID of Log Analytics workspace."
+          },
+          {
+            "name": "NoValidationTimeout",
+            "type": "bool",
+            "format": "--no-validation-timeout",
+            "secret": false,
+            "help": "Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted."
+          },
+          {
+            "name": "PrimaryKey",
+            "type": "string",
+            "format": "--primary-key {value}",
+            "secret": false,
+            "help": "The certificate for the Log Analytics workspace. Required when workspace ID is provided."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MonitorShow",
+      "definiteArgument": "hdinsight monitor show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ApplicationCreate",
+      "definiteArgument": "hdinsight application create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The constant value for the application name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "MarketplaceId",
+            "type": "string",
+            "format": "--marketplace-id {value}",
+            "secret": false,
+            "help": "The marketplace identifier."
+          },
+          {
+            "name": "NoValidationTimeout",
+            "type": "bool",
+            "format": "--no-validation-timeout",
+            "secret": false,
+            "help": "Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted."
+          },
+          {
             "name": "Tags",
             "type": "string",
             "format": "--tags {value}",
@@ -677,53 +1043,39 @@
             "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
           },
           {
-            "name": "ApplicationName",
-            "type": "string",
-            "format": "--application-name {value}",
-            "secret": false,
-            "help": "The constant value for the application name."
-          },
-          {
-            "name": "ApplicationType",
-            "type": "string",
-            "format": "--application-type {value}",
+            "name": "Type",
+            "type": "HdinsightApplicationCreateType",
+            "format": "--type {value}",
             "secret": false,
             "help": "The application type."
           },
           {
-            "name": "MarketplaceIdentifier",
+            "name": "AccessMode",
             "type": "string",
-            "format": "--marketplace-identifier {value}",
-            "secret": false,
-            "help": "The marketplace identifier."
-          },
-          {
-            "name": "HttpsEndpointAccessMode",
-            "type": "string",
-            "format": "--https-endpoint-access-mode {value}",
+            "format": "--access-mode {value}",
             "secret": false,
             "help": "The access mode for the application."
           },
           {
-            "name": "HttpsEndpointDestinationPort",
+            "name": "DestinationPort",
             "type": "string",
-            "format": "--https-endpoint-destination-port {value}",
+            "format": "--destination-port {value}",
             "secret": false,
             "help": "The destination port to connect to."
           },
           {
-            "name": "HttpsEndpointLocation",
-            "type": "string",
-            "format": "--https-endpoint-location {value}",
+            "name": "DisableGatewayAuth",
+            "type": "bool",
+            "format": "--disable-gateway-auth",
             "secret": false,
-            "help": "The location of the endpoint."
+            "help": "Indicates whether to disable gateway authentication. Default is to enable gateway authentication. Default: false."
           },
           {
-            "name": "HttpsEndpointPublicPort",
+            "name": "SubDomainSuffix",
             "type": "string",
-            "format": "--https-endpoint-public-port {value}",
+            "format": "--sub-domain-suffix {value}",
             "secret": false,
-            "help": "The public port to connect to."
+            "help": "The subdomain suffix of the application."
           },
           {
             "name": "Subnet",
@@ -744,7 +1096,7 @@
             "type": "string",
             "format": "--edgenode-size {value}",
             "secret": false,
-            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
+            "help": "The size of the node. See also: <a href=\"https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size\">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>."
           },
           {
             "name": "SshPassword",
@@ -766,27 +1118,6 @@
             "format": "--ssh-user {value}",
             "secret": false,
             "help": "SSH username for the cluster nodes."
-          },
-          {
-            "name": "SshEndpointDestinationPort",
-            "type": "string",
-            "format": "--ssh-endpoint-destination-port {value}",
-            "secret": false,
-            "help": "The destination port to connect to."
-          },
-          {
-            "name": "SshEndpointLocation",
-            "type": "string",
-            "format": "--ssh-endpoint-location {value}",
-            "secret": false,
-            "help": "The location of the endpoint."
-          },
-          {
-            "name": "SshEndpointPublicPort",
-            "type": "string",
-            "format": "--ssh-endpoint-public-port {value}",
-            "secret": false,
-            "help": "The public port to connect to."
           },
           {
             "name": "ScriptActionName",
@@ -825,11 +1156,18 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "The name of the cluster."
+            "help": "The constant value for the application name."
           },
           {
             "name": "ResourceGroup",
@@ -853,13 +1191,6 @@
             "help": "Do not prompt for confirmation."
           },
           {
-            "name": "ApplicationName",
-            "type": "string",
-            "format": "--application-name {value}",
-            "secret": false,
-            "help": "The constant value for the application name."
-          },
-          {
             "name": "Subscription",
             "type": "string",
             "format": "--subscription {value}",
@@ -875,9 +1206,9 @@
       "settingsClass": {
         "properties": [
           {
-            "name": "Name",
+            "name": "ClusterName",
             "type": "string",
-            "format": "--name {value}",
+            "format": "--cluster-name {value}",
             "secret": false,
             "help": "The name of the cluster."
           },
@@ -904,11 +1235,18 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "The name of the cluster."
+            "help": "The constant value for the application name."
           },
           {
             "name": "ResourceGroup",
@@ -916,13 +1254,6 @@
             "format": "--resource-group {value}",
             "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ApplicationName",
-            "type": "string",
-            "format": "--application-name {value}",
-            "secret": false,
-            "help": "The constant value for the application name."
           },
           {
             "name": "Subscription",
@@ -940,11 +1271,18 @@
       "settingsClass": {
         "properties": [
           {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "The name of the cluster."
+          },
+          {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "The name of the cluster."
+            "help": "The constant value for the application name."
           },
           {
             "name": "ResourceGroup",
@@ -952,13 +1290,6 @@
             "format": "--resource-group {value}",
             "secret": false,
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ApplicationName",
-            "type": "string",
-            "format": "--application-name {value}",
-            "secret": false,
-            "help": "The constant value for the application name."
           },
           {
             "name": "Created",
@@ -1008,315 +1339,6 @@
             "format": "--updated {value}",
             "secret": false,
             "help": "Wait until updated with provisioningState at 'Succeeded'."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "OmsDisable",
-      "definiteArgument": "hdinsight oms disable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "OmsEnable",
-      "definiteArgument": "hdinsight oms enable",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "WorkspaceId",
-            "type": "string",
-            "format": "--workspace-id {value}",
-            "secret": false,
-            "help": "The Operations Management Suite (OMS) workspace ID."
-          },
-          {
-            "name": "PrimaryKey",
-            "type": "string",
-            "format": "--primary-key {value}",
-            "secret": false,
-            "help": "The Operations Management Suite (OMS) workspace key."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "OmsShow",
-      "definiteArgument": "hdinsight oms show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ScriptActionDelete",
-      "definiteArgument": "hdinsight script-action delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ScriptActionName",
-            "type": "string",
-            "format": "--script-action-name {value}",
-            "secret": false,
-            "help": "The name of the script action."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ScriptActionExecute",
-      "definiteArgument": "hdinsight script-action execute",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Roles",
-            "type": "string",
-            "format": "--roles {value}",
-            "secret": false,
-            "help": "A comma-delimited list of roles (nodes) where the script will be executed. Valid roles are headnode, workernode, zookeepernode, edgenode."
-          },
-          {
-            "name": "ScriptActionName",
-            "type": "string",
-            "format": "--script-action-name {value}",
-            "secret": false,
-            "help": "The name of the script action."
-          },
-          {
-            "name": "ScriptUri",
-            "type": "string",
-            "format": "--script-uri {value}",
-            "secret": false,
-            "help": "The URI to the script."
-          },
-          {
-            "name": "PersistOnSuccess",
-            "type": "string",
-            "format": "--persist-on-success {value}",
-            "secret": false,
-            "help": "If the scripts needs to be persisted."
-          },
-          {
-            "name": "ScriptParameters",
-            "type": "string",
-            "format": "--script-parameters {value}",
-            "secret": false,
-            "help": "The parameters for the script."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ScriptActionList",
-      "definiteArgument": "hdinsight script-action list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Persisted",
-            "type": "string",
-            "format": "--persisted {value}",
-            "secret": false,
-            "help": "If only list persisted script actions."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ScriptActionPromote",
-      "definiteArgument": "hdinsight script-action promote",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ScriptExecutionId",
-            "type": "string",
-            "format": "--script-execution-id {value}",
-            "secret": false,
-            "help": "The script execution Id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ScriptActionShow",
-      "definiteArgument": "hdinsight script-action show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the cluster."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ScriptExecutionId",
-            "type": "string",
-            "format": "--script-execution-id {value}",
-            "secret": false,
-            "help": "The script execution Id."
           },
           {
             "name": "Subscription",
@@ -1387,6 +1409,13 @@
       "values": [
         "premium_lrs",
         "standard_lrs"
+      ]
+    },
+    {
+      "name": "HdinsightApplicationCreateType",
+      "values": [
+        "customapplication",
+        "rserver"
       ]
     }
   ]

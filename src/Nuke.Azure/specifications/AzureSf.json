@@ -1,18 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/application.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/application/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/durability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/node-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/node.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/reliability.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/setting.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/application.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/cluster.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/cluster/reliability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/cluster/setting.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/cluster/node.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/cluster/upgrade-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/cluster/client-certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/cluster/node-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/cluster/durability.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/cluster/certificate.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/sf/application/certificate.yml"
   ],
   "name": "AzureSf",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest",
@@ -130,7 +130,7 @@
             "type": "string",
             "format": "--vault-resource-group {value}",
             "secret": false,
-            "help": "Key vault resource group name,if not given it will be cluster resource group name."
+            "help": "Key vault resource group name, if not given it will be cluster resource group name."
           },
           {
             "name": "VmPassword",
@@ -215,8 +215,8 @@
       }
     },
     {
-      "postfix": "ApplicationCertificateAdd",
-      "definiteArgument": "sf application certificate add",
+      "postfix": "ClusterReliabilityUpdate",
+      "definiteArgument": "sf cluster reliability update",
       "settingsClass": {
         "properties": [
           {
@@ -227,6 +227,13 @@
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
+            "name": "ReliabilityLevel",
+            "type": "SfClusterReliabilityUpdateReliabilityLevel",
+            "format": "--reliability-level {value}",
+            "secret": false,
+            "help": "Durability level."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
@@ -234,53 +241,11 @@
             "help": "The resource group name."
           },
           {
-            "name": "CertificateFile",
+            "name": "AutoAddNode",
             "type": "string",
-            "format": "--certificate-file {value}",
+            "format": "--auto-add-node {value}",
             "secret": false,
-            "help": "The existing certificate file path for the primary cluster certificate."
-          },
-          {
-            "name": "CertificateOutputFolder",
-            "type": "string",
-            "format": "--certificate-output-folder {value}",
-            "secret": false,
-            "help": "The folder of the new certificate file to be created."
-          },
-          {
-            "name": "CertificatePassword",
-            "type": "string",
-            "format": "--certificate-password {value}",
-            "secret": true,
-            "help": "The password of the certificate file."
-          },
-          {
-            "name": "CertificateSubjectName",
-            "type": "string",
-            "format": "--certificate-subject-name {value}",
-            "secret": false,
-            "help": "The subject name of the certificate to be created."
-          },
-          {
-            "name": "SecretIdentifier",
-            "type": "string",
-            "format": "--secret-identifier {value}",
-            "secret": true,
-            "help": "The existing Azure key vault secret URL."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Azure key vault name, it not given it will be the cluster resource group name."
-          },
-          {
-            "name": "VaultResourceGroup",
-            "type": "string",
-            "format": "--vault-resource-group {value}",
-            "secret": false,
-            "help": "Key vault resource group name,if not given it will be cluster resource group name."
+            "help": "Add node count automatically when changing reliability."
           },
           {
             "name": "Subscription",
@@ -293,8 +258,8 @@
       }
     },
     {
-      "postfix": "ClusterCertificateAdd",
-      "definiteArgument": "sf cluster certificate add",
+      "postfix": "ClusterSettingRemove",
+      "definiteArgument": "sf cluster setting remove",
       "settingsClass": {
         "properties": [
           {
@@ -312,53 +277,25 @@
             "help": "The resource group name."
           },
           {
-            "name": "CertificateFile",
+            "name": "Parameter",
             "type": "string",
-            "format": "--certificate-file {value}",
+            "format": "--parameter {value}",
             "secret": false,
-            "help": "The existing certificate file path for the primary cluster certificate."
+            "help": "Parameter name."
           },
           {
-            "name": "CertificateOutputFolder",
+            "name": "Section",
             "type": "string",
-            "format": "--certificate-output-folder {value}",
+            "format": "--section {value}",
             "secret": false,
-            "help": "The folder of the new certificate file to be created."
+            "help": "Section name."
           },
           {
-            "name": "CertificatePassword",
+            "name": "SettingsSectionDescription",
             "type": "string",
-            "format": "--certificate-password {value}",
-            "secret": true,
-            "help": "The password of the certificate file."
-          },
-          {
-            "name": "CertificateSubjectName",
-            "type": "string",
-            "format": "--certificate-subject-name {value}",
+            "format": "--settings-section-description {value}",
             "secret": false,
-            "help": "The subject name of the certificate to be created."
-          },
-          {
-            "name": "SecretIdentifier",
-            "type": "string",
-            "format": "--secret-identifier {value}",
-            "secret": true,
-            "help": "The existing Azure key vault secret URL."
-          },
-          {
-            "name": "VaultName",
-            "type": "string",
-            "format": "--vault-name {value}",
-            "secret": false,
-            "help": "Azure key vault name, it not given it will be the cluster resource group name."
-          },
-          {
-            "name": "VaultResourceGroup",
-            "type": "string",
-            "format": "--vault-resource-group {value}",
-            "secret": false,
-            "help": "Key vault resource group name,if not given it will be cluster resource group name."
+            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\"}]."
           },
           {
             "name": "Subscription",
@@ -371,8 +308,8 @@
       }
     },
     {
-      "postfix": "ClusterCertificateRemove",
-      "definiteArgument": "sf cluster certificate remove",
+      "postfix": "ClusterSettingSet",
+      "definiteArgument": "sf cluster setting set",
       "settingsClass": {
         "properties": [
           {
@@ -390,11 +327,161 @@
             "help": "The resource group name."
           },
           {
-            "name": "Thumbprint",
+            "name": "Parameter",
             "type": "string",
-            "format": "--thumbprint {value}",
+            "format": "--parameter {value}",
             "secret": false,
-            "help": "The cluster certificate thumbprint to be removed."
+            "help": "Parameter name."
+          },
+          {
+            "name": "Section",
+            "type": "string",
+            "format": "--section {value}",
+            "secret": false,
+            "help": "Section name."
+          },
+          {
+            "name": "SettingsSectionDescription",
+            "type": "string",
+            "format": "--settings-section-description {value}",
+            "secret": false,
+            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\",\"value\": 1000},{\"section\": \"MaxFileOperationTimeout\",\"parameter\": \"Max2\",\"value\": 1000]."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "secret": false,
+            "help": "Specify the value."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterNodeAdd",
+      "definiteArgument": "sf cluster node add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "secret": false,
+            "help": "The Node type name."
+          },
+          {
+            "name": "NumberOfNodesToAdd",
+            "type": "int",
+            "format": "--number-of-nodes-to-add {value}",
+            "secret": false,
+            "help": "Number of nodes to add."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterNodeRemove",
+      "definiteArgument": "sf cluster node remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "secret": false,
+            "help": "The Node type name."
+          },
+          {
+            "name": "NumberOfNodesToRemove",
+            "type": "int",
+            "format": "--number-of-nodes-to-remove {value}",
+            "secret": false,
+            "help": "Number of nodes to remove."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "The resource group name."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ClusterUpgradeTypeSet",
+      "definiteArgument": "sf cluster upgrade-type set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ClusterName",
+            "type": "string",
+            "format": "--cluster-name {value}",
+            "secret": false,
+            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "The resource group name."
+          },
+          {
+            "name": "UpgradeMode",
+            "type": "SfClusterUpgradeTypeSetUpgradeMode",
+            "format": "--upgrade-mode {value}",
+            "secret": false,
+            "help": "Cluster upgrade mode."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "secret": false,
+            "help": "Cluster code version."
           },
           {
             "name": "Subscription",
@@ -543,49 +630,6 @@
       }
     },
     {
-      "postfix": "ClusterDurabilityUpdate",
-      "definiteArgument": "sf cluster durability update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "secret": false,
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "DurabilityLevel",
-            "type": "SfClusterDurabilityDurabilityLevel",
-            "format": "--durability-level {value}",
-            "secret": false,
-            "help": "Durability level."
-          },
-          {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "secret": false,
-            "help": "The Node type name."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "The resource group name."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "ClusterNodeTypeAdd",
       "definiteArgument": "sf cluster node-type add",
       "settingsClass": {
@@ -634,7 +678,7 @@
           },
           {
             "name": "DurabilityLevel",
-            "type": "SfClusterDurabilityDurabilityLevel",
+            "type": "SfClusterNodeTypeDurabilityLevel",
             "format": "--durability-level {value}",
             "secret": false,
             "help": "Durability level."
@@ -664,8 +708,8 @@
       }
     },
     {
-      "postfix": "ClusterNodeAdd",
-      "definiteArgument": "sf cluster node add",
+      "postfix": "ClusterDurabilityUpdate",
+      "definiteArgument": "sf cluster durability update",
       "settingsClass": {
         "properties": [
           {
@@ -676,111 +720,25 @@
             "help": "Specify the name of the cluster, if not given it will be same as resource group name."
           },
           {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "secret": false,
-            "help": "The Node type name."
-          },
-          {
-            "name": "NumberOfNodesToAdd",
-            "type": "int",
-            "format": "--number-of-nodes-to-add {value}",
-            "secret": false,
-            "help": "Number of nodes to add."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "The resource group name."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterNodeRemove",
-      "definiteArgument": "sf cluster node remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "secret": false,
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "NodeType",
-            "type": "string",
-            "format": "--node-type {value}",
-            "secret": false,
-            "help": "The Node type name."
-          },
-          {
-            "name": "NumberOfNodesToRemove",
-            "type": "int",
-            "format": "--number-of-nodes-to-remove {value}",
-            "secret": false,
-            "help": "Number of nodes to remove."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "The resource group name."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ClusterReliabilityUpdate",
-      "definiteArgument": "sf cluster reliability update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ClusterName",
-            "type": "string",
-            "format": "--cluster-name {value}",
-            "secret": false,
-            "help": "Specify the name of the cluster, if not given it will be same as resource group name."
-          },
-          {
-            "name": "ReliabilityLevel",
-            "type": "SfClusterDurabilityDurabilityLevel",
-            "format": "--reliability-level {value}",
+            "name": "DurabilityLevel",
+            "type": "SfClusterNodeTypeDurabilityLevel",
+            "format": "--durability-level {value}",
             "secret": false,
             "help": "Durability level."
           },
           {
+            "name": "NodeType",
+            "type": "string",
+            "format": "--node-type {value}",
+            "secret": false,
+            "help": "The Node type name."
+          },
+          {
             "name": "ResourceGroup",
             "type": "string",
             "format": "--resource-group {value}",
             "secret": false,
             "help": "The resource group name."
-          },
-          {
-            "name": "AutoAddNode",
-            "type": "string",
-            "format": "--auto-add-node {value}",
-            "secret": false,
-            "help": "Add node count automatically when changing reliability."
           },
           {
             "name": "Subscription",
@@ -793,8 +751,8 @@
       }
     },
     {
-      "postfix": "ClusterSettingRemove",
-      "definiteArgument": "sf cluster setting remove",
+      "postfix": "ClusterCertificateAdd",
+      "definiteArgument": "sf cluster certificate add",
       "settingsClass": {
         "properties": [
           {
@@ -812,25 +770,53 @@
             "help": "The resource group name."
           },
           {
-            "name": "Parameter",
+            "name": "CertificateFile",
             "type": "string",
-            "format": "--parameter {value}",
+            "format": "--certificate-file {value}",
             "secret": false,
-            "help": "Parameter name."
+            "help": "The existing certificate file path for the primary cluster certificate."
           },
           {
-            "name": "Section",
+            "name": "CertificateOutputFolder",
             "type": "string",
-            "format": "--section {value}",
+            "format": "--certificate-output-folder {value}",
             "secret": false,
-            "help": "Section name."
+            "help": "The folder of the new certificate file to be created."
           },
           {
-            "name": "SettingsSectionDescription",
+            "name": "CertificatePassword",
             "type": "string",
-            "format": "--settings-section-description {value}",
+            "format": "--certificate-password {value}",
+            "secret": true,
+            "help": "The password of the certificate file."
+          },
+          {
+            "name": "CertificateSubjectName",
+            "type": "string",
+            "format": "--certificate-subject-name {value}",
             "secret": false,
-            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\"}]."
+            "help": "The subject name of the certificate to be created."
+          },
+          {
+            "name": "SecretIdentifier",
+            "type": "string",
+            "format": "--secret-identifier {value}",
+            "secret": true,
+            "help": "The existing Azure key vault secret URL."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Azure key vault name, it not given it will be the cluster resource group name."
+          },
+          {
+            "name": "VaultResourceGroup",
+            "type": "string",
+            "format": "--vault-resource-group {value}",
+            "secret": false,
+            "help": "Key vault resource group name, if not given it will be cluster resource group name."
           },
           {
             "name": "Subscription",
@@ -843,8 +829,8 @@
       }
     },
     {
-      "postfix": "ClusterSettingSet",
-      "definiteArgument": "sf cluster setting set",
+      "postfix": "ClusterCertificateRemove",
+      "definiteArgument": "sf cluster certificate remove",
       "settingsClass": {
         "properties": [
           {
@@ -862,32 +848,11 @@
             "help": "The resource group name."
           },
           {
-            "name": "Parameter",
+            "name": "Thumbprint",
             "type": "string",
-            "format": "--parameter {value}",
+            "format": "--thumbprint {value}",
             "secret": false,
-            "help": "Parameter name."
-          },
-          {
-            "name": "Section",
-            "type": "string",
-            "format": "--section {value}",
-            "secret": false,
-            "help": "Section name."
-          },
-          {
-            "name": "SettingsSectionDescription",
-            "type": "string",
-            "format": "--settings-section-description {value}",
-            "secret": false,
-            "help": "JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{\"section\": \"NamingService\",\"parameter\": \"MaxOperationTimeout\",\"value\": 1000},{\"section\": \"MaxFileOperationTimeout\",\"parameter\": \"Max2\",\"value\": 1000]."
-          },
-          {
-            "name": "Value",
-            "type": "string",
-            "format": "--value {value}",
-            "secret": false,
-            "help": "Specify the value."
+            "help": "The cluster certificate thumbprint to be removed."
           },
           {
             "name": "Subscription",
@@ -900,8 +865,8 @@
       }
     },
     {
-      "postfix": "ClusterUpgradeTypeSet",
-      "definiteArgument": "sf cluster upgrade-type set",
+      "postfix": "ApplicationCertificateAdd",
+      "definiteArgument": "sf application certificate add",
       "settingsClass": {
         "properties": [
           {
@@ -919,18 +884,53 @@
             "help": "The resource group name."
           },
           {
-            "name": "UpgradeMode",
-            "type": "SfClusterUpgradeTypeSetUpgradeMode",
-            "format": "--upgrade-mode {value}",
+            "name": "CertificateFile",
+            "type": "string",
+            "format": "--certificate-file {value}",
             "secret": false,
-            "help": "Cluster upgrade mode."
+            "help": "The existing certificate file path for the primary cluster certificate."
           },
           {
-            "name": "Version",
+            "name": "CertificateOutputFolder",
             "type": "string",
-            "format": "--version {value}",
+            "format": "--certificate-output-folder {value}",
             "secret": false,
-            "help": "Cluster code version."
+            "help": "The folder of the new certificate file to be created."
+          },
+          {
+            "name": "CertificatePassword",
+            "type": "string",
+            "format": "--certificate-password {value}",
+            "secret": true,
+            "help": "The password of the certificate file."
+          },
+          {
+            "name": "CertificateSubjectName",
+            "type": "string",
+            "format": "--certificate-subject-name {value}",
+            "secret": false,
+            "help": "The subject name of the certificate to be created."
+          },
+          {
+            "name": "SecretIdentifier",
+            "type": "string",
+            "format": "--secret-identifier {value}",
+            "secret": true,
+            "help": "The existing Azure key vault secret URL."
+          },
+          {
+            "name": "VaultName",
+            "type": "string",
+            "format": "--vault-name {value}",
+            "secret": false,
+            "help": "Azure key vault name, it not given it will be the cluster resource group name."
+          },
+          {
+            "name": "VaultResourceGroup",
+            "type": "string",
+            "format": "--vault-resource-group {value}",
+            "secret": false,
+            "help": "Key vault resource group name, if not given it will be cluster resource group name."
           },
           {
             "name": "Subscription",
@@ -985,16 +985,23 @@
       "name": "SfClusterCreateOs",
       "values": [
         "ubuntuserver1604",
+        "windowsserver1709",
+        "windowsserver1709withcontainers",
+        "windowsserver1803withcontainers",
+        "windowsserver1809withcontainers",
         "windowsserver2012r2datacenter",
         "windowsserver2016datacenter",
-        "windowsserver2016datacenterwithcontainers"
+        "windowsserver2016datacenterwithcontainers",
+        "windowsserver2019datacenter",
+        "windowsserver2019datacenterwithcontainers"
       ]
     },
     {
-      "name": "SfClusterDurabilityDurabilityLevel",
+      "name": "SfClusterReliabilityUpdateReliabilityLevel",
       "values": [
         "bronze",
         "gold",
+        "platinum",
         "silver"
       ]
     },
@@ -1003,6 +1010,14 @@
       "values": [
         "automatic",
         "manual"
+      ]
+    },
+    {
+      "name": "SfClusterNodeTypeDurabilityLevel",
+      "values": [
+        "bronze",
+        "gold",
+        "silver"
       ]
     }
   ]

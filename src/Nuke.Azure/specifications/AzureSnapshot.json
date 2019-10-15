@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/snapshot.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/snapshot.yml"
   ],
   "name": "AzureSnapshot",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/snapshot?view=azure-cli-latest",
@@ -40,6 +40,13 @@
             "format": "--hyper-v-generation {value}",
             "secret": false,
             "help": "The hypervisor generation of the Virtual Machine. Applicable to OS disks only."
+          },
+          {
+            "name": "Incremental",
+            "type": "bool",
+            "format": "--incremental",
+            "secret": false,
+            "help": "Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed."
           },
           {
             "name": "Location",
@@ -499,7 +506,8 @@
       "name": "SnapshotSku",
       "values": [
         "premium_lrs",
-        "standard_lrs"
+        "standard_lrs",
+        "standard_zrs"
       ]
     },
     {

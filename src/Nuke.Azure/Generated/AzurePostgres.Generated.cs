@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzurePostgres.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -85,6 +85,120 @@ namespace Nuke.Azure
         public static IEnumerable<(AzurePostgresSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgres(CombinatorialConfigure<AzurePostgresSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzurePostgres, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerLogsDownload(AzurePostgresServerLogsDownloadSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerLogsDownloadSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerLogsDownload(Configure<AzurePostgresServerLogsDownloadSettings> configurator)
+        {
+            return AzurePostgresServerLogsDownload(configurator(new AzurePostgresServerLogsDownloadSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerLogsDownloadSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerLogsDownload(CombinatorialConfigure<AzurePostgresServerLogsDownloadSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerLogsDownload, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerLogsList(AzurePostgresServerLogsListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerLogsListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerLogsListSettings.Debug"/></li>
+        ///     <li><c>--file-last-written</c> via <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/></li>
+        ///     <li><c>--filename-contains</c> via <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerLogsListSettings.Help"/></li>
+        ///     <li><c>--max-file-size</c> via <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerLogsListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerLogsListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerLogsListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerLogsListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerLogsListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerLogsList(Configure<AzurePostgresServerLogsListSettings> configurator)
+        {
+            return AzurePostgresServerLogsList(configurator(new AzurePostgresServerLogsListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerLogsListSettings.Debug"/></li>
+        ///     <li><c>--file-last-written</c> via <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/></li>
+        ///     <li><c>--filename-contains</c> via <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerLogsListSettings.Help"/></li>
+        ///     <li><c>--max-file-size</c> via <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerLogsListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerLogsListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerLogsListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerLogsListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerLogsListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerLogsListSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerLogsList(CombinatorialConfigure<AzurePostgresServerLogsListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerLogsList, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Database for PostgreSQL servers.</p>
@@ -314,120 +428,6 @@ namespace Nuke.Azure
         ///   <p>Manage Azure Database for PostgreSQL servers.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerLogsDownload(AzurePostgresServerLogsDownloadSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerLogsDownloadSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerLogsDownload(Configure<AzurePostgresServerLogsDownloadSettings> configurator)
-        {
-            return AzurePostgresServerLogsDownload(configurator(new AzurePostgresServerLogsDownloadSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerLogsDownloadSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerLogsDownload(CombinatorialConfigure<AzurePostgresServerLogsDownloadSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerLogsDownload, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerLogsList(AzurePostgresServerLogsListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerLogsListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerLogsListSettings.Debug"/></li>
-        ///     <li><c>--file-last-written</c> via <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/></li>
-        ///     <li><c>--filename-contains</c> via <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerLogsListSettings.Help"/></li>
-        ///     <li><c>--max-file-size</c> via <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerLogsListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerLogsListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerLogsListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerLogsListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerLogsListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerLogsList(Configure<AzurePostgresServerLogsListSettings> configurator)
-        {
-            return AzurePostgresServerLogsList(configurator(new AzurePostgresServerLogsListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerLogsListSettings.Debug"/></li>
-        ///     <li><c>--file-last-written</c> via <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/></li>
-        ///     <li><c>--filename-contains</c> via <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerLogsListSettings.Help"/></li>
-        ///     <li><c>--max-file-size</c> via <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerLogsListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerLogsListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerLogsListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerLogsListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerLogsListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerLogsListSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerLogsList(CombinatorialConfigure<AzurePostgresServerLogsListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerLogsList, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
         public static IReadOnlyCollection<Output> AzurePostgresServerCreate(AzurePostgresServerCreateSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzurePostgresServerCreateSettings();
@@ -444,6 +444,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--admin-password</c> via <see cref="AzurePostgresServerCreateSettings.AdminPassword"/></li>
         ///     <li><c>--admin-user</c> via <see cref="AzurePostgresServerCreateSettings.AdminUser"/></li>
+        ///     <li><c>--auto-grow</c> via <see cref="AzurePostgresServerCreateSettings.AutoGrow"/></li>
         ///     <li><c>--backup-retention</c> via <see cref="AzurePostgresServerCreateSettings.BackupRetention"/></li>
         ///     <li><c>--debug</c> via <see cref="AzurePostgresServerCreateSettings.Debug"/></li>
         ///     <li><c>--geo-redundant-backup</c> via <see cref="AzurePostgresServerCreateSettings.GeoRedundantBackup"/></li>
@@ -475,6 +476,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--admin-password</c> via <see cref="AzurePostgresServerCreateSettings.AdminPassword"/></li>
         ///     <li><c>--admin-user</c> via <see cref="AzurePostgresServerCreateSettings.AdminUser"/></li>
+        ///     <li><c>--auto-grow</c> via <see cref="AzurePostgresServerCreateSettings.AutoGrow"/></li>
         ///     <li><c>--backup-retention</c> via <see cref="AzurePostgresServerCreateSettings.BackupRetention"/></li>
         ///     <li><c>--debug</c> via <see cref="AzurePostgresServerCreateSettings.Debug"/></li>
         ///     <li><c>--geo-redundant-backup</c> via <see cref="AzurePostgresServerCreateSettings.GeoRedundantBackup"/></li>
@@ -863,6 +865,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--add</c> via <see cref="AzurePostgresServerUpdateSettings.Add"/></li>
         ///     <li><c>--admin-password</c> via <see cref="AzurePostgresServerUpdateSettings.AdminPassword"/></li>
+        ///     <li><c>--auto-grow</c> via <see cref="AzurePostgresServerUpdateSettings.AutoGrow"/></li>
         ///     <li><c>--backup-retention</c> via <see cref="AzurePostgresServerUpdateSettings.BackupRetention"/></li>
         ///     <li><c>--debug</c> via <see cref="AzurePostgresServerUpdateSettings.Debug"/></li>
         ///     <li><c>--force-string</c> via <see cref="AzurePostgresServerUpdateSettings.ForceString"/></li>
@@ -895,6 +898,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--add</c> via <see cref="AzurePostgresServerUpdateSettings.Add"/></li>
         ///     <li><c>--admin-password</c> via <see cref="AzurePostgresServerUpdateSettings.AdminPassword"/></li>
+        ///     <li><c>--auto-grow</c> via <see cref="AzurePostgresServerUpdateSettings.AutoGrow"/></li>
         ///     <li><c>--backup-retention</c> via <see cref="AzurePostgresServerUpdateSettings.BackupRetention"/></li>
         ///     <li><c>--debug</c> via <see cref="AzurePostgresServerUpdateSettings.Debug"/></li>
         ///     <li><c>--force-string</c> via <see cref="AzurePostgresServerUpdateSettings.ForceString"/></li>
@@ -980,6 +984,480 @@ namespace Nuke.Azure
         public static IEnumerable<(AzurePostgresServerWaitSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerWait(CombinatorialConfigure<AzurePostgresServerWaitSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzurePostgresServerWait, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleCreate(AzurePostgresServerVnetRuleCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Help"/></li>
+        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.ServerName"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleCreate(Configure<AzurePostgresServerVnetRuleCreateSettings> configurator)
+        {
+            return AzurePostgresServerVnetRuleCreate(configurator(new AzurePostgresServerVnetRuleCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Help"/></li>
+        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.ServerName"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerVnetRuleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleCreate(CombinatorialConfigure<AzurePostgresServerVnetRuleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerVnetRuleCreate, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleDelete(AzurePostgresServerVnetRuleDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleDelete(Configure<AzurePostgresServerVnetRuleDeleteSettings> configurator)
+        {
+            return AzurePostgresServerVnetRuleDelete(configurator(new AzurePostgresServerVnetRuleDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerVnetRuleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleDelete(CombinatorialConfigure<AzurePostgresServerVnetRuleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerVnetRuleDelete, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleList(AzurePostgresServerVnetRuleListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleList(Configure<AzurePostgresServerVnetRuleListSettings> configurator)
+        {
+            return AzurePostgresServerVnetRuleList(configurator(new AzurePostgresServerVnetRuleListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerVnetRuleListSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleList(CombinatorialConfigure<AzurePostgresServerVnetRuleListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerVnetRuleList, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleShow(AzurePostgresServerVnetRuleShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleShow(Configure<AzurePostgresServerVnetRuleShowSettings> configurator)
+        {
+            return AzurePostgresServerVnetRuleShow(configurator(new AzurePostgresServerVnetRuleShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerVnetRuleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleShow(CombinatorialConfigure<AzurePostgresServerVnetRuleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerVnetRuleShow, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleUpdate(AzurePostgresServerVnetRuleUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></li>
+        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ServerName"/></li>
+        ///     <li><c>--set</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Set"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleUpdate(Configure<AzurePostgresServerVnetRuleUpdateSettings> configurator)
+        {
+            return AzurePostgresServerVnetRuleUpdate(configurator(new AzurePostgresServerVnetRuleUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></li>
+        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ServerName"/></li>
+        ///     <li><c>--set</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Set"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerVnetRuleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleUpdate(CombinatorialConfigure<AzurePostgresServerVnetRuleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerVnetRuleUpdate, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaCreate(AzurePostgresServerReplicaCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerReplicaCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--sku-name</c> via <see cref="AzurePostgresServerReplicaCreateSettings.SkuName"/></li>
+        ///     <li><c>--source-server</c> via <see cref="AzurePostgresServerReplicaCreateSettings.SourceServer"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaCreate(Configure<AzurePostgresServerReplicaCreateSettings> configurator)
+        {
+            return AzurePostgresServerReplicaCreate(configurator(new AzurePostgresServerReplicaCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--sku-name</c> via <see cref="AzurePostgresServerReplicaCreateSettings.SkuName"/></li>
+        ///     <li><c>--source-server</c> via <see cref="AzurePostgresServerReplicaCreateSettings.SourceServer"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerReplicaCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerReplicaCreate(CombinatorialConfigure<AzurePostgresServerReplicaCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerReplicaCreate, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaList(AzurePostgresServerReplicaListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerReplicaListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerReplicaListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerReplicaListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaList(Configure<AzurePostgresServerReplicaListSettings> configurator)
+        {
+            return AzurePostgresServerReplicaList(configurator(new AzurePostgresServerReplicaListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerReplicaListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerReplicaListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerReplicaListSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerReplicaList(CombinatorialConfigure<AzurePostgresServerReplicaListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerReplicaList, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaStop(AzurePostgresServerReplicaStopSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzurePostgresServerReplicaStopSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaStopSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaStopSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerReplicaStopSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaStopSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaStopSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaStopSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaStopSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaStopSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="AzurePostgresServerReplicaStopSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaStop(Configure<AzurePostgresServerReplicaStopSettings> configurator)
+        {
+            return AzurePostgresServerReplicaStop(configurator(new AzurePostgresServerReplicaStopSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaStopSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaStopSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzurePostgresServerReplicaStopSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaStopSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaStopSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaStopSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaStopSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaStopSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="AzurePostgresServerReplicaStopSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzurePostgresServerReplicaStopSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerReplicaStop(CombinatorialConfigure<AzurePostgresServerReplicaStopSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzurePostgresServerReplicaStop, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Database for PostgreSQL servers.</p>
@@ -1451,478 +1929,6 @@ namespace Nuke.Azure
         {
             return configurator.Invoke(AzurePostgresServerFirewallRuleUpdate, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
         }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaCreate(AzurePostgresServerReplicaCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerReplicaCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Name"/></li>
-        ///     <li><c>--no-wait</c> via <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--source-server</c> via <see cref="AzurePostgresServerReplicaCreateSettings.SourceServer"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaCreate(Configure<AzurePostgresServerReplicaCreateSettings> configurator)
-        {
-            return AzurePostgresServerReplicaCreate(configurator(new AzurePostgresServerReplicaCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Name"/></li>
-        ///     <li><c>--no-wait</c> via <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--source-server</c> via <see cref="AzurePostgresServerReplicaCreateSettings.SourceServer"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerReplicaCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerReplicaCreate(CombinatorialConfigure<AzurePostgresServerReplicaCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerReplicaCreate, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaList(AzurePostgresServerReplicaListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerReplicaListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaListSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerReplicaListSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerReplicaListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaList(Configure<AzurePostgresServerReplicaListSettings> configurator)
-        {
-            return AzurePostgresServerReplicaList(configurator(new AzurePostgresServerReplicaListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaListSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerReplicaListSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerReplicaListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerReplicaListSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerReplicaList(CombinatorialConfigure<AzurePostgresServerReplicaListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerReplicaList, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaStop(AzurePostgresServerReplicaStopSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerReplicaStopSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaStopSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaStopSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerReplicaStopSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaStopSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaStopSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaStopSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaStopSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaStopSettings.Verbose"/></li>
-        ///     <li><c>--yes</c> via <see cref="AzurePostgresServerReplicaStopSettings.Yes"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerReplicaStop(Configure<AzurePostgresServerReplicaStopSettings> configurator)
-        {
-            return AzurePostgresServerReplicaStop(configurator(new AzurePostgresServerReplicaStopSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerReplicaStopSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerReplicaStopSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerReplicaStopSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerReplicaStopSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerReplicaStopSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerReplicaStopSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerReplicaStopSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerReplicaStopSettings.Verbose"/></li>
-        ///     <li><c>--yes</c> via <see cref="AzurePostgresServerReplicaStopSettings.Yes"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerReplicaStopSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerReplicaStop(CombinatorialConfigure<AzurePostgresServerReplicaStopSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerReplicaStop, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleCreate(AzurePostgresServerVnetRuleCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Help"/></li>
-        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.ServerName"/></li>
-        ///     <li><c>--subnet</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Subnet"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Verbose"/></li>
-        ///     <li><c>--vnet-name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.VnetName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleCreate(Configure<AzurePostgresServerVnetRuleCreateSettings> configurator)
-        {
-            return AzurePostgresServerVnetRuleCreate(configurator(new AzurePostgresServerVnetRuleCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Help"/></li>
-        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.ServerName"/></li>
-        ///     <li><c>--subnet</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Subnet"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.Verbose"/></li>
-        ///     <li><c>--vnet-name</c> via <see cref="AzurePostgresServerVnetRuleCreateSettings.VnetName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerVnetRuleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleCreate(CombinatorialConfigure<AzurePostgresServerVnetRuleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerVnetRuleCreate, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleDelete(AzurePostgresServerVnetRuleDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleDelete(Configure<AzurePostgresServerVnetRuleDeleteSettings> configurator)
-        {
-            return AzurePostgresServerVnetRuleDelete(configurator(new AzurePostgresServerVnetRuleDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerVnetRuleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleDelete(CombinatorialConfigure<AzurePostgresServerVnetRuleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerVnetRuleDelete, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleList(AzurePostgresServerVnetRuleListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleList(Configure<AzurePostgresServerVnetRuleListSettings> configurator)
-        {
-            return AzurePostgresServerVnetRuleList(configurator(new AzurePostgresServerVnetRuleListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerVnetRuleListSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleList(CombinatorialConfigure<AzurePostgresServerVnetRuleListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerVnetRuleList, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleShow(AzurePostgresServerVnetRuleShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleShow(Configure<AzurePostgresServerVnetRuleShowSettings> configurator)
-        {
-            return AzurePostgresServerVnetRuleShow(configurator(new AzurePostgresServerVnetRuleShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerVnetRuleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleShow(CombinatorialConfigure<AzurePostgresServerVnetRuleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerVnetRuleShow, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleUpdate(AzurePostgresServerVnetRuleUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzurePostgresServerVnetRuleUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></li>
-        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ServerName"/></li>
-        ///     <li><c>--set</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Set"/></li>
-        ///     <li><c>--subnet</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subnet"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Verbose"/></li>
-        ///     <li><c>--vnet-name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.VnetName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzurePostgresServerVnetRuleUpdate(Configure<AzurePostgresServerVnetRuleUpdateSettings> configurator)
-        {
-            return AzurePostgresServerVnetRuleUpdate(configurator(new AzurePostgresServerVnetRuleUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for PostgreSQL servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/postgres?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></li>
-        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></li>
-        ///     <li><c>--name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.ServerName"/></li>
-        ///     <li><c>--set</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Set"/></li>
-        ///     <li><c>--subnet</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subnet"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.Verbose"/></li>
-        ///     <li><c>--vnet-name</c> via <see cref="AzurePostgresServerVnetRuleUpdateSettings.VnetName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzurePostgresServerVnetRuleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzurePostgresServerVnetRuleUpdate(CombinatorialConfigure<AzurePostgresServerVnetRuleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzurePostgresServerVnetRuleUpdate, AzurePostgresLogger, degreeOfParallelism, completeOnFailure);
-        }
     }
     #region AzurePostgresSettings
     /// <summary>
@@ -1962,6 +1968,151 @@ namespace Nuke.Azure
         {
             arguments
               .Add("postgres")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerLogsDownloadSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerLogsDownloadSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   Space-separated list of log filenames on the server to download.
+        /// </summary>
+        public virtual IReadOnlyList<string> Name => NameInternal.AsReadOnly();
+        internal List<string> NameInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server-logs download")
+              .Add("--name {value}", Name, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerLogsListSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerLogsListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Integer in hours to indicate file last modify time, default value is 72.
+        /// </summary>
+        public virtual string FileLastWritten { get; internal set; }
+        /// <summary>
+        ///   The pattern that file name should match.
+        /// </summary>
+        public virtual string FilenameContains { get; internal set; }
+        /// <summary>
+        ///   The file size limitation to filter files.
+        /// </summary>
+        public virtual string MaxFileSize { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server-logs list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--file-last-written {value}", FileLastWritten)
+              .Add("--filename-contains {value}", FilenameContains)
+              .Add("--max-file-size {value}", MaxFileSize)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2249,151 +2400,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzurePostgresServerLogsDownloadSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerLogsDownloadSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   Space-separated list of log filenames on the server to download.
-        /// </summary>
-        public virtual IReadOnlyList<string> Name => NameInternal.AsReadOnly();
-        internal List<string> NameInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server-logs download")
-              .Add("--name {value}", Name, separator: ' ')
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerLogsListSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerLogsListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Integer in hours to indicate file last modify time, default value is 72.
-        /// </summary>
-        public virtual string FileLastWritten { get; internal set; }
-        /// <summary>
-        ///   The pattern that file name should match.
-        /// </summary>
-        public virtual string FilenameContains { get; internal set; }
-        /// <summary>
-        ///   The file size limitation to filter files.
-        /// </summary>
-        public virtual string MaxFileSize { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server-logs list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--file-last-written {value}", FileLastWritten)
-              .Add("--filename-contains {value}", FilenameContains)
-              .Add("--max-file-size {value}", MaxFileSize)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzurePostgresServerCreateSettings
     /// <summary>
     ///   Used within <see cref="AzurePostgresTasks"/>.
@@ -2421,13 +2427,17 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string SkuName { get; internal set; }
         /// <summary>
+        ///   Enable or disable autogrow of the storage. Default value is Enabled.
+        /// </summary>
+        public virtual PostgresServerAutoGrow AutoGrow { get; internal set; }
+        /// <summary>
         ///   The number of days a backup is retained. Range of 7 to 35 days. Default is 7 days.
         /// </summary>
         public virtual string BackupRetention { get; internal set; }
         /// <summary>
         ///   Enable or disable geo-redundant backups. Default value is Disabled. Not supported in Basic pricing tier.
         /// </summary>
-        public virtual PostgresServerCreateGeoRedundantBackup GeoRedundantBackup { get; internal set; }
+        public virtual PostgresServerAutoGrow GeoRedundantBackup { get; internal set; }
         /// <summary>
         ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
         /// </summary>
@@ -2435,7 +2445,7 @@ namespace Nuke.Azure
         /// <summary>
         ///   Enable or disable ssl enforcement for connections to server. Default is Enabled.
         /// </summary>
-        public virtual PostgresServerCreateGeoRedundantBackup SslEnforcement { get; internal set; }
+        public virtual PostgresServerAutoGrow SslEnforcement { get; internal set; }
         /// <summary>
         ///   The storage capacity of the server (unit is megabytes). Minimum 5120 and increases in 1024 increments. Default is 51200.
         /// </summary>
@@ -2487,6 +2497,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--sku-name {value}", SkuName)
+              .Add("--auto-grow {value}", AutoGrow)
               .Add("--backup-retention {value}", BackupRetention)
               .Add("--geo-redundant-backup {value}", GeoRedundantBackup)
               .Add("--location {value}", Location)
@@ -2972,6 +2983,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string AdminPassword { get; internal set; }
         /// <summary>
+        ///   Enable or disable autogrow of the storage. Default value is Enabled.
+        /// </summary>
+        public virtual PostgresServerAutoGrow AutoGrow { get; internal set; }
+        /// <summary>
         ///   The number of days a backup is retained. Range of 7 to 35 days. Default is 7 days.
         /// </summary>
         public virtual string BackupRetention { get; internal set; }
@@ -2982,7 +2997,7 @@ namespace Nuke.Azure
         /// <summary>
         ///   Enable or disable ssl enforcement for connections to server. Default is Enabled.
         /// </summary>
-        public virtual PostgresServerCreateGeoRedundantBackup SslEnforcement { get; internal set; }
+        public virtual PostgresServerAutoGrow SslEnforcement { get; internal set; }
         /// <summary>
         ///   The storage capacity of the server (unit is megabytes). Minimum 5120 and increases in 1024 increments. Default is 51200.
         /// </summary>
@@ -3049,6 +3064,7 @@ namespace Nuke.Azure
             arguments
               .Add("postgres server update")
               .Add("--admin-password {value}", AdminPassword, secret: true)
+              .Add("--auto-grow {value}", AutoGrow)
               .Add("--backup-retention {value}", BackupRetention)
               .Add("--sku-name {value}", SkuName)
               .Add("--ssl-enforcement {value}", SslEnforcement)
@@ -3150,6 +3166,633 @@ namespace Nuke.Azure
               .Add("--exists {value}", Exists)
               .Add("--interval {value}", Interval)
               .Add("--timeout {value}", Timeout)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerVnetRuleCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   The name of the vnet rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.
+        /// </summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary>
+        ///   Create vnet rule before virtual network has vnet service endpoint enabled.
+        /// </summary>
+        public virtual bool? IgnoreMissingEndpoint { get; internal set; }
+        /// <summary>
+        ///   The virtual network name.
+        /// </summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server vnet-rule create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subnet {value}", Subnet)
+              .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerVnetRuleDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the vnet rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server vnet-rule delete")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleListSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerVnetRuleListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server vnet-rule list")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerVnetRuleShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the vnet rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server vnet-rule show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerVnetRuleUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.
+        /// </summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary>
+        ///   Create vnet rule before virtual network has vnet service endpoint enabled.
+        /// </summary>
+        public virtual bool? IgnoreMissingEndpoint { get; internal set; }
+        /// <summary>
+        ///   The virtual network name.
+        /// </summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the vnet rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
+        /// </summary>
+        public virtual string Add { get; internal set; }
+        /// <summary>
+        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+        /// </summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary>
+        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
+        /// </summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary>
+        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
+        /// </summary>
+        public virtual string Set { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server vnet-rule update")
+              .Add("--subnet {value}", Subnet)
+              .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerReplicaCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerReplicaCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The name or resource ID of the master server to the create replica for.
+        /// </summary>
+        public virtual string SourceServer { get; internal set; }
+        /// <summary>
+        ///   Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.
+        /// </summary>
+        public virtual string Location { get; internal set; }
+        /// <summary>
+        ///   Do not wait for the long-running operation to finish.
+        /// </summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary>
+        ///   The name of the sku. Follows the convention {pricing tier}_{compute generation}_{vCores} in shorthand. Examples: B_Gen5_1, GP_Gen5_4, MO_Gen5_16.
+        /// </summary>
+        public virtual string SkuName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server replica create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--source-server {value}", SourceServer)
+              .Add("--location {value}", Location)
+              .Add("--no-wait", NoWait)
+              .Add("--sku-name {value}", SkuName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerReplicaListSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerReplicaListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the master server.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server replica list")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzurePostgresServerReplicaStopSettings
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzurePostgresServerReplicaStopSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzurePostgres executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
+        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
+        /// <summary>
+        ///   Do not prompt for confirmation.
+        /// </summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("postgres server replica stop")
+              .Add("--yes {value}", Yes)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3777,628 +4420,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzurePostgresServerReplicaCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerReplicaCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The name or resource ID of the master server to the create replica for.
-        /// </summary>
-        public virtual string SourceServer { get; internal set; }
-        /// <summary>
-        ///   Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.
-        /// </summary>
-        public virtual string Location { get; internal set; }
-        /// <summary>
-        ///   Do not wait for the long-running operation to finish.
-        /// </summary>
-        public virtual bool? NoWait { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server replica create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--source-server {value}", SourceServer)
-              .Add("--location {value}", Location)
-              .Add("--no-wait", NoWait)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerReplicaListSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerReplicaListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the master server.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server replica list")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerReplicaStopSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerReplicaStopSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   Do not prompt for confirmation.
-        /// </summary>
-        public virtual string Yes { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server replica stop")
-              .Add("--yes {value}", Yes)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerVnetRuleCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   The name of the vnet rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.
-        /// </summary>
-        public virtual string Subnet { get; internal set; }
-        /// <summary>
-        ///   Create vnet rule before virtual network has vnet service endpoint enabled.
-        /// </summary>
-        public virtual bool? IgnoreMissingEndpoint { get; internal set; }
-        /// <summary>
-        ///   The virtual network name.
-        /// </summary>
-        public virtual string VnetName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server vnet-rule create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subnet {value}", Subnet)
-              .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
-              .Add("--vnet-name {value}", VnetName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerVnetRuleDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the vnet rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server vnet-rule delete")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleListSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerVnetRuleListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server vnet-rule list")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerVnetRuleShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the vnet rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server vnet-rule show")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzurePostgresServerVnetRuleUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzurePostgres executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzurePostgresTasks.AzurePostgresPath;
-        public override Action<OutputType, string> CustomLogger => AzurePostgresTasks.AzurePostgresLogger;
-        /// <summary>
-        ///   Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.
-        /// </summary>
-        public virtual string Subnet { get; internal set; }
-        /// <summary>
-        ///   Create vnet rule before virtual network has vnet service endpoint enabled.
-        /// </summary>
-        public virtual bool? IgnoreMissingEndpoint { get; internal set; }
-        /// <summary>
-        ///   The virtual network name.
-        /// </summary>
-        public virtual string VnetName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the vnet rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
-        /// </summary>
-        public virtual string Add { get; internal set; }
-        /// <summary>
-        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-        /// </summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary>
-        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
-        /// </summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary>
-        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
-        /// </summary>
-        public virtual string Set { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("postgres server vnet-rule update")
-              .Add("--subnet {value}", Subnet)
-              .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
-              .Add("--vnet-name {value}", VnetName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzurePostgresSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzurePostgresTasks"/>.
@@ -4521,6 +4542,563 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzurePostgresSettings ResetVerbose(this AzurePostgresSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerLogsDownloadSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerLogsDownloadSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Name"/> to a new list</em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal = name.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Name"/> to a new list</em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal = name.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings AddName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.AddRange(name);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings AddName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.AddRange(name);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ClearName(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings RemoveName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(name);
+            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings RemoveName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(name);
+            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetResourceGroup(this AzurePostgresServerLogsDownloadSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetResourceGroup(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetServerName(this AzurePostgresServerLogsDownloadSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetServerName(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetSubscription(this AzurePostgresServerLogsDownloadSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetSubscription(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetDebug(this AzurePostgresServerLogsDownloadSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetDebug(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetHelp(this AzurePostgresServerLogsDownloadSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetHelp(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetOutput(this AzurePostgresServerLogsDownloadSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetOutput(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetQuery(this AzurePostgresServerLogsDownloadSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetQuery(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings SetVerbose(this AzurePostgresServerLogsDownloadSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsDownloadSettings ResetVerbose(this AzurePostgresServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerLogsListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerLogsListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetResourceGroup(this AzurePostgresServerLogsListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetResourceGroup(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetServerName(this AzurePostgresServerLogsListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetServerName(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FileLastWritten
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/></em></p>
+        ///   <p>Integer in hours to indicate file last modify time, default value is 72.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetFileLastWritten(this AzurePostgresServerLogsListSettings toolSettings, string fileLastWritten)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileLastWritten = fileLastWritten;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/></em></p>
+        ///   <p>Integer in hours to indicate file last modify time, default value is 72.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetFileLastWritten(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileLastWritten = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FilenameContains
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/></em></p>
+        ///   <p>The pattern that file name should match.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetFilenameContains(this AzurePostgresServerLogsListSettings toolSettings, string filenameContains)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilenameContains = filenameContains;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/></em></p>
+        ///   <p>The pattern that file name should match.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetFilenameContains(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilenameContains = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MaxFileSize
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/></em></p>
+        ///   <p>The file size limitation to filter files.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetMaxFileSize(this AzurePostgresServerLogsListSettings toolSettings, string maxFileSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxFileSize = maxFileSize;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/></em></p>
+        ///   <p>The file size limitation to filter files.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetMaxFileSize(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxFileSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetSubscription(this AzurePostgresServerLogsListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetSubscription(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetDebug(this AzurePostgresServerLogsListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetDebug(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetHelp(this AzurePostgresServerLogsListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetHelp(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetOutput(this AzurePostgresServerLogsListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetOutput(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetQuery(this AzurePostgresServerLogsListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetQuery(this AzurePostgresServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings SetVerbose(this AzurePostgresServerLogsListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerLogsListSettings ResetVerbose(this AzurePostgresServerLogsListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5481,563 +6059,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzurePostgresServerLogsDownloadSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerLogsDownloadSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Name"/> to a new list</em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal = name.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Name"/> to a new list</em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal = name.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings AddName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.AddRange(name);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings AddName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.AddRange(name);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ClearName(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings RemoveName(this AzurePostgresServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(name);
-            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings RemoveName(this AzurePostgresServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(name);
-            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetResourceGroup(this AzurePostgresServerLogsDownloadSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetResourceGroup(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetServerName(this AzurePostgresServerLogsDownloadSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetServerName(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetSubscription(this AzurePostgresServerLogsDownloadSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetSubscription(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetDebug(this AzurePostgresServerLogsDownloadSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetDebug(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetHelp(this AzurePostgresServerLogsDownloadSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetHelp(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetOutput(this AzurePostgresServerLogsDownloadSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetOutput(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetQuery(this AzurePostgresServerLogsDownloadSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetQuery(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings SetVerbose(this AzurePostgresServerLogsDownloadSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsDownloadSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsDownloadSettings ResetVerbose(this AzurePostgresServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerLogsListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerLogsListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetResourceGroup(this AzurePostgresServerLogsListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetResourceGroup(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetServerName(this AzurePostgresServerLogsListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetServerName(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FileLastWritten
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/></em></p>
-        ///   <p>Integer in hours to indicate file last modify time, default value is 72.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetFileLastWritten(this AzurePostgresServerLogsListSettings toolSettings, string fileLastWritten)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FileLastWritten = fileLastWritten;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.FileLastWritten"/></em></p>
-        ///   <p>Integer in hours to indicate file last modify time, default value is 72.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetFileLastWritten(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FileLastWritten = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FilenameContains
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/></em></p>
-        ///   <p>The pattern that file name should match.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetFilenameContains(this AzurePostgresServerLogsListSettings toolSettings, string filenameContains)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilenameContains = filenameContains;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.FilenameContains"/></em></p>
-        ///   <p>The pattern that file name should match.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetFilenameContains(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilenameContains = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MaxFileSize
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/></em></p>
-        ///   <p>The file size limitation to filter files.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetMaxFileSize(this AzurePostgresServerLogsListSettings toolSettings, string maxFileSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxFileSize = maxFileSize;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.MaxFileSize"/></em></p>
-        ///   <p>The file size limitation to filter files.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetMaxFileSize(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxFileSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetSubscription(this AzurePostgresServerLogsListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetSubscription(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetDebug(this AzurePostgresServerLogsListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetDebug(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetHelp(this AzurePostgresServerLogsListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetHelp(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetOutput(this AzurePostgresServerLogsListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetOutput(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetQuery(this AzurePostgresServerLogsListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetQuery(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerLogsListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings SetVerbose(this AzurePostgresServerLogsListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerLogsListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerLogsListSettings ResetVerbose(this AzurePostgresServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzurePostgresServerCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzurePostgresTasks"/>.
@@ -6118,6 +6139,30 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AutoGrow
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerCreateSettings.AutoGrow"/></em></p>
+        ///   <p>Enable or disable autogrow of the storage. Default value is Enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerCreateSettings SetAutoGrow(this AzurePostgresServerCreateSettings toolSettings, PostgresServerAutoGrow autoGrow)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoGrow = autoGrow;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerCreateSettings.AutoGrow"/></em></p>
+        ///   <p>Enable or disable autogrow of the storage. Default value is Enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerCreateSettings ResetAutoGrow(this AzurePostgresServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoGrow = null;
+            return toolSettings;
+        }
+        #endregion
         #region BackupRetention
         /// <summary>
         ///   <p><em>Sets <see cref="AzurePostgresServerCreateSettings.BackupRetention"/></em></p>
@@ -6148,7 +6193,7 @@ namespace Nuke.Azure
         ///   <p>Enable or disable geo-redundant backups. Default value is Disabled. Not supported in Basic pricing tier.</p>
         /// </summary>
         [Pure]
-        public static AzurePostgresServerCreateSettings SetGeoRedundantBackup(this AzurePostgresServerCreateSettings toolSettings, PostgresServerCreateGeoRedundantBackup geoRedundantBackup)
+        public static AzurePostgresServerCreateSettings SetGeoRedundantBackup(this AzurePostgresServerCreateSettings toolSettings, PostgresServerAutoGrow geoRedundantBackup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.GeoRedundantBackup = geoRedundantBackup;
@@ -6196,7 +6241,7 @@ namespace Nuke.Azure
         ///   <p>Enable or disable ssl enforcement for connections to server. Default is Enabled.</p>
         /// </summary>
         [Pure]
-        public static AzurePostgresServerCreateSettings SetSslEnforcement(this AzurePostgresServerCreateSettings toolSettings, PostgresServerCreateGeoRedundantBackup sslEnforcement)
+        public static AzurePostgresServerCreateSettings SetSslEnforcement(this AzurePostgresServerCreateSettings toolSettings, PostgresServerAutoGrow sslEnforcement)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SslEnforcement = sslEnforcement;
@@ -8411,6 +8456,30 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AutoGrow
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerUpdateSettings.AutoGrow"/></em></p>
+        ///   <p>Enable or disable autogrow of the storage. Default value is Enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerUpdateSettings SetAutoGrow(this AzurePostgresServerUpdateSettings toolSettings, PostgresServerAutoGrow autoGrow)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoGrow = autoGrow;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerUpdateSettings.AutoGrow"/></em></p>
+        ///   <p>Enable or disable autogrow of the storage. Default value is Enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerUpdateSettings ResetAutoGrow(this AzurePostgresServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoGrow = null;
+            return toolSettings;
+        }
+        #endregion
         #region BackupRetention
         /// <summary>
         ///   <p><em>Sets <see cref="AzurePostgresServerUpdateSettings.BackupRetention"/></em></p>
@@ -8465,7 +8534,7 @@ namespace Nuke.Azure
         ///   <p>Enable or disable ssl enforcement for connections to server. Default is Enabled.</p>
         /// </summary>
         [Pure]
-        public static AzurePostgresServerUpdateSettings SetSslEnforcement(this AzurePostgresServerUpdateSettings toolSettings, PostgresServerCreateGeoRedundantBackup sslEnforcement)
+        public static AzurePostgresServerUpdateSettings SetSslEnforcement(this AzurePostgresServerUpdateSettings toolSettings, PostgresServerAutoGrow sslEnforcement)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SslEnforcement = sslEnforcement;
@@ -9273,6 +9342,2663 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzurePostgresServerWaitSettings ResetVerbose(this AzurePostgresServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerVnetRuleCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetName(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetName(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetResourceGroup(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetResourceGroup(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetServerName(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetServerName(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetSubnet(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetSubnet(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IgnoreMissingEndpoint
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings, bool? ignoreMissingEndpoint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = ignoreMissingEndpoint;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings EnableIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings DisableIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ToggleIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = !toolSettings.IgnoreMissingEndpoint;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.VnetName"/></em></p>
+        ///   <p>The virtual network name.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetVnetName(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.VnetName"/></em></p>
+        ///   <p>The virtual network name.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetVnetName(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetSubscription(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetSubscription(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetDebug(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetDebug(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetHelp(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetHelp(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetOutput(this AzurePostgresServerVnetRuleCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetOutput(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetQuery(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetQuery(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings SetVerbose(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleCreateSettings ResetVerbose(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerVnetRuleDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings AddIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings AddIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ClearIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings RemoveIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings RemoveIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetName(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ResetName(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetResourceGroup(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ResetResourceGroup(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetServerName(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ResetServerName(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetSubscription(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ResetSubscription(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetDebug(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ResetDebug(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetHelp(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ResetHelp(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetOutput(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ResetOutput(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetQuery(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ResetQuery(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings SetVerbose(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleDeleteSettings ResetVerbose(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerVnetRuleListSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetIds(this AzurePostgresServerVnetRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetIds(this AzurePostgresServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings AddIds(this AzurePostgresServerVnetRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings AddIds(this AzurePostgresServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings ClearIds(this AzurePostgresServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings RemoveIds(this AzurePostgresServerVnetRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings RemoveIds(this AzurePostgresServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetResourceGroup(this AzurePostgresServerVnetRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings ResetResourceGroup(this AzurePostgresServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetServerName(this AzurePostgresServerVnetRuleListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings ResetServerName(this AzurePostgresServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetSubscription(this AzurePostgresServerVnetRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings ResetSubscription(this AzurePostgresServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetDebug(this AzurePostgresServerVnetRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings ResetDebug(this AzurePostgresServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetHelp(this AzurePostgresServerVnetRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings ResetHelp(this AzurePostgresServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetOutput(this AzurePostgresServerVnetRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings ResetOutput(this AzurePostgresServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetQuery(this AzurePostgresServerVnetRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings ResetQuery(this AzurePostgresServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings SetVerbose(this AzurePostgresServerVnetRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleListSettings ResetVerbose(this AzurePostgresServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerVnetRuleShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings AddIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings AddIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ClearIds(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings RemoveIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings RemoveIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetName(this AzurePostgresServerVnetRuleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ResetName(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetResourceGroup(this AzurePostgresServerVnetRuleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ResetResourceGroup(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetServerName(this AzurePostgresServerVnetRuleShowSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ResetServerName(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetSubscription(this AzurePostgresServerVnetRuleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ResetSubscription(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetDebug(this AzurePostgresServerVnetRuleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ResetDebug(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetHelp(this AzurePostgresServerVnetRuleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ResetHelp(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetOutput(this AzurePostgresServerVnetRuleShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ResetOutput(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetQuery(this AzurePostgresServerVnetRuleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ResetQuery(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings SetVerbose(this AzurePostgresServerVnetRuleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleShowSettings ResetVerbose(this AzurePostgresServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerVnetRuleUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerVnetRuleUpdateSettingsExtensions
+    {
+        #region Subnet
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetSubnet(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetSubnet(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IgnoreMissingEndpoint
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, bool? ignoreMissingEndpoint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = ignoreMissingEndpoint;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings EnableIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings DisableIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ToggleIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = !toolSettings.IgnoreMissingEndpoint;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.VnetName"/></em></p>
+        ///   <p>The virtual network name.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetVnetName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.VnetName"/></em></p>
+        ///   <p>The virtual network name.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetVnetName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings AddIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings AddIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ClearIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings RemoveIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings RemoveIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetResourceGroup(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetResourceGroup(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetServerName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetServerName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetSubscription(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetSubscription(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetAdd(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetAdd(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetForceString(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetForceString(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetRemove(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetRemove(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetSet(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetSet(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetDebug(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetDebug(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetHelp(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetHelp(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetOutput(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetOutput(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetQuery(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetQuery(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings SetVerbose(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerVnetRuleUpdateSettings ResetVerbose(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerReplicaCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerReplicaCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Name"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetName(this AzurePostgresServerReplicaCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Name"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetName(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetResourceGroup(this AzurePostgresServerReplicaCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetResourceGroup(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SourceServer
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.SourceServer"/></em></p>
+        ///   <p>The name or resource ID of the master server to the create replica for.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetSourceServer(this AzurePostgresServerReplicaCreateSettings toolSettings, string sourceServer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourceServer = sourceServer;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.SourceServer"/></em></p>
+        ///   <p>The name or resource ID of the master server to the create replica for.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetSourceServer(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourceServer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetLocation(this AzurePostgresServerReplicaCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetLocation(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings EnableNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings DisableNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ToggleNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region SkuName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.SkuName"/></em></p>
+        ///   <p>The name of the sku. Follows the convention {pricing tier}_{compute generation}_{vCores} in shorthand. Examples: B_Gen5_1, GP_Gen5_4, MO_Gen5_16.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetSkuName(this AzurePostgresServerReplicaCreateSettings toolSettings, string skuName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = skuName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.SkuName"/></em></p>
+        ///   <p>The name of the sku. Follows the convention {pricing tier}_{compute generation}_{vCores} in shorthand. Examples: B_Gen5_1, GP_Gen5_4, MO_Gen5_16.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetSkuName(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetSubscription(this AzurePostgresServerReplicaCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetSubscription(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetDebug(this AzurePostgresServerReplicaCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetDebug(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetHelp(this AzurePostgresServerReplicaCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetHelp(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetOutput(this AzurePostgresServerReplicaCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetOutput(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetQuery(this AzurePostgresServerReplicaCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetQuery(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings SetVerbose(this AzurePostgresServerReplicaCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaCreateSettings ResetVerbose(this AzurePostgresServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerReplicaListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerReplicaListSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetIds(this AzurePostgresServerReplicaListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetIds(this AzurePostgresServerReplicaListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings AddIds(this AzurePostgresServerReplicaListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings AddIds(this AzurePostgresServerReplicaListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings ClearIds(this AzurePostgresServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings RemoveIds(this AzurePostgresServerReplicaListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings RemoveIds(this AzurePostgresServerReplicaListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetResourceGroup(this AzurePostgresServerReplicaListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings ResetResourceGroup(this AzurePostgresServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.ServerName"/></em></p>
+        ///   <p>Name of the master server.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetServerName(this AzurePostgresServerReplicaListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.ServerName"/></em></p>
+        ///   <p>Name of the master server.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings ResetServerName(this AzurePostgresServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetSubscription(this AzurePostgresServerReplicaListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings ResetSubscription(this AzurePostgresServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetDebug(this AzurePostgresServerReplicaListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings ResetDebug(this AzurePostgresServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetHelp(this AzurePostgresServerReplicaListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings ResetHelp(this AzurePostgresServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetOutput(this AzurePostgresServerReplicaListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings ResetOutput(this AzurePostgresServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetQuery(this AzurePostgresServerReplicaListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings ResetQuery(this AzurePostgresServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings SetVerbose(this AzurePostgresServerReplicaListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaListSettings ResetVerbose(this AzurePostgresServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzurePostgresServerReplicaStopSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzurePostgresTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzurePostgresServerReplicaStopSettingsExtensions
+    {
+        #region Yes
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Yes"/></em></p>
+        ///   <p>Do not prompt for confirmation.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetYes(this AzurePostgresServerReplicaStopSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Yes"/></em></p>
+        ///   <p>Do not prompt for confirmation.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ResetYes(this AzurePostgresServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetIds(this AzurePostgresServerReplicaStopSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetIds(this AzurePostgresServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings AddIds(this AzurePostgresServerReplicaStopSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings AddIds(this AzurePostgresServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ClearIds(this AzurePostgresServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings RemoveIds(this AzurePostgresServerReplicaStopSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings RemoveIds(this AzurePostgresServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Name"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetName(this AzurePostgresServerReplicaStopSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Name"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ResetName(this AzurePostgresServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetResourceGroup(this AzurePostgresServerReplicaStopSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ResetResourceGroup(this AzurePostgresServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetSubscription(this AzurePostgresServerReplicaStopSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ResetSubscription(this AzurePostgresServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetDebug(this AzurePostgresServerReplicaStopSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ResetDebug(this AzurePostgresServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetHelp(this AzurePostgresServerReplicaStopSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ResetHelp(this AzurePostgresServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetOutput(this AzurePostgresServerReplicaStopSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ResetOutput(this AzurePostgresServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetQuery(this AzurePostgresServerReplicaStopSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ResetQuery(this AzurePostgresServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings SetVerbose(this AzurePostgresServerReplicaStopSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzurePostgresServerReplicaStopSettings ResetVerbose(this AzurePostgresServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11848,2651 +14574,18 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzurePostgresServerReplicaCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerReplicaCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Name"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetName(this AzurePostgresServerReplicaCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Name"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetName(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetResourceGroup(this AzurePostgresServerReplicaCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetResourceGroup(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SourceServer
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.SourceServer"/></em></p>
-        ///   <p>The name or resource ID of the master server to the create replica for.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetSourceServer(this AzurePostgresServerReplicaCreateSettings toolSettings, string sourceServer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourceServer = sourceServer;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.SourceServer"/></em></p>
-        ///   <p>The name or resource ID of the master server to the create replica for.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetSourceServer(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SourceServer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Location"/></em></p>
-        ///   <p>Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetLocation(this AzurePostgresServerReplicaCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Location"/></em></p>
-        ///   <p>Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetLocation(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings, bool? noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings EnableNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings DisableNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzurePostgresServerReplicaCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ToggleNoWait(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = !toolSettings.NoWait;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetSubscription(this AzurePostgresServerReplicaCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetSubscription(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetDebug(this AzurePostgresServerReplicaCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetDebug(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetHelp(this AzurePostgresServerReplicaCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetHelp(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetOutput(this AzurePostgresServerReplicaCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetOutput(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetQuery(this AzurePostgresServerReplicaCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetQuery(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings SetVerbose(this AzurePostgresServerReplicaCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaCreateSettings ResetVerbose(this AzurePostgresServerReplicaCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerReplicaListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerReplicaListSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetIds(this AzurePostgresServerReplicaListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetIds(this AzurePostgresServerReplicaListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings AddIds(this AzurePostgresServerReplicaListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings AddIds(this AzurePostgresServerReplicaListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings ClearIds(this AzurePostgresServerReplicaListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings RemoveIds(this AzurePostgresServerReplicaListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerReplicaListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings RemoveIds(this AzurePostgresServerReplicaListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetResourceGroup(this AzurePostgresServerReplicaListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings ResetResourceGroup(this AzurePostgresServerReplicaListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.ServerName"/></em></p>
-        ///   <p>Name of the master server.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetServerName(this AzurePostgresServerReplicaListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.ServerName"/></em></p>
-        ///   <p>Name of the master server.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings ResetServerName(this AzurePostgresServerReplicaListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetSubscription(this AzurePostgresServerReplicaListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings ResetSubscription(this AzurePostgresServerReplicaListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetDebug(this AzurePostgresServerReplicaListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings ResetDebug(this AzurePostgresServerReplicaListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetHelp(this AzurePostgresServerReplicaListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings ResetHelp(this AzurePostgresServerReplicaListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetOutput(this AzurePostgresServerReplicaListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings ResetOutput(this AzurePostgresServerReplicaListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetQuery(this AzurePostgresServerReplicaListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings ResetQuery(this AzurePostgresServerReplicaListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings SetVerbose(this AzurePostgresServerReplicaListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaListSettings ResetVerbose(this AzurePostgresServerReplicaListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerReplicaStopSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerReplicaStopSettingsExtensions
-    {
-        #region Yes
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Yes"/></em></p>
-        ///   <p>Do not prompt for confirmation.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetYes(this AzurePostgresServerReplicaStopSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Yes"/></em></p>
-        ///   <p>Do not prompt for confirmation.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ResetYes(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetIds(this AzurePostgresServerReplicaStopSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetIds(this AzurePostgresServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings AddIds(this AzurePostgresServerReplicaStopSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings AddIds(this AzurePostgresServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ClearIds(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings RemoveIds(this AzurePostgresServerReplicaStopSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerReplicaStopSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings RemoveIds(this AzurePostgresServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Name"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetName(this AzurePostgresServerReplicaStopSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Name"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ResetName(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetResourceGroup(this AzurePostgresServerReplicaStopSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ResetResourceGroup(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetSubscription(this AzurePostgresServerReplicaStopSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ResetSubscription(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetDebug(this AzurePostgresServerReplicaStopSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ResetDebug(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetHelp(this AzurePostgresServerReplicaStopSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ResetHelp(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetOutput(this AzurePostgresServerReplicaStopSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ResetOutput(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetQuery(this AzurePostgresServerReplicaStopSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ResetQuery(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerReplicaStopSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings SetVerbose(this AzurePostgresServerReplicaStopSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerReplicaStopSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerReplicaStopSettings ResetVerbose(this AzurePostgresServerReplicaStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerVnetRuleCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetName(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetName(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetResourceGroup(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetResourceGroup(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetServerName(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetServerName(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subnet
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Subnet"/></em></p>
-        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetSubnet(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string subnet)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = subnet;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Subnet"/></em></p>
-        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetSubnet(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IgnoreMissingEndpoint
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings, bool? ignoreMissingEndpoint)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = ignoreMissingEndpoint;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = null;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings EnableIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings DisableIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzurePostgresServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ToggleIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = !toolSettings.IgnoreMissingEndpoint;
-            return toolSettings;
-        }
-        #endregion
-        #region VnetName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.VnetName"/></em></p>
-        ///   <p>The virtual network name.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetVnetName(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string vnetName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = vnetName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.VnetName"/></em></p>
-        ///   <p>The virtual network name.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetVnetName(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetSubscription(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetSubscription(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetDebug(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetDebug(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetHelp(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetHelp(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetOutput(this AzurePostgresServerVnetRuleCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetOutput(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetQuery(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetQuery(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings SetVerbose(this AzurePostgresServerVnetRuleCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleCreateSettings ResetVerbose(this AzurePostgresServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerVnetRuleDeleteSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings AddIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings AddIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ClearIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings RemoveIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings RemoveIds(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetName(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ResetName(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetResourceGroup(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ResetResourceGroup(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetServerName(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ResetServerName(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetSubscription(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ResetSubscription(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetDebug(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ResetDebug(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetHelp(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ResetHelp(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetOutput(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ResetOutput(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetQuery(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ResetQuery(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings SetVerbose(this AzurePostgresServerVnetRuleDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleDeleteSettings ResetVerbose(this AzurePostgresServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerVnetRuleListSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetIds(this AzurePostgresServerVnetRuleListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetIds(this AzurePostgresServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings AddIds(this AzurePostgresServerVnetRuleListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings AddIds(this AzurePostgresServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings ClearIds(this AzurePostgresServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings RemoveIds(this AzurePostgresServerVnetRuleListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings RemoveIds(this AzurePostgresServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetResourceGroup(this AzurePostgresServerVnetRuleListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings ResetResourceGroup(this AzurePostgresServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetServerName(this AzurePostgresServerVnetRuleListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings ResetServerName(this AzurePostgresServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetSubscription(this AzurePostgresServerVnetRuleListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings ResetSubscription(this AzurePostgresServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetDebug(this AzurePostgresServerVnetRuleListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings ResetDebug(this AzurePostgresServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetHelp(this AzurePostgresServerVnetRuleListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings ResetHelp(this AzurePostgresServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetOutput(this AzurePostgresServerVnetRuleListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings ResetOutput(this AzurePostgresServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetQuery(this AzurePostgresServerVnetRuleListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings ResetQuery(this AzurePostgresServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings SetVerbose(this AzurePostgresServerVnetRuleListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleListSettings ResetVerbose(this AzurePostgresServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerVnetRuleShowSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings AddIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings AddIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ClearIds(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings RemoveIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings RemoveIds(this AzurePostgresServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetName(this AzurePostgresServerVnetRuleShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ResetName(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetResourceGroup(this AzurePostgresServerVnetRuleShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ResetResourceGroup(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetServerName(this AzurePostgresServerVnetRuleShowSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ResetServerName(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetSubscription(this AzurePostgresServerVnetRuleShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ResetSubscription(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetDebug(this AzurePostgresServerVnetRuleShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ResetDebug(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetHelp(this AzurePostgresServerVnetRuleShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ResetHelp(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetOutput(this AzurePostgresServerVnetRuleShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ResetOutput(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetQuery(this AzurePostgresServerVnetRuleShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ResetQuery(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings SetVerbose(this AzurePostgresServerVnetRuleShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleShowSettings ResetVerbose(this AzurePostgresServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzurePostgresServerVnetRuleUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzurePostgresTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzurePostgresServerVnetRuleUpdateSettingsExtensions
-    {
-        #region Subnet
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subnet"/></em></p>
-        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetSubnet(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string subnet)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = subnet;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subnet"/></em></p>
-        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetSubnet(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IgnoreMissingEndpoint
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, bool? ignoreMissingEndpoint)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = ignoreMissingEndpoint;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = null;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings EnableIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings DisableIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzurePostgresServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ToggleIgnoreMissingEndpoint(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = !toolSettings.IgnoreMissingEndpoint;
-            return toolSettings;
-        }
-        #endregion
-        #region VnetName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.VnetName"/></em></p>
-        ///   <p>The virtual network name.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetVnetName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string vnetName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = vnetName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.VnetName"/></em></p>
-        ///   <p>The virtual network name.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetVnetName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings AddIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings AddIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ClearIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings RemoveIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzurePostgresServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings RemoveIds(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetResourceGroup(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetResourceGroup(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetServerName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetServerName(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetSubscription(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetSubscription(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetAdd(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetAdd(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetForceString(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetForceString(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetRemove(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetRemove(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetSet(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetSet(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetDebug(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetDebug(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetHelp(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetHelp(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetOutput(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetOutput(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetQuery(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetQuery(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings SetVerbose(this AzurePostgresServerVnetRuleUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzurePostgresServerVnetRuleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzurePostgresServerVnetRuleUpdateSettings ResetVerbose(this AzurePostgresServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region PostgresServerCreateGeoRedundantBackup
+    #region PostgresServerAutoGrow
     /// <summary>
     ///   Used within <see cref="AzurePostgresTasks"/>.
     /// </summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
-    [TypeConverter(typeof(TypeConverter<PostgresServerCreateGeoRedundantBackup>))]
-    public partial class PostgresServerCreateGeoRedundantBackup : Enumeration
+    [TypeConverter(typeof(TypeConverter<PostgresServerAutoGrow>))]
+    public partial class PostgresServerAutoGrow : Enumeration
     {
-        public static PostgresServerCreateGeoRedundantBackup disabled = new PostgresServerCreateGeoRedundantBackup { Value = "disabled" };
-        public static PostgresServerCreateGeoRedundantBackup enabled = new PostgresServerCreateGeoRedundantBackup { Value = "enabled" };
+        public static PostgresServerAutoGrow disabled = new PostgresServerAutoGrow { Value = "disabled" };
+        public static PostgresServerAutoGrow enabled = new PostgresServerAutoGrow { Value = "enabled" };
     }
     #endregion
 }

@@ -1,22 +1,22 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/action-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/activity-log.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/alert.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/autoscale-settings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/autoscale.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/diagnostic-settings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/log-profiles.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/metrics.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/activity-log/alert.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/autoscale/profile.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/autoscale/rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/diagnostic-settings/categories.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/metrics/alert.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/activity-log/alert/action-group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/monitor/activity-log/alert/scope.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/autoscale.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/activity-log.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/action-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/log-profiles.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/metrics.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/alert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/autoscale-settings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/diagnostic-settings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/metrics/alert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/autoscale/profile.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/autoscale/rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/activity-log/alert.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/diagnostic-settings/categories.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/activity-log/alert/action-group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/monitor/activity-log/alert/scope.yml"
   ],
   "name": "AzureMonitor",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/monitor?view=azure-cli-latest",
@@ -27,6 +27,465 @@
       "postfix": "",
       "definiteArgument": "monitor",
       "settingsClass": {}
+    },
+    {
+      "postfix": "AutoscaleCreate",
+      "definiteArgument": "monitor autoscale create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Disabled",
+            "type": "bool",
+            "format": "--disabled",
+            "secret": false,
+            "help": "Create the autoscale settings in a disabled state."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "secret": false,
+            "help": "The numer of instances to use. If used with --min/max-count, the default number of instances to use."
+          },
+          {
+            "name": "MaxCount",
+            "type": "int",
+            "format": "--max-count {value}",
+            "secret": false,
+            "help": "The maximum number of instances."
+          },
+          {
+            "name": "MinCount",
+            "type": "int",
+            "format": "--min-count {value}",
+            "secret": false,
+            "help": "The minimum number of instances."
+          },
+          {
+            "name": "Action",
+            "type": "string",
+            "format": "--action {value}",
+            "secret": false,
+            "help": "Add an action to fire when a scaling event occurs."
+          },
+          {
+            "name": "EmailAdministrator",
+            "type": "bool",
+            "format": "--email-administrator",
+            "secret": false,
+            "help": "Send email to subscription administrator on scaling."
+          },
+          {
+            "name": "EmailCoadministrators",
+            "type": "bool",
+            "format": "--email-coadministrators",
+            "secret": false,
+            "help": "Send email to subscription co-administrators on scaling."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "secret": false,
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "secret": false,
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleDelete",
+      "definiteArgument": "monitor autoscale delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleList",
+      "definiteArgument": "monitor autoscale list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleShow",
+      "definiteArgument": "monitor autoscale show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleUpdate",
+      "definiteArgument": "monitor autoscale update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Autoscale settings enabled status."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "secret": false,
+            "help": "The numer of instances to use. If used with --min/max-count, the default number of instances to use."
+          },
+          {
+            "name": "MaxCount",
+            "type": "int",
+            "format": "--max-count {value}",
+            "secret": false,
+            "help": "The maximum number of instances."
+          },
+          {
+            "name": "MinCount",
+            "type": "int",
+            "format": "--min-count {value}",
+            "secret": false,
+            "help": "The minimum number of instances."
+          },
+          {
+            "name": "AddAction",
+            "type": "string",
+            "format": "--add-action {value}",
+            "secret": false,
+            "help": "Add an action to fire when a scaling event occurs."
+          },
+          {
+            "name": "EmailAdministrator",
+            "type": "bool",
+            "format": "--email-administrator",
+            "secret": false,
+            "help": "Send email to subscription administrator on scaling."
+          },
+          {
+            "name": "EmailCoadministrators",
+            "type": "bool",
+            "format": "--email-coadministrators",
+            "secret": false,
+            "help": "Send email to subscription co-administrators on scaling."
+          },
+          {
+            "name": "RemoveAction",
+            "type": "string",
+            "format": "--remove-action {value}",
+            "secret": false,
+            "help": "Remove one or more actions."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogList",
+      "definiteArgument": "monitor activity-log list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "MaxEvents",
+            "type": "int",
+            "format": "--max-events {value}",
+            "secret": false,
+            "help": "Maximum number of records to return."
+          },
+          {
+            "name": "Select",
+            "type": "List<MonitorActivityLogListSelect>",
+            "format": "--select {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of properties to return."
+          },
+          {
+            "name": "Caller",
+            "type": "string",
+            "format": "--caller {value}",
+            "secret": false,
+            "help": "Caller to query for, such as an e-mail address or service principal ID."
+          },
+          {
+            "name": "CorrelationId",
+            "type": "string",
+            "format": "--correlation-id {value}",
+            "secret": false,
+            "help": "Correlation ID to query."
+          },
+          {
+            "name": "Filters",
+            "type": "string",
+            "format": "--filters {value}",
+            "secret": false,
+            "help": "OData filters. Will ignore other filter arguments."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Resource provider namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceId",
+            "type": "string",
+            "format": "--resource-id {value}",
+            "secret": false,
+            "help": "ARM ID of a resource."
+          },
+          {
+            "name": "Status",
+            "type": "string",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "Status to query for (ex: Failed)."
+          },
+          {
+            "name": "EndTime",
+            "type": "string",
+            "format": "--end-time {value}",
+            "secret": false,
+            "help": "End time of the query. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm)."
+          },
+          {
+            "name": "Offset",
+            "type": "string",
+            "format": "--offset {value}",
+            "secret": false,
+            "help": "Time offset of the query range, in ##d##h format."
+          },
+          {
+            "name": "StartTime",
+            "type": "string",
+            "format": "--start-time {value}",
+            "secret": false,
+            "help": "Start time of the query. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogListCategories",
+      "definiteArgument": "monitor activity-log list-categories",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     },
     {
       "postfix": "ActionGroupCreate",
@@ -312,52 +771,262 @@
       }
     },
     {
-      "postfix": "ActivityLogList",
-      "definiteArgument": "monitor activity-log list",
+      "postfix": "LogProfilesCreate",
+      "definiteArgument": "monitor log-profiles create",
       "settingsClass": {
         "properties": [
           {
-            "name": "MaxEvents",
-            "type": "int",
-            "format": "--max-events {value}",
-            "secret": false,
-            "help": "Maximum number of records to return."
-          },
-          {
-            "name": "Select",
-            "type": "List<MonitorActivityLogListSelect>",
-            "format": "--select {value}",
+            "name": "Categories",
+            "type": "List<string>",
+            "format": "--categories {value}",
             "separator": " ",
             "secret": false,
-            "help": "Space-separated list of properties to return."
+            "help": "Space-separated categories of the logs. These categories are created as is convenient to the user. Some values are Write, Delete, and/or Action."
           },
           {
-            "name": "Caller",
+            "name": "Location",
             "type": "string",
-            "format": "--caller {value}",
+            "format": "--location {value}",
             "secret": false,
-            "help": "Caller to query for, such as an e-mail address or service principal ID."
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
           },
           {
-            "name": "CorrelationId",
-            "type": "string",
-            "format": "--correlation-id {value}",
+            "name": "Locations",
+            "type": "List<string>",
+            "format": "--locations {value}",
+            "separator": " ",
             "secret": false,
-            "help": "Correlation ID to query."
+            "help": "Space-separated list of regions for which Activity Log events should be stored."
           },
           {
-            "name": "Filters",
+            "name": "Name",
             "type": "string",
-            "format": "--filters {value}",
+            "format": "--name {value}",
             "secret": false,
-            "help": "OData filters. Will ignore other filter arguments."
+            "help": "The name of the log profile."
+          },
+          {
+            "name": "ServiceBusRuleId",
+            "type": "string",
+            "format": "--service-bus-rule-id {value}",
+            "secret": false,
+            "help": "The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format '{service bus resource ID}/authorizationrules/{key name}'."
+          },
+          {
+            "name": "StorageAccountId",
+            "type": "string",
+            "format": "--storage-account-id {value}",
+            "secret": false,
+            "help": "The resource id of the storage account to which you would like to send the Activity Log."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Days",
+            "type": "string",
+            "format": "--days {value}",
+            "secret": false,
+            "help": "The number of days for the retention in days. A value of 0 will retain the events indefinitely."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the retention policy is enabled."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogProfilesDelete",
+      "definiteArgument": "monitor log-profiles delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the log profile."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogProfilesList",
+      "definiteArgument": "monitor log-profiles list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogProfilesShow",
+      "definiteArgument": "monitor log-profiles show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the log profile."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "LogProfilesUpdate",
+      "definiteArgument": "monitor log-profiles update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the log profile."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "MetricsList",
+      "definiteArgument": "monitor metrics list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Aggregation",
+            "type": "MonitorMetricsListAggregation",
+            "format": "--aggregation {value}",
+            "secret": false,
+            "help": "The list of aggregation types (space-separated) to retrieve."
+          },
+          {
+            "name": "Dimension",
+            "type": "string",
+            "format": "--dimension {value}",
+            "secret": false,
+            "help": "The list of dimensions (space-separated) the metrics are queried into."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "secret": false,
+            "help": "A string used to reduce the set of metric data returned. eg. \"BlobType eq '\\*'\"."
+          },
+          {
+            "name": "Metadata",
+            "type": "string",
+            "format": "--metadata {value}",
+            "secret": false,
+            "help": "Returns the metadata values instead of metric data."
+          },
+          {
+            "name": "Metrics",
+            "type": "List<string>",
+            "format": "--metrics {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of metric names to retrieve."
           },
           {
             "name": "Namespace",
             "type": "string",
             "format": "--namespace {value}",
             "secret": false,
-            "help": "Resource provider namespace."
+            "help": "Namespace to query metric definitions for."
+          },
+          {
+            "name": "Orderby",
+            "type": "string",
+            "format": "--orderby {value}",
+            "secret": false,
+            "help": "Aggregation to use for sorting results and the direction of the sort. Only one order can be specificed. Examples: sum asc."
+          },
+          {
+            "name": "Top",
+            "type": "string",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Max number of records to retrieve. Valid only if --filter used."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Name or ID of the target resource."
           },
           {
             "name": "ResourceGroup",
@@ -367,18 +1036,25 @@
             "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
-            "name": "ResourceId",
+            "name": "ResourceNamespace",
             "type": "string",
-            "format": "--resource-id {value}",
+            "format": "--resource-namespace {value}",
             "secret": false,
-            "help": "ARM ID of a resource."
+            "help": "Target resource provider namespace."
           },
           {
-            "name": "Status",
+            "name": "ResourceParent",
             "type": "string",
-            "format": "--status {value}",
+            "format": "--resource-parent {value}",
             "secret": false,
-            "help": "Status to query for (ex: Failed)."
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
           },
           {
             "name": "EndTime",
@@ -386,6 +1062,13 @@
             "format": "--end-time {value}",
             "secret": false,
             "help": "End time of the query. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm)."
+          },
+          {
+            "name": "Interval",
+            "type": "string",
+            "format": "--interval {value}",
+            "secret": false,
+            "help": "The interval over which to aggregate metrics, in ##h##m format."
           },
           {
             "name": "Offset",
@@ -412,10 +1095,52 @@
       }
     },
     {
-      "postfix": "ActivityLogListCategories",
-      "definiteArgument": "monitor activity-log list-categories",
+      "postfix": "MetricsListDefinitions",
+      "definiteArgument": "monitor metrics list-definitions",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Namespace to query metric definitions for."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "secret": false,
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "secret": false,
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
+          },
           {
             "name": "Subscription",
             "type": "string",
@@ -1083,350 +1808,6 @@
       }
     },
     {
-      "postfix": "AutoscaleCreate",
-      "definiteArgument": "monitor autoscale create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Disabled",
-            "type": "bool",
-            "format": "--disabled",
-            "secret": false,
-            "help": "Create the autoscale settings in a disabled state."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "secret": false,
-            "help": "The numer of instances to use. If used with --min/max-count, the default number of instances to use."
-          },
-          {
-            "name": "MaxCount",
-            "type": "int",
-            "format": "--max-count {value}",
-            "secret": false,
-            "help": "The maximum number of instances."
-          },
-          {
-            "name": "MinCount",
-            "type": "int",
-            "format": "--min-count {value}",
-            "secret": false,
-            "help": "The minimum number of instances."
-          },
-          {
-            "name": "Action",
-            "type": "string",
-            "format": "--action {value}",
-            "secret": false,
-            "help": "Add an action to fire when a scaling event occurs."
-          },
-          {
-            "name": "EmailAdministrator",
-            "type": "bool",
-            "format": "--email-administrator",
-            "secret": false,
-            "help": "Send email to subscription administrator on scaling."
-          },
-          {
-            "name": "EmailCoadministrators",
-            "type": "bool",
-            "format": "--email-coadministrators",
-            "secret": false,
-            "help": "Send email to subscription co-administrators on scaling."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "secret": false,
-            "help": "Name or ID of the target resource."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceNamespace",
-            "type": "string",
-            "format": "--resource-namespace {value}",
-            "secret": false,
-            "help": "Target resource provider namespace."
-          },
-          {
-            "name": "ResourceParent",
-            "type": "string",
-            "format": "--resource-parent {value}",
-            "secret": false,
-            "help": "Target resource parent path, if applicable."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "secret": false,
-            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleDelete",
-      "definiteArgument": "monitor autoscale delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleList",
-      "definiteArgument": "monitor autoscale list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleShow",
-      "definiteArgument": "monitor autoscale show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleUpdate",
-      "definiteArgument": "monitor autoscale update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Enabled",
-            "type": "bool",
-            "format": "--enabled",
-            "secret": false,
-            "help": "Autoscale settings enabled status."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "secret": false,
-            "help": "The numer of instances to use. If used with --min/max-count, the default number of instances to use."
-          },
-          {
-            "name": "MaxCount",
-            "type": "int",
-            "format": "--max-count {value}",
-            "secret": false,
-            "help": "The maximum number of instances."
-          },
-          {
-            "name": "MinCount",
-            "type": "int",
-            "format": "--min-count {value}",
-            "secret": false,
-            "help": "The minimum number of instances."
-          },
-          {
-            "name": "AddAction",
-            "type": "string",
-            "format": "--add-action {value}",
-            "secret": false,
-            "help": "Add an action to fire when a scaling event occurs."
-          },
-          {
-            "name": "EmailAdministrator",
-            "type": "bool",
-            "format": "--email-administrator",
-            "secret": false,
-            "help": "Send email to subscription administrator on scaling."
-          },
-          {
-            "name": "EmailCoadministrators",
-            "type": "bool",
-            "format": "--email-coadministrators",
-            "secret": false,
-            "help": "Send email to subscription co-administrators on scaling."
-          },
-          {
-            "name": "RemoveAction",
-            "type": "string",
-            "format": "--remove-action {value}",
-            "secret": false,
-            "help": "Remove one or more actions."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "DiagnosticSettingsCreate",
       "definiteArgument": "monitor diagnostic-settings create",
       "settingsClass": {
@@ -1763,1207 +2144,6 @@
             "format": "--set {value}",
             "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogProfilesCreate",
-      "definiteArgument": "monitor log-profiles create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Categories",
-            "type": "List<string>",
-            "format": "--categories {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated categories of the logs. These categories are created as is convenient to the user. Some values are Write, Delete, and/or Action."
-          },
-          {
-            "name": "Location",
-            "type": "string",
-            "format": "--location {value}",
-            "secret": false,
-            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
-          },
-          {
-            "name": "Locations",
-            "type": "List<string>",
-            "format": "--locations {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated list of regions for which Activity Log events should be stored."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the log profile."
-          },
-          {
-            "name": "ServiceBusRuleId",
-            "type": "string",
-            "format": "--service-bus-rule-id {value}",
-            "secret": false,
-            "help": "The service bus rule ID of the service bus namespace in which you would like to have Event Hubs created for streaming the Activity Log. The rule ID is of the format '{service bus resource ID}/authorizationrules/{key name}'."
-          },
-          {
-            "name": "StorageAccountId",
-            "type": "string",
-            "format": "--storage-account-id {value}",
-            "secret": false,
-            "help": "The resource id of the storage account to which you would like to send the Activity Log."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Days",
-            "type": "string",
-            "format": "--days {value}",
-            "secret": false,
-            "help": "The number of days for the retention in days. A value of 0 will retain the events indefinitely."
-          },
-          {
-            "name": "Enabled",
-            "type": "bool",
-            "format": "--enabled",
-            "secret": false,
-            "help": "Whether the retention policy is enabled."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogProfilesDelete",
-      "definiteArgument": "monitor log-profiles delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the log profile."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogProfilesList",
-      "definiteArgument": "monitor log-profiles list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogProfilesShow",
-      "definiteArgument": "monitor log-profiles show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the log profile."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "LogProfilesUpdate",
-      "definiteArgument": "monitor log-profiles update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the log profile."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MetricsList",
-      "definiteArgument": "monitor metrics list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Aggregation",
-            "type": "MonitorMetricsListAggregation",
-            "format": "--aggregation {value}",
-            "secret": false,
-            "help": "The list of aggregation types (space-separated) to retrieve."
-          },
-          {
-            "name": "Dimension",
-            "type": "string",
-            "format": "--dimension {value}",
-            "secret": false,
-            "help": "The list of dimensions (space-separated) the metrics are queried into."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "secret": false,
-            "help": "A string used to reduce the set of metric data returned. eg. \"BlobType eq '*'\"."
-          },
-          {
-            "name": "Metadata",
-            "type": "string",
-            "format": "--metadata {value}",
-            "secret": false,
-            "help": "Returns the metadata values instead of metric data."
-          },
-          {
-            "name": "Metrics",
-            "type": "List<string>",
-            "format": "--metrics {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated list of metric names to retrieve."
-          },
-          {
-            "name": "Namespace",
-            "type": "string",
-            "format": "--namespace {value}",
-            "secret": false,
-            "help": "Namespace to query metric definitions for."
-          },
-          {
-            "name": "Orderby",
-            "type": "string",
-            "format": "--orderby {value}",
-            "secret": false,
-            "help": "Aggregation to use for sorting results and the direction of the sort. Only one order can be specificed. Examples: sum asc."
-          },
-          {
-            "name": "Top",
-            "type": "string",
-            "format": "--top {value}",
-            "secret": false,
-            "help": "Max number of records to retrieve. Valid only if --filter used."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "secret": false,
-            "help": "Name or ID of the target resource."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceNamespace",
-            "type": "string",
-            "format": "--resource-namespace {value}",
-            "secret": false,
-            "help": "Target resource provider namespace."
-          },
-          {
-            "name": "ResourceParent",
-            "type": "string",
-            "format": "--resource-parent {value}",
-            "secret": false,
-            "help": "Target resource parent path, if applicable."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "secret": false,
-            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
-          },
-          {
-            "name": "EndTime",
-            "type": "string",
-            "format": "--end-time {value}",
-            "secret": false,
-            "help": "End time of the query. Defaults to the current time. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm)."
-          },
-          {
-            "name": "Interval",
-            "type": "string",
-            "format": "--interval {value}",
-            "secret": false,
-            "help": "The interval over which to aggregate metrics, in ##h##m format."
-          },
-          {
-            "name": "Offset",
-            "type": "string",
-            "format": "--offset {value}",
-            "secret": false,
-            "help": "Time offset of the query range, in ##d##h format."
-          },
-          {
-            "name": "StartTime",
-            "type": "string",
-            "format": "--start-time {value}",
-            "secret": false,
-            "help": "Start time of the query. Format: date (yyyy-mm-dd) time (hh:mm:ss.xxxxx) timezone (+/-hh:mm)."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "MetricsListDefinitions",
-      "definiteArgument": "monitor metrics list-definitions",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Namespace",
-            "type": "string",
-            "format": "--namespace {value}",
-            "secret": false,
-            "help": "Namespace to query metric definitions for."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "secret": false,
-            "help": "Name or ID of the target resource."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceNamespace",
-            "type": "string",
-            "format": "--resource-namespace {value}",
-            "secret": false,
-            "help": "Target resource provider namespace."
-          },
-          {
-            "name": "ResourceParent",
-            "type": "string",
-            "format": "--resource-parent {value}",
-            "secret": false,
-            "help": "Target resource parent path, if applicable."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "secret": false,
-            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ActivityLogAlertCreate",
-      "definiteArgument": "monitor activity-log alert create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the activity log alerts."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ActionGroup",
-            "type": "string",
-            "format": "--action-group {value}",
-            "secret": false,
-            "help": "Add an action group. Accepts space-separated action group identifiers. The identifier can be the action group's name or its resource ID."
-          },
-          {
-            "name": "Condition",
-            "type": "string",
-            "format": "--condition {value}",
-            "secret": false,
-            "help": "The condition that will cause the alert to activate. The format is FIELD=VALUE[ and FIELD=VALUE...]."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "secret": false,
-            "help": "A description of this activity log alert."
-          },
-          {
-            "name": "Disable",
-            "type": "string",
-            "format": "--disable {value}",
-            "secret": false,
-            "help": "Disable the activity log alert after it is created."
-          },
-          {
-            "name": "Scope",
-            "type": "string",
-            "format": "--scope {value}",
-            "secret": false,
-            "help": "A list of strings that will be used as prefixes."
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "WebhookProperties",
-            "type": "List<string>",
-            "format": "--webhook-properties {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated webhook properties in 'key[=value]' format. These properties are associated with the action groups added in this command."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ActivityLogAlertDelete",
-      "definiteArgument": "monitor activity-log alert delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the activity log alert."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ActivityLogAlertList",
-      "definiteArgument": "monitor activity-log alert list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of the resource group under which the activity log alerts are being listed. If it is omitted, all the activity log alerts under the current subscription are listed."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ActivityLogAlertShow",
-      "definiteArgument": "monitor activity-log alert show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the activity log alert."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ActivityLogAlertUpdate",
-      "definiteArgument": "monitor activity-log alert update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Condition",
-            "type": "string",
-            "format": "--condition {value}",
-            "secret": false,
-            "help": "The conditional expression that will cause the alert to activate. The format is FIELD=VALUE[ and FIELD=VALUE...]."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "secret": false,
-            "help": "A description of this activity log alert."
-          },
-          {
-            "name": "Enabled",
-            "type": "bool",
-            "format": "--enabled",
-            "secret": false,
-            "help": ""
-          },
-          {
-            "name": "Tags",
-            "type": "string",
-            "format": "--tags {value}",
-            "secret": false,
-            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the activity log alert."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleProfileCreate",
-      "definiteArgument": "monitor autoscale profile create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AutoscaleName",
-            "type": "string",
-            "format": "--autoscale-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the autoscale profile."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "CopyRules",
-            "type": "string",
-            "format": "--copy-rules {value}",
-            "secret": false,
-            "help": "Name of an existing schedule from which to copy the scaling rules for the new schedule."
-          },
-          {
-            "name": "Count",
-            "type": "string",
-            "format": "--count {value}",
-            "secret": false,
-            "help": "The numer of instances to use. If used with --min/max-count, the default number of instances to use."
-          },
-          {
-            "name": "MaxCount",
-            "type": "int",
-            "format": "--max-count {value}",
-            "secret": false,
-            "help": "The maximum number of instances."
-          },
-          {
-            "name": "MinCount",
-            "type": "int",
-            "format": "--min-count {value}",
-            "secret": false,
-            "help": "The minimum number of instances."
-          },
-          {
-            "name": "Timezone",
-            "type": "string",
-            "format": "--timezone {value}",
-            "secret": false,
-            "help": "Timezone name."
-          },
-          {
-            "name": "End",
-            "type": "string",
-            "format": "--end {value}",
-            "secret": false,
-            "help": "When the autoscale profile ends. Format depends on the type of profile."
-          },
-          {
-            "name": "Recurrence",
-            "type": "string",
-            "format": "--recurrence {value}",
-            "secret": false,
-            "help": "When the profile recurs. If omitted, a fixed (non-recurring) profile is created."
-          },
-          {
-            "name": "Start",
-            "type": "string",
-            "format": "--start {value}",
-            "secret": false,
-            "help": "When the autoscale profile begins. Format depends on the type of profile."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleProfileDelete",
-      "definiteArgument": "monitor autoscale profile delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AutoscaleName",
-            "type": "string",
-            "format": "--autoscale-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the autoscale profile."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleProfileList",
-      "definiteArgument": "monitor autoscale profile list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AutoscaleName",
-            "type": "string",
-            "format": "--autoscale-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleProfileListTimezones",
-      "definiteArgument": "monitor autoscale profile list-timezones",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Offset",
-            "type": "string",
-            "format": "--offset {value}",
-            "secret": false,
-            "help": "Filter results based on UTC hour offset."
-          },
-          {
-            "name": "SearchQuery",
-            "type": "string",
-            "format": "--search-query {value}",
-            "secret": false,
-            "help": "Query text to find."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleProfileShow",
-      "definiteArgument": "monitor autoscale profile show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AutoscaleName",
-            "type": "string",
-            "format": "--autoscale-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the autoscale profile."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleRuleCopy",
-      "definiteArgument": "monitor autoscale rule copy",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AutoscaleName",
-            "type": "string",
-            "format": "--autoscale-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "DestSchedule",
-            "type": "string",
-            "format": "--dest-schedule {value}",
-            "secret": false,
-            "help": "Name of the profile to copy rules to."
-          },
-          {
-            "name": "Index",
-            "type": "List<string>",
-            "format": "--index {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated list of rule indices to copy, or '*' to copy all rules."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "SourceSchedule",
-            "type": "string",
-            "format": "--source-schedule {value}",
-            "secret": false,
-            "help": "Name of the profile to copy rules from."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleRuleCreate",
-      "definiteArgument": "monitor autoscale rule create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AutoscaleName",
-            "type": "string",
-            "format": "--autoscale-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "Condition",
-            "type": "string",
-            "format": "--condition {value}",
-            "secret": false,
-            "help": "The condition which triggers the scaling action."
-          },
-          {
-            "name": "Scale",
-            "type": "string",
-            "format": "--scale {value}",
-            "secret": false,
-            "help": "The direction and amount to scale."
-          },
-          {
-            "name": "Cooldown",
-            "type": "string",
-            "format": "--cooldown {value}",
-            "secret": false,
-            "help": "The number of minutes that must elapse before another scaling event can occur."
-          },
-          {
-            "name": "ProfileName",
-            "type": "string",
-            "format": "--profile-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale profile."
-          },
-          {
-            "name": "Timegrain",
-            "type": "string",
-            "format": "--timegrain {value}",
-            "secret": false,
-            "help": "The way metrics are polled across instances."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "secret": false,
-            "help": "Name or ID of the target resource."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceNamespace",
-            "type": "string",
-            "format": "--resource-namespace {value}",
-            "secret": false,
-            "help": "Target resource provider namespace."
-          },
-          {
-            "name": "ResourceParent",
-            "type": "string",
-            "format": "--resource-parent {value}",
-            "secret": false,
-            "help": "Target resource parent path, if applicable."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "secret": false,
-            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleRuleDelete",
-      "definiteArgument": "monitor autoscale rule delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AutoscaleName",
-            "type": "string",
-            "format": "--autoscale-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "Index",
-            "type": "List<string>",
-            "format": "--index {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated list of rule indices to remove, or '*' to clear all rules."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ProfileName",
-            "type": "string",
-            "format": "--profile-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale profile."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AutoscaleRuleList",
-      "definiteArgument": "monitor autoscale rule list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AutoscaleName",
-            "type": "string",
-            "format": "--autoscale-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale settings."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ProfileName",
-            "type": "string",
-            "format": "--profile-name {value}",
-            "secret": false,
-            "help": "Name of the autoscale profile."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiagnosticSettingsCategoriesList",
-      "definiteArgument": "monitor diagnostic-settings categories list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "secret": false,
-            "help": "Name or ID of the target resource."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceNamespace",
-            "type": "string",
-            "format": "--resource-namespace {value}",
-            "secret": false,
-            "help": "Target resource provider namespace."
-          },
-          {
-            "name": "ResourceParent",
-            "type": "string",
-            "format": "--resource-parent {value}",
-            "secret": false,
-            "help": "Target resource parent path, if applicable."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "secret": false,
-            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DiagnosticSettingsCategoriesShow",
-      "definiteArgument": "monitor diagnostic-settings categories show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The name of the diagnostic setting."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "secret": false,
-            "help": "Name or ID of the target resource."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "ResourceNamespace",
-            "type": "string",
-            "format": "--resource-namespace {value}",
-            "secret": false,
-            "help": "Target resource provider namespace."
-          },
-          {
-            "name": "ResourceParent",
-            "type": "string",
-            "format": "--resource-parent {value}",
-            "secret": false,
-            "help": "Target resource parent path, if applicable."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "secret": false,
-            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
           },
           {
             "name": "Subscription",
@@ -3324,6 +2504,826 @@
       }
     },
     {
+      "postfix": "AutoscaleProfileCreate",
+      "definiteArgument": "monitor autoscale profile create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "CopyRules",
+            "type": "string",
+            "format": "--copy-rules {value}",
+            "secret": false,
+            "help": "Name of an existing schedule from which to copy the scaling rules for the new schedule."
+          },
+          {
+            "name": "Count",
+            "type": "string",
+            "format": "--count {value}",
+            "secret": false,
+            "help": "The numer of instances to use. If used with --min/max-count, the default number of instances to use."
+          },
+          {
+            "name": "MaxCount",
+            "type": "int",
+            "format": "--max-count {value}",
+            "secret": false,
+            "help": "The maximum number of instances."
+          },
+          {
+            "name": "MinCount",
+            "type": "int",
+            "format": "--min-count {value}",
+            "secret": false,
+            "help": "The minimum number of instances."
+          },
+          {
+            "name": "Timezone",
+            "type": "string",
+            "format": "--timezone {value}",
+            "secret": false,
+            "help": "Timezone name."
+          },
+          {
+            "name": "End",
+            "type": "string",
+            "format": "--end {value}",
+            "secret": false,
+            "help": "When the autoscale profile ends. Format depends on the type of profile."
+          },
+          {
+            "name": "Recurrence",
+            "type": "string",
+            "format": "--recurrence {value}",
+            "secret": false,
+            "help": "When the profile recurs. If omitted, a fixed (non-recurring) profile is created."
+          },
+          {
+            "name": "Start",
+            "type": "string",
+            "format": "--start {value}",
+            "secret": false,
+            "help": "When the autoscale profile begins. Format depends on the type of profile."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleProfileDelete",
+      "definiteArgument": "monitor autoscale profile delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleProfileList",
+      "definiteArgument": "monitor autoscale profile list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleProfileListTimezones",
+      "definiteArgument": "monitor autoscale profile list-timezones",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Offset",
+            "type": "string",
+            "format": "--offset {value}",
+            "secret": false,
+            "help": "Filter results based on UTC hour offset."
+          },
+          {
+            "name": "SearchQuery",
+            "type": "string",
+            "format": "--search-query {value}",
+            "secret": false,
+            "help": "Query text to find."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleProfileShow",
+      "definiteArgument": "monitor autoscale profile show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleRuleCopy",
+      "definiteArgument": "monitor autoscale rule copy",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "DestSchedule",
+            "type": "string",
+            "format": "--dest-schedule {value}",
+            "secret": false,
+            "help": "Name of the profile to copy rules to."
+          },
+          {
+            "name": "Index",
+            "type": "List<string>",
+            "format": "--index {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of rule indices to copy, or '\\*' to copy all rules."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "SourceSchedule",
+            "type": "string",
+            "format": "--source-schedule {value}",
+            "secret": false,
+            "help": "Name of the profile to copy rules from."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleRuleCreate",
+      "definiteArgument": "monitor autoscale rule create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "secret": false,
+            "help": "The condition which triggers the scaling action."
+          },
+          {
+            "name": "Scale",
+            "type": "string",
+            "format": "--scale {value}",
+            "secret": false,
+            "help": "The direction and amount to scale."
+          },
+          {
+            "name": "Cooldown",
+            "type": "string",
+            "format": "--cooldown {value}",
+            "secret": false,
+            "help": "The number of minutes that must elapse before another scaling event can occur."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "Timegrain",
+            "type": "string",
+            "format": "--timegrain {value}",
+            "secret": false,
+            "help": "The way metrics are polled across instances."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "secret": false,
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "secret": false,
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleRuleDelete",
+      "definiteArgument": "monitor autoscale rule delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "Index",
+            "type": "List<string>",
+            "format": "--index {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of rule indices to remove, or '\\*' to clear all rules."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AutoscaleRuleList",
+      "definiteArgument": "monitor autoscale rule list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoscaleName",
+            "type": "string",
+            "format": "--autoscale-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale settings."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ProfileName",
+            "type": "string",
+            "format": "--profile-name {value}",
+            "secret": false,
+            "help": "Name of the autoscale profile."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertCreate",
+      "definiteArgument": "monitor activity-log alert create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the activity log alerts."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ActionGroup",
+            "type": "string",
+            "format": "--action-group {value}",
+            "secret": false,
+            "help": "Add an action group. Accepts space-separated action group identifiers. The identifier can be the action group's name or its resource ID."
+          },
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "secret": false,
+            "help": "The condition that will cause the alert to activate. The format is FIELD=VALUE[ and FIELD=VALUE...]."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "A description of this activity log alert."
+          },
+          {
+            "name": "Disable",
+            "type": "string",
+            "format": "--disable {value}",
+            "secret": false,
+            "help": "Disable the activity log alert after it is created."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "secret": false,
+            "help": "A list of strings that will be used as prefixes."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "WebhookProperties",
+            "type": "List<string>",
+            "format": "--webhook-properties {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated webhook properties in 'key[=value]' format. These properties are associated with the action groups added in this command."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertDelete",
+      "definiteArgument": "monitor activity-log alert delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the activity log alert."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertList",
+      "definiteArgument": "monitor activity-log alert list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of the resource group under which the activity log alerts are being listed. If it is omitted, all the activity log alerts under the current subscription are listed."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertShow",
+      "definiteArgument": "monitor activity-log alert show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the activity log alert."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ActivityLogAlertUpdate",
+      "definiteArgument": "monitor activity-log alert update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Condition",
+            "type": "string",
+            "format": "--condition {value}",
+            "secret": false,
+            "help": "The conditional expression that will cause the alert to activate. The format is FIELD=VALUE[ and FIELD=VALUE...]."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "A description of this activity log alert."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": ""
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the activity log alert."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticSettingsCategoriesList",
+      "definiteArgument": "monitor diagnostic-settings categories list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "secret": false,
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "secret": false,
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DiagnosticSettingsCategoriesShow",
+      "definiteArgument": "monitor diagnostic-settings categories show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the diagnostic setting."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Name or ID of the target resource."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceNamespace",
+            "type": "string",
+            "format": "--resource-namespace {value}",
+            "secret": false,
+            "help": "Target resource provider namespace."
+          },
+          {
+            "name": "ResourceParent",
+            "type": "string",
+            "format": "--resource-parent {value}",
+            "secret": false,
+            "help": "Target resource parent path, if applicable."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Target resource type. Can also accept namespace/type format (Ex: 'Microsoft.Compute/virtualMachines')."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "ActivityLogAlertActionGroupAdd",
       "definiteArgument": "monitor activity-log alert action-group add",
       "settingsClass": {
@@ -3597,22 +3597,22 @@
       ]
     },
     {
-      "name": "MonitorAlertUpdateAggregation",
-      "values": [
-        "avg",
-        "last",
-        "max",
-        "min",
-        "total"
-      ]
-    },
-    {
       "name": "MonitorMetricsListAggregation",
       "values": [
         "average",
         "count",
         "maximum",
         "minimum",
+        "total"
+      ]
+    },
+    {
+      "name": "MonitorAlertUpdateAggregation",
+      "values": [
+        "avg",
+        "last",
+        "max",
+        "min",
         "total"
       ]
     },

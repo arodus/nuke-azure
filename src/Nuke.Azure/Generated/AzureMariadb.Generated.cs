@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureMariadb.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -85,6 +85,120 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureMariadbSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadb(CombinatorialConfigure<AzureMariadbSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureMariadb, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerLogsDownload(AzureMariadbServerLogsDownloadSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerLogsDownloadSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerLogsDownload(Configure<AzureMariadbServerLogsDownloadSettings> configurator)
+        {
+            return AzureMariadbServerLogsDownload(configurator(new AzureMariadbServerLogsDownloadSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerLogsDownloadSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerLogsDownload(CombinatorialConfigure<AzureMariadbServerLogsDownloadSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerLogsDownload, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerLogsList(AzureMariadbServerLogsListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerLogsListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerLogsListSettings.Debug"/></li>
+        ///     <li><c>--file-last-written</c> via <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/></li>
+        ///     <li><c>--filename-contains</c> via <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerLogsListSettings.Help"/></li>
+        ///     <li><c>--max-file-size</c> via <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerLogsListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerLogsListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerLogsListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerLogsListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerLogsListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerLogsList(Configure<AzureMariadbServerLogsListSettings> configurator)
+        {
+            return AzureMariadbServerLogsList(configurator(new AzureMariadbServerLogsListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerLogsListSettings.Debug"/></li>
+        ///     <li><c>--file-last-written</c> via <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/></li>
+        ///     <li><c>--filename-contains</c> via <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerLogsListSettings.Help"/></li>
+        ///     <li><c>--max-file-size</c> via <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerLogsListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerLogsListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerLogsListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerLogsListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerLogsListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerLogsListSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerLogsList(CombinatorialConfigure<AzureMariadbServerLogsListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerLogsList, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Database for MariaDB servers.</p>
@@ -314,120 +428,6 @@ namespace Nuke.Azure
         ///   <p>Manage Azure Database for MariaDB servers.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerLogsDownload(AzureMariadbServerLogsDownloadSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureMariadbServerLogsDownloadSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureMariadbServerLogsDownload(Configure<AzureMariadbServerLogsDownloadSettings> configurator)
-        {
-            return AzureMariadbServerLogsDownload(configurator(new AzureMariadbServerLogsDownloadSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureMariadbServerLogsDownloadSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerLogsDownload(CombinatorialConfigure<AzureMariadbServerLogsDownloadSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureMariadbServerLogsDownload, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerLogsList(AzureMariadbServerLogsListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureMariadbServerLogsListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerLogsListSettings.Debug"/></li>
-        ///     <li><c>--file-last-written</c> via <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/></li>
-        ///     <li><c>--filename-contains</c> via <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerLogsListSettings.Help"/></li>
-        ///     <li><c>--max-file-size</c> via <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerLogsListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerLogsListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerLogsListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerLogsListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerLogsListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureMariadbServerLogsList(Configure<AzureMariadbServerLogsListSettings> configurator)
-        {
-            return AzureMariadbServerLogsList(configurator(new AzureMariadbServerLogsListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerLogsListSettings.Debug"/></li>
-        ///     <li><c>--file-last-written</c> via <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/></li>
-        ///     <li><c>--filename-contains</c> via <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerLogsListSettings.Help"/></li>
-        ///     <li><c>--max-file-size</c> via <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerLogsListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerLogsListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerLogsListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerLogsListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerLogsListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureMariadbServerLogsListSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerLogsList(CombinatorialConfigure<AzureMariadbServerLogsListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureMariadbServerLogsList, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
         public static IReadOnlyCollection<Output> AzureMariadbServerCreate(AzureMariadbServerCreateSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureMariadbServerCreateSettings();
@@ -444,6 +444,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--admin-password</c> via <see cref="AzureMariadbServerCreateSettings.AdminPassword"/></li>
         ///     <li><c>--admin-user</c> via <see cref="AzureMariadbServerCreateSettings.AdminUser"/></li>
+        ///     <li><c>--auto-grow</c> via <see cref="AzureMariadbServerCreateSettings.AutoGrow"/></li>
         ///     <li><c>--backup-retention</c> via <see cref="AzureMariadbServerCreateSettings.BackupRetention"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureMariadbServerCreateSettings.Debug"/></li>
         ///     <li><c>--geo-redundant-backup</c> via <see cref="AzureMariadbServerCreateSettings.GeoRedundantBackup"/></li>
@@ -475,6 +476,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--admin-password</c> via <see cref="AzureMariadbServerCreateSettings.AdminPassword"/></li>
         ///     <li><c>--admin-user</c> via <see cref="AzureMariadbServerCreateSettings.AdminUser"/></li>
+        ///     <li><c>--auto-grow</c> via <see cref="AzureMariadbServerCreateSettings.AutoGrow"/></li>
         ///     <li><c>--backup-retention</c> via <see cref="AzureMariadbServerCreateSettings.BackupRetention"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureMariadbServerCreateSettings.Debug"/></li>
         ///     <li><c>--geo-redundant-backup</c> via <see cref="AzureMariadbServerCreateSettings.GeoRedundantBackup"/></li>
@@ -863,6 +865,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--add</c> via <see cref="AzureMariadbServerUpdateSettings.Add"/></li>
         ///     <li><c>--admin-password</c> via <see cref="AzureMariadbServerUpdateSettings.AdminPassword"/></li>
+        ///     <li><c>--auto-grow</c> via <see cref="AzureMariadbServerUpdateSettings.AutoGrow"/></li>
         ///     <li><c>--backup-retention</c> via <see cref="AzureMariadbServerUpdateSettings.BackupRetention"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureMariadbServerUpdateSettings.Debug"/></li>
         ///     <li><c>--force-string</c> via <see cref="AzureMariadbServerUpdateSettings.ForceString"/></li>
@@ -895,6 +898,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--add</c> via <see cref="AzureMariadbServerUpdateSettings.Add"/></li>
         ///     <li><c>--admin-password</c> via <see cref="AzureMariadbServerUpdateSettings.AdminPassword"/></li>
+        ///     <li><c>--auto-grow</c> via <see cref="AzureMariadbServerUpdateSettings.AutoGrow"/></li>
         ///     <li><c>--backup-retention</c> via <see cref="AzureMariadbServerUpdateSettings.BackupRetention"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureMariadbServerUpdateSettings.Debug"/></li>
         ///     <li><c>--force-string</c> via <see cref="AzureMariadbServerUpdateSettings.ForceString"/></li>
@@ -980,6 +984,480 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureMariadbServerWaitSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerWait(CombinatorialConfigure<AzureMariadbServerWaitSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureMariadbServerWait, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleCreate(AzureMariadbServerVnetRuleCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Help"/></li>
+        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.ServerName"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleCreate(Configure<AzureMariadbServerVnetRuleCreateSettings> configurator)
+        {
+            return AzureMariadbServerVnetRuleCreate(configurator(new AzureMariadbServerVnetRuleCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Help"/></li>
+        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.ServerName"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerVnetRuleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleCreate(CombinatorialConfigure<AzureMariadbServerVnetRuleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerVnetRuleCreate, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleDelete(AzureMariadbServerVnetRuleDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleDelete(Configure<AzureMariadbServerVnetRuleDeleteSettings> configurator)
+        {
+            return AzureMariadbServerVnetRuleDelete(configurator(new AzureMariadbServerVnetRuleDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerVnetRuleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleDelete(CombinatorialConfigure<AzureMariadbServerVnetRuleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerVnetRuleDelete, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleList(AzureMariadbServerVnetRuleListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleList(Configure<AzureMariadbServerVnetRuleListSettings> configurator)
+        {
+            return AzureMariadbServerVnetRuleList(configurator(new AzureMariadbServerVnetRuleListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerVnetRuleListSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleList(CombinatorialConfigure<AzureMariadbServerVnetRuleListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerVnetRuleList, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleShow(AzureMariadbServerVnetRuleShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleShow(Configure<AzureMariadbServerVnetRuleShowSettings> configurator)
+        {
+            return AzureMariadbServerVnetRuleShow(configurator(new AzureMariadbServerVnetRuleShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerVnetRuleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleShow(CombinatorialConfigure<AzureMariadbServerVnetRuleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerVnetRuleShow, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleUpdate(AzureMariadbServerVnetRuleUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></li>
+        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ServerName"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Set"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleUpdate(Configure<AzureMariadbServerVnetRuleUpdateSettings> configurator)
+        {
+            return AzureMariadbServerVnetRuleUpdate(configurator(new AzureMariadbServerVnetRuleUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></li>
+        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ServerName"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Set"/></li>
+        ///     <li><c>--subnet</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subnet"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Verbose"/></li>
+        ///     <li><c>--vnet-name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.VnetName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerVnetRuleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleUpdate(CombinatorialConfigure<AzureMariadbServerVnetRuleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerVnetRuleUpdate, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerReplicaCreate(AzureMariadbServerReplicaCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerReplicaCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureMariadbServerReplicaCreateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerReplicaCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--sku-name</c> via <see cref="AzureMariadbServerReplicaCreateSettings.SkuName"/></li>
+        ///     <li><c>--source-server</c> via <see cref="AzureMariadbServerReplicaCreateSettings.SourceServer"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerReplicaCreate(Configure<AzureMariadbServerReplicaCreateSettings> configurator)
+        {
+            return AzureMariadbServerReplicaCreate(configurator(new AzureMariadbServerReplicaCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureMariadbServerReplicaCreateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerReplicaCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--sku-name</c> via <see cref="AzureMariadbServerReplicaCreateSettings.SkuName"/></li>
+        ///     <li><c>--source-server</c> via <see cref="AzureMariadbServerReplicaCreateSettings.SourceServer"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerReplicaCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerReplicaCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerReplicaCreate(CombinatorialConfigure<AzureMariadbServerReplicaCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerReplicaCreate, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerReplicaList(AzureMariadbServerReplicaListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerReplicaListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerReplicaListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerReplicaListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerReplicaListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerReplicaListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerReplicaListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerReplicaListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerReplicaListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerReplicaListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerReplicaListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerReplicaList(Configure<AzureMariadbServerReplicaListSettings> configurator)
+        {
+            return AzureMariadbServerReplicaList(configurator(new AzureMariadbServerReplicaListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerReplicaListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerReplicaListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerReplicaListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerReplicaListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerReplicaListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerReplicaListSettings.ResourceGroup"/></li>
+        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerReplicaListSettings.ServerName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerReplicaListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerReplicaListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerReplicaListSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerReplicaList(CombinatorialConfigure<AzureMariadbServerReplicaListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerReplicaList, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureMariadbServerReplicaStop(AzureMariadbServerReplicaStopSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureMariadbServerReplicaStopSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerReplicaStopSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerReplicaStopSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerReplicaStopSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerReplicaStopSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerReplicaStopSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerReplicaStopSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerReplicaStopSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerReplicaStopSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerReplicaStopSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="AzureMariadbServerReplicaStopSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureMariadbServerReplicaStop(Configure<AzureMariadbServerReplicaStopSettings> configurator)
+        {
+            return AzureMariadbServerReplicaStop(configurator(new AzureMariadbServerReplicaStopSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Database for MariaDB servers.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerReplicaStopSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureMariadbServerReplicaStopSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerReplicaStopSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureMariadbServerReplicaStopSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureMariadbServerReplicaStopSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureMariadbServerReplicaStopSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerReplicaStopSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerReplicaStopSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerReplicaStopSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="AzureMariadbServerReplicaStopSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureMariadbServerReplicaStopSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerReplicaStop(CombinatorialConfigure<AzureMariadbServerReplicaStopSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureMariadbServerReplicaStop, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Database for MariaDB servers.</p>
@@ -1451,307 +1929,6 @@ namespace Nuke.Azure
         {
             return configurator.Invoke(AzureMariadbServerFirewallRuleUpdate, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
         }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleCreate(AzureMariadbServerVnetRuleCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Help"/></li>
-        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.ServerName"/></li>
-        ///     <li><c>--subnet</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Subnet"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Verbose"/></li>
-        ///     <li><c>--vnet-name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.VnetName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleCreate(Configure<AzureMariadbServerVnetRuleCreateSettings> configurator)
-        {
-            return AzureMariadbServerVnetRuleCreate(configurator(new AzureMariadbServerVnetRuleCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Help"/></li>
-        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.ServerName"/></li>
-        ///     <li><c>--subnet</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Subnet"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.Verbose"/></li>
-        ///     <li><c>--vnet-name</c> via <see cref="AzureMariadbServerVnetRuleCreateSettings.VnetName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureMariadbServerVnetRuleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleCreate(CombinatorialConfigure<AzureMariadbServerVnetRuleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureMariadbServerVnetRuleCreate, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleDelete(AzureMariadbServerVnetRuleDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleDelete(Configure<AzureMariadbServerVnetRuleDeleteSettings> configurator)
-        {
-            return AzureMariadbServerVnetRuleDelete(configurator(new AzureMariadbServerVnetRuleDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureMariadbServerVnetRuleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleDelete(CombinatorialConfigure<AzureMariadbServerVnetRuleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureMariadbServerVnetRuleDelete, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleList(AzureMariadbServerVnetRuleListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleList(Configure<AzureMariadbServerVnetRuleListSettings> configurator)
-        {
-            return AzureMariadbServerVnetRuleList(configurator(new AzureMariadbServerVnetRuleListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleListSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleListSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureMariadbServerVnetRuleListSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleList(CombinatorialConfigure<AzureMariadbServerVnetRuleListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureMariadbServerVnetRuleList, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleShow(AzureMariadbServerVnetRuleShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleShow(Configure<AzureMariadbServerVnetRuleShowSettings> configurator)
-        {
-            return AzureMariadbServerVnetRuleShow(configurator(new AzureMariadbServerVnetRuleShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.ServerName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureMariadbServerVnetRuleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleShow(CombinatorialConfigure<AzureMariadbServerVnetRuleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureMariadbServerVnetRuleShow, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleUpdate(AzureMariadbServerVnetRuleUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureMariadbServerVnetRuleUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></li>
-        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ServerName"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Set"/></li>
-        ///     <li><c>--subnet</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subnet"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Verbose"/></li>
-        ///     <li><c>--vnet-name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.VnetName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureMariadbServerVnetRuleUpdate(Configure<AzureMariadbServerVnetRuleUpdateSettings> configurator)
-        {
-            return AzureMariadbServerVnetRuleUpdate(configurator(new AzureMariadbServerVnetRuleUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Database for MariaDB servers.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/mariadb?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></li>
-        ///     <li><c>--ignore-missing-endpoint</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--server-name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.ServerName"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Set"/></li>
-        ///     <li><c>--subnet</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subnet"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.Verbose"/></li>
-        ///     <li><c>--vnet-name</c> via <see cref="AzureMariadbServerVnetRuleUpdateSettings.VnetName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureMariadbServerVnetRuleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureMariadbServerVnetRuleUpdate(CombinatorialConfigure<AzureMariadbServerVnetRuleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureMariadbServerVnetRuleUpdate, AzureMariadbLogger, degreeOfParallelism, completeOnFailure);
-        }
     }
     #region AzureMariadbSettings
     /// <summary>
@@ -1791,6 +1968,151 @@ namespace Nuke.Azure
         {
             arguments
               .Add("mariadb")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerLogsDownloadSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerLogsDownloadSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   Space-separated list of log filenames on the server to download.
+        /// </summary>
+        public virtual IReadOnlyList<string> Name => NameInternal.AsReadOnly();
+        internal List<string> NameInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server-logs download")
+              .Add("--name {value}", Name, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerLogsListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerLogsListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Integer in hours to indicate file last modify time, default value is 72.
+        /// </summary>
+        public virtual string FileLastWritten { get; internal set; }
+        /// <summary>
+        ///   The pattern that file name should match.
+        /// </summary>
+        public virtual string FilenameContains { get; internal set; }
+        /// <summary>
+        ///   The file size limitation to filter files.
+        /// </summary>
+        public virtual string MaxFileSize { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server-logs list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--file-last-written {value}", FileLastWritten)
+              .Add("--filename-contains {value}", FilenameContains)
+              .Add("--max-file-size {value}", MaxFileSize)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2078,151 +2400,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMariadbServerLogsDownloadSettings
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbServerLogsDownloadSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureMariadb executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
-        /// <summary>
-        ///   Space-separated list of log filenames on the server to download.
-        /// </summary>
-        public virtual IReadOnlyList<string> Name => NameInternal.AsReadOnly();
-        internal List<string> NameInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb server-logs download")
-              .Add("--name {value}", Name, separator: ' ')
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbServerLogsListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbServerLogsListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureMariadb executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Integer in hours to indicate file last modify time, default value is 72.
-        /// </summary>
-        public virtual string FileLastWritten { get; internal set; }
-        /// <summary>
-        ///   The pattern that file name should match.
-        /// </summary>
-        public virtual string FilenameContains { get; internal set; }
-        /// <summary>
-        ///   The file size limitation to filter files.
-        /// </summary>
-        public virtual string MaxFileSize { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb server-logs list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--file-last-written {value}", FileLastWritten)
-              .Add("--filename-contains {value}", FilenameContains)
-              .Add("--max-file-size {value}", MaxFileSize)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureMariadbServerCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureMariadbTasks"/>.
@@ -2250,13 +2427,17 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string SkuName { get; internal set; }
         /// <summary>
+        ///   Enable or disable autogrow of the storage. Default value is Enabled.
+        /// </summary>
+        public virtual MariadbServerAutoGrow AutoGrow { get; internal set; }
+        /// <summary>
         ///   The number of days a backup is retained. Range of 7 to 35 days. Default is 7 days.
         /// </summary>
         public virtual string BackupRetention { get; internal set; }
         /// <summary>
         ///   Enable or disable geo-redundant backups. Default value is Disabled. Not supported in Basic pricing tier.
         /// </summary>
-        public virtual MariadbServerCreateGeoRedundantBackup GeoRedundantBackup { get; internal set; }
+        public virtual MariadbServerAutoGrow GeoRedundantBackup { get; internal set; }
         /// <summary>
         ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
         /// </summary>
@@ -2264,7 +2445,7 @@ namespace Nuke.Azure
         /// <summary>
         ///   Enable or disable ssl enforcement for connections to server. Default is Enabled.
         /// </summary>
-        public virtual MariadbServerCreateGeoRedundantBackup SslEnforcement { get; internal set; }
+        public virtual MariadbServerAutoGrow SslEnforcement { get; internal set; }
         /// <summary>
         ///   The storage capacity of the server (unit is megabytes). Minimum 5120 and increases in 1024 increments. Default is 51200.
         /// </summary>
@@ -2316,6 +2497,7 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--sku-name {value}", SkuName)
+              .Add("--auto-grow {value}", AutoGrow)
               .Add("--backup-retention {value}", BackupRetention)
               .Add("--geo-redundant-backup {value}", GeoRedundantBackup)
               .Add("--location {value}", Location)
@@ -2801,6 +2983,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string AdminPassword { get; internal set; }
         /// <summary>
+        ///   Enable or disable autogrow of the storage. Default value is Enabled.
+        /// </summary>
+        public virtual MariadbServerAutoGrow AutoGrow { get; internal set; }
+        /// <summary>
         ///   The number of days a backup is retained. Range of 7 to 35 days. Default is 7 days.
         /// </summary>
         public virtual string BackupRetention { get; internal set; }
@@ -2811,7 +2997,7 @@ namespace Nuke.Azure
         /// <summary>
         ///   Enable or disable ssl enforcement for connections to server. Default is Enabled.
         /// </summary>
-        public virtual MariadbServerCreateGeoRedundantBackup SslEnforcement { get; internal set; }
+        public virtual MariadbServerAutoGrow SslEnforcement { get; internal set; }
         /// <summary>
         ///   The storage capacity of the server (unit is megabytes). Minimum 5120 and increases in 1024 increments. Default is 51200.
         /// </summary>
@@ -2878,6 +3064,7 @@ namespace Nuke.Azure
             arguments
               .Add("mariadb server update")
               .Add("--admin-password {value}", AdminPassword, secret: true)
+              .Add("--auto-grow {value}", AutoGrow)
               .Add("--backup-retention {value}", BackupRetention)
               .Add("--sku-name {value}", SkuName)
               .Add("--ssl-enforcement {value}", SslEnforcement)
@@ -2979,6 +3166,633 @@ namespace Nuke.Azure
               .Add("--exists {value}", Exists)
               .Add("--interval {value}", Interval)
               .Add("--timeout {value}", Timeout)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerVnetRuleCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   The name of the vnet rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.
+        /// </summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary>
+        ///   Create vnet rule before virtual network has vnet service endpoint enabled.
+        /// </summary>
+        public virtual bool? IgnoreMissingEndpoint { get; internal set; }
+        /// <summary>
+        ///   The virtual network name.
+        /// </summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server vnet-rule create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subnet {value}", Subnet)
+              .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerVnetRuleDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the vnet rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server vnet-rule delete")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerVnetRuleListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server vnet-rule list")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerVnetRuleShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the vnet rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server vnet-rule show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerVnetRuleUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.
+        /// </summary>
+        public virtual string Subnet { get; internal set; }
+        /// <summary>
+        ///   Create vnet rule before virtual network has vnet service endpoint enabled.
+        /// </summary>
+        public virtual bool? IgnoreMissingEndpoint { get; internal set; }
+        /// <summary>
+        ///   The virtual network name.
+        /// </summary>
+        public virtual string VnetName { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the vnet rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
+        /// </summary>
+        public virtual string Add { get; internal set; }
+        /// <summary>
+        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+        /// </summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary>
+        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
+        /// </summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary>
+        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
+        /// </summary>
+        public virtual string Set { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server vnet-rule update")
+              .Add("--subnet {value}", Subnet)
+              .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
+              .Add("--vnet-name {value}", VnetName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerReplicaCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerReplicaCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The name or resource ID of the master server to the create replica for.
+        /// </summary>
+        public virtual string SourceServer { get; internal set; }
+        /// <summary>
+        ///   Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.
+        /// </summary>
+        public virtual string Location { get; internal set; }
+        /// <summary>
+        ///   Do not wait for the long-running operation to finish.
+        /// </summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary>
+        ///   The name of the sku. Follows the convention {pricing tier}_{compute generation}_{vCores} in shorthand. Examples: B_Gen5_1, GP_Gen5_4, MO_Gen5_16.
+        /// </summary>
+        public virtual string SkuName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server replica create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--source-server {value}", SourceServer)
+              .Add("--location {value}", Location)
+              .Add("--no-wait", NoWait)
+              .Add("--sku-name {value}", SkuName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerReplicaListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerReplicaListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the master server.
+        /// </summary>
+        public virtual string ServerName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server replica list")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--server-name {value}", ServerName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureMariadbServerReplicaStopSettings
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureMariadbServerReplicaStopSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureMariadb executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
+        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
+        /// <summary>
+        ///   Do not prompt for confirmation.
+        /// </summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("mariadb server replica stop")
+              .Add("--yes {value}", Yes)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -3606,410 +4420,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureMariadbServerVnetRuleCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbServerVnetRuleCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureMariadb executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
-        /// <summary>
-        ///   The name of the vnet rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.
-        /// </summary>
-        public virtual string Subnet { get; internal set; }
-        /// <summary>
-        ///   Create vnet rule before virtual network has vnet service endpoint enabled.
-        /// </summary>
-        public virtual bool? IgnoreMissingEndpoint { get; internal set; }
-        /// <summary>
-        ///   The virtual network name.
-        /// </summary>
-        public virtual string VnetName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb server vnet-rule create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subnet {value}", Subnet)
-              .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
-              .Add("--vnet-name {value}", VnetName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbServerVnetRuleDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbServerVnetRuleDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureMariadb executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the vnet rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb server vnet-rule delete")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbServerVnetRuleListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbServerVnetRuleListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureMariadb executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb server vnet-rule list")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbServerVnetRuleShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbServerVnetRuleShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureMariadb executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the vnet rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb server vnet-rule show")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureMariadbServerVnetRuleUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureMariadbServerVnetRuleUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureMariadb executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureMariadbTasks.AzureMariadbPath;
-        public override Action<OutputType, string> CustomLogger => AzureMariadbTasks.AzureMariadbLogger;
-        /// <summary>
-        ///   Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.
-        /// </summary>
-        public virtual string Subnet { get; internal set; }
-        /// <summary>
-        ///   Create vnet rule before virtual network has vnet service endpoint enabled.
-        /// </summary>
-        public virtual bool? IgnoreMissingEndpoint { get; internal set; }
-        /// <summary>
-        ///   The virtual network name.
-        /// </summary>
-        public virtual string VnetName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the vnet rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.
-        /// </summary>
-        public virtual string ServerName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
-        /// </summary>
-        public virtual string Add { get; internal set; }
-        /// <summary>
-        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-        /// </summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary>
-        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
-        /// </summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary>
-        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
-        /// </summary>
-        public virtual string Set { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("mariadb server vnet-rule update")
-              .Add("--subnet {value}", Subnet)
-              .Add("--ignore-missing-endpoint", IgnoreMissingEndpoint)
-              .Add("--vnet-name {value}", VnetName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--server-name {value}", ServerName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureMariadbSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureMariadbTasks"/>.
@@ -4132,6 +4542,563 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureMariadbSettings ResetVerbose(this AzureMariadbSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerLogsDownloadSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerLogsDownloadSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Name"/> to a new list</em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal = name.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Name"/> to a new list</em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal = name.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings AddName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.AddRange(name);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings AddName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.AddRange(name);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ClearName(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NameInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings RemoveName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(name);
+            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
+        ///   <p>Space-separated list of log filenames on the server to download.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings RemoveName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(name);
+            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetResourceGroup(this AzureMariadbServerLogsDownloadSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetResourceGroup(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetServerName(this AzureMariadbServerLogsDownloadSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetServerName(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetSubscription(this AzureMariadbServerLogsDownloadSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetSubscription(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetDebug(this AzureMariadbServerLogsDownloadSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetDebug(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetHelp(this AzureMariadbServerLogsDownloadSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetHelp(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetOutput(this AzureMariadbServerLogsDownloadSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetOutput(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetQuery(this AzureMariadbServerLogsDownloadSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetQuery(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings SetVerbose(this AzureMariadbServerLogsDownloadSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsDownloadSettings ResetVerbose(this AzureMariadbServerLogsDownloadSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerLogsListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerLogsListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetResourceGroup(this AzureMariadbServerLogsListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetResourceGroup(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetServerName(this AzureMariadbServerLogsListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetServerName(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FileLastWritten
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/></em></p>
+        ///   <p>Integer in hours to indicate file last modify time, default value is 72.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetFileLastWritten(this AzureMariadbServerLogsListSettings toolSettings, string fileLastWritten)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileLastWritten = fileLastWritten;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/></em></p>
+        ///   <p>Integer in hours to indicate file last modify time, default value is 72.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetFileLastWritten(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FileLastWritten = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FilenameContains
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/></em></p>
+        ///   <p>The pattern that file name should match.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetFilenameContains(this AzureMariadbServerLogsListSettings toolSettings, string filenameContains)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilenameContains = filenameContains;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/></em></p>
+        ///   <p>The pattern that file name should match.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetFilenameContains(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilenameContains = null;
+            return toolSettings;
+        }
+        #endregion
+        #region MaxFileSize
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/></em></p>
+        ///   <p>The file size limitation to filter files.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetMaxFileSize(this AzureMariadbServerLogsListSettings toolSettings, string maxFileSize)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxFileSize = maxFileSize;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/></em></p>
+        ///   <p>The file size limitation to filter files.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetMaxFileSize(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MaxFileSize = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetSubscription(this AzureMariadbServerLogsListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetSubscription(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetDebug(this AzureMariadbServerLogsListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetDebug(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetHelp(this AzureMariadbServerLogsListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetHelp(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetOutput(this AzureMariadbServerLogsListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetOutput(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetQuery(this AzureMariadbServerLogsListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetQuery(this AzureMariadbServerLogsListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings SetVerbose(this AzureMariadbServerLogsListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerLogsListSettings ResetVerbose(this AzureMariadbServerLogsListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5092,563 +6059,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMariadbServerLogsDownloadSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerLogsDownloadSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Name"/> to a new list</em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal = name.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Name"/> to a new list</em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal = name.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings AddName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.AddRange(name);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings AddName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.AddRange(name);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ClearName(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NameInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings RemoveName(this AzureMariadbServerLogsDownloadSettings toolSettings, params string[] name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(name);
-            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerLogsDownloadSettings.Name"/></em></p>
-        ///   <p>Space-separated list of log filenames on the server to download.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings RemoveName(this AzureMariadbServerLogsDownloadSettings toolSettings, IEnumerable<string> name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(name);
-            toolSettings.NameInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetResourceGroup(this AzureMariadbServerLogsDownloadSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetResourceGroup(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetServerName(this AzureMariadbServerLogsDownloadSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetServerName(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetSubscription(this AzureMariadbServerLogsDownloadSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetSubscription(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetDebug(this AzureMariadbServerLogsDownloadSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetDebug(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetHelp(this AzureMariadbServerLogsDownloadSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetHelp(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetOutput(this AzureMariadbServerLogsDownloadSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetOutput(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetQuery(this AzureMariadbServerLogsDownloadSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetQuery(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings SetVerbose(this AzureMariadbServerLogsDownloadSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsDownloadSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsDownloadSettings ResetVerbose(this AzureMariadbServerLogsDownloadSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbServerLogsListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerLogsListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetResourceGroup(this AzureMariadbServerLogsListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetResourceGroup(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetServerName(this AzureMariadbServerLogsListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetServerName(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FileLastWritten
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/></em></p>
-        ///   <p>Integer in hours to indicate file last modify time, default value is 72.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetFileLastWritten(this AzureMariadbServerLogsListSettings toolSettings, string fileLastWritten)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FileLastWritten = fileLastWritten;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.FileLastWritten"/></em></p>
-        ///   <p>Integer in hours to indicate file last modify time, default value is 72.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetFileLastWritten(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FileLastWritten = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FilenameContains
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/></em></p>
-        ///   <p>The pattern that file name should match.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetFilenameContains(this AzureMariadbServerLogsListSettings toolSettings, string filenameContains)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilenameContains = filenameContains;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.FilenameContains"/></em></p>
-        ///   <p>The pattern that file name should match.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetFilenameContains(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilenameContains = null;
-            return toolSettings;
-        }
-        #endregion
-        #region MaxFileSize
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/></em></p>
-        ///   <p>The file size limitation to filter files.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetMaxFileSize(this AzureMariadbServerLogsListSettings toolSettings, string maxFileSize)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxFileSize = maxFileSize;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.MaxFileSize"/></em></p>
-        ///   <p>The file size limitation to filter files.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetMaxFileSize(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MaxFileSize = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetSubscription(this AzureMariadbServerLogsListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetSubscription(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetDebug(this AzureMariadbServerLogsListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetDebug(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetHelp(this AzureMariadbServerLogsListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetHelp(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetOutput(this AzureMariadbServerLogsListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetOutput(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetQuery(this AzureMariadbServerLogsListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetQuery(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerLogsListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings SetVerbose(this AzureMariadbServerLogsListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerLogsListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerLogsListSettings ResetVerbose(this AzureMariadbServerLogsListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureMariadbServerCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureMariadbTasks"/>.
@@ -5729,6 +6139,30 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AutoGrow
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerCreateSettings.AutoGrow"/></em></p>
+        ///   <p>Enable or disable autogrow of the storage. Default value is Enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerCreateSettings SetAutoGrow(this AzureMariadbServerCreateSettings toolSettings, MariadbServerAutoGrow autoGrow)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoGrow = autoGrow;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerCreateSettings.AutoGrow"/></em></p>
+        ///   <p>Enable or disable autogrow of the storage. Default value is Enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerCreateSettings ResetAutoGrow(this AzureMariadbServerCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoGrow = null;
+            return toolSettings;
+        }
+        #endregion
         #region BackupRetention
         /// <summary>
         ///   <p><em>Sets <see cref="AzureMariadbServerCreateSettings.BackupRetention"/></em></p>
@@ -5759,7 +6193,7 @@ namespace Nuke.Azure
         ///   <p>Enable or disable geo-redundant backups. Default value is Disabled. Not supported in Basic pricing tier.</p>
         /// </summary>
         [Pure]
-        public static AzureMariadbServerCreateSettings SetGeoRedundantBackup(this AzureMariadbServerCreateSettings toolSettings, MariadbServerCreateGeoRedundantBackup geoRedundantBackup)
+        public static AzureMariadbServerCreateSettings SetGeoRedundantBackup(this AzureMariadbServerCreateSettings toolSettings, MariadbServerAutoGrow geoRedundantBackup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.GeoRedundantBackup = geoRedundantBackup;
@@ -5807,7 +6241,7 @@ namespace Nuke.Azure
         ///   <p>Enable or disable ssl enforcement for connections to server. Default is Enabled.</p>
         /// </summary>
         [Pure]
-        public static AzureMariadbServerCreateSettings SetSslEnforcement(this AzureMariadbServerCreateSettings toolSettings, MariadbServerCreateGeoRedundantBackup sslEnforcement)
+        public static AzureMariadbServerCreateSettings SetSslEnforcement(this AzureMariadbServerCreateSettings toolSettings, MariadbServerAutoGrow sslEnforcement)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SslEnforcement = sslEnforcement;
@@ -8022,6 +8456,30 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region AutoGrow
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerUpdateSettings.AutoGrow"/></em></p>
+        ///   <p>Enable or disable autogrow of the storage. Default value is Enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerUpdateSettings SetAutoGrow(this AzureMariadbServerUpdateSettings toolSettings, MariadbServerAutoGrow autoGrow)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoGrow = autoGrow;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerUpdateSettings.AutoGrow"/></em></p>
+        ///   <p>Enable or disable autogrow of the storage. Default value is Enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerUpdateSettings ResetAutoGrow(this AzureMariadbServerUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AutoGrow = null;
+            return toolSettings;
+        }
+        #endregion
         #region BackupRetention
         /// <summary>
         ///   <p><em>Sets <see cref="AzureMariadbServerUpdateSettings.BackupRetention"/></em></p>
@@ -8076,7 +8534,7 @@ namespace Nuke.Azure
         ///   <p>Enable or disable ssl enforcement for connections to server. Default is Enabled.</p>
         /// </summary>
         [Pure]
-        public static AzureMariadbServerUpdateSettings SetSslEnforcement(this AzureMariadbServerUpdateSettings toolSettings, MariadbServerCreateGeoRedundantBackup sslEnforcement)
+        public static AzureMariadbServerUpdateSettings SetSslEnforcement(this AzureMariadbServerUpdateSettings toolSettings, MariadbServerAutoGrow sslEnforcement)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SslEnforcement = sslEnforcement;
@@ -8884,6 +9342,2663 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureMariadbServerWaitSettings ResetVerbose(this AzureMariadbServerWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerVnetRuleCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetName(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetName(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetResourceGroup(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetResourceGroup(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetServerName(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetServerName(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subnet
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetSubnet(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetSubnet(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IgnoreMissingEndpoint
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings, bool? ignoreMissingEndpoint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = ignoreMissingEndpoint;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings EnableIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings DisableIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ToggleIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = !toolSettings.IgnoreMissingEndpoint;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.VnetName"/></em></p>
+        ///   <p>The virtual network name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetVnetName(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.VnetName"/></em></p>
+        ///   <p>The virtual network name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetVnetName(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetSubscription(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetSubscription(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetDebug(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetDebug(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetHelp(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetHelp(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetOutput(this AzureMariadbServerVnetRuleCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetOutput(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetQuery(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetQuery(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings SetVerbose(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleCreateSettings ResetVerbose(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerVnetRuleDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings AddIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings AddIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ClearIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings RemoveIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings RemoveIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetName(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ResetName(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetResourceGroup(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ResetResourceGroup(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetServerName(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ResetServerName(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetSubscription(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ResetSubscription(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetDebug(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ResetDebug(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetHelp(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ResetHelp(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetOutput(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ResetOutput(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetQuery(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ResetQuery(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings SetVerbose(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleDeleteSettings ResetVerbose(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerVnetRuleListSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetIds(this AzureMariadbServerVnetRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetIds(this AzureMariadbServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings AddIds(this AzureMariadbServerVnetRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings AddIds(this AzureMariadbServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings ClearIds(this AzureMariadbServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings RemoveIds(this AzureMariadbServerVnetRuleListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings RemoveIds(this AzureMariadbServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetResourceGroup(this AzureMariadbServerVnetRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings ResetResourceGroup(this AzureMariadbServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetServerName(this AzureMariadbServerVnetRuleListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings ResetServerName(this AzureMariadbServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetSubscription(this AzureMariadbServerVnetRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings ResetSubscription(this AzureMariadbServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetDebug(this AzureMariadbServerVnetRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings ResetDebug(this AzureMariadbServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetHelp(this AzureMariadbServerVnetRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings ResetHelp(this AzureMariadbServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetOutput(this AzureMariadbServerVnetRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings ResetOutput(this AzureMariadbServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetQuery(this AzureMariadbServerVnetRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings ResetQuery(this AzureMariadbServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings SetVerbose(this AzureMariadbServerVnetRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleListSettings ResetVerbose(this AzureMariadbServerVnetRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerVnetRuleShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings AddIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings AddIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ClearIds(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings RemoveIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings RemoveIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetName(this AzureMariadbServerVnetRuleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ResetName(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetResourceGroup(this AzureMariadbServerVnetRuleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ResetResourceGroup(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetServerName(this AzureMariadbServerVnetRuleShowSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ResetServerName(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetSubscription(this AzureMariadbServerVnetRuleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ResetSubscription(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetDebug(this AzureMariadbServerVnetRuleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ResetDebug(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetHelp(this AzureMariadbServerVnetRuleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ResetHelp(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetOutput(this AzureMariadbServerVnetRuleShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ResetOutput(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetQuery(this AzureMariadbServerVnetRuleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ResetQuery(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings SetVerbose(this AzureMariadbServerVnetRuleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleShowSettings ResetVerbose(this AzureMariadbServerVnetRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerVnetRuleUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerVnetRuleUpdateSettingsExtensions
+    {
+        #region Subnet
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetSubnet(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string subnet)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = subnet;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subnet"/></em></p>
+        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetSubnet(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subnet = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IgnoreMissingEndpoint
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, bool? ignoreMissingEndpoint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = ignoreMissingEndpoint;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings EnableIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings DisableIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
+        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ToggleIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IgnoreMissingEndpoint = !toolSettings.IgnoreMissingEndpoint;
+            return toolSettings;
+        }
+        #endregion
+        #region VnetName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.VnetName"/></em></p>
+        ///   <p>The virtual network name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetVnetName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string vnetName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = vnetName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.VnetName"/></em></p>
+        ///   <p>The virtual network name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetVnetName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VnetName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings AddIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings AddIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ClearIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings RemoveIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings RemoveIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the vnet rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetResourceGroup(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetResourceGroup(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetServerName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ServerName"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetServerName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetSubscription(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetSubscription(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetAdd(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetAdd(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetForceString(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetForceString(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetRemove(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetRemove(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetSet(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetSet(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetDebug(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetDebug(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetHelp(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetHelp(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetOutput(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetOutput(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetQuery(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetQuery(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings SetVerbose(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerVnetRuleUpdateSettings ResetVerbose(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerReplicaCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerReplicaCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.Name"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetName(this AzureMariadbServerReplicaCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.Name"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetName(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetResourceGroup(this AzureMariadbServerReplicaCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetResourceGroup(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SourceServer
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.SourceServer"/></em></p>
+        ///   <p>The name or resource ID of the master server to the create replica for.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetSourceServer(this AzureMariadbServerReplicaCreateSettings toolSettings, string sourceServer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourceServer = sourceServer;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.SourceServer"/></em></p>
+        ///   <p>The name or resource ID of the master server to the create replica for.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetSourceServer(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SourceServer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetLocation(this AzureMariadbServerReplicaCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. If not provided, the create replica will be in the same location as the master server.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetLocation(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetNoWait(this AzureMariadbServerReplicaCreateSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetNoWait(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureMariadbServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings EnableNoWait(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureMariadbServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings DisableNoWait(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureMariadbServerReplicaCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ToggleNoWait(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region SkuName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.SkuName"/></em></p>
+        ///   <p>The name of the sku. Follows the convention {pricing tier}_{compute generation}_{vCores} in shorthand. Examples: B_Gen5_1, GP_Gen5_4, MO_Gen5_16.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetSkuName(this AzureMariadbServerReplicaCreateSettings toolSettings, string skuName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = skuName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.SkuName"/></em></p>
+        ///   <p>The name of the sku. Follows the convention {pricing tier}_{compute generation}_{vCores} in shorthand. Examples: B_Gen5_1, GP_Gen5_4, MO_Gen5_16.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetSkuName(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SkuName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetSubscription(this AzureMariadbServerReplicaCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetSubscription(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetDebug(this AzureMariadbServerReplicaCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetDebug(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetHelp(this AzureMariadbServerReplicaCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetHelp(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetOutput(this AzureMariadbServerReplicaCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetOutput(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetQuery(this AzureMariadbServerReplicaCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetQuery(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings SetVerbose(this AzureMariadbServerReplicaCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaCreateSettings ResetVerbose(this AzureMariadbServerReplicaCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerReplicaListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerReplicaListSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetIds(this AzureMariadbServerReplicaListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetIds(this AzureMariadbServerReplicaListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings AddIds(this AzureMariadbServerReplicaListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings AddIds(this AzureMariadbServerReplicaListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureMariadbServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings ClearIds(this AzureMariadbServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings RemoveIds(this AzureMariadbServerReplicaListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerReplicaListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings RemoveIds(this AzureMariadbServerReplicaListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetResourceGroup(this AzureMariadbServerReplicaListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings ResetResourceGroup(this AzureMariadbServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServerName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.ServerName"/></em></p>
+        ///   <p>Name of the master server.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetServerName(this AzureMariadbServerReplicaListSettings toolSettings, string serverName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = serverName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaListSettings.ServerName"/></em></p>
+        ///   <p>Name of the master server.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings ResetServerName(this AzureMariadbServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServerName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetSubscription(this AzureMariadbServerReplicaListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings ResetSubscription(this AzureMariadbServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetDebug(this AzureMariadbServerReplicaListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings ResetDebug(this AzureMariadbServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetHelp(this AzureMariadbServerReplicaListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings ResetHelp(this AzureMariadbServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetOutput(this AzureMariadbServerReplicaListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings ResetOutput(this AzureMariadbServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetQuery(this AzureMariadbServerReplicaListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings ResetQuery(this AzureMariadbServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings SetVerbose(this AzureMariadbServerReplicaListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaListSettings ResetVerbose(this AzureMariadbServerReplicaListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureMariadbServerReplicaStopSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureMariadbTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureMariadbServerReplicaStopSettingsExtensions
+    {
+        #region Yes
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Yes"/></em></p>
+        ///   <p>Do not prompt for confirmation.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetYes(this AzureMariadbServerReplicaStopSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaStopSettings.Yes"/></em></p>
+        ///   <p>Do not prompt for confirmation.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ResetYes(this AzureMariadbServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetIds(this AzureMariadbServerReplicaStopSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetIds(this AzureMariadbServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings AddIds(this AzureMariadbServerReplicaStopSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureMariadbServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings AddIds(this AzureMariadbServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureMariadbServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ClearIds(this AzureMariadbServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings RemoveIds(this AzureMariadbServerReplicaStopSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureMariadbServerReplicaStopSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings RemoveIds(this AzureMariadbServerReplicaStopSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Name"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetName(this AzureMariadbServerReplicaStopSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaStopSettings.Name"/></em></p>
+        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ResetName(this AzureMariadbServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetResourceGroup(this AzureMariadbServerReplicaStopSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaStopSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ResetResourceGroup(this AzureMariadbServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetSubscription(this AzureMariadbServerReplicaStopSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaStopSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ResetSubscription(this AzureMariadbServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetDebug(this AzureMariadbServerReplicaStopSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaStopSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ResetDebug(this AzureMariadbServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetHelp(this AzureMariadbServerReplicaStopSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaStopSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ResetHelp(this AzureMariadbServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetOutput(this AzureMariadbServerReplicaStopSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaStopSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ResetOutput(this AzureMariadbServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetQuery(this AzureMariadbServerReplicaStopSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaStopSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ResetQuery(this AzureMariadbServerReplicaStopSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureMariadbServerReplicaStopSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings SetVerbose(this AzureMariadbServerReplicaStopSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureMariadbServerReplicaStopSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureMariadbServerReplicaStopSettings ResetVerbose(this AzureMariadbServerReplicaStopSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -11459,1754 +14574,18 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureMariadbServerVnetRuleCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerVnetRuleCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetName(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetName(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetResourceGroup(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetResourceGroup(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetServerName(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetServerName(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subnet
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Subnet"/></em></p>
-        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetSubnet(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string subnet)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = subnet;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Subnet"/></em></p>
-        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetSubnet(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IgnoreMissingEndpoint
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings, bool? ignoreMissingEndpoint)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = ignoreMissingEndpoint;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = null;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings EnableIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings DisableIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzureMariadbServerVnetRuleCreateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ToggleIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = !toolSettings.IgnoreMissingEndpoint;
-            return toolSettings;
-        }
-        #endregion
-        #region VnetName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.VnetName"/></em></p>
-        ///   <p>The virtual network name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetVnetName(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string vnetName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = vnetName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.VnetName"/></em></p>
-        ///   <p>The virtual network name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetVnetName(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetSubscription(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetSubscription(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetDebug(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetDebug(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetHelp(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetHelp(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetOutput(this AzureMariadbServerVnetRuleCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetOutput(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetQuery(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetQuery(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings SetVerbose(this AzureMariadbServerVnetRuleCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleCreateSettings ResetVerbose(this AzureMariadbServerVnetRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbServerVnetRuleDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerVnetRuleDeleteSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings AddIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings AddIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ClearIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings RemoveIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings RemoveIds(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetName(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ResetName(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetResourceGroup(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ResetResourceGroup(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetServerName(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ResetServerName(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetSubscription(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ResetSubscription(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetDebug(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ResetDebug(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetHelp(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ResetHelp(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetOutput(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ResetOutput(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetQuery(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ResetQuery(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings SetVerbose(this AzureMariadbServerVnetRuleDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleDeleteSettings ResetVerbose(this AzureMariadbServerVnetRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbServerVnetRuleListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerVnetRuleListSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetIds(this AzureMariadbServerVnetRuleListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetIds(this AzureMariadbServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings AddIds(this AzureMariadbServerVnetRuleListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings AddIds(this AzureMariadbServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings ClearIds(this AzureMariadbServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings RemoveIds(this AzureMariadbServerVnetRuleListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings RemoveIds(this AzureMariadbServerVnetRuleListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetResourceGroup(this AzureMariadbServerVnetRuleListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings ResetResourceGroup(this AzureMariadbServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetServerName(this AzureMariadbServerVnetRuleListSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings ResetServerName(this AzureMariadbServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetSubscription(this AzureMariadbServerVnetRuleListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings ResetSubscription(this AzureMariadbServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetDebug(this AzureMariadbServerVnetRuleListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings ResetDebug(this AzureMariadbServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetHelp(this AzureMariadbServerVnetRuleListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings ResetHelp(this AzureMariadbServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetOutput(this AzureMariadbServerVnetRuleListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings ResetOutput(this AzureMariadbServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetQuery(this AzureMariadbServerVnetRuleListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings ResetQuery(this AzureMariadbServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings SetVerbose(this AzureMariadbServerVnetRuleListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleListSettings ResetVerbose(this AzureMariadbServerVnetRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbServerVnetRuleShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerVnetRuleShowSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings AddIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings AddIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ClearIds(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings RemoveIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings RemoveIds(this AzureMariadbServerVnetRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetName(this AzureMariadbServerVnetRuleShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ResetName(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetResourceGroup(this AzureMariadbServerVnetRuleShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ResetResourceGroup(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetServerName(this AzureMariadbServerVnetRuleShowSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ResetServerName(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetSubscription(this AzureMariadbServerVnetRuleShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ResetSubscription(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetDebug(this AzureMariadbServerVnetRuleShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ResetDebug(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetHelp(this AzureMariadbServerVnetRuleShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ResetHelp(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetOutput(this AzureMariadbServerVnetRuleShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ResetOutput(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetQuery(this AzureMariadbServerVnetRuleShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ResetQuery(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings SetVerbose(this AzureMariadbServerVnetRuleShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleShowSettings ResetVerbose(this AzureMariadbServerVnetRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureMariadbServerVnetRuleUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureMariadbTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureMariadbServerVnetRuleUpdateSettingsExtensions
-    {
-        #region Subnet
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subnet"/></em></p>
-        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetSubnet(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string subnet)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = subnet;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subnet"/></em></p>
-        ///   <p>Name or ID of the subnet that allows access to an Azure Postgres Server. If subnet name is provided, --vnet-name must be provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetSubnet(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subnet = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IgnoreMissingEndpoint
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, bool? ignoreMissingEndpoint)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = ignoreMissingEndpoint;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = null;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings EnableIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings DisableIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzureMariadbServerVnetRuleUpdateSettings.IgnoreMissingEndpoint"/></em></p>
-        ///   <p>Create vnet rule before virtual network has vnet service endpoint enabled.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ToggleIgnoreMissingEndpoint(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IgnoreMissingEndpoint = !toolSettings.IgnoreMissingEndpoint;
-            return toolSettings;
-        }
-        #endregion
-        #region VnetName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.VnetName"/></em></p>
-        ///   <p>The virtual network name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetVnetName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string vnetName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = vnetName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.VnetName"/></em></p>
-        ///   <p>The virtual network name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetVnetName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VnetName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings AddIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings AddIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ClearIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings RemoveIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureMariadbServerVnetRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings RemoveIds(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the vnet rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetResourceGroup(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetResourceGroup(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServerName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetServerName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string serverName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = serverName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ServerName"/></em></p>
-        ///   <p>Name of the server. The name can contain only lowercase letters, numbers, and the hyphen (-) character. Minimum 3 characters and maximum 63 characters.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetServerName(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServerName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetSubscription(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetSubscription(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetAdd(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetAdd(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetForceString(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetForceString(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetRemove(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetRemove(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetSet(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetSet(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetDebug(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetDebug(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetHelp(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetHelp(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetOutput(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetOutput(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetQuery(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetQuery(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings SetVerbose(this AzureMariadbServerVnetRuleUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureMariadbServerVnetRuleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureMariadbServerVnetRuleUpdateSettings ResetVerbose(this AzureMariadbServerVnetRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region MariadbServerCreateGeoRedundantBackup
+    #region MariadbServerAutoGrow
     /// <summary>
     ///   Used within <see cref="AzureMariadbTasks"/>.
     /// </summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
-    [TypeConverter(typeof(TypeConverter<MariadbServerCreateGeoRedundantBackup>))]
-    public partial class MariadbServerCreateGeoRedundantBackup : Enumeration
+    [TypeConverter(typeof(TypeConverter<MariadbServerAutoGrow>))]
+    public partial class MariadbServerAutoGrow : Enumeration
     {
-        public static MariadbServerCreateGeoRedundantBackup disabled = new MariadbServerCreateGeoRedundantBackup { Value = "disabled" };
-        public static MariadbServerCreateGeoRedundantBackup enabled = new MariadbServerCreateGeoRedundantBackup { Value = "enabled" };
+        public static MariadbServerAutoGrow disabled = new MariadbServerAutoGrow { Value = "disabled" };
+        public static MariadbServerAutoGrow enabled = new MariadbServerAutoGrow { Value = "enabled" };
     }
     #endregion
 }

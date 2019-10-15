@@ -1,8 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/signalr.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/signalr/key.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/signalr.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/signalr/cors.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/signalr/key.yml"
   ],
   "name": "AzureSignalr",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/signalr?view=azure-cli-latest",
@@ -36,11 +37,26 @@
             "help": "The sku name of the signalr service. E.g. Standard_S1."
           },
           {
+            "name": "AllowedOrigins",
+            "type": "List<string>",
+            "format": "--allowed-origins {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"\\*\"."
+          },
+          {
             "name": "Location",
             "type": "string",
             "format": "--location {value}",
             "secret": false,
             "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "ServiceMode",
+            "type": "SignalrServiceMode",
+            "format": "--service-mode {value}",
+            "secret": false,
+            "help": "The service mode which signalr service will be working on."
           },
           {
             "name": "Tags",
@@ -118,10 +134,235 @@
       }
     },
     {
+      "postfix": "Restart",
+      "definiteArgument": "signalr restart",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of signalr service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "Show",
       "definiteArgument": "signalr show",
       "settingsClass": {
         "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of signalr service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "signalr update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of signalr service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "AllowedOrigins",
+            "type": "List<string>",
+            "format": "--allowed-origins {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"\\*\"."
+          },
+          {
+            "name": "ServiceMode",
+            "type": "SignalrServiceMode",
+            "format": "--service-mode {value}",
+            "secret": false,
+            "help": "The service mode which signalr service will be working on."
+          },
+          {
+            "name": "Sku",
+            "type": "string",
+            "format": "--sku {value}",
+            "secret": false,
+            "help": "The sku name of the signalr service. E.g. Standard_S1."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "UnitCount",
+            "type": "string",
+            "format": "--unit-count {value}",
+            "secret": false,
+            "help": "The number of signalr service unit count."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CorsAdd",
+      "definiteArgument": "signalr cors add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowedOrigins",
+            "type": "List<string>",
+            "format": "--allowed-origins {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"\\*\"."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of signalr service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CorsList",
+      "definiteArgument": "signalr cors list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of signalr service."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CorsRemove",
+      "definiteArgument": "signalr cors remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowedOrigins",
+            "type": "List<string>",
+            "format": "--allowed-origins {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"\\*\"."
+          },
           {
             "name": "Name",
             "type": "string",
@@ -250,6 +491,14 @@
     }
   ],
   "enumerations": [
+    {
+      "name": "SignalrServiceMode",
+      "values": [
+        "classic",
+        "default",
+        "serverless"
+      ]
+    },
     {
       "name": "SignalrKeyRenewKeyType",
       "values": [

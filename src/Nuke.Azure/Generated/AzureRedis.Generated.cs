@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureRedis.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -987,222 +987,6 @@ namespace Nuke.Azure
         ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleCreate(AzureRedisPatchScheduleCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRedisPatchScheduleCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--schedule-entries</c> via <see cref="AzureRedisPatchScheduleCreateSettings.ScheduleEntries"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleCreate(Configure<AzureRedisPatchScheduleCreateSettings> configurator)
-        {
-            return AzureRedisPatchScheduleCreate(configurator(new AzureRedisPatchScheduleCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--schedule-entries</c> via <see cref="AzureRedisPatchScheduleCreateSettings.ScheduleEntries"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRedisPatchScheduleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRedisPatchScheduleCreate(CombinatorialConfigure<AzureRedisPatchScheduleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRedisPatchScheduleCreate, AzureRedisLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleDelete(AzureRedisPatchScheduleDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRedisPatchScheduleDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleDelete(Configure<AzureRedisPatchScheduleDeleteSettings> configurator)
-        {
-            return AzureRedisPatchScheduleDelete(configurator(new AzureRedisPatchScheduleDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRedisPatchScheduleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureRedisPatchScheduleDelete(CombinatorialConfigure<AzureRedisPatchScheduleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRedisPatchScheduleDelete, AzureRedisLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleShow(AzureRedisPatchScheduleShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRedisPatchScheduleShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleShow(Configure<AzureRedisPatchScheduleShowSettings> configurator)
-        {
-            return AzureRedisPatchScheduleShow(configurator(new AzureRedisPatchScheduleShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRedisPatchScheduleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureRedisPatchScheduleShow(CombinatorialConfigure<AzureRedisPatchScheduleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRedisPatchScheduleShow, AzureRedisLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleUpdate(AzureRedisPatchScheduleUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRedisPatchScheduleUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--schedule-entries</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.ScheduleEntries"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleUpdate(Configure<AzureRedisPatchScheduleUpdateSettings> configurator)
-        {
-            return AzureRedisPatchScheduleUpdate(configurator(new AzureRedisPatchScheduleUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--schedule-entries</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.ScheduleEntries"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRedisPatchScheduleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRedisPatchScheduleUpdate(CombinatorialConfigure<AzureRedisPatchScheduleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRedisPatchScheduleUpdate, AzureRedisLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
         public static IReadOnlyCollection<Output> AzureRedisServerLinkCreate(AzureRedisServerLinkCreateSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureRedisServerLinkCreateSettings();
@@ -1418,6 +1202,222 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureRedisServerLinkShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureRedisServerLinkShow(CombinatorialConfigure<AzureRedisServerLinkShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureRedisServerLinkShow, AzureRedisLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleCreate(AzureRedisPatchScheduleCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRedisPatchScheduleCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--schedule-entries</c> via <see cref="AzureRedisPatchScheduleCreateSettings.ScheduleEntries"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleCreate(Configure<AzureRedisPatchScheduleCreateSettings> configurator)
+        {
+            return AzureRedisPatchScheduleCreate(configurator(new AzureRedisPatchScheduleCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--schedule-entries</c> via <see cref="AzureRedisPatchScheduleCreateSettings.ScheduleEntries"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRedisPatchScheduleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRedisPatchScheduleCreate(CombinatorialConfigure<AzureRedisPatchScheduleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRedisPatchScheduleCreate, AzureRedisLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleDelete(AzureRedisPatchScheduleDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRedisPatchScheduleDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleDelete(Configure<AzureRedisPatchScheduleDeleteSettings> configurator)
+        {
+            return AzureRedisPatchScheduleDelete(configurator(new AzureRedisPatchScheduleDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRedisPatchScheduleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureRedisPatchScheduleDelete(CombinatorialConfigure<AzureRedisPatchScheduleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRedisPatchScheduleDelete, AzureRedisLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleShow(AzureRedisPatchScheduleShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRedisPatchScheduleShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleShow(Configure<AzureRedisPatchScheduleShowSettings> configurator)
+        {
+            return AzureRedisPatchScheduleShow(configurator(new AzureRedisPatchScheduleShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRedisPatchScheduleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureRedisPatchScheduleShow(CombinatorialConfigure<AzureRedisPatchScheduleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRedisPatchScheduleShow, AzureRedisLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleUpdate(AzureRedisPatchScheduleUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRedisPatchScheduleUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--schedule-entries</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.ScheduleEntries"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRedisPatchScheduleUpdate(Configure<AzureRedisPatchScheduleUpdateSettings> configurator)
+        {
+            return AzureRedisPatchScheduleUpdate(configurator(new AzureRedisPatchScheduleUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage dedicated Redis caches for your Azure applications.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/redis?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--schedule-entries</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.ScheduleEntries"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRedisPatchScheduleUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRedisPatchScheduleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRedisPatchScheduleUpdate(CombinatorialConfigure<AzureRedisPatchScheduleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRedisPatchScheduleUpdate, AzureRedisLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureRedisCreateSettings
@@ -2666,264 +2666,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureRedisPatchScheduleCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRedisTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRedisPatchScheduleCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRedis executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        public override Action<OutputType, string> CustomLogger => AzureRedisTasks.AzureRedisLogger;
-        /// <summary>
-        ///   Name of the Redis cache.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].
-        /// </summary>
-        public virtual string ScheduleEntries { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("redis patch-schedule create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--schedule-entries {value}", ScheduleEntries)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRedisPatchScheduleDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRedisTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRedisPatchScheduleDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRedis executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        public override Action<OutputType, string> CustomLogger => AzureRedisTasks.AzureRedisLogger;
-        /// <summary>
-        ///   Name of the Redis cache.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("redis patch-schedule delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRedisPatchScheduleShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRedisTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRedisPatchScheduleShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRedis executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        public override Action<OutputType, string> CustomLogger => AzureRedisTasks.AzureRedisLogger;
-        /// <summary>
-        ///   Name of the Redis cache.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("redis patch-schedule show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRedisPatchScheduleUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRedisTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRedisPatchScheduleUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRedis executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
-        public override Action<OutputType, string> CustomLogger => AzureRedisTasks.AzureRedisLogger;
-        /// <summary>
-        ///   Name of the Redis cache.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].
-        /// </summary>
-        public virtual string ScheduleEntries { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("redis patch-schedule update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--schedule-entries {value}", ScheduleEntries)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureRedisServerLinkCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureRedisTasks"/>.
@@ -3182,6 +2924,264 @@ namespace Nuke.Azure
               .Add("--linked-server-name {value}", LinkedServerName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRedisPatchScheduleCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRedisTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRedisPatchScheduleCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRedis executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        public override Action<OutputType, string> CustomLogger => AzureRedisTasks.AzureRedisLogger;
+        /// <summary>
+        ///   Name of the Redis cache.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].
+        /// </summary>
+        public virtual string ScheduleEntries { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("redis patch-schedule create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--schedule-entries {value}", ScheduleEntries)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRedisPatchScheduleDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRedisTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRedisPatchScheduleDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRedis executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        public override Action<OutputType, string> CustomLogger => AzureRedisTasks.AzureRedisLogger;
+        /// <summary>
+        ///   Name of the Redis cache.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("redis patch-schedule delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRedisPatchScheduleShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRedisTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRedisPatchScheduleShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRedis executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        public override Action<OutputType, string> CustomLogger => AzureRedisTasks.AzureRedisLogger;
+        /// <summary>
+        ///   Name of the Redis cache.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("redis patch-schedule show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRedisPatchScheduleUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRedisTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRedisPatchScheduleUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRedis executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRedisTasks.AzureRedisPath;
+        public override Action<OutputType, string> CustomLogger => AzureRedisTasks.AzureRedisLogger;
+        /// <summary>
+        ///   Name of the Redis cache.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].
+        /// </summary>
+        public virtual string ScheduleEntries { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("redis patch-schedule update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--schedule-entries {value}", ScheduleEntries)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -8374,862 +8374,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureRedisPatchScheduleCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRedisTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRedisPatchScheduleCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Name"/></em></p>
-        ///   <p>Name of the Redis cache.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings SetName(this AzureRedisPatchScheduleCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Name"/></em></p>
-        ///   <p>Name of the Redis cache.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings ResetName(this AzureRedisPatchScheduleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings SetResourceGroup(this AzureRedisPatchScheduleCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings ResetResourceGroup(this AzureRedisPatchScheduleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ScheduleEntries
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.ScheduleEntries"/></em></p>
-        ///   <p>List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings SetScheduleEntries(this AzureRedisPatchScheduleCreateSettings toolSettings, string scheduleEntries)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScheduleEntries = scheduleEntries;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.ScheduleEntries"/></em></p>
-        ///   <p>List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings ResetScheduleEntries(this AzureRedisPatchScheduleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScheduleEntries = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings SetSubscription(this AzureRedisPatchScheduleCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings ResetSubscription(this AzureRedisPatchScheduleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings SetDebug(this AzureRedisPatchScheduleCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings ResetDebug(this AzureRedisPatchScheduleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings SetHelp(this AzureRedisPatchScheduleCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings ResetHelp(this AzureRedisPatchScheduleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings SetOutput(this AzureRedisPatchScheduleCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings ResetOutput(this AzureRedisPatchScheduleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings SetQuery(this AzureRedisPatchScheduleCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings ResetQuery(this AzureRedisPatchScheduleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings SetVerbose(this AzureRedisPatchScheduleCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleCreateSettings ResetVerbose(this AzureRedisPatchScheduleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRedisPatchScheduleDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRedisTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRedisPatchScheduleDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/></em></p>
-        ///   <p>Name of the Redis cache.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings SetName(this AzureRedisPatchScheduleDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/></em></p>
-        ///   <p>Name of the Redis cache.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings ResetName(this AzureRedisPatchScheduleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings SetResourceGroup(this AzureRedisPatchScheduleDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings ResetResourceGroup(this AzureRedisPatchScheduleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings SetSubscription(this AzureRedisPatchScheduleDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings ResetSubscription(this AzureRedisPatchScheduleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings SetDebug(this AzureRedisPatchScheduleDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings ResetDebug(this AzureRedisPatchScheduleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings SetHelp(this AzureRedisPatchScheduleDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings ResetHelp(this AzureRedisPatchScheduleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings SetOutput(this AzureRedisPatchScheduleDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings ResetOutput(this AzureRedisPatchScheduleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings SetQuery(this AzureRedisPatchScheduleDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings ResetQuery(this AzureRedisPatchScheduleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings SetVerbose(this AzureRedisPatchScheduleDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleDeleteSettings ResetVerbose(this AzureRedisPatchScheduleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRedisPatchScheduleShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRedisTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRedisPatchScheduleShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Name"/></em></p>
-        ///   <p>Name of the Redis cache.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings SetName(this AzureRedisPatchScheduleShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Name"/></em></p>
-        ///   <p>Name of the Redis cache.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings ResetName(this AzureRedisPatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings SetResourceGroup(this AzureRedisPatchScheduleShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings ResetResourceGroup(this AzureRedisPatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings SetSubscription(this AzureRedisPatchScheduleShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings ResetSubscription(this AzureRedisPatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings SetDebug(this AzureRedisPatchScheduleShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings ResetDebug(this AzureRedisPatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings SetHelp(this AzureRedisPatchScheduleShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings ResetHelp(this AzureRedisPatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings SetOutput(this AzureRedisPatchScheduleShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings ResetOutput(this AzureRedisPatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings SetQuery(this AzureRedisPatchScheduleShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings ResetQuery(this AzureRedisPatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings SetVerbose(this AzureRedisPatchScheduleShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleShowSettings ResetVerbose(this AzureRedisPatchScheduleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRedisPatchScheduleUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRedisTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRedisPatchScheduleUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Name"/></em></p>
-        ///   <p>Name of the Redis cache.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings SetName(this AzureRedisPatchScheduleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Name"/></em></p>
-        ///   <p>Name of the Redis cache.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings ResetName(this AzureRedisPatchScheduleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings SetResourceGroup(this AzureRedisPatchScheduleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings ResetResourceGroup(this AzureRedisPatchScheduleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ScheduleEntries
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.ScheduleEntries"/></em></p>
-        ///   <p>List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings SetScheduleEntries(this AzureRedisPatchScheduleUpdateSettings toolSettings, string scheduleEntries)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScheduleEntries = scheduleEntries;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.ScheduleEntries"/></em></p>
-        ///   <p>List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings ResetScheduleEntries(this AzureRedisPatchScheduleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScheduleEntries = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings SetSubscription(this AzureRedisPatchScheduleUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings ResetSubscription(this AzureRedisPatchScheduleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings SetDebug(this AzureRedisPatchScheduleUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings ResetDebug(this AzureRedisPatchScheduleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings SetHelp(this AzureRedisPatchScheduleUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings ResetHelp(this AzureRedisPatchScheduleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings SetOutput(this AzureRedisPatchScheduleUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings ResetOutput(this AzureRedisPatchScheduleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings SetQuery(this AzureRedisPatchScheduleUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings ResetQuery(this AzureRedisPatchScheduleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings SetVerbose(this AzureRedisPatchScheduleUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRedisPatchScheduleUpdateSettings ResetVerbose(this AzureRedisPatchScheduleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureRedisServerLinkCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureRedisTasks"/>.
@@ -10126,6 +9270,862 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureRedisServerLinkShowSettings ResetVerbose(this AzureRedisServerLinkShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRedisPatchScheduleCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRedisTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRedisPatchScheduleCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Name"/></em></p>
+        ///   <p>Name of the Redis cache.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings SetName(this AzureRedisPatchScheduleCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Name"/></em></p>
+        ///   <p>Name of the Redis cache.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings ResetName(this AzureRedisPatchScheduleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings SetResourceGroup(this AzureRedisPatchScheduleCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings ResetResourceGroup(this AzureRedisPatchScheduleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ScheduleEntries
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.ScheduleEntries"/></em></p>
+        ///   <p>List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings SetScheduleEntries(this AzureRedisPatchScheduleCreateSettings toolSettings, string scheduleEntries)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScheduleEntries = scheduleEntries;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.ScheduleEntries"/></em></p>
+        ///   <p>List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings ResetScheduleEntries(this AzureRedisPatchScheduleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScheduleEntries = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings SetSubscription(this AzureRedisPatchScheduleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings ResetSubscription(this AzureRedisPatchScheduleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings SetDebug(this AzureRedisPatchScheduleCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings ResetDebug(this AzureRedisPatchScheduleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings SetHelp(this AzureRedisPatchScheduleCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings ResetHelp(this AzureRedisPatchScheduleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings SetOutput(this AzureRedisPatchScheduleCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings ResetOutput(this AzureRedisPatchScheduleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings SetQuery(this AzureRedisPatchScheduleCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings ResetQuery(this AzureRedisPatchScheduleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings SetVerbose(this AzureRedisPatchScheduleCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleCreateSettings ResetVerbose(this AzureRedisPatchScheduleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRedisPatchScheduleDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRedisTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRedisPatchScheduleDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/></em></p>
+        ///   <p>Name of the Redis cache.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetName(this AzureRedisPatchScheduleDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Name"/></em></p>
+        ///   <p>Name of the Redis cache.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ResetName(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetResourceGroup(this AzureRedisPatchScheduleDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ResetResourceGroup(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetSubscription(this AzureRedisPatchScheduleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ResetSubscription(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetDebug(this AzureRedisPatchScheduleDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ResetDebug(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetHelp(this AzureRedisPatchScheduleDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ResetHelp(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetOutput(this AzureRedisPatchScheduleDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ResetOutput(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetQuery(this AzureRedisPatchScheduleDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ResetQuery(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings SetVerbose(this AzureRedisPatchScheduleDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleDeleteSettings ResetVerbose(this AzureRedisPatchScheduleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRedisPatchScheduleShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRedisTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRedisPatchScheduleShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Name"/></em></p>
+        ///   <p>Name of the Redis cache.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetName(this AzureRedisPatchScheduleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Name"/></em></p>
+        ///   <p>Name of the Redis cache.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetName(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetResourceGroup(this AzureRedisPatchScheduleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetResourceGroup(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetSubscription(this AzureRedisPatchScheduleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetSubscription(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetDebug(this AzureRedisPatchScheduleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetDebug(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetHelp(this AzureRedisPatchScheduleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetHelp(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetOutput(this AzureRedisPatchScheduleShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetOutput(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetQuery(this AzureRedisPatchScheduleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetQuery(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings SetVerbose(this AzureRedisPatchScheduleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleShowSettings ResetVerbose(this AzureRedisPatchScheduleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRedisPatchScheduleUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRedisTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRedisPatchScheduleUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the Redis cache.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings SetName(this AzureRedisPatchScheduleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the Redis cache.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings ResetName(this AzureRedisPatchScheduleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings SetResourceGroup(this AzureRedisPatchScheduleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings ResetResourceGroup(this AzureRedisPatchScheduleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ScheduleEntries
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.ScheduleEntries"/></em></p>
+        ///   <p>List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings SetScheduleEntries(this AzureRedisPatchScheduleUpdateSettings toolSettings, string scheduleEntries)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScheduleEntries = scheduleEntries;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.ScheduleEntries"/></em></p>
+        ///   <p>List of Patch schedule entries. Example Value:[{"dayOfWeek":"Monday","startHourUtc":"00","maintenanceWindow":"PT5H"}].</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings ResetScheduleEntries(this AzureRedisPatchScheduleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScheduleEntries = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings SetSubscription(this AzureRedisPatchScheduleUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings ResetSubscription(this AzureRedisPatchScheduleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings SetDebug(this AzureRedisPatchScheduleUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings ResetDebug(this AzureRedisPatchScheduleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings SetHelp(this AzureRedisPatchScheduleUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings ResetHelp(this AzureRedisPatchScheduleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings SetOutput(this AzureRedisPatchScheduleUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings ResetOutput(this AzureRedisPatchScheduleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings SetQuery(this AzureRedisPatchScheduleUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings ResetQuery(this AzureRedisPatchScheduleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRedisPatchScheduleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings SetVerbose(this AzureRedisPatchScheduleUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRedisPatchScheduleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRedisPatchScheduleUpdateSettings ResetVerbose(this AzureRedisPatchScheduleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

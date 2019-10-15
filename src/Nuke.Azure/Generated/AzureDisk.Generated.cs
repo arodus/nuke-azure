@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDisk.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -76,6 +76,7 @@ namespace Nuke.Azure
         ///     <li><c>--source-storage-account-id</c> via <see cref="AzureDiskCreateSettings.SourceStorageAccountId"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureDiskCreateSettings.Subscription"/></li>
         ///     <li><c>--tags</c> via <see cref="AzureDiskCreateSettings.Tags"/></li>
+        ///     <li><c>--upload-size-bytes</c> via <see cref="AzureDiskCreateSettings.UploadSizeBytes"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureDiskCreateSettings.Verbose"/></li>
         ///     <li><c>--zone</c> via <see cref="AzureDiskCreateSettings.Zone"/></li>
         ///   </ul>
@@ -110,6 +111,7 @@ namespace Nuke.Azure
         ///     <li><c>--source-storage-account-id</c> via <see cref="AzureDiskCreateSettings.SourceStorageAccountId"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureDiskCreateSettings.Subscription"/></li>
         ///     <li><c>--tags</c> via <see cref="AzureDiskCreateSettings.Tags"/></li>
+        ///     <li><c>--upload-size-bytes</c> via <see cref="AzureDiskCreateSettings.UploadSizeBytes"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureDiskCreateSettings.Verbose"/></li>
         ///     <li><c>--zone</c> via <see cref="AzureDiskCreateSettings.Zone"/></li>
         ///   </ul>
@@ -611,6 +613,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Tags { get; internal set; }
         /// <summary>
+        ///   The size (in bytes) of the contents of the upload including the VHD footer. Min value: 20972032. Max value: 35183298347520.
+        /// </summary>
+        public virtual string UploadSizeBytes { get; internal set; }
+        /// <summary>
         ///   Availability zone into which to provision the resource.
         /// </summary>
         public virtual DiskCreateZone Zone { get; internal set; }
@@ -656,6 +662,7 @@ namespace Nuke.Azure
               .Add("--source {value}", Source)
               .Add("--source-storage-account-id {value}", SourceStorageAccountId)
               .Add("--tags {value}", Tags)
+              .Add("--upload-size-bytes {value}", UploadSizeBytes)
               .Add("--zone {value}", Zone)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
@@ -1639,6 +1646,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region UploadSizeBytes
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDiskCreateSettings.UploadSizeBytes"/></em></p>
+        ///   <p>The size (in bytes) of the contents of the upload including the VHD footer. Min value: 20972032. Max value: 35183298347520.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDiskCreateSettings SetUploadSizeBytes(this AzureDiskCreateSettings toolSettings, string uploadSizeBytes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UploadSizeBytes = uploadSizeBytes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDiskCreateSettings.UploadSizeBytes"/></em></p>
+        ///   <p>The size (in bytes) of the contents of the upload including the VHD footer. Min value: 20972032. Max value: 35183298347520.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDiskCreateSettings ResetUploadSizeBytes(this AzureDiskCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UploadSizeBytes = null;
             return toolSettings;
         }
         #endregion

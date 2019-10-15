@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDls.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -1209,295 +1209,6 @@ namespace Nuke.Azure
         ///   <p>Manage Data Lake Store accounts and filesystems.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallCreate(AzureDlsAccountFirewallCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDlsAccountFirewallCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Debug"/></li>
-        ///     <li><c>--end-ip-address</c> via <see cref="AzureDlsAccountFirewallCreateSettings.EndIpAddress"/></li>
-        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallCreateSettings.FirewallRuleName"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--start-ip-address</c> via <see cref="AzureDlsAccountFirewallCreateSettings.StartIpAddress"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallCreate(Configure<AzureDlsAccountFirewallCreateSettings> configurator)
-        {
-            return AzureDlsAccountFirewallCreate(configurator(new AzureDlsAccountFirewallCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Debug"/></li>
-        ///     <li><c>--end-ip-address</c> via <see cref="AzureDlsAccountFirewallCreateSettings.EndIpAddress"/></li>
-        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallCreateSettings.FirewallRuleName"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--start-ip-address</c> via <see cref="AzureDlsAccountFirewallCreateSettings.StartIpAddress"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDlsAccountFirewallCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallCreate(CombinatorialConfigure<AzureDlsAccountFirewallCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDlsAccountFirewallCreate, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallDelete(AzureDlsAccountFirewallDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDlsAccountFirewallDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Debug"/></li>
-        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.FirewallRuleName"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallDelete(Configure<AzureDlsAccountFirewallDeleteSettings> configurator)
-        {
-            return AzureDlsAccountFirewallDelete(configurator(new AzureDlsAccountFirewallDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Debug"/></li>
-        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.FirewallRuleName"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDlsAccountFirewallDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallDelete(CombinatorialConfigure<AzureDlsAccountFirewallDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDlsAccountFirewallDelete, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallList(AzureDlsAccountFirewallListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDlsAccountFirewallListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallListSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallListSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallListSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallList(Configure<AzureDlsAccountFirewallListSettings> configurator)
-        {
-            return AzureDlsAccountFirewallList(configurator(new AzureDlsAccountFirewallListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallListSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallListSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallListSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDlsAccountFirewallListSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallList(CombinatorialConfigure<AzureDlsAccountFirewallListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDlsAccountFirewallList, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallShow(AzureDlsAccountFirewallShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDlsAccountFirewallShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallShowSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallShowSettings.Debug"/></li>
-        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallShowSettings.FirewallRuleName"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallShow(Configure<AzureDlsAccountFirewallShowSettings> configurator)
-        {
-            return AzureDlsAccountFirewallShow(configurator(new AzureDlsAccountFirewallShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallShowSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallShowSettings.Debug"/></li>
-        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallShowSettings.FirewallRuleName"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDlsAccountFirewallShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallShow(CombinatorialConfigure<AzureDlsAccountFirewallShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDlsAccountFirewallShow, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallUpdate(AzureDlsAccountFirewallUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDlsAccountFirewallUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Debug"/></li>
-        ///     <li><c>--end-ip-address</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.EndIpAddress"/></li>
-        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.FirewallRuleName"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--start-ip-address</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.StartIpAddress"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallUpdate(Configure<AzureDlsAccountFirewallUpdateSettings> configurator)
-        {
-            return AzureDlsAccountFirewallUpdate(configurator(new AzureDlsAccountFirewallUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Debug"/></li>
-        ///     <li><c>--end-ip-address</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.EndIpAddress"/></li>
-        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.FirewallRuleName"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--start-ip-address</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.StartIpAddress"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDlsAccountFirewallUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallUpdate(CombinatorialConfigure<AzureDlsAccountFirewallUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDlsAccountFirewallUpdate, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
         public static IReadOnlyCollection<Output> AzureDlsAccountNetworkRuleCreate(AzureDlsAccountNetworkRuleCreateSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureDlsAccountNetworkRuleCreateSettings();
@@ -2073,6 +1784,295 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureDlsAccountTrustedProviderUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountTrustedProviderUpdate(CombinatorialConfigure<AzureDlsAccountTrustedProviderUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureDlsAccountTrustedProviderUpdate, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallCreate(AzureDlsAccountFirewallCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDlsAccountFirewallCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Debug"/></li>
+        ///     <li><c>--end-ip-address</c> via <see cref="AzureDlsAccountFirewallCreateSettings.EndIpAddress"/></li>
+        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallCreateSettings.FirewallRuleName"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--start-ip-address</c> via <see cref="AzureDlsAccountFirewallCreateSettings.StartIpAddress"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallCreate(Configure<AzureDlsAccountFirewallCreateSettings> configurator)
+        {
+            return AzureDlsAccountFirewallCreate(configurator(new AzureDlsAccountFirewallCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Debug"/></li>
+        ///     <li><c>--end-ip-address</c> via <see cref="AzureDlsAccountFirewallCreateSettings.EndIpAddress"/></li>
+        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallCreateSettings.FirewallRuleName"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--start-ip-address</c> via <see cref="AzureDlsAccountFirewallCreateSettings.StartIpAddress"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDlsAccountFirewallCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallCreate(CombinatorialConfigure<AzureDlsAccountFirewallCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDlsAccountFirewallCreate, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallDelete(AzureDlsAccountFirewallDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDlsAccountFirewallDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Debug"/></li>
+        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.FirewallRuleName"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallDelete(Configure<AzureDlsAccountFirewallDeleteSettings> configurator)
+        {
+            return AzureDlsAccountFirewallDelete(configurator(new AzureDlsAccountFirewallDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Debug"/></li>
+        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.FirewallRuleName"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDlsAccountFirewallDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallDelete(CombinatorialConfigure<AzureDlsAccountFirewallDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDlsAccountFirewallDelete, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallList(AzureDlsAccountFirewallListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDlsAccountFirewallListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallListSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallList(Configure<AzureDlsAccountFirewallListSettings> configurator)
+        {
+            return AzureDlsAccountFirewallList(configurator(new AzureDlsAccountFirewallListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallListSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallListSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallListSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDlsAccountFirewallListSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallList(CombinatorialConfigure<AzureDlsAccountFirewallListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDlsAccountFirewallList, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallShow(AzureDlsAccountFirewallShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDlsAccountFirewallShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallShowSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallShowSettings.Debug"/></li>
+        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallShowSettings.FirewallRuleName"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallShow(Configure<AzureDlsAccountFirewallShowSettings> configurator)
+        {
+            return AzureDlsAccountFirewallShow(configurator(new AzureDlsAccountFirewallShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallShowSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallShowSettings.Debug"/></li>
+        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallShowSettings.FirewallRuleName"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDlsAccountFirewallShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallShow(CombinatorialConfigure<AzureDlsAccountFirewallShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDlsAccountFirewallShow, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallUpdate(AzureDlsAccountFirewallUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDlsAccountFirewallUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Debug"/></li>
+        ///     <li><c>--end-ip-address</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.EndIpAddress"/></li>
+        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.FirewallRuleName"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--start-ip-address</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.StartIpAddress"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDlsAccountFirewallUpdate(Configure<AzureDlsAccountFirewallUpdateSettings> configurator)
+        {
+            return AzureDlsAccountFirewallUpdate(configurator(new AzureDlsAccountFirewallUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Data Lake Store accounts and filesystems.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--account</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Debug"/></li>
+        ///     <li><c>--end-ip-address</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.EndIpAddress"/></li>
+        ///     <li><c>--firewall-rule-name</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.FirewallRuleName"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--start-ip-address</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.StartIpAddress"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDlsAccountFirewallUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDlsAccountFirewallUpdate(CombinatorialConfigure<AzureDlsAccountFirewallUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDlsAccountFirewallUpdate, AzureDlsLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Data Lake Store accounts and filesystems.</p>
@@ -3995,380 +3995,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDlsAccountFirewallCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountFirewallCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDls executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
-        /// <summary>
-        ///   Name of the Data Lake Store account.
-        /// </summary>
-        public virtual string Account { get; internal set; }
-        /// <summary>
-        ///   The end of the valid ip range for the firewall rule.
-        /// </summary>
-        public virtual string EndIpAddress { get; internal set; }
-        /// <summary>
-        ///   The name of the firewall rule.
-        /// </summary>
-        public virtual string FirewallRuleName { get; internal set; }
-        /// <summary>
-        ///   The start of the valid ip range for the firewall rule.
-        /// </summary>
-        public virtual string StartIpAddress { get; internal set; }
-        /// <summary>
-        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account firewall create")
-              .Add("--account {value}", Account)
-              .Add("--end-ip-address {value}", EndIpAddress)
-              .Add("--firewall-rule-name {value}", FirewallRuleName)
-              .Add("--start-ip-address {value}", StartIpAddress)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountFirewallDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountFirewallDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDls executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
-        /// <summary>
-        ///   The name of the firewall rule to delete.
-        /// </summary>
-        public virtual string FirewallRuleName { get; internal set; }
-        /// <summary>
-        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the Data Lake Store account.
-        /// </summary>
-        public virtual string Account { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account firewall delete")
-              .Add("--firewall-rule-name {value}", FirewallRuleName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--account {value}", Account)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountFirewallListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountFirewallListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDls executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
-        /// <summary>
-        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the Data Lake Store account.
-        /// </summary>
-        public virtual string Account { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account firewall list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--account {value}", Account)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountFirewallShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountFirewallShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDls executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
-        /// <summary>
-        ///   The name of the firewall rule to retrieve.
-        /// </summary>
-        public virtual string FirewallRuleName { get; internal set; }
-        /// <summary>
-        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name of the Data Lake Store account.
-        /// </summary>
-        public virtual string Account { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account firewall show")
-              .Add("--firewall-rule-name {value}", FirewallRuleName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--account {value}", Account)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDlsAccountFirewallUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDlsAccountFirewallUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDls executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
-        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
-        /// <summary>
-        ///   The name of the firewall rule to update.
-        /// </summary>
-        public virtual string FirewallRuleName { get; internal set; }
-        /// <summary>
-        ///   The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-        /// </summary>
-        public virtual string EndIpAddress { get; internal set; }
-        /// <summary>
-        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
-        /// </summary>
-        public virtual string StartIpAddress { get; internal set; }
-        /// <summary>
-        ///   Name of the Data Lake Store account.
-        /// </summary>
-        public virtual string Account { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("dls account firewall update")
-              .Add("--firewall-rule-name {value}", FirewallRuleName)
-              .Add("--end-ip-address {value}", EndIpAddress)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--start-ip-address {value}", StartIpAddress)
-              .Add("--account {value}", Account)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureDlsAccountNetworkRuleCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureDlsTasks"/>.
@@ -5109,6 +4735,380 @@ namespace Nuke.Azure
               .Add("--trusted-id-provider-name {value}", TrustedIdProviderName)
               .Add("--id-provider {value}", IdProvider)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountFirewallCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountFirewallCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDls executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
+        /// <summary>
+        ///   Name of the Data Lake Store account.
+        /// </summary>
+        public virtual string Account { get; internal set; }
+        /// <summary>
+        ///   The end of the valid ip range for the firewall rule.
+        /// </summary>
+        public virtual string EndIpAddress { get; internal set; }
+        /// <summary>
+        ///   The name of the firewall rule.
+        /// </summary>
+        public virtual string FirewallRuleName { get; internal set; }
+        /// <summary>
+        ///   The start of the valid ip range for the firewall rule.
+        /// </summary>
+        public virtual string StartIpAddress { get; internal set; }
+        /// <summary>
+        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account firewall create")
+              .Add("--account {value}", Account)
+              .Add("--end-ip-address {value}", EndIpAddress)
+              .Add("--firewall-rule-name {value}", FirewallRuleName)
+              .Add("--start-ip-address {value}", StartIpAddress)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountFirewallDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountFirewallDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDls executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
+        /// <summary>
+        ///   The name of the firewall rule to delete.
+        /// </summary>
+        public virtual string FirewallRuleName { get; internal set; }
+        /// <summary>
+        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the Data Lake Store account.
+        /// </summary>
+        public virtual string Account { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account firewall delete")
+              .Add("--firewall-rule-name {value}", FirewallRuleName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountFirewallListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountFirewallListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDls executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
+        /// <summary>
+        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the Data Lake Store account.
+        /// </summary>
+        public virtual string Account { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account firewall list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountFirewallShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountFirewallShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDls executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
+        /// <summary>
+        ///   The name of the firewall rule to retrieve.
+        /// </summary>
+        public virtual string FirewallRuleName { get; internal set; }
+        /// <summary>
+        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name of the Data Lake Store account.
+        /// </summary>
+        public virtual string Account { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account firewall show")
+              .Add("--firewall-rule-name {value}", FirewallRuleName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--account {value}", Account)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDlsAccountFirewallUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDlsAccountFirewallUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDls executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDlsTasks.AzureDlsPath;
+        public override Action<OutputType, string> CustomLogger => AzureDlsTasks.AzureDlsLogger;
+        /// <summary>
+        ///   The name of the firewall rule to update.
+        /// </summary>
+        public virtual string FirewallRuleName { get; internal set; }
+        /// <summary>
+        ///   The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+        /// </summary>
+        public virtual string EndIpAddress { get; internal set; }
+        /// <summary>
+        ///   If not specified, will attempt to discover the resource group for the specified Data Lake Store account.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.
+        /// </summary>
+        public virtual string StartIpAddress { get; internal set; }
+        /// <summary>
+        ///   Name of the Data Lake Store account.
+        /// </summary>
+        public virtual string Account { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("dls account firewall update")
+              .Add("--firewall-rule-name {value}", FirewallRuleName)
+              .Add("--end-ip-address {value}", EndIpAddress)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--start-ip-address {value}", StartIpAddress)
               .Add("--account {value}", Account)
               .Add("--ids {value}", Ids, separator: ' ')
               .Add("--subscription {value}", Subscription)
@@ -11856,1532 +11856,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureDlsAccountFirewallCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountFirewallCreateSettingsExtensions
-    {
-        #region Account
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetAccount(this AzureDlsAccountFirewallCreateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetAccount(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndIpAddress
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.EndIpAddress"/></em></p>
-        ///   <p>The end of the valid ip range for the firewall rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetEndIpAddress(this AzureDlsAccountFirewallCreateSettings toolSettings, string endIpAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = endIpAddress;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.EndIpAddress"/></em></p>
-        ///   <p>The end of the valid ip range for the firewall rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetEndIpAddress(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region FirewallRuleName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.FirewallRuleName"/></em></p>
-        ///   <p>The name of the firewall rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetFirewallRuleName(this AzureDlsAccountFirewallCreateSettings toolSettings, string firewallRuleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = firewallRuleName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.FirewallRuleName"/></em></p>
-        ///   <p>The name of the firewall rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetFirewallRuleName(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StartIpAddress
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.StartIpAddress"/></em></p>
-        ///   <p>The start of the valid ip range for the firewall rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetStartIpAddress(this AzureDlsAccountFirewallCreateSettings toolSettings, string startIpAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = startIpAddress;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.StartIpAddress"/></em></p>
-        ///   <p>The start of the valid ip range for the firewall rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetStartIpAddress(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetResourceGroup(this AzureDlsAccountFirewallCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetResourceGroup(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetSubscription(this AzureDlsAccountFirewallCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetSubscription(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetDebug(this AzureDlsAccountFirewallCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetDebug(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetHelp(this AzureDlsAccountFirewallCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetHelp(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetOutput(this AzureDlsAccountFirewallCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetOutput(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetQuery(this AzureDlsAccountFirewallCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetQuery(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings SetVerbose(this AzureDlsAccountFirewallCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallCreateSettings ResetVerbose(this AzureDlsAccountFirewallCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountFirewallDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountFirewallDeleteSettingsExtensions
-    {
-        #region FirewallRuleName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.FirewallRuleName"/></em></p>
-        ///   <p>The name of the firewall rule to delete.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetFirewallRuleName(this AzureDlsAccountFirewallDeleteSettings toolSettings, string firewallRuleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = firewallRuleName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.FirewallRuleName"/></em></p>
-        ///   <p>The name of the firewall rule to delete.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetFirewallRuleName(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetResourceGroup(this AzureDlsAccountFirewallDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetResourceGroup(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Account
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetAccount(this AzureDlsAccountFirewallDeleteSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetAccount(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings AddIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings AddIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ClearIds(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings RemoveIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings RemoveIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetSubscription(this AzureDlsAccountFirewallDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetSubscription(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetDebug(this AzureDlsAccountFirewallDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetDebug(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetHelp(this AzureDlsAccountFirewallDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetHelp(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetOutput(this AzureDlsAccountFirewallDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetOutput(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetQuery(this AzureDlsAccountFirewallDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetQuery(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings SetVerbose(this AzureDlsAccountFirewallDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallDeleteSettings ResetVerbose(this AzureDlsAccountFirewallDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountFirewallListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountFirewallListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetResourceGroup(this AzureDlsAccountFirewallListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings ResetResourceGroup(this AzureDlsAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Account
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetAccount(this AzureDlsAccountFirewallListSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings ResetAccount(this AzureDlsAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetIds(this AzureDlsAccountFirewallListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetIds(this AzureDlsAccountFirewallListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings AddIds(this AzureDlsAccountFirewallListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings AddIds(this AzureDlsAccountFirewallListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings ClearIds(this AzureDlsAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings RemoveIds(this AzureDlsAccountFirewallListSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings RemoveIds(this AzureDlsAccountFirewallListSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetSubscription(this AzureDlsAccountFirewallListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings ResetSubscription(this AzureDlsAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetDebug(this AzureDlsAccountFirewallListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings ResetDebug(this AzureDlsAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetHelp(this AzureDlsAccountFirewallListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings ResetHelp(this AzureDlsAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetOutput(this AzureDlsAccountFirewallListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings ResetOutput(this AzureDlsAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetQuery(this AzureDlsAccountFirewallListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings ResetQuery(this AzureDlsAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings SetVerbose(this AzureDlsAccountFirewallListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallListSettings ResetVerbose(this AzureDlsAccountFirewallListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountFirewallShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountFirewallShowSettingsExtensions
-    {
-        #region FirewallRuleName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.FirewallRuleName"/></em></p>
-        ///   <p>The name of the firewall rule to retrieve.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetFirewallRuleName(this AzureDlsAccountFirewallShowSettings toolSettings, string firewallRuleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = firewallRuleName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.FirewallRuleName"/></em></p>
-        ///   <p>The name of the firewall rule to retrieve.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetFirewallRuleName(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetResourceGroup(this AzureDlsAccountFirewallShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetResourceGroup(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Account
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetAccount(this AzureDlsAccountFirewallShowSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetAccount(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetIds(this AzureDlsAccountFirewallShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetIds(this AzureDlsAccountFirewallShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings AddIds(this AzureDlsAccountFirewallShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings AddIds(this AzureDlsAccountFirewallShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ClearIds(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings RemoveIds(this AzureDlsAccountFirewallShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings RemoveIds(this AzureDlsAccountFirewallShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetSubscription(this AzureDlsAccountFirewallShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetSubscription(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetDebug(this AzureDlsAccountFirewallShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetDebug(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetHelp(this AzureDlsAccountFirewallShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetHelp(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetOutput(this AzureDlsAccountFirewallShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetOutput(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetQuery(this AzureDlsAccountFirewallShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetQuery(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings SetVerbose(this AzureDlsAccountFirewallShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallShowSettings ResetVerbose(this AzureDlsAccountFirewallShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDlsAccountFirewallUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDlsTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDlsAccountFirewallUpdateSettingsExtensions
-    {
-        #region FirewallRuleName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.FirewallRuleName"/></em></p>
-        ///   <p>The name of the firewall rule to update.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetFirewallRuleName(this AzureDlsAccountFirewallUpdateSettings toolSettings, string firewallRuleName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = firewallRuleName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.FirewallRuleName"/></em></p>
-        ///   <p>The name of the firewall rule to update.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetFirewallRuleName(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FirewallRuleName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndIpAddress
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.EndIpAddress"/></em></p>
-        ///   <p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetEndIpAddress(this AzureDlsAccountFirewallUpdateSettings toolSettings, string endIpAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = endIpAddress;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.EndIpAddress"/></em></p>
-        ///   <p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetEndIpAddress(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndIpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetResourceGroup(this AzureDlsAccountFirewallUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetResourceGroup(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StartIpAddress
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.StartIpAddress"/></em></p>
-        ///   <p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetStartIpAddress(this AzureDlsAccountFirewallUpdateSettings toolSettings, string startIpAddress)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = startIpAddress;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.StartIpAddress"/></em></p>
-        ///   <p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetStartIpAddress(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartIpAddress = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Account
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetAccount(this AzureDlsAccountFirewallUpdateSettings toolSettings, string account)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = account;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/></em></p>
-        ///   <p>Name of the Data Lake Store account.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetAccount(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Account = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings AddIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings AddIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ClearIds(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings RemoveIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings RemoveIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetSubscription(this AzureDlsAccountFirewallUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetSubscription(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetDebug(this AzureDlsAccountFirewallUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetDebug(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetHelp(this AzureDlsAccountFirewallUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetHelp(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetOutput(this AzureDlsAccountFirewallUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetOutput(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetQuery(this AzureDlsAccountFirewallUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetQuery(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings SetVerbose(this AzureDlsAccountFirewallUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDlsAccountFirewallUpdateSettings ResetVerbose(this AzureDlsAccountFirewallUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureDlsAccountNetworkRuleCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureDlsTasks"/>.
@@ -16393,6 +14867,1532 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureDlsAccountTrustedProviderUpdateSettings ResetVerbose(this AzureDlsAccountTrustedProviderUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountFirewallCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountFirewallCreateSettingsExtensions
+    {
+        #region Account
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetAccount(this AzureDlsAccountFirewallCreateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetAccount(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndIpAddress
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.EndIpAddress"/></em></p>
+        ///   <p>The end of the valid ip range for the firewall rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetEndIpAddress(this AzureDlsAccountFirewallCreateSettings toolSettings, string endIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = endIpAddress;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.EndIpAddress"/></em></p>
+        ///   <p>The end of the valid ip range for the firewall rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetEndIpAddress(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region FirewallRuleName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.FirewallRuleName"/></em></p>
+        ///   <p>The name of the firewall rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetFirewallRuleName(this AzureDlsAccountFirewallCreateSettings toolSettings, string firewallRuleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = firewallRuleName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.FirewallRuleName"/></em></p>
+        ///   <p>The name of the firewall rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetFirewallRuleName(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StartIpAddress
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.StartIpAddress"/></em></p>
+        ///   <p>The start of the valid ip range for the firewall rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetStartIpAddress(this AzureDlsAccountFirewallCreateSettings toolSettings, string startIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = startIpAddress;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.StartIpAddress"/></em></p>
+        ///   <p>The start of the valid ip range for the firewall rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetStartIpAddress(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetResourceGroup(this AzureDlsAccountFirewallCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetResourceGroup(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetSubscription(this AzureDlsAccountFirewallCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetSubscription(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetDebug(this AzureDlsAccountFirewallCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetDebug(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetHelp(this AzureDlsAccountFirewallCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetHelp(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetOutput(this AzureDlsAccountFirewallCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetOutput(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetQuery(this AzureDlsAccountFirewallCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetQuery(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings SetVerbose(this AzureDlsAccountFirewallCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallCreateSettings ResetVerbose(this AzureDlsAccountFirewallCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountFirewallDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountFirewallDeleteSettingsExtensions
+    {
+        #region FirewallRuleName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.FirewallRuleName"/></em></p>
+        ///   <p>The name of the firewall rule to delete.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetFirewallRuleName(this AzureDlsAccountFirewallDeleteSettings toolSettings, string firewallRuleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = firewallRuleName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.FirewallRuleName"/></em></p>
+        ///   <p>The name of the firewall rule to delete.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetFirewallRuleName(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetResourceGroup(this AzureDlsAccountFirewallDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetResourceGroup(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetAccount(this AzureDlsAccountFirewallDeleteSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetAccount(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings AddIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings AddIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ClearIds(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings RemoveIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings RemoveIds(this AzureDlsAccountFirewallDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetSubscription(this AzureDlsAccountFirewallDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetSubscription(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetDebug(this AzureDlsAccountFirewallDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetDebug(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetHelp(this AzureDlsAccountFirewallDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetHelp(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetOutput(this AzureDlsAccountFirewallDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetOutput(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetQuery(this AzureDlsAccountFirewallDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetQuery(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings SetVerbose(this AzureDlsAccountFirewallDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallDeleteSettings ResetVerbose(this AzureDlsAccountFirewallDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountFirewallListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountFirewallListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetResourceGroup(this AzureDlsAccountFirewallListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetResourceGroup(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetAccount(this AzureDlsAccountFirewallListSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetAccount(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetIds(this AzureDlsAccountFirewallListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetIds(this AzureDlsAccountFirewallListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings AddIds(this AzureDlsAccountFirewallListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings AddIds(this AzureDlsAccountFirewallListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ClearIds(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings RemoveIds(this AzureDlsAccountFirewallListSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallListSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings RemoveIds(this AzureDlsAccountFirewallListSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetSubscription(this AzureDlsAccountFirewallListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetSubscription(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetDebug(this AzureDlsAccountFirewallListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetDebug(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetHelp(this AzureDlsAccountFirewallListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetHelp(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetOutput(this AzureDlsAccountFirewallListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetOutput(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetQuery(this AzureDlsAccountFirewallListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetQuery(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings SetVerbose(this AzureDlsAccountFirewallListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallListSettings ResetVerbose(this AzureDlsAccountFirewallListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountFirewallShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountFirewallShowSettingsExtensions
+    {
+        #region FirewallRuleName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.FirewallRuleName"/></em></p>
+        ///   <p>The name of the firewall rule to retrieve.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetFirewallRuleName(this AzureDlsAccountFirewallShowSettings toolSettings, string firewallRuleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = firewallRuleName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.FirewallRuleName"/></em></p>
+        ///   <p>The name of the firewall rule to retrieve.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetFirewallRuleName(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetResourceGroup(this AzureDlsAccountFirewallShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetResourceGroup(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetAccount(this AzureDlsAccountFirewallShowSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetAccount(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetIds(this AzureDlsAccountFirewallShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetIds(this AzureDlsAccountFirewallShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings AddIds(this AzureDlsAccountFirewallShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings AddIds(this AzureDlsAccountFirewallShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ClearIds(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings RemoveIds(this AzureDlsAccountFirewallShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings RemoveIds(this AzureDlsAccountFirewallShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetSubscription(this AzureDlsAccountFirewallShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetSubscription(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetDebug(this AzureDlsAccountFirewallShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetDebug(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetHelp(this AzureDlsAccountFirewallShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetHelp(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetOutput(this AzureDlsAccountFirewallShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetOutput(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetQuery(this AzureDlsAccountFirewallShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetQuery(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings SetVerbose(this AzureDlsAccountFirewallShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallShowSettings ResetVerbose(this AzureDlsAccountFirewallShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDlsAccountFirewallUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDlsTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDlsAccountFirewallUpdateSettingsExtensions
+    {
+        #region FirewallRuleName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.FirewallRuleName"/></em></p>
+        ///   <p>The name of the firewall rule to update.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetFirewallRuleName(this AzureDlsAccountFirewallUpdateSettings toolSettings, string firewallRuleName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = firewallRuleName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.FirewallRuleName"/></em></p>
+        ///   <p>The name of the firewall rule to update.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetFirewallRuleName(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FirewallRuleName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndIpAddress
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.EndIpAddress"/></em></p>
+        ///   <p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetEndIpAddress(this AzureDlsAccountFirewallUpdateSettings toolSettings, string endIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = endIpAddress;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.EndIpAddress"/></em></p>
+        ///   <p>The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetEndIpAddress(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetResourceGroup(this AzureDlsAccountFirewallUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>If not specified, will attempt to discover the resource group for the specified Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetResourceGroup(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StartIpAddress
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.StartIpAddress"/></em></p>
+        ///   <p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetStartIpAddress(this AzureDlsAccountFirewallUpdateSettings toolSettings, string startIpAddress)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = startIpAddress;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.StartIpAddress"/></em></p>
+        ///   <p>The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetStartIpAddress(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartIpAddress = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Account
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetAccount(this AzureDlsAccountFirewallUpdateSettings toolSettings, string account)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = account;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Account"/></em></p>
+        ///   <p>Name of the Data Lake Store account.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetAccount(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Account = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings AddIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings AddIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ClearIds(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings RemoveIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureDlsAccountFirewallUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings RemoveIds(this AzureDlsAccountFirewallUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetSubscription(this AzureDlsAccountFirewallUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetSubscription(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetDebug(this AzureDlsAccountFirewallUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetDebug(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetHelp(this AzureDlsAccountFirewallUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetHelp(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetOutput(this AzureDlsAccountFirewallUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetOutput(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetQuery(this AzureDlsAccountFirewallUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetQuery(this AzureDlsAccountFirewallUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings SetVerbose(this AzureDlsAccountFirewallUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDlsAccountFirewallUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDlsAccountFirewallUpdateSettings ResetVerbose(this AzureDlsAccountFirewallUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

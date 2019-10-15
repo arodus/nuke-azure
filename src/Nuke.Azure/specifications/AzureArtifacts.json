@@ -1,0 +1,183 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/artifacts.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/artifacts/universal.yml"
+  ],
+  "name": "AzureArtifacts",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/artifacts?view=azure-cli-latest",
+  "help": "Manage Azure Artifacts.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "",
+      "definiteArgument": "artifacts",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "UniversalDownload",
+      "definiteArgument": "artifacts universal download",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Feed",
+            "type": "string",
+            "format": "--feed {value}",
+            "secret": false,
+            "help": "Name or ID of the feed."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the package, e.g. 'foo-package'."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "secret": false,
+            "help": "Directory to place the package contents."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "secret": false,
+            "help": "Version of the package, e.g. 1.0.0."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "FileFilter",
+            "type": "string",
+            "format": "--file-filter {value}",
+            "secret": false,
+            "help": "Wildcard filter for file download."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UniversalPublish",
+      "definiteArgument": "artifacts universal publish",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Feed",
+            "type": "string",
+            "format": "--feed {value}",
+            "secret": false,
+            "help": "Name or ID of the feed."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the package, e.g. 'foo-package'."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "secret": false,
+            "help": "Directory containing the package contents."
+          },
+          {
+            "name": "Version",
+            "type": "string",
+            "format": "--version {value}",
+            "secret": false,
+            "help": "Version of the package, e.g. '1.0.0'."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description of the package."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "secret": false,
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "secret": false,
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "AzureOutput",
+      "format": "--output {value}",
+      "secret": false,
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "secret": false,
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "secret": false,
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ]
+}

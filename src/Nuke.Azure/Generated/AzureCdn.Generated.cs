@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureCdn.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -493,9 +493,9 @@ namespace Nuke.Azure
         ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureCdnEdgeNodeList(AzureCdnEdgeNodeListSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureCdnProfileCreate(AzureCdnProfileCreateSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureCdnEdgeNodeListSettings();
+            toolSettings = toolSettings ?? new AzureCdnProfileCreateSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -507,17 +507,22 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnEdgeNodeListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnEdgeNodeListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnEdgeNodeListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnEdgeNodeListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnEdgeNodeListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnEdgeNodeListSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureCdnProfileCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--sku</c> via <see cref="AzureCdnProfileCreateSettings.Sku"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileCreateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureCdnProfileCreateSettings.Tags"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileCreateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureCdnEdgeNodeList(Configure<AzureCdnEdgeNodeListSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureCdnProfileCreate(Configure<AzureCdnProfileCreateSettings> configurator)
         {
-            return AzureCdnEdgeNodeList(configurator(new AzureCdnEdgeNodeListSettings()));
+            return AzureCdnProfileCreate(configurator(new AzureCdnProfileCreateSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
@@ -526,17 +531,303 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnEdgeNodeListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnEdgeNodeListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnEdgeNodeListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnEdgeNodeListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnEdgeNodeListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnEdgeNodeListSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureCdnProfileCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--sku</c> via <see cref="AzureCdnProfileCreateSettings.Sku"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileCreateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureCdnProfileCreateSettings.Tags"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileCreateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureCdnEdgeNodeListSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnEdgeNodeList(CombinatorialConfigure<AzureCdnEdgeNodeListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureCdnProfileCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileCreate(CombinatorialConfigure<AzureCdnProfileCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureCdnEdgeNodeList, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureCdnProfileCreate, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureCdnProfileDelete(AzureCdnProfileDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureCdnProfileDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureCdnProfileDelete(Configure<AzureCdnProfileDeleteSettings> configurator)
+        {
+            return AzureCdnProfileDelete(configurator(new AzureCdnProfileDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureCdnProfileDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileDelete(CombinatorialConfigure<AzureCdnProfileDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureCdnProfileDelete, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureCdnProfileList(AzureCdnProfileListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureCdnProfileListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureCdnProfileList(Configure<AzureCdnProfileListSettings> configurator)
+        {
+            return AzureCdnProfileList(configurator(new AzureCdnProfileListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureCdnProfileListSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileList(CombinatorialConfigure<AzureCdnProfileListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureCdnProfileList, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureCdnProfileShow(AzureCdnProfileShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureCdnProfileShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureCdnProfileShow(Configure<AzureCdnProfileShowSettings> configurator)
+        {
+            return AzureCdnProfileShow(configurator(new AzureCdnProfileShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureCdnProfileShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileShow(CombinatorialConfigure<AzureCdnProfileShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureCdnProfileShow, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureCdnProfileUpdate(AzureCdnProfileUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureCdnProfileUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureCdnProfileUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureCdnProfileUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureCdnProfileUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureCdnProfileUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileUpdateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureCdnProfileUpdateSettings.Tags"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureCdnProfileUpdate(Configure<AzureCdnProfileUpdateSettings> configurator)
+        {
+            return AzureCdnProfileUpdate(configurator(new AzureCdnProfileUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureCdnProfileUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureCdnProfileUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureCdnProfileUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureCdnProfileUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileUpdateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureCdnProfileUpdateSettings.Tags"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureCdnProfileUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileUpdate(CombinatorialConfigure<AzureCdnProfileUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureCdnProfileUpdate, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureCdnProfileUsage(AzureCdnProfileUsageSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureCdnProfileUsageSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileUsageSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileUsageSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileUsageSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileUsageSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileUsageSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileUsageSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileUsageSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileUsageSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileUsageSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureCdnProfileUsage(Configure<AzureCdnProfileUsageSettings> configurator)
+        {
+            return AzureCdnProfileUsage(configurator(new AzureCdnProfileUsageSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileUsageSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnProfileUsageSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileUsageSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureCdnProfileUsageSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnProfileUsageSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnProfileUsageSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileUsageSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileUsageSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileUsageSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureCdnProfileUsageSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileUsage(CombinatorialConfigure<AzureCdnProfileUsageSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureCdnProfileUsage, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
@@ -1170,6 +1461,55 @@ namespace Nuke.Azure
         ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
+        public static IReadOnlyCollection<Output> AzureCdnEdgeNodeList(AzureCdnEdgeNodeListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureCdnEdgeNodeListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnEdgeNodeListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnEdgeNodeListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnEdgeNodeListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnEdgeNodeListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnEdgeNodeListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnEdgeNodeListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureCdnEdgeNodeList(Configure<AzureCdnEdgeNodeListSettings> configurator)
+        {
+            return AzureCdnEdgeNodeList(configurator(new AzureCdnEdgeNodeListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureCdnEdgeNodeListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureCdnEdgeNodeListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureCdnEdgeNodeListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureCdnEdgeNodeListSettings.Query"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureCdnEdgeNodeListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureCdnEdgeNodeListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureCdnEdgeNodeListSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnEdgeNodeList(CombinatorialConfigure<AzureCdnEdgeNodeListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureCdnEdgeNodeList, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
         public static IReadOnlyCollection<Output> AzureCdnOriginList(AzureCdnOriginListSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureCdnOriginListSettings();
@@ -1279,346 +1619,6 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureCdnOriginShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnOriginShow(CombinatorialConfigure<AzureCdnOriginShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureCdnOriginShow, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureCdnProfileCreate(AzureCdnProfileCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureCdnProfileCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileCreateSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureCdnProfileCreateSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--sku</c> via <see cref="AzureCdnProfileCreateSettings.Sku"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileCreateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureCdnProfileCreateSettings.Tags"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureCdnProfileCreate(Configure<AzureCdnProfileCreateSettings> configurator)
-        {
-            return AzureCdnProfileCreate(configurator(new AzureCdnProfileCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileCreateSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureCdnProfileCreateSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--sku</c> via <see cref="AzureCdnProfileCreateSettings.Sku"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileCreateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureCdnProfileCreateSettings.Tags"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureCdnProfileCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileCreate(CombinatorialConfigure<AzureCdnProfileCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureCdnProfileCreate, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureCdnProfileDelete(AzureCdnProfileDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureCdnProfileDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureCdnProfileDelete(Configure<AzureCdnProfileDeleteSettings> configurator)
-        {
-            return AzureCdnProfileDelete(configurator(new AzureCdnProfileDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureCdnProfileDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileDelete(CombinatorialConfigure<AzureCdnProfileDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureCdnProfileDelete, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureCdnProfileList(AzureCdnProfileListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureCdnProfileListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureCdnProfileList(Configure<AzureCdnProfileListSettings> configurator)
-        {
-            return AzureCdnProfileList(configurator(new AzureCdnProfileListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureCdnProfileListSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileList(CombinatorialConfigure<AzureCdnProfileListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureCdnProfileList, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureCdnProfileShow(AzureCdnProfileShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureCdnProfileShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureCdnProfileShow(Configure<AzureCdnProfileShowSettings> configurator)
-        {
-            return AzureCdnProfileShow(configurator(new AzureCdnProfileShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureCdnProfileShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileShow(CombinatorialConfigure<AzureCdnProfileShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureCdnProfileShow, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureCdnProfileUpdate(AzureCdnProfileUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureCdnProfileUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureCdnProfileUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureCdnProfileUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureCdnProfileUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureCdnProfileUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileUpdateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureCdnProfileUpdateSettings.Tags"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureCdnProfileUpdate(Configure<AzureCdnProfileUpdateSettings> configurator)
-        {
-            return AzureCdnProfileUpdate(configurator(new AzureCdnProfileUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureCdnProfileUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureCdnProfileUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureCdnProfileUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureCdnProfileUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileUpdateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureCdnProfileUpdateSettings.Tags"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureCdnProfileUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileUpdate(CombinatorialConfigure<AzureCdnProfileUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureCdnProfileUpdate, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureCdnProfileUsage(AzureCdnProfileUsageSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureCdnProfileUsageSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileUsageSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileUsageSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileUsageSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileUsageSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileUsageSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileUsageSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileUsageSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileUsageSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileUsageSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureCdnProfileUsage(Configure<AzureCdnProfileUsageSettings> configurator)
-        {
-            return AzureCdnProfileUsage(configurator(new AzureCdnProfileUsageSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Content Delivery Networks (CDNs).</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/cdn?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureCdnProfileUsageSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureCdnProfileUsageSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureCdnProfileUsageSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureCdnProfileUsageSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureCdnProfileUsageSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureCdnProfileUsageSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureCdnProfileUsageSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureCdnProfileUsageSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureCdnProfileUsageSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureCdnProfileUsageSettings Settings, IReadOnlyCollection<Output> Output)> AzureCdnProfileUsage(CombinatorialConfigure<AzureCdnProfileUsageSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureCdnProfileUsage, AzureCdnLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureCdnNameExistsSettings
@@ -2183,20 +2183,40 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureCdnEdgeNodeListSettings
+    #region AzureCdnProfileCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureCdnTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureCdnEdgeNodeListSettings : ToolSettings
+    public partial class AzureCdnProfileCreateSettings : ToolSettings
     {
         /// <summary>
         ///   Path to the AzureCdn executable.
         /// </summary>
         public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
         public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
+        /// <summary>
+        ///   Name of the CDN profile which is unique within the resource group.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
+        /// </summary>
+        public virtual string Location { get; internal set; }
+        /// <summary>
+        ///   The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai.
+        /// </summary>
+        public virtual CdnProfileCreateSku Sku { get; internal set; }
+        /// <summary>
+        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
+        /// </summary>
+        public virtual string Tags { get; internal set; }
         /// <summary>
         ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
         /// </summary>
@@ -2224,7 +2244,366 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("cdn edge-node list")
+              .Add("cdn profile create")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--location {value}", Location)
+              .Add("--sku {value}", Sku)
+              .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnProfileDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnProfileDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureCdn executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of the CDN profile which is unique within the resource group.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn profile delete")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnProfileListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnProfileListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureCdn executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn profile list")
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnProfileShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnProfileShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureCdn executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of the CDN profile which is unique within the resource group.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn profile show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnProfileUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnProfileUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureCdn executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
+        /// <summary>
+        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
+        /// </summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of the CDN profile which is unique within the resource group.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
+        /// </summary>
+        public virtual string Add { get; internal set; }
+        /// <summary>
+        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+        /// </summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary>
+        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
+        /// </summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary>
+        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
+        /// </summary>
+        public virtual string Set { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn profile update")
+              .Add("--tags {value}", Tags)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureCdnProfileUsageSettings
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnProfileUsageSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureCdn executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of the CDN profile which is unique within the resource group.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn profile usage")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -3108,6 +3487,58 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureCdnEdgeNodeListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureCdnEdgeNodeListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureCdn executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
+        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("cdn edge-node list")
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureCdnOriginListSettings
     /// <summary>
     ///   Used within <see cref="AzureCdnTasks"/>.
@@ -3240,437 +3671,6 @@ namespace Nuke.Azure
               .Add("cdn origin show")
               .Add("--endpoint-name {value}", EndpointName)
               .Add("--profile-name {value}", ProfileName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnProfileCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnProfileCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureCdn executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
-        /// <summary>
-        ///   Name of the CDN profile which is unique within the resource group.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
-        /// </summary>
-        public virtual string Location { get; internal set; }
-        /// <summary>
-        ///   The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai.
-        /// </summary>
-        public virtual CdnProfileCreateSku Sku { get; internal set; }
-        /// <summary>
-        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
-        /// </summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn profile create")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--location {value}", Location)
-              .Add("--sku {value}", Sku)
-              .Add("--tags {value}", Tags)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnProfileDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnProfileDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureCdn executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of the CDN profile which is unique within the resource group.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn profile delete")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnProfileListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnProfileListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureCdn executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn profile list")
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnProfileShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnProfileShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureCdn executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of the CDN profile which is unique within the resource group.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn profile show")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnProfileUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnProfileUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureCdn executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
-        /// <summary>
-        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
-        /// </summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of the CDN profile which is unique within the resource group.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
-        /// </summary>
-        public virtual string Add { get; internal set; }
-        /// <summary>
-        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-        /// </summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary>
-        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
-        /// </summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary>
-        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
-        /// </summary>
-        public virtual string Set { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn profile update")
-              .Add("--tags {value}", Tags)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureCdnProfileUsageSettings
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureCdnProfileUsageSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureCdn executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureCdnTasks.AzureCdnPath;
-        public override Action<OutputType, string> CustomLogger => AzureCdnTasks.AzureCdnLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of the CDN profile which is unique within the resource group.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("cdn profile usage")
               .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
@@ -5669,32 +5669,152 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureCdnEdgeNodeListSettingsExtensions
+    #region AzureCdnProfileCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureCdnTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnEdgeNodeListSettingsExtensions
+    public static partial class AzureCdnProfileCreateSettingsExtensions
     {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings SetName(this AzureCdnProfileCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings ResetName(this AzureCdnProfileCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings SetResourceGroup(this AzureCdnProfileCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings ResetResourceGroup(this AzureCdnProfileCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings SetLocation(this AzureCdnProfileCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings ResetLocation(this AzureCdnProfileCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Sku
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Sku"/></em></p>
+        ///   <p>The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings SetSku(this AzureCdnProfileCreateSettings toolSettings, CdnProfileCreateSku sku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = sku;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Sku"/></em></p>
+        ///   <p>The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings ResetSku(this AzureCdnProfileCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Sku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings SetTags(this AzureCdnProfileCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileCreateSettings ResetTags(this AzureCdnProfileCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
         #region Subscription
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Subscription"/></em></p>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings SetSubscription(this AzureCdnEdgeNodeListSettings toolSettings, string subscription)
+        public static AzureCdnProfileCreateSettings SetSubscription(this AzureCdnProfileCreateSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = subscription;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Subscription"/></em></p>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings ResetSubscription(this AzureCdnEdgeNodeListSettings toolSettings)
+        public static AzureCdnProfileCreateSettings ResetSubscription(this AzureCdnProfileCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = null;
@@ -5703,22 +5823,22 @@ namespace Nuke.Azure
         #endregion
         #region Debug
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Debug"/></em></p>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings SetDebug(this AzureCdnEdgeNodeListSettings toolSettings, string debug)
+        public static AzureCdnProfileCreateSettings SetDebug(this AzureCdnProfileCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Debug"/></em></p>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings ResetDebug(this AzureCdnEdgeNodeListSettings toolSettings)
+        public static AzureCdnProfileCreateSettings ResetDebug(this AzureCdnProfileCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -5727,22 +5847,22 @@ namespace Nuke.Azure
         #endregion
         #region Help
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Help"/></em></p>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings SetHelp(this AzureCdnEdgeNodeListSettings toolSettings, string help)
+        public static AzureCdnProfileCreateSettings SetHelp(this AzureCdnProfileCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Help"/></em></p>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings ResetHelp(this AzureCdnEdgeNodeListSettings toolSettings)
+        public static AzureCdnProfileCreateSettings ResetHelp(this AzureCdnProfileCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -5751,22 +5871,22 @@ namespace Nuke.Azure
         #endregion
         #region Output
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Output"/></em></p>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings SetOutput(this AzureCdnEdgeNodeListSettings toolSettings, AzureOutput output)
+        public static AzureCdnProfileCreateSettings SetOutput(this AzureCdnProfileCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Output"/></em></p>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings ResetOutput(this AzureCdnEdgeNodeListSettings toolSettings)
+        public static AzureCdnProfileCreateSettings ResetOutput(this AzureCdnProfileCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -5775,22 +5895,22 @@ namespace Nuke.Azure
         #endregion
         #region Query
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Query"/></em></p>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings SetQuery(this AzureCdnEdgeNodeListSettings toolSettings, string query)
+        public static AzureCdnProfileCreateSettings SetQuery(this AzureCdnProfileCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Query"/></em></p>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings ResetQuery(this AzureCdnEdgeNodeListSettings toolSettings)
+        public static AzureCdnProfileCreateSettings ResetQuery(this AzureCdnProfileCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -5799,22 +5919,1452 @@ namespace Nuke.Azure
         #endregion
         #region Verbose
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Verbose"/></em></p>
+        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings SetVerbose(this AzureCdnEdgeNodeListSettings toolSettings, string verbose)
+        public static AzureCdnProfileCreateSettings SetVerbose(this AzureCdnProfileCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Verbose"/></em></p>
+        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureCdnEdgeNodeListSettings ResetVerbose(this AzureCdnEdgeNodeListSettings toolSettings)
+        public static AzureCdnProfileCreateSettings ResetVerbose(this AzureCdnProfileCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnProfileDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnProfileDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetIds(this AzureCdnProfileDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetIds(this AzureCdnProfileDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings AddIds(this AzureCdnProfileDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings AddIds(this AzureCdnProfileDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings ClearIds(this AzureCdnProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings RemoveIds(this AzureCdnProfileDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings RemoveIds(this AzureCdnProfileDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetName(this AzureCdnProfileDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings ResetName(this AzureCdnProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetResourceGroup(this AzureCdnProfileDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings ResetResourceGroup(this AzureCdnProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetSubscription(this AzureCdnProfileDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings ResetSubscription(this AzureCdnProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetDebug(this AzureCdnProfileDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings ResetDebug(this AzureCdnProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetHelp(this AzureCdnProfileDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings ResetHelp(this AzureCdnProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetOutput(this AzureCdnProfileDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings ResetOutput(this AzureCdnProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetQuery(this AzureCdnProfileDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings ResetQuery(this AzureCdnProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings SetVerbose(this AzureCdnProfileDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileDeleteSettings ResetVerbose(this AzureCdnProfileDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnProfileListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnProfileListSettingsExtensions
+    {
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings SetResourceGroup(this AzureCdnProfileListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings ResetResourceGroup(this AzureCdnProfileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings SetSubscription(this AzureCdnProfileListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings ResetSubscription(this AzureCdnProfileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings SetDebug(this AzureCdnProfileListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings ResetDebug(this AzureCdnProfileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings SetHelp(this AzureCdnProfileListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings ResetHelp(this AzureCdnProfileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings SetOutput(this AzureCdnProfileListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings ResetOutput(this AzureCdnProfileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings SetQuery(this AzureCdnProfileListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings ResetQuery(this AzureCdnProfileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings SetVerbose(this AzureCdnProfileListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileListSettings ResetVerbose(this AzureCdnProfileListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnProfileShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnProfileShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetIds(this AzureCdnProfileShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetIds(this AzureCdnProfileShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings AddIds(this AzureCdnProfileShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings AddIds(this AzureCdnProfileShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings ClearIds(this AzureCdnProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings RemoveIds(this AzureCdnProfileShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings RemoveIds(this AzureCdnProfileShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetName(this AzureCdnProfileShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings ResetName(this AzureCdnProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetResourceGroup(this AzureCdnProfileShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings ResetResourceGroup(this AzureCdnProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetSubscription(this AzureCdnProfileShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings ResetSubscription(this AzureCdnProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetDebug(this AzureCdnProfileShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings ResetDebug(this AzureCdnProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetHelp(this AzureCdnProfileShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings ResetHelp(this AzureCdnProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetOutput(this AzureCdnProfileShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings ResetOutput(this AzureCdnProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetQuery(this AzureCdnProfileShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings ResetQuery(this AzureCdnProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings SetVerbose(this AzureCdnProfileShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileShowSettings ResetVerbose(this AzureCdnProfileShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnProfileUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnProfileUpdateSettingsExtensions
+    {
+        #region Tags
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetTags(this AzureCdnProfileUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetTags(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetIds(this AzureCdnProfileUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetIds(this AzureCdnProfileUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings AddIds(this AzureCdnProfileUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings AddIds(this AzureCdnProfileUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ClearIds(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings RemoveIds(this AzureCdnProfileUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings RemoveIds(this AzureCdnProfileUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetName(this AzureCdnProfileUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetName(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetResourceGroup(this AzureCdnProfileUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetResourceGroup(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetSubscription(this AzureCdnProfileUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetSubscription(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetAdd(this AzureCdnProfileUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetAdd(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetForceString(this AzureCdnProfileUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetForceString(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetRemove(this AzureCdnProfileUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetRemove(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetSet(this AzureCdnProfileUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetSet(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetDebug(this AzureCdnProfileUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetDebug(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetHelp(this AzureCdnProfileUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetHelp(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetOutput(this AzureCdnProfileUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetOutput(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetQuery(this AzureCdnProfileUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetQuery(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings SetVerbose(this AzureCdnProfileUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUpdateSettings ResetVerbose(this AzureCdnProfileUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureCdnProfileUsageSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnProfileUsageSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetIds(this AzureCdnProfileUsageSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetIds(this AzureCdnProfileUsageSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings AddIds(this AzureCdnProfileUsageSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings AddIds(this AzureCdnProfileUsageSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings ClearIds(this AzureCdnProfileUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings RemoveIds(this AzureCdnProfileUsageSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings RemoveIds(this AzureCdnProfileUsageSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetName(this AzureCdnProfileUsageSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Name"/></em></p>
+        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings ResetName(this AzureCdnProfileUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetResourceGroup(this AzureCdnProfileUsageSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings ResetResourceGroup(this AzureCdnProfileUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetSubscription(this AzureCdnProfileUsageSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings ResetSubscription(this AzureCdnProfileUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetDebug(this AzureCdnProfileUsageSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings ResetDebug(this AzureCdnProfileUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetHelp(this AzureCdnProfileUsageSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings ResetHelp(this AzureCdnProfileUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetOutput(this AzureCdnProfileUsageSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings ResetOutput(this AzureCdnProfileUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetQuery(this AzureCdnProfileUsageSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings ResetQuery(this AzureCdnProfileUsageSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings SetVerbose(this AzureCdnProfileUsageSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnProfileUsageSettings ResetVerbose(this AzureCdnProfileUsageSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -9904,6 +11454,160 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureCdnEdgeNodeListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureCdnEdgeNodeListSettingsExtensions
+    {
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings SetSubscription(this AzureCdnEdgeNodeListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings ResetSubscription(this AzureCdnEdgeNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings SetDebug(this AzureCdnEdgeNodeListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings ResetDebug(this AzureCdnEdgeNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings SetHelp(this AzureCdnEdgeNodeListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings ResetHelp(this AzureCdnEdgeNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings SetOutput(this AzureCdnEdgeNodeListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings ResetOutput(this AzureCdnEdgeNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings SetQuery(this AzureCdnEdgeNodeListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings ResetQuery(this AzureCdnEdgeNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureCdnEdgeNodeListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings SetVerbose(this AzureCdnEdgeNodeListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureCdnEdgeNodeListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureCdnEdgeNodeListSettings ResetVerbose(this AzureCdnEdgeNodeListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureCdnOriginListSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureCdnTasks"/>.
@@ -10461,1726 +12165,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureCdnProfileCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnProfileCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetName(this AzureCdnProfileCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetName(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetResourceGroup(this AzureCdnProfileCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetResourceGroup(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Location"/></em></p>
-        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetLocation(this AzureCdnProfileCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Location"/></em></p>
-        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetLocation(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Sku
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Sku"/></em></p>
-        ///   <p>The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetSku(this AzureCdnProfileCreateSettings toolSettings, CdnProfileCreateSku sku)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = sku;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Sku"/></em></p>
-        ///   <p>The pricing tier (defines a CDN provider, feature list and rate) of the CDN profile. Defaults to Standard_Akamai.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetSku(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Sku = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetTags(this AzureCdnProfileCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetTags(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetSubscription(this AzureCdnProfileCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetSubscription(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetDebug(this AzureCdnProfileCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetDebug(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetHelp(this AzureCdnProfileCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetHelp(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetOutput(this AzureCdnProfileCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetOutput(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetQuery(this AzureCdnProfileCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetQuery(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings SetVerbose(this AzureCdnProfileCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileCreateSettings ResetVerbose(this AzureCdnProfileCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnProfileDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnProfileDeleteSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetIds(this AzureCdnProfileDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetIds(this AzureCdnProfileDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings AddIds(this AzureCdnProfileDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings AddIds(this AzureCdnProfileDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings ClearIds(this AzureCdnProfileDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings RemoveIds(this AzureCdnProfileDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureCdnProfileDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings RemoveIds(this AzureCdnProfileDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetName(this AzureCdnProfileDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings ResetName(this AzureCdnProfileDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetResourceGroup(this AzureCdnProfileDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings ResetResourceGroup(this AzureCdnProfileDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetSubscription(this AzureCdnProfileDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings ResetSubscription(this AzureCdnProfileDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetDebug(this AzureCdnProfileDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings ResetDebug(this AzureCdnProfileDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetHelp(this AzureCdnProfileDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings ResetHelp(this AzureCdnProfileDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetOutput(this AzureCdnProfileDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings ResetOutput(this AzureCdnProfileDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetQuery(this AzureCdnProfileDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings ResetQuery(this AzureCdnProfileDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings SetVerbose(this AzureCdnProfileDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileDeleteSettings ResetVerbose(this AzureCdnProfileDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnProfileListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnProfileListSettingsExtensions
-    {
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings SetResourceGroup(this AzureCdnProfileListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings ResetResourceGroup(this AzureCdnProfileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings SetSubscription(this AzureCdnProfileListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings ResetSubscription(this AzureCdnProfileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings SetDebug(this AzureCdnProfileListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings ResetDebug(this AzureCdnProfileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings SetHelp(this AzureCdnProfileListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings ResetHelp(this AzureCdnProfileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings SetOutput(this AzureCdnProfileListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings ResetOutput(this AzureCdnProfileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings SetQuery(this AzureCdnProfileListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings ResetQuery(this AzureCdnProfileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings SetVerbose(this AzureCdnProfileListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileListSettings ResetVerbose(this AzureCdnProfileListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnProfileShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnProfileShowSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetIds(this AzureCdnProfileShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetIds(this AzureCdnProfileShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings AddIds(this AzureCdnProfileShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings AddIds(this AzureCdnProfileShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings ClearIds(this AzureCdnProfileShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings RemoveIds(this AzureCdnProfileShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureCdnProfileShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings RemoveIds(this AzureCdnProfileShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetName(this AzureCdnProfileShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings ResetName(this AzureCdnProfileShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetResourceGroup(this AzureCdnProfileShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings ResetResourceGroup(this AzureCdnProfileShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetSubscription(this AzureCdnProfileShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings ResetSubscription(this AzureCdnProfileShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetDebug(this AzureCdnProfileShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings ResetDebug(this AzureCdnProfileShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetHelp(this AzureCdnProfileShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings ResetHelp(this AzureCdnProfileShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetOutput(this AzureCdnProfileShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings ResetOutput(this AzureCdnProfileShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetQuery(this AzureCdnProfileShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings ResetQuery(this AzureCdnProfileShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings SetVerbose(this AzureCdnProfileShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileShowSettings ResetVerbose(this AzureCdnProfileShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnProfileUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnProfileUpdateSettingsExtensions
-    {
-        #region Tags
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetTags(this AzureCdnProfileUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetTags(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetIds(this AzureCdnProfileUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetIds(this AzureCdnProfileUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings AddIds(this AzureCdnProfileUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings AddIds(this AzureCdnProfileUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ClearIds(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings RemoveIds(this AzureCdnProfileUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureCdnProfileUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings RemoveIds(this AzureCdnProfileUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetName(this AzureCdnProfileUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetName(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetResourceGroup(this AzureCdnProfileUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetResourceGroup(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetSubscription(this AzureCdnProfileUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetSubscription(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetAdd(this AzureCdnProfileUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetAdd(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetForceString(this AzureCdnProfileUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetForceString(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetRemove(this AzureCdnProfileUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetRemove(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetSet(this AzureCdnProfileUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetSet(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetDebug(this AzureCdnProfileUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetDebug(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetHelp(this AzureCdnProfileUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetHelp(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetOutput(this AzureCdnProfileUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetOutput(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetQuery(this AzureCdnProfileUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetQuery(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings SetVerbose(this AzureCdnProfileUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUpdateSettings ResetVerbose(this AzureCdnProfileUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureCdnProfileUsageSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureCdnProfileUsageSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetIds(this AzureCdnProfileUsageSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetIds(this AzureCdnProfileUsageSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings AddIds(this AzureCdnProfileUsageSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings AddIds(this AzureCdnProfileUsageSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings ClearIds(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings RemoveIds(this AzureCdnProfileUsageSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureCdnProfileUsageSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings RemoveIds(this AzureCdnProfileUsageSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetName(this AzureCdnProfileUsageSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Name"/></em></p>
-        ///   <p>Name of the CDN profile which is unique within the resource group.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings ResetName(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetResourceGroup(this AzureCdnProfileUsageSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings ResetResourceGroup(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetSubscription(this AzureCdnProfileUsageSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings ResetSubscription(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetDebug(this AzureCdnProfileUsageSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings ResetDebug(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetHelp(this AzureCdnProfileUsageSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings ResetHelp(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetOutput(this AzureCdnProfileUsageSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings ResetOutput(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetQuery(this AzureCdnProfileUsageSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings ResetQuery(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureCdnProfileUsageSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings SetVerbose(this AzureCdnProfileUsageSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureCdnProfileUsageSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureCdnProfileUsageSettings ResetVerbose(this AzureCdnProfileUsageSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region CdnEndpointQueryStringCaching
-    /// <summary>
-    ///   Used within <see cref="AzureCdnTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [Serializable]
-    [ExcludeFromCodeCoverage]
-    [TypeConverter(typeof(TypeConverter<CdnEndpointQueryStringCaching>))]
-    public partial class CdnEndpointQueryStringCaching : Enumeration
-    {
-        public static CdnEndpointQueryStringCaching bypasscaching = new CdnEndpointQueryStringCaching { Value = "bypasscaching" };
-        public static CdnEndpointQueryStringCaching ignorequerystring = new CdnEndpointQueryStringCaching { Value = "ignorequerystring" };
-        public static CdnEndpointQueryStringCaching notset = new CdnEndpointQueryStringCaching { Value = "notset" };
-        public static CdnEndpointQueryStringCaching usequerystring = new CdnEndpointQueryStringCaching { Value = "usequerystring" };
-    }
-    #endregion
     #region CdnProfileCreateSku
     /// <summary>
     ///   Used within <see cref="AzureCdnTasks"/>.
@@ -12197,6 +12181,22 @@ namespace Nuke.Azure
         public static CdnProfileCreateSku standard_chinacdn = new CdnProfileCreateSku { Value = "standard_chinacdn" };
         public static CdnProfileCreateSku standard_microsoft = new CdnProfileCreateSku { Value = "standard_microsoft" };
         public static CdnProfileCreateSku standard_verizon = new CdnProfileCreateSku { Value = "standard_verizon" };
+    }
+    #endregion
+    #region CdnEndpointQueryStringCaching
+    /// <summary>
+    ///   Used within <see cref="AzureCdnTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    [TypeConverter(typeof(TypeConverter<CdnEndpointQueryStringCaching>))]
+    public partial class CdnEndpointQueryStringCaching : Enumeration
+    {
+        public static CdnEndpointQueryStringCaching bypasscaching = new CdnEndpointQueryStringCaching { Value = "bypasscaching" };
+        public static CdnEndpointQueryStringCaching ignorequerystring = new CdnEndpointQueryStringCaching { Value = "ignorequerystring" };
+        public static CdnEndpointQueryStringCaching notset = new CdnEndpointQueryStringCaching { Value = "notset" };
+        public static CdnEndpointQueryStringCaching usequerystring = new CdnEndpointQueryStringCaching { Value = "usequerystring" };
     }
     #endregion
 }

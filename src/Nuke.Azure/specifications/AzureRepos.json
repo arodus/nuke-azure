@@ -1,0 +1,3086 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/ref.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/pr.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/import.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/pr/reviewer.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/pr/work-item.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/pr/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/policy/work-item-linking.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/policy/case-enforcement.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/policy/approver-count.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/policy/file-size.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/policy/required-reviewer.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/policy/comment-required.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/policy/merge-strategy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/repos/policy/build.yml"
+  ],
+  "name": "AzureRepos",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/repos?view=azure-cli-latest",
+  "help": "Manage Azure Repos.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Create",
+      "definiteArgument": "repos create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name for the new repository."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the repository page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "repos delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the repository."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "repos list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "repos show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the repository page in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "repos update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository."
+          },
+          {
+            "name": "DefaultBranch",
+            "type": "string",
+            "format": "--default-branch {value}",
+            "secret": false,
+            "help": "Default branch to be set for the repository. Example: 'refs/heads/live' or 'live'."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "New name for the repository."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RefCreate",
+      "definiteArgument": "repos ref create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the reference to create (example: heads/my_branch or tags/my_tag)."
+          },
+          {
+            "name": "ObjectId",
+            "type": "string",
+            "format": "--object-id {value}",
+            "secret": false,
+            "help": "Id of the object to create the reference from."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RefDelete",
+      "definiteArgument": "repos ref delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the reference to delete (example: heads/my_branch)."
+          },
+          {
+            "name": "ObjectId",
+            "type": "string",
+            "format": "--object-id {value}",
+            "secret": false,
+            "help": "Id of the reference to delete."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RefList",
+      "definiteArgument": "repos ref list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "secret": false,
+            "help": "A filter to apply to the refs (starts with). Example: head or heads/ for the branches."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RefLock",
+      "definiteArgument": "repos ref lock",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the reference to update (example: heads/my_branch)."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RefUnlock",
+      "definiteArgument": "repos ref unlock",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the reference to update (example: heads/my_branch)."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrCheckout",
+      "definiteArgument": "repos pr checkout",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "RemoteName",
+            "type": "string",
+            "format": "--remote-name {value}",
+            "secret": false,
+            "help": "Name of git remote against which PR is raised."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrCreate",
+      "definiteArgument": "repos pr create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AutoComplete",
+            "type": "bool",
+            "format": "--auto-complete",
+            "secret": false,
+            "help": "Set the pull request to complete automatically when all policies have passed and the source branch can be merged into the target branch."
+          },
+          {
+            "name": "BypassPolicy",
+            "type": "bool",
+            "format": "--bypass-policy",
+            "secret": false,
+            "help": "Bypass required policies (if any) and completes the pull request once it can be merged."
+          },
+          {
+            "name": "BypassPolicyReason",
+            "type": "string",
+            "format": "--bypass-policy-reason {value}",
+            "secret": false,
+            "help": "Reason for bypassing the required policies."
+          },
+          {
+            "name": "DeleteSourceBranch",
+            "type": "bool",
+            "format": "--delete-source-branch",
+            "secret": false,
+            "help": "Delete the source branch after the pull request has been completed and merged into the target branch."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description for the new pull request. Can include markdown. Each value sent to this arg will be a new line. For example: --description \"First Line\" \"Second Line\"."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Draft",
+            "type": "bool",
+            "format": "--draft",
+            "secret": false,
+            "help": "Use this flag to create the pull request in draft/work in progress mode."
+          },
+          {
+            "name": "MergeCommitMessage",
+            "type": "string",
+            "format": "--merge-commit-message {value}",
+            "secret": false,
+            "help": "Message displayed when commits are merged."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the pull request in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository to create the pull request in."
+          },
+          {
+            "name": "Reviewers",
+            "type": "string",
+            "format": "--reviewers {value}",
+            "secret": false,
+            "help": "Additional users or groups to include as reviewers on the new pull request. Space separated."
+          },
+          {
+            "name": "SourceBranch",
+            "type": "string",
+            "format": "--source-branch {value}",
+            "secret": false,
+            "help": "Name of the source branch. Example: \"dev\"."
+          },
+          {
+            "name": "Squash",
+            "type": "bool",
+            "format": "--squash",
+            "secret": false,
+            "help": "Squash the commits in the source branch when merging into the target branch."
+          },
+          {
+            "name": "TargetBranch",
+            "type": "string",
+            "format": "--target-branch {value}",
+            "secret": false,
+            "help": "Name of the target branch. If not specified, defaults to the default branch of the target repository."
+          },
+          {
+            "name": "Title",
+            "type": "string",
+            "format": "--title {value}",
+            "secret": false,
+            "help": "Title for the new pull request."
+          },
+          {
+            "name": "TransitionWorkItems",
+            "type": "bool",
+            "format": "--transition-work-items",
+            "secret": false,
+            "help": "Transition any work items linked to the pull request into the next logical state. (e.g. Active -&gt; Resolved)."
+          },
+          {
+            "name": "WorkItems",
+            "type": "string",
+            "format": "--work-items {value}",
+            "secret": false,
+            "help": "IDs of the work items to link to the new pull request. Space separated."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrList",
+      "definiteArgument": "repos pr list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Creator",
+            "type": "string",
+            "format": "--creator {value}",
+            "secret": false,
+            "help": "Limit results to pull requests created by this user."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "IncludeLinks",
+            "type": "string",
+            "format": "--include-links {value}",
+            "secret": false,
+            "help": "Include _links for each pull request."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository."
+          },
+          {
+            "name": "Reviewer",
+            "type": "string",
+            "format": "--reviewer {value}",
+            "secret": false,
+            "help": "Limit results to pull requests where this user is a reviewer."
+          },
+          {
+            "name": "Skip",
+            "type": "int",
+            "format": "--skip {value}",
+            "secret": false,
+            "help": "Number of pull requests to skip."
+          },
+          {
+            "name": "SourceBranch",
+            "type": "string",
+            "format": "--source-branch {value}",
+            "secret": false,
+            "help": "Limit results to pull requests that originate from this source branch."
+          },
+          {
+            "name": "Status",
+            "type": "ReposPrListStatus",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "Limit results to pull requests with this status."
+          },
+          {
+            "name": "TargetBranch",
+            "type": "string",
+            "format": "--target-branch {value}",
+            "secret": false,
+            "help": "Limit results to pull requests that target this branch."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of pull requests to list."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrSetVote",
+      "definiteArgument": "repos pr set-vote",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "Vote",
+            "type": "ReposPrSetVoteVote",
+            "format": "--vote {value}",
+            "secret": false,
+            "help": "New vote value for the pull request."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrShow",
+      "definiteArgument": "repos pr show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Open",
+            "type": "string",
+            "format": "--open {value}",
+            "secret": false,
+            "help": "Open the pull request in your web browser."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrUpdate",
+      "definiteArgument": "repos pr update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "AutoComplete",
+            "type": "bool",
+            "format": "--auto-complete",
+            "secret": false,
+            "help": "Set the pull request to complete automatically when all policies have passed and the source branch can be merged into the target branch."
+          },
+          {
+            "name": "BypassPolicy",
+            "type": "bool",
+            "format": "--bypass-policy",
+            "secret": false,
+            "help": "Bypass required policies (if any) and completes the pull request once it can be merged."
+          },
+          {
+            "name": "BypassPolicyReason",
+            "type": "string",
+            "format": "--bypass-policy-reason {value}",
+            "secret": false,
+            "help": "Reason for bypassing the required policies."
+          },
+          {
+            "name": "DeleteSourceBranch",
+            "type": "bool",
+            "format": "--delete-source-branch",
+            "secret": false,
+            "help": "Delete the source branch after the pull request has been completed and merged into the target branch."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "New description for the pull request.  Can include markdown.  Each value sent to this arg will be a new line. For example: --description \"First Line\" \"Second Line\"."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Draft",
+            "type": "bool",
+            "format": "--draft",
+            "secret": false,
+            "help": "Publish the PR or convert to draft mode."
+          },
+          {
+            "name": "MergeCommitMessage",
+            "type": "string",
+            "format": "--merge-commit-message {value}",
+            "secret": false,
+            "help": "Message displayed when commits are merged."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Squash",
+            "type": "bool",
+            "format": "--squash",
+            "secret": false,
+            "help": "Squash the commits in the source branch when merging into the target branch."
+          },
+          {
+            "name": "Status",
+            "type": "ReposPrUpdateStatus",
+            "format": "--status {value}",
+            "secret": false,
+            "help": "Set the new state of pull request."
+          },
+          {
+            "name": "Title",
+            "type": "string",
+            "format": "--title {value}",
+            "secret": false,
+            "help": "New title for the pull request."
+          },
+          {
+            "name": "TransitionWorkItems",
+            "type": "bool",
+            "format": "--transition-work-items",
+            "secret": false,
+            "help": "Transition any work items linked to the pull request into the next logical state. (e.g. Active -&gt; Resolved)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ImportCreate",
+      "definiteArgument": "repos import create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "GitSourceUrl",
+            "type": "string",
+            "format": "--git-source-url {value}",
+            "secret": false,
+            "help": "Url of the source git repository."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "GitServiceEndpointId",
+            "type": "string",
+            "format": "--git-service-endpoint-id {value}",
+            "secret": false,
+            "help": "Service Endpoint for connection to external endpoint."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Repository",
+            "type": "string",
+            "format": "--repository {value}",
+            "secret": false,
+            "help": "Name or ID of the repository to create the import request in."
+          },
+          {
+            "name": "RequiresAuthorization",
+            "type": "string",
+            "format": "--requires-authorization {value}",
+            "secret": false,
+            "help": "Flag to tell if source git repository is private."
+          },
+          {
+            "name": "UserName",
+            "type": "string",
+            "format": "--user-name {value}",
+            "secret": false,
+            "help": "User name in case source git repository is private."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyCreate",
+      "definiteArgument": "repos policy create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Config",
+            "type": "string",
+            "format": "--config {value}",
+            "secret": false,
+            "help": "Local file path for configuration file. Please use / backslash when typing in directory path."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyDelete",
+      "definiteArgument": "repos policy delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyList",
+      "definiteArgument": "repos policy list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch name to filter results by exact match of branch name. The --repository-id parameter is required to use the branch filter. For example: --branch master."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "ID of the repository to filter results by exact match of the repository ID. For example --repository-ID e556f204-53c9-4153-9cd9-ef41a11e3345."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyShow",
+      "definiteArgument": "repos policy show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyUpdate",
+      "definiteArgument": "repos policy update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Config",
+            "type": "string",
+            "format": "--config {value}",
+            "secret": false,
+            "help": "Local file path for configuration file. Please use / backslash when typing in directory path."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrReviewerAdd",
+      "definiteArgument": "repos pr reviewer add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "Reviewers",
+            "type": "string",
+            "format": "--reviewers {value}",
+            "secret": false,
+            "help": "Users or groups to include as reviewers on a pull request. Space separated."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrReviewerList",
+      "definiteArgument": "repos pr reviewer list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrReviewerRemove",
+      "definiteArgument": "repos pr reviewer remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "Reviewers",
+            "type": "string",
+            "format": "--reviewers {value}",
+            "secret": false,
+            "help": "Users or groups to remove as reviewers on a pull request. Space separated."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrWorkItemAdd",
+      "definiteArgument": "repos pr work-item add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "WorkItems",
+            "type": "string",
+            "format": "--work-items {value}",
+            "secret": false,
+            "help": "IDs of the work items to link. Space separated."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrWorkItemList",
+      "definiteArgument": "repos pr work-item list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrWorkItemRemove",
+      "definiteArgument": "repos pr work-item remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "WorkItems",
+            "type": "string",
+            "format": "--work-items {value}",
+            "secret": false,
+            "help": "IDs of the work items to unlink. Space separated."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrPolicyList",
+      "definiteArgument": "repos pr policy list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Skip",
+            "type": "int",
+            "format": "--skip {value}",
+            "secret": false,
+            "help": "Number of policies to skip."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of policies to list."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PrPolicyQueue",
+      "definiteArgument": "repos pr policy queue",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EvaluationId",
+            "type": "string",
+            "format": "--evaluation-id {value}",
+            "secret": false,
+            "help": "ID of the policy evaluation to queue."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the pull request."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyWorkItemLinkingCreate",
+      "definiteArgument": "repos policy work-item-linking create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyWorkItemLinkingUpdate",
+      "definiteArgument": "repos policy work-item-linking update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyCaseEnforcementCreate",
+      "definiteArgument": "repos policy case-enforcement create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyCaseEnforcementUpdate",
+      "definiteArgument": "repos policy case-enforcement update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyApproverCountCreate",
+      "definiteArgument": "repos policy approver-count create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowDownvotes",
+            "type": "bool",
+            "format": "--allow-downvotes",
+            "secret": false,
+            "help": "Whether to allow downvotes or not."
+          },
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "CreatorVoteCounts",
+            "type": "bool",
+            "format": "--creator-vote-counts",
+            "secret": false,
+            "help": "Whether the creator's vote counts or not."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "MinimumApproverCount",
+            "type": "int",
+            "format": "--minimum-approver-count {value}",
+            "secret": false,
+            "help": "Minimum number of approvers required. For example: 2."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "ResetOnSourcePush",
+            "type": "bool",
+            "format": "--reset-on-source-push",
+            "secret": false,
+            "help": "Whether to reset source on push."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyApproverCountUpdate",
+      "definiteArgument": "repos policy approver-count update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "AllowDownvotes",
+            "type": "bool",
+            "format": "--allow-downvotes",
+            "secret": false,
+            "help": "Whether to allow downvotes or not."
+          },
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "CreatorVoteCounts",
+            "type": "bool",
+            "format": "--creator-vote-counts",
+            "secret": false,
+            "help": "Whether the creator's vote counts or not."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "MinimumApproverCount",
+            "type": "int",
+            "format": "--minimum-approver-count {value}",
+            "secret": false,
+            "help": "Minimum number of approvers required. For example: 2."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "ResetOnSourcePush",
+            "type": "bool",
+            "format": "--reset-on-source-push",
+            "secret": false,
+            "help": "Whether to reset source on push."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyFileSizeCreate",
+      "definiteArgument": "repos policy file-size create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "MaximumGitBlobSize",
+            "type": "string",
+            "format": "--maximum-git-blob-size {value}",
+            "secret": false,
+            "help": "Maximum git blob size in bytes. For example, to specify a 10byte limit, --maximum-git-blob-size 10."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "UseUncompressedSize",
+            "type": "bool",
+            "format": "--use-uncompressed-size",
+            "secret": false,
+            "help": "Whether to use uncompressed size."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyFileSizeUpdate",
+      "definiteArgument": "repos policy file-size update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "MaximumGitBlobSize",
+            "type": "string",
+            "format": "--maximum-git-blob-size {value}",
+            "secret": false,
+            "help": "Maximum git blob size in bytes. For example, to specify a 10byte limit, --maximum-git-blob-size 10."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "UseUncompressedSize",
+            "type": "bool",
+            "format": "--use-uncompressed-size",
+            "secret": false,
+            "help": "Whether to use uncompressed size."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyRequiredReviewerCreate",
+      "definiteArgument": "repos policy required-reviewer create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "Message",
+            "type": "string",
+            "format": "--message {value}",
+            "secret": false,
+            "help": "Message."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "RequiredReviewerIds",
+            "type": "string",
+            "format": "--required-reviewer-ids {value}",
+            "secret": false,
+            "help": "Required reviewers email addresses separated by ';'. For example: john@contoso.com;alice@contoso.com."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PathFilter",
+            "type": "string",
+            "format": "--path-filter {value}",
+            "secret": false,
+            "help": "Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths separated by ';'. Example: /WebApp/Models/Data.cs, /WebApp/\\* or \\*.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyRequiredReviewerUpdate",
+      "definiteArgument": "repos policy required-reviewer update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "Message",
+            "type": "string",
+            "format": "--message {value}",
+            "secret": false,
+            "help": "Message."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PathFilter",
+            "type": "string",
+            "format": "--path-filter {value}",
+            "secret": false,
+            "help": "Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths separated by ';'. Example: /WebApp/Models/Data.cs, /WebApp/\\* or \\*.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "RequiredReviewerIds",
+            "type": "string",
+            "format": "--required-reviewer-ids {value}",
+            "secret": false,
+            "help": "Required reviewers email addresses separated by ';'. For example: john@contoso.com;alice@contoso.com."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyCommentRequiredCreate",
+      "definiteArgument": "repos policy comment-required create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyCommentRequiredUpdate",
+      "definiteArgument": "repos policy comment-required update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyMergeStrategyCreate",
+      "definiteArgument": "repos policy merge-strategy create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "UseSquashMerge",
+            "type": "bool",
+            "format": "--use-squash-merge",
+            "secret": false,
+            "help": "Whether to squash merge always."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyMergeStrategyUpdate",
+      "definiteArgument": "repos policy merge-strategy update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "UseSquashMerge",
+            "type": "bool",
+            "format": "--use-squash-merge",
+            "secret": false,
+            "help": "Whether to squash merge always."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyBuildCreate",
+      "definiteArgument": "repos policy build create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "BuildDefinitionId",
+            "type": "string",
+            "format": "--build-definition-id {value}",
+            "secret": false,
+            "help": "Build Definition Id."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Display name for this build policy to identify the policy. For example: 'Manual queue policy'."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "ManualQueueOnly",
+            "type": "bool",
+            "format": "--manual-queue-only",
+            "secret": false,
+            "help": "Whether to allow only manual queue of builds."
+          },
+          {
+            "name": "QueueOnSourceUpdateOnly",
+            "type": "bool",
+            "format": "--queue-on-source-update-only",
+            "secret": false,
+            "help": "Queue Only on source update."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "ValidDuration",
+            "type": "string",
+            "format": "--valid-duration {value}",
+            "secret": false,
+            "help": "Policy validity duration (in minutes)."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PathFilter",
+            "type": "string",
+            "format": "--path-filter {value}",
+            "secret": false,
+            "help": "Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths separated by ';'. Example: /WebApp/Models/Data.cs, /WebApp/\\* or \\*.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PolicyBuildUpdate",
+      "definiteArgument": "repos policy build update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "ID of the policy."
+          },
+          {
+            "name": "Blocking",
+            "type": "bool",
+            "format": "--blocking",
+            "secret": false,
+            "help": "Whether the policy should be blocking or not."
+          },
+          {
+            "name": "Branch",
+            "type": "string",
+            "format": "--branch {value}",
+            "secret": false,
+            "help": "Branch on which this policy should be applied. For example: master."
+          },
+          {
+            "name": "BranchMatchType",
+            "type": "ReposPolicyWorkItemLinkingBranchMatchType",
+            "format": "--branch-match-type {value}",
+            "secret": false,
+            "help": "Determines how the branch argument is used to apply a policy. If value is 'exact', the policy will be applied on a branch which has an exact match on the --branch argument. If value is 'prefix' the policy is applied across all branch folders that match the prefix provided by the --branch argument."
+          },
+          {
+            "name": "BuildDefinitionId",
+            "type": "string",
+            "format": "--build-definition-id {value}",
+            "secret": false,
+            "help": "Build Definition Id."
+          },
+          {
+            "name": "Detect",
+            "type": "bool",
+            "format": "--detect",
+            "secret": false,
+            "help": "Automatically detect organization."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Display name for this build policy to identify the policy. For example: 'Manual queue policy'."
+          },
+          {
+            "name": "Enabled",
+            "type": "bool",
+            "format": "--enabled",
+            "secret": false,
+            "help": "Whether the policy is enabled or not."
+          },
+          {
+            "name": "ManualQueueOnly",
+            "type": "bool",
+            "format": "--manual-queue-only",
+            "secret": false,
+            "help": "Whether to allow only manual queue of builds."
+          },
+          {
+            "name": "Org",
+            "type": "string",
+            "format": "--org {value}",
+            "secret": false,
+            "help": "Azure DevOps organization URL. You can configure the default organization using az devops configure -d organization=ORG_URL. Required if not configured as default or picked up via git config. Example: <a href=\"https://dev.azure.com/MyOrganizationName/\">https://dev.azure.com/MyOrganizationName/</a>."
+          },
+          {
+            "name": "PathFilter",
+            "type": "string",
+            "format": "--path-filter {value}",
+            "secret": false,
+            "help": "Filter path(s) on which the policy is applied. Supports absolute paths, wildcards and multiple paths separated by ';'. Example: /WebApp/Models/Data.cs, /WebApp/\\* or \\*.cs,/WebApp/Models/Data.cs;ClientApp/Models/Data.cs."
+          },
+          {
+            "name": "Project",
+            "type": "string",
+            "format": "--project {value}",
+            "secret": false,
+            "help": "Name or ID of the project. You can configure the default project using az devops configure -d project=NAME_OR_ID. Required if not configured as default or picked up via git config."
+          },
+          {
+            "name": "QueueOnSourceUpdateOnly",
+            "type": "bool",
+            "format": "--queue-on-source-update-only",
+            "secret": false,
+            "help": "Queue Only on source update."
+          },
+          {
+            "name": "RepositoryId",
+            "type": "string",
+            "format": "--repository-id {value}",
+            "secret": false,
+            "help": "Id of the repository on which to apply the policy."
+          },
+          {
+            "name": "ValidDuration",
+            "type": "string",
+            "format": "--valid-duration {value}",
+            "secret": false,
+            "help": "Policy validity duration (in minutes)."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "secret": false,
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "secret": false,
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "AzureOutput",
+      "format": "--output {value}",
+      "secret": false,
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "secret": false,
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "secret": false,
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "ReposPrListStatus",
+      "values": [
+        "abandoned",
+        "active",
+        "all",
+        "completed"
+      ]
+    },
+    {
+      "name": "ReposPrUpdateStatus",
+      "values": [
+        "abandoned",
+        "active",
+        "completed"
+      ]
+    },
+    {
+      "name": "ReposPrSetVoteVote",
+      "values": [
+        "approve",
+        "approve-with-suggestions",
+        "reject",
+        "reset",
+        "wait-for-author"
+      ]
+    },
+    {
+      "name": "ReposPolicyWorkItemLinkingBranchMatchType",
+      "values": [
+        "exact",
+        "prefix"
+      ]
+    }
+  ]
+}

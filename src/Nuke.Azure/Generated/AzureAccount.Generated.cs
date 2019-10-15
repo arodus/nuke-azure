@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAccount.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -61,7 +61,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureAccountClearSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAccountClearSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountClearSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountClearSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountClearSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -80,7 +79,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureAccountClearSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAccountClearSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountClearSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountClearSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountClearSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -111,6 +109,7 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureAccountGetAccessTokenSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountGetAccessTokenSettings.Query"/></li>
         ///     <li><c>--resource</c> via <see cref="AzureAccountGetAccessTokenSettings.Resource"/></li>
+        ///     <li><c>--resource-type</c> via <see cref="AzureAccountGetAccessTokenSettings.ResourceType"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureAccountGetAccessTokenSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountGetAccessTokenSettings.Verbose"/></li>
         ///   </ul>
@@ -131,6 +130,7 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureAccountGetAccessTokenSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountGetAccessTokenSettings.Query"/></li>
         ///     <li><c>--resource</c> via <see cref="AzureAccountGetAccessTokenSettings.Resource"/></li>
+        ///     <li><c>--resource-type</c> via <see cref="AzureAccountGetAccessTokenSettings.ResourceType"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureAccountGetAccessTokenSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountGetAccessTokenSettings.Verbose"/></li>
         ///   </ul>
@@ -163,7 +163,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureAccountListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountListSettings.Query"/></li>
         ///     <li><c>--refresh</c> via <see cref="AzureAccountListSettings.Refresh"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountListSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -184,7 +183,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureAccountListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountListSettings.Query"/></li>
         ///     <li><c>--refresh</c> via <see cref="AzureAccountListSettings.Refresh"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountListSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -214,7 +212,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureAccountListLocationsSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAccountListLocationsSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountListLocationsSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountListLocationsSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountListLocationsSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -233,7 +230,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureAccountListLocationsSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAccountListLocationsSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountListLocationsSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountListLocationsSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountListLocationsSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -345,275 +341,6 @@ namespace Nuke.Azure
         ///   <p>Manage Azure subscription information.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureAccountLockCreate(AzureAccountLockCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureAccountLockCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockCreateSettings.Help"/></li>
-        ///     <li><c>--lock-type</c> via <see cref="AzureAccountLockCreateSettings.LockType"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureAccountLockCreateSettings.Name"/></li>
-        ///     <li><c>--notes</c> via <see cref="AzureAccountLockCreateSettings.Notes"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockCreateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureAccountLockCreate(Configure<AzureAccountLockCreateSettings> configurator)
-        {
-            return AzureAccountLockCreate(configurator(new AzureAccountLockCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockCreateSettings.Help"/></li>
-        ///     <li><c>--lock-type</c> via <see cref="AzureAccountLockCreateSettings.LockType"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureAccountLockCreateSettings.Name"/></li>
-        ///     <li><c>--notes</c> via <see cref="AzureAccountLockCreateSettings.Notes"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockCreateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureAccountLockCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockCreate(CombinatorialConfigure<AzureAccountLockCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureAccountLockCreate, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureAccountLockDelete(AzureAccountLockDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureAccountLockDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureAccountLockDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureAccountLockDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockDeleteSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureAccountLockDelete(Configure<AzureAccountLockDeleteSettings> configurator)
-        {
-            return AzureAccountLockDelete(configurator(new AzureAccountLockDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureAccountLockDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureAccountLockDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockDeleteSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureAccountLockDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockDelete(CombinatorialConfigure<AzureAccountLockDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureAccountLockDelete, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureAccountLockList(AzureAccountLockListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureAccountLockListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockListSettings.Debug"/></li>
-        ///     <li><c>--filter-string</c> via <see cref="AzureAccountLockListSettings.FilterString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureAccountLockList(Configure<AzureAccountLockListSettings> configurator)
-        {
-            return AzureAccountLockList(configurator(new AzureAccountLockListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockListSettings.Debug"/></li>
-        ///     <li><c>--filter-string</c> via <see cref="AzureAccountLockListSettings.FilterString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureAccountLockListSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockList(CombinatorialConfigure<AzureAccountLockListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureAccountLockList, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureAccountLockShow(AzureAccountLockShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureAccountLockShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureAccountLockShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureAccountLockShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureAccountLockShow(Configure<AzureAccountLockShowSettings> configurator)
-        {
-            return AzureAccountLockShow(configurator(new AzureAccountLockShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureAccountLockShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureAccountLockShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockShowSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureAccountLockShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockShow(CombinatorialConfigure<AzureAccountLockShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureAccountLockShow, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureAccountLockUpdate(AzureAccountLockUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureAccountLockUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockUpdateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureAccountLockUpdateSettings.Ids"/></li>
-        ///     <li><c>--lock-type</c> via <see cref="AzureAccountLockUpdateSettings.LockType"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureAccountLockUpdateSettings.Name"/></li>
-        ///     <li><c>--notes</c> via <see cref="AzureAccountLockUpdateSettings.Notes"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockUpdateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureAccountLockUpdate(Configure<AzureAccountLockUpdateSettings> configurator)
-        {
-            return AzureAccountLockUpdate(configurator(new AzureAccountLockUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureAccountLockUpdateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureAccountLockUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureAccountLockUpdateSettings.Ids"/></li>
-        ///     <li><c>--lock-type</c> via <see cref="AzureAccountLockUpdateSettings.LockType"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureAccountLockUpdateSettings.Name"/></li>
-        ///     <li><c>--notes</c> via <see cref="AzureAccountLockUpdateSettings.Notes"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureAccountLockUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureAccountLockUpdateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountLockUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureAccountLockUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockUpdate(CombinatorialConfigure<AzureAccountLockUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureAccountLockUpdate, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure subscription information.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
         public static IReadOnlyCollection<Output> AzureAccountManagementGroupCreate(AzureAccountManagementGroupCreateSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureAccountManagementGroupCreateSettings();
@@ -635,7 +362,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureAccountManagementGroupCreateSettings.Output"/></li>
         ///     <li><c>--parent</c> via <see cref="AzureAccountManagementGroupCreateSettings.Parent"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupCreateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupCreateSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupCreateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -657,7 +383,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureAccountManagementGroupCreateSettings.Output"/></li>
         ///     <li><c>--parent</c> via <see cref="AzureAccountManagementGroupCreateSettings.Parent"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupCreateSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupCreateSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupCreateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -688,7 +413,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -708,7 +432,6 @@ namespace Nuke.Azure
         ///     <li><c>--name</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupDeleteSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -738,7 +461,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureAccountManagementGroupListSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAccountManagementGroupListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupListSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -757,7 +479,6 @@ namespace Nuke.Azure
         ///     <li><c>--help</c> via <see cref="AzureAccountManagementGroupListSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureAccountManagementGroupListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupListSettings.Query"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupListSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -790,7 +511,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureAccountManagementGroupShowSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupShowSettings.Query"/></li>
         ///     <li><c>--recurse</c> via <see cref="AzureAccountManagementGroupShowSettings.Recurse"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupShowSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupShowSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -812,7 +532,6 @@ namespace Nuke.Azure
         ///     <li><c>--output</c> via <see cref="AzureAccountManagementGroupShowSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupShowSettings.Query"/></li>
         ///     <li><c>--recurse</c> via <see cref="AzureAccountManagementGroupShowSettings.Recurse"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupShowSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupShowSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -849,7 +568,6 @@ namespace Nuke.Azure
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Query"/></li>
         ///     <li><c>--remove</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Remove"/></li>
         ///     <li><c>--set</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
@@ -875,13 +593,271 @@ namespace Nuke.Azure
         ///     <li><c>--query</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Query"/></li>
         ///     <li><c>--remove</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Remove"/></li>
         ///     <li><c>--set</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Subscription"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureAccountManagementGroupUpdateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
         public static IEnumerable<(AzureAccountManagementGroupUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountManagementGroupUpdate(CombinatorialConfigure<AzureAccountManagementGroupUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureAccountManagementGroupUpdate, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureAccountLockCreate(AzureAccountLockCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureAccountLockCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockCreateSettings.Help"/></li>
+        ///     <li><c>--lock-type</c> via <see cref="AzureAccountLockCreateSettings.LockType"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAccountLockCreateSettings.Name"/></li>
+        ///     <li><c>--notes</c> via <see cref="AzureAccountLockCreateSettings.Notes"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockCreateSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureAccountLockCreate(Configure<AzureAccountLockCreateSettings> configurator)
+        {
+            return AzureAccountLockCreate(configurator(new AzureAccountLockCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockCreateSettings.Help"/></li>
+        ///     <li><c>--lock-type</c> via <see cref="AzureAccountLockCreateSettings.LockType"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAccountLockCreateSettings.Name"/></li>
+        ///     <li><c>--notes</c> via <see cref="AzureAccountLockCreateSettings.Notes"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockCreateSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureAccountLockCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockCreate(CombinatorialConfigure<AzureAccountLockCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureAccountLockCreate, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureAccountLockDelete(AzureAccountLockDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureAccountLockDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureAccountLockDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAccountLockDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockDeleteSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureAccountLockDelete(Configure<AzureAccountLockDeleteSettings> configurator)
+        {
+            return AzureAccountLockDelete(configurator(new AzureAccountLockDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureAccountLockDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAccountLockDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockDeleteSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureAccountLockDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockDelete(CombinatorialConfigure<AzureAccountLockDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureAccountLockDelete, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureAccountLockList(AzureAccountLockListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureAccountLockListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockListSettings.Debug"/></li>
+        ///     <li><c>--filter-string</c> via <see cref="AzureAccountLockListSettings.FilterString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockListSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureAccountLockList(Configure<AzureAccountLockListSettings> configurator)
+        {
+            return AzureAccountLockList(configurator(new AzureAccountLockListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockListSettings.Debug"/></li>
+        ///     <li><c>--filter-string</c> via <see cref="AzureAccountLockListSettings.FilterString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockListSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureAccountLockListSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockList(CombinatorialConfigure<AzureAccountLockListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureAccountLockList, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureAccountLockShow(AzureAccountLockShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureAccountLockShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureAccountLockShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAccountLockShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockShowSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureAccountLockShow(Configure<AzureAccountLockShowSettings> configurator)
+        {
+            return AzureAccountLockShow(configurator(new AzureAccountLockShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureAccountLockShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAccountLockShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockShowSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureAccountLockShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockShow(CombinatorialConfigure<AzureAccountLockShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureAccountLockShow, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureAccountLockUpdate(AzureAccountLockUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureAccountLockUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockUpdateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureAccountLockUpdateSettings.Ids"/></li>
+        ///     <li><c>--lock-type</c> via <see cref="AzureAccountLockUpdateSettings.LockType"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAccountLockUpdateSettings.Name"/></li>
+        ///     <li><c>--notes</c> via <see cref="AzureAccountLockUpdateSettings.Notes"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockUpdateSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureAccountLockUpdate(Configure<AzureAccountLockUpdateSettings> configurator)
+        {
+            return AzureAccountLockUpdate(configurator(new AzureAccountLockUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure subscription information.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/account?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAccountLockUpdateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAccountLockUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureAccountLockUpdateSettings.Ids"/></li>
+        ///     <li><c>--lock-type</c> via <see cref="AzureAccountLockUpdateSettings.LockType"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureAccountLockUpdateSettings.Name"/></li>
+        ///     <li><c>--notes</c> via <see cref="AzureAccountLockUpdateSettings.Notes"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAccountLockUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAccountLockUpdateSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAccountLockUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureAccountLockUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureAccountLockUpdate(CombinatorialConfigure<AzureAccountLockUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureAccountLockUpdate, AzureAccountLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure subscription information.</p>
@@ -1001,10 +977,6 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
         public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -1028,7 +1000,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("account clear")
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1053,9 +1024,13 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
         public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
         /// <summary>
-        ///   Azure resource endpoints. Default to Azure Resource Manager Use 'az cloud show' command for other Azure resources.
+        ///   Azure resource endpoints. Default to Azure Resource Manager.
         /// </summary>
         public virtual string Resource { get; internal set; }
+        /// <summary>
+        ///   Type of well-known resource.
+        /// </summary>
+        public virtual AccountGetAccessTokenResourceType ResourceType { get; internal set; }
         /// <summary>
         ///   Name or ID of subscription.
         /// </summary>
@@ -1085,6 +1060,7 @@ namespace Nuke.Azure
             arguments
               .Add("account get-access-token")
               .Add("--resource {value}", Resource)
+              .Add("--resource-type {value}", ResourceType)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1110,17 +1086,13 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
         public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
         /// <summary>
-        ///   List all subscriptions, rather just 'Enabled' ones.
+        ///   List all subscriptions, rather than just 'Enabled' ones.
         /// </summary>
         public virtual string All { get; internal set; }
         /// <summary>
         ///   Retrieve up-to-date subscriptions from server.
         /// </summary>
         public virtual string Refresh { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
         /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
@@ -1147,7 +1119,6 @@ namespace Nuke.Azure
               .Add("account list")
               .Add("--all {value}", All)
               .Add("--refresh {value}", Refresh)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1172,10 +1143,6 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
         public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -1199,7 +1166,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("account list-locations")
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1318,329 +1284,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureAccountLockCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountLockCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureAccount executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
-        /// <summary>
-        ///   The type of lock restriction.
-        /// </summary>
-        public virtual AccountLockLockType LockType { get; internal set; }
-        /// <summary>
-        ///   Name of the lock.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Notes about this lock.
-        /// </summary>
-        public virtual string Notes { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account lock create")
-              .Add("--lock-type {value}", LockType)
-              .Add("--name {value}", Name)
-              .Add("--notes {value}", Notes)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAccountLockDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountLockDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureAccount executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of the lock.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account lock delete")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAccountLockListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountLockListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureAccount executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
-        /// <summary>
-        ///   A query filter to use to restrict the results.
-        /// </summary>
-        public virtual string FilterString { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account lock list")
-              .Add("--filter-string {value}", FilterString)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAccountLockShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountLockShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureAccount executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of the lock.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account lock show")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureAccountLockUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureAccountLockUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureAccount executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
-        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The type of lock restriction.
-        /// </summary>
-        public virtual AccountLockLockType LockType { get; internal set; }
-        /// <summary>
-        ///   Name of the lock.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Notes about this lock.
-        /// </summary>
-        public virtual string Notes { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("account lock update")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--lock-type {value}", LockType)
-              .Add("--name {value}", Name)
-              .Add("--notes {value}", Notes)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureAccountManagementGroupCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureAccountTasks"/>.
@@ -1668,10 +1311,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Parent { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -1698,7 +1337,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--display-name {value}", DisplayName)
               .Add("--parent {value}", Parent)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1727,10 +1365,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -1755,7 +1389,6 @@ namespace Nuke.Azure
             arguments
               .Add("account management-group delete")
               .Add("--name {value}", Name)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1780,10 +1413,6 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
         public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -1807,7 +1436,6 @@ namespace Nuke.Azure
         {
             arguments
               .Add("account management-group list")
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1844,10 +1472,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Recurse { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -1874,7 +1498,6 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--expand {value}", Expand)
               .Add("--recurse {value}", Recurse)
-              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1927,10 +1550,6 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Set { get; internal set; }
         /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
         public virtual string Debug { get; internal set; }
@@ -1961,7 +1580,304 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
-              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountLockCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountLockCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureAccount executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
+        /// <summary>
+        ///   The type of lock restriction.
+        /// </summary>
+        public virtual AccountLockLockType LockType { get; internal set; }
+        /// <summary>
+        ///   Name of the lock.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Notes about this lock.
+        /// </summary>
+        public virtual string Notes { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account lock create")
+              .Add("--lock-type {value}", LockType)
+              .Add("--name {value}", Name)
+              .Add("--notes {value}", Notes)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountLockDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountLockDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureAccount executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of the lock.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account lock delete")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountLockListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountLockListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureAccount executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
+        /// <summary>
+        ///   A query filter to use to restrict the results.
+        /// </summary>
+        public virtual string FilterString { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account lock list")
+              .Add("--filter-string {value}", FilterString)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountLockShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountLockShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureAccount executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of the lock.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account lock show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAccountLockUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAccountLockUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureAccount executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureAccountTasks.AzureAccountPath;
+        public override Action<OutputType, string> CustomLogger => AzureAccountTasks.AzureAccountLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The type of lock restriction.
+        /// </summary>
+        public virtual AccountLockLockType LockType { get; internal set; }
+        /// <summary>
+        ///   Name of the lock.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Notes about this lock.
+        /// </summary>
+        public virtual string Notes { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("account lock update")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--lock-type {value}", LockType)
+              .Add("--name {value}", Name)
+              .Add("--notes {value}", Notes)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2093,30 +2009,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureAccountClearSettingsExtensions
     {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountClearSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountClearSettings SetSubscription(this AzureAccountClearSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountClearSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountClearSettings ResetSubscription(this AzureAccountClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAccountClearSettings.Debug"/></em></p>
@@ -2250,7 +2142,7 @@ namespace Nuke.Azure
         #region Resource
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAccountGetAccessTokenSettings.Resource"/></em></p>
-        ///   <p>Azure resource endpoints. Default to Azure Resource Manager Use 'az cloud show' command for other Azure resources.</p>
+        ///   <p>Azure resource endpoints. Default to Azure Resource Manager.</p>
         /// </summary>
         [Pure]
         public static AzureAccountGetAccessTokenSettings SetResource(this AzureAccountGetAccessTokenSettings toolSettings, string resource)
@@ -2261,13 +2153,37 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureAccountGetAccessTokenSettings.Resource"/></em></p>
-        ///   <p>Azure resource endpoints. Default to Azure Resource Manager Use 'az cloud show' command for other Azure resources.</p>
+        ///   <p>Azure resource endpoints. Default to Azure Resource Manager.</p>
         /// </summary>
         [Pure]
         public static AzureAccountGetAccessTokenSettings ResetResource(this AzureAccountGetAccessTokenSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Resource = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountGetAccessTokenSettings.ResourceType"/></em></p>
+        ///   <p>Type of well-known resource.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountGetAccessTokenSettings SetResourceType(this AzureAccountGetAccessTokenSettings toolSettings, AccountGetAccessTokenResourceType resourceType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = resourceType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountGetAccessTokenSettings.ResourceType"/></em></p>
+        ///   <p>Type of well-known resource.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountGetAccessTokenSettings ResetResourceType(this AzureAccountGetAccessTokenSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceType = null;
             return toolSettings;
         }
         #endregion
@@ -2428,7 +2344,7 @@ namespace Nuke.Azure
         #region All
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAccountListSettings.All"/></em></p>
-        ///   <p>List all subscriptions, rather just 'Enabled' ones.</p>
+        ///   <p>List all subscriptions, rather than just 'Enabled' ones.</p>
         /// </summary>
         [Pure]
         public static AzureAccountListSettings SetAll(this AzureAccountListSettings toolSettings, string all)
@@ -2439,7 +2355,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureAccountListSettings.All"/></em></p>
-        ///   <p>List all subscriptions, rather just 'Enabled' ones.</p>
+        ///   <p>List all subscriptions, rather than just 'Enabled' ones.</p>
         /// </summary>
         [Pure]
         public static AzureAccountListSettings ResetAll(this AzureAccountListSettings toolSettings)
@@ -2470,30 +2386,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Refresh = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountListSettings SetSubscription(this AzureAccountListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountListSettings ResetSubscription(this AzureAccountListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -2627,30 +2519,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureAccountListLocationsSettingsExtensions
     {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountListLocationsSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountListLocationsSettings SetSubscription(this AzureAccountListLocationsSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountListLocationsSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountListLocationsSettings ResetSubscription(this AzureAccountListLocationsSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAccountListLocationsSettings.Debug"/></em></p>
@@ -3105,1235 +2973,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureAccountLockCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountLockCreateSettingsExtensions
-    {
-        #region LockType
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.LockType"/></em></p>
-        ///   <p>The type of lock restriction.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings SetLockType(this AzureAccountLockCreateSettings toolSettings, AccountLockLockType lockType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LockType = lockType;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.LockType"/></em></p>
-        ///   <p>The type of lock restriction.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings ResetLockType(this AzureAccountLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LockType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Name"/></em></p>
-        ///   <p>Name of the lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings SetName(this AzureAccountLockCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Name"/></em></p>
-        ///   <p>Name of the lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings ResetName(this AzureAccountLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Notes
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Notes"/></em></p>
-        ///   <p>Notes about this lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings SetNotes(this AzureAccountLockCreateSettings toolSettings, string notes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = notes;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Notes"/></em></p>
-        ///   <p>Notes about this lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings ResetNotes(this AzureAccountLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings SetSubscription(this AzureAccountLockCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings ResetSubscription(this AzureAccountLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings SetDebug(this AzureAccountLockCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings ResetDebug(this AzureAccountLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings SetHelp(this AzureAccountLockCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings ResetHelp(this AzureAccountLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings SetOutput(this AzureAccountLockCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings ResetOutput(this AzureAccountLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings SetQuery(this AzureAccountLockCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings ResetQuery(this AzureAccountLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings SetVerbose(this AzureAccountLockCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockCreateSettings ResetVerbose(this AzureAccountLockCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAccountLockDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountLockDeleteSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings SetIds(this AzureAccountLockDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings SetIds(this AzureAccountLockDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings AddIds(this AzureAccountLockDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings AddIds(this AzureAccountLockDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings ClearIds(this AzureAccountLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings RemoveIds(this AzureAccountLockDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings RemoveIds(this AzureAccountLockDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Name"/></em></p>
-        ///   <p>Name of the lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings SetName(this AzureAccountLockDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Name"/></em></p>
-        ///   <p>Name of the lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings ResetName(this AzureAccountLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings SetSubscription(this AzureAccountLockDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings ResetSubscription(this AzureAccountLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings SetDebug(this AzureAccountLockDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings ResetDebug(this AzureAccountLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings SetHelp(this AzureAccountLockDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings ResetHelp(this AzureAccountLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings SetOutput(this AzureAccountLockDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings ResetOutput(this AzureAccountLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings SetQuery(this AzureAccountLockDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings ResetQuery(this AzureAccountLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings SetVerbose(this AzureAccountLockDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockDeleteSettings ResetVerbose(this AzureAccountLockDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAccountLockListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountLockListSettingsExtensions
-    {
-        #region FilterString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.FilterString"/></em></p>
-        ///   <p>A query filter to use to restrict the results.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings SetFilterString(this AzureAccountLockListSettings toolSettings, string filterString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilterString = filterString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.FilterString"/></em></p>
-        ///   <p>A query filter to use to restrict the results.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings ResetFilterString(this AzureAccountLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.FilterString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings SetSubscription(this AzureAccountLockListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings ResetSubscription(this AzureAccountLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings SetDebug(this AzureAccountLockListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings ResetDebug(this AzureAccountLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings SetHelp(this AzureAccountLockListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings ResetHelp(this AzureAccountLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings SetOutput(this AzureAccountLockListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings ResetOutput(this AzureAccountLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings SetQuery(this AzureAccountLockListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings ResetQuery(this AzureAccountLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings SetVerbose(this AzureAccountLockListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockListSettings ResetVerbose(this AzureAccountLockListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAccountLockShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountLockShowSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings SetIds(this AzureAccountLockShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings SetIds(this AzureAccountLockShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings AddIds(this AzureAccountLockShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings AddIds(this AzureAccountLockShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings ClearIds(this AzureAccountLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings RemoveIds(this AzureAccountLockShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings RemoveIds(this AzureAccountLockShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Name"/></em></p>
-        ///   <p>Name of the lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings SetName(this AzureAccountLockShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Name"/></em></p>
-        ///   <p>Name of the lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings ResetName(this AzureAccountLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings SetSubscription(this AzureAccountLockShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings ResetSubscription(this AzureAccountLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings SetDebug(this AzureAccountLockShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings ResetDebug(this AzureAccountLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings SetHelp(this AzureAccountLockShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings ResetHelp(this AzureAccountLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings SetOutput(this AzureAccountLockShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings ResetOutput(this AzureAccountLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings SetQuery(this AzureAccountLockShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings ResetQuery(this AzureAccountLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings SetVerbose(this AzureAccountLockShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockShowSettings ResetVerbose(this AzureAccountLockShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureAccountLockUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureAccountTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureAccountLockUpdateSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetIds(this AzureAccountLockUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetIds(this AzureAccountLockUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings AddIds(this AzureAccountLockUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings AddIds(this AzureAccountLockUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ClearIds(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings RemoveIds(this AzureAccountLockUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings RemoveIds(this AzureAccountLockUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region LockType
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.LockType"/></em></p>
-        ///   <p>The type of lock restriction.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetLockType(this AzureAccountLockUpdateSettings toolSettings, AccountLockLockType lockType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LockType = lockType;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.LockType"/></em></p>
-        ///   <p>The type of lock restriction.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ResetLockType(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.LockType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Name"/></em></p>
-        ///   <p>Name of the lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetName(this AzureAccountLockUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Name"/></em></p>
-        ///   <p>Name of the lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ResetName(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Notes
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Notes"/></em></p>
-        ///   <p>Notes about this lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetNotes(this AzureAccountLockUpdateSettings toolSettings, string notes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = notes;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Notes"/></em></p>
-        ///   <p>Notes about this lock.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ResetNotes(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Notes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetSubscription(this AzureAccountLockUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ResetSubscription(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetDebug(this AzureAccountLockUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ResetDebug(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetHelp(this AzureAccountLockUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ResetHelp(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetOutput(this AzureAccountLockUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ResetOutput(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetQuery(this AzureAccountLockUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ResetQuery(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings SetVerbose(this AzureAccountLockUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountLockUpdateSettings ResetVerbose(this AzureAccountLockUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureAccountManagementGroupCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureAccountTasks"/>.
@@ -4411,30 +3050,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Parent = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountManagementGroupCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings SetSubscription(this AzureAccountManagementGroupCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountManagementGroupCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupCreateSettings ResetSubscription(this AzureAccountManagementGroupCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -4592,30 +3207,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings SetSubscription(this AzureAccountManagementGroupDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountManagementGroupDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupDeleteSettings ResetSubscription(this AzureAccountManagementGroupDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAccountManagementGroupDeleteSettings.Debug"/></em></p>
@@ -4746,30 +3337,6 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureAccountManagementGroupListSettingsExtensions
     {
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings SetSubscription(this AzureAccountManagementGroupListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountManagementGroupListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupListSettings ResetSubscription(this AzureAccountManagementGroupListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAccountManagementGroupListSettings.Debug"/></em></p>
@@ -4969,30 +3536,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Recurse = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountManagementGroupShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings SetSubscription(this AzureAccountManagementGroupShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountManagementGroupShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupShowSettings ResetSubscription(this AzureAccountManagementGroupShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
             return toolSettings;
         }
         #endregion
@@ -5294,30 +3837,6 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings SetSubscription(this AzureAccountManagementGroupUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureAccountManagementGroupUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureAccountManagementGroupUpdateSettings ResetSubscription(this AzureAccountManagementGroupUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
         #region Debug
         /// <summary>
         ///   <p><em>Sets <see cref="AzureAccountManagementGroupUpdateSettings.Debug"/></em></p>
@@ -5432,6 +3951,1115 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureAccountManagementGroupUpdateSettings ResetVerbose(this AzureAccountManagementGroupUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountLockCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountLockCreateSettingsExtensions
+    {
+        #region LockType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.LockType"/></em></p>
+        ///   <p>The type of lock restriction.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings SetLockType(this AzureAccountLockCreateSettings toolSettings, AccountLockLockType lockType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LockType = lockType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.LockType"/></em></p>
+        ///   <p>The type of lock restriction.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings ResetLockType(this AzureAccountLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LockType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Name"/></em></p>
+        ///   <p>Name of the lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings SetName(this AzureAccountLockCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Name"/></em></p>
+        ///   <p>Name of the lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings ResetName(this AzureAccountLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Notes
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Notes"/></em></p>
+        ///   <p>Notes about this lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings SetNotes(this AzureAccountLockCreateSettings toolSettings, string notes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = notes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Notes"/></em></p>
+        ///   <p>Notes about this lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings ResetNotes(this AzureAccountLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings SetDebug(this AzureAccountLockCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings ResetDebug(this AzureAccountLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings SetHelp(this AzureAccountLockCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings ResetHelp(this AzureAccountLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings SetOutput(this AzureAccountLockCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings ResetOutput(this AzureAccountLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings SetQuery(this AzureAccountLockCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings ResetQuery(this AzureAccountLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings SetVerbose(this AzureAccountLockCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockCreateSettings ResetVerbose(this AzureAccountLockCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountLockDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountLockDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings SetIds(this AzureAccountLockDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings SetIds(this AzureAccountLockDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings AddIds(this AzureAccountLockDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings AddIds(this AzureAccountLockDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings ClearIds(this AzureAccountLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings RemoveIds(this AzureAccountLockDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureAccountLockDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings RemoveIds(this AzureAccountLockDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Name"/></em></p>
+        ///   <p>Name of the lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings SetName(this AzureAccountLockDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Name"/></em></p>
+        ///   <p>Name of the lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings ResetName(this AzureAccountLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings SetDebug(this AzureAccountLockDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings ResetDebug(this AzureAccountLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings SetHelp(this AzureAccountLockDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings ResetHelp(this AzureAccountLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings SetOutput(this AzureAccountLockDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings ResetOutput(this AzureAccountLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings SetQuery(this AzureAccountLockDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings ResetQuery(this AzureAccountLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings SetVerbose(this AzureAccountLockDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockDeleteSettings ResetVerbose(this AzureAccountLockDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountLockListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountLockListSettingsExtensions
+    {
+        #region FilterString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.FilterString"/></em></p>
+        ///   <p>A query filter to use to restrict the results.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings SetFilterString(this AzureAccountLockListSettings toolSettings, string filterString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilterString = filterString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.FilterString"/></em></p>
+        ///   <p>A query filter to use to restrict the results.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings ResetFilterString(this AzureAccountLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.FilterString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings SetDebug(this AzureAccountLockListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings ResetDebug(this AzureAccountLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings SetHelp(this AzureAccountLockListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings ResetHelp(this AzureAccountLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings SetOutput(this AzureAccountLockListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings ResetOutput(this AzureAccountLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings SetQuery(this AzureAccountLockListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings ResetQuery(this AzureAccountLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings SetVerbose(this AzureAccountLockListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockListSettings ResetVerbose(this AzureAccountLockListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountLockShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountLockShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings SetIds(this AzureAccountLockShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings SetIds(this AzureAccountLockShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings AddIds(this AzureAccountLockShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings AddIds(this AzureAccountLockShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings ClearIds(this AzureAccountLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings RemoveIds(this AzureAccountLockShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureAccountLockShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings RemoveIds(this AzureAccountLockShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Name"/></em></p>
+        ///   <p>Name of the lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings SetName(this AzureAccountLockShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Name"/></em></p>
+        ///   <p>Name of the lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings ResetName(this AzureAccountLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings SetDebug(this AzureAccountLockShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings ResetDebug(this AzureAccountLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings SetHelp(this AzureAccountLockShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings ResetHelp(this AzureAccountLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings SetOutput(this AzureAccountLockShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings ResetOutput(this AzureAccountLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings SetQuery(this AzureAccountLockShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings ResetQuery(this AzureAccountLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings SetVerbose(this AzureAccountLockShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockShowSettings ResetVerbose(this AzureAccountLockShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAccountLockUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAccountLockUpdateSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetIds(this AzureAccountLockUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetIds(this AzureAccountLockUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings AddIds(this AzureAccountLockUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings AddIds(this AzureAccountLockUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings ClearIds(this AzureAccountLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings RemoveIds(this AzureAccountLockUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureAccountLockUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other "Resource Id" arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings RemoveIds(this AzureAccountLockUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region LockType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.LockType"/></em></p>
+        ///   <p>The type of lock restriction.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetLockType(this AzureAccountLockUpdateSettings toolSettings, AccountLockLockType lockType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LockType = lockType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.LockType"/></em></p>
+        ///   <p>The type of lock restriction.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings ResetLockType(this AzureAccountLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.LockType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetName(this AzureAccountLockUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Name"/></em></p>
+        ///   <p>Name of the lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings ResetName(this AzureAccountLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Notes
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Notes"/></em></p>
+        ///   <p>Notes about this lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetNotes(this AzureAccountLockUpdateSettings toolSettings, string notes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = notes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Notes"/></em></p>
+        ///   <p>Notes about this lock.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings ResetNotes(this AzureAccountLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Notes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetDebug(this AzureAccountLockUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings ResetDebug(this AzureAccountLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetHelp(this AzureAccountLockUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings ResetHelp(this AzureAccountLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetOutput(this AzureAccountLockUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings ResetOutput(this AzureAccountLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetQuery(this AzureAccountLockUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings ResetQuery(this AzureAccountLockUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAccountLockUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings SetVerbose(this AzureAccountLockUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAccountLockUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAccountLockUpdateSettings ResetVerbose(this AzureAccountLockUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -5794,6 +5422,25 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+    }
+    #endregion
+    #region AccountGetAccessTokenResourceType
+    /// <summary>
+    ///   Used within <see cref="AzureAccountTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    [TypeConverter(typeof(TypeConverter<AccountGetAccessTokenResourceType>))]
+    public partial class AccountGetAccessTokenResourceType : Enumeration
+    {
+        public static AccountGetAccessTokenResourceType aad_graph = new AccountGetAccessTokenResourceType { Value = "aad-graph" };
+        public static AccountGetAccessTokenResourceType arm = new AccountGetAccessTokenResourceType { Value = "arm" };
+        public static AccountGetAccessTokenResourceType batch = new AccountGetAccessTokenResourceType { Value = "batch" };
+        public static AccountGetAccessTokenResourceType data_lake = new AccountGetAccessTokenResourceType { Value = "data-lake" };
+        public static AccountGetAccessTokenResourceType media = new AccountGetAccessTokenResourceType { Value = "media" };
+        public static AccountGetAccessTokenResourceType ms_graph = new AccountGetAccessTokenResourceType { Value = "ms-graph" };
+        public static AccountGetAccessTokenResourceType oss_rdbms = new AccountGetAccessTokenResourceType { Value = "oss-rdbms" };
     }
     #endregion
     #region AccountLockLockType

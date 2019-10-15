@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureImage.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -824,6 +824,195 @@ namespace Nuke.Azure
         ///   <p>Manage custom virtual machine images.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
+        public static IReadOnlyCollection<Output> AzureImageTemplateOutputAdd(AzureImageTemplateOutputAddSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureImageTemplateOutputAddSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage custom virtual machine images.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--artifact-tags</c> via <see cref="AzureImageTemplateOutputAddSettings.ArtifactTags"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputAddSettings.Debug"/></li>
+        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputAddSettings.Defer"/></li>
+        ///     <li><c>--gallery-image-definition</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryImageDefinition"/></li>
+        ///     <li><c>--gallery-name</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryName"/></li>
+        ///     <li><c>--gallery-replication-regions</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputAddSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputAddSettings.Ids"/></li>
+        ///     <li><c>--is-vhd</c> via <see cref="AzureImageTemplateOutputAddSettings.IsVhd"/></li>
+        ///     <li><c>--managed-image</c> via <see cref="AzureImageTemplateOutputAddSettings.ManagedImage"/></li>
+        ///     <li><c>--managed-image-location</c> via <see cref="AzureImageTemplateOutputAddSettings.ManagedImageLocation"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputAddSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputAddSettings.Output"/></li>
+        ///     <li><c>--output-name</c> via <see cref="AzureImageTemplateOutputAddSettings.OutputName"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureImageTemplateOutputAdd(Configure<AzureImageTemplateOutputAddSettings> configurator)
+        {
+            return AzureImageTemplateOutputAdd(configurator(new AzureImageTemplateOutputAddSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage custom virtual machine images.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--artifact-tags</c> via <see cref="AzureImageTemplateOutputAddSettings.ArtifactTags"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputAddSettings.Debug"/></li>
+        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputAddSettings.Defer"/></li>
+        ///     <li><c>--gallery-image-definition</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryImageDefinition"/></li>
+        ///     <li><c>--gallery-name</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryName"/></li>
+        ///     <li><c>--gallery-replication-regions</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputAddSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputAddSettings.Ids"/></li>
+        ///     <li><c>--is-vhd</c> via <see cref="AzureImageTemplateOutputAddSettings.IsVhd"/></li>
+        ///     <li><c>--managed-image</c> via <see cref="AzureImageTemplateOutputAddSettings.ManagedImage"/></li>
+        ///     <li><c>--managed-image-location</c> via <see cref="AzureImageTemplateOutputAddSettings.ManagedImageLocation"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputAddSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputAddSettings.Output"/></li>
+        ///     <li><c>--output-name</c> via <see cref="AzureImageTemplateOutputAddSettings.OutputName"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureImageTemplateOutputAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureImageTemplateOutputAdd(CombinatorialConfigure<AzureImageTemplateOutputAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureImageTemplateOutputAdd, AzureImageLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage custom virtual machine images.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureImageTemplateOutputClear(AzureImageTemplateOutputClearSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureImageTemplateOutputClearSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage custom virtual machine images.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputClearSettings.Debug"/></li>
+        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputClearSettings.Defer"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputClearSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputClearSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputClearSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputClearSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputClearSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputClearSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputClearSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputClearSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureImageTemplateOutputClear(Configure<AzureImageTemplateOutputClearSettings> configurator)
+        {
+            return AzureImageTemplateOutputClear(configurator(new AzureImageTemplateOutputClearSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage custom virtual machine images.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputClearSettings.Debug"/></li>
+        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputClearSettings.Defer"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputClearSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputClearSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputClearSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputClearSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputClearSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputClearSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputClearSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputClearSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureImageTemplateOutputClearSettings Settings, IReadOnlyCollection<Output> Output)> AzureImageTemplateOutputClear(CombinatorialConfigure<AzureImageTemplateOutputClearSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureImageTemplateOutputClear, AzureImageLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage custom virtual machine images.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureImageTemplateOutputRemove(AzureImageTemplateOutputRemoveSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureImageTemplateOutputRemoveSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage custom virtual machine images.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Debug"/></li>
+        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Defer"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Output"/></li>
+        ///     <li><c>--output-name</c> via <see cref="AzureImageTemplateOutputRemoveSettings.OutputName"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureImageTemplateOutputRemove(Configure<AzureImageTemplateOutputRemoveSettings> configurator)
+        {
+            return AzureImageTemplateOutputRemove(configurator(new AzureImageTemplateOutputRemoveSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage custom virtual machine images.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Debug"/></li>
+        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Defer"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Output"/></li>
+        ///     <li><c>--output-name</c> via <see cref="AzureImageTemplateOutputRemoveSettings.OutputName"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureImageTemplateOutputRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureImageTemplateOutputRemove(CombinatorialConfigure<AzureImageTemplateOutputRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureImageTemplateOutputRemove, AzureImageLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage custom virtual machine images.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
         public static IReadOnlyCollection<Output> AzureImageTemplateCustomizerAdd(AzureImageTemplateCustomizerAddSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureImageTemplateCustomizerAddSettings();
@@ -1012,195 +1201,6 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureImageTemplateCustomizerRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureImageTemplateCustomizerRemove(CombinatorialConfigure<AzureImageTemplateCustomizerRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureImageTemplateCustomizerRemove, AzureImageLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage custom virtual machine images.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureImageTemplateOutputAdd(AzureImageTemplateOutputAddSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureImageTemplateOutputAddSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage custom virtual machine images.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--artifact-tags</c> via <see cref="AzureImageTemplateOutputAddSettings.ArtifactTags"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputAddSettings.Debug"/></li>
-        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputAddSettings.Defer"/></li>
-        ///     <li><c>--gallery-image-definition</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryImageDefinition"/></li>
-        ///     <li><c>--gallery-name</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryName"/></li>
-        ///     <li><c>--gallery-replication-regions</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputAddSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputAddSettings.Ids"/></li>
-        ///     <li><c>--is-vhd</c> via <see cref="AzureImageTemplateOutputAddSettings.IsVhd"/></li>
-        ///     <li><c>--managed-image</c> via <see cref="AzureImageTemplateOutputAddSettings.ManagedImage"/></li>
-        ///     <li><c>--managed-image-location</c> via <see cref="AzureImageTemplateOutputAddSettings.ManagedImageLocation"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputAddSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputAddSettings.Output"/></li>
-        ///     <li><c>--output-name</c> via <see cref="AzureImageTemplateOutputAddSettings.OutputName"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputAddSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureImageTemplateOutputAdd(Configure<AzureImageTemplateOutputAddSettings> configurator)
-        {
-            return AzureImageTemplateOutputAdd(configurator(new AzureImageTemplateOutputAddSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage custom virtual machine images.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--artifact-tags</c> via <see cref="AzureImageTemplateOutputAddSettings.ArtifactTags"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputAddSettings.Debug"/></li>
-        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputAddSettings.Defer"/></li>
-        ///     <li><c>--gallery-image-definition</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryImageDefinition"/></li>
-        ///     <li><c>--gallery-name</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryName"/></li>
-        ///     <li><c>--gallery-replication-regions</c> via <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputAddSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputAddSettings.Ids"/></li>
-        ///     <li><c>--is-vhd</c> via <see cref="AzureImageTemplateOutputAddSettings.IsVhd"/></li>
-        ///     <li><c>--managed-image</c> via <see cref="AzureImageTemplateOutputAddSettings.ManagedImage"/></li>
-        ///     <li><c>--managed-image-location</c> via <see cref="AzureImageTemplateOutputAddSettings.ManagedImageLocation"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputAddSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputAddSettings.Output"/></li>
-        ///     <li><c>--output-name</c> via <see cref="AzureImageTemplateOutputAddSettings.OutputName"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputAddSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureImageTemplateOutputAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureImageTemplateOutputAdd(CombinatorialConfigure<AzureImageTemplateOutputAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureImageTemplateOutputAdd, AzureImageLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage custom virtual machine images.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureImageTemplateOutputClear(AzureImageTemplateOutputClearSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureImageTemplateOutputClearSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage custom virtual machine images.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputClearSettings.Debug"/></li>
-        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputClearSettings.Defer"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputClearSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputClearSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputClearSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputClearSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputClearSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputClearSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputClearSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputClearSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureImageTemplateOutputClear(Configure<AzureImageTemplateOutputClearSettings> configurator)
-        {
-            return AzureImageTemplateOutputClear(configurator(new AzureImageTemplateOutputClearSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage custom virtual machine images.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputClearSettings.Debug"/></li>
-        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputClearSettings.Defer"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputClearSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputClearSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputClearSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputClearSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputClearSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputClearSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputClearSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputClearSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureImageTemplateOutputClearSettings Settings, IReadOnlyCollection<Output> Output)> AzureImageTemplateOutputClear(CombinatorialConfigure<AzureImageTemplateOutputClearSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureImageTemplateOutputClear, AzureImageLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage custom virtual machine images.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureImageTemplateOutputRemove(AzureImageTemplateOutputRemoveSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureImageTemplateOutputRemoveSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage custom virtual machine images.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Debug"/></li>
-        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Defer"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Output"/></li>
-        ///     <li><c>--output-name</c> via <see cref="AzureImageTemplateOutputRemoveSettings.OutputName"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputRemoveSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureImageTemplateOutputRemove(Configure<AzureImageTemplateOutputRemoveSettings> configurator)
-        {
-            return AzureImageTemplateOutputRemove(configurator(new AzureImageTemplateOutputRemoveSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage custom virtual machine images.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/image?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Debug"/></li>
-        ///     <li><c>--defer</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Defer"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Output"/></li>
-        ///     <li><c>--output-name</c> via <see cref="AzureImageTemplateOutputRemoveSettings.OutputName"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureImageTemplateOutputRemoveSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureImageTemplateOutputRemoveSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureImageTemplateOutputRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureImageTemplateOutputRemove(CombinatorialConfigure<AzureImageTemplateOutputRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureImageTemplateOutputRemove, AzureImageLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureImageCreateSettings
@@ -2247,6 +2247,271 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureImageTemplateOutputAddSettings
+    /// <summary>
+    ///   Used within <see cref="AzureImageTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureImageTemplateOutputAddSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureImage executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureImageTasks.AzureImagePath;
+        public override Action<OutputType, string> CustomLogger => AzureImageTasks.AzureImageLogger;
+        /// <summary>
+        ///   Tags that will be applied to the output artifact once it has been created by the distributor. space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
+        /// </summary>
+        public virtual string ArtifactTags { get; internal set; }
+        /// <summary>
+        ///   Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
+        /// </summary>
+        public virtual string Defer { get; internal set; }
+        /// <summary>
+        ///   Name of the image builder run output. Defaults to the name of the managed image or sig image definition.
+        /// </summary>
+        public virtual string OutputName { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the image template.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Name or ID of the customized managed image to be created.
+        /// </summary>
+        public virtual string ManagedImage { get; internal set; }
+        /// <summary>
+        ///   Location where the customized image will be created. Defaults to resource group's location.
+        /// </summary>
+        public virtual string ManagedImageLocation { get; internal set; }
+        /// <summary>
+        ///   Name or ID of the existing SIG image definition to create the customized image version with.
+        /// </summary>
+        public virtual string GalleryImageDefinition { get; internal set; }
+        /// <summary>
+        ///   Shared image gallery name, if image definition name and not ID was provided.
+        /// </summary>
+        public virtual string GalleryName { get; internal set; }
+        /// <summary>
+        ///   Space-separated list of regions to replicate the image version into. Defaults to resource group's location.
+        /// </summary>
+        public virtual IReadOnlyList<string> GalleryReplicationRegions => GalleryReplicationRegionsInternal.AsReadOnly();
+        internal List<string> GalleryReplicationRegionsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The output is a VHD distributor.
+        /// </summary>
+        public virtual string IsVhd { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("image template output add")
+              .Add("--artifact-tags {value}", ArtifactTags)
+              .Add("--defer {value}", Defer)
+              .Add("--output-name {value}", OutputName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--managed-image {value}", ManagedImage)
+              .Add("--managed-image-location {value}", ManagedImageLocation)
+              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
+              .Add("--gallery-name {value}", GalleryName)
+              .Add("--gallery-replication-regions {value}", GalleryReplicationRegions, separator: ' ')
+              .Add("--is-vhd {value}", IsVhd)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureImageTemplateOutputClearSettings
+    /// <summary>
+    ///   Used within <see cref="AzureImageTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureImageTemplateOutputClearSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureImage executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureImageTasks.AzureImagePath;
+        public override Action<OutputType, string> CustomLogger => AzureImageTasks.AzureImageLogger;
+        /// <summary>
+        ///   Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
+        /// </summary>
+        public virtual string Defer { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the image template.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("image template output clear")
+              .Add("--defer {value}", Defer)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureImageTemplateOutputRemoveSettings
+    /// <summary>
+    ///   Used within <see cref="AzureImageTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureImageTemplateOutputRemoveSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureImage executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureImageTasks.AzureImagePath;
+        public override Action<OutputType, string> CustomLogger => AzureImageTasks.AzureImageLogger;
+        /// <summary>
+        ///   Name of the image builder run output.
+        /// </summary>
+        public virtual string OutputName { get; internal set; }
+        /// <summary>
+        ///   Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
+        /// </summary>
+        public virtual string Defer { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the image template.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("image template output remove")
+              .Add("--output-name {value}", OutputName)
+              .Add("--defer {value}", Defer)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureImageTemplateCustomizerAddSettings
     /// <summary>
     ///   Used within <see cref="AzureImageTasks"/>.
@@ -2509,271 +2774,6 @@ namespace Nuke.Azure
             arguments
               .Add("image template customizer remove")
               .Add("--customizer-name {value}", CustomizerName)
-              .Add("--defer {value}", Defer)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureImageTemplateOutputAddSettings
-    /// <summary>
-    ///   Used within <see cref="AzureImageTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureImageTemplateOutputAddSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureImage executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureImageTasks.AzureImagePath;
-        public override Action<OutputType, string> CustomLogger => AzureImageTasks.AzureImageLogger;
-        /// <summary>
-        ///   Tags that will be applied to the output artifact once it has been created by the distributor. space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
-        /// </summary>
-        public virtual string ArtifactTags { get; internal set; }
-        /// <summary>
-        ///   Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
-        /// </summary>
-        public virtual string Defer { get; internal set; }
-        /// <summary>
-        ///   Name of the image builder run output. Defaults to the name of the managed image or sig image definition.
-        /// </summary>
-        public virtual string OutputName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the image template.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Name or ID of the customized managed image to be created.
-        /// </summary>
-        public virtual string ManagedImage { get; internal set; }
-        /// <summary>
-        ///   Location where the customized image will be created. Defaults to resource group's location.
-        /// </summary>
-        public virtual string ManagedImageLocation { get; internal set; }
-        /// <summary>
-        ///   Name or ID of the existing SIG image definition to create the customized image version with.
-        /// </summary>
-        public virtual string GalleryImageDefinition { get; internal set; }
-        /// <summary>
-        ///   Shared image gallery name, if image definition name and not ID was provided.
-        /// </summary>
-        public virtual string GalleryName { get; internal set; }
-        /// <summary>
-        ///   Space-separated list of regions to replicate the image version into. Defaults to resource group's location.
-        /// </summary>
-        public virtual IReadOnlyList<string> GalleryReplicationRegions => GalleryReplicationRegionsInternal.AsReadOnly();
-        internal List<string> GalleryReplicationRegionsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The output is a VHD distributor.
-        /// </summary>
-        public virtual string IsVhd { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("image template output add")
-              .Add("--artifact-tags {value}", ArtifactTags)
-              .Add("--defer {value}", Defer)
-              .Add("--output-name {value}", OutputName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--managed-image {value}", ManagedImage)
-              .Add("--managed-image-location {value}", ManagedImageLocation)
-              .Add("--gallery-image-definition {value}", GalleryImageDefinition)
-              .Add("--gallery-name {value}", GalleryName)
-              .Add("--gallery-replication-regions {value}", GalleryReplicationRegions, separator: ' ')
-              .Add("--is-vhd {value}", IsVhd)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureImageTemplateOutputClearSettings
-    /// <summary>
-    ///   Used within <see cref="AzureImageTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureImageTemplateOutputClearSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureImage executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureImageTasks.AzureImagePath;
-        public override Action<OutputType, string> CustomLogger => AzureImageTasks.AzureImageLogger;
-        /// <summary>
-        ///   Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
-        /// </summary>
-        public virtual string Defer { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the image template.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("image template output clear")
-              .Add("--defer {value}", Defer)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureImageTemplateOutputRemoveSettings
-    /// <summary>
-    ///   Used within <see cref="AzureImageTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureImageTemplateOutputRemoveSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureImage executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureImageTasks.AzureImagePath;
-        public override Action<OutputType, string> CustomLogger => AzureImageTasks.AzureImageLogger;
-        /// <summary>
-        ///   Name of the image builder run output.
-        /// </summary>
-        public virtual string OutputName { get; internal set; }
-        /// <summary>
-        ///   Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.
-        /// </summary>
-        public virtual string Defer { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the image template.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("image template output remove")
-              .Add("--output-name {value}", OutputName)
               .Add("--defer {value}", Defer)
               .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
@@ -7244,6 +7244,1200 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureImageTemplateOutputAddSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureImageTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureImageTemplateOutputAddSettingsExtensions
+    {
+        #region ArtifactTags
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.ArtifactTags"/></em></p>
+        ///   <p>Tags that will be applied to the output artifact once it has been created by the distributor. space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetArtifactTags(this AzureImageTemplateOutputAddSettings toolSettings, string artifactTags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactTags = artifactTags;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.ArtifactTags"/></em></p>
+        ///   <p>Tags that will be applied to the output artifact once it has been created by the distributor. space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetArtifactTags(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactTags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Defer
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Defer"/></em></p>
+        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetDefer(this AzureImageTemplateOutputAddSettings toolSettings, string defer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Defer = defer;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Defer"/></em></p>
+        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetDefer(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Defer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region OutputName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.OutputName"/></em></p>
+        ///   <p>Name of the image builder run output. Defaults to the name of the managed image or sig image definition.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetOutputName(this AzureImageTemplateOutputAddSettings toolSettings, string outputName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OutputName = outputName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.OutputName"/></em></p>
+        ///   <p>Name of the image builder run output. Defaults to the name of the managed image or sig image definition.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetOutputName(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OutputName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetIds(this AzureImageTemplateOutputAddSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetIds(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings AddIds(this AzureImageTemplateOutputAddSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings AddIds(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ClearIds(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings RemoveIds(this AzureImageTemplateOutputAddSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings RemoveIds(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Name"/></em></p>
+        ///   <p>The name of the image template.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetName(this AzureImageTemplateOutputAddSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Name"/></em></p>
+        ///   <p>The name of the image template.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetName(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetResourceGroup(this AzureImageTemplateOutputAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetResourceGroup(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetSubscription(this AzureImageTemplateOutputAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetSubscription(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ManagedImage
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.ManagedImage"/></em></p>
+        ///   <p>Name or ID of the customized managed image to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetManagedImage(this AzureImageTemplateOutputAddSettings toolSettings, string managedImage)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedImage = managedImage;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.ManagedImage"/></em></p>
+        ///   <p>Name or ID of the customized managed image to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetManagedImage(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedImage = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ManagedImageLocation
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.ManagedImageLocation"/></em></p>
+        ///   <p>Location where the customized image will be created. Defaults to resource group's location.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetManagedImageLocation(this AzureImageTemplateOutputAddSettings toolSettings, string managedImageLocation)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedImageLocation = managedImageLocation;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.ManagedImageLocation"/></em></p>
+        ///   <p>Location where the customized image will be created. Defaults to resource group's location.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetManagedImageLocation(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ManagedImageLocation = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryImageDefinition
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.GalleryImageDefinition"/></em></p>
+        ///   <p>Name or ID of the existing SIG image definition to create the customized image version with.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetGalleryImageDefinition(this AzureImageTemplateOutputAddSettings toolSettings, string galleryImageDefinition)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = galleryImageDefinition;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.GalleryImageDefinition"/></em></p>
+        ///   <p>Name or ID of the existing SIG image definition to create the customized image version with.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetGalleryImageDefinition(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryImageDefinition = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.GalleryName"/></em></p>
+        ///   <p>Shared image gallery name, if image definition name and not ID was provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetGalleryName(this AzureImageTemplateOutputAddSettings toolSettings, string galleryName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = galleryName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.GalleryName"/></em></p>
+        ///   <p>Shared image gallery name, if image definition name and not ID was provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetGalleryName(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region GalleryReplicationRegions
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/> to a new list</em></p>
+        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, params string[] galleryReplicationRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryReplicationRegionsInternal = galleryReplicationRegions.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/> to a new list</em></p>
+        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> galleryReplicationRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryReplicationRegionsInternal = galleryReplicationRegions.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
+        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings AddGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, params string[] galleryReplicationRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryReplicationRegionsInternal.AddRange(galleryReplicationRegions);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
+        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings AddGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> galleryReplicationRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryReplicationRegionsInternal.AddRange(galleryReplicationRegions);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
+        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ClearGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.GalleryReplicationRegionsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
+        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings RemoveGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, params string[] galleryReplicationRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(galleryReplicationRegions);
+            toolSettings.GalleryReplicationRegionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
+        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings RemoveGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> galleryReplicationRegions)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(galleryReplicationRegions);
+            toolSettings.GalleryReplicationRegionsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region IsVhd
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.IsVhd"/></em></p>
+        ///   <p>The output is a VHD distributor.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetIsVhd(this AzureImageTemplateOutputAddSettings toolSettings, string isVhd)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsVhd = isVhd;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.IsVhd"/></em></p>
+        ///   <p>The output is a VHD distributor.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetIsVhd(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsVhd = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetDebug(this AzureImageTemplateOutputAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetDebug(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetHelp(this AzureImageTemplateOutputAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetHelp(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetOutput(this AzureImageTemplateOutputAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetOutput(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetQuery(this AzureImageTemplateOutputAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetQuery(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings SetVerbose(this AzureImageTemplateOutputAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputAddSettings ResetVerbose(this AzureImageTemplateOutputAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureImageTemplateOutputClearSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureImageTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureImageTemplateOutputClearSettingsExtensions
+    {
+        #region Defer
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Defer"/></em></p>
+        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetDefer(this AzureImageTemplateOutputClearSettings toolSettings, string defer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Defer = defer;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Defer"/></em></p>
+        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ResetDefer(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Defer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetIds(this AzureImageTemplateOutputClearSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetIds(this AzureImageTemplateOutputClearSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings AddIds(this AzureImageTemplateOutputClearSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings AddIds(this AzureImageTemplateOutputClearSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ClearIds(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings RemoveIds(this AzureImageTemplateOutputClearSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings RemoveIds(this AzureImageTemplateOutputClearSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Name"/></em></p>
+        ///   <p>The name of the image template.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetName(this AzureImageTemplateOutputClearSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Name"/></em></p>
+        ///   <p>The name of the image template.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ResetName(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetResourceGroup(this AzureImageTemplateOutputClearSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ResetResourceGroup(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetSubscription(this AzureImageTemplateOutputClearSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ResetSubscription(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetDebug(this AzureImageTemplateOutputClearSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ResetDebug(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetHelp(this AzureImageTemplateOutputClearSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ResetHelp(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetOutput(this AzureImageTemplateOutputClearSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ResetOutput(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetQuery(this AzureImageTemplateOutputClearSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ResetQuery(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings SetVerbose(this AzureImageTemplateOutputClearSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputClearSettings ResetVerbose(this AzureImageTemplateOutputClearSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureImageTemplateOutputRemoveSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureImageTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureImageTemplateOutputRemoveSettingsExtensions
+    {
+        #region OutputName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.OutputName"/></em></p>
+        ///   <p>Name of the image builder run output.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetOutputName(this AzureImageTemplateOutputRemoveSettings toolSettings, string outputName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OutputName = outputName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.OutputName"/></em></p>
+        ///   <p>Name of the image builder run output.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetOutputName(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.OutputName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Defer
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Defer"/></em></p>
+        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetDefer(this AzureImageTemplateOutputRemoveSettings toolSettings, string defer)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Defer = defer;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Defer"/></em></p>
+        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetDefer(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Defer = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetIds(this AzureImageTemplateOutputRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetIds(this AzureImageTemplateOutputRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings AddIds(this AzureImageTemplateOutputRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings AddIds(this AzureImageTemplateOutputRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ClearIds(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings RemoveIds(this AzureImageTemplateOutputRemoveSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings RemoveIds(this AzureImageTemplateOutputRemoveSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Name"/></em></p>
+        ///   <p>The name of the image template.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetName(this AzureImageTemplateOutputRemoveSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Name"/></em></p>
+        ///   <p>The name of the image template.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetName(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetResourceGroup(this AzureImageTemplateOutputRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetResourceGroup(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetSubscription(this AzureImageTemplateOutputRemoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetSubscription(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetDebug(this AzureImageTemplateOutputRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetDebug(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetHelp(this AzureImageTemplateOutputRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetHelp(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetOutput(this AzureImageTemplateOutputRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetOutput(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetQuery(this AzureImageTemplateOutputRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetQuery(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings SetVerbose(this AzureImageTemplateOutputRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureImageTemplateOutputRemoveSettings ResetVerbose(this AzureImageTemplateOutputRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureImageTemplateCustomizerAddSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureImageTasks"/>.
@@ -8535,1200 +9729,6 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureImageTemplateCustomizerRemoveSettings ResetVerbose(this AzureImageTemplateCustomizerRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureImageTemplateOutputAddSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureImageTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureImageTemplateOutputAddSettingsExtensions
-    {
-        #region ArtifactTags
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.ArtifactTags"/></em></p>
-        ///   <p>Tags that will be applied to the output artifact once it has been created by the distributor. space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetArtifactTags(this AzureImageTemplateOutputAddSettings toolSettings, string artifactTags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactTags = artifactTags;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.ArtifactTags"/></em></p>
-        ///   <p>Tags that will be applied to the output artifact once it has been created by the distributor. space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetArtifactTags(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactTags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Defer
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Defer"/></em></p>
-        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetDefer(this AzureImageTemplateOutputAddSettings toolSettings, string defer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Defer = defer;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Defer"/></em></p>
-        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetDefer(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Defer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region OutputName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.OutputName"/></em></p>
-        ///   <p>Name of the image builder run output. Defaults to the name of the managed image or sig image definition.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetOutputName(this AzureImageTemplateOutputAddSettings toolSettings, string outputName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OutputName = outputName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.OutputName"/></em></p>
-        ///   <p>Name of the image builder run output. Defaults to the name of the managed image or sig image definition.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetOutputName(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OutputName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetIds(this AzureImageTemplateOutputAddSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetIds(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings AddIds(this AzureImageTemplateOutputAddSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings AddIds(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ClearIds(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings RemoveIds(this AzureImageTemplateOutputAddSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputAddSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings RemoveIds(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Name"/></em></p>
-        ///   <p>The name of the image template.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetName(this AzureImageTemplateOutputAddSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Name"/></em></p>
-        ///   <p>The name of the image template.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetName(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetResourceGroup(this AzureImageTemplateOutputAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetResourceGroup(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetSubscription(this AzureImageTemplateOutputAddSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetSubscription(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ManagedImage
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.ManagedImage"/></em></p>
-        ///   <p>Name or ID of the customized managed image to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetManagedImage(this AzureImageTemplateOutputAddSettings toolSettings, string managedImage)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ManagedImage = managedImage;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.ManagedImage"/></em></p>
-        ///   <p>Name or ID of the customized managed image to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetManagedImage(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ManagedImage = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ManagedImageLocation
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.ManagedImageLocation"/></em></p>
-        ///   <p>Location where the customized image will be created. Defaults to resource group's location.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetManagedImageLocation(this AzureImageTemplateOutputAddSettings toolSettings, string managedImageLocation)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ManagedImageLocation = managedImageLocation;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.ManagedImageLocation"/></em></p>
-        ///   <p>Location where the customized image will be created. Defaults to resource group's location.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetManagedImageLocation(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ManagedImageLocation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryImageDefinition
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.GalleryImageDefinition"/></em></p>
-        ///   <p>Name or ID of the existing SIG image definition to create the customized image version with.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetGalleryImageDefinition(this AzureImageTemplateOutputAddSettings toolSettings, string galleryImageDefinition)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = galleryImageDefinition;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.GalleryImageDefinition"/></em></p>
-        ///   <p>Name or ID of the existing SIG image definition to create the customized image version with.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetGalleryImageDefinition(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryImageDefinition = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.GalleryName"/></em></p>
-        ///   <p>Shared image gallery name, if image definition name and not ID was provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetGalleryName(this AzureImageTemplateOutputAddSettings toolSettings, string galleryName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = galleryName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.GalleryName"/></em></p>
-        ///   <p>Shared image gallery name, if image definition name and not ID was provided.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetGalleryName(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region GalleryReplicationRegions
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/> to a new list</em></p>
-        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, params string[] galleryReplicationRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryReplicationRegionsInternal = galleryReplicationRegions.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/> to a new list</em></p>
-        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> galleryReplicationRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryReplicationRegionsInternal = galleryReplicationRegions.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
-        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings AddGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, params string[] galleryReplicationRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryReplicationRegionsInternal.AddRange(galleryReplicationRegions);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
-        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings AddGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> galleryReplicationRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryReplicationRegionsInternal.AddRange(galleryReplicationRegions);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
-        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ClearGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.GalleryReplicationRegionsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
-        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings RemoveGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, params string[] galleryReplicationRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(galleryReplicationRegions);
-            toolSettings.GalleryReplicationRegionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputAddSettings.GalleryReplicationRegions"/></em></p>
-        ///   <p>Space-separated list of regions to replicate the image version into. Defaults to resource group's location.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings RemoveGalleryReplicationRegions(this AzureImageTemplateOutputAddSettings toolSettings, IEnumerable<string> galleryReplicationRegions)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(galleryReplicationRegions);
-            toolSettings.GalleryReplicationRegionsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region IsVhd
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.IsVhd"/></em></p>
-        ///   <p>The output is a VHD distributor.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetIsVhd(this AzureImageTemplateOutputAddSettings toolSettings, string isVhd)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsVhd = isVhd;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.IsVhd"/></em></p>
-        ///   <p>The output is a VHD distributor.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetIsVhd(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsVhd = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetDebug(this AzureImageTemplateOutputAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetDebug(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetHelp(this AzureImageTemplateOutputAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetHelp(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetOutput(this AzureImageTemplateOutputAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetOutput(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetQuery(this AzureImageTemplateOutputAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetQuery(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings SetVerbose(this AzureImageTemplateOutputAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputAddSettings ResetVerbose(this AzureImageTemplateOutputAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureImageTemplateOutputClearSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureImageTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureImageTemplateOutputClearSettingsExtensions
-    {
-        #region Defer
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Defer"/></em></p>
-        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetDefer(this AzureImageTemplateOutputClearSettings toolSettings, string defer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Defer = defer;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Defer"/></em></p>
-        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ResetDefer(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Defer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetIds(this AzureImageTemplateOutputClearSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetIds(this AzureImageTemplateOutputClearSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings AddIds(this AzureImageTemplateOutputClearSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings AddIds(this AzureImageTemplateOutputClearSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ClearIds(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings RemoveIds(this AzureImageTemplateOutputClearSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputClearSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings RemoveIds(this AzureImageTemplateOutputClearSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Name"/></em></p>
-        ///   <p>The name of the image template.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetName(this AzureImageTemplateOutputClearSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Name"/></em></p>
-        ///   <p>The name of the image template.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ResetName(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetResourceGroup(this AzureImageTemplateOutputClearSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ResetResourceGroup(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetSubscription(this AzureImageTemplateOutputClearSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ResetSubscription(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetDebug(this AzureImageTemplateOutputClearSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ResetDebug(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetHelp(this AzureImageTemplateOutputClearSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ResetHelp(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetOutput(this AzureImageTemplateOutputClearSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ResetOutput(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetQuery(this AzureImageTemplateOutputClearSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ResetQuery(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputClearSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings SetVerbose(this AzureImageTemplateOutputClearSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputClearSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputClearSettings ResetVerbose(this AzureImageTemplateOutputClearSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureImageTemplateOutputRemoveSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureImageTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureImageTemplateOutputRemoveSettingsExtensions
-    {
-        #region OutputName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.OutputName"/></em></p>
-        ///   <p>Name of the image builder run output.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetOutputName(this AzureImageTemplateOutputRemoveSettings toolSettings, string outputName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OutputName = outputName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.OutputName"/></em></p>
-        ///   <p>Name of the image builder run output.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetOutputName(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.OutputName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Defer
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Defer"/></em></p>
-        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetDefer(this AzureImageTemplateOutputRemoveSettings toolSettings, string defer)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Defer = defer;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Defer"/></em></p>
-        ///   <p>Temporarily store the object in the local cache instead of sending to Azure. Use `az cache` commands to view/clear.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetDefer(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Defer = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetIds(this AzureImageTemplateOutputRemoveSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetIds(this AzureImageTemplateOutputRemoveSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings AddIds(this AzureImageTemplateOutputRemoveSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings AddIds(this AzureImageTemplateOutputRemoveSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ClearIds(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings RemoveIds(this AzureImageTemplateOutputRemoveSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureImageTemplateOutputRemoveSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings RemoveIds(this AzureImageTemplateOutputRemoveSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Name"/></em></p>
-        ///   <p>The name of the image template.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetName(this AzureImageTemplateOutputRemoveSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Name"/></em></p>
-        ///   <p>The name of the image template.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetName(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetResourceGroup(this AzureImageTemplateOutputRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetResourceGroup(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetSubscription(this AzureImageTemplateOutputRemoveSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetSubscription(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetDebug(this AzureImageTemplateOutputRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetDebug(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetHelp(this AzureImageTemplateOutputRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetHelp(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetOutput(this AzureImageTemplateOutputRemoveSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetOutput(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetQuery(this AzureImageTemplateOutputRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetQuery(this AzureImageTemplateOutputRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureImageTemplateOutputRemoveSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings SetVerbose(this AzureImageTemplateOutputRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureImageTemplateOutputRemoveSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureImageTemplateOutputRemoveSettings ResetVerbose(this AzureImageTemplateOutputRemoveSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureDeploymentmanager.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -546,494 +546,6 @@ namespace Nuke.Azure
         ///   <p>Create and manage rollouts for your service.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyCreate(AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceTopologyCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--artifact-source</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ArtifactSource"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Tags"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyCreate(Configure<AzureDeploymentmanagerServiceTopologyCreateSettings> configurator)
-        {
-            return AzureDeploymentmanagerServiceTopologyCreate(configurator(new AzureDeploymentmanagerServiceTopologyCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--artifact-source</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ArtifactSource"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Tags"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDeploymentmanagerServiceTopologyCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceTopologyCreate(CombinatorialConfigure<AzureDeploymentmanagerServiceTopologyCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDeploymentmanagerServiceTopologyCreate, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyDelete(AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceTopologyDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyDelete(Configure<AzureDeploymentmanagerServiceTopologyDeleteSettings> configurator)
-        {
-            return AzureDeploymentmanagerServiceTopologyDelete(configurator(new AzureDeploymentmanagerServiceTopologyDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDeploymentmanagerServiceTopologyDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceTopologyDelete(CombinatorialConfigure<AzureDeploymentmanagerServiceTopologyDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDeploymentmanagerServiceTopologyDelete, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyShow(AzureDeploymentmanagerServiceTopologyShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceTopologyShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyShow(Configure<AzureDeploymentmanagerServiceTopologyShowSettings> configurator)
-        {
-            return AzureDeploymentmanagerServiceTopologyShow(configurator(new AzureDeploymentmanagerServiceTopologyShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDeploymentmanagerServiceTopologyShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceTopologyShow(CombinatorialConfigure<AzureDeploymentmanagerServiceTopologyShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDeploymentmanagerServiceTopologyShow, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyUpdate(AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceTopologyUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Add"/></li>
-        ///     <li><c>--artifact-source</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ArtifactSource"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Tags"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyUpdate(Configure<AzureDeploymentmanagerServiceTopologyUpdateSettings> configurator)
-        {
-            return AzureDeploymentmanagerServiceTopologyUpdate(configurator(new AzureDeploymentmanagerServiceTopologyUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Add"/></li>
-        ///     <li><c>--artifact-source</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ArtifactSource"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Tags"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDeploymentmanagerServiceTopologyUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceTopologyUpdate(CombinatorialConfigure<AzureDeploymentmanagerServiceTopologyUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDeploymentmanagerServiceTopologyUpdate, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitCreate(AzureDeploymentmanagerServiceUnitCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceUnitCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Debug"/></li>
-        ///     <li><c>--deployment-mode</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.DeploymentMode"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Output"/></li>
-        ///     <li><c>--parameters-path</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ParametersPath"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceName"/></li>
-        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceTopologyName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Tags"/></li>
-        ///     <li><c>--target-resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TargetResourceGroup"/></li>
-        ///     <li><c>--template-path</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TemplatePath"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitCreate(Configure<AzureDeploymentmanagerServiceUnitCreateSettings> configurator)
-        {
-            return AzureDeploymentmanagerServiceUnitCreate(configurator(new AzureDeploymentmanagerServiceUnitCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Debug"/></li>
-        ///     <li><c>--deployment-mode</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.DeploymentMode"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Help"/></li>
-        ///     <li><c>--location</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Location"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Output"/></li>
-        ///     <li><c>--parameters-path</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ParametersPath"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceName"/></li>
-        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceTopologyName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Tags"/></li>
-        ///     <li><c>--target-resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TargetResourceGroup"/></li>
-        ///     <li><c>--template-path</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TemplatePath"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDeploymentmanagerServiceUnitCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceUnitCreate(CombinatorialConfigure<AzureDeploymentmanagerServiceUnitCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDeploymentmanagerServiceUnitCreate, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitDelete(AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceUnitDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceName"/></li>
-        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceTopologyName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitDelete(Configure<AzureDeploymentmanagerServiceUnitDeleteSettings> configurator)
-        {
-            return AzureDeploymentmanagerServiceUnitDelete(configurator(new AzureDeploymentmanagerServiceUnitDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceName"/></li>
-        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceTopologyName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDeploymentmanagerServiceUnitDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceUnitDelete(CombinatorialConfigure<AzureDeploymentmanagerServiceUnitDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDeploymentmanagerServiceUnitDelete, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitShow(AzureDeploymentmanagerServiceUnitShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceUnitShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceName"/></li>
-        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceTopologyName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitShow(Configure<AzureDeploymentmanagerServiceUnitShowSettings> configurator)
-        {
-            return AzureDeploymentmanagerServiceUnitShow(configurator(new AzureDeploymentmanagerServiceUnitShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceName"/></li>
-        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceTopologyName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDeploymentmanagerServiceUnitShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceUnitShow(CombinatorialConfigure<AzureDeploymentmanagerServiceUnitShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDeploymentmanagerServiceUnitShow, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitUpdate(AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceUnitUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Debug"/></li>
-        ///     <li><c>--deployment-mode</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.DeploymentMode"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Output"/></li>
-        ///     <li><c>--parameters-path</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ParametersPath"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceName"/></li>
-        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceTopologyName"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Tags"/></li>
-        ///     <li><c>--target-resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TargetResourceGroup"/></li>
-        ///     <li><c>--template-path</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TemplatePath"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitUpdate(Configure<AzureDeploymentmanagerServiceUnitUpdateSettings> configurator)
-        {
-            return AzureDeploymentmanagerServiceUnitUpdate(configurator(new AzureDeploymentmanagerServiceUnitUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Debug"/></li>
-        ///     <li><c>--deployment-mode</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.DeploymentMode"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Output"/></li>
-        ///     <li><c>--parameters-path</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ParametersPath"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceName"/></li>
-        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceTopologyName"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Subscription"/></li>
-        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Tags"/></li>
-        ///     <li><c>--target-resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TargetResourceGroup"/></li>
-        ///     <li><c>--template-path</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TemplatePath"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureDeploymentmanagerServiceUnitUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceUnitUpdate(CombinatorialConfigure<AzureDeploymentmanagerServiceUnitUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureDeploymentmanagerServiceUnitUpdate, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Create and manage rollouts for your service.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
         public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceCreate(AzureDeploymentmanagerServiceCreateSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceCreateSettings();
@@ -1501,6 +1013,494 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureDeploymentmanagerStepUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerStepUpdate(CombinatorialConfigure<AzureDeploymentmanagerStepUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureDeploymentmanagerStepUpdate, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitCreate(AzureDeploymentmanagerServiceUnitCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceUnitCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Debug"/></li>
+        ///     <li><c>--deployment-mode</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.DeploymentMode"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Output"/></li>
+        ///     <li><c>--parameters-path</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ParametersPath"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceName"/></li>
+        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceTopologyName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Tags"/></li>
+        ///     <li><c>--target-resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TargetResourceGroup"/></li>
+        ///     <li><c>--template-path</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TemplatePath"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitCreate(Configure<AzureDeploymentmanagerServiceUnitCreateSettings> configurator)
+        {
+            return AzureDeploymentmanagerServiceUnitCreate(configurator(new AzureDeploymentmanagerServiceUnitCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Debug"/></li>
+        ///     <li><c>--deployment-mode</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.DeploymentMode"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Output"/></li>
+        ///     <li><c>--parameters-path</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ParametersPath"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceName"/></li>
+        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceTopologyName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Tags"/></li>
+        ///     <li><c>--target-resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TargetResourceGroup"/></li>
+        ///     <li><c>--template-path</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TemplatePath"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDeploymentmanagerServiceUnitCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceUnitCreate(CombinatorialConfigure<AzureDeploymentmanagerServiceUnitCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDeploymentmanagerServiceUnitCreate, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitDelete(AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceUnitDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceName"/></li>
+        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceTopologyName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitDelete(Configure<AzureDeploymentmanagerServiceUnitDeleteSettings> configurator)
+        {
+            return AzureDeploymentmanagerServiceUnitDelete(configurator(new AzureDeploymentmanagerServiceUnitDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceName"/></li>
+        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceTopologyName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDeploymentmanagerServiceUnitDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceUnitDelete(CombinatorialConfigure<AzureDeploymentmanagerServiceUnitDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDeploymentmanagerServiceUnitDelete, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitShow(AzureDeploymentmanagerServiceUnitShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceUnitShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceName"/></li>
+        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceTopologyName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitShow(Configure<AzureDeploymentmanagerServiceUnitShowSettings> configurator)
+        {
+            return AzureDeploymentmanagerServiceUnitShow(configurator(new AzureDeploymentmanagerServiceUnitShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceName"/></li>
+        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceTopologyName"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDeploymentmanagerServiceUnitShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceUnitShow(CombinatorialConfigure<AzureDeploymentmanagerServiceUnitShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDeploymentmanagerServiceUnitShow, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitUpdate(AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceUnitUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Debug"/></li>
+        ///     <li><c>--deployment-mode</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.DeploymentMode"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Output"/></li>
+        ///     <li><c>--parameters-path</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ParametersPath"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceName"/></li>
+        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceTopologyName"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Tags"/></li>
+        ///     <li><c>--target-resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TargetResourceGroup"/></li>
+        ///     <li><c>--template-path</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TemplatePath"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceUnitUpdate(Configure<AzureDeploymentmanagerServiceUnitUpdateSettings> configurator)
+        {
+            return AzureDeploymentmanagerServiceUnitUpdate(configurator(new AzureDeploymentmanagerServiceUnitUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Debug"/></li>
+        ///     <li><c>--deployment-mode</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.DeploymentMode"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Output"/></li>
+        ///     <li><c>--parameters-path</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ParametersPath"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--service-name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceName"/></li>
+        ///     <li><c>--service-topology-name</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceTopologyName"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Tags"/></li>
+        ///     <li><c>--target-resource-group</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TargetResourceGroup"/></li>
+        ///     <li><c>--template-path</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TemplatePath"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDeploymentmanagerServiceUnitUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceUnitUpdate(CombinatorialConfigure<AzureDeploymentmanagerServiceUnitUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDeploymentmanagerServiceUnitUpdate, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyCreate(AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceTopologyCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--artifact-source</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ArtifactSource"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Tags"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyCreate(Configure<AzureDeploymentmanagerServiceTopologyCreateSettings> configurator)
+        {
+            return AzureDeploymentmanagerServiceTopologyCreate(configurator(new AzureDeploymentmanagerServiceTopologyCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--artifact-source</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ArtifactSource"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Help"/></li>
+        ///     <li><c>--location</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Location"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Tags"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDeploymentmanagerServiceTopologyCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceTopologyCreate(CombinatorialConfigure<AzureDeploymentmanagerServiceTopologyCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDeploymentmanagerServiceTopologyCreate, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyDelete(AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceTopologyDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyDelete(Configure<AzureDeploymentmanagerServiceTopologyDeleteSettings> configurator)
+        {
+            return AzureDeploymentmanagerServiceTopologyDelete(configurator(new AzureDeploymentmanagerServiceTopologyDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDeploymentmanagerServiceTopologyDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceTopologyDelete(CombinatorialConfigure<AzureDeploymentmanagerServiceTopologyDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDeploymentmanagerServiceTopologyDelete, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyShow(AzureDeploymentmanagerServiceTopologyShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceTopologyShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyShow(Configure<AzureDeploymentmanagerServiceTopologyShowSettings> configurator)
+        {
+            return AzureDeploymentmanagerServiceTopologyShow(configurator(new AzureDeploymentmanagerServiceTopologyShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDeploymentmanagerServiceTopologyShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceTopologyShow(CombinatorialConfigure<AzureDeploymentmanagerServiceTopologyShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDeploymentmanagerServiceTopologyShow, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyUpdate(AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureDeploymentmanagerServiceTopologyUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Add"/></li>
+        ///     <li><c>--artifact-source</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ArtifactSource"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Tags"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureDeploymentmanagerServiceTopologyUpdate(Configure<AzureDeploymentmanagerServiceTopologyUpdateSettings> configurator)
+        {
+            return AzureDeploymentmanagerServiceTopologyUpdate(configurator(new AzureDeploymentmanagerServiceTopologyUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Create and manage rollouts for your service.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/deploymentmanager?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Add"/></li>
+        ///     <li><c>--artifact-source</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ArtifactSource"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Subscription"/></li>
+        ///     <li><c>--tags</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Tags"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureDeploymentmanagerServiceTopologyUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureDeploymentmanagerServiceTopologyUpdate(CombinatorialConfigure<AzureDeploymentmanagerServiceTopologyUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureDeploymentmanagerServiceTopologyUpdate, AzureDeploymentmanagerLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureDeploymentmanagerSettings
@@ -2126,662 +2126,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureDeploymentmanagerServiceTopologyCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDeploymentmanagerServiceTopologyCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDeploymentmanager executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
-        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
-        /// <summary>
-        ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
-        /// </summary>
-        public virtual string Location { get; internal set; }
-        /// <summary>
-        ///   The name of the service topology.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The name or resource identifier of the artifact source.
-        /// </summary>
-        public virtual string ArtifactSource { get; internal set; }
-        /// <summary>
-        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
-        /// </summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("deploymentmanager service-topology create")
-              .Add("--location {value}", Location)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--artifact-source {value}", ArtifactSource)
-              .Add("--tags {value}", Tags)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceTopologyDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDeploymentmanagerServiceTopologyDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDeploymentmanager executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
-        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
-        /// <summary>
-        ///   The name of the service topology.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("deploymentmanager service-topology delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceTopologyShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDeploymentmanagerServiceTopologyShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDeploymentmanager executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
-        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
-        /// <summary>
-        ///   The name of the service topology.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("deploymentmanager service-topology show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceTopologyUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDeploymentmanagerServiceTopologyUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDeploymentmanager executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
-        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
-        /// <summary>
-        ///   The name of the service topology.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The name or resource identifier of the artifact source.
-        /// </summary>
-        public virtual string ArtifactSource { get; internal set; }
-        /// <summary>
-        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
-        /// </summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary>
-        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
-        /// </summary>
-        public virtual string Add { get; internal set; }
-        /// <summary>
-        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-        /// </summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary>
-        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
-        /// </summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary>
-        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
-        /// </summary>
-        public virtual string Set { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("deploymentmanager service-topology update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--artifact-source {value}", ArtifactSource)
-              .Add("--tags {value}", Tags)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceUnitCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDeploymentmanagerServiceUnitCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDeploymentmanager executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
-        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
-        /// <summary>
-        ///   The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.
-        /// </summary>
-        public virtual string ParametersPath { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.
-        /// </summary>
-        public virtual string TemplatePath { get; internal set; }
-        /// <summary>
-        ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
-        /// </summary>
-        public virtual string Location { get; internal set; }
-        /// <summary>
-        ///   The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.
-        /// </summary>
-        public virtual DeploymentmanagerServiceUnitDeploymentMode DeploymentMode { get; internal set; }
-        /// <summary>
-        ///   The name of the service unit.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   The name of the service.
-        /// </summary>
-        public virtual string ServiceName { get; internal set; }
-        /// <summary>
-        ///   The name of the service topology.
-        /// </summary>
-        public virtual string ServiceTopologyName { get; internal set; }
-        /// <summary>
-        ///   The resource group where the resources in the service unit should be deployed to.
-        /// </summary>
-        public virtual string TargetResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
-        /// </summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("deploymentmanager service-unit create")
-              .Add("--parameters-path {value}", ParametersPath)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--template-path {value}", TemplatePath)
-              .Add("--location {value}", Location)
-              .Add("--deployment-mode {value}", DeploymentMode)
-              .Add("--name {value}", Name)
-              .Add("--service-name {value}", ServiceName)
-              .Add("--service-topology-name {value}", ServiceTopologyName)
-              .Add("--target-resource-group {value}", TargetResourceGroup)
-              .Add("--tags {value}", Tags)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceUnitDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDeploymentmanagerServiceUnitDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDeploymentmanager executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
-        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
-        /// <summary>
-        ///   The name of the service unit.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The name of the service.
-        /// </summary>
-        public virtual string ServiceName { get; internal set; }
-        /// <summary>
-        ///   The name of the service topology.
-        /// </summary>
-        public virtual string ServiceTopologyName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("deploymentmanager service-unit delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--service-name {value}", ServiceName)
-              .Add("--service-topology-name {value}", ServiceTopologyName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceUnitShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDeploymentmanagerServiceUnitShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDeploymentmanager executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
-        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
-        /// <summary>
-        ///   The name of the service unit.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The name of the service.
-        /// </summary>
-        public virtual string ServiceName { get; internal set; }
-        /// <summary>
-        ///   The name of the service topology.
-        /// </summary>
-        public virtual string ServiceTopologyName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("deploymentmanager service-unit show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--service-name {value}", ServiceName)
-              .Add("--service-topology-name {value}", ServiceTopologyName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceUnitUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureDeploymentmanagerServiceUnitUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureDeploymentmanager executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
-        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
-        /// <summary>
-        ///   The name of the service unit.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The name of the service.
-        /// </summary>
-        public virtual string ServiceName { get; internal set; }
-        /// <summary>
-        ///   The name of the service topology.
-        /// </summary>
-        public virtual string ServiceTopologyName { get; internal set; }
-        /// <summary>
-        ///   The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.
-        /// </summary>
-        public virtual DeploymentmanagerServiceUnitDeploymentMode DeploymentMode { get; internal set; }
-        /// <summary>
-        ///   The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.
-        /// </summary>
-        public virtual string ParametersPath { get; internal set; }
-        /// <summary>
-        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
-        /// </summary>
-        public virtual string Tags { get; internal set; }
-        /// <summary>
-        ///   The resource group where the resources in the service unit should be deployed to.
-        /// </summary>
-        public virtual string TargetResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.
-        /// </summary>
-        public virtual string TemplatePath { get; internal set; }
-        /// <summary>
-        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
-        /// </summary>
-        public virtual string Add { get; internal set; }
-        /// <summary>
-        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-        /// </summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary>
-        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
-        /// </summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary>
-        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
-        /// </summary>
-        public virtual string Set { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("deploymentmanager service-unit update")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--service-name {value}", ServiceName)
-              .Add("--service-topology-name {value}", ServiceTopologyName)
-              .Add("--deployment-mode {value}", DeploymentMode)
-              .Add("--parameters-path {value}", ParametersPath)
-              .Add("--tags {value}", Tags)
-              .Add("--target-resource-group {value}", TargetResourceGroup)
-              .Add("--template-path {value}", TemplatePath)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureDeploymentmanagerServiceCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
@@ -3383,6 +2727,662 @@ namespace Nuke.Azure
               .Add("--duration {value}", Duration)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--tags {value}", Tags)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceUnitCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDeploymentmanagerServiceUnitCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDeploymentmanager executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
+        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
+        /// <summary>
+        ///   The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.
+        /// </summary>
+        public virtual string ParametersPath { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.
+        /// </summary>
+        public virtual string TemplatePath { get; internal set; }
+        /// <summary>
+        ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
+        /// </summary>
+        public virtual string Location { get; internal set; }
+        /// <summary>
+        ///   The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.
+        /// </summary>
+        public virtual DeploymentmanagerServiceUnitDeploymentMode DeploymentMode { get; internal set; }
+        /// <summary>
+        ///   The name of the service unit.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   The name of the service.
+        /// </summary>
+        public virtual string ServiceName { get; internal set; }
+        /// <summary>
+        ///   The name of the service topology.
+        /// </summary>
+        public virtual string ServiceTopologyName { get; internal set; }
+        /// <summary>
+        ///   The resource group where the resources in the service unit should be deployed to.
+        /// </summary>
+        public virtual string TargetResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
+        /// </summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("deploymentmanager service-unit create")
+              .Add("--parameters-path {value}", ParametersPath)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--template-path {value}", TemplatePath)
+              .Add("--location {value}", Location)
+              .Add("--deployment-mode {value}", DeploymentMode)
+              .Add("--name {value}", Name)
+              .Add("--service-name {value}", ServiceName)
+              .Add("--service-topology-name {value}", ServiceTopologyName)
+              .Add("--target-resource-group {value}", TargetResourceGroup)
+              .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceUnitDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDeploymentmanagerServiceUnitDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDeploymentmanager executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
+        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
+        /// <summary>
+        ///   The name of the service unit.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The name of the service.
+        /// </summary>
+        public virtual string ServiceName { get; internal set; }
+        /// <summary>
+        ///   The name of the service topology.
+        /// </summary>
+        public virtual string ServiceTopologyName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("deploymentmanager service-unit delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--service-name {value}", ServiceName)
+              .Add("--service-topology-name {value}", ServiceTopologyName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceUnitShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDeploymentmanagerServiceUnitShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDeploymentmanager executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
+        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
+        /// <summary>
+        ///   The name of the service unit.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The name of the service.
+        /// </summary>
+        public virtual string ServiceName { get; internal set; }
+        /// <summary>
+        ///   The name of the service topology.
+        /// </summary>
+        public virtual string ServiceTopologyName { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("deploymentmanager service-unit show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--service-name {value}", ServiceName)
+              .Add("--service-topology-name {value}", ServiceTopologyName)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceUnitUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDeploymentmanagerServiceUnitUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDeploymentmanager executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
+        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
+        /// <summary>
+        ///   The name of the service unit.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The name of the service.
+        /// </summary>
+        public virtual string ServiceName { get; internal set; }
+        /// <summary>
+        ///   The name of the service topology.
+        /// </summary>
+        public virtual string ServiceTopologyName { get; internal set; }
+        /// <summary>
+        ///   The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.
+        /// </summary>
+        public virtual DeploymentmanagerServiceUnitDeploymentMode DeploymentMode { get; internal set; }
+        /// <summary>
+        ///   The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.
+        /// </summary>
+        public virtual string ParametersPath { get; internal set; }
+        /// <summary>
+        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
+        /// </summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary>
+        ///   The resource group where the resources in the service unit should be deployed to.
+        /// </summary>
+        public virtual string TargetResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.
+        /// </summary>
+        public virtual string TemplatePath { get; internal set; }
+        /// <summary>
+        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
+        /// </summary>
+        public virtual string Add { get; internal set; }
+        /// <summary>
+        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+        /// </summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary>
+        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
+        /// </summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary>
+        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
+        /// </summary>
+        public virtual string Set { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("deploymentmanager service-unit update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--service-name {value}", ServiceName)
+              .Add("--service-topology-name {value}", ServiceTopologyName)
+              .Add("--deployment-mode {value}", DeploymentMode)
+              .Add("--parameters-path {value}", ParametersPath)
+              .Add("--tags {value}", Tags)
+              .Add("--target-resource-group {value}", TargetResourceGroup)
+              .Add("--template-path {value}", TemplatePath)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceTopologyCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDeploymentmanagerServiceTopologyCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDeploymentmanager executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
+        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
+        /// <summary>
+        ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
+        /// </summary>
+        public virtual string Location { get; internal set; }
+        /// <summary>
+        ///   The name of the service topology.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The name or resource identifier of the artifact source.
+        /// </summary>
+        public virtual string ArtifactSource { get; internal set; }
+        /// <summary>
+        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
+        /// </summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("deploymentmanager service-topology create")
+              .Add("--location {value}", Location)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--artifact-source {value}", ArtifactSource)
+              .Add("--tags {value}", Tags)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceTopologyDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDeploymentmanagerServiceTopologyDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDeploymentmanager executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
+        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
+        /// <summary>
+        ///   The name of the service topology.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("deploymentmanager service-topology delete")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceTopologyShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDeploymentmanagerServiceTopologyShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDeploymentmanager executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
+        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
+        /// <summary>
+        ///   The name of the service topology.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("deploymentmanager service-topology show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceTopologyUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureDeploymentmanagerServiceTopologyUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureDeploymentmanager executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureDeploymentmanagerTasks.AzureDeploymentmanagerPath;
+        public override Action<OutputType, string> CustomLogger => AzureDeploymentmanagerTasks.AzureDeploymentmanagerLogger;
+        /// <summary>
+        ///   The name of the service topology.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The name or resource identifier of the artifact source.
+        /// </summary>
+        public virtual string ArtifactSource { get; internal set; }
+        /// <summary>
+        ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
+        /// </summary>
+        public virtual string Tags { get; internal set; }
+        /// <summary>
+        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
+        /// </summary>
+        public virtual string Add { get; internal set; }
+        /// <summary>
+        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+        /// </summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary>
+        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
+        /// </summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary>
+        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
+        /// </summary>
+        public virtual string Set { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("deploymentmanager service-topology update")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--artifact-source {value}", ArtifactSource)
               .Add("--tags {value}", Tags)
               .Add("--add {value}", Add)
               .Add("--force-string {value}", ForceString)
@@ -5520,2390 +5520,6 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureDeploymentmanagerRolloutStopSettings ResetVerbose(this AzureDeploymentmanagerRolloutStopSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceTopologyCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDeploymentmanagerServiceTopologyCreateSettingsExtensions
-    {
-        #region Location
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Location"/></em></p>
-        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetLocation(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Location"/></em></p>
-        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetLocation(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Name"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetName(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Name"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetName(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetResourceGroup(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetResourceGroup(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ArtifactSource
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ArtifactSource"/></em></p>
-        ///   <p>The name or resource identifier of the artifact source.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetArtifactSource(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string artifactSource)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSource = artifactSource;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ArtifactSource"/></em></p>
-        ///   <p>The name or resource identifier of the artifact source.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetArtifactSource(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSource = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetTags(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetTags(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetSubscription(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetSubscription(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetDebug(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetDebug(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetHelp(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetHelp(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetOutput(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetOutput(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetQuery(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetQuery(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetVerbose(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetVerbose(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceTopologyDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDeploymentmanagerServiceTopologyDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetName(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetName(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetResourceGroup(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetResourceGroup(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetSubscription(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetSubscription(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetDebug(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetDebug(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetHelp(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetHelp(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetOutput(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetOutput(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetQuery(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetQuery(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetVerbose(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetVerbose(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceTopologyShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDeploymentmanagerServiceTopologyShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Name"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings SetName(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Name"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetName(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings SetResourceGroup(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetResourceGroup(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings SetSubscription(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetSubscription(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings SetDebug(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetDebug(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings SetHelp(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetHelp(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings SetOutput(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetOutput(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings SetQuery(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetQuery(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings SetVerbose(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetVerbose(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceTopologyUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDeploymentmanagerServiceTopologyUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetName(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetName(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetResourceGroup(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetResourceGroup(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ArtifactSource
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ArtifactSource"/></em></p>
-        ///   <p>The name or resource identifier of the artifact source.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetArtifactSource(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string artifactSource)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSource = artifactSource;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ArtifactSource"/></em></p>
-        ///   <p>The name or resource identifier of the artifact source.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetArtifactSource(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ArtifactSource = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetTags(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetTags(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetAdd(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetAdd(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetForceString(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetForceString(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetRemove(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetRemove(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetSet(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetSet(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetSubscription(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetSubscription(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetDebug(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetDebug(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetHelp(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetHelp(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetOutput(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetOutput(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetQuery(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetQuery(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetVerbose(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetVerbose(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceUnitCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDeploymentmanagerServiceUnitCreateSettingsExtensions
-    {
-        #region ParametersPath
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ParametersPath"/></em></p>
-        ///   <p>The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetParametersPath(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string parametersPath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ParametersPath = parametersPath;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ParametersPath"/></em></p>
-        ///   <p>The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetParametersPath(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ParametersPath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetResourceGroup(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetResourceGroup(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TemplatePath
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TemplatePath"/></em></p>
-        ///   <p>The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetTemplatePath(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string templatePath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TemplatePath = templatePath;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TemplatePath"/></em></p>
-        ///   <p>The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetTemplatePath(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TemplatePath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Location
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Location"/></em></p>
-        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetLocation(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string location)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = location;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Location"/></em></p>
-        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetLocation(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Location = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DeploymentMode
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.DeploymentMode"/></em></p>
-        ///   <p>The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetDeploymentMode(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, DeploymentmanagerServiceUnitDeploymentMode deploymentMode)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DeploymentMode = deploymentMode;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.DeploymentMode"/></em></p>
-        ///   <p>The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetDeploymentMode(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DeploymentMode = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Name"/></em></p>
-        ///   <p>The name of the service unit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Name"/></em></p>
-        ///   <p>The name of the service unit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServiceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceName"/></em></p>
-        ///   <p>The name of the service.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetServiceName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string serviceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceName = serviceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceName"/></em></p>
-        ///   <p>The name of the service.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetServiceName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServiceTopologyName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceTopologyName"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetServiceTopologyName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string serviceTopologyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceTopologyName = serviceTopologyName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceTopologyName"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetServiceTopologyName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceTopologyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TargetResourceGroup"/></em></p>
-        ///   <p>The resource group where the resources in the service unit should be deployed to.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetTargetResourceGroup(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string targetResourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetResourceGroup = targetResourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TargetResourceGroup"/></em></p>
-        ///   <p>The resource group where the resources in the service unit should be deployed to.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetTargetResourceGroup(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetTags(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetTags(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetSubscription(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetSubscription(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetDebug(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetDebug(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetHelp(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetHelp(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetOutput(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetOutput(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetQuery(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetQuery(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings SetVerbose(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetVerbose(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceUnitDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDeploymentmanagerServiceUnitDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the service unit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the service unit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetResourceGroup(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetResourceGroup(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServiceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceName"/></em></p>
-        ///   <p>The name of the service.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetServiceName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string serviceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceName = serviceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceName"/></em></p>
-        ///   <p>The name of the service.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetServiceName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServiceTopologyName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceTopologyName"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetServiceTopologyName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string serviceTopologyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceTopologyName = serviceTopologyName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceTopologyName"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetServiceTopologyName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceTopologyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetSubscription(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetSubscription(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetDebug(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetDebug(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetHelp(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetHelp(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetOutput(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetOutput(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetQuery(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetQuery(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetVerbose(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetVerbose(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceUnitShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDeploymentmanagerServiceUnitShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Name"/></em></p>
-        ///   <p>The name of the service unit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Name"/></em></p>
-        ///   <p>The name of the service unit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetResourceGroup(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetResourceGroup(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServiceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceName"/></em></p>
-        ///   <p>The name of the service.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetServiceName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string serviceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceName = serviceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceName"/></em></p>
-        ///   <p>The name of the service.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetServiceName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServiceTopologyName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceTopologyName"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetServiceTopologyName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string serviceTopologyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceTopologyName = serviceTopologyName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceTopologyName"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetServiceTopologyName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceTopologyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetSubscription(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetSubscription(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetDebug(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetDebug(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetHelp(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetHelp(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetOutput(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetOutput(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetQuery(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetQuery(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings SetVerbose(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitShowSettings ResetVerbose(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureDeploymentmanagerServiceUnitUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureDeploymentmanagerServiceUnitUpdateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the service unit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the service unit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetResourceGroup(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetResourceGroup(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServiceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceName"/></em></p>
-        ///   <p>The name of the service.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetServiceName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string serviceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceName = serviceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceName"/></em></p>
-        ///   <p>The name of the service.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetServiceName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ServiceTopologyName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceTopologyName"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetServiceTopologyName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string serviceTopologyName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceTopologyName = serviceTopologyName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceTopologyName"/></em></p>
-        ///   <p>The name of the service topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetServiceTopologyName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ServiceTopologyName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DeploymentMode
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.DeploymentMode"/></em></p>
-        ///   <p>The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetDeploymentMode(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, DeploymentmanagerServiceUnitDeploymentMode deploymentMode)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DeploymentMode = deploymentMode;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.DeploymentMode"/></em></p>
-        ///   <p>The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetDeploymentMode(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DeploymentMode = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ParametersPath
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ParametersPath"/></em></p>
-        ///   <p>The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetParametersPath(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string parametersPath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ParametersPath = parametersPath;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ParametersPath"/></em></p>
-        ///   <p>The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetParametersPath(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ParametersPath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Tags
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetTags(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string tags)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = tags;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Tags"/></em></p>
-        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetTags(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Tags = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TargetResourceGroup"/></em></p>
-        ///   <p>The resource group where the resources in the service unit should be deployed to.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetTargetResourceGroup(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string targetResourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetResourceGroup = targetResourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TargetResourceGroup"/></em></p>
-        ///   <p>The resource group where the resources in the service unit should be deployed to.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetTargetResourceGroup(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region TemplatePath
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TemplatePath"/></em></p>
-        ///   <p>The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetTemplatePath(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string templatePath)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TemplatePath = templatePath;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TemplatePath"/></em></p>
-        ///   <p>The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetTemplatePath(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TemplatePath = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetAdd(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetAdd(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetForceString(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetForceString(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetRemove(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetRemove(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetSet(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetSet(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetSubscription(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetSubscription(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetDebug(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetDebug(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetHelp(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetHelp(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetOutput(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetOutput(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetQuery(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetQuery(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetVerbose(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetVerbose(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -10096,6 +7712,2390 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureDeploymentmanagerStepUpdateSettings ResetVerbose(this AzureDeploymentmanagerStepUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceUnitCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDeploymentmanagerServiceUnitCreateSettingsExtensions
+    {
+        #region ParametersPath
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ParametersPath"/></em></p>
+        ///   <p>The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetParametersPath(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string parametersPath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ParametersPath = parametersPath;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ParametersPath"/></em></p>
+        ///   <p>The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetParametersPath(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ParametersPath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetResourceGroup(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetResourceGroup(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TemplatePath
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TemplatePath"/></em></p>
+        ///   <p>The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetTemplatePath(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string templatePath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TemplatePath = templatePath;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TemplatePath"/></em></p>
+        ///   <p>The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetTemplatePath(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TemplatePath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Location
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetLocation(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetLocation(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DeploymentMode
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.DeploymentMode"/></em></p>
+        ///   <p>The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetDeploymentMode(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, DeploymentmanagerServiceUnitDeploymentMode deploymentMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeploymentMode = deploymentMode;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.DeploymentMode"/></em></p>
+        ///   <p>The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetDeploymentMode(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeploymentMode = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Name"/></em></p>
+        ///   <p>The name of the service unit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Name"/></em></p>
+        ///   <p>The name of the service unit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceName"/></em></p>
+        ///   <p>The name of the service.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetServiceName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string serviceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceName = serviceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceName"/></em></p>
+        ///   <p>The name of the service.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetServiceName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceTopologyName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceTopologyName"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetServiceTopologyName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string serviceTopologyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceTopologyName = serviceTopologyName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.ServiceTopologyName"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetServiceTopologyName(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceTopologyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TargetResourceGroup"/></em></p>
+        ///   <p>The resource group where the resources in the service unit should be deployed to.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetTargetResourceGroup(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string targetResourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetResourceGroup = targetResourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.TargetResourceGroup"/></em></p>
+        ///   <p>The resource group where the resources in the service unit should be deployed to.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetTargetResourceGroup(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetTags(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetTags(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetSubscription(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetSubscription(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetDebug(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetDebug(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetHelp(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetHelp(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetOutput(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetOutput(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetQuery(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetQuery(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings SetVerbose(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitCreateSettings ResetVerbose(this AzureDeploymentmanagerServiceUnitCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceUnitDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDeploymentmanagerServiceUnitDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the service unit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the service unit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetResourceGroup(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetResourceGroup(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceName"/></em></p>
+        ///   <p>The name of the service.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetServiceName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string serviceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceName = serviceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceName"/></em></p>
+        ///   <p>The name of the service.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetServiceName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceTopologyName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceTopologyName"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetServiceTopologyName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string serviceTopologyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceTopologyName = serviceTopologyName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.ServiceTopologyName"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetServiceTopologyName(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceTopologyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetSubscription(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetSubscription(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetDebug(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetDebug(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetHelp(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetHelp(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetOutput(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetOutput(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetQuery(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetQuery(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings SetVerbose(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitDeleteSettings ResetVerbose(this AzureDeploymentmanagerServiceUnitDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceUnitShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDeploymentmanagerServiceUnitShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Name"/></em></p>
+        ///   <p>The name of the service unit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Name"/></em></p>
+        ///   <p>The name of the service unit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetResourceGroup(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetResourceGroup(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceName"/></em></p>
+        ///   <p>The name of the service.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetServiceName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string serviceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceName = serviceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceName"/></em></p>
+        ///   <p>The name of the service.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetServiceName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceTopologyName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceTopologyName"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetServiceTopologyName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string serviceTopologyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceTopologyName = serviceTopologyName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.ServiceTopologyName"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetServiceTopologyName(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceTopologyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetSubscription(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetSubscription(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetDebug(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetDebug(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetHelp(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetHelp(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetOutput(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetOutput(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetQuery(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetQuery(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings SetVerbose(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitShowSettings ResetVerbose(this AzureDeploymentmanagerServiceUnitShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceUnitUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDeploymentmanagerServiceUnitUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the service unit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the service unit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetResourceGroup(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetResourceGroup(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceName"/></em></p>
+        ///   <p>The name of the service.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetServiceName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string serviceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceName = serviceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceName"/></em></p>
+        ///   <p>The name of the service.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetServiceName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ServiceTopologyName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceTopologyName"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetServiceTopologyName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string serviceTopologyName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceTopologyName = serviceTopologyName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ServiceTopologyName"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetServiceTopologyName(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ServiceTopologyName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DeploymentMode
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.DeploymentMode"/></em></p>
+        ///   <p>The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetDeploymentMode(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, DeploymentmanagerServiceUnitDeploymentMode deploymentMode)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeploymentMode = deploymentMode;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.DeploymentMode"/></em></p>
+        ///   <p>The type of depoyment mode to be used when deploying the service unit. Possible values: Incremental, Complete.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetDeploymentMode(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DeploymentMode = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ParametersPath
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ParametersPath"/></em></p>
+        ///   <p>The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetParametersPath(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string parametersPath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ParametersPath = parametersPath;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ParametersPath"/></em></p>
+        ///   <p>The path to the ARM parameters file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetParametersPath(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ParametersPath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetTags(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetTags(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TargetResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TargetResourceGroup"/></em></p>
+        ///   <p>The resource group where the resources in the service unit should be deployed to.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetTargetResourceGroup(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string targetResourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetResourceGroup = targetResourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TargetResourceGroup"/></em></p>
+        ///   <p>The resource group where the resources in the service unit should be deployed to.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetTargetResourceGroup(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TargetResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region TemplatePath
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TemplatePath"/></em></p>
+        ///   <p>The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetTemplatePath(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string templatePath)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TemplatePath = templatePath;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.TemplatePath"/></em></p>
+        ///   <p>The path to the ARM template file. Either the full SAS Uri or the relative path in the artifact source for this topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetTemplatePath(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.TemplatePath = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetAdd(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetAdd(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetForceString(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetForceString(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetRemove(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetRemove(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetSet(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetSet(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetSubscription(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetSubscription(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetDebug(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetDebug(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetHelp(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetHelp(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetOutput(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetOutput(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetQuery(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetQuery(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings SetVerbose(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceUnitUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceUnitUpdateSettings ResetVerbose(this AzureDeploymentmanagerServiceUnitUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceTopologyCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDeploymentmanagerServiceTopologyCreateSettingsExtensions
+    {
+        #region Location
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetLocation(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string location)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = location;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Location"/></em></p>
+        ///   <p>Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetLocation(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Location = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Name"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetName(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Name"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetName(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetResourceGroup(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetResourceGroup(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ArtifactSource
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ArtifactSource"/></em></p>
+        ///   <p>The name or resource identifier of the artifact source.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetArtifactSource(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string artifactSource)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSource = artifactSource;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.ArtifactSource"/></em></p>
+        ///   <p>The name or resource identifier of the artifact source.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetArtifactSource(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSource = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetTags(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetTags(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetSubscription(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetSubscription(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetDebug(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetDebug(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetHelp(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetHelp(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetOutput(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetOutput(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetQuery(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetQuery(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings SetVerbose(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyCreateSettings ResetVerbose(this AzureDeploymentmanagerServiceTopologyCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceTopologyDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDeploymentmanagerServiceTopologyDeleteSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetName(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetName(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetResourceGroup(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetResourceGroup(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetSubscription(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetSubscription(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetDebug(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetDebug(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetHelp(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetHelp(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetOutput(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetOutput(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetQuery(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetQuery(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings SetVerbose(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyDeleteSettings ResetVerbose(this AzureDeploymentmanagerServiceTopologyDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceTopologyShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDeploymentmanagerServiceTopologyShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Name"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings SetName(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Name"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetName(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings SetResourceGroup(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetResourceGroup(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings SetSubscription(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetSubscription(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings SetDebug(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetDebug(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings SetHelp(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetHelp(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings SetOutput(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetOutput(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings SetQuery(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetQuery(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings SetVerbose(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyShowSettings ResetVerbose(this AzureDeploymentmanagerServiceTopologyShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureDeploymentmanagerServiceTopologyUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureDeploymentmanagerTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureDeploymentmanagerServiceTopologyUpdateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetName(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the service topology.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetName(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetResourceGroup(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetResourceGroup(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ArtifactSource
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ArtifactSource"/></em></p>
+        ///   <p>The name or resource identifier of the artifact source.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetArtifactSource(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string artifactSource)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSource = artifactSource;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ArtifactSource"/></em></p>
+        ///   <p>The name or resource identifier of the artifact source.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetArtifactSource(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ArtifactSource = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Tags
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetTags(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string tags)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = tags;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Tags"/></em></p>
+        ///   <p>Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetTags(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Tags = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetAdd(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetAdd(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetForceString(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetForceString(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetRemove(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetRemove(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetSet(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetSet(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetSubscription(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetSubscription(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetDebug(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetDebug(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetHelp(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetHelp(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetOutput(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetOutput(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetQuery(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetQuery(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings SetVerbose(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureDeploymentmanagerServiceTopologyUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureDeploymentmanagerServiceTopologyUpdateSettings ResetVerbose(this AzureDeploymentmanagerServiceTopologyUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

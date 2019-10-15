@@ -1,26 +1,28 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/config.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/cors.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/deployment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/devops-build.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/devops-pipeline.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/plan.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/config/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/config/hostname.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/config/ssl.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/deployment/container.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/deployment/slot.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/deployment/source.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/functionapp/deployment/user.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/cors.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/deployment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/plan.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/hybrid-connection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/config.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/vnet-integration.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/devops-pipeline.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/config/ssl.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/config/appsettings.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/config/container.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/config/access-restriction.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/config/hostname.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/deployment/source.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/deployment/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/deployment/slot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/functionapp/deployment/container.yml"
   ],
   "name": "AzureFunctionapp",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/functionapp?view=azure-cli-latest",
-  "help": "Manage function apps.",
+  "help": "Manage function apps. To install the Azure Functions Core tools see <a href=\"https://github.com/Azure/azure-functions-core-tools\">https://github.com/Azure/azure-functions-core-tools</a>.",
   "pathExecutable": "az",
   "tasks": [
     {
@@ -97,6 +99,13 @@
             "format": "--deployment-source-url {value}",
             "secret": false,
             "help": "Git repository URL to link with manual integration."
+          },
+          {
+            "name": "DisableAppInsights",
+            "type": "bool",
+            "format": "--disable-app-insights",
+            "secret": false,
+            "help": "Disable creating application insights resource during functionapp create. No logs will be available."
           },
           {
             "name": "OsType",
@@ -466,220 +475,6 @@
       }
     },
     {
-      "postfix": "ConfigSet",
-      "definiteArgument": "functionapp config set",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AlwaysOn",
-            "type": "bool",
-            "format": "--always-on",
-            "secret": false,
-            "help": "Ensure web app gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running."
-          },
-          {
-            "name": "AutoHealEnabled",
-            "type": "bool",
-            "format": "--auto-heal-enabled",
-            "secret": false,
-            "help": "Enable or disable auto heal."
-          },
-          {
-            "name": "FtpsState",
-            "type": "FunctionappConfigSetFtpsState",
-            "format": "--ftps-state {value}",
-            "secret": false,
-            "help": "Set the Ftps state value for an app. Default value is 'AllAllowed'."
-          },
-          {
-            "name": "GenericConfigurations",
-            "type": "string",
-            "format": "--generic-configurations {value}",
-            "secret": false,
-            "help": "Provide site configuration list in a format of either \"key=value\" pair or \"@&lt;json_file&gt;\"."
-          },
-          {
-            "name": "Http20Enabled",
-            "type": "bool",
-            "format": "--http20-enabled",
-            "secret": false,
-            "help": "Configures a web site to allow clients to connect over http2.0."
-          },
-          {
-            "name": "JavaContainer",
-            "type": "string",
-            "format": "--java-container {value}",
-            "secret": false,
-            "help": "The java container, e.g., Tomcat, Jetty."
-          },
-          {
-            "name": "JavaContainerVersion",
-            "type": "string",
-            "format": "--java-container-version {value}",
-            "secret": false,
-            "help": "The version of the java container, e.g., '8.0.23' for Tomcat."
-          },
-          {
-            "name": "JavaVersion",
-            "type": "string",
-            "format": "--java-version {value}",
-            "secret": false,
-            "help": "The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8."
-          },
-          {
-            "name": "LinuxFxVersion",
-            "type": "string",
-            "format": "--linux-fx-version {value}",
-            "secret": false,
-            "help": "The runtime stack used for your linux-based webapp, e.g., \"RUBY|2.3\", \"NODE|6.6\", \"PHP|5.6\", \"DOTNETCORE|1.1.0\". See <a href=\"https://aka.ms/linux-stacks\">https://aka.ms/linux-stacks</a> for more info."
-          },
-          {
-            "name": "MinTlsVersion",
-            "type": "string",
-            "format": "--min-tls-version {value}",
-            "secret": false,
-            "help": "The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'."
-          },
-          {
-            "name": "NetFrameworkVersion",
-            "type": "string",
-            "format": "--net-framework-version {value}",
-            "secret": false,
-            "help": "The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5."
-          },
-          {
-            "name": "PhpVersion",
-            "type": "string",
-            "format": "--php-version {value}",
-            "secret": false,
-            "help": "The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0."
-          },
-          {
-            "name": "PrewarmedInstanceCount",
-            "type": "int",
-            "format": "--prewarmed-instance-count {value}",
-            "secret": false,
-            "help": "Number of pre-warmed instances a function app has."
-          },
-          {
-            "name": "PythonVersion",
-            "type": "string",
-            "format": "--python-version {value}",
-            "secret": false,
-            "help": "The version used to run your web app if using Python, e.g., 2.7, 3.4."
-          },
-          {
-            "name": "RemoteDebuggingEnabled",
-            "type": "bool",
-            "format": "--remote-debugging-enabled",
-            "secret": false,
-            "help": "Enable or disable remote debugging."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "StartupFile",
-            "type": "string",
-            "format": "--startup-file {value}",
-            "secret": false,
-            "help": "The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web."
-          },
-          {
-            "name": "Use32bitWorkerProcess",
-            "type": "bool",
-            "format": "--use-32bit-worker-process",
-            "secret": false,
-            "help": "Use 32 bits worker process or not."
-          },
-          {
-            "name": "WebSocketsEnabled",
-            "type": "bool",
-            "format": "--web-sockets-enabled",
-            "secret": false,
-            "help": "Enable or disable web sockets."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigShow",
-      "definiteArgument": "functionapp config show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "CorsAdd",
       "definiteArgument": "functionapp cors add",
       "settingsClass": {
@@ -690,7 +485,7 @@
             "format": "--allowed-origins {value}",
             "separator": " ",
             "secret": false,
-            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"*\" and remove all other origins from the list."
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"\\*\" and remove all other origins from the list."
           },
           {
             "name": "Slot",
@@ -742,7 +537,7 @@
             "format": "--allowed-origins {value}",
             "separator": " ",
             "secret": false,
-            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"*\" and remove all other origins from the list."
+            "help": "Space separated origins that should be allowed to make cross-origin calls (for example: <a href=\"http://example.com:12345\">http://example.com:12345</a>). To allow all, use \"\\*\" and remove all other origins from the list."
           },
           {
             "name": "Slot",
@@ -874,294 +669,6 @@
     {
       "postfix": "DeploymentListPublishingProfiles",
       "definiteArgument": "functionapp deployment list-publishing-profiles",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DevopsBuildCreate",
-      "definiteArgument": "functionapp devops-build create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AllowForcePush",
-            "type": "bool",
-            "format": "--allow-force-push",
-            "secret": false,
-            "help": "If Azure DevOps repository is not clean, should it overwrite remote content?."
-          },
-          {
-            "name": "FunctionappName",
-            "type": "string",
-            "format": "--functionapp-name {value}",
-            "secret": false,
-            "help": "Name of the Azure function app that you want to use."
-          },
-          {
-            "name": "GithubPat",
-            "type": "string",
-            "format": "--github-pat {value}",
-            "secret": false,
-            "help": "Github personal access token for creating pipeline from Github repository."
-          },
-          {
-            "name": "GithubRepository",
-            "type": "string",
-            "format": "--github-repository {value}",
-            "secret": false,
-            "help": "Fullname of your Github repository (e.g. Azure/azure-cli)."
-          },
-          {
-            "name": "OrganizationName",
-            "type": "string",
-            "format": "--organization-name {value}",
-            "secret": false,
-            "help": "Name of the Azure DevOps organization that you want to use."
-          },
-          {
-            "name": "OverwriteYaml",
-            "type": "bool",
-            "format": "--overwrite-yaml",
-            "secret": false,
-            "help": "If you have an existing yaml, should it be overwritten?."
-          },
-          {
-            "name": "ProjectName",
-            "type": "string",
-            "format": "--project-name {value}",
-            "secret": false,
-            "help": "Name of the Azure DevOps project that you want to use."
-          },
-          {
-            "name": "RepositoryName",
-            "type": "string",
-            "format": "--repository-name {value}",
-            "secret": false,
-            "help": "Name of the Azure DevOps repository that you want to use."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DevopsPipelineCreate",
-      "definiteArgument": "functionapp devops-pipeline create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "AllowForcePush",
-            "type": "bool",
-            "format": "--allow-force-push",
-            "secret": false,
-            "help": "If Azure DevOps repository is not clean, should it overwrite remote content?."
-          },
-          {
-            "name": "FunctionappName",
-            "type": "string",
-            "format": "--functionapp-name {value}",
-            "secret": false,
-            "help": "Name of the Azure function app that you want to use."
-          },
-          {
-            "name": "GithubPat",
-            "type": "string",
-            "format": "--github-pat {value}",
-            "secret": false,
-            "help": "Github personal access token for creating pipeline from Github repository."
-          },
-          {
-            "name": "GithubRepository",
-            "type": "string",
-            "format": "--github-repository {value}",
-            "secret": false,
-            "help": "Fullname of your Github repository (e.g. Azure/azure-cli)."
-          },
-          {
-            "name": "OrganizationName",
-            "type": "string",
-            "format": "--organization-name {value}",
-            "secret": false,
-            "help": "Name of the Azure DevOps organization that you want to use."
-          },
-          {
-            "name": "OverwriteYaml",
-            "type": "bool",
-            "format": "--overwrite-yaml",
-            "secret": false,
-            "help": "If you have an existing yaml, should it be overwritten?."
-          },
-          {
-            "name": "ProjectName",
-            "type": "string",
-            "format": "--project-name {value}",
-            "secret": false,
-            "help": "Name of the Azure DevOps project that you want to use."
-          },
-          {
-            "name": "RepositoryName",
-            "type": "string",
-            "format": "--repository-name {value}",
-            "secret": false,
-            "help": "Name of the Azure DevOps repository that you want to use."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityAssign",
-      "definiteArgument": "functionapp identity assign",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Role",
-            "type": "string",
-            "format": "--role {value}",
-            "secret": false,
-            "help": "Role name or id the managed identity will be assigned."
-          },
-          {
-            "name": "Scope",
-            "type": "string",
-            "format": "--scope {value}",
-            "secret": false,
-            "help": "The scope the managed identity has access to."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityRemove",
-      "definiteArgument": "functionapp identity remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "IdentityShow",
-      "definiteArgument": "functionapp identity show",
       "settingsClass": {
         "properties": [
           {
@@ -1459,6 +966,906 @@
             "format": "--set {value}",
             "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityAssign",
+      "definiteArgument": "functionapp identity assign",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "secret": false,
+            "help": "Role name or id the managed identity will be assigned."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "secret": false,
+            "help": "The scope the managed identity has access to."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityRemove",
+      "definiteArgument": "functionapp identity remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "IdentityShow",
+      "definiteArgument": "functionapp identity show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HybridConnectionAdd",
+      "definiteArgument": "functionapp hybrid-connection add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HybridConnection",
+            "type": "string",
+            "format": "--hybrid-connection {value}",
+            "secret": false,
+            "help": "Hybrid connection name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Hybrid connection namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HybridConnectionList",
+      "definiteArgument": "functionapp hybrid-connection list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HybridConnectionRemove",
+      "definiteArgument": "functionapp hybrid-connection remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HybridConnection",
+            "type": "string",
+            "format": "--hybrid-connection {value}",
+            "secret": false,
+            "help": "Hybrid connection name."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Hybrid connection namespace."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSet",
+      "definiteArgument": "functionapp config set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AlwaysOn",
+            "type": "bool",
+            "format": "--always-on",
+            "secret": false,
+            "help": "Ensure web app gets loaded all the time, rather unloaded after been idle. Recommended when you have continuous web jobs running."
+          },
+          {
+            "name": "AutoHealEnabled",
+            "type": "bool",
+            "format": "--auto-heal-enabled",
+            "secret": false,
+            "help": "Enable or disable auto heal."
+          },
+          {
+            "name": "FtpsState",
+            "type": "FunctionappConfigSetFtpsState",
+            "format": "--ftps-state {value}",
+            "secret": false,
+            "help": "Set the Ftps state value for an app. Default value is 'AllAllowed'."
+          },
+          {
+            "name": "GenericConfigurations",
+            "type": "string",
+            "format": "--generic-configurations {value}",
+            "secret": false,
+            "help": "Provide site configuration list in a format of either \"key=value\" pair or \"@&lt;json_file&gt;\"."
+          },
+          {
+            "name": "Http20Enabled",
+            "type": "bool",
+            "format": "--http20-enabled",
+            "secret": false,
+            "help": "Configures a web site to allow clients to connect over http2.0."
+          },
+          {
+            "name": "JavaContainer",
+            "type": "string",
+            "format": "--java-container {value}",
+            "secret": false,
+            "help": "The java container, e.g., Tomcat, Jetty."
+          },
+          {
+            "name": "JavaContainerVersion",
+            "type": "string",
+            "format": "--java-container-version {value}",
+            "secret": false,
+            "help": "The version of the java container, e.g., '8.0.23' for Tomcat."
+          },
+          {
+            "name": "JavaVersion",
+            "type": "string",
+            "format": "--java-version {value}",
+            "secret": false,
+            "help": "The version used to run your web app if using Java, e.g., '1.7' for Java 7, '1.8' for Java 8."
+          },
+          {
+            "name": "LinuxFxVersion",
+            "type": "string",
+            "format": "--linux-fx-version {value}",
+            "secret": false,
+            "help": "The runtime stack used for your linux-based webapp, e.g., \"RUBY|2.3\", \"NODE|6.6\", \"PHP|5.6\", \"DOTNETCORE|1.1.0\". See <a href=\"https://aka.ms/linux-stacks\">https://aka.ms/linux-stacks</a> for more info."
+          },
+          {
+            "name": "MinTlsVersion",
+            "type": "string",
+            "format": "--min-tls-version {value}",
+            "secret": false,
+            "help": "The minimum version of TLS required for SSL requests, e.g., '1.0', '1.1', '1.2'."
+          },
+          {
+            "name": "NetFrameworkVersion",
+            "type": "string",
+            "format": "--net-framework-version {value}",
+            "secret": false,
+            "help": "The version used to run your web app if using .NET Framework, e.g., 'v4.0' for .NET 4.6 and 'v3.0' for .NET 3.5."
+          },
+          {
+            "name": "PhpVersion",
+            "type": "string",
+            "format": "--php-version {value}",
+            "secret": false,
+            "help": "The version used to run your web app if using PHP, e.g., 5.5, 5.6, 7.0."
+          },
+          {
+            "name": "PrewarmedInstanceCount",
+            "type": "int",
+            "format": "--prewarmed-instance-count {value}",
+            "secret": false,
+            "help": "Number of pre-warmed instances a function app has."
+          },
+          {
+            "name": "PythonVersion",
+            "type": "string",
+            "format": "--python-version {value}",
+            "secret": false,
+            "help": "The version used to run your web app if using Python, e.g., 2.7, 3.4."
+          },
+          {
+            "name": "RemoteDebuggingEnabled",
+            "type": "bool",
+            "format": "--remote-debugging-enabled",
+            "secret": false,
+            "help": "Enable or disable remote debugging."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "StartupFile",
+            "type": "string",
+            "format": "--startup-file {value}",
+            "secret": false,
+            "help": "The startup file for linux hosted web apps, e.g. 'process.json' for Node.js web."
+          },
+          {
+            "name": "Use32bitWorkerProcess",
+            "type": "bool",
+            "format": "--use-32bit-worker-process",
+            "secret": false,
+            "help": "Use 32 bits worker process or not."
+          },
+          {
+            "name": "WebSocketsEnabled",
+            "type": "bool",
+            "format": "--web-sockets-enabled",
+            "secret": false,
+            "help": "Enable or disable web sockets."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigShow",
+      "definiteArgument": "functionapp config show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VnetIntegrationAdd",
+      "definiteArgument": "functionapp vnet-integration add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "Subnet name."
+          },
+          {
+            "name": "Vnet",
+            "type": "string",
+            "format": "--vnet {value}",
+            "secret": false,
+            "help": "Vnet name."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VnetIntegrationList",
+      "definiteArgument": "functionapp vnet-integration list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VnetIntegrationRemove",
+      "definiteArgument": "functionapp vnet-integration remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DevopsPipelineCreate",
+      "definiteArgument": "functionapp devops-pipeline create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowForcePush",
+            "type": "bool",
+            "format": "--allow-force-push",
+            "secret": false,
+            "help": "If Azure DevOps repository is not clean, should it overwrite remote content?."
+          },
+          {
+            "name": "FunctionappName",
+            "type": "string",
+            "format": "--functionapp-name {value}",
+            "secret": false,
+            "help": "Name of the Azure function app that you want to use."
+          },
+          {
+            "name": "GithubPat",
+            "type": "string",
+            "format": "--github-pat {value}",
+            "secret": false,
+            "help": "Github personal access token for creating pipeline from Github repository."
+          },
+          {
+            "name": "GithubRepository",
+            "type": "string",
+            "format": "--github-repository {value}",
+            "secret": false,
+            "help": "Fullname of your Github repository (e.g. Azure/azure-cli)."
+          },
+          {
+            "name": "OrganizationName",
+            "type": "string",
+            "format": "--organization-name {value}",
+            "secret": false,
+            "help": "Name of the Azure DevOps organization that you want to use."
+          },
+          {
+            "name": "OverwriteYaml",
+            "type": "bool",
+            "format": "--overwrite-yaml",
+            "secret": false,
+            "help": "If you have an existing yaml, should it be overwritten?."
+          },
+          {
+            "name": "ProjectName",
+            "type": "string",
+            "format": "--project-name {value}",
+            "secret": false,
+            "help": "Name of the Azure DevOps project that you want to use."
+          },
+          {
+            "name": "RepositoryName",
+            "type": "string",
+            "format": "--repository-name {value}",
+            "secret": false,
+            "help": "Name of the Azure DevOps repository that you want to use."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslBind",
+      "definiteArgument": "functionapp config ssl bind",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateThumbprint",
+            "type": "string",
+            "format": "--certificate-thumbprint {value}",
+            "secret": false,
+            "help": "The ssl cert thumbprint."
+          },
+          {
+            "name": "SslType",
+            "type": "FunctionappConfigSslBindSslType",
+            "format": "--ssl-type {value}",
+            "secret": false,
+            "help": "The ssl cert type."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslDelete",
+      "definiteArgument": "functionapp config ssl delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateThumbprint",
+            "type": "string",
+            "format": "--certificate-thumbprint {value}",
+            "secret": false,
+            "help": "The ssl cert thumbprint."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslList",
+      "definiteArgument": "functionapp config ssl list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslUnbind",
+      "definiteArgument": "functionapp config ssl unbind",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateThumbprint",
+            "type": "string",
+            "format": "--certificate-thumbprint {value}",
+            "secret": false,
+            "help": "The ssl cert thumbprint."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigSslUpload",
+      "definiteArgument": "functionapp config ssl upload",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "CertificateFile",
+            "type": "string",
+            "format": "--certificate-file {value}",
+            "secret": false,
+            "help": "The filepath for the .pfx file."
+          },
+          {
+            "name": "CertificatePassword",
+            "type": "string",
+            "format": "--certificate-password {value}",
+            "secret": true,
+            "help": "The ssl cert password."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1774,6 +2181,266 @@
       }
     },
     {
+      "postfix": "ConfigAccessRestrictionAdd",
+      "definiteArgument": "functionapp config access-restriction add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Priority",
+            "type": "string",
+            "format": "--priority {value}",
+            "secret": false,
+            "help": "Priority of the access restriction rule."
+          },
+          {
+            "name": "RuleName",
+            "type": "string",
+            "format": "--rule-name {value}",
+            "secret": false,
+            "help": "Name of the access restriction rule to add."
+          },
+          {
+            "name": "Action",
+            "type": "FunctionappConfigAccessRestrictionAddAction",
+            "format": "--action {value}",
+            "secret": false,
+            "help": "Allow or deny access."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description of the access restriction rule."
+          },
+          {
+            "name": "IgnoreMissingEndpoint",
+            "type": "bool",
+            "format": "--ignore-missing-endpoint",
+            "secret": false,
+            "help": "Create access restriction rule with checking if the subnet has Microsoft.Web service endpoint enabled."
+          },
+          {
+            "name": "IpAddress",
+            "type": "string",
+            "format": "--ip-address {value}",
+            "secret": false,
+            "help": "IP address or CIDR range."
+          },
+          {
+            "name": "ScmSite",
+            "type": "bool",
+            "format": "--scm-site",
+            "secret": false,
+            "help": "True if access restrictions is added for scm site."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "Subnet name (requires vNet name) or subnet resource id."
+          },
+          {
+            "name": "VnetName",
+            "type": "string",
+            "format": "--vnet-name {value}",
+            "secret": false,
+            "help": "VNet name."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the web app. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAccessRestrictionRemove",
+      "definiteArgument": "functionapp config access-restriction remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RuleName",
+            "type": "string",
+            "format": "--rule-name {value}",
+            "secret": false,
+            "help": "Name of the access restriction to remove."
+          },
+          {
+            "name": "ScmSite",
+            "type": "bool",
+            "format": "--scm-site",
+            "secret": false,
+            "help": "True if access restriction should be removed from scm site."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the web app. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAccessRestrictionSet",
+      "definiteArgument": "functionapp config access-restriction set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "UseSameRestrictionsForScmSite",
+            "type": "bool",
+            "format": "--use-same-restrictions-for-scm-site",
+            "secret": false,
+            "help": "Use same access restrictions for scm site."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the web app. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "ConfigAccessRestrictionShow",
+      "definiteArgument": "functionapp config access-restriction show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the web app. You can configure the default using 'az configure --defaults web=&lt;name&gt;'."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "ConfigHostnameAdd",
       "definiteArgument": "functionapp config hostname add",
       "settingsClass": {
@@ -1937,552 +2604,6 @@
             "format": "--slot {value}",
             "secret": false,
             "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigSslBind",
-      "definiteArgument": "functionapp config ssl bind",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CertificateThumbprint",
-            "type": "string",
-            "format": "--certificate-thumbprint {value}",
-            "secret": false,
-            "help": "The ssl cert thumbprint."
-          },
-          {
-            "name": "SslType",
-            "type": "FunctionappConfigSslBindSslType",
-            "format": "--ssl-type {value}",
-            "secret": false,
-            "help": "The ssl cert type."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigSslDelete",
-      "definiteArgument": "functionapp config ssl delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CertificateThumbprint",
-            "type": "string",
-            "format": "--certificate-thumbprint {value}",
-            "secret": false,
-            "help": "The ssl cert thumbprint."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigSslList",
-      "definiteArgument": "functionapp config ssl list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigSslUnbind",
-      "definiteArgument": "functionapp config ssl unbind",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CertificateThumbprint",
-            "type": "string",
-            "format": "--certificate-thumbprint {value}",
-            "secret": false,
-            "help": "The ssl cert thumbprint."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "ConfigSslUpload",
-      "definiteArgument": "functionapp config ssl upload",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "CertificateFile",
-            "type": "string",
-            "format": "--certificate-file {value}",
-            "secret": false,
-            "help": "The filepath for the .pfx file."
-          },
-          {
-            "name": "CertificatePassword",
-            "type": "string",
-            "format": "--certificate-password {value}",
-            "secret": true,
-            "help": "The ssl cert password."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentContainerConfig",
-      "definiteArgument": "functionapp deployment container config",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "EnableCd",
-            "type": "bool",
-            "format": "--enable-cd",
-            "secret": false,
-            "help": "Enable/disable continuous deployment."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentContainerShowCdUrl",
-      "definiteArgument": "functionapp deployment container show-cd-url",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot. Default to the productions slot if not specified."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotAutoSwap",
-      "definiteArgument": "functionapp deployment slot auto-swap",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot."
-          },
-          {
-            "name": "AutoSwapSlot",
-            "type": "string",
-            "format": "--auto-swap-slot {value}",
-            "secret": false,
-            "help": "Target slot to auto swap."
-          },
-          {
-            "name": "Disable",
-            "type": "string",
-            "format": "--disable {value}",
-            "secret": false,
-            "help": "Disable auto swap."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotCreate",
-      "definiteArgument": "functionapp deployment slot create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot."
-          },
-          {
-            "name": "ConfigurationSource",
-            "type": "string",
-            "format": "--configuration-source {value}",
-            "secret": false,
-            "help": "Source slot to clone configurations from. Use function app's name to refer to the production slot."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotDelete",
-      "definiteArgument": "functionapp deployment slot delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotList",
-      "definiteArgument": "functionapp deployment slot list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DeploymentSlotSwap",
-      "definiteArgument": "functionapp deployment slot swap",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Slot",
-            "type": "string",
-            "format": "--slot {value}",
-            "secret": false,
-            "help": "The name of the slot."
-          },
-          {
-            "name": "Action",
-            "type": "FunctionappDeploymentSlotSwapAction",
-            "format": "--action {value}",
-            "secret": false,
-            "help": "Swap types. use 'preview' to apply target slot's settings on the source slot first; use 'swap' to complete it; use 'reset' to reset the swap."
-          },
-          {
-            "name": "TargetSlot",
-            "type": "string",
-            "format": "--target-slot {value}",
-            "secret": false,
-            "help": "Target slot to swap, default to 'production'."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the function app."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
           },
           {
             "name": "Subscription",
@@ -2949,6 +3070,341 @@
           }
         ]
       }
+    },
+    {
+      "postfix": "DeploymentSlotAutoSwap",
+      "definiteArgument": "functionapp deployment slot auto-swap",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot."
+          },
+          {
+            "name": "AutoSwapSlot",
+            "type": "string",
+            "format": "--auto-swap-slot {value}",
+            "secret": false,
+            "help": "Target slot to auto swap."
+          },
+          {
+            "name": "Disable",
+            "type": "string",
+            "format": "--disable {value}",
+            "secret": false,
+            "help": "Disable auto swap."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSlotCreate",
+      "definiteArgument": "functionapp deployment slot create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot."
+          },
+          {
+            "name": "ConfigurationSource",
+            "type": "string",
+            "format": "--configuration-source {value}",
+            "secret": false,
+            "help": "Source slot to clone configurations from. Use function app's name to refer to the production slot."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSlotDelete",
+      "definiteArgument": "functionapp deployment slot delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSlotList",
+      "definiteArgument": "functionapp deployment slot list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentSlotSwap",
+      "definiteArgument": "functionapp deployment slot swap",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot."
+          },
+          {
+            "name": "Action",
+            "type": "FunctionappDeploymentSlotSwapAction",
+            "format": "--action {value}",
+            "secret": false,
+            "help": "Swap types. use 'preview' to apply target slot's settings on the source slot first; use 'swap' to complete it; use 'reset' to reset the swap."
+          },
+          {
+            "name": "TargetSlot",
+            "type": "string",
+            "format": "--target-slot {value}",
+            "secret": false,
+            "help": "Target slot to swap, default to 'production'."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentContainerConfig",
+      "definiteArgument": "functionapp deployment container config",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "EnableCd",
+            "type": "bool",
+            "format": "--enable-cd",
+            "secret": false,
+            "help": "Enable/disable continuous deployment."
+          },
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DeploymentContainerShowCdUrl",
+      "definiteArgument": "functionapp deployment container show-cd-url",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Slot",
+            "type": "string",
+            "format": "--slot {value}",
+            "secret": false,
+            "help": "The name of the slot. Default to the productions slot if not specified."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the function app."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
     }
   ],
   "commonTaskProperties": [
@@ -3019,6 +3475,13 @@
       "values": [
         "ip",
         "sni"
+      ]
+    },
+    {
+      "name": "FunctionappConfigAccessRestrictionAddAction",
+      "values": [
+        "allow",
+        "deny"
       ]
     },
     {

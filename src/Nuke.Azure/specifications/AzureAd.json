@@ -1,19 +1,19 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/app.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/group.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/signed-in-user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/sp.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/user.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/app/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/app/owner.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/app/permission.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/group/member.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/group/owner.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/sp/credential.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/ad/sp/owner.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/signed-in-user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/user.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/sp.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/app.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/group.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/sp/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/sp/owner.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/app/permission.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/app/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/app/owner.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/group/member.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/ad/group/owner.yml"
   ],
   "name": "AzureAd",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest",
@@ -24,6 +24,410 @@
       "postfix": "",
       "definiteArgument": "ad",
       "settingsClass": {}
+    },
+    {
+      "postfix": "SignedInUserListOwnedObjects",
+      "definiteArgument": "ad signed-in-user list-owned-objects",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Type",
+            "type": "string",
+            "format": "--type {value}",
+            "secret": false,
+            "help": "Object type filter, e.g. \"application\", \"servicePrincipal\"  \"group\", etc."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SignedInUserShow",
+      "definiteArgument": "ad signed-in-user show",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "UserCreate",
+      "definiteArgument": "ad user create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Object's display name or its prefix."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "The password that should be assigned to the user for authentication."
+          },
+          {
+            "name": "UserPrincipalName",
+            "type": "string",
+            "format": "--user-principal-name {value}",
+            "secret": false,
+            "help": "Required. The user principal name (someuser@contoso.com). It must contain one of the verified domains for the tenant."
+          },
+          {
+            "name": "ForceChangePasswordNextLogin",
+            "type": "bool",
+            "format": "--force-change-password-next-login",
+            "secret": true,
+            "help": "Marks this user as needing to update their password the next time theyauthenticate."
+          },
+          {
+            "name": "ImmutableId",
+            "type": "string",
+            "format": "--immutable-id {value}",
+            "secret": false,
+            "help": "This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account. It is used to associate an on-premises Active Directory user account with their Azure AD user object."
+          },
+          {
+            "name": "MailNickname",
+            "type": "string",
+            "format": "--mail-nickname {value}",
+            "secret": false,
+            "help": "Mail alias. Defaults to user principal name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserDelete",
+      "definiteArgument": "ad user delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "The object ID or principal name of the user for which to get information."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserGetMemberGroups",
+      "definiteArgument": "ad user get-member-groups",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "The object ID or principal name of the user for which to get information."
+          },
+          {
+            "name": "SecurityEnabledOnly",
+            "type": "bool",
+            "format": "--security-enabled-only",
+            "secret": false,
+            "help": "If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserList",
+      "definiteArgument": "ad user list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Object's display name or its prefix."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "secret": false,
+            "help": "OData filter."
+          },
+          {
+            "name": "Upn",
+            "type": "string",
+            "format": "--upn {value}",
+            "secret": false,
+            "help": "User principal name, e.g. john.doe@contoso.com."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserShow",
+      "definiteArgument": "ad user show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "The object ID or principal name of the user for which to get information."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "UserUpdate",
+      "definiteArgument": "ad user update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "The object ID or principal name of the user for which to get information."
+          },
+          {
+            "name": "AccountEnabled",
+            "type": "bool",
+            "format": "--account-enabled",
+            "secret": false,
+            "help": "Enable the user account."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Object's display name or its prefix."
+          },
+          {
+            "name": "ForceChangePasswordNextLogin",
+            "type": "bool",
+            "format": "--force-change-password-next-login",
+            "secret": true,
+            "help": "Require the user to change their password the next time they log in."
+          },
+          {
+            "name": "MailNickname",
+            "type": "string",
+            "format": "--mail-nickname {value}",
+            "secret": false,
+            "help": "Mail alias. Defaults to user principal name."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "User password."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpCreate",
+      "definiteArgument": "ad sp create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id of the associated application."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpCreateForRbac",
+      "definiteArgument": "ad sp create-for-rbac",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "A URI to use as the logic name. It doesn't need to exist. If not present, CLI will generate one."
+          },
+          {
+            "name": "Role",
+            "type": "string",
+            "format": "--role {value}",
+            "secret": false,
+            "help": "Role of the service principal."
+          },
+          {
+            "name": "Scopes",
+            "type": "List<string>",
+            "format": "--scopes {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Space-separated list of scopes the service principal's role assignment applies to. Defaults to the root of the current subscription."
+          },
+          {
+            "name": "SdkAuth",
+            "type": "bool",
+            "format": "--sdk-auth",
+            "secret": false,
+            "help": "Output result in compatible with Azure SDK auth file."
+          },
+          {
+            "name": "SkipAssignment",
+            "type": "bool",
+            "format": "--skip-assignment",
+            "secret": false,
+            "help": "Skip creating the default assignment, which allows the service principal to access resources under the current subscription."
+          },
+          {
+            "name": "Cert",
+            "type": "string",
+            "format": "--cert {value}",
+            "secret": false,
+            "help": "Certificate to use for credentials."
+          },
+          {
+            "name": "CreateCert",
+            "type": "string",
+            "format": "--create-cert {value}",
+            "secret": false,
+            "help": "Create a self-signed certificate to use for the credential."
+          },
+          {
+            "name": "Keyvault",
+            "type": "string",
+            "format": "--keyvault {value}",
+            "secret": false,
+            "help": "Name or ID of a KeyVault to use for creating or retrieving certificates."
+          },
+          {
+            "name": "Years",
+            "type": "int",
+            "format": "--years {value}",
+            "secret": false,
+            "help": "Number of years for which the credentials will be valid. Default: 1 year."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpDelete",
+      "definiteArgument": "ad sp delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Service principal name, or object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpList",
+      "definiteArgument": "ad sp list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "All",
+            "type": "string",
+            "format": "--all {value}",
+            "secret": false,
+            "help": "List all entities, expect long delay if under a big organization."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Object's display name or its prefix."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "secret": false,
+            "help": "OData filter."
+          },
+          {
+            "name": "ShowMine",
+            "type": "string",
+            "format": "--show-mine {value}",
+            "secret": false,
+            "help": "List entities owned by the current user."
+          },
+          {
+            "name": "Spn",
+            "type": "string",
+            "format": "--spn {value}",
+            "secret": false,
+            "help": "Service principal name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpShow",
+      "definiteArgument": "ad sp show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Service principal name, or object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SpUpdate",
+      "definiteArgument": "ad sp update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Service principal name, or object id."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
     },
     {
       "postfix": "AppCreate",
@@ -143,13 +547,6 @@
             "format": "--start-date {value}",
             "secret": false,
             "help": "Date or datetime at which credentials become valid(e.g. '2017-01-01T01:00:00+00:00' or '2017-01-01'). Default value is current time."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -165,13 +562,6 @@
             "format": "--id {value}",
             "secret": false,
             "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -222,13 +612,6 @@
             "format": "--show-mine {value}",
             "secret": false,
             "help": "List entities owned by the current user."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -244,13 +627,6 @@
             "format": "--id {value}",
             "secret": false,
             "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -401,13 +777,6 @@
             "format": "--set {value}",
             "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -437,13 +806,6 @@
             "format": "--force",
             "secret": false,
             "help": "Always create a new group instead of updating the one with same display and mail nickname."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -459,13 +821,6 @@
             "format": "--group {value}",
             "secret": false,
             "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -495,13 +850,6 @@
             "format": "--security-enabled-only",
             "secret": false,
             "help": "If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -524,13 +872,6 @@
             "format": "--filter {value}",
             "secret": false,
             "help": "OData filter."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -546,1089 +887,6 @@
             "format": "--group {value}",
             "secret": false,
             "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SignedInUserListOwnedObjects",
-      "definiteArgument": "ad signed-in-user list-owned-objects",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Type",
-            "type": "string",
-            "format": "--type {value}",
-            "secret": false,
-            "help": "Object type filter, e.g. \"application\", \"servicePrincipal\"  \"group\", etc."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SignedInUserShow",
-      "definiteArgument": "ad signed-in-user show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpCreate",
-      "definiteArgument": "ad sp create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id of the associated application."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpCreateForRbac",
-      "definiteArgument": "ad sp create-for-rbac",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "A URI to use as the logic name. It doesn't need to exist. If not present, CLI will generate one."
-          },
-          {
-            "name": "Role",
-            "type": "string",
-            "format": "--role {value}",
-            "secret": false,
-            "help": "Role of the service principal."
-          },
-          {
-            "name": "Scopes",
-            "type": "List<string>",
-            "format": "--scopes {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Space-separated list of scopes the service principal's role assignment applies to. Defaults to the root of the current subscription."
-          },
-          {
-            "name": "SdkAuth",
-            "type": "bool",
-            "format": "--sdk-auth",
-            "secret": false,
-            "help": "Output result in compatible with Azure SDK auth file."
-          },
-          {
-            "name": "SkipAssignment",
-            "type": "bool",
-            "format": "--skip-assignment",
-            "secret": false,
-            "help": "Skip creating the default assignment, which allows the service principal to access resources under the current subscription."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "secret": false,
-            "help": "Certificate to use for credentials."
-          },
-          {
-            "name": "CreateCert",
-            "type": "string",
-            "format": "--create-cert {value}",
-            "secret": false,
-            "help": "Create a self-signed certificate to use for the credential."
-          },
-          {
-            "name": "Keyvault",
-            "type": "string",
-            "format": "--keyvault {value}",
-            "secret": false,
-            "help": "Name or ID of a KeyVault to use for creating or retrieving certificates."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "Password."
-          },
-          {
-            "name": "Years",
-            "type": "int",
-            "format": "--years {value}",
-            "secret": false,
-            "help": "Number of years for which the credentials will be valid. Default: 1 year."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpDelete",
-      "definiteArgument": "ad sp delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Service principal name, or object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpList",
-      "definiteArgument": "ad sp list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "All",
-            "type": "string",
-            "format": "--all {value}",
-            "secret": false,
-            "help": "List all entities, expect long delay if under a big organization."
-          },
-          {
-            "name": "DisplayName",
-            "type": "string",
-            "format": "--display-name {value}",
-            "secret": false,
-            "help": "Object's display name or its prefix."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "secret": false,
-            "help": "OData filter."
-          },
-          {
-            "name": "ShowMine",
-            "type": "string",
-            "format": "--show-mine {value}",
-            "secret": false,
-            "help": "List entities owned by the current user."
-          },
-          {
-            "name": "Spn",
-            "type": "string",
-            "format": "--spn {value}",
-            "secret": false,
-            "help": "Service principal name."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpShow",
-      "definiteArgument": "ad sp show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Service principal name, or object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SpUpdate",
-      "definiteArgument": "ad sp update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Service principal name, or object id."
-          },
-          {
-            "name": "Add",
-            "type": "string",
-            "format": "--add {value}",
-            "secret": false,
-            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
-          },
-          {
-            "name": "ForceString",
-            "type": "string",
-            "format": "--force-string {value}",
-            "secret": false,
-            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
-          },
-          {
-            "name": "Remove",
-            "type": "string",
-            "format": "--remove {value}",
-            "secret": false,
-            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
-          },
-          {
-            "name": "Set",
-            "type": "string",
-            "format": "--set {value}",
-            "secret": false,
-            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "UserCreate",
-      "definiteArgument": "ad user create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DisplayName",
-            "type": "string",
-            "format": "--display-name {value}",
-            "secret": false,
-            "help": "Object's display name or its prefix."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "User password."
-          },
-          {
-            "name": "UserPrincipalName",
-            "type": "string",
-            "format": "--user-principal-name {value}",
-            "secret": false,
-            "help": "Required. The user principal name (someuser@contoso.com). It must contain one of the verified domains for the tenant."
-          },
-          {
-            "name": "ForceChangePasswordNextLogin",
-            "type": "bool",
-            "format": "--force-change-password-next-login",
-            "secret": true,
-            "help": "Require the user to change their password the next time they log in."
-          },
-          {
-            "name": "ImmutableId",
-            "type": "string",
-            "format": "--immutable-id {value}",
-            "secret": false,
-            "help": "This must be specified if you are using a federated domain for the user's userPrincipalName (UPN) property when creating a new user account. It is used to associate an on-premises Active Directory user account with their Azure AD user object."
-          },
-          {
-            "name": "MailNickname",
-            "type": "string",
-            "format": "--mail-nickname {value}",
-            "secret": false,
-            "help": "Mail alias. Defaults to user principal name."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "UserDelete",
-      "definiteArgument": "ad user delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "UpnOrObjectId",
-            "type": "string",
-            "format": "--upn-or-object-id {value}",
-            "secret": false,
-            "help": "The object ID or principal name of the user to delete."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "UserGetMemberGroups",
-      "definiteArgument": "ad user get-member-groups",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "UpnOrObjectId",
-            "type": "string",
-            "format": "--upn-or-object-id {value}",
-            "secret": false,
-            "help": "The object ID or principal name of the user for which to get information."
-          },
-          {
-            "name": "SecurityEnabledOnly",
-            "type": "bool",
-            "format": "--security-enabled-only",
-            "secret": false,
-            "help": "If true, only membership in security-enabled groups should be checked. Otherwise, membership in all groups should be checked."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "UserList",
-      "definiteArgument": "ad user list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "DisplayName",
-            "type": "string",
-            "format": "--display-name {value}",
-            "secret": false,
-            "help": "Object's display name or its prefix."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "secret": false,
-            "help": "OData filter."
-          },
-          {
-            "name": "Upn",
-            "type": "string",
-            "format": "--upn {value}",
-            "secret": false,
-            "help": "User principal name, e.g. john.doe@contoso.com."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "UserShow",
-      "definiteArgument": "ad user show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "UpnOrObjectId",
-            "type": "string",
-            "format": "--upn-or-object-id {value}",
-            "secret": false,
-            "help": "The object ID or principal name of the user for which to get information."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppCredentialDelete",
-      "definiteArgument": "ad app credential delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "KeyId",
-            "type": "string",
-            "format": "--key-id {value}",
-            "secret": false,
-            "help": "Credential key id."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "secret": false,
-            "help": "A certificate based credential."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppCredentialList",
-      "definiteArgument": "ad app credential list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "secret": false,
-            "help": "A certificate based credential."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppCredentialReset",
-      "definiteArgument": "ad app credential reset",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "Append",
-            "type": "string",
-            "format": "--append {value}",
-            "secret": false,
-            "help": "Append the new credential instead of overwriting."
-          },
-          {
-            "name": "CredentialDescription",
-            "type": "string",
-            "format": "--credential-description {value}",
-            "secret": false,
-            "help": "The description of the password."
-          },
-          {
-            "name": "EndDate",
-            "type": "string",
-            "format": "--end-date {value}",
-            "secret": false,
-            "help": "Date or datetime after which credentials expire(e.g. '2017-12-31T11:59:59+00:00' or '2017-12-31'). Default value is one year after current time."
-          },
-          {
-            "name": "Cert",
-            "type": "string",
-            "format": "--cert {value}",
-            "secret": false,
-            "help": "Certificate to use for credentials."
-          },
-          {
-            "name": "CreateCert",
-            "type": "string",
-            "format": "--create-cert {value}",
-            "secret": false,
-            "help": "Create a self-signed certificate to use for the credential."
-          },
-          {
-            "name": "Keyvault",
-            "type": "string",
-            "format": "--keyvault {value}",
-            "secret": false,
-            "help": "Name or ID of a KeyVault to use for creating or retrieving certificates."
-          },
-          {
-            "name": "Password",
-            "type": "string",
-            "format": "--password {value}",
-            "secret": true,
-            "help": "App password, aka 'client secret'."
-          },
-          {
-            "name": "Years",
-            "type": "int",
-            "format": "--years {value}",
-            "secret": false,
-            "help": "Number of years for which the credentials will be valid."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppOwnerAdd",
-      "definiteArgument": "ad app owner add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "OwnerObjectId",
-            "type": "string",
-            "format": "--owner-object-id {value}",
-            "secret": false,
-            "help": "Owner's object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppOwnerList",
-      "definiteArgument": "ad app owner list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id of the application."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppOwnerRemove",
-      "definiteArgument": "ad app owner remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "OwnerObjectId",
-            "type": "string",
-            "format": "--owner-object-id {value}",
-            "secret": false,
-            "help": "Owner's object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppPermissionAdd",
-      "definiteArgument": "ad app permission add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Api",
-            "type": "string",
-            "format": "--api {value}",
-            "secret": false,
-            "help": "The target API to access."
-          },
-          {
-            "name": "ApiPermissions",
-            "type": "string",
-            "format": "--api-permissions {value}",
-            "secret": false,
-            "help": "Space seperated list of &lt;resource-access-id&gt;=&lt;type&gt;."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppPermissionAdminConsent",
-      "definiteArgument": "ad app permission admin-consent",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppPermissionDelete",
-      "definiteArgument": "ad app permission delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Api",
-            "type": "string",
-            "format": "--api {value}",
-            "secret": false,
-            "help": "The target API to access."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppPermissionGrant",
-      "definiteArgument": "ad app permission grant",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Api",
-            "type": "string",
-            "format": "--api {value}",
-            "secret": false,
-            "help": "The target API to access."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "ConsentType",
-            "type": "AdAppPermissionGrantConsentType",
-            "format": "--consent-type {value}",
-            "secret": false,
-            "help": "Indicates if consent was provided by the administrator (on behalf of the organization) or by an individual."
-          },
-          {
-            "name": "Expires",
-            "type": "string",
-            "format": "--expires {value}",
-            "secret": false,
-            "help": "Expiry date for the permissions in years. e.g. 1, 2 or \"never\"."
-          },
-          {
-            "name": "PrincipalId",
-            "type": "string",
-            "format": "--principal-id {value}",
-            "secret": false,
-            "help": "If --consent-type is \"Principal\", this argument specifies the object of the user that granted consent and applies only for that user."
-          },
-          {
-            "name": "Scope",
-            "type": "string",
-            "format": "--scope {value}",
-            "secret": false,
-            "help": "Specifies the value of the scope claim that the resource application should expect in the OAuth 2.0 access token, e.g. User.Read."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppPermissionList",
-      "definiteArgument": "ad app permission list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id of the associated application."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AppPermissionListGrants",
-      "definiteArgument": "ad app permission list-grants",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "secret": false,
-            "help": "OData filter."
-          },
-          {
-            "name": "Id",
-            "type": "string",
-            "format": "--id {value}",
-            "secret": false,
-            "help": "Identifier uri, application id, or object id."
-          },
-          {
-            "name": "ShowResourceName",
-            "type": "bool",
-            "format": "--show-resource-name",
-            "secret": false,
-            "help": "Show resource's display name."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupMemberAdd",
-      "definiteArgument": "ad group member add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "secret": false,
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "MemberId",
-            "type": "string",
-            "format": "--member-id {value}",
-            "secret": false,
-            "help": "The object ID of the contact, group, user, or service principal."
-          },
-          {
-            "name": "AdditionalProperties",
-            "type": "string",
-            "format": "--additional-properties {value}",
-            "secret": false,
-            "help": "Unmatched properties from the message are deserialized this collection."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupMemberCheck",
-      "definiteArgument": "ad group member check",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "secret": false,
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "MemberId",
-            "type": "string",
-            "format": "--member-id {value}",
-            "secret": false,
-            "help": "The object ID of the contact, group, user, or service principal."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupMemberList",
-      "definiteArgument": "ad group member list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "secret": false,
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupMemberRemove",
-      "definiteArgument": "ad group member remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "secret": false,
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "MemberId",
-            "type": "string",
-            "format": "--member-id {value}",
-            "secret": false,
-            "help": "The object ID of the contact, group, user, or service principal."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupOwnerAdd",
-      "definiteArgument": "ad group owner add",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "secret": false,
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "OwnerObjectId",
-            "type": "string",
-            "format": "--owner-object-id {value}",
-            "secret": false,
-            "help": "Owner's object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupOwnerList",
-      "definiteArgument": "ad group owner list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "secret": false,
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "GroupOwnerRemove",
-      "definiteArgument": "ad group owner remove",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Group",
-            "type": "string",
-            "format": "--group {value}",
-            "secret": false,
-            "help": "Group's object id or display name(prefix also works if there is a unique match)."
-          },
-          {
-            "name": "OwnerObjectId",
-            "type": "string",
-            "format": "--owner-object-id {value}",
-            "secret": false,
-            "help": "Owner's object id."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1658,13 +916,6 @@
             "format": "--cert {value}",
             "secret": false,
             "help": "A certificate based credential."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1687,13 +938,6 @@
             "format": "--cert {value}",
             "secret": false,
             "help": "A certificate based credential."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1765,13 +1009,6 @@
             "format": "--years {value}",
             "secret": false,
             "help": "Number of years for which the credentials will be valid. Default: 1 year."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1787,13 +1024,494 @@
             "format": "--id {value}",
             "secret": false,
             "help": "Service principal name, or object id or the service principal."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppPermissionAdd",
+      "definiteArgument": "ad app permission add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Api",
+            "type": "string",
+            "format": "--api {value}",
+            "secret": false,
+            "help": "The target API to access."
           },
           {
-            "name": "Subscription",
+            "name": "ApiPermissions",
             "type": "string",
-            "format": "--subscription {value}",
+            "format": "--api-permissions {value}",
             "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+            "help": "Space seperated list of &lt;resource-access-id&gt;=&lt;type&gt;."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppPermissionAdminConsent",
+      "definiteArgument": "ad app permission admin-consent",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppPermissionDelete",
+      "definiteArgument": "ad app permission delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Api",
+            "type": "string",
+            "format": "--api {value}",
+            "secret": false,
+            "help": "The target API to access."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppPermissionGrant",
+      "definiteArgument": "ad app permission grant",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Api",
+            "type": "string",
+            "format": "--api {value}",
+            "secret": false,
+            "help": "The target API to access."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "ConsentType",
+            "type": "AdAppPermissionGrantConsentType",
+            "format": "--consent-type {value}",
+            "secret": false,
+            "help": "Indicates if consent was provided by the administrator (on behalf of the organization) or by an individual."
+          },
+          {
+            "name": "Expires",
+            "type": "string",
+            "format": "--expires {value}",
+            "secret": false,
+            "help": "Expiry date for the permissions in years. e.g. 1, 2 or \"never\"."
+          },
+          {
+            "name": "PrincipalId",
+            "type": "string",
+            "format": "--principal-id {value}",
+            "secret": false,
+            "help": "If --consent-type is \"Principal\", this argument specifies the object of the user that granted consent and applies only for that user."
+          },
+          {
+            "name": "Scope",
+            "type": "string",
+            "format": "--scope {value}",
+            "secret": false,
+            "help": "Specifies the value of the scope claim that the resource application should expect in the OAuth 2.0 access token, e.g. User.Read."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppPermissionList",
+      "definiteArgument": "ad app permission list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id of the associated application."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppPermissionListGrants",
+      "definiteArgument": "ad app permission list-grants",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "secret": false,
+            "help": "OData filter."
+          },
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "ShowResourceName",
+            "type": "bool",
+            "format": "--show-resource-name",
+            "secret": false,
+            "help": "Show resource's display name."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppCredentialDelete",
+      "definiteArgument": "ad app credential delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "KeyId",
+            "type": "string",
+            "format": "--key-id {value}",
+            "secret": false,
+            "help": "Credential key id."
+          },
+          {
+            "name": "Cert",
+            "type": "string",
+            "format": "--cert {value}",
+            "secret": false,
+            "help": "A certificate based credential."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppCredentialList",
+      "definiteArgument": "ad app credential list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "Cert",
+            "type": "string",
+            "format": "--cert {value}",
+            "secret": false,
+            "help": "A certificate based credential."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppCredentialReset",
+      "definiteArgument": "ad app credential reset",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "Append",
+            "type": "string",
+            "format": "--append {value}",
+            "secret": false,
+            "help": "Append the new credential instead of overwriting."
+          },
+          {
+            "name": "CredentialDescription",
+            "type": "string",
+            "format": "--credential-description {value}",
+            "secret": false,
+            "help": "The description of the password."
+          },
+          {
+            "name": "EndDate",
+            "type": "string",
+            "format": "--end-date {value}",
+            "secret": false,
+            "help": "Date or datetime after which credentials expire(e.g. '2017-12-31T11:59:59+00:00' or '2017-12-31'). Default value is one year after current time."
+          },
+          {
+            "name": "Cert",
+            "type": "string",
+            "format": "--cert {value}",
+            "secret": false,
+            "help": "Certificate to use for credentials."
+          },
+          {
+            "name": "CreateCert",
+            "type": "string",
+            "format": "--create-cert {value}",
+            "secret": false,
+            "help": "Create a self-signed certificate to use for the credential."
+          },
+          {
+            "name": "Keyvault",
+            "type": "string",
+            "format": "--keyvault {value}",
+            "secret": false,
+            "help": "Name or ID of a KeyVault to use for creating or retrieving certificates."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "App password, aka 'client secret'."
+          },
+          {
+            "name": "Years",
+            "type": "int",
+            "format": "--years {value}",
+            "secret": false,
+            "help": "Number of years for which the credentials will be valid."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppOwnerAdd",
+      "definiteArgument": "ad app owner add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "secret": false,
+            "help": "Owner's object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppOwnerList",
+      "definiteArgument": "ad app owner list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id of the application."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AppOwnerRemove",
+      "definiteArgument": "ad app owner remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Identifier uri, application id, or object id."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "secret": false,
+            "help": "Owner's object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupMemberAdd",
+      "definiteArgument": "ad group member add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "secret": false,
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "MemberId",
+            "type": "string",
+            "format": "--member-id {value}",
+            "secret": false,
+            "help": "The object ID of the contact, group, user, or service principal."
+          },
+          {
+            "name": "AdditionalProperties",
+            "type": "string",
+            "format": "--additional-properties {value}",
+            "secret": false,
+            "help": "Unmatched properties from the message are deserialized this collection."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupMemberCheck",
+      "definiteArgument": "ad group member check",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "secret": false,
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "MemberId",
+            "type": "string",
+            "format": "--member-id {value}",
+            "secret": false,
+            "help": "The object ID of the contact, group, user, or service principal."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupMemberList",
+      "definiteArgument": "ad group member list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "secret": false,
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupMemberRemove",
+      "definiteArgument": "ad group member remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "secret": false,
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "MemberId",
+            "type": "string",
+            "format": "--member-id {value}",
+            "secret": false,
+            "help": "The object ID of the contact, group, user, or service principal."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupOwnerAdd",
+      "definiteArgument": "ad group owner add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "secret": false,
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "secret": false,
+            "help": "Owner's object id."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupOwnerList",
+      "definiteArgument": "ad group owner list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "secret": false,
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "GroupOwnerRemove",
+      "definiteArgument": "ad group owner remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Group",
+            "type": "string",
+            "format": "--group {value}",
+            "secret": false,
+            "help": "Group's object id or display name(prefix also works if there is a unique match)."
+          },
+          {
+            "name": "OwnerObjectId",
+            "type": "string",
+            "format": "--owner-object-id {value}",
+            "secret": false,
+            "help": "Owner's object id."
           }
         ]
       }

@@ -1,0 +1,1605 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/netappfiles.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/netappfiles/snapshot.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/netappfiles/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/netappfiles/pool.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/netappfiles/volume.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/netappfiles/account/ad.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/netappfiles/volume/export-policy.yml"
+  ],
+  "name": "AzureNetappfiles",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/netappfiles?view=azure-cli-latest",
+  "help": "Manage Azure NetApp Files (ANF) Resources.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "ListMountTargets",
+      "definiteArgument": "netappfiles list-mount-targets",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VolumeName",
+            "type": "string",
+            "format": "--volume-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SnapshotCreate",
+      "definiteArgument": "netappfiles snapshot create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF snapshot."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VolumeName",
+            "type": "string",
+            "format": "--volume-name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          },
+          {
+            "name": "FileSystemId",
+            "type": "string",
+            "format": "--file-system-id {value}",
+            "secret": false,
+            "help": "The uuid of the volume."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SnapshotDelete",
+      "definiteArgument": "netappfiles snapshot delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF snapshot."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VolumeName",
+            "type": "string",
+            "format": "--volume-name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SnapshotList",
+      "definiteArgument": "netappfiles snapshot list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "VolumeName",
+            "type": "string",
+            "format": "--volume-name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SnapshotShow",
+      "definiteArgument": "netappfiles snapshot show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF snapshot."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "VolumeName",
+            "type": "string",
+            "format": "--volume-name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountCreate",
+      "definiteArgument": "netappfiles account create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in `key[=value]` format."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountDelete",
+      "definiteArgument": "netappfiles account delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountList",
+      "definiteArgument": "netappfiles account list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountShow",
+      "definiteArgument": "netappfiles account show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountUpdate",
+      "definiteArgument": "netappfiles account update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in `key[=value]` format."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolCreate",
+      "definiteArgument": "netappfiles pool create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ServiceLevel",
+            "type": "NetappfilesPoolServiceLevel",
+            "format": "--service-level {value}",
+            "secret": false,
+            "help": "The service level for the ANF pool."
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "format": "--size {value}",
+            "secret": false,
+            "help": "The size for the ANF pool. Must be an integer number of tebibytes in multiples of 4."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in `key[=value]` format."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolDelete",
+      "definiteArgument": "netappfiles pool delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolList",
+      "definiteArgument": "netappfiles pool list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolShow",
+      "definiteArgument": "netappfiles pool show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "PoolUpdate",
+      "definiteArgument": "netappfiles pool update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ServiceLevel",
+            "type": "NetappfilesPoolServiceLevel",
+            "format": "--service-level {value}",
+            "secret": false,
+            "help": "The service level for the ANF pool."
+          },
+          {
+            "name": "Size",
+            "type": "string",
+            "format": "--size {value}",
+            "secret": false,
+            "help": "The size for the ANF pool. Must be an integer number of tebibytes in multiples of 4."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in `key[=value]` format."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VolumeCreate",
+      "definiteArgument": "netappfiles volume create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "CreationToken",
+            "type": "string",
+            "format": "--creation-token {value}",
+            "secret": false,
+            "help": "A 1-80 character long alphanumeric string value that identifies a unique file share or mount point in the target subnet."
+          },
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "UsageThreshold",
+            "type": "string",
+            "format": "--usage-threshold {value}",
+            "secret": false,
+            "help": "The maximum storage quota allowed for a file system as integer number of GiB. Min 100 GiB, max 100TiB\"."
+          },
+          {
+            "name": "Vnet",
+            "type": "string",
+            "format": "--vnet {value}",
+            "secret": false,
+            "help": "The ARM Id or name of the vnet for the volume."
+          },
+          {
+            "name": "ProtocolTypes",
+            "type": "string",
+            "format": "--protocol-types {value}",
+            "secret": false,
+            "help": "Space seperated list of protocols that the volume can use."
+          },
+          {
+            "name": "ServiceLevel",
+            "type": "NetappfilesPoolServiceLevel",
+            "format": "--service-level {value}",
+            "secret": false,
+            "help": "The service level."
+          },
+          {
+            "name": "Subnet",
+            "type": "string",
+            "format": "--subnet {value}",
+            "secret": false,
+            "help": "The ARM Id or name of the subnet for the vnet. If omitted 'default' will be used."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in `key[=value]` format."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VolumeDelete",
+      "definiteArgument": "netappfiles volume delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VolumeList",
+      "definiteArgument": "netappfiles volume list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VolumeShow",
+      "definiteArgument": "netappfiles volume show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VolumeUpdate",
+      "definiteArgument": "netappfiles volume update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ProtocolTypes",
+            "type": "string",
+            "format": "--protocol-types {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "ServiceLevel",
+            "type": "NetappfilesPoolServiceLevel",
+            "format": "--service-level {value}",
+            "secret": false,
+            "help": "The service level."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in `key[=value]` format."
+          },
+          {
+            "name": "UsageThreshold",
+            "type": "string",
+            "format": "--usage-threshold {value}",
+            "secret": false,
+            "help": "The maximum storage quota allowed for a file system as integer number of GiB. Min 100 GiB, max 100TiB\"."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountAdAdd",
+      "definiteArgument": "netappfiles account ad add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Dns",
+            "type": "string",
+            "format": "--dns {value}",
+            "secret": false,
+            "help": "Comma separated list of DNS server IP addresses for the Active Directory domain."
+          },
+          {
+            "name": "Domain",
+            "type": "string",
+            "format": "--domain {value}",
+            "secret": false,
+            "help": "Name of the Active Directory domain."
+          },
+          {
+            "name": "Password",
+            "type": "string",
+            "format": "--password {value}",
+            "secret": true,
+            "help": "Plain text password of Active Directory domain administrator."
+          },
+          {
+            "name": "SmbServerName",
+            "type": "string",
+            "format": "--smb-server-name {value}",
+            "secret": false,
+            "help": "NetBIOS name of the SMB server. This name will be registered as a computer account in the AD and used to mount volumes. Must be 10 characters or less."
+          },
+          {
+            "name": "Username",
+            "type": "string",
+            "format": "--username {value}",
+            "secret": false,
+            "help": "Username of Active Directory domain administrator."
+          },
+          {
+            "name": "OrganizationalUnit",
+            "type": "string",
+            "format": "--organizational-unit {value}",
+            "secret": false,
+            "help": "The Organizational Unit (OU) within the Windows Active Directory."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountAdList",
+      "definiteArgument": "netappfiles account ad list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountAdRemove",
+      "definiteArgument": "netappfiles account ad remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ActiveDirectory",
+            "type": "string",
+            "format": "--active-directory {value}",
+            "secret": false,
+            "help": "The id of the active directory."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VolumeExportPolicyAdd",
+      "definiteArgument": "netappfiles volume export-policy add",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AllowedClients",
+            "type": "string",
+            "format": "--allowed-clients {value}",
+            "secret": false,
+            "help": "Client ingress specification as comma separated string with IPv4 CIDRs, IPv4 host addresses and host names)."
+          },
+          {
+            "name": "Cifs",
+            "type": "bool",
+            "format": "--cifs",
+            "secret": false,
+            "help": "Indication that CIFS protocol is allowed."
+          },
+          {
+            "name": "Nfsv3",
+            "type": "bool",
+            "format": "--nfsv3",
+            "secret": false,
+            "help": "Indication that NFSv3 protocol is allowed."
+          },
+          {
+            "name": "Nfsv4",
+            "type": "bool",
+            "format": "--nfsv4",
+            "secret": false,
+            "help": "Indication that NFSv4 protocol is allowed."
+          },
+          {
+            "name": "RuleIndex",
+            "type": "string",
+            "format": "--rule-index {value}",
+            "secret": false,
+            "help": "Order index. No number can be repeated. Max 6 rules."
+          },
+          {
+            "name": "UnixReadOnly",
+            "type": "bool",
+            "format": "--unix-read-only",
+            "secret": false,
+            "help": "Indication of read only access."
+          },
+          {
+            "name": "UnixReadWrite",
+            "type": "bool",
+            "format": "--unix-read-write",
+            "secret": false,
+            "help": "Indication of read and write access."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VolumeExportPolicyList",
+      "definiteArgument": "netappfiles volume export-policy list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VolumeExportPolicyRemove",
+      "definiteArgument": "netappfiles volume export-policy remove",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "RuleIndex",
+            "type": "string",
+            "format": "--rule-index {value}",
+            "secret": false,
+            "help": "Order index. Range 1 to 6."
+          },
+          {
+            "name": "AccountName",
+            "type": "string",
+            "format": "--account-name {value}",
+            "secret": false,
+            "help": "The name of the ANF account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The name of the ANF volume."
+          },
+          {
+            "name": "PoolName",
+            "type": "string",
+            "format": "--pool-name {value}",
+            "secret": false,
+            "help": "The name of the ANF pool."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "secret": false,
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "secret": false,
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "AzureOutput",
+      "format": "--output {value}",
+      "secret": false,
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "secret": false,
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "secret": false,
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "NetappfilesPoolServiceLevel",
+      "values": [
+        "premium",
+        "standard",
+        "ultra"
+      ]
+    }
+  ]
+}

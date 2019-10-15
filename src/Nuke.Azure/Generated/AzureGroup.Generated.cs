@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureGroup.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -502,6 +502,7 @@ namespace Nuke.Azure
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--debug</c> via <see cref="AzureGroupDeploymentCreateSettings.Debug"/></li>
+        ///     <li><c>--handle-extended-json-format</c> via <see cref="AzureGroupDeploymentCreateSettings.HandleExtendedJsonFormat"/></li>
         ///     <li><c>--help</c> via <see cref="AzureGroupDeploymentCreateSettings.Help"/></li>
         ///     <li><c>--mode</c> via <see cref="AzureGroupDeploymentCreateSettings.Mode"/></li>
         ///     <li><c>--name</c> via <see cref="AzureGroupDeploymentCreateSettings.Name"/></li>
@@ -529,6 +530,7 @@ namespace Nuke.Azure
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
         ///     <li><c>--debug</c> via <see cref="AzureGroupDeploymentCreateSettings.Debug"/></li>
+        ///     <li><c>--handle-extended-json-format</c> via <see cref="AzureGroupDeploymentCreateSettings.HandleExtendedJsonFormat"/></li>
         ///     <li><c>--help</c> via <see cref="AzureGroupDeploymentCreateSettings.Help"/></li>
         ///     <li><c>--mode</c> via <see cref="AzureGroupDeploymentCreateSettings.Mode"/></li>
         ///     <li><c>--name</c> via <see cref="AzureGroupDeploymentCreateSettings.Name"/></li>
@@ -1847,6 +1849,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary>
+        ///   Support to handle extended template content including multiline and comments in deployment.
+        /// </summary>
+        public virtual string HandleExtendedJsonFormat { get; internal set; }
+        /// <summary>
         ///   Incremental (only add resources to resource group) or Complete (remove extra resources from resource group).
         /// </summary>
         public virtual GroupDeploymentMode Mode { get; internal set; }
@@ -1903,6 +1909,7 @@ namespace Nuke.Azure
             arguments
               .Add("group deployment create")
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--handle-extended-json-format {value}", HandleExtendedJsonFormat)
               .Add("--mode {value}", Mode)
               .Add("--name {value}", Name)
               .Add("--no-wait", NoWait)
@@ -4757,6 +4764,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HandleExtendedJsonFormat
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureGroupDeploymentCreateSettings.HandleExtendedJsonFormat"/></em></p>
+        ///   <p>Support to handle extended template content including multiline and comments in deployment.</p>
+        /// </summary>
+        [Pure]
+        public static AzureGroupDeploymentCreateSettings SetHandleExtendedJsonFormat(this AzureGroupDeploymentCreateSettings toolSettings, string handleExtendedJsonFormat)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HandleExtendedJsonFormat = handleExtendedJsonFormat;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureGroupDeploymentCreateSettings.HandleExtendedJsonFormat"/></em></p>
+        ///   <p>Support to handle extended template content including multiline and comments in deployment.</p>
+        /// </summary>
+        [Pure]
+        public static AzureGroupDeploymentCreateSettings ResetHandleExtendedJsonFormat(this AzureGroupDeploymentCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HandleExtendedJsonFormat = null;
             return toolSettings;
         }
         #endregion

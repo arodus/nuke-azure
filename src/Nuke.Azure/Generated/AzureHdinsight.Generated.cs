@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureHdinsight.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -79,19 +79,19 @@ namespace Nuke.Azure
         ///     <li><c>--ldaps-urls</c> via <see cref="AzureHdinsightCreateSettings.LdapsUrls"/></li>
         ///     <li><c>--location</c> via <see cref="AzureHdinsightCreateSettings.Location"/></li>
         ///     <li><c>--name</c> via <see cref="AzureHdinsightCreateSettings.Name"/></li>
+        ///     <li><c>--no-validation-timeout</c> via <see cref="AzureHdinsightCreateSettings.NoValidationTimeout"/></li>
         ///     <li><c>--no-wait</c> via <see cref="AzureHdinsightCreateSettings.NoWait"/></li>
         ///     <li><c>--output</c> via <see cref="AzureHdinsightCreateSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureHdinsightCreateSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--size</c> via <see cref="AzureHdinsightCreateSettings.Size"/></li>
         ///     <li><c>--ssh-password</c> via <see cref="AzureHdinsightCreateSettings.SshPassword"/></li>
         ///     <li><c>--ssh-public-key</c> via <see cref="AzureHdinsightCreateSettings.SshPublicKey"/></li>
         ///     <li><c>--ssh-user</c> via <see cref="AzureHdinsightCreateSettings.SshUser"/></li>
         ///     <li><c>--storage-account</c> via <see cref="AzureHdinsightCreateSettings.StorageAccount"/></li>
         ///     <li><c>--storage-account-key</c> via <see cref="AzureHdinsightCreateSettings.StorageAccountKey"/></li>
         ///     <li><c>--storage-account-managed-identity</c> via <see cref="AzureHdinsightCreateSettings.StorageAccountManagedIdentity"/></li>
-        ///     <li><c>--storage-default-container</c> via <see cref="AzureHdinsightCreateSettings.StorageDefaultContainer"/></li>
-        ///     <li><c>--storage-default-filesystem</c> via <see cref="AzureHdinsightCreateSettings.StorageDefaultFilesystem"/></li>
+        ///     <li><c>--storage-container</c> via <see cref="AzureHdinsightCreateSettings.StorageContainer"/></li>
+        ///     <li><c>--storage-filesystem</c> via <see cref="AzureHdinsightCreateSettings.StorageFilesystem"/></li>
         ///     <li><c>--subnet</c> via <see cref="AzureHdinsightCreateSettings.Subnet"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureHdinsightCreateSettings.Subscription"/></li>
         ///     <li><c>--tags</c> via <see cref="AzureHdinsightCreateSettings.Tags"/></li>
@@ -99,9 +99,10 @@ namespace Nuke.Azure
         ///     <li><c>--verbose</c> via <see cref="AzureHdinsightCreateSettings.Verbose"/></li>
         ///     <li><c>--version</c> via <see cref="AzureHdinsightCreateSettings.Version"/></li>
         ///     <li><c>--vnet-name</c> via <see cref="AzureHdinsightCreateSettings.VnetName"/></li>
+        ///     <li><c>--workernode-count</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeCount"/></li>
         ///     <li><c>--workernode-data-disk-size</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeDataDiskSize"/></li>
-        ///     <li><c>--workernode-data-disks-per-node</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeDataDisksPerNode"/></li>
         ///     <li><c>--workernode-data-disk-storage-account-type</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeDataDiskStorageAccountType"/></li>
+        ///     <li><c>--workernode-data-disks-per-node</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeDataDisksPerNode"/></li>
         ///     <li><c>--workernode-size</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeSize"/></li>
         ///     <li><c>--zookeepernode-size</c> via <see cref="AzureHdinsightCreateSettings.ZookeepernodeSize"/></li>
         ///   </ul>
@@ -139,19 +140,19 @@ namespace Nuke.Azure
         ///     <li><c>--ldaps-urls</c> via <see cref="AzureHdinsightCreateSettings.LdapsUrls"/></li>
         ///     <li><c>--location</c> via <see cref="AzureHdinsightCreateSettings.Location"/></li>
         ///     <li><c>--name</c> via <see cref="AzureHdinsightCreateSettings.Name"/></li>
+        ///     <li><c>--no-validation-timeout</c> via <see cref="AzureHdinsightCreateSettings.NoValidationTimeout"/></li>
         ///     <li><c>--no-wait</c> via <see cref="AzureHdinsightCreateSettings.NoWait"/></li>
         ///     <li><c>--output</c> via <see cref="AzureHdinsightCreateSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureHdinsightCreateSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--size</c> via <see cref="AzureHdinsightCreateSettings.Size"/></li>
         ///     <li><c>--ssh-password</c> via <see cref="AzureHdinsightCreateSettings.SshPassword"/></li>
         ///     <li><c>--ssh-public-key</c> via <see cref="AzureHdinsightCreateSettings.SshPublicKey"/></li>
         ///     <li><c>--ssh-user</c> via <see cref="AzureHdinsightCreateSettings.SshUser"/></li>
         ///     <li><c>--storage-account</c> via <see cref="AzureHdinsightCreateSettings.StorageAccount"/></li>
         ///     <li><c>--storage-account-key</c> via <see cref="AzureHdinsightCreateSettings.StorageAccountKey"/></li>
         ///     <li><c>--storage-account-managed-identity</c> via <see cref="AzureHdinsightCreateSettings.StorageAccountManagedIdentity"/></li>
-        ///     <li><c>--storage-default-container</c> via <see cref="AzureHdinsightCreateSettings.StorageDefaultContainer"/></li>
-        ///     <li><c>--storage-default-filesystem</c> via <see cref="AzureHdinsightCreateSettings.StorageDefaultFilesystem"/></li>
+        ///     <li><c>--storage-container</c> via <see cref="AzureHdinsightCreateSettings.StorageContainer"/></li>
+        ///     <li><c>--storage-filesystem</c> via <see cref="AzureHdinsightCreateSettings.StorageFilesystem"/></li>
         ///     <li><c>--subnet</c> via <see cref="AzureHdinsightCreateSettings.Subnet"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureHdinsightCreateSettings.Subscription"/></li>
         ///     <li><c>--tags</c> via <see cref="AzureHdinsightCreateSettings.Tags"/></li>
@@ -159,9 +160,10 @@ namespace Nuke.Azure
         ///     <li><c>--verbose</c> via <see cref="AzureHdinsightCreateSettings.Verbose"/></li>
         ///     <li><c>--version</c> via <see cref="AzureHdinsightCreateSettings.Version"/></li>
         ///     <li><c>--vnet-name</c> via <see cref="AzureHdinsightCreateSettings.VnetName"/></li>
+        ///     <li><c>--workernode-count</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeCount"/></li>
         ///     <li><c>--workernode-data-disk-size</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeDataDiskSize"/></li>
-        ///     <li><c>--workernode-data-disks-per-node</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeDataDisksPerNode"/></li>
         ///     <li><c>--workernode-data-disk-storage-account-type</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeDataDiskStorageAccountType"/></li>
+        ///     <li><c>--workernode-data-disks-per-node</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeDataDisksPerNode"/></li>
         ///     <li><c>--workernode-size</c> via <see cref="AzureHdinsightCreateSettings.WorkernodeSize"/></li>
         ///     <li><c>--zookeepernode-size</c> via <see cref="AzureHdinsightCreateSettings.ZookeepernodeSize"/></li>
         ///   </ul>
@@ -355,8 +357,8 @@ namespace Nuke.Azure
         ///     <li><c>--query</c> via <see cref="AzureHdinsightResizeSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightResizeSettings.ResourceGroup"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureHdinsightResizeSettings.Subscription"/></li>
-        ///     <li><c>--target-instance-count</c> via <see cref="AzureHdinsightResizeSettings.TargetInstanceCount"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureHdinsightResizeSettings.Verbose"/></li>
+        ///     <li><c>--workernode-count</c> via <see cref="AzureHdinsightResizeSettings.WorkernodeCount"/></li>
         ///   </ul>
         /// </remarks>
         public static IReadOnlyCollection<Output> AzureHdinsightResize(Configure<AzureHdinsightResizeSettings> configurator)
@@ -378,8 +380,8 @@ namespace Nuke.Azure
         ///     <li><c>--query</c> via <see cref="AzureHdinsightResizeSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightResizeSettings.ResourceGroup"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureHdinsightResizeSettings.Subscription"/></li>
-        ///     <li><c>--target-instance-count</c> via <see cref="AzureHdinsightResizeSettings.TargetInstanceCount"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureHdinsightResizeSettings.Verbose"/></li>
+        ///     <li><c>--workernode-count</c> via <see cref="AzureHdinsightResizeSettings.WorkernodeCount"/></li>
         ///   </ul>
         /// </remarks>
         public static IEnumerable<(AzureHdinsightResizeSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightResize(CombinatorialConfigure<AzureHdinsightResizeSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
@@ -628,6 +630,505 @@ namespace Nuke.Azure
         ///   <p>Manage HDInsight resources.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionDelete(AzureHdinsightScriptActionDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureHdinsightScriptActionDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionDelete(Configure<AzureHdinsightScriptActionDeleteSettings> configurator)
+        {
+            return AzureHdinsightScriptActionDelete(configurator(new AzureHdinsightScriptActionDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureHdinsightScriptActionDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionDelete(CombinatorialConfigure<AzureHdinsightScriptActionDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureHdinsightScriptActionDelete, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionExecute(AzureHdinsightScriptActionExecuteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureHdinsightScriptActionExecuteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Output"/></li>
+        ///     <li><c>--persist-on-success</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.PersistOnSuccess"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ResourceGroup"/></li>
+        ///     <li><c>--roles</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Roles"/></li>
+        ///     <li><c>--script-parameters</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptParameters"/></li>
+        ///     <li><c>--script-uri</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptUri"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionExecute(Configure<AzureHdinsightScriptActionExecuteSettings> configurator)
+        {
+            return AzureHdinsightScriptActionExecute(configurator(new AzureHdinsightScriptActionExecuteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Output"/></li>
+        ///     <li><c>--persist-on-success</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.PersistOnSuccess"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ResourceGroup"/></li>
+        ///     <li><c>--roles</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Roles"/></li>
+        ///     <li><c>--script-parameters</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptParameters"/></li>
+        ///     <li><c>--script-uri</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptUri"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureHdinsightScriptActionExecuteSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionExecute(CombinatorialConfigure<AzureHdinsightScriptActionExecuteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureHdinsightScriptActionExecute, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionList(AzureHdinsightScriptActionListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureHdinsightScriptActionListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionListSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionList(Configure<AzureHdinsightScriptActionListSettings> configurator)
+        {
+            return AzureHdinsightScriptActionList(configurator(new AzureHdinsightScriptActionListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionListSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureHdinsightScriptActionListSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionList(CombinatorialConfigure<AzureHdinsightScriptActionListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureHdinsightScriptActionList, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionListExecutionHistory(AzureHdinsightScriptActionListExecutionHistorySettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureHdinsightScriptActionListExecutionHistorySettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionListExecutionHistory(Configure<AzureHdinsightScriptActionListExecutionHistorySettings> configurator)
+        {
+            return AzureHdinsightScriptActionListExecutionHistory(configurator(new AzureHdinsightScriptActionListExecutionHistorySettings()));
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureHdinsightScriptActionListExecutionHistorySettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionListExecutionHistory(CombinatorialConfigure<AzureHdinsightScriptActionListExecutionHistorySettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureHdinsightScriptActionListExecutionHistory, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionPromote(AzureHdinsightScriptActionPromoteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureHdinsightScriptActionPromoteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Debug"/></li>
+        ///     <li><c>--execution-id</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ExecutionId"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionPromote(Configure<AzureHdinsightScriptActionPromoteSettings> configurator)
+        {
+            return AzureHdinsightScriptActionPromote(configurator(new AzureHdinsightScriptActionPromoteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Debug"/></li>
+        ///     <li><c>--execution-id</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ExecutionId"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureHdinsightScriptActionPromoteSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionPromote(CombinatorialConfigure<AzureHdinsightScriptActionPromoteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureHdinsightScriptActionPromote, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionShowExecutionDetails(AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureHdinsightScriptActionShowExecutionDetailsSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Debug"/></li>
+        ///     <li><c>--execution-id</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ExecutionId"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionShowExecutionDetails(Configure<AzureHdinsightScriptActionShowExecutionDetailsSettings> configurator)
+        {
+            return AzureHdinsightScriptActionShowExecutionDetails(configurator(new AzureHdinsightScriptActionShowExecutionDetailsSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Debug"/></li>
+        ///     <li><c>--execution-id</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ExecutionId"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureHdinsightScriptActionShowExecutionDetailsSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionShowExecutionDetails(CombinatorialConfigure<AzureHdinsightScriptActionShowExecutionDetailsSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureHdinsightScriptActionShowExecutionDetails, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureHdinsightMonitorDisable(AzureHdinsightMonitorDisableSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureHdinsightMonitorDisableSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightMonitorDisableSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightMonitorDisableSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightMonitorDisableSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightMonitorDisableSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightMonitorDisableSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightMonitorDisableSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightMonitorDisableSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightMonitorDisableSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureHdinsightMonitorDisable(Configure<AzureHdinsightMonitorDisableSettings> configurator)
+        {
+            return AzureHdinsightMonitorDisable(configurator(new AzureHdinsightMonitorDisableSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightMonitorDisableSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightMonitorDisableSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightMonitorDisableSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightMonitorDisableSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightMonitorDisableSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightMonitorDisableSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightMonitorDisableSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightMonitorDisableSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureHdinsightMonitorDisableSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightMonitorDisable(CombinatorialConfigure<AzureHdinsightMonitorDisableSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureHdinsightMonitorDisable, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureHdinsightMonitorEnable(AzureHdinsightMonitorEnableSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureHdinsightMonitorEnableSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightMonitorEnableSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightMonitorEnableSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightMonitorEnableSettings.Name"/></li>
+        ///     <li><c>--no-validation-timeout</c> via <see cref="AzureHdinsightMonitorEnableSettings.NoValidationTimeout"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightMonitorEnableSettings.Output"/></li>
+        ///     <li><c>--primary-key</c> via <see cref="AzureHdinsightMonitorEnableSettings.PrimaryKey"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightMonitorEnableSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightMonitorEnableSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightMonitorEnableSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightMonitorEnableSettings.Verbose"/></li>
+        ///     <li><c>--workspace</c> via <see cref="AzureHdinsightMonitorEnableSettings.Workspace"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureHdinsightMonitorEnable(Configure<AzureHdinsightMonitorEnableSettings> configurator)
+        {
+            return AzureHdinsightMonitorEnable(configurator(new AzureHdinsightMonitorEnableSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightMonitorEnableSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightMonitorEnableSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightMonitorEnableSettings.Name"/></li>
+        ///     <li><c>--no-validation-timeout</c> via <see cref="AzureHdinsightMonitorEnableSettings.NoValidationTimeout"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightMonitorEnableSettings.Output"/></li>
+        ///     <li><c>--primary-key</c> via <see cref="AzureHdinsightMonitorEnableSettings.PrimaryKey"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightMonitorEnableSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightMonitorEnableSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightMonitorEnableSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightMonitorEnableSettings.Verbose"/></li>
+        ///     <li><c>--workspace</c> via <see cref="AzureHdinsightMonitorEnableSettings.Workspace"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureHdinsightMonitorEnableSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightMonitorEnable(CombinatorialConfigure<AzureHdinsightMonitorEnableSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureHdinsightMonitorEnable, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureHdinsightMonitorShow(AzureHdinsightMonitorShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureHdinsightMonitorShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightMonitorShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightMonitorShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightMonitorShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightMonitorShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightMonitorShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightMonitorShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightMonitorShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightMonitorShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureHdinsightMonitorShow(Configure<AzureHdinsightMonitorShowSettings> configurator)
+        {
+            return AzureHdinsightMonitorShow(configurator(new AzureHdinsightMonitorShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureHdinsightMonitorShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureHdinsightMonitorShowSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureHdinsightMonitorShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureHdinsightMonitorShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureHdinsightMonitorShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightMonitorShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightMonitorShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightMonitorShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureHdinsightMonitorShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightMonitorShow(CombinatorialConfigure<AzureHdinsightMonitorShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureHdinsightMonitorShow, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage HDInsight resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
         public static IReadOnlyCollection<Output> AzureHdinsightApplicationCreate(AzureHdinsightApplicationCreateSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureHdinsightApplicationCreateSettings();
@@ -642,32 +1143,30 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--application-name</c> via <see cref="AzureHdinsightApplicationCreateSettings.ApplicationName"/></li>
-        ///     <li><c>--application-type</c> via <see cref="AzureHdinsightApplicationCreateSettings.ApplicationType"/></li>
+        ///     <li><c>--access-mode</c> via <see cref="AzureHdinsightApplicationCreateSettings.AccessMode"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationCreateSettings.ClusterName"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationCreateSettings.Debug"/></li>
+        ///     <li><c>--destination-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.DestinationPort"/></li>
+        ///     <li><c>--disable-gateway-auth</c> via <see cref="AzureHdinsightApplicationCreateSettings.DisableGatewayAuth"/></li>
         ///     <li><c>--edgenode-size</c> via <see cref="AzureHdinsightApplicationCreateSettings.EdgenodeSize"/></li>
         ///     <li><c>--help</c> via <see cref="AzureHdinsightApplicationCreateSettings.Help"/></li>
-        ///     <li><c>--https-endpoint-access-mode</c> via <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointAccessMode"/></li>
-        ///     <li><c>--https-endpoint-destination-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointDestinationPort"/></li>
-        ///     <li><c>--https-endpoint-location</c> via <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointLocation"/></li>
-        ///     <li><c>--https-endpoint-public-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointPublicPort"/></li>
-        ///     <li><c>--marketplace-identifier</c> via <see cref="AzureHdinsightApplicationCreateSettings.MarketplaceIdentifier"/></li>
+        ///     <li><c>--marketplace-id</c> via <see cref="AzureHdinsightApplicationCreateSettings.MarketplaceId"/></li>
         ///     <li><c>--name</c> via <see cref="AzureHdinsightApplicationCreateSettings.Name"/></li>
+        ///     <li><c>--no-validation-timeout</c> via <see cref="AzureHdinsightApplicationCreateSettings.NoValidationTimeout"/></li>
         ///     <li><c>--output</c> via <see cref="AzureHdinsightApplicationCreateSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureHdinsightApplicationCreateSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightApplicationCreateSettings.ResourceGroup"/></li>
         ///     <li><c>--script-action-name</c> via <see cref="AzureHdinsightApplicationCreateSettings.ScriptActionName"/></li>
         ///     <li><c>--script-parameters</c> via <see cref="AzureHdinsightApplicationCreateSettings.ScriptParameters"/></li>
         ///     <li><c>--script-uri</c> via <see cref="AzureHdinsightApplicationCreateSettings.ScriptUri"/></li>
-        ///     <li><c>--ssh-endpoint-destination-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointDestinationPort"/></li>
-        ///     <li><c>--ssh-endpoint-location</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointLocation"/></li>
-        ///     <li><c>--ssh-endpoint-public-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointPublicPort"/></li>
         ///     <li><c>--ssh-password</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshPassword"/></li>
         ///     <li><c>--ssh-public-key</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshPublicKey"/></li>
         ///     <li><c>--ssh-user</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshUser"/></li>
+        ///     <li><c>--sub-domain-suffix</c> via <see cref="AzureHdinsightApplicationCreateSettings.SubDomainSuffix"/></li>
         ///     <li><c>--subnet</c> via <see cref="AzureHdinsightApplicationCreateSettings.Subnet"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureHdinsightApplicationCreateSettings.Subscription"/></li>
         ///     <li><c>--tags</c> via <see cref="AzureHdinsightApplicationCreateSettings.Tags"/></li>
+        ///     <li><c>--type</c> via <see cref="AzureHdinsightApplicationCreateSettings.Type"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureHdinsightApplicationCreateSettings.Verbose"/></li>
         ///     <li><c>--vnet-name</c> via <see cref="AzureHdinsightApplicationCreateSettings.VnetName"/></li>
         ///   </ul>
@@ -683,32 +1182,30 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--application-name</c> via <see cref="AzureHdinsightApplicationCreateSettings.ApplicationName"/></li>
-        ///     <li><c>--application-type</c> via <see cref="AzureHdinsightApplicationCreateSettings.ApplicationType"/></li>
+        ///     <li><c>--access-mode</c> via <see cref="AzureHdinsightApplicationCreateSettings.AccessMode"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationCreateSettings.ClusterName"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationCreateSettings.Debug"/></li>
+        ///     <li><c>--destination-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.DestinationPort"/></li>
+        ///     <li><c>--disable-gateway-auth</c> via <see cref="AzureHdinsightApplicationCreateSettings.DisableGatewayAuth"/></li>
         ///     <li><c>--edgenode-size</c> via <see cref="AzureHdinsightApplicationCreateSettings.EdgenodeSize"/></li>
         ///     <li><c>--help</c> via <see cref="AzureHdinsightApplicationCreateSettings.Help"/></li>
-        ///     <li><c>--https-endpoint-access-mode</c> via <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointAccessMode"/></li>
-        ///     <li><c>--https-endpoint-destination-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointDestinationPort"/></li>
-        ///     <li><c>--https-endpoint-location</c> via <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointLocation"/></li>
-        ///     <li><c>--https-endpoint-public-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointPublicPort"/></li>
-        ///     <li><c>--marketplace-identifier</c> via <see cref="AzureHdinsightApplicationCreateSettings.MarketplaceIdentifier"/></li>
+        ///     <li><c>--marketplace-id</c> via <see cref="AzureHdinsightApplicationCreateSettings.MarketplaceId"/></li>
         ///     <li><c>--name</c> via <see cref="AzureHdinsightApplicationCreateSettings.Name"/></li>
+        ///     <li><c>--no-validation-timeout</c> via <see cref="AzureHdinsightApplicationCreateSettings.NoValidationTimeout"/></li>
         ///     <li><c>--output</c> via <see cref="AzureHdinsightApplicationCreateSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureHdinsightApplicationCreateSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightApplicationCreateSettings.ResourceGroup"/></li>
         ///     <li><c>--script-action-name</c> via <see cref="AzureHdinsightApplicationCreateSettings.ScriptActionName"/></li>
         ///     <li><c>--script-parameters</c> via <see cref="AzureHdinsightApplicationCreateSettings.ScriptParameters"/></li>
         ///     <li><c>--script-uri</c> via <see cref="AzureHdinsightApplicationCreateSettings.ScriptUri"/></li>
-        ///     <li><c>--ssh-endpoint-destination-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointDestinationPort"/></li>
-        ///     <li><c>--ssh-endpoint-location</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointLocation"/></li>
-        ///     <li><c>--ssh-endpoint-public-port</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointPublicPort"/></li>
         ///     <li><c>--ssh-password</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshPassword"/></li>
         ///     <li><c>--ssh-public-key</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshPublicKey"/></li>
         ///     <li><c>--ssh-user</c> via <see cref="AzureHdinsightApplicationCreateSettings.SshUser"/></li>
+        ///     <li><c>--sub-domain-suffix</c> via <see cref="AzureHdinsightApplicationCreateSettings.SubDomainSuffix"/></li>
         ///     <li><c>--subnet</c> via <see cref="AzureHdinsightApplicationCreateSettings.Subnet"/></li>
         ///     <li><c>--subscription</c> via <see cref="AzureHdinsightApplicationCreateSettings.Subscription"/></li>
         ///     <li><c>--tags</c> via <see cref="AzureHdinsightApplicationCreateSettings.Tags"/></li>
+        ///     <li><c>--type</c> via <see cref="AzureHdinsightApplicationCreateSettings.Type"/></li>
         ///     <li><c>--verbose</c> via <see cref="AzureHdinsightApplicationCreateSettings.Verbose"/></li>
         ///     <li><c>--vnet-name</c> via <see cref="AzureHdinsightApplicationCreateSettings.VnetName"/></li>
         ///   </ul>
@@ -735,7 +1232,7 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--application-name</c> via <see cref="AzureHdinsightApplicationDeleteSettings.ApplicationName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationDeleteSettings.ClusterName"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationDeleteSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureHdinsightApplicationDeleteSettings.Help"/></li>
         ///     <li><c>--name</c> via <see cref="AzureHdinsightApplicationDeleteSettings.Name"/></li>
@@ -759,7 +1256,7 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--application-name</c> via <see cref="AzureHdinsightApplicationDeleteSettings.ApplicationName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationDeleteSettings.ClusterName"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationDeleteSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureHdinsightApplicationDeleteSettings.Help"/></li>
         ///     <li><c>--name</c> via <see cref="AzureHdinsightApplicationDeleteSettings.Name"/></li>
@@ -794,9 +1291,9 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationListSettings.ClusterName"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationListSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureHdinsightApplicationListSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightApplicationListSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureHdinsightApplicationListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureHdinsightApplicationListSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightApplicationListSettings.ResourceGroup"/></li>
@@ -815,9 +1312,9 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationListSettings.ClusterName"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationListSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureHdinsightApplicationListSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightApplicationListSettings.Name"/></li>
         ///     <li><c>--output</c> via <see cref="AzureHdinsightApplicationListSettings.Output"/></li>
         ///     <li><c>--query</c> via <see cref="AzureHdinsightApplicationListSettings.Query"/></li>
         ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightApplicationListSettings.ResourceGroup"/></li>
@@ -847,7 +1344,7 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--application-name</c> via <see cref="AzureHdinsightApplicationShowSettings.ApplicationName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationShowSettings.ClusterName"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationShowSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureHdinsightApplicationShowSettings.Help"/></li>
         ///     <li><c>--name</c> via <see cref="AzureHdinsightApplicationShowSettings.Name"/></li>
@@ -869,7 +1366,7 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--application-name</c> via <see cref="AzureHdinsightApplicationShowSettings.ApplicationName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationShowSettings.ClusterName"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationShowSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureHdinsightApplicationShowSettings.Help"/></li>
         ///     <li><c>--name</c> via <see cref="AzureHdinsightApplicationShowSettings.Name"/></li>
@@ -902,7 +1399,7 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--application-name</c> via <see cref="AzureHdinsightApplicationWaitSettings.ApplicationName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationWaitSettings.ClusterName"/></li>
         ///     <li><c>--created</c> via <see cref="AzureHdinsightApplicationWaitSettings.Created"/></li>
         ///     <li><c>--custom</c> via <see cref="AzureHdinsightApplicationWaitSettings.Custom"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationWaitSettings.Debug"/></li>
@@ -931,7 +1428,7 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--application-name</c> via <see cref="AzureHdinsightApplicationWaitSettings.ApplicationName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureHdinsightApplicationWaitSettings.ClusterName"/></li>
         ///     <li><c>--created</c> via <see cref="AzureHdinsightApplicationWaitSettings.Created"/></li>
         ///     <li><c>--custom</c> via <see cref="AzureHdinsightApplicationWaitSettings.Custom"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureHdinsightApplicationWaitSettings.Debug"/></li>
@@ -952,452 +1449,6 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureHdinsightApplicationWaitSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightApplicationWait(CombinatorialConfigure<AzureHdinsightApplicationWaitSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureHdinsightApplicationWait, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureHdinsightOmsDisable(AzureHdinsightOmsDisableSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureHdinsightOmsDisableSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightOmsDisableSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightOmsDisableSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightOmsDisableSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightOmsDisableSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightOmsDisableSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightOmsDisableSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightOmsDisableSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightOmsDisableSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureHdinsightOmsDisable(Configure<AzureHdinsightOmsDisableSettings> configurator)
-        {
-            return AzureHdinsightOmsDisable(configurator(new AzureHdinsightOmsDisableSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightOmsDisableSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightOmsDisableSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightOmsDisableSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightOmsDisableSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightOmsDisableSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightOmsDisableSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightOmsDisableSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightOmsDisableSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureHdinsightOmsDisableSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightOmsDisable(CombinatorialConfigure<AzureHdinsightOmsDisableSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureHdinsightOmsDisable, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureHdinsightOmsEnable(AzureHdinsightOmsEnableSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureHdinsightOmsEnableSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightOmsEnableSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightOmsEnableSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightOmsEnableSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightOmsEnableSettings.Output"/></li>
-        ///     <li><c>--primary-key</c> via <see cref="AzureHdinsightOmsEnableSettings.PrimaryKey"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightOmsEnableSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightOmsEnableSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightOmsEnableSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightOmsEnableSettings.Verbose"/></li>
-        ///     <li><c>--workspace-id</c> via <see cref="AzureHdinsightOmsEnableSettings.WorkspaceId"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureHdinsightOmsEnable(Configure<AzureHdinsightOmsEnableSettings> configurator)
-        {
-            return AzureHdinsightOmsEnable(configurator(new AzureHdinsightOmsEnableSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightOmsEnableSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightOmsEnableSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightOmsEnableSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightOmsEnableSettings.Output"/></li>
-        ///     <li><c>--primary-key</c> via <see cref="AzureHdinsightOmsEnableSettings.PrimaryKey"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightOmsEnableSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightOmsEnableSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightOmsEnableSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightOmsEnableSettings.Verbose"/></li>
-        ///     <li><c>--workspace-id</c> via <see cref="AzureHdinsightOmsEnableSettings.WorkspaceId"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureHdinsightOmsEnableSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightOmsEnable(CombinatorialConfigure<AzureHdinsightOmsEnableSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureHdinsightOmsEnable, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureHdinsightOmsShow(AzureHdinsightOmsShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureHdinsightOmsShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightOmsShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightOmsShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightOmsShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightOmsShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightOmsShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightOmsShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightOmsShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightOmsShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureHdinsightOmsShow(Configure<AzureHdinsightOmsShowSettings> configurator)
-        {
-            return AzureHdinsightOmsShow(configurator(new AzureHdinsightOmsShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightOmsShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightOmsShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightOmsShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightOmsShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightOmsShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightOmsShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightOmsShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightOmsShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureHdinsightOmsShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightOmsShow(CombinatorialConfigure<AzureHdinsightOmsShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureHdinsightOmsShow, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionDelete(AzureHdinsightScriptActionDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureHdinsightScriptActionDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--script-action-name</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.ScriptActionName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionDelete(Configure<AzureHdinsightScriptActionDeleteSettings> configurator)
-        {
-            return AzureHdinsightScriptActionDelete(configurator(new AzureHdinsightScriptActionDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--script-action-name</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.ScriptActionName"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureHdinsightScriptActionDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionDelete(CombinatorialConfigure<AzureHdinsightScriptActionDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureHdinsightScriptActionDelete, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionExecute(AzureHdinsightScriptActionExecuteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureHdinsightScriptActionExecuteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Output"/></li>
-        ///     <li><c>--persist-on-success</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.PersistOnSuccess"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ResourceGroup"/></li>
-        ///     <li><c>--roles</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Roles"/></li>
-        ///     <li><c>--script-action-name</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptActionName"/></li>
-        ///     <li><c>--script-parameters</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptParameters"/></li>
-        ///     <li><c>--script-uri</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptUri"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionExecute(Configure<AzureHdinsightScriptActionExecuteSettings> configurator)
-        {
-            return AzureHdinsightScriptActionExecute(configurator(new AzureHdinsightScriptActionExecuteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Output"/></li>
-        ///     <li><c>--persist-on-success</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.PersistOnSuccess"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ResourceGroup"/></li>
-        ///     <li><c>--roles</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Roles"/></li>
-        ///     <li><c>--script-action-name</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptActionName"/></li>
-        ///     <li><c>--script-parameters</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptParameters"/></li>
-        ///     <li><c>--script-uri</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptUri"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionExecuteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureHdinsightScriptActionExecuteSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionExecute(CombinatorialConfigure<AzureHdinsightScriptActionExecuteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureHdinsightScriptActionExecute, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionList(AzureHdinsightScriptActionListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureHdinsightScriptActionListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionListSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionListSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionListSettings.Output"/></li>
-        ///     <li><c>--persisted</c> via <see cref="AzureHdinsightScriptActionListSettings.Persisted"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionList(Configure<AzureHdinsightScriptActionListSettings> configurator)
-        {
-            return AzureHdinsightScriptActionList(configurator(new AzureHdinsightScriptActionListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionListSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionListSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionListSettings.Output"/></li>
-        ///     <li><c>--persisted</c> via <see cref="AzureHdinsightScriptActionListSettings.Persisted"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureHdinsightScriptActionListSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionList(CombinatorialConfigure<AzureHdinsightScriptActionListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureHdinsightScriptActionList, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionPromote(AzureHdinsightScriptActionPromoteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureHdinsightScriptActionPromoteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ResourceGroup"/></li>
-        ///     <li><c>--script-execution-id</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ScriptExecutionId"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionPromote(Configure<AzureHdinsightScriptActionPromoteSettings> configurator)
-        {
-            return AzureHdinsightScriptActionPromote(configurator(new AzureHdinsightScriptActionPromoteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ResourceGroup"/></li>
-        ///     <li><c>--script-execution-id</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.ScriptExecutionId"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionPromoteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureHdinsightScriptActionPromoteSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionPromote(CombinatorialConfigure<AzureHdinsightScriptActionPromoteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureHdinsightScriptActionPromote, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionShow(AzureHdinsightScriptActionShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureHdinsightScriptActionShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--script-execution-id</c> via <see cref="AzureHdinsightScriptActionShowSettings.ScriptExecutionId"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureHdinsightScriptActionShow(Configure<AzureHdinsightScriptActionShowSettings> configurator)
-        {
-            return AzureHdinsightScriptActionShow(configurator(new AzureHdinsightScriptActionShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage HDInsight resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/hdinsight?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureHdinsightScriptActionShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureHdinsightScriptActionShowSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureHdinsightScriptActionShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureHdinsightScriptActionShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureHdinsightScriptActionShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureHdinsightScriptActionShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--script-execution-id</c> via <see cref="AzureHdinsightScriptActionShowSettings.ScriptExecutionId"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureHdinsightScriptActionShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureHdinsightScriptActionShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureHdinsightScriptActionShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureHdinsightScriptActionShow(CombinatorialConfigure<AzureHdinsightScriptActionShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureHdinsightScriptActionShow, AzureHdinsightLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureHdinsightCreateSettings
@@ -1427,6 +1478,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Location { get; internal set; }
         /// <summary>
+        ///   Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.
+        /// </summary>
+        public virtual bool? NoValidationTimeout { get; internal set; }
+        /// <summary>
         ///   Do not wait for the long-running operation to finish.
         /// </summary>
         public virtual bool? NoWait { get; internal set; }
@@ -1435,11 +1490,11 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string Tags { get; internal set; }
         /// <summary>
-        ///   Type of HDInsight cluster, like: hadoop, interactivehive, hbase, kafka, storm, spark, rserver, mlservices. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types</a>.
+        ///   Type of HDInsight cluster, like: hadoop, interactivehive, hbase, kafka, storm, spark, rserver, mlservices. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types</a>.
         /// </summary>
         public virtual string Type { get; internal set; }
         /// <summary>
-        ///   Extra configurations of various components, in JSON.
+        ///   Extra configurations of various components. Configurations may be supplied from a file using the `@{path}` syntax or a JSON string. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-bootstrap">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-bootstrap</a>.
         /// </summary>
         public virtual string ClusterConfigurations { get; internal set; }
         /// <summary>
@@ -1447,15 +1502,15 @@ namespace Nuke.Azure
         /// </summary>
         public virtual HdinsightCreateClusterTier ClusterTier { get; internal set; }
         /// <summary>
-        ///   The versions of various Hadoop components, in space-separated versions in 'component=version' format. Example: Spark=2.0 Hadoop=2.7.3 See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions</a>.
+        ///   The versions of various Hadoop components, in space-separated versions in 'component=version' format. Example: Spark=2.0 Hadoop=2.7.3 See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions">https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions</a>.
         /// </summary>
         public virtual string ComponentVersion { get; internal set; }
         /// <summary>
-        ///   Specify to create cluster with Enterprise Security Package.
+        ///   Specify to create cluster with Enterprise Security Package. If omitted, creating cluster with Enterprise Security Package will not not allowed.
         /// </summary>
-        public virtual bool? Esp { get; internal set; }
+        public virtual string Esp { get; internal set; }
         /// <summary>
-        ///   The HDInsight cluster version. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions</a>.
+        ///   The HDInsight cluster version. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions">https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions</a>.
         /// </summary>
         public virtual string Version { get; internal set; }
         /// <summary>
@@ -1495,7 +1550,7 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string LdapsUrls { get; internal set; }
         /// <summary>
-        ///   HTTP password for the cluster.
+        ///   HTTP password for the cluster. Will prompt if not given.
         /// </summary>
         public virtual string HttpPassword { get; internal set; }
         /// <summary>
@@ -1515,17 +1570,17 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string VnetName { get; internal set; }
         /// <summary>
-        ///   The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
+        ///   The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
         /// </summary>
         public virtual string EdgenodeSize { get; internal set; }
         /// <summary>
-        ///   The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
+        ///   The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
         /// </summary>
         public virtual string HeadnodeSize { get; internal set; }
         /// <summary>
         ///   The number of worker nodes in the cluster.
         /// </summary>
-        public virtual string Size { get; internal set; }
+        public virtual string WorkernodeCount { get; internal set; }
         /// <summary>
         ///   The size of the data disk in GB, e.g. 1023.
         /// </summary>
@@ -1539,11 +1594,11 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string WorkernodeDataDisksPerNode { get; internal set; }
         /// <summary>
-        ///   The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
+        ///   The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
         /// </summary>
         public virtual string WorkernodeSize { get; internal set; }
         /// <summary>
-        ///   The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
+        ///   The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
         /// </summary>
         public virtual string ZookeepernodeSize { get; internal set; }
         /// <summary>
@@ -1573,11 +1628,11 @@ namespace Nuke.Azure
         /// <summary>
         ///   The storage container the cluster will use. Uses the cluster name if none was specified. (WASB only).
         /// </summary>
-        public virtual string StorageDefaultContainer { get; internal set; }
+        public virtual string StorageContainer { get; internal set; }
         /// <summary>
-        ///   The storage filesystem the cluster will use. (DFS only).
+        ///   The storage filesystem the cluster will use. Uses the cluster name if none was specified. (DFS only).
         /// </summary>
-        public virtual string StorageDefaultFilesystem { get; internal set; }
+        public virtual string StorageFilesystem { get; internal set; }
         /// <summary>
         ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
         /// </summary>
@@ -1609,13 +1664,14 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--location {value}", Location)
+              .Add("--no-validation-timeout", NoValidationTimeout)
               .Add("--no-wait", NoWait)
               .Add("--tags {value}", Tags)
               .Add("--type {value}", Type)
               .Add("--cluster-configurations {value}", ClusterConfigurations)
               .Add("--cluster-tier {value}", ClusterTier)
               .Add("--component-version {value}", ComponentVersion)
-              .Add("--esp", Esp)
+              .Add("--esp {value}", Esp)
               .Add("--version {value}", Version)
               .Add("--encryption-algorithm {value}", EncryptionAlgorithm)
               .Add("--encryption-key-name {value}", EncryptionKeyName)
@@ -1633,7 +1689,7 @@ namespace Nuke.Azure
               .Add("--vnet-name {value}", VnetName)
               .Add("--edgenode-size {value}", EdgenodeSize)
               .Add("--headnode-size {value}", HeadnodeSize)
-              .Add("--size {value}", Size)
+              .Add("--workernode-count {value}", WorkernodeCount)
               .Add("--workernode-data-disk-size {value}", WorkernodeDataDiskSize)
               .Add("--workernode-data-disk-storage-account-type {value}", WorkernodeDataDiskStorageAccountType)
               .Add("--workernode-data-disks-per-node {value}", WorkernodeDataDisksPerNode)
@@ -1645,8 +1701,8 @@ namespace Nuke.Azure
               .Add("--storage-account {value}", StorageAccount)
               .Add("--storage-account-key {value}", StorageAccountKey)
               .Add("--storage-account-managed-identity {value}", StorageAccountManagedIdentity)
-              .Add("--storage-default-container {value}", StorageDefaultContainer)
-              .Add("--storage-default-filesystem {value}", StorageDefaultFilesystem)
+              .Add("--storage-container {value}", StorageContainer)
+              .Add("--storage-filesystem {value}", StorageFilesystem)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -1866,13 +1922,13 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary>
+        ///   The target worker node instance count for the operation.
+        /// </summary>
+        public virtual string WorkernodeCount { get; internal set; }
+        /// <summary>
         ///   Do not wait for the long-running operation to finish.
         /// </summary>
         public virtual bool? NoWait { get; internal set; }
-        /// <summary>
-        ///   The target instance count for the operation.
-        /// </summary>
-        public virtual string TargetInstanceCount { get; internal set; }
         /// <summary>
         ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
         /// </summary>
@@ -1903,8 +1959,8 @@ namespace Nuke.Azure
               .Add("hdinsight resize")
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--workernode-count {value}", WorkernodeCount)
               .Add("--no-wait", NoWait)
-              .Add("--target-instance-count {value}", TargetInstanceCount)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2228,6 +2284,619 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureHdinsightScriptActionDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureHdinsightScriptActionDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureHdinsight executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
+        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The name of the script.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("hdinsight script-action delete")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureHdinsightScriptActionExecuteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureHdinsightScriptActionExecuteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureHdinsight executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
+        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The name of the script action.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   A space-delimited list of roles (nodes) where the script will be executed. Valid roles are headnode, workernode, zookeepernode, edgenode.
+        /// </summary>
+        public virtual string Roles { get; internal set; }
+        /// <summary>
+        ///   The URI to the script.
+        /// </summary>
+        public virtual string ScriptUri { get; internal set; }
+        /// <summary>
+        ///   If the scripts needs to be persisted.
+        /// </summary>
+        public virtual string PersistOnSuccess { get; internal set; }
+        /// <summary>
+        ///   The parameters for the script.
+        /// </summary>
+        public virtual string ScriptParameters { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("hdinsight script-action execute")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--roles {value}", Roles)
+              .Add("--script-uri {value}", ScriptUri)
+              .Add("--persist-on-success {value}", PersistOnSuccess)
+              .Add("--script-parameters {value}", ScriptParameters)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureHdinsightScriptActionListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureHdinsightScriptActionListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureHdinsight executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
+        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("hdinsight script-action list")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureHdinsightScriptActionListExecutionHistorySettings
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureHdinsightScriptActionListExecutionHistorySettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureHdinsight executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
+        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("hdinsight script-action list-execution-history")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureHdinsightScriptActionPromoteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureHdinsightScriptActionPromoteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureHdinsight executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
+        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The script execution id.
+        /// </summary>
+        public virtual string ExecutionId { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("hdinsight script-action promote")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--execution-id {value}", ExecutionId)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureHdinsightScriptActionShowExecutionDetailsSettings
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureHdinsightScriptActionShowExecutionDetailsSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureHdinsight executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
+        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The script execution id.
+        /// </summary>
+        public virtual string ExecutionId { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("hdinsight script-action show-execution-details")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--execution-id {value}", ExecutionId)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureHdinsightMonitorDisableSettings
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureHdinsightMonitorDisableSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureHdinsight executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
+        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("hdinsight monitor disable")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureHdinsightMonitorEnableSettings
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureHdinsightMonitorEnableSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureHdinsight executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
+        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The name, resource ID or workspace ID of Log Analytics workspace.
+        /// </summary>
+        public virtual string Workspace { get; internal set; }
+        /// <summary>
+        ///   Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.
+        /// </summary>
+        public virtual bool? NoValidationTimeout { get; internal set; }
+        /// <summary>
+        ///   The certificate for the Log Analytics workspace. Required when workspace ID is provided.
+        /// </summary>
+        public virtual string PrimaryKey { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("hdinsight monitor enable")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--workspace {value}", Workspace)
+              .Add("--no-validation-timeout", NoValidationTimeout)
+              .Add("--primary-key {value}", PrimaryKey)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureHdinsightMonitorShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureHdinsightMonitorShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureHdinsight executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
+        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("hdinsight monitor show")
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureHdinsightApplicationCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureHdinsightTasks"/>.
@@ -2245,43 +2914,47 @@ namespace Nuke.Azure
         /// <summary>
         ///   The name of the cluster.
         /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The constant value for the application name.
+        /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
         ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
         /// <summary>
+        ///   The marketplace identifier.
+        /// </summary>
+        public virtual string MarketplaceId { get; internal set; }
+        /// <summary>
+        ///   Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.
+        /// </summary>
+        public virtual bool? NoValidationTimeout { get; internal set; }
+        /// <summary>
         ///   Space-separated tags in 'key[=value]' format. Use "" to clear existing tags.
         /// </summary>
         public virtual string Tags { get; internal set; }
         /// <summary>
-        ///   The constant value for the application name.
-        /// </summary>
-        public virtual string ApplicationName { get; internal set; }
-        /// <summary>
         ///   The application type.
         /// </summary>
-        public virtual string ApplicationType { get; internal set; }
-        /// <summary>
-        ///   The marketplace identifier.
-        /// </summary>
-        public virtual string MarketplaceIdentifier { get; internal set; }
+        public virtual HdinsightApplicationCreateType Type { get; internal set; }
         /// <summary>
         ///   The access mode for the application.
         /// </summary>
-        public virtual string HttpsEndpointAccessMode { get; internal set; }
+        public virtual string AccessMode { get; internal set; }
         /// <summary>
         ///   The destination port to connect to.
         /// </summary>
-        public virtual string HttpsEndpointDestinationPort { get; internal set; }
+        public virtual string DestinationPort { get; internal set; }
         /// <summary>
-        ///   The location of the endpoint.
+        ///   Indicates whether to disable gateway authentication. Default is to enable gateway authentication. Default: false.
         /// </summary>
-        public virtual string HttpsEndpointLocation { get; internal set; }
+        public virtual bool? DisableGatewayAuth { get; internal set; }
         /// <summary>
-        ///   The public port to connect to.
+        ///   The subdomain suffix of the application.
         /// </summary>
-        public virtual string HttpsEndpointPublicPort { get; internal set; }
+        public virtual string SubDomainSuffix { get; internal set; }
         /// <summary>
         ///   The name or ID of subnet. If name is supplied, `--vnet-name` must be supplied.
         /// </summary>
@@ -2291,7 +2964,7 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string VnetName { get; internal set; }
         /// <summary>
-        ///   The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
+        ///   The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.
         /// </summary>
         public virtual string EdgenodeSize { get; internal set; }
         /// <summary>
@@ -2306,18 +2979,6 @@ namespace Nuke.Azure
         ///   SSH username for the cluster nodes.
         /// </summary>
         public virtual string SshUser { get; internal set; }
-        /// <summary>
-        ///   The destination port to connect to.
-        /// </summary>
-        public virtual string SshEndpointDestinationPort { get; internal set; }
-        /// <summary>
-        ///   The location of the endpoint.
-        /// </summary>
-        public virtual string SshEndpointLocation { get; internal set; }
-        /// <summary>
-        ///   The public port to connect to.
-        /// </summary>
-        public virtual string SshEndpointPublicPort { get; internal set; }
         /// <summary>
         ///   The name of the script action.
         /// </summary>
@@ -2358,25 +3019,23 @@ namespace Nuke.Azure
         {
             arguments
               .Add("hdinsight application create")
+              .Add("--cluster-name {value}", ClusterName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
+              .Add("--marketplace-id {value}", MarketplaceId)
+              .Add("--no-validation-timeout", NoValidationTimeout)
               .Add("--tags {value}", Tags)
-              .Add("--application-name {value}", ApplicationName)
-              .Add("--application-type {value}", ApplicationType)
-              .Add("--marketplace-identifier {value}", MarketplaceIdentifier)
-              .Add("--https-endpoint-access-mode {value}", HttpsEndpointAccessMode)
-              .Add("--https-endpoint-destination-port {value}", HttpsEndpointDestinationPort)
-              .Add("--https-endpoint-location {value}", HttpsEndpointLocation)
-              .Add("--https-endpoint-public-port {value}", HttpsEndpointPublicPort)
+              .Add("--type {value}", Type)
+              .Add("--access-mode {value}", AccessMode)
+              .Add("--destination-port {value}", DestinationPort)
+              .Add("--disable-gateway-auth", DisableGatewayAuth)
+              .Add("--sub-domain-suffix {value}", SubDomainSuffix)
               .Add("--subnet {value}", Subnet)
               .Add("--vnet-name {value}", VnetName)
               .Add("--edgenode-size {value}", EdgenodeSize)
               .Add("--ssh-password {value}", SshPassword, secret: true)
               .Add("--ssh-public-key {value}", SshPublicKey)
               .Add("--ssh-user {value}", SshUser)
-              .Add("--ssh-endpoint-destination-port {value}", SshEndpointDestinationPort)
-              .Add("--ssh-endpoint-location {value}", SshEndpointLocation)
-              .Add("--ssh-endpoint-public-port {value}", SshEndpointPublicPort)
               .Add("--script-action-name {value}", ScriptActionName)
               .Add("--script-uri {value}", ScriptUri)
               .Add("--script-parameters {value}", ScriptParameters)
@@ -2407,6 +3066,10 @@ namespace Nuke.Azure
         /// <summary>
         ///   The name of the cluster.
         /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The constant value for the application name.
+        /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
         ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
@@ -2420,10 +3083,6 @@ namespace Nuke.Azure
         ///   Do not prompt for confirmation.
         /// </summary>
         public virtual string Yes { get; internal set; }
-        /// <summary>
-        ///   The constant value for the application name.
-        /// </summary>
-        public virtual string ApplicationName { get; internal set; }
         /// <summary>
         ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
         /// </summary>
@@ -2452,11 +3111,11 @@ namespace Nuke.Azure
         {
             arguments
               .Add("hdinsight application delete")
+              .Add("--cluster-name {value}", ClusterName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--no-wait", NoWait)
               .Add("--yes {value}", Yes)
-              .Add("--application-name {value}", ApplicationName)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2484,7 +3143,7 @@ namespace Nuke.Azure
         /// <summary>
         ///   The name of the cluster.
         /// </summary>
-        public virtual string Name { get; internal set; }
+        public virtual string ClusterName { get; internal set; }
         /// <summary>
         ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
         /// </summary>
@@ -2517,7 +3176,7 @@ namespace Nuke.Azure
         {
             arguments
               .Add("hdinsight application list")
-              .Add("--name {value}", Name)
+              .Add("--cluster-name {value}", ClusterName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
@@ -2546,15 +3205,15 @@ namespace Nuke.Azure
         /// <summary>
         ///   The name of the cluster.
         /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The constant value for the application name.
+        /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
         ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The constant value for the application name.
-        /// </summary>
-        public virtual string ApplicationName { get; internal set; }
         /// <summary>
         ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
         /// </summary>
@@ -2583,9 +3242,9 @@ namespace Nuke.Azure
         {
             arguments
               .Add("hdinsight application show")
+              .Add("--cluster-name {value}", ClusterName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--application-name {value}", ApplicationName)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2613,15 +3272,15 @@ namespace Nuke.Azure
         /// <summary>
         ///   The name of the cluster.
         /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The constant value for the application name.
+        /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
         ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The constant value for the application name.
-        /// </summary>
-        public virtual string ApplicationName { get; internal set; }
         /// <summary>
         ///   Wait until created with 'provisioningState' at 'Succeeded'.
         /// </summary>
@@ -2678,9 +3337,9 @@ namespace Nuke.Azure
         {
             arguments
               .Add("hdinsight application wait")
+              .Add("--cluster-name {value}", ClusterName)
               .Add("--name {value}", Name)
               .Add("--resource-group {value}", ResourceGroup)
-              .Add("--application-name {value}", ApplicationName)
               .Add("--created {value}", Created)
               .Add("--custom {value}", Custom)
               .Add("--deleted {value}", Deleted)
@@ -2688,557 +3347,6 @@ namespace Nuke.Azure
               .Add("--interval {value}", Interval)
               .Add("--timeout {value}", Timeout)
               .Add("--updated {value}", Updated)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureHdinsightOmsDisableSettings
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureHdinsightOmsDisableSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureHdinsight executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
-        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("hdinsight oms disable")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureHdinsightOmsEnableSettings
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureHdinsightOmsEnableSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureHdinsight executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
-        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The Operations Management Suite (OMS) workspace ID.
-        /// </summary>
-        public virtual string WorkspaceId { get; internal set; }
-        /// <summary>
-        ///   The Operations Management Suite (OMS) workspace key.
-        /// </summary>
-        public virtual string PrimaryKey { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("hdinsight oms enable")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--workspace-id {value}", WorkspaceId)
-              .Add("--primary-key {value}", PrimaryKey)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureHdinsightOmsShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureHdinsightOmsShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureHdinsight executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
-        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("hdinsight oms show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureHdinsightScriptActionDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureHdinsightScriptActionDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureHdinsight executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
-        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The name of the script action.
-        /// </summary>
-        public virtual string ScriptActionName { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("hdinsight script-action delete")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--script-action-name {value}", ScriptActionName)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureHdinsightScriptActionExecuteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureHdinsightScriptActionExecuteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureHdinsight executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
-        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   A comma-delimited list of roles (nodes) where the script will be executed. Valid roles are headnode, workernode, zookeepernode, edgenode.
-        /// </summary>
-        public virtual string Roles { get; internal set; }
-        /// <summary>
-        ///   The name of the script action.
-        /// </summary>
-        public virtual string ScriptActionName { get; internal set; }
-        /// <summary>
-        ///   The URI to the script.
-        /// </summary>
-        public virtual string ScriptUri { get; internal set; }
-        /// <summary>
-        ///   If the scripts needs to be persisted.
-        /// </summary>
-        public virtual string PersistOnSuccess { get; internal set; }
-        /// <summary>
-        ///   The parameters for the script.
-        /// </summary>
-        public virtual string ScriptParameters { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("hdinsight script-action execute")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--roles {value}", Roles)
-              .Add("--script-action-name {value}", ScriptActionName)
-              .Add("--script-uri {value}", ScriptUri)
-              .Add("--persist-on-success {value}", PersistOnSuccess)
-              .Add("--script-parameters {value}", ScriptParameters)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureHdinsightScriptActionListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureHdinsightScriptActionListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureHdinsight executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
-        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   If only list persisted script actions.
-        /// </summary>
-        public virtual string Persisted { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("hdinsight script-action list")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--persisted {value}", Persisted)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureHdinsightScriptActionPromoteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureHdinsightScriptActionPromoteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureHdinsight executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
-        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The script execution Id.
-        /// </summary>
-        public virtual string ScriptExecutionId { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("hdinsight script-action promote")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--script-execution-id {value}", ScriptExecutionId)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureHdinsightScriptActionShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureHdinsightScriptActionShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureHdinsight executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureHdinsightTasks.AzureHdinsightPath;
-        public override Action<OutputType, string> CustomLogger => AzureHdinsightTasks.AzureHdinsightLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The script execution Id.
-        /// </summary>
-        public virtual string ScriptExecutionId { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("hdinsight script-action show")
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--script-execution-id {value}", ScriptExecutionId)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -3329,6 +3437,63 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region NoValidationTimeout
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightCreateSettings SetNoValidationTimeout(this AzureHdinsightCreateSettings toolSettings, bool? noValidationTimeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = noValidationTimeout;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightCreateSettings ResetNoValidationTimeout(this AzureHdinsightCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureHdinsightCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightCreateSettings EnableNoValidationTimeout(this AzureHdinsightCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureHdinsightCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightCreateSettings DisableNoValidationTimeout(this AzureHdinsightCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureHdinsightCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightCreateSettings ToggleNoValidationTimeout(this AzureHdinsightCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = !toolSettings.NoValidationTimeout;
+            return toolSettings;
+        }
+        #endregion
         #region NoWait
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.NoWait"/></em></p>
@@ -3413,7 +3578,7 @@ namespace Nuke.Azure
         #region Type
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.Type"/></em></p>
-        ///   <p>Type of HDInsight cluster, like: hadoop, interactivehive, hbase, kafka, storm, spark, rserver, mlservices. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types</a>.</p>
+        ///   <p>Type of HDInsight cluster, like: hadoop, interactivehive, hbase, kafka, storm, spark, rserver, mlservices. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings SetType(this AzureHdinsightCreateSettings toolSettings, string type)
@@ -3424,7 +3589,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.Type"/></em></p>
-        ///   <p>Type of HDInsight cluster, like: hadoop, interactivehive, hbase, kafka, storm, spark, rserver, mlservices. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types</a>.</p>
+        ///   <p>Type of HDInsight cluster, like: hadoop, interactivehive, hbase, kafka, storm, spark, rserver, mlservices. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#cluster-types</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetType(this AzureHdinsightCreateSettings toolSettings)
@@ -3437,7 +3602,7 @@ namespace Nuke.Azure
         #region ClusterConfigurations
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.ClusterConfigurations"/></em></p>
-        ///   <p>Extra configurations of various components, in JSON.</p>
+        ///   <p>Extra configurations of various components. Configurations may be supplied from a file using the `@{path}` syntax or a JSON string. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-bootstrap">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-bootstrap</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings SetClusterConfigurations(this AzureHdinsightCreateSettings toolSettings, string clusterConfigurations)
@@ -3448,7 +3613,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.ClusterConfigurations"/></em></p>
-        ///   <p>Extra configurations of various components, in JSON.</p>
+        ///   <p>Extra configurations of various components. Configurations may be supplied from a file using the `@{path}` syntax or a JSON string. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-bootstrap">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-customize-cluster-bootstrap</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetClusterConfigurations(this AzureHdinsightCreateSettings toolSettings)
@@ -3485,7 +3650,7 @@ namespace Nuke.Azure
         #region ComponentVersion
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.ComponentVersion"/></em></p>
-        ///   <p>The versions of various Hadoop components, in space-separated versions in 'component=version' format. Example: Spark=2.0 Hadoop=2.7.3 See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions</a>.</p>
+        ///   <p>The versions of various Hadoop components, in space-separated versions in 'component=version' format. Example: Spark=2.0 Hadoop=2.7.3 See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions">https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings SetComponentVersion(this AzureHdinsightCreateSettings toolSettings, string componentVersion)
@@ -3496,7 +3661,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.ComponentVersion"/></em></p>
-        ///   <p>The versions of various Hadoop components, in space-separated versions in 'component=version' format. Example: Spark=2.0 Hadoop=2.7.3 See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions</a>.</p>
+        ///   <p>The versions of various Hadoop components, in space-separated versions in 'component=version' format. Example: Spark=2.0 Hadoop=2.7.3 See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions">https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#hadoop-components-available-with-different-hdinsight-versions</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetComponentVersion(this AzureHdinsightCreateSettings toolSettings)
@@ -3509,10 +3674,10 @@ namespace Nuke.Azure
         #region Esp
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.Esp"/></em></p>
-        ///   <p>Specify to create cluster with Enterprise Security Package.</p>
+        ///   <p>Specify to create cluster with Enterprise Security Package. If omitted, creating cluster with Enterprise Security Package will not not allowed.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightCreateSettings SetEsp(this AzureHdinsightCreateSettings toolSettings, bool? esp)
+        public static AzureHdinsightCreateSettings SetEsp(this AzureHdinsightCreateSettings toolSettings, string esp)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Esp = esp;
@@ -3520,7 +3685,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.Esp"/></em></p>
-        ///   <p>Specify to create cluster with Enterprise Security Package.</p>
+        ///   <p>Specify to create cluster with Enterprise Security Package. If omitted, creating cluster with Enterprise Security Package will not not allowed.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetEsp(this AzureHdinsightCreateSettings toolSettings)
@@ -3529,44 +3694,11 @@ namespace Nuke.Azure
             toolSettings.Esp = null;
             return toolSettings;
         }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzureHdinsightCreateSettings.Esp"/></em></p>
-        ///   <p>Specify to create cluster with Enterprise Security Package.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightCreateSettings EnableEsp(this AzureHdinsightCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Esp = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzureHdinsightCreateSettings.Esp"/></em></p>
-        ///   <p>Specify to create cluster with Enterprise Security Package.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightCreateSettings DisableEsp(this AzureHdinsightCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Esp = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzureHdinsightCreateSettings.Esp"/></em></p>
-        ///   <p>Specify to create cluster with Enterprise Security Package.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightCreateSettings ToggleEsp(this AzureHdinsightCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Esp = !toolSettings.Esp;
-            return toolSettings;
-        }
         #endregion
         #region Version
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.Version"/></em></p>
-        ///   <p>The HDInsight cluster version. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions</a>.</p>
+        ///   <p>The HDInsight cluster version. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions">https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings SetVersion(this AzureHdinsightCreateSettings toolSettings, string version)
@@ -3577,7 +3709,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.Version"/></em></p>
-        ///   <p>The HDInsight cluster version. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions</a>.</p>
+        ///   <p>The HDInsight cluster version. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions">https://docs.microsoft.com/azure/hdinsight/hdinsight-component-versioning#supported-hdinsight-versions</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetVersion(this AzureHdinsightCreateSettings toolSettings)
@@ -3806,7 +3938,7 @@ namespace Nuke.Azure
         #region HttpPassword
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.HttpPassword"/></em></p>
-        ///   <p>HTTP password for the cluster.</p>
+        ///   <p>HTTP password for the cluster. Will prompt if not given.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings SetHttpPassword(this AzureHdinsightCreateSettings toolSettings, string httpPassword)
@@ -3817,7 +3949,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.HttpPassword"/></em></p>
-        ///   <p>HTTP password for the cluster.</p>
+        ///   <p>HTTP password for the cluster. Will prompt if not given.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetHttpPassword(this AzureHdinsightCreateSettings toolSettings)
@@ -3926,7 +4058,7 @@ namespace Nuke.Azure
         #region EdgenodeSize
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.EdgenodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings SetEdgenodeSize(this AzureHdinsightCreateSettings toolSettings, string edgenodeSize)
@@ -3937,7 +4069,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.EdgenodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetEdgenodeSize(this AzureHdinsightCreateSettings toolSettings)
@@ -3950,7 +4082,7 @@ namespace Nuke.Azure
         #region HeadnodeSize
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.HeadnodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings SetHeadnodeSize(this AzureHdinsightCreateSettings toolSettings, string headnodeSize)
@@ -3961,7 +4093,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.HeadnodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetHeadnodeSize(this AzureHdinsightCreateSettings toolSettings)
@@ -3971,27 +4103,27 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region Size
+        #region WorkernodeCount
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.Size"/></em></p>
+        ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.WorkernodeCount"/></em></p>
         ///   <p>The number of worker nodes in the cluster.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightCreateSettings SetSize(this AzureHdinsightCreateSettings toolSettings, string size)
+        public static AzureHdinsightCreateSettings SetWorkernodeCount(this AzureHdinsightCreateSettings toolSettings, string workernodeCount)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Size = size;
+            toolSettings.WorkernodeCount = workernodeCount;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.Size"/></em></p>
+        ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.WorkernodeCount"/></em></p>
         ///   <p>The number of worker nodes in the cluster.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightCreateSettings ResetSize(this AzureHdinsightCreateSettings toolSettings)
+        public static AzureHdinsightCreateSettings ResetWorkernodeCount(this AzureHdinsightCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Size = null;
+            toolSettings.WorkernodeCount = null;
             return toolSettings;
         }
         #endregion
@@ -4070,7 +4202,7 @@ namespace Nuke.Azure
         #region WorkernodeSize
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.WorkernodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings SetWorkernodeSize(this AzureHdinsightCreateSettings toolSettings, string workernodeSize)
@@ -4081,7 +4213,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.WorkernodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetWorkernodeSize(this AzureHdinsightCreateSettings toolSettings)
@@ -4094,7 +4226,7 @@ namespace Nuke.Azure
         #region ZookeepernodeSize
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.ZookeepernodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings SetZookeepernodeSize(this AzureHdinsightCreateSettings toolSettings, string zookeepernodeSize)
@@ -4105,7 +4237,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.ZookeepernodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightCreateSettings ResetZookeepernodeSize(this AzureHdinsightCreateSettings toolSettings)
@@ -4259,51 +4391,51 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region StorageDefaultContainer
+        #region StorageContainer
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.StorageDefaultContainer"/></em></p>
+        ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.StorageContainer"/></em></p>
         ///   <p>The storage container the cluster will use. Uses the cluster name if none was specified. (WASB only).</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightCreateSettings SetStorageDefaultContainer(this AzureHdinsightCreateSettings toolSettings, string storageDefaultContainer)
+        public static AzureHdinsightCreateSettings SetStorageContainer(this AzureHdinsightCreateSettings toolSettings, string storageContainer)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageDefaultContainer = storageDefaultContainer;
+            toolSettings.StorageContainer = storageContainer;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.StorageDefaultContainer"/></em></p>
+        ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.StorageContainer"/></em></p>
         ///   <p>The storage container the cluster will use. Uses the cluster name if none was specified. (WASB only).</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightCreateSettings ResetStorageDefaultContainer(this AzureHdinsightCreateSettings toolSettings)
+        public static AzureHdinsightCreateSettings ResetStorageContainer(this AzureHdinsightCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageDefaultContainer = null;
+            toolSettings.StorageContainer = null;
             return toolSettings;
         }
         #endregion
-        #region StorageDefaultFilesystem
+        #region StorageFilesystem
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.StorageDefaultFilesystem"/></em></p>
-        ///   <p>The storage filesystem the cluster will use. (DFS only).</p>
+        ///   <p><em>Sets <see cref="AzureHdinsightCreateSettings.StorageFilesystem"/></em></p>
+        ///   <p>The storage filesystem the cluster will use. Uses the cluster name if none was specified. (DFS only).</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightCreateSettings SetStorageDefaultFilesystem(this AzureHdinsightCreateSettings toolSettings, string storageDefaultFilesystem)
+        public static AzureHdinsightCreateSettings SetStorageFilesystem(this AzureHdinsightCreateSettings toolSettings, string storageFilesystem)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageDefaultFilesystem = storageDefaultFilesystem;
+            toolSettings.StorageFilesystem = storageFilesystem;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.StorageDefaultFilesystem"/></em></p>
-        ///   <p>The storage filesystem the cluster will use. (DFS only).</p>
+        ///   <p><em>Resets <see cref="AzureHdinsightCreateSettings.StorageFilesystem"/></em></p>
+        ///   <p>The storage filesystem the cluster will use. Uses the cluster name if none was specified. (DFS only).</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightCreateSettings ResetStorageDefaultFilesystem(this AzureHdinsightCreateSettings toolSettings)
+        public static AzureHdinsightCreateSettings ResetStorageFilesystem(this AzureHdinsightCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.StorageDefaultFilesystem = null;
+            toolSettings.StorageFilesystem = null;
             return toolSettings;
         }
         #endregion
@@ -5148,6 +5280,30 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region WorkernodeCount
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightResizeSettings.WorkernodeCount"/></em></p>
+        ///   <p>The target worker node instance count for the operation.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightResizeSettings SetWorkernodeCount(this AzureHdinsightResizeSettings toolSettings, string workernodeCount)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WorkernodeCount = workernodeCount;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightResizeSettings.WorkernodeCount"/></em></p>
+        ///   <p>The target worker node instance count for the operation.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightResizeSettings ResetWorkernodeCount(this AzureHdinsightResizeSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.WorkernodeCount = null;
+            return toolSettings;
+        }
+        #endregion
         #region NoWait
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightResizeSettings.NoWait"/></em></p>
@@ -5202,30 +5358,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NoWait = !toolSettings.NoWait;
-            return toolSettings;
-        }
-        #endregion
-        #region TargetInstanceCount
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightResizeSettings.TargetInstanceCount"/></em></p>
-        ///   <p>The target instance count for the operation.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightResizeSettings SetTargetInstanceCount(this AzureHdinsightResizeSettings toolSettings, string targetInstanceCount)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetInstanceCount = targetInstanceCount;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightResizeSettings.TargetInstanceCount"/></em></p>
-        ///   <p>The target instance count for the operation.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightResizeSettings ResetTargetInstanceCount(this AzureHdinsightResizeSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.TargetInstanceCount = null;
             return toolSettings;
         }
         #endregion
@@ -6561,6 +6693,2121 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureHdinsightScriptActionDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureHdinsightScriptActionDeleteSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings SetClusterName(this AzureHdinsightScriptActionDeleteSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings ResetClusterName(this AzureHdinsightScriptActionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the script.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings SetName(this AzureHdinsightScriptActionDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the script.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings ResetName(this AzureHdinsightScriptActionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings SetResourceGroup(this AzureHdinsightScriptActionDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings ResetResourceGroup(this AzureHdinsightScriptActionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings SetSubscription(this AzureHdinsightScriptActionDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings ResetSubscription(this AzureHdinsightScriptActionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings SetDebug(this AzureHdinsightScriptActionDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings ResetDebug(this AzureHdinsightScriptActionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings SetHelp(this AzureHdinsightScriptActionDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings ResetHelp(this AzureHdinsightScriptActionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings SetOutput(this AzureHdinsightScriptActionDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings ResetOutput(this AzureHdinsightScriptActionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings SetQuery(this AzureHdinsightScriptActionDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings ResetQuery(this AzureHdinsightScriptActionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings SetVerbose(this AzureHdinsightScriptActionDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionDeleteSettings ResetVerbose(this AzureHdinsightScriptActionDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureHdinsightScriptActionExecuteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureHdinsightScriptActionExecuteSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetClusterName(this AzureHdinsightScriptActionExecuteSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetClusterName(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Name"/></em></p>
+        ///   <p>The name of the script action.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetName(this AzureHdinsightScriptActionExecuteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Name"/></em></p>
+        ///   <p>The name of the script action.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetName(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetResourceGroup(this AzureHdinsightScriptActionExecuteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetResourceGroup(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Roles
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Roles"/></em></p>
+        ///   <p>A space-delimited list of roles (nodes) where the script will be executed. Valid roles are headnode, workernode, zookeepernode, edgenode.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetRoles(this AzureHdinsightScriptActionExecuteSettings toolSettings, string roles)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Roles = roles;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Roles"/></em></p>
+        ///   <p>A space-delimited list of roles (nodes) where the script will be executed. Valid roles are headnode, workernode, zookeepernode, edgenode.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetRoles(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Roles = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ScriptUri
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptUri"/></em></p>
+        ///   <p>The URI to the script.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetScriptUri(this AzureHdinsightScriptActionExecuteSettings toolSettings, string scriptUri)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScriptUri = scriptUri;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptUri"/></em></p>
+        ///   <p>The URI to the script.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetScriptUri(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScriptUri = null;
+            return toolSettings;
+        }
+        #endregion
+        #region PersistOnSuccess
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.PersistOnSuccess"/></em></p>
+        ///   <p>If the scripts needs to be persisted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetPersistOnSuccess(this AzureHdinsightScriptActionExecuteSettings toolSettings, string persistOnSuccess)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PersistOnSuccess = persistOnSuccess;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.PersistOnSuccess"/></em></p>
+        ///   <p>If the scripts needs to be persisted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetPersistOnSuccess(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PersistOnSuccess = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ScriptParameters
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptParameters"/></em></p>
+        ///   <p>The parameters for the script.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetScriptParameters(this AzureHdinsightScriptActionExecuteSettings toolSettings, string scriptParameters)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScriptParameters = scriptParameters;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptParameters"/></em></p>
+        ///   <p>The parameters for the script.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetScriptParameters(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ScriptParameters = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetSubscription(this AzureHdinsightScriptActionExecuteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetSubscription(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetDebug(this AzureHdinsightScriptActionExecuteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetDebug(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetHelp(this AzureHdinsightScriptActionExecuteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetHelp(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetOutput(this AzureHdinsightScriptActionExecuteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetOutput(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetQuery(this AzureHdinsightScriptActionExecuteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetQuery(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings SetVerbose(this AzureHdinsightScriptActionExecuteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionExecuteSettings ResetVerbose(this AzureHdinsightScriptActionExecuteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureHdinsightScriptActionListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureHdinsightScriptActionListSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings SetClusterName(this AzureHdinsightScriptActionListSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings ResetClusterName(this AzureHdinsightScriptActionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings SetResourceGroup(this AzureHdinsightScriptActionListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings ResetResourceGroup(this AzureHdinsightScriptActionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings SetSubscription(this AzureHdinsightScriptActionListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings ResetSubscription(this AzureHdinsightScriptActionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings SetDebug(this AzureHdinsightScriptActionListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings ResetDebug(this AzureHdinsightScriptActionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings SetHelp(this AzureHdinsightScriptActionListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings ResetHelp(this AzureHdinsightScriptActionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings SetOutput(this AzureHdinsightScriptActionListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings ResetOutput(this AzureHdinsightScriptActionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings SetQuery(this AzureHdinsightScriptActionListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings ResetQuery(this AzureHdinsightScriptActionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings SetVerbose(this AzureHdinsightScriptActionListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListSettings ResetVerbose(this AzureHdinsightScriptActionListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureHdinsightScriptActionListExecutionHistorySettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureHdinsightScriptActionListExecutionHistorySettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings SetClusterName(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings ResetClusterName(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings SetResourceGroup(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings ResetResourceGroup(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings SetSubscription(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings ResetSubscription(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings SetDebug(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings ResetDebug(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings SetHelp(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings ResetHelp(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings SetOutput(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings ResetOutput(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings SetQuery(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings ResetQuery(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings SetVerbose(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListExecutionHistorySettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionListExecutionHistorySettings ResetVerbose(this AzureHdinsightScriptActionListExecutionHistorySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureHdinsightScriptActionPromoteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureHdinsightScriptActionPromoteSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings SetClusterName(this AzureHdinsightScriptActionPromoteSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings ResetClusterName(this AzureHdinsightScriptActionPromoteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ExecutionId
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.ExecutionId"/></em></p>
+        ///   <p>The script execution id.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings SetExecutionId(this AzureHdinsightScriptActionPromoteSettings toolSettings, string executionId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExecutionId = executionId;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.ExecutionId"/></em></p>
+        ///   <p>The script execution id.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings ResetExecutionId(this AzureHdinsightScriptActionPromoteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExecutionId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings SetResourceGroup(this AzureHdinsightScriptActionPromoteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings ResetResourceGroup(this AzureHdinsightScriptActionPromoteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings SetSubscription(this AzureHdinsightScriptActionPromoteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings ResetSubscription(this AzureHdinsightScriptActionPromoteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings SetDebug(this AzureHdinsightScriptActionPromoteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings ResetDebug(this AzureHdinsightScriptActionPromoteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings SetHelp(this AzureHdinsightScriptActionPromoteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings ResetHelp(this AzureHdinsightScriptActionPromoteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings SetOutput(this AzureHdinsightScriptActionPromoteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings ResetOutput(this AzureHdinsightScriptActionPromoteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings SetQuery(this AzureHdinsightScriptActionPromoteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings ResetQuery(this AzureHdinsightScriptActionPromoteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings SetVerbose(this AzureHdinsightScriptActionPromoteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionPromoteSettings ResetVerbose(this AzureHdinsightScriptActionPromoteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureHdinsightScriptActionShowExecutionDetailsSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureHdinsightScriptActionShowExecutionDetailsSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings SetClusterName(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings ResetClusterName(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ExecutionId
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ExecutionId"/></em></p>
+        ///   <p>The script execution id.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings SetExecutionId(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings, string executionId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExecutionId = executionId;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ExecutionId"/></em></p>
+        ///   <p>The script execution id.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings ResetExecutionId(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ExecutionId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings SetResourceGroup(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings ResetResourceGroup(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings SetSubscription(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings ResetSubscription(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings SetDebug(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings ResetDebug(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings SetHelp(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings ResetHelp(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings SetOutput(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings ResetOutput(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings SetQuery(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings ResetQuery(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings SetVerbose(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowExecutionDetailsSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightScriptActionShowExecutionDetailsSettings ResetVerbose(this AzureHdinsightScriptActionShowExecutionDetailsSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureHdinsightMonitorDisableSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureHdinsightMonitorDisableSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorDisableSettings.Name"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings SetName(this AzureHdinsightMonitorDisableSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorDisableSettings.Name"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings ResetName(this AzureHdinsightMonitorDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorDisableSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings SetResourceGroup(this AzureHdinsightMonitorDisableSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorDisableSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings ResetResourceGroup(this AzureHdinsightMonitorDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorDisableSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings SetSubscription(this AzureHdinsightMonitorDisableSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorDisableSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings ResetSubscription(this AzureHdinsightMonitorDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorDisableSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings SetDebug(this AzureHdinsightMonitorDisableSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorDisableSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings ResetDebug(this AzureHdinsightMonitorDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorDisableSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings SetHelp(this AzureHdinsightMonitorDisableSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorDisableSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings ResetHelp(this AzureHdinsightMonitorDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorDisableSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings SetOutput(this AzureHdinsightMonitorDisableSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorDisableSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings ResetOutput(this AzureHdinsightMonitorDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorDisableSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings SetQuery(this AzureHdinsightMonitorDisableSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorDisableSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings ResetQuery(this AzureHdinsightMonitorDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorDisableSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings SetVerbose(this AzureHdinsightMonitorDisableSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorDisableSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorDisableSettings ResetVerbose(this AzureHdinsightMonitorDisableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureHdinsightMonitorEnableSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureHdinsightMonitorEnableSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.Name"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetName(this AzureHdinsightMonitorEnableSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.Name"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetName(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetResourceGroup(this AzureHdinsightMonitorEnableSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetResourceGroup(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Workspace
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.Workspace"/></em></p>
+        ///   <p>The name, resource ID or workspace ID of Log Analytics workspace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetWorkspace(this AzureHdinsightMonitorEnableSettings toolSettings, string workspace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = workspace;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.Workspace"/></em></p>
+        ///   <p>The name, resource ID or workspace ID of Log Analytics workspace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetWorkspace(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Workspace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoValidationTimeout
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetNoValidationTimeout(this AzureHdinsightMonitorEnableSettings toolSettings, bool? noValidationTimeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = noValidationTimeout;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetNoValidationTimeout(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureHdinsightMonitorEnableSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings EnableNoValidationTimeout(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureHdinsightMonitorEnableSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings DisableNoValidationTimeout(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureHdinsightMonitorEnableSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ToggleNoValidationTimeout(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = !toolSettings.NoValidationTimeout;
+            return toolSettings;
+        }
+        #endregion
+        #region PrimaryKey
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.PrimaryKey"/></em></p>
+        ///   <p>The certificate for the Log Analytics workspace. Required when workspace ID is provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetPrimaryKey(this AzureHdinsightMonitorEnableSettings toolSettings, string primaryKey)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PrimaryKey = primaryKey;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.PrimaryKey"/></em></p>
+        ///   <p>The certificate for the Log Analytics workspace. Required when workspace ID is provided.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetPrimaryKey(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.PrimaryKey = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetSubscription(this AzureHdinsightMonitorEnableSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetSubscription(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetDebug(this AzureHdinsightMonitorEnableSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetDebug(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetHelp(this AzureHdinsightMonitorEnableSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetHelp(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetOutput(this AzureHdinsightMonitorEnableSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetOutput(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetQuery(this AzureHdinsightMonitorEnableSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetQuery(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorEnableSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings SetVerbose(this AzureHdinsightMonitorEnableSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorEnableSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorEnableSettings ResetVerbose(this AzureHdinsightMonitorEnableSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureHdinsightMonitorShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureHdinsightMonitorShowSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorShowSettings.Name"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings SetName(this AzureHdinsightMonitorShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorShowSettings.Name"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings ResetName(this AzureHdinsightMonitorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings SetResourceGroup(this AzureHdinsightMonitorShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings ResetResourceGroup(this AzureHdinsightMonitorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings SetSubscription(this AzureHdinsightMonitorShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings ResetSubscription(this AzureHdinsightMonitorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings SetDebug(this AzureHdinsightMonitorShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings ResetDebug(this AzureHdinsightMonitorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings SetHelp(this AzureHdinsightMonitorShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings ResetHelp(this AzureHdinsightMonitorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings SetOutput(this AzureHdinsightMonitorShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings ResetOutput(this AzureHdinsightMonitorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings SetQuery(this AzureHdinsightMonitorShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings ResetQuery(this AzureHdinsightMonitorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightMonitorShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings SetVerbose(this AzureHdinsightMonitorShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightMonitorShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightMonitorShowSettings ResetVerbose(this AzureHdinsightMonitorShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureHdinsightApplicationCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureHdinsightTasks"/>.
@@ -6569,10 +8816,34 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureHdinsightApplicationCreateSettingsExtensions
     {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings SetClusterName(this AzureHdinsightApplicationCreateSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings ResetClusterName(this AzureHdinsightApplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
+        ///   <p>The constant value for the application name.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationCreateSettings SetName(this AzureHdinsightApplicationCreateSettings toolSettings, string name)
@@ -6583,7 +8854,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
+        ///   <p>The constant value for the application name.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationCreateSettings ResetName(this AzureHdinsightApplicationCreateSettings toolSettings)
@@ -6617,6 +8888,87 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+        #region MarketplaceId
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.MarketplaceId"/></em></p>
+        ///   <p>The marketplace identifier.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings SetMarketplaceId(this AzureHdinsightApplicationCreateSettings toolSettings, string marketplaceId)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MarketplaceId = marketplaceId;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.MarketplaceId"/></em></p>
+        ///   <p>The marketplace identifier.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings ResetMarketplaceId(this AzureHdinsightApplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.MarketplaceId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoValidationTimeout
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings SetNoValidationTimeout(this AzureHdinsightApplicationCreateSettings toolSettings, bool? noValidationTimeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = noValidationTimeout;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings ResetNoValidationTimeout(this AzureHdinsightApplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureHdinsightApplicationCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings EnableNoValidationTimeout(this AzureHdinsightApplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureHdinsightApplicationCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings DisableNoValidationTimeout(this AzureHdinsightApplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureHdinsightApplicationCreateSettings.NoValidationTimeout"/></em></p>
+        ///   <p>Permit timeout error during argument validation phase. If omitted, validation timeout error will be permitted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings ToggleNoValidationTimeout(this AzureHdinsightApplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoValidationTimeout = !toolSettings.NoValidationTimeout;
+            return toolSettings;
+        }
+        #endregion
         #region Tags
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.Tags"/></em></p>
@@ -6641,171 +8993,156 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
-        #region ApplicationName
+        #region Type
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.ApplicationName"/></em></p>
-        ///   <p>The constant value for the application name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetApplicationName(this AzureHdinsightApplicationCreateSettings toolSettings, string applicationName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationName = applicationName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.ApplicationName"/></em></p>
-        ///   <p>The constant value for the application name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetApplicationName(this AzureHdinsightApplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ApplicationType
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.ApplicationType"/></em></p>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.Type"/></em></p>
         ///   <p>The application type.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetApplicationType(this AzureHdinsightApplicationCreateSettings toolSettings, string applicationType)
+        public static AzureHdinsightApplicationCreateSettings SetType(this AzureHdinsightApplicationCreateSettings toolSettings, HdinsightApplicationCreateType type)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationType = applicationType;
+            toolSettings.Type = type;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.ApplicationType"/></em></p>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.Type"/></em></p>
         ///   <p>The application type.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetApplicationType(this AzureHdinsightApplicationCreateSettings toolSettings)
+        public static AzureHdinsightApplicationCreateSettings ResetType(this AzureHdinsightApplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationType = null;
+            toolSettings.Type = null;
             return toolSettings;
         }
         #endregion
-        #region MarketplaceIdentifier
+        #region AccessMode
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.MarketplaceIdentifier"/></em></p>
-        ///   <p>The marketplace identifier.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetMarketplaceIdentifier(this AzureHdinsightApplicationCreateSettings toolSettings, string marketplaceIdentifier)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MarketplaceIdentifier = marketplaceIdentifier;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.MarketplaceIdentifier"/></em></p>
-        ///   <p>The marketplace identifier.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetMarketplaceIdentifier(this AzureHdinsightApplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.MarketplaceIdentifier = null;
-            return toolSettings;
-        }
-        #endregion
-        #region HttpsEndpointAccessMode
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointAccessMode"/></em></p>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.AccessMode"/></em></p>
         ///   <p>The access mode for the application.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetHttpsEndpointAccessMode(this AzureHdinsightApplicationCreateSettings toolSettings, string httpsEndpointAccessMode)
+        public static AzureHdinsightApplicationCreateSettings SetAccessMode(this AzureHdinsightApplicationCreateSettings toolSettings, string accessMode)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HttpsEndpointAccessMode = httpsEndpointAccessMode;
+            toolSettings.AccessMode = accessMode;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointAccessMode"/></em></p>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.AccessMode"/></em></p>
         ///   <p>The access mode for the application.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetHttpsEndpointAccessMode(this AzureHdinsightApplicationCreateSettings toolSettings)
+        public static AzureHdinsightApplicationCreateSettings ResetAccessMode(this AzureHdinsightApplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HttpsEndpointAccessMode = null;
+            toolSettings.AccessMode = null;
             return toolSettings;
         }
         #endregion
-        #region HttpsEndpointDestinationPort
+        #region DestinationPort
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointDestinationPort"/></em></p>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.DestinationPort"/></em></p>
         ///   <p>The destination port to connect to.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetHttpsEndpointDestinationPort(this AzureHdinsightApplicationCreateSettings toolSettings, string httpsEndpointDestinationPort)
+        public static AzureHdinsightApplicationCreateSettings SetDestinationPort(this AzureHdinsightApplicationCreateSettings toolSettings, string destinationPort)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HttpsEndpointDestinationPort = httpsEndpointDestinationPort;
+            toolSettings.DestinationPort = destinationPort;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointDestinationPort"/></em></p>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.DestinationPort"/></em></p>
         ///   <p>The destination port to connect to.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetHttpsEndpointDestinationPort(this AzureHdinsightApplicationCreateSettings toolSettings)
+        public static AzureHdinsightApplicationCreateSettings ResetDestinationPort(this AzureHdinsightApplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HttpsEndpointDestinationPort = null;
+            toolSettings.DestinationPort = null;
             return toolSettings;
         }
         #endregion
-        #region HttpsEndpointLocation
+        #region DisableGatewayAuth
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointLocation"/></em></p>
-        ///   <p>The location of the endpoint.</p>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.DisableGatewayAuth"/></em></p>
+        ///   <p>Indicates whether to disable gateway authentication. Default is to enable gateway authentication. Default: false.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetHttpsEndpointLocation(this AzureHdinsightApplicationCreateSettings toolSettings, string httpsEndpointLocation)
+        public static AzureHdinsightApplicationCreateSettings SetDisableGatewayAuth(this AzureHdinsightApplicationCreateSettings toolSettings, bool? disableGatewayAuth)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HttpsEndpointLocation = httpsEndpointLocation;
+            toolSettings.DisableGatewayAuth = disableGatewayAuth;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointLocation"/></em></p>
-        ///   <p>The location of the endpoint.</p>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.DisableGatewayAuth"/></em></p>
+        ///   <p>Indicates whether to disable gateway authentication. Default is to enable gateway authentication. Default: false.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetHttpsEndpointLocation(this AzureHdinsightApplicationCreateSettings toolSettings)
+        public static AzureHdinsightApplicationCreateSettings ResetDisableGatewayAuth(this AzureHdinsightApplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HttpsEndpointLocation = null;
+            toolSettings.DisableGatewayAuth = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureHdinsightApplicationCreateSettings.DisableGatewayAuth"/></em></p>
+        ///   <p>Indicates whether to disable gateway authentication. Default is to enable gateway authentication. Default: false.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings EnableDisableGatewayAuth(this AzureHdinsightApplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableGatewayAuth = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureHdinsightApplicationCreateSettings.DisableGatewayAuth"/></em></p>
+        ///   <p>Indicates whether to disable gateway authentication. Default is to enable gateway authentication. Default: false.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings DisableDisableGatewayAuth(this AzureHdinsightApplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableGatewayAuth = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureHdinsightApplicationCreateSettings.DisableGatewayAuth"/></em></p>
+        ///   <p>Indicates whether to disable gateway authentication. Default is to enable gateway authentication. Default: false.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationCreateSettings ToggleDisableGatewayAuth(this AzureHdinsightApplicationCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DisableGatewayAuth = !toolSettings.DisableGatewayAuth;
             return toolSettings;
         }
         #endregion
-        #region HttpsEndpointPublicPort
+        #region SubDomainSuffix
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointPublicPort"/></em></p>
-        ///   <p>The public port to connect to.</p>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.SubDomainSuffix"/></em></p>
+        ///   <p>The subdomain suffix of the application.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetHttpsEndpointPublicPort(this AzureHdinsightApplicationCreateSettings toolSettings, string httpsEndpointPublicPort)
+        public static AzureHdinsightApplicationCreateSettings SetSubDomainSuffix(this AzureHdinsightApplicationCreateSettings toolSettings, string subDomainSuffix)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HttpsEndpointPublicPort = httpsEndpointPublicPort;
+            toolSettings.SubDomainSuffix = subDomainSuffix;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.HttpsEndpointPublicPort"/></em></p>
-        ///   <p>The public port to connect to.</p>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.SubDomainSuffix"/></em></p>
+        ///   <p>The subdomain suffix of the application.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetHttpsEndpointPublicPort(this AzureHdinsightApplicationCreateSettings toolSettings)
+        public static AzureHdinsightApplicationCreateSettings ResetSubDomainSuffix(this AzureHdinsightApplicationCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.HttpsEndpointPublicPort = null;
+            toolSettings.SubDomainSuffix = null;
             return toolSettings;
         }
         #endregion
@@ -6860,7 +9197,7 @@ namespace Nuke.Azure
         #region EdgenodeSize
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.EdgenodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationCreateSettings SetEdgenodeSize(this AzureHdinsightApplicationCreateSettings toolSettings, string edgenodeSize)
@@ -6871,7 +9208,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.EdgenodeSize"/></em></p>
-        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
+        ///   <p>The size of the node. See also: <a href="https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size">https://docs.microsoft.com/azure/hdinsight/hdinsight-hadoop-provision-linux-clusters#configure-cluster-size</a>.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationCreateSettings ResetEdgenodeSize(this AzureHdinsightApplicationCreateSettings toolSettings)
@@ -6950,78 +9287,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.SshUser = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SshEndpointDestinationPort
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointDestinationPort"/></em></p>
-        ///   <p>The destination port to connect to.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetSshEndpointDestinationPort(this AzureHdinsightApplicationCreateSettings toolSettings, string sshEndpointDestinationPort)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshEndpointDestinationPort = sshEndpointDestinationPort;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointDestinationPort"/></em></p>
-        ///   <p>The destination port to connect to.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetSshEndpointDestinationPort(this AzureHdinsightApplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshEndpointDestinationPort = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SshEndpointLocation
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointLocation"/></em></p>
-        ///   <p>The location of the endpoint.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetSshEndpointLocation(this AzureHdinsightApplicationCreateSettings toolSettings, string sshEndpointLocation)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshEndpointLocation = sshEndpointLocation;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointLocation"/></em></p>
-        ///   <p>The location of the endpoint.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetSshEndpointLocation(this AzureHdinsightApplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshEndpointLocation = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SshEndpointPublicPort
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointPublicPort"/></em></p>
-        ///   <p>The public port to connect to.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings SetSshEndpointPublicPort(this AzureHdinsightApplicationCreateSettings toolSettings, string sshEndpointPublicPort)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshEndpointPublicPort = sshEndpointPublicPort;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationCreateSettings.SshEndpointPublicPort"/></em></p>
-        ///   <p>The public port to connect to.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationCreateSettings ResetSshEndpointPublicPort(this AzureHdinsightApplicationCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SshEndpointPublicPort = null;
             return toolSettings;
         }
         #endregion
@@ -7251,10 +9516,34 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureHdinsightApplicationDeleteSettingsExtensions
     {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationDeleteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationDeleteSettings SetClusterName(this AzureHdinsightApplicationDeleteSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationDeleteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationDeleteSettings ResetClusterName(this AzureHdinsightApplicationDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightApplicationDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
+        ///   <p>The constant value for the application name.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationDeleteSettings SetName(this AzureHdinsightApplicationDeleteSettings toolSettings, string name)
@@ -7265,7 +9554,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightApplicationDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
+        ///   <p>The constant value for the application name.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationDeleteSettings ResetName(this AzureHdinsightApplicationDeleteSettings toolSettings)
@@ -7377,30 +9666,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ApplicationName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationDeleteSettings.ApplicationName"/></em></p>
-        ///   <p>The constant value for the application name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationDeleteSettings SetApplicationName(this AzureHdinsightApplicationDeleteSettings toolSettings, string applicationName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationName = applicationName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationDeleteSettings.ApplicationName"/></em></p>
-        ///   <p>The constant value for the application name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationDeleteSettings ResetApplicationName(this AzureHdinsightApplicationDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationName = null;
             return toolSettings;
         }
         #endregion
@@ -7558,27 +9823,27 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureHdinsightApplicationListSettingsExtensions
     {
-        #region Name
+        #region ClusterName
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationListSettings.Name"/></em></p>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationListSettings.ClusterName"/></em></p>
         ///   <p>The name of the cluster.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationListSettings SetName(this AzureHdinsightApplicationListSettings toolSettings, string name)
+        public static AzureHdinsightApplicationListSettings SetClusterName(this AzureHdinsightApplicationListSettings toolSettings, string clusterName)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
+            toolSettings.ClusterName = clusterName;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationListSettings.Name"/></em></p>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationListSettings.ClusterName"/></em></p>
         ///   <p>The name of the cluster.</p>
         /// </summary>
         [Pure]
-        public static AzureHdinsightApplicationListSettings ResetName(this AzureHdinsightApplicationListSettings toolSettings)
+        public static AzureHdinsightApplicationListSettings ResetClusterName(this AzureHdinsightApplicationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
+            toolSettings.ClusterName = null;
             return toolSettings;
         }
         #endregion
@@ -7760,10 +10025,34 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureHdinsightApplicationShowSettingsExtensions
     {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationShowSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationShowSettings SetClusterName(this AzureHdinsightApplicationShowSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationShowSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationShowSettings ResetClusterName(this AzureHdinsightApplicationShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightApplicationShowSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
+        ///   <p>The constant value for the application name.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationShowSettings SetName(this AzureHdinsightApplicationShowSettings toolSettings, string name)
@@ -7774,7 +10063,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightApplicationShowSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
+        ///   <p>The constant value for the application name.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationShowSettings ResetName(this AzureHdinsightApplicationShowSettings toolSettings)
@@ -7805,30 +10094,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ApplicationName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationShowSettings.ApplicationName"/></em></p>
-        ///   <p>The constant value for the application name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationShowSettings SetApplicationName(this AzureHdinsightApplicationShowSettings toolSettings, string applicationName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationName = applicationName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationShowSettings.ApplicationName"/></em></p>
-        ///   <p>The constant value for the application name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationShowSettings ResetApplicationName(this AzureHdinsightApplicationShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationName = null;
             return toolSettings;
         }
         #endregion
@@ -7986,10 +10251,34 @@ namespace Nuke.Azure
     [ExcludeFromCodeCoverage]
     public static partial class AzureHdinsightApplicationWaitSettingsExtensions
     {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureHdinsightApplicationWaitSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationWaitSettings SetClusterName(this AzureHdinsightApplicationWaitSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureHdinsightApplicationWaitSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureHdinsightApplicationWaitSettings ResetClusterName(this AzureHdinsightApplicationWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
         #region Name
         /// <summary>
         ///   <p><em>Sets <see cref="AzureHdinsightApplicationWaitSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
+        ///   <p>The constant value for the application name.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationWaitSettings SetName(this AzureHdinsightApplicationWaitSettings toolSettings, string name)
@@ -8000,7 +10289,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureHdinsightApplicationWaitSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
+        ///   <p>The constant value for the application name.</p>
         /// </summary>
         [Pure]
         public static AzureHdinsightApplicationWaitSettings ResetName(this AzureHdinsightApplicationWaitSettings toolSettings)
@@ -8031,30 +10320,6 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ApplicationName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightApplicationWaitSettings.ApplicationName"/></em></p>
-        ///   <p>The constant value for the application name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationWaitSettings SetApplicationName(this AzureHdinsightApplicationWaitSettings toolSettings, string applicationName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationName = applicationName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightApplicationWaitSettings.ApplicationName"/></em></p>
-        ///   <p>The constant value for the application name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightApplicationWaitSettings ResetApplicationName(this AzureHdinsightApplicationWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ApplicationName = null;
             return toolSettings;
         }
         #endregion
@@ -8372,1886 +10637,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureHdinsightOmsDisableSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureHdinsightOmsDisableSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsDisableSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings SetName(this AzureHdinsightOmsDisableSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsDisableSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings ResetName(this AzureHdinsightOmsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsDisableSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings SetResourceGroup(this AzureHdinsightOmsDisableSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsDisableSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings ResetResourceGroup(this AzureHdinsightOmsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsDisableSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings SetSubscription(this AzureHdinsightOmsDisableSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsDisableSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings ResetSubscription(this AzureHdinsightOmsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsDisableSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings SetDebug(this AzureHdinsightOmsDisableSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsDisableSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings ResetDebug(this AzureHdinsightOmsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsDisableSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings SetHelp(this AzureHdinsightOmsDisableSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsDisableSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings ResetHelp(this AzureHdinsightOmsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsDisableSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings SetOutput(this AzureHdinsightOmsDisableSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsDisableSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings ResetOutput(this AzureHdinsightOmsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsDisableSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings SetQuery(this AzureHdinsightOmsDisableSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsDisableSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings ResetQuery(this AzureHdinsightOmsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsDisableSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings SetVerbose(this AzureHdinsightOmsDisableSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsDisableSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsDisableSettings ResetVerbose(this AzureHdinsightOmsDisableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureHdinsightOmsEnableSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureHdinsightOmsEnableSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetName(this AzureHdinsightOmsEnableSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetName(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetResourceGroup(this AzureHdinsightOmsEnableSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetResourceGroup(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region WorkspaceId
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.WorkspaceId"/></em></p>
-        ///   <p>The Operations Management Suite (OMS) workspace ID.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetWorkspaceId(this AzureHdinsightOmsEnableSettings toolSettings, string workspaceId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkspaceId = workspaceId;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.WorkspaceId"/></em></p>
-        ///   <p>The Operations Management Suite (OMS) workspace ID.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetWorkspaceId(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.WorkspaceId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PrimaryKey
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.PrimaryKey"/></em></p>
-        ///   <p>The Operations Management Suite (OMS) workspace key.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetPrimaryKey(this AzureHdinsightOmsEnableSettings toolSettings, string primaryKey)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PrimaryKey = primaryKey;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.PrimaryKey"/></em></p>
-        ///   <p>The Operations Management Suite (OMS) workspace key.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetPrimaryKey(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PrimaryKey = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetSubscription(this AzureHdinsightOmsEnableSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetSubscription(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetDebug(this AzureHdinsightOmsEnableSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetDebug(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetHelp(this AzureHdinsightOmsEnableSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetHelp(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetOutput(this AzureHdinsightOmsEnableSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetOutput(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetQuery(this AzureHdinsightOmsEnableSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetQuery(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsEnableSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings SetVerbose(this AzureHdinsightOmsEnableSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsEnableSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsEnableSettings ResetVerbose(this AzureHdinsightOmsEnableSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureHdinsightOmsShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureHdinsightOmsShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsShowSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings SetName(this AzureHdinsightOmsShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsShowSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings ResetName(this AzureHdinsightOmsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings SetResourceGroup(this AzureHdinsightOmsShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings ResetResourceGroup(this AzureHdinsightOmsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings SetSubscription(this AzureHdinsightOmsShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings ResetSubscription(this AzureHdinsightOmsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings SetDebug(this AzureHdinsightOmsShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings ResetDebug(this AzureHdinsightOmsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings SetHelp(this AzureHdinsightOmsShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings ResetHelp(this AzureHdinsightOmsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings SetOutput(this AzureHdinsightOmsShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings ResetOutput(this AzureHdinsightOmsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings SetQuery(this AzureHdinsightOmsShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings ResetQuery(this AzureHdinsightOmsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightOmsShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings SetVerbose(this AzureHdinsightOmsShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightOmsShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightOmsShowSettings ResetVerbose(this AzureHdinsightOmsShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureHdinsightScriptActionDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureHdinsightScriptActionDeleteSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings SetName(this AzureHdinsightScriptActionDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings ResetName(this AzureHdinsightScriptActionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings SetResourceGroup(this AzureHdinsightScriptActionDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings ResetResourceGroup(this AzureHdinsightScriptActionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ScriptActionName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.ScriptActionName"/></em></p>
-        ///   <p>The name of the script action.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings SetScriptActionName(this AzureHdinsightScriptActionDeleteSettings toolSettings, string scriptActionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptActionName = scriptActionName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.ScriptActionName"/></em></p>
-        ///   <p>The name of the script action.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings ResetScriptActionName(this AzureHdinsightScriptActionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptActionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings SetSubscription(this AzureHdinsightScriptActionDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings ResetSubscription(this AzureHdinsightScriptActionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings SetDebug(this AzureHdinsightScriptActionDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings ResetDebug(this AzureHdinsightScriptActionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings SetHelp(this AzureHdinsightScriptActionDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings ResetHelp(this AzureHdinsightScriptActionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings SetOutput(this AzureHdinsightScriptActionDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings ResetOutput(this AzureHdinsightScriptActionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings SetQuery(this AzureHdinsightScriptActionDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings ResetQuery(this AzureHdinsightScriptActionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings SetVerbose(this AzureHdinsightScriptActionDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionDeleteSettings ResetVerbose(this AzureHdinsightScriptActionDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureHdinsightScriptActionExecuteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureHdinsightScriptActionExecuteSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetName(this AzureHdinsightScriptActionExecuteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetName(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetResourceGroup(this AzureHdinsightScriptActionExecuteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetResourceGroup(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Roles
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Roles"/></em></p>
-        ///   <p>A comma-delimited list of roles (nodes) where the script will be executed. Valid roles are headnode, workernode, zookeepernode, edgenode.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetRoles(this AzureHdinsightScriptActionExecuteSettings toolSettings, string roles)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Roles = roles;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Roles"/></em></p>
-        ///   <p>A comma-delimited list of roles (nodes) where the script will be executed. Valid roles are headnode, workernode, zookeepernode, edgenode.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetRoles(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Roles = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ScriptActionName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptActionName"/></em></p>
-        ///   <p>The name of the script action.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetScriptActionName(this AzureHdinsightScriptActionExecuteSettings toolSettings, string scriptActionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptActionName = scriptActionName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptActionName"/></em></p>
-        ///   <p>The name of the script action.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetScriptActionName(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptActionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ScriptUri
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptUri"/></em></p>
-        ///   <p>The URI to the script.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetScriptUri(this AzureHdinsightScriptActionExecuteSettings toolSettings, string scriptUri)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptUri = scriptUri;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptUri"/></em></p>
-        ///   <p>The URI to the script.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetScriptUri(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptUri = null;
-            return toolSettings;
-        }
-        #endregion
-        #region PersistOnSuccess
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.PersistOnSuccess"/></em></p>
-        ///   <p>If the scripts needs to be persisted.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetPersistOnSuccess(this AzureHdinsightScriptActionExecuteSettings toolSettings, string persistOnSuccess)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PersistOnSuccess = persistOnSuccess;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.PersistOnSuccess"/></em></p>
-        ///   <p>If the scripts needs to be persisted.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetPersistOnSuccess(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.PersistOnSuccess = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ScriptParameters
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptParameters"/></em></p>
-        ///   <p>The parameters for the script.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetScriptParameters(this AzureHdinsightScriptActionExecuteSettings toolSettings, string scriptParameters)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptParameters = scriptParameters;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.ScriptParameters"/></em></p>
-        ///   <p>The parameters for the script.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetScriptParameters(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptParameters = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetSubscription(this AzureHdinsightScriptActionExecuteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetSubscription(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetDebug(this AzureHdinsightScriptActionExecuteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetDebug(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetHelp(this AzureHdinsightScriptActionExecuteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetHelp(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetOutput(this AzureHdinsightScriptActionExecuteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetOutput(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetQuery(this AzureHdinsightScriptActionExecuteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetQuery(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionExecuteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings SetVerbose(this AzureHdinsightScriptActionExecuteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionExecuteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionExecuteSettings ResetVerbose(this AzureHdinsightScriptActionExecuteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureHdinsightScriptActionListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureHdinsightScriptActionListSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings SetName(this AzureHdinsightScriptActionListSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings ResetName(this AzureHdinsightScriptActionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings SetResourceGroup(this AzureHdinsightScriptActionListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings ResetResourceGroup(this AzureHdinsightScriptActionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Persisted
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Persisted"/></em></p>
-        ///   <p>If only list persisted script actions.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings SetPersisted(this AzureHdinsightScriptActionListSettings toolSettings, string persisted)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Persisted = persisted;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Persisted"/></em></p>
-        ///   <p>If only list persisted script actions.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings ResetPersisted(this AzureHdinsightScriptActionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Persisted = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings SetSubscription(this AzureHdinsightScriptActionListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings ResetSubscription(this AzureHdinsightScriptActionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings SetDebug(this AzureHdinsightScriptActionListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings ResetDebug(this AzureHdinsightScriptActionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings SetHelp(this AzureHdinsightScriptActionListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings ResetHelp(this AzureHdinsightScriptActionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings SetOutput(this AzureHdinsightScriptActionListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings ResetOutput(this AzureHdinsightScriptActionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings SetQuery(this AzureHdinsightScriptActionListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings ResetQuery(this AzureHdinsightScriptActionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings SetVerbose(this AzureHdinsightScriptActionListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionListSettings ResetVerbose(this AzureHdinsightScriptActionListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureHdinsightScriptActionPromoteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureHdinsightScriptActionPromoteSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings SetName(this AzureHdinsightScriptActionPromoteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings ResetName(this AzureHdinsightScriptActionPromoteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings SetResourceGroup(this AzureHdinsightScriptActionPromoteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings ResetResourceGroup(this AzureHdinsightScriptActionPromoteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ScriptExecutionId
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.ScriptExecutionId"/></em></p>
-        ///   <p>The script execution Id.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings SetScriptExecutionId(this AzureHdinsightScriptActionPromoteSettings toolSettings, string scriptExecutionId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptExecutionId = scriptExecutionId;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.ScriptExecutionId"/></em></p>
-        ///   <p>The script execution Id.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings ResetScriptExecutionId(this AzureHdinsightScriptActionPromoteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptExecutionId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings SetSubscription(this AzureHdinsightScriptActionPromoteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings ResetSubscription(this AzureHdinsightScriptActionPromoteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings SetDebug(this AzureHdinsightScriptActionPromoteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings ResetDebug(this AzureHdinsightScriptActionPromoteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings SetHelp(this AzureHdinsightScriptActionPromoteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings ResetHelp(this AzureHdinsightScriptActionPromoteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings SetOutput(this AzureHdinsightScriptActionPromoteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings ResetOutput(this AzureHdinsightScriptActionPromoteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings SetQuery(this AzureHdinsightScriptActionPromoteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings ResetQuery(this AzureHdinsightScriptActionPromoteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionPromoteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings SetVerbose(this AzureHdinsightScriptActionPromoteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionPromoteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionPromoteSettings ResetVerbose(this AzureHdinsightScriptActionPromoteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureHdinsightScriptActionShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureHdinsightTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureHdinsightScriptActionShowSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings SetName(this AzureHdinsightScriptActionShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowSettings.Name"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings ResetName(this AzureHdinsightScriptActionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings SetResourceGroup(this AzureHdinsightScriptActionShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings ResetResourceGroup(this AzureHdinsightScriptActionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ScriptExecutionId
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowSettings.ScriptExecutionId"/></em></p>
-        ///   <p>The script execution Id.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings SetScriptExecutionId(this AzureHdinsightScriptActionShowSettings toolSettings, string scriptExecutionId)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptExecutionId = scriptExecutionId;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowSettings.ScriptExecutionId"/></em></p>
-        ///   <p>The script execution Id.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings ResetScriptExecutionId(this AzureHdinsightScriptActionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ScriptExecutionId = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings SetSubscription(this AzureHdinsightScriptActionShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings ResetSubscription(this AzureHdinsightScriptActionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings SetDebug(this AzureHdinsightScriptActionShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings ResetDebug(this AzureHdinsightScriptActionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings SetHelp(this AzureHdinsightScriptActionShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings ResetHelp(this AzureHdinsightScriptActionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings SetOutput(this AzureHdinsightScriptActionShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings ResetOutput(this AzureHdinsightScriptActionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings SetQuery(this AzureHdinsightScriptActionShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings ResetQuery(this AzureHdinsightScriptActionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureHdinsightScriptActionShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings SetVerbose(this AzureHdinsightScriptActionShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureHdinsightScriptActionShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureHdinsightScriptActionShowSettings ResetVerbose(this AzureHdinsightScriptActionShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region HdinsightCreateClusterTier
     /// <summary>
     ///   Used within <see cref="AzureHdinsightTasks"/>.
@@ -10293,6 +10678,20 @@ namespace Nuke.Azure
     {
         public static HdinsightCreateWorkernodeDataDiskStorageAccountType premium_lrs = new HdinsightCreateWorkernodeDataDiskStorageAccountType { Value = "premium_lrs" };
         public static HdinsightCreateWorkernodeDataDiskStorageAccountType standard_lrs = new HdinsightCreateWorkernodeDataDiskStorageAccountType { Value = "standard_lrs" };
+    }
+    #endregion
+    #region HdinsightApplicationCreateType
+    /// <summary>
+    ///   Used within <see cref="AzureHdinsightTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    [TypeConverter(typeof(TypeConverter<HdinsightApplicationCreateType>))]
+    public partial class HdinsightApplicationCreateType : Enumeration
+    {
+        public static HdinsightApplicationCreateType customapplication = new HdinsightApplicationCreateType { Value = "customapplication" };
+        public static HdinsightApplicationCreateType rserver = new HdinsightApplicationCreateType { Value = "rserver" };
     }
     #endregion
 }

@@ -1,0 +1,997 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
+  "references": [
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/appconfig.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/appconfig/credential.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/appconfig/kv.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/appconfig/revision.yml"
+  ],
+  "name": "AzureAppconfig",
+  "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/appconfig?view=azure-cli-latest",
+  "help": "Manage App Configurations.",
+  "pathExecutable": "az",
+  "tasks": [
+    {
+      "postfix": "Create",
+      "definiteArgument": "appconfig create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Location",
+            "type": "string",
+            "format": "--location {value}",
+            "secret": false,
+            "help": "Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Delete",
+      "definiteArgument": "appconfig delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "List",
+      "definiteArgument": "appconfig list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Show",
+      "definiteArgument": "appconfig show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "Update",
+      "definiteArgument": "appconfig update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "Add",
+            "type": "string",
+            "format": "--add {value}",
+            "secret": false,
+            "help": "Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;."
+          },
+          {
+            "name": "ForceString",
+            "type": "string",
+            "format": "--force-string {value}",
+            "secret": false,
+            "help": "When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON."
+          },
+          {
+            "name": "Remove",
+            "type": "string",
+            "format": "--remove {value}",
+            "secret": false,
+            "help": "Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove."
+          },
+          {
+            "name": "Set",
+            "type": "string",
+            "format": "--set {value}",
+            "secret": false,
+            "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CredentialList",
+      "definiteArgument": "appconfig credential list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "CredentialRegenerate",
+      "definiteArgument": "appconfig credential regenerate",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Id",
+            "type": "string",
+            "format": "--id {value}",
+            "secret": false,
+            "help": "Id of the key to be regenerated. Can be found using az appconfig credential list command."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KvDelete",
+      "definiteArgument": "appconfig kv delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "Support star sign as filters, for instance \\* means all key and abc\\* means keys with abc as prefix. Similarly, \\*abc and \\*abc\\* are also supported."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&amp;lt;connection_string&amp;gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "secret": false,
+            "help": "If no label specified, delete entry with null label. Support star sign as filters, for instance \\* means all label and abc\\* means labels with abc as prefix. Similarly, \\*abc and \\*abc\\* are also supported."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KvExport",
+      "definiteArgument": "appconfig kv export",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Destination",
+            "type": "AppconfigKvExportDestination",
+            "format": "--destination {value}",
+            "secret": false,
+            "help": "The destination of exporting."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&amp;lt;connection_string&amp;gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "If no key specified, return all keys by default. Support star sign as filters, for instance abc\\* means keys with abc as prefix. Similarly, \\*abc and \\*abc\\* are also supported."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "secret": false,
+            "help": "Only keys with this label will be exported. If no label specified, export keys with null label by default."
+          },
+          {
+            "name": "Prefix",
+            "type": "string",
+            "format": "--prefix {value}",
+            "secret": false,
+            "help": "Prefix to be trimed from keys."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for preview."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          },
+          {
+            "name": "DestConnectionString",
+            "type": "string",
+            "format": "--dest-connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of the destination store."
+          },
+          {
+            "name": "DestLabel",
+            "type": "string",
+            "format": "--dest-label {value}",
+            "secret": false,
+            "help": "Exported KVs will be labeled with this destination label."
+          },
+          {
+            "name": "DestName",
+            "type": "string",
+            "format": "--dest-name {value}",
+            "secret": false,
+            "help": "The name of the destination App Configuration."
+          },
+          {
+            "name": "AppserviceAccount",
+            "type": "string",
+            "format": "--appservice-account {value}",
+            "secret": false,
+            "help": "ARM ID for AppService OR the name of the AppService, assuming the it is in the same subscription and resource group as the App Configuration. Required for AppService arguments."
+          },
+          {
+            "name": "Format",
+            "type": "AppconfigKvExportFormat",
+            "format": "--format {value}",
+            "secret": false,
+            "help": "File format exporting to. Required for file arguments."
+          },
+          {
+            "name": "Path",
+            "type": "string",
+            "format": "--path {value}",
+            "secret": false,
+            "help": "Local configuration file path. Required for file arguments."
+          },
+          {
+            "name": "Separator",
+            "type": "string",
+            "format": "--separator {value}",
+            "secret": false,
+            "help": "Delimiter for flatterning the json or yaml file to key-value pairs. Required for importing hierarchical structure. Not applicable for property files. Supported values: '.', ',', ';', '-', '_', '__', '/', ':', ''."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KvList",
+      "definiteArgument": "appconfig kv list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "All",
+            "type": "string",
+            "format": "--all {value}",
+            "secret": false,
+            "help": "List all items."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&amp;lt;connection_string&amp;gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING."
+          },
+          {
+            "name": "Datetime",
+            "type": "string",
+            "format": "--datetime {value}",
+            "secret": false,
+            "help": "Format: \"YYYY-MM-DDThh:mm:ssZ\". If no time zone specified, use UTC by default."
+          },
+          {
+            "name": "Fields",
+            "type": "AppconfigKvFields",
+            "format": "--fields {value}",
+            "secret": false,
+            "help": "Customize output fields."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "If no key specified, return all keys by default. Support star sign as filters, for instance abc\\* means keys with abc as prefix. Similarly, \\*abc and \\*abc\\* are also supported."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "secret": false,
+            "help": "If no label specified, list all labels. Support star sign as filters, for instance abc\\* means labels with abc as prefix. Similarly, \\*abc and \\*abc\\* are also supported."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of items to return. Default to 100."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KvLock",
+      "definiteArgument": "appconfig kv lock",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "Key to be locked."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&amp;lt;connection_string&amp;gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "secret": false,
+            "help": "If no label specified, lock entry with null label. Does NOT support filters like other commands."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KvRestore",
+      "definiteArgument": "appconfig kv restore",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Datetime",
+            "type": "string",
+            "format": "--datetime {value}",
+            "secret": false,
+            "help": "Format: \"YYYY-MM-DDThh:mm:ssZ\". If no time zone specified, use UTC by default."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&amp;lt;connection_string&amp;gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "If no key specified, restore all keys by default. Support star sign as filters, for instance abc\\* means keys with abc as prefix. Similarly, \\*abc and \\*abc\\* are also supported."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "secret": false,
+            "help": "If no label specified, restore all key-value pairs with all labels. Support star sign as filters, for instance abc\\* means labels with abc as prefix. Similarly, \\*abc and \\*abc\\* are also supported."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KvSet",
+      "definiteArgument": "appconfig kv set",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "Key to be set."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&amp;lt;connection_string&amp;gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING."
+          },
+          {
+            "name": "ContentType",
+            "type": "string",
+            "format": "--content-type {value}",
+            "secret": false,
+            "help": "Content type of the keyvalue to be set."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "secret": false,
+            "help": "If no label specified, set the key with null label by default."
+          },
+          {
+            "name": "Tags",
+            "type": "string",
+            "format": "--tags {value}",
+            "secret": false,
+            "help": "Space-separated tags in 'key[=value]' format. Use \"\" to clear existing tags."
+          },
+          {
+            "name": "Value",
+            "type": "string",
+            "format": "--value {value}",
+            "secret": false,
+            "help": "Value of the keyvalue to be set."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KvShow",
+      "definiteArgument": "appconfig kv show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "Key to be showed."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&amp;lt;connection_string&amp;gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING."
+          },
+          {
+            "name": "Datetime",
+            "type": "string",
+            "format": "--datetime {value}",
+            "secret": false,
+            "help": "Format: \"YYYY-MM-DDThh:mm:ssZ\". If no time zone specified, use UTC by default."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "secret": false,
+            "help": "If no label specified, show entry with null label. Does NOT support filters like other commands."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "KvUnlock",
+      "definiteArgument": "appconfig kv unlock",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "Key to be unlocked."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&amp;lt;connection_string&amp;gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "secret": false,
+            "help": "If no label specified, unlock entry with null label. Does NOT support filters like other commands."
+          },
+          {
+            "name": "Yes",
+            "type": "string",
+            "format": "--yes {value}",
+            "secret": false,
+            "help": "Do not prompt for confirmation."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "RevisionList",
+      "definiteArgument": "appconfig revision list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "All",
+            "type": "string",
+            "format": "--all {value}",
+            "secret": false,
+            "help": "List all items."
+          },
+          {
+            "name": "ConnectionString",
+            "type": "string",
+            "format": "--connection-string {value}",
+            "secret": false,
+            "help": "Connections of access key and endpoint of App Configuration. Can be found using 'az appconfig credential list'. Users can preset it using `az configure --defaults appconfig_connection_string=&amp;lt;connection_string&amp;gt;` or environment variable with the name AZURE_APPCONFIG_CONNECTION_STRING."
+          },
+          {
+            "name": "Datetime",
+            "type": "string",
+            "format": "--datetime {value}",
+            "secret": false,
+            "help": "Format: \"YYYY-MM-DDThh:mm:ssZ\". If no time zone specified, use UTC by default."
+          },
+          {
+            "name": "Fields",
+            "type": "AppconfigKvFields",
+            "format": "--fields {value}",
+            "secret": false,
+            "help": "Customize output fields."
+          },
+          {
+            "name": "Key",
+            "type": "string",
+            "format": "--key {value}",
+            "secret": false,
+            "help": "If no key specified, return all keys by default. Support star sign as filters, for instance abc\\* means keys with abc as prefix. Similarly, \\*abc and \\*abc\\* are also supported."
+          },
+          {
+            "name": "Label",
+            "type": "string",
+            "format": "--label {value}",
+            "secret": false,
+            "help": "If no label specified, list all labels. Support star sign as filters, for instance abc\\* means labels with abc as prefix. Similarly, \\*abc and \\*abc\\* are also supported."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the App Configuration. You can configure the default name using `az configure --defaults app_configuration_store=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of items to return. Default to 100."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    }
+  ],
+  "commonTaskProperties": [
+    {
+      "name": "Debug",
+      "type": "string",
+      "format": "--debug {value}",
+      "secret": false,
+      "help": "Increase logging verbosity to show all debug logs."
+    },
+    {
+      "name": "Help",
+      "type": "string",
+      "format": "--help {value}",
+      "secret": false,
+      "help": "Show this help message and exit."
+    },
+    {
+      "name": "Output",
+      "type": "AzureOutput",
+      "format": "--output {value}",
+      "secret": false,
+      "help": "Output format."
+    },
+    {
+      "name": "Query",
+      "type": "string",
+      "format": "--query {value}",
+      "secret": false,
+      "help": "JMESPath query string. See <a href=\"http://jmespath.org/\">http://jmespath.org/</a> for more information and examples."
+    },
+    {
+      "name": "Verbose",
+      "type": "string",
+      "format": "--verbose {value}",
+      "secret": false,
+      "help": "Increase logging verbosity. Use --debug for full debug logs."
+    }
+  ],
+  "enumerations": [
+    {
+      "name": "AppconfigKvExportDestination",
+      "values": [
+        "appconfig",
+        "appservice",
+        "file"
+      ]
+    },
+    {
+      "name": "AppconfigKvExportFormat",
+      "values": [
+        "json",
+        "properties",
+        "yaml"
+      ]
+    },
+    {
+      "name": "AppconfigKvFields",
+      "values": [
+        "content_type",
+        "etag",
+        "key",
+        "label",
+        "last_modified",
+        "locked",
+        "value"
+      ]
+    }
+  ]
+}

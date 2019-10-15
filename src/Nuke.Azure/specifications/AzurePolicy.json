@@ -1,15 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/assignment.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/event.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/remediation.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/set-definition.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/state.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/assignment/identity.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/policy/remediation/deployment.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/policy.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/policy/set-definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/policy/assignment.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/policy/remediation.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/policy/state.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/policy/definition.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/policy/event.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/policy/assignment/identity.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/policy/remediation/deployment.yml"
   ],
   "name": "AzurePolicy",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/policy?view=azure-cli-latest",
@@ -22,6 +22,200 @@
       "settingsClass": {}
     },
     {
+      "postfix": "SetDefinitionCreate",
+      "definiteArgument": "policy set-definition create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Definitions",
+            "type": "string",
+            "format": "--definitions {value}",
+            "secret": false,
+            "help": "Policy definitions in JSON format, or a path to a file containing JSON rules."
+          },
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the new policy set definition."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description of policy set definition."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Display name of policy set definition."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "Name of management group the new policy set definition can be assigned in."
+          },
+          {
+            "name": "Params",
+            "type": "string",
+            "format": "--params {value}",
+            "secret": false,
+            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or id of the subscription the new policy set definition can be assigned in."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SetDefinitionDelete",
+      "definiteArgument": "policy set-definition delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The policy set definition name."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SetDefinitionList",
+      "definiteArgument": "policy set-definition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SetDefinitionShow",
+      "definiteArgument": "policy set-definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The policy set definition name."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "SetDefinitionUpdate",
+      "definiteArgument": "policy set-definition update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The policy set definition name."
+          },
+          {
+            "name": "Definitions",
+            "type": "string",
+            "format": "--definitions {value}",
+            "secret": false,
+            "help": "JSON formatted string or a path to a file or uri containing definitions."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description of policy set definition."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Display name of policy set definition."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Params",
+            "type": "string",
+            "format": "--params {value}",
+            "secret": false,
+            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "AssignmentCreate",
       "definiteArgument": "policy assignment create",
       "settingsClass": {
@@ -32,6 +226,13 @@
             "format": "--display-name {value}",
             "secret": false,
             "help": "Display name of the policy assignment."
+          },
+          {
+            "name": "EnforcementMode",
+            "type": "PolicyAssignmentCreateEnforcementMode",
+            "format": "--enforcement-mode {value}",
+            "secret": false,
+            "help": "Enforcement mode of the policy assignment, e.g. Default, DoNotEnforce. Please visit <a href=\"https://aka.ms/azure-policyAssignment-enforcement-mode\">https://aka.ms/azure-policyAssignment-enforcement-mode</a> for more information."
           },
           {
             "name": "Location",
@@ -117,13 +318,6 @@
             "format": "--role {value}",
             "secret": false,
             "help": "Role name or id that will be assigned to the managed identity."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -153,13 +347,6 @@
             "format": "--scope {value}",
             "secret": false,
             "help": "Scope to which this policy assignment applies."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -189,13 +376,6 @@
             "format": "--scope {value}",
             "secret": false,
             "help": "Scope to which this policy assignment applies."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -225,366 +405,6 @@
             "format": "--scope {value}",
             "secret": false,
             "help": "Scope to which this policy assignment applies."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DefinitionCreate",
-      "definiteArgument": "policy definition create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the new policy definition."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "secret": false,
-            "help": "Description of policy definition."
-          },
-          {
-            "name": "DisplayName",
-            "type": "string",
-            "format": "--display-name {value}",
-            "secret": false,
-            "help": "Display name of policy definition."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "Name of the management group the new policy definition can be assigned in."
-          },
-          {
-            "name": "Metadata",
-            "type": "Dictionary<string, object>",
-            "format": "--metadata {value}",
-            "itemFormat": "{key}={value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Metadata in space-separated key=value pairs."
-          },
-          {
-            "name": "Mode",
-            "type": "PolicyDefinitionMode",
-            "format": "--mode {value}",
-            "secret": false,
-            "help": "Mode of the policy definition."
-          },
-          {
-            "name": "Params",
-            "type": "string",
-            "format": "--params {value}",
-            "secret": false,
-            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
-          },
-          {
-            "name": "Rules",
-            "type": "string",
-            "format": "--rules {value}",
-            "secret": false,
-            "help": "Policy rules in JSON format, or a path to a file containing JSON rules."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or id of the subscription the new policy definition can be assigned in."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DefinitionDelete",
-      "definiteArgument": "policy definition delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The policy definition name."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "The name of the management group of the policy [set] definition."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "The subscription id of the policy [set] definition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DefinitionList",
-      "definiteArgument": "policy definition list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "The name of the management group of the policy [set] definition."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "The subscription id of the policy [set] definition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DefinitionShow",
-      "definiteArgument": "policy definition show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The policy definition name."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "The name of the management group of the policy [set] definition."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "The subscription id of the policy [set] definition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "DefinitionUpdate",
-      "definiteArgument": "policy definition update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The policy definition name."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "secret": false,
-            "help": "Description of policy definition."
-          },
-          {
-            "name": "DisplayName",
-            "type": "string",
-            "format": "--display-name {value}",
-            "secret": false,
-            "help": "Display name of policy definition."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "The name of the management group of the policy [set] definition."
-          },
-          {
-            "name": "Metadata",
-            "type": "Dictionary<string, object>",
-            "format": "--metadata {value}",
-            "itemFormat": "{key}={value}",
-            "separator": " ",
-            "secret": false,
-            "help": "Metadata in space-separated key=value pairs."
-          },
-          {
-            "name": "Mode",
-            "type": "PolicyDefinitionMode",
-            "format": "--mode {value}",
-            "secret": false,
-            "help": "Mode of the policy definition."
-          },
-          {
-            "name": "Params",
-            "type": "string",
-            "format": "--params {value}",
-            "secret": false,
-            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
-          },
-          {
-            "name": "Rules",
-            "type": "string",
-            "format": "--rules {value}",
-            "secret": false,
-            "help": "JSON formatted string or a path to a file with such content."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "The subscription id of the policy [set] definition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "EventList",
-      "definiteArgument": "policy event list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Apply",
-            "type": "string",
-            "format": "--apply {value}",
-            "secret": false,
-            "help": "Apply expression for aggregations using OData notation."
-          },
-          {
-            "name": "Filter",
-            "type": "string",
-            "format": "--filter {value}",
-            "secret": false,
-            "help": "Filter expression using OData notation."
-          },
-          {
-            "name": "From",
-            "type": "string",
-            "format": "--from {value}",
-            "secret": false,
-            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
-          },
-          {
-            "name": "OrderBy",
-            "type": "string",
-            "format": "--order-by {value}",
-            "secret": false,
-            "help": "Ordering expression using OData notation."
-          },
-          {
-            "name": "Select",
-            "type": "string",
-            "format": "--select {value}",
-            "secret": false,
-            "help": "Select expression using OData notation."
-          },
-          {
-            "name": "To",
-            "type": "string",
-            "format": "--to {value}",
-            "secret": false,
-            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "secret": false,
-            "help": "Maximum number of records to return."
-          },
-          {
-            "name": "Namespace",
-            "type": "string",
-            "format": "--namespace {value}",
-            "secret": false,
-            "help": "Provider namespace (Ex: Microsoft.Provider)."
-          },
-          {
-            "name": "Parent",
-            "type": "string",
-            "format": "--parent {value}",
-            "secret": false,
-            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
-          },
-          {
-            "name": "Resource",
-            "type": "string",
-            "format": "--resource {value}",
-            "secret": false,
-            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
-          },
-          {
-            "name": "ResourceType",
-            "type": "string",
-            "format": "--resource-type {value}",
-            "secret": false,
-            "help": "Resource type (Ex: resourceTypeC)."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "Name of management group."
-          },
-          {
-            "name": "PolicyAssignment",
-            "type": "string",
-            "format": "--policy-assignment {value}",
-            "secret": false,
-            "help": "Name of policy assignment."
-          },
-          {
-            "name": "PolicyDefinition",
-            "type": "string",
-            "format": "--policy-definition {value}",
-            "secret": false,
-            "help": "Name of policy definition."
-          },
-          {
-            "name": "PolicySetDefinition",
-            "type": "string",
-            "format": "--policy-set-definition {value}",
-            "secret": false,
-            "help": "Name of policy set definition."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -925,200 +745,6 @@
       }
     },
     {
-      "postfix": "SetDefinitionCreate",
-      "definiteArgument": "policy set-definition create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Definitions",
-            "type": "string",
-            "format": "--definitions {value}",
-            "secret": false,
-            "help": "Policy definitions in JSON format, or a path to a file containing JSON rules."
-          },
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the new policy set definition."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "secret": false,
-            "help": "Description of policy set definition."
-          },
-          {
-            "name": "DisplayName",
-            "type": "string",
-            "format": "--display-name {value}",
-            "secret": false,
-            "help": "Display name of policy set definition."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "Name of management group the new policy set definition can be assigned in."
-          },
-          {
-            "name": "Params",
-            "type": "string",
-            "format": "--params {value}",
-            "secret": false,
-            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or id of the subscription the new policy set definition can be assigned in."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SetDefinitionDelete",
-      "definiteArgument": "policy set-definition delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The policy set definition name."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "The name of the management group of the policy [set] definition."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "The subscription id of the policy [set] definition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SetDefinitionList",
-      "definiteArgument": "policy set-definition list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "The name of the management group of the policy [set] definition."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "The subscription id of the policy [set] definition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SetDefinitionShow",
-      "definiteArgument": "policy set-definition show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The policy set definition name."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "The name of the management group of the policy [set] definition."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "The subscription id of the policy [set] definition."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "SetDefinitionUpdate",
-      "definiteArgument": "policy set-definition update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "The policy set definition name."
-          },
-          {
-            "name": "Definitions",
-            "type": "string",
-            "format": "--definitions {value}",
-            "secret": false,
-            "help": "JSON formatted string or a path to a file or uri containing definitions."
-          },
-          {
-            "name": "Description",
-            "type": "string",
-            "format": "--description {value}",
-            "secret": false,
-            "help": "Description of policy set definition."
-          },
-          {
-            "name": "DisplayName",
-            "type": "string",
-            "format": "--display-name {value}",
-            "secret": false,
-            "help": "Display name of policy set definition."
-          },
-          {
-            "name": "ManagementGroup",
-            "type": "string",
-            "format": "--management-group {value}",
-            "secret": false,
-            "help": "The name of the management group of the policy [set] definition."
-          },
-          {
-            "name": "Params",
-            "type": "string",
-            "format": "--params {value}",
-            "secret": false,
-            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "The subscription id of the policy [set] definition."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "StateList",
       "definiteArgument": "policy state list",
       "settingsClass": {
@@ -1366,6 +992,359 @@
       }
     },
     {
+      "postfix": "DefinitionCreate",
+      "definiteArgument": "policy definition create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the new policy definition."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description of policy definition."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Display name of policy definition."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "Name of the management group the new policy definition can be assigned in."
+          },
+          {
+            "name": "Metadata",
+            "type": "Dictionary<string, object>",
+            "format": "--metadata {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Metadata in space-separated key=value pairs."
+          },
+          {
+            "name": "Mode",
+            "type": "string",
+            "format": "--mode {value}",
+            "secret": false,
+            "help": "Mode of the policy definition, e.g. All, Indexed. Please visit <a href=\"https://aka.ms/azure-policy-mode\">https://aka.ms/azure-policy-mode</a> for more information."
+          },
+          {
+            "name": "Params",
+            "type": "string",
+            "format": "--params {value}",
+            "secret": false,
+            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          },
+          {
+            "name": "Rules",
+            "type": "string",
+            "format": "--rules {value}",
+            "secret": false,
+            "help": "Policy rules in JSON format, or a path to a file containing JSON rules."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or id of the subscription the new policy definition can be assigned in."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionDelete",
+      "definiteArgument": "policy definition delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The policy definition name."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionList",
+      "definiteArgument": "policy definition list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionShow",
+      "definiteArgument": "policy definition show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The policy definition name."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "DefinitionUpdate",
+      "definiteArgument": "policy definition update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "The policy definition name."
+          },
+          {
+            "name": "Description",
+            "type": "string",
+            "format": "--description {value}",
+            "secret": false,
+            "help": "Description of policy definition."
+          },
+          {
+            "name": "DisplayName",
+            "type": "string",
+            "format": "--display-name {value}",
+            "secret": false,
+            "help": "Display name of policy definition."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "The name of the management group of the policy [set] definition."
+          },
+          {
+            "name": "Metadata",
+            "type": "Dictionary<string, object>",
+            "format": "--metadata {value}",
+            "itemFormat": "{key}={value}",
+            "separator": " ",
+            "secret": false,
+            "help": "Metadata in space-separated key=value pairs."
+          },
+          {
+            "name": "Mode",
+            "type": "string",
+            "format": "--mode {value}",
+            "secret": false,
+            "help": "Mode of the policy definition, e.g. All, Indexed. Please visit <a href=\"https://aka.ms/azure-policy-mode\">https://aka.ms/azure-policy-mode</a> for more information."
+          },
+          {
+            "name": "Params",
+            "type": "string",
+            "format": "--params {value}",
+            "secret": false,
+            "help": "JSON formatted string or a path to a file or uri with parameter definitions."
+          },
+          {
+            "name": "Rules",
+            "type": "string",
+            "format": "--rules {value}",
+            "secret": false,
+            "help": "JSON formatted string or a path to a file with such content."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "The subscription id of the policy [set] definition."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "EventList",
+      "definiteArgument": "policy event list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Apply",
+            "type": "string",
+            "format": "--apply {value}",
+            "secret": false,
+            "help": "Apply expression for aggregations using OData notation."
+          },
+          {
+            "name": "Filter",
+            "type": "string",
+            "format": "--filter {value}",
+            "secret": false,
+            "help": "Filter expression using OData notation."
+          },
+          {
+            "name": "From",
+            "type": "string",
+            "format": "--from {value}",
+            "secret": false,
+            "help": "ISO 8601 formatted timestamp specifying the start time of the interval to query."
+          },
+          {
+            "name": "OrderBy",
+            "type": "string",
+            "format": "--order-by {value}",
+            "secret": false,
+            "help": "Ordering expression using OData notation."
+          },
+          {
+            "name": "Select",
+            "type": "string",
+            "format": "--select {value}",
+            "secret": false,
+            "help": "Select expression using OData notation."
+          },
+          {
+            "name": "To",
+            "type": "string",
+            "format": "--to {value}",
+            "secret": false,
+            "help": "ISO 8601 formatted timestamp specifying the end time of the interval to query."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of records to return."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Provider namespace (Ex: Microsoft.Provider)."
+          },
+          {
+            "name": "Parent",
+            "type": "string",
+            "format": "--parent {value}",
+            "secret": false,
+            "help": "The parent path (Ex: resourceTypeA/nameA/resourceTypeB/nameB)."
+          },
+          {
+            "name": "Resource",
+            "type": "string",
+            "format": "--resource {value}",
+            "secret": false,
+            "help": "Resource ID or resource name. If a name is given, please provide the resource group and other relevant resource id arguments."
+          },
+          {
+            "name": "ResourceType",
+            "type": "string",
+            "format": "--resource-type {value}",
+            "secret": false,
+            "help": "Resource type (Ex: resourceTypeC)."
+          },
+          {
+            "name": "ManagementGroup",
+            "type": "string",
+            "format": "--management-group {value}",
+            "secret": false,
+            "help": "Name of management group."
+          },
+          {
+            "name": "PolicyAssignment",
+            "type": "string",
+            "format": "--policy-assignment {value}",
+            "secret": false,
+            "help": "Name of policy assignment."
+          },
+          {
+            "name": "PolicyDefinition",
+            "type": "string",
+            "format": "--policy-definition {value}",
+            "secret": false,
+            "help": "Name of policy definition."
+          },
+          {
+            "name": "PolicySetDefinition",
+            "type": "string",
+            "format": "--policy-set-definition {value}",
+            "secret": false,
+            "help": "Name of policy set definition."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "AssignmentIdentityAssign",
       "definiteArgument": "policy assignment identity assign",
       "settingsClass": {
@@ -1404,13 +1383,6 @@
             "format": "--scope {value}",
             "secret": false,
             "help": "Scope to which this policy assignment applies."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1440,13 +1412,6 @@
             "format": "--scope {value}",
             "secret": false,
             "help": "Scope to which this policy assignment applies."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1476,13 +1441,6 @@
             "format": "--scope {value}",
             "secret": false,
             "help": "Scope to which this policy assignment applies."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }
@@ -1591,18 +1549,17 @@
   ],
   "enumerations": [
     {
+      "name": "PolicyAssignmentCreateEnforcementMode",
+      "values": [
+        "default",
+        "donotenforce"
+      ]
+    },
+    {
       "name": "PolicyAssignmentCreateSku",
       "values": [
         "free",
         "standard"
-      ]
-    },
-    {
-      "name": "PolicyDefinitionMode",
-      "values": [
-        "all",
-        "indexed",
-        "notspecified"
       ]
     }
   ]

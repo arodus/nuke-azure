@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSf.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -324,561 +324,6 @@ namespace Nuke.Azure
         ///   <p>Manage and administer Azure Service Fabric clusters.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureSfApplicationCertificateAdd(AzureSfApplicationCertificateAddSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSfApplicationCertificateAddSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--certificate-file</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateFile"/></li>
-        ///     <li><c>--certificate-output-folder</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateOutputFolder"/></li>
-        ///     <li><c>--certificate-password</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificatePassword"/></li>
-        ///     <li><c>--certificate-subject-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateSubjectName"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfApplicationCertificateAddSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfApplicationCertificateAddSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfApplicationCertificateAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfApplicationCertificateAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfApplicationCertificateAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--secret-identifier</c> via <see cref="AzureSfApplicationCertificateAddSettings.SecretIdentifier"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfApplicationCertificateAddSettings.Subscription"/></li>
-        ///     <li><c>--vault-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.VaultName"/></li>
-        ///     <li><c>--vault-resource-group</c> via <see cref="AzureSfApplicationCertificateAddSettings.VaultResourceGroup"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfApplicationCertificateAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSfApplicationCertificateAdd(Configure<AzureSfApplicationCertificateAddSettings> configurator)
-        {
-            return AzureSfApplicationCertificateAdd(configurator(new AzureSfApplicationCertificateAddSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--certificate-file</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateFile"/></li>
-        ///     <li><c>--certificate-output-folder</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateOutputFolder"/></li>
-        ///     <li><c>--certificate-password</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificatePassword"/></li>
-        ///     <li><c>--certificate-subject-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateSubjectName"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfApplicationCertificateAddSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfApplicationCertificateAddSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfApplicationCertificateAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfApplicationCertificateAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfApplicationCertificateAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--secret-identifier</c> via <see cref="AzureSfApplicationCertificateAddSettings.SecretIdentifier"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfApplicationCertificateAddSettings.Subscription"/></li>
-        ///     <li><c>--vault-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.VaultName"/></li>
-        ///     <li><c>--vault-resource-group</c> via <see cref="AzureSfApplicationCertificateAddSettings.VaultResourceGroup"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfApplicationCertificateAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSfApplicationCertificateAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfApplicationCertificateAdd(CombinatorialConfigure<AzureSfApplicationCertificateAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSfApplicationCertificateAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSfClusterCertificateAdd(AzureSfClusterCertificateAddSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSfClusterCertificateAddSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--certificate-file</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/></li>
-        ///     <li><c>--certificate-output-folder</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/></li>
-        ///     <li><c>--certificate-password</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/></li>
-        ///     <li><c>--certificate-subject-name</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterCertificateAddSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterCertificateAddSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterCertificateAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterCertificateAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--secret-identifier</c> via <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterCertificateAddSettings.Subscription"/></li>
-        ///     <li><c>--vault-name</c> via <see cref="AzureSfClusterCertificateAddSettings.VaultName"/></li>
-        ///     <li><c>--vault-resource-group</c> via <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterCertificateAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSfClusterCertificateAdd(Configure<AzureSfClusterCertificateAddSettings> configurator)
-        {
-            return AzureSfClusterCertificateAdd(configurator(new AzureSfClusterCertificateAddSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--certificate-file</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/></li>
-        ///     <li><c>--certificate-output-folder</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/></li>
-        ///     <li><c>--certificate-password</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/></li>
-        ///     <li><c>--certificate-subject-name</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterCertificateAddSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterCertificateAddSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterCertificateAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterCertificateAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--secret-identifier</c> via <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterCertificateAddSettings.Subscription"/></li>
-        ///     <li><c>--vault-name</c> via <see cref="AzureSfClusterCertificateAddSettings.VaultName"/></li>
-        ///     <li><c>--vault-resource-group</c> via <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterCertificateAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSfClusterCertificateAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterCertificateAdd(CombinatorialConfigure<AzureSfClusterCertificateAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSfClusterCertificateAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSfClusterCertificateRemove(AzureSfClusterCertificateRemoveSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSfClusterCertificateRemoveSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Subscription"/></li>
-        ///     <li><c>--thumbprint</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSfClusterCertificateRemove(Configure<AzureSfClusterCertificateRemoveSettings> configurator)
-        {
-            return AzureSfClusterCertificateRemove(configurator(new AzureSfClusterCertificateRemoveSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Subscription"/></li>
-        ///     <li><c>--thumbprint</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSfClusterCertificateRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterCertificateRemove(CombinatorialConfigure<AzureSfClusterCertificateRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSfClusterCertificateRemove, AzureSfLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSfClusterClientCertificateAdd(AzureSfClusterClientCertificateAddSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSfClusterClientCertificateAddSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--admin-client-thumbprints</c> via <see cref="AzureSfClusterClientCertificateAddSettings.AdminClientThumbprints"/></li>
-        ///     <li><c>--certificate-common-name</c> via <see cref="AzureSfClusterClientCertificateAddSettings.CertificateCommonName"/></li>
-        ///     <li><c>--certificate-issuer-thumbprint</c> via <see cref="AzureSfClusterClientCertificateAddSettings.CertificateIssuerThumbprint"/></li>
-        ///     <li><c>--client-certificate-common-names</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ClientCertificateCommonNames"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Help"/></li>
-        ///     <li><c>--is-admin</c> via <see cref="AzureSfClusterClientCertificateAddSettings.IsAdmin"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Query"/></li>
-        ///     <li><c>--readonly-client-thumbprints</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Subscription"/></li>
-        ///     <li><c>--thumbprint</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Thumbprint"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSfClusterClientCertificateAdd(Configure<AzureSfClusterClientCertificateAddSettings> configurator)
-        {
-            return AzureSfClusterClientCertificateAdd(configurator(new AzureSfClusterClientCertificateAddSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--admin-client-thumbprints</c> via <see cref="AzureSfClusterClientCertificateAddSettings.AdminClientThumbprints"/></li>
-        ///     <li><c>--certificate-common-name</c> via <see cref="AzureSfClusterClientCertificateAddSettings.CertificateCommonName"/></li>
-        ///     <li><c>--certificate-issuer-thumbprint</c> via <see cref="AzureSfClusterClientCertificateAddSettings.CertificateIssuerThumbprint"/></li>
-        ///     <li><c>--client-certificate-common-names</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ClientCertificateCommonNames"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Help"/></li>
-        ///     <li><c>--is-admin</c> via <see cref="AzureSfClusterClientCertificateAddSettings.IsAdmin"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Query"/></li>
-        ///     <li><c>--readonly-client-thumbprints</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Subscription"/></li>
-        ///     <li><c>--thumbprint</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Thumbprint"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSfClusterClientCertificateAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterClientCertificateAdd(CombinatorialConfigure<AzureSfClusterClientCertificateAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSfClusterClientCertificateAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSfClusterClientCertificateRemove(AzureSfClusterClientCertificateRemoveSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSfClusterClientCertificateRemoveSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--certificate-common-name</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateCommonName"/></li>
-        ///     <li><c>--certificate-issuer-thumbprint</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateIssuerThumbprint"/></li>
-        ///     <li><c>--client-certificate-common-names</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ClientCertificateCommonNames"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Subscription"/></li>
-        ///     <li><c>--thumbprints</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Thumbprints"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSfClusterClientCertificateRemove(Configure<AzureSfClusterClientCertificateRemoveSettings> configurator)
-        {
-            return AzureSfClusterClientCertificateRemove(configurator(new AzureSfClusterClientCertificateRemoveSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--certificate-common-name</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateCommonName"/></li>
-        ///     <li><c>--certificate-issuer-thumbprint</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateIssuerThumbprint"/></li>
-        ///     <li><c>--client-certificate-common-names</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ClientCertificateCommonNames"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Subscription"/></li>
-        ///     <li><c>--thumbprints</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Thumbprints"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSfClusterClientCertificateRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterClientCertificateRemove(CombinatorialConfigure<AzureSfClusterClientCertificateRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSfClusterClientCertificateRemove, AzureSfLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSfClusterDurabilityUpdate(AzureSfClusterDurabilityUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSfClusterDurabilityUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/></li>
-        ///     <li><c>--durability-level</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/></li>
-        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSfClusterDurabilityUpdate(Configure<AzureSfClusterDurabilityUpdateSettings> configurator)
-        {
-            return AzureSfClusterDurabilityUpdate(configurator(new AzureSfClusterDurabilityUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/></li>
-        ///     <li><c>--durability-level</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/></li>
-        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSfClusterDurabilityUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterDurabilityUpdate(CombinatorialConfigure<AzureSfClusterDurabilityUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSfClusterDurabilityUpdate, AzureSfLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSfClusterNodeTypeAdd(AzureSfClusterNodeTypeAddSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSfClusterNodeTypeAddSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--capacity</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Capacity"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeTypeAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Debug"/></li>
-        ///     <li><c>--durability-level</c> via <see cref="AzureSfClusterNodeTypeAddSettings.DurabilityLevel"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Help"/></li>
-        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeTypeAddSettings.NodeType"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeTypeAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Verbose"/></li>
-        ///     <li><c>--vm-password</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmPassword"/></li>
-        ///     <li><c>--vm-sku</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmSku"/></li>
-        ///     <li><c>--vm-tier</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmTier"/></li>
-        ///     <li><c>--vm-user-name</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmUserName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSfClusterNodeTypeAdd(Configure<AzureSfClusterNodeTypeAddSettings> configurator)
-        {
-            return AzureSfClusterNodeTypeAdd(configurator(new AzureSfClusterNodeTypeAddSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--capacity</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Capacity"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeTypeAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Debug"/></li>
-        ///     <li><c>--durability-level</c> via <see cref="AzureSfClusterNodeTypeAddSettings.DurabilityLevel"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Help"/></li>
-        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeTypeAddSettings.NodeType"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeTypeAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Verbose"/></li>
-        ///     <li><c>--vm-password</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmPassword"/></li>
-        ///     <li><c>--vm-sku</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmSku"/></li>
-        ///     <li><c>--vm-tier</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmTier"/></li>
-        ///     <li><c>--vm-user-name</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmUserName"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSfClusterNodeTypeAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterNodeTypeAdd(CombinatorialConfigure<AzureSfClusterNodeTypeAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSfClusterNodeTypeAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSfClusterNodeAdd(AzureSfClusterNodeAddSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSfClusterNodeAddSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeAddSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeAddSettings.Help"/></li>
-        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeAddSettings.NodeType"/></li>
-        ///     <li><c>--number-of-nodes-to-add</c> via <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeAddSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSfClusterNodeAdd(Configure<AzureSfClusterNodeAddSettings> configurator)
-        {
-            return AzureSfClusterNodeAdd(configurator(new AzureSfClusterNodeAddSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeAddSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeAddSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeAddSettings.Help"/></li>
-        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeAddSettings.NodeType"/></li>
-        ///     <li><c>--number-of-nodes-to-add</c> via <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeAddSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeAddSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeAddSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeAddSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSfClusterNodeAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterNodeAdd(CombinatorialConfigure<AzureSfClusterNodeAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSfClusterNodeAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureSfClusterNodeRemove(AzureSfClusterNodeRemoveSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureSfClusterNodeRemoveSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeRemoveSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeRemoveSettings.Help"/></li>
-        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/></li>
-        ///     <li><c>--number-of-nodes-to-remove</c> via <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeRemoveSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeRemoveSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeRemoveSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureSfClusterNodeRemove(Configure<AzureSfClusterNodeRemoveSettings> configurator)
-        {
-            return AzureSfClusterNodeRemove(configurator(new AzureSfClusterNodeRemoveSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeRemoveSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeRemoveSettings.Help"/></li>
-        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/></li>
-        ///     <li><c>--number-of-nodes-to-remove</c> via <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeRemoveSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeRemoveSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeRemoveSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureSfClusterNodeRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterNodeRemove(CombinatorialConfigure<AzureSfClusterNodeRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureSfClusterNodeRemove, AzureSfLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
         public static IReadOnlyCollection<Output> AzureSfClusterReliabilityUpdate(AzureSfClusterReliabilityUpdateSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureSfClusterReliabilityUpdateSettings();
@@ -1056,6 +501,120 @@ namespace Nuke.Azure
         ///   <p>Manage and administer Azure Service Fabric clusters.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
+        public static IReadOnlyCollection<Output> AzureSfClusterNodeAdd(AzureSfClusterNodeAddSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSfClusterNodeAddSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeAddSettings.Help"/></li>
+        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeAddSettings.NodeType"/></li>
+        ///     <li><c>--number-of-nodes-to-add</c> via <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSfClusterNodeAdd(Configure<AzureSfClusterNodeAddSettings> configurator)
+        {
+            return AzureSfClusterNodeAdd(configurator(new AzureSfClusterNodeAddSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeAddSettings.Help"/></li>
+        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeAddSettings.NodeType"/></li>
+        ///     <li><c>--number-of-nodes-to-add</c> via <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSfClusterNodeAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterNodeAdd(CombinatorialConfigure<AzureSfClusterNodeAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSfClusterNodeAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSfClusterNodeRemove(AzureSfClusterNodeRemoveSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSfClusterNodeRemoveSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeRemoveSettings.Help"/></li>
+        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/></li>
+        ///     <li><c>--number-of-nodes-to-remove</c> via <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeRemoveSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSfClusterNodeRemove(Configure<AzureSfClusterNodeRemoveSettings> configurator)
+        {
+            return AzureSfClusterNodeRemove(configurator(new AzureSfClusterNodeRemoveSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeRemoveSettings.Help"/></li>
+        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/></li>
+        ///     <li><c>--number-of-nodes-to-remove</c> via <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeRemoveSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSfClusterNodeRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterNodeRemove(CombinatorialConfigure<AzureSfClusterNodeRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSfClusterNodeRemove, AzureSfLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
         public static IReadOnlyCollection<Output> AzureSfClusterUpgradeTypeSet(AzureSfClusterUpgradeTypeSetSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureSfClusterUpgradeTypeSetSettings();
@@ -1108,6 +667,447 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureSfClusterUpgradeTypeSetSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterUpgradeTypeSet(CombinatorialConfigure<AzureSfClusterUpgradeTypeSetSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureSfClusterUpgradeTypeSet, AzureSfLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSfClusterClientCertificateAdd(AzureSfClusterClientCertificateAddSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSfClusterClientCertificateAddSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--admin-client-thumbprints</c> via <see cref="AzureSfClusterClientCertificateAddSettings.AdminClientThumbprints"/></li>
+        ///     <li><c>--certificate-common-name</c> via <see cref="AzureSfClusterClientCertificateAddSettings.CertificateCommonName"/></li>
+        ///     <li><c>--certificate-issuer-thumbprint</c> via <see cref="AzureSfClusterClientCertificateAddSettings.CertificateIssuerThumbprint"/></li>
+        ///     <li><c>--client-certificate-common-names</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ClientCertificateCommonNames"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Help"/></li>
+        ///     <li><c>--is-admin</c> via <see cref="AzureSfClusterClientCertificateAddSettings.IsAdmin"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Query"/></li>
+        ///     <li><c>--readonly-client-thumbprints</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Subscription"/></li>
+        ///     <li><c>--thumbprint</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Thumbprint"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSfClusterClientCertificateAdd(Configure<AzureSfClusterClientCertificateAddSettings> configurator)
+        {
+            return AzureSfClusterClientCertificateAdd(configurator(new AzureSfClusterClientCertificateAddSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--admin-client-thumbprints</c> via <see cref="AzureSfClusterClientCertificateAddSettings.AdminClientThumbprints"/></li>
+        ///     <li><c>--certificate-common-name</c> via <see cref="AzureSfClusterClientCertificateAddSettings.CertificateCommonName"/></li>
+        ///     <li><c>--certificate-issuer-thumbprint</c> via <see cref="AzureSfClusterClientCertificateAddSettings.CertificateIssuerThumbprint"/></li>
+        ///     <li><c>--client-certificate-common-names</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ClientCertificateCommonNames"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Help"/></li>
+        ///     <li><c>--is-admin</c> via <see cref="AzureSfClusterClientCertificateAddSettings.IsAdmin"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Query"/></li>
+        ///     <li><c>--readonly-client-thumbprints</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterClientCertificateAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Subscription"/></li>
+        ///     <li><c>--thumbprint</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Thumbprint"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterClientCertificateAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSfClusterClientCertificateAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterClientCertificateAdd(CombinatorialConfigure<AzureSfClusterClientCertificateAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSfClusterClientCertificateAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSfClusterClientCertificateRemove(AzureSfClusterClientCertificateRemoveSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSfClusterClientCertificateRemoveSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--certificate-common-name</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateCommonName"/></li>
+        ///     <li><c>--certificate-issuer-thumbprint</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateIssuerThumbprint"/></li>
+        ///     <li><c>--client-certificate-common-names</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ClientCertificateCommonNames"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Subscription"/></li>
+        ///     <li><c>--thumbprints</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Thumbprints"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSfClusterClientCertificateRemove(Configure<AzureSfClusterClientCertificateRemoveSettings> configurator)
+        {
+            return AzureSfClusterClientCertificateRemove(configurator(new AzureSfClusterClientCertificateRemoveSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--certificate-common-name</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateCommonName"/></li>
+        ///     <li><c>--certificate-issuer-thumbprint</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateIssuerThumbprint"/></li>
+        ///     <li><c>--client-certificate-common-names</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ClientCertificateCommonNames"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Subscription"/></li>
+        ///     <li><c>--thumbprints</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Thumbprints"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterClientCertificateRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSfClusterClientCertificateRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterClientCertificateRemove(CombinatorialConfigure<AzureSfClusterClientCertificateRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSfClusterClientCertificateRemove, AzureSfLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSfClusterNodeTypeAdd(AzureSfClusterNodeTypeAddSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSfClusterNodeTypeAddSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--capacity</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Capacity"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeTypeAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Debug"/></li>
+        ///     <li><c>--durability-level</c> via <see cref="AzureSfClusterNodeTypeAddSettings.DurabilityLevel"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Help"/></li>
+        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeTypeAddSettings.NodeType"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeTypeAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Verbose"/></li>
+        ///     <li><c>--vm-password</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmPassword"/></li>
+        ///     <li><c>--vm-sku</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmSku"/></li>
+        ///     <li><c>--vm-tier</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmTier"/></li>
+        ///     <li><c>--vm-user-name</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmUserName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSfClusterNodeTypeAdd(Configure<AzureSfClusterNodeTypeAddSettings> configurator)
+        {
+            return AzureSfClusterNodeTypeAdd(configurator(new AzureSfClusterNodeTypeAddSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--capacity</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Capacity"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterNodeTypeAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Debug"/></li>
+        ///     <li><c>--durability-level</c> via <see cref="AzureSfClusterNodeTypeAddSettings.DurabilityLevel"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Help"/></li>
+        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterNodeTypeAddSettings.NodeType"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterNodeTypeAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterNodeTypeAddSettings.Verbose"/></li>
+        ///     <li><c>--vm-password</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmPassword"/></li>
+        ///     <li><c>--vm-sku</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmSku"/></li>
+        ///     <li><c>--vm-tier</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmTier"/></li>
+        ///     <li><c>--vm-user-name</c> via <see cref="AzureSfClusterNodeTypeAddSettings.VmUserName"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSfClusterNodeTypeAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterNodeTypeAdd(CombinatorialConfigure<AzureSfClusterNodeTypeAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSfClusterNodeTypeAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSfClusterDurabilityUpdate(AzureSfClusterDurabilityUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSfClusterDurabilityUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/></li>
+        ///     <li><c>--durability-level</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/></li>
+        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSfClusterDurabilityUpdate(Configure<AzureSfClusterDurabilityUpdateSettings> configurator)
+        {
+            return AzureSfClusterDurabilityUpdate(configurator(new AzureSfClusterDurabilityUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/></li>
+        ///     <li><c>--durability-level</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/></li>
+        ///     <li><c>--node-type</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSfClusterDurabilityUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterDurabilityUpdate(CombinatorialConfigure<AzureSfClusterDurabilityUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSfClusterDurabilityUpdate, AzureSfLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSfClusterCertificateAdd(AzureSfClusterCertificateAddSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSfClusterCertificateAddSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--certificate-file</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/></li>
+        ///     <li><c>--certificate-output-folder</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/></li>
+        ///     <li><c>--certificate-password</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/></li>
+        ///     <li><c>--certificate-subject-name</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterCertificateAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterCertificateAddSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterCertificateAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterCertificateAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--secret-identifier</c> via <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterCertificateAddSettings.Subscription"/></li>
+        ///     <li><c>--vault-name</c> via <see cref="AzureSfClusterCertificateAddSettings.VaultName"/></li>
+        ///     <li><c>--vault-resource-group</c> via <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterCertificateAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSfClusterCertificateAdd(Configure<AzureSfClusterCertificateAddSettings> configurator)
+        {
+            return AzureSfClusterCertificateAdd(configurator(new AzureSfClusterCertificateAddSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--certificate-file</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/></li>
+        ///     <li><c>--certificate-output-folder</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/></li>
+        ///     <li><c>--certificate-password</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/></li>
+        ///     <li><c>--certificate-subject-name</c> via <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterCertificateAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterCertificateAddSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterCertificateAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterCertificateAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--secret-identifier</c> via <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterCertificateAddSettings.Subscription"/></li>
+        ///     <li><c>--vault-name</c> via <see cref="AzureSfClusterCertificateAddSettings.VaultName"/></li>
+        ///     <li><c>--vault-resource-group</c> via <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterCertificateAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSfClusterCertificateAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterCertificateAdd(CombinatorialConfigure<AzureSfClusterCertificateAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSfClusterCertificateAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSfClusterCertificateRemove(AzureSfClusterCertificateRemoveSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSfClusterCertificateRemoveSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Subscription"/></li>
+        ///     <li><c>--thumbprint</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSfClusterCertificateRemove(Configure<AzureSfClusterCertificateRemoveSettings> configurator)
+        {
+            return AzureSfClusterCertificateRemove(configurator(new AzureSfClusterCertificateRemoveSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Subscription"/></li>
+        ///     <li><c>--thumbprint</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSfClusterCertificateRemoveSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfClusterCertificateRemove(CombinatorialConfigure<AzureSfClusterCertificateRemoveSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSfClusterCertificateRemove, AzureSfLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureSfApplicationCertificateAdd(AzureSfApplicationCertificateAddSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureSfApplicationCertificateAddSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--certificate-file</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateFile"/></li>
+        ///     <li><c>--certificate-output-folder</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateOutputFolder"/></li>
+        ///     <li><c>--certificate-password</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificatePassword"/></li>
+        ///     <li><c>--certificate-subject-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateSubjectName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfApplicationCertificateAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfApplicationCertificateAddSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfApplicationCertificateAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfApplicationCertificateAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfApplicationCertificateAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--secret-identifier</c> via <see cref="AzureSfApplicationCertificateAddSettings.SecretIdentifier"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfApplicationCertificateAddSettings.Subscription"/></li>
+        ///     <li><c>--vault-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.VaultName"/></li>
+        ///     <li><c>--vault-resource-group</c> via <see cref="AzureSfApplicationCertificateAddSettings.VaultResourceGroup"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfApplicationCertificateAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureSfApplicationCertificateAdd(Configure<AzureSfApplicationCertificateAddSettings> configurator)
+        {
+            return AzureSfApplicationCertificateAdd(configurator(new AzureSfApplicationCertificateAddSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage and administer Azure Service Fabric clusters.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/sf?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--certificate-file</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateFile"/></li>
+        ///     <li><c>--certificate-output-folder</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateOutputFolder"/></li>
+        ///     <li><c>--certificate-password</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificatePassword"/></li>
+        ///     <li><c>--certificate-subject-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.CertificateSubjectName"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureSfApplicationCertificateAddSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureSfApplicationCertificateAddSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureSfApplicationCertificateAddSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureSfApplicationCertificateAddSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureSfApplicationCertificateAddSettings.ResourceGroup"/></li>
+        ///     <li><c>--secret-identifier</c> via <see cref="AzureSfApplicationCertificateAddSettings.SecretIdentifier"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureSfApplicationCertificateAddSettings.Subscription"/></li>
+        ///     <li><c>--vault-name</c> via <see cref="AzureSfApplicationCertificateAddSettings.VaultName"/></li>
+        ///     <li><c>--vault-resource-group</c> via <see cref="AzureSfApplicationCertificateAddSettings.VaultResourceGroup"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureSfApplicationCertificateAddSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureSfApplicationCertificateAddSettings Settings, IReadOnlyCollection<Output> Output)> AzureSfApplicationCertificateAdd(CombinatorialConfigure<AzureSfApplicationCertificateAddSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureSfApplicationCertificateAdd, AzureSfLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureSfSettings
@@ -1271,7 +1271,7 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string VaultName { get; internal set; }
         /// <summary>
-        ///   Key vault resource group name,if not given it will be cluster resource group name.
+        ///   Key vault resource group name, if not given it will be cluster resource group name.
         /// </summary>
         public virtual string VaultResourceGroup { get; internal set; }
         /// <summary>
@@ -1460,760 +1460,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureSfApplicationCertificateAddSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfApplicationCertificateAddSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSf executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
-        /// <summary>
-        ///   Specify the name of the cluster, if not given it will be same as resource group name.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   The resource group name.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The existing certificate file path for the primary cluster certificate.
-        /// </summary>
-        public virtual string CertificateFile { get; internal set; }
-        /// <summary>
-        ///   The folder of the new certificate file to be created.
-        /// </summary>
-        public virtual string CertificateOutputFolder { get; internal set; }
-        /// <summary>
-        ///   The password of the certificate file.
-        /// </summary>
-        public virtual string CertificatePassword { get; internal set; }
-        /// <summary>
-        ///   The subject name of the certificate to be created.
-        /// </summary>
-        public virtual string CertificateSubjectName { get; internal set; }
-        /// <summary>
-        ///   The existing Azure key vault secret URL.
-        /// </summary>
-        public virtual string SecretIdentifier { get; internal set; }
-        /// <summary>
-        ///   Azure key vault name, it not given it will be the cluster resource group name.
-        /// </summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary>
-        ///   Key vault resource group name,if not given it will be cluster resource group name.
-        /// </summary>
-        public virtual string VaultResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf application certificate add")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--certificate-file {value}", CertificateFile)
-              .Add("--certificate-output-folder {value}", CertificateOutputFolder)
-              .Add("--certificate-password {value}", CertificatePassword, secret: true)
-              .Add("--certificate-subject-name {value}", CertificateSubjectName)
-              .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--vault-resource-group {value}", VaultResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterCertificateAddSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterCertificateAddSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSf executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
-        /// <summary>
-        ///   Specify the name of the cluster, if not given it will be same as resource group name.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   The resource group name.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The existing certificate file path for the primary cluster certificate.
-        /// </summary>
-        public virtual string CertificateFile { get; internal set; }
-        /// <summary>
-        ///   The folder of the new certificate file to be created.
-        /// </summary>
-        public virtual string CertificateOutputFolder { get; internal set; }
-        /// <summary>
-        ///   The password of the certificate file.
-        /// </summary>
-        public virtual string CertificatePassword { get; internal set; }
-        /// <summary>
-        ///   The subject name of the certificate to be created.
-        /// </summary>
-        public virtual string CertificateSubjectName { get; internal set; }
-        /// <summary>
-        ///   The existing Azure key vault secret URL.
-        /// </summary>
-        public virtual string SecretIdentifier { get; internal set; }
-        /// <summary>
-        ///   Azure key vault name, it not given it will be the cluster resource group name.
-        /// </summary>
-        public virtual string VaultName { get; internal set; }
-        /// <summary>
-        ///   Key vault resource group name,if not given it will be cluster resource group name.
-        /// </summary>
-        public virtual string VaultResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster certificate add")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--certificate-file {value}", CertificateFile)
-              .Add("--certificate-output-folder {value}", CertificateOutputFolder)
-              .Add("--certificate-password {value}", CertificatePassword, secret: true)
-              .Add("--certificate-subject-name {value}", CertificateSubjectName)
-              .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
-              .Add("--vault-name {value}", VaultName)
-              .Add("--vault-resource-group {value}", VaultResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterCertificateRemoveSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterCertificateRemoveSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSf executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
-        /// <summary>
-        ///   Specify the name of the cluster, if not given it will be same as resource group name.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   The resource group name.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The cluster certificate thumbprint to be removed.
-        /// </summary>
-        public virtual string Thumbprint { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster certificate remove")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--thumbprint {value}", Thumbprint)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterClientCertificateAddSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterClientCertificateAddSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSf executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
-        /// <summary>
-        ///   Specify the name of the cluster, if not given it will be same as resource group name.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   The resource group name.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Client certificate thumbprint that only has admin permission.
-        /// </summary>
-        public virtual string AdminClientThumbprints { get; internal set; }
-        /// <summary>
-        ///   Client certificate common name.
-        /// </summary>
-        public virtual string CertificateCommonName { get; internal set; }
-        /// <summary>
-        ///   Client certificate issuer thumbprint.
-        /// </summary>
-        public virtual string CertificateIssuerThumbprint { get; internal set; }
-        /// <summary>
-        ///   JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"isAdmin":true, "certificateCommonName": "test.com", "certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].
-        /// </summary>
-        public virtual string ClientCertificateCommonNames { get; internal set; }
-        /// <summary>
-        ///   Client authentication type.
-        /// </summary>
-        public virtual string IsAdmin { get; internal set; }
-        /// <summary>
-        ///   Space-separated list of client certificate thumbprint that has read only permission.
-        /// </summary>
-        public virtual IReadOnlyList<string> ReadonlyClientThumbprints => ReadonlyClientThumbprintsInternal.AsReadOnly();
-        internal List<string> ReadonlyClientThumbprintsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Client certificate thumbprint.
-        /// </summary>
-        public virtual string Thumbprint { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster client-certificate add")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--admin-client-thumbprints {value}", AdminClientThumbprints)
-              .Add("--certificate-common-name {value}", CertificateCommonName)
-              .Add("--certificate-issuer-thumbprint {value}", CertificateIssuerThumbprint)
-              .Add("--client-certificate-common-names {value}", ClientCertificateCommonNames)
-              .Add("--is-admin {value}", IsAdmin)
-              .Add("--readonly-client-thumbprints {value}", ReadonlyClientThumbprints, separator: ' ')
-              .Add("--thumbprint {value}", Thumbprint)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterClientCertificateRemoveSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterClientCertificateRemoveSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSf executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
-        /// <summary>
-        ///   Specify the name of the cluster, if not given it will be same as resource group name.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   The resource group name.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Client certificate common name.
-        /// </summary>
-        public virtual string CertificateCommonName { get; internal set; }
-        /// <summary>
-        ///   Client certificate issuer thumbprint.
-        /// </summary>
-        public virtual string CertificateIssuerThumbprint { get; internal set; }
-        /// <summary>
-        ///   JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"certificateCommonName": "test.com","certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].
-        /// </summary>
-        public virtual string ClientCertificateCommonNames { get; internal set; }
-        /// <summary>
-        ///   A single or Space-separated list of client certificate thumbprint(s) to be remove.
-        /// </summary>
-        public virtual string Thumbprints { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster client-certificate remove")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--certificate-common-name {value}", CertificateCommonName)
-              .Add("--certificate-issuer-thumbprint {value}", CertificateIssuerThumbprint)
-              .Add("--client-certificate-common-names {value}", ClientCertificateCommonNames)
-              .Add("--thumbprints {value}", Thumbprints)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterDurabilityUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterDurabilityUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSf executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
-        /// <summary>
-        ///   Specify the name of the cluster, if not given it will be same as resource group name.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   Durability level.
-        /// </summary>
-        public virtual SfClusterDurabilityDurabilityLevel DurabilityLevel { get; internal set; }
-        /// <summary>
-        ///   The Node type name.
-        /// </summary>
-        public virtual string NodeType { get; internal set; }
-        /// <summary>
-        ///   The resource group name.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster durability update")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--durability-level {value}", DurabilityLevel)
-              .Add("--node-type {value}", NodeType)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterNodeTypeAddSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterNodeTypeAddSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSf executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
-        /// <summary>
-        ///   The capacity tag applied to nodes in the node type. The cluster resource manager uses these tags to understand how much capacity a node has.
-        /// </summary>
-        public virtual string Capacity { get; internal set; }
-        /// <summary>
-        ///   Specify the name of the cluster, if not given it will be same as resource group name.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   The Node type name.
-        /// </summary>
-        public virtual string NodeType { get; internal set; }
-        /// <summary>
-        ///   The resource group name.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   The password of the Vm.
-        /// </summary>
-        public virtual string VmPassword { get; internal set; }
-        /// <summary>
-        ///   The user name for logging to Vm. Default will be adminuser.
-        /// </summary>
-        public virtual string VmUserName { get; internal set; }
-        /// <summary>
-        ///   Durability level.
-        /// </summary>
-        public virtual SfClusterDurabilityDurabilityLevel DurabilityLevel { get; internal set; }
-        /// <summary>
-        ///   VM Sku.
-        /// </summary>
-        public virtual string VmSku { get; internal set; }
-        /// <summary>
-        ///   VM tier.
-        /// </summary>
-        public virtual string VmTier { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster node-type add")
-              .Add("--capacity {value}", Capacity)
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--node-type {value}", NodeType)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--vm-password {value}", VmPassword, secret: true)
-              .Add("--vm-user-name {value}", VmUserName)
-              .Add("--durability-level {value}", DurabilityLevel)
-              .Add("--vm-sku {value}", VmSku)
-              .Add("--vm-tier {value}", VmTier)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterNodeAddSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterNodeAddSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSf executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
-        /// <summary>
-        ///   Specify the name of the cluster, if not given it will be same as resource group name.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   The Node type name.
-        /// </summary>
-        public virtual string NodeType { get; internal set; }
-        /// <summary>
-        ///   Number of nodes to add.
-        /// </summary>
-        public virtual int? NumberOfNodesToAdd { get; internal set; }
-        /// <summary>
-        ///   The resource group name.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster node add")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--node-type {value}", NodeType)
-              .Add("--number-of-nodes-to-add {value}", NumberOfNodesToAdd)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureSfClusterNodeRemoveSettings
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureSfClusterNodeRemoveSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureSf executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
-        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
-        /// <summary>
-        ///   Specify the name of the cluster, if not given it will be same as resource group name.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   The Node type name.
-        /// </summary>
-        public virtual string NodeType { get; internal set; }
-        /// <summary>
-        ///   Number of nodes to remove.
-        /// </summary>
-        public virtual int? NumberOfNodesToRemove { get; internal set; }
-        /// <summary>
-        ///   The resource group name.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("sf cluster node remove")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--node-type {value}", NodeType)
-              .Add("--number-of-nodes-to-remove {value}", NumberOfNodesToRemove)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureSfClusterReliabilityUpdateSettings
     /// <summary>
     ///   Used within <see cref="AzureSfTasks"/>.
@@ -2235,7 +1481,7 @@ namespace Nuke.Azure
         /// <summary>
         ///   Durability level.
         /// </summary>
-        public virtual SfClusterDurabilityDurabilityLevel ReliabilityLevel { get; internal set; }
+        public virtual SfClusterReliabilityUpdateReliabilityLevel ReliabilityLevel { get; internal set; }
         /// <summary>
         ///   The resource group name.
         /// </summary>
@@ -2445,6 +1691,150 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureSfClusterNodeAddSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterNodeAddSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSf executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
+        /// <summary>
+        ///   Specify the name of the cluster, if not given it will be same as resource group name.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The Node type name.
+        /// </summary>
+        public virtual string NodeType { get; internal set; }
+        /// <summary>
+        ///   Number of nodes to add.
+        /// </summary>
+        public virtual int? NumberOfNodesToAdd { get; internal set; }
+        /// <summary>
+        ///   The resource group name.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster node add")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--node-type {value}", NodeType)
+              .Add("--number-of-nodes-to-add {value}", NumberOfNodesToAdd)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterNodeRemoveSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterNodeRemoveSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSf executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
+        /// <summary>
+        ///   Specify the name of the cluster, if not given it will be same as resource group name.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The Node type name.
+        /// </summary>
+        public virtual string NodeType { get; internal set; }
+        /// <summary>
+        ///   Number of nodes to remove.
+        /// </summary>
+        public virtual int? NumberOfNodesToRemove { get; internal set; }
+        /// <summary>
+        ///   The resource group name.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster node remove")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--node-type {value}", NodeType)
+              .Add("--number-of-nodes-to-remove {value}", NumberOfNodesToRemove)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureSfClusterUpgradeTypeSetSettings
     /// <summary>
     ///   Used within <see cref="AzureSfTasks"/>.
@@ -2507,6 +1897,616 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--upgrade-mode {value}", UpgradeMode)
               .Add("--version {value}", Version)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterClientCertificateAddSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterClientCertificateAddSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSf executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
+        /// <summary>
+        ///   Specify the name of the cluster, if not given it will be same as resource group name.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The resource group name.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Client certificate thumbprint that only has admin permission.
+        /// </summary>
+        public virtual string AdminClientThumbprints { get; internal set; }
+        /// <summary>
+        ///   Client certificate common name.
+        /// </summary>
+        public virtual string CertificateCommonName { get; internal set; }
+        /// <summary>
+        ///   Client certificate issuer thumbprint.
+        /// </summary>
+        public virtual string CertificateIssuerThumbprint { get; internal set; }
+        /// <summary>
+        ///   JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"isAdmin":true, "certificateCommonName": "test.com", "certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].
+        /// </summary>
+        public virtual string ClientCertificateCommonNames { get; internal set; }
+        /// <summary>
+        ///   Client authentication type.
+        /// </summary>
+        public virtual string IsAdmin { get; internal set; }
+        /// <summary>
+        ///   Space-separated list of client certificate thumbprint that has read only permission.
+        /// </summary>
+        public virtual IReadOnlyList<string> ReadonlyClientThumbprints => ReadonlyClientThumbprintsInternal.AsReadOnly();
+        internal List<string> ReadonlyClientThumbprintsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Client certificate thumbprint.
+        /// </summary>
+        public virtual string Thumbprint { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster client-certificate add")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--admin-client-thumbprints {value}", AdminClientThumbprints)
+              .Add("--certificate-common-name {value}", CertificateCommonName)
+              .Add("--certificate-issuer-thumbprint {value}", CertificateIssuerThumbprint)
+              .Add("--client-certificate-common-names {value}", ClientCertificateCommonNames)
+              .Add("--is-admin {value}", IsAdmin)
+              .Add("--readonly-client-thumbprints {value}", ReadonlyClientThumbprints, separator: ' ')
+              .Add("--thumbprint {value}", Thumbprint)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterClientCertificateRemoveSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterClientCertificateRemoveSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSf executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
+        /// <summary>
+        ///   Specify the name of the cluster, if not given it will be same as resource group name.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The resource group name.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Client certificate common name.
+        /// </summary>
+        public virtual string CertificateCommonName { get; internal set; }
+        /// <summary>
+        ///   Client certificate issuer thumbprint.
+        /// </summary>
+        public virtual string CertificateIssuerThumbprint { get; internal set; }
+        /// <summary>
+        ///   JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"certificateCommonName": "test.com","certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].
+        /// </summary>
+        public virtual string ClientCertificateCommonNames { get; internal set; }
+        /// <summary>
+        ///   A single or Space-separated list of client certificate thumbprint(s) to be remove.
+        /// </summary>
+        public virtual string Thumbprints { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster client-certificate remove")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--certificate-common-name {value}", CertificateCommonName)
+              .Add("--certificate-issuer-thumbprint {value}", CertificateIssuerThumbprint)
+              .Add("--client-certificate-common-names {value}", ClientCertificateCommonNames)
+              .Add("--thumbprints {value}", Thumbprints)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterNodeTypeAddSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterNodeTypeAddSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSf executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
+        /// <summary>
+        ///   The capacity tag applied to nodes in the node type. The cluster resource manager uses these tags to understand how much capacity a node has.
+        /// </summary>
+        public virtual string Capacity { get; internal set; }
+        /// <summary>
+        ///   Specify the name of the cluster, if not given it will be same as resource group name.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The Node type name.
+        /// </summary>
+        public virtual string NodeType { get; internal set; }
+        /// <summary>
+        ///   The resource group name.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The password of the Vm.
+        /// </summary>
+        public virtual string VmPassword { get; internal set; }
+        /// <summary>
+        ///   The user name for logging to Vm. Default will be adminuser.
+        /// </summary>
+        public virtual string VmUserName { get; internal set; }
+        /// <summary>
+        ///   Durability level.
+        /// </summary>
+        public virtual SfClusterNodeTypeDurabilityLevel DurabilityLevel { get; internal set; }
+        /// <summary>
+        ///   VM Sku.
+        /// </summary>
+        public virtual string VmSku { get; internal set; }
+        /// <summary>
+        ///   VM tier.
+        /// </summary>
+        public virtual string VmTier { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster node-type add")
+              .Add("--capacity {value}", Capacity)
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--node-type {value}", NodeType)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--vm-password {value}", VmPassword, secret: true)
+              .Add("--vm-user-name {value}", VmUserName)
+              .Add("--durability-level {value}", DurabilityLevel)
+              .Add("--vm-sku {value}", VmSku)
+              .Add("--vm-tier {value}", VmTier)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterDurabilityUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterDurabilityUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSf executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
+        /// <summary>
+        ///   Specify the name of the cluster, if not given it will be same as resource group name.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   Durability level.
+        /// </summary>
+        public virtual SfClusterNodeTypeDurabilityLevel DurabilityLevel { get; internal set; }
+        /// <summary>
+        ///   The Node type name.
+        /// </summary>
+        public virtual string NodeType { get; internal set; }
+        /// <summary>
+        ///   The resource group name.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster durability update")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--durability-level {value}", DurabilityLevel)
+              .Add("--node-type {value}", NodeType)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterCertificateAddSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterCertificateAddSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSf executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
+        /// <summary>
+        ///   Specify the name of the cluster, if not given it will be same as resource group name.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The resource group name.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The existing certificate file path for the primary cluster certificate.
+        /// </summary>
+        public virtual string CertificateFile { get; internal set; }
+        /// <summary>
+        ///   The folder of the new certificate file to be created.
+        /// </summary>
+        public virtual string CertificateOutputFolder { get; internal set; }
+        /// <summary>
+        ///   The password of the certificate file.
+        /// </summary>
+        public virtual string CertificatePassword { get; internal set; }
+        /// <summary>
+        ///   The subject name of the certificate to be created.
+        /// </summary>
+        public virtual string CertificateSubjectName { get; internal set; }
+        /// <summary>
+        ///   The existing Azure key vault secret URL.
+        /// </summary>
+        public virtual string SecretIdentifier { get; internal set; }
+        /// <summary>
+        ///   Azure key vault name, it not given it will be the cluster resource group name.
+        /// </summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary>
+        ///   Key vault resource group name, if not given it will be cluster resource group name.
+        /// </summary>
+        public virtual string VaultResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster certificate add")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--certificate-file {value}", CertificateFile)
+              .Add("--certificate-output-folder {value}", CertificateOutputFolder)
+              .Add("--certificate-password {value}", CertificatePassword, secret: true)
+              .Add("--certificate-subject-name {value}", CertificateSubjectName)
+              .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--vault-resource-group {value}", VaultResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfClusterCertificateRemoveSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfClusterCertificateRemoveSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSf executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
+        /// <summary>
+        ///   Specify the name of the cluster, if not given it will be same as resource group name.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The resource group name.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The cluster certificate thumbprint to be removed.
+        /// </summary>
+        public virtual string Thumbprint { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf cluster certificate remove")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--thumbprint {value}", Thumbprint)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureSfApplicationCertificateAddSettings
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureSfApplicationCertificateAddSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureSf executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureSfTasks.AzureSfPath;
+        public override Action<OutputType, string> CustomLogger => AzureSfTasks.AzureSfLogger;
+        /// <summary>
+        ///   Specify the name of the cluster, if not given it will be same as resource group name.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The resource group name.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   The existing certificate file path for the primary cluster certificate.
+        /// </summary>
+        public virtual string CertificateFile { get; internal set; }
+        /// <summary>
+        ///   The folder of the new certificate file to be created.
+        /// </summary>
+        public virtual string CertificateOutputFolder { get; internal set; }
+        /// <summary>
+        ///   The password of the certificate file.
+        /// </summary>
+        public virtual string CertificatePassword { get; internal set; }
+        /// <summary>
+        ///   The subject name of the certificate to be created.
+        /// </summary>
+        public virtual string CertificateSubjectName { get; internal set; }
+        /// <summary>
+        ///   The existing Azure key vault secret URL.
+        /// </summary>
+        public virtual string SecretIdentifier { get; internal set; }
+        /// <summary>
+        ///   Azure key vault name, it not given it will be the cluster resource group name.
+        /// </summary>
+        public virtual string VaultName { get; internal set; }
+        /// <summary>
+        ///   Key vault resource group name, if not given it will be cluster resource group name.
+        /// </summary>
+        public virtual string VaultResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("sf application certificate add")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--certificate-file {value}", CertificateFile)
+              .Add("--certificate-output-folder {value}", CertificateOutputFolder)
+              .Add("--certificate-password {value}", CertificatePassword, secret: true)
+              .Add("--certificate-subject-name {value}", CertificateSubjectName)
+              .Add("--secret-identifier {value}", SecretIdentifier, secret: true)
+              .Add("--vault-name {value}", VaultName)
+              .Add("--vault-resource-group {value}", VaultResourceGroup)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -3100,7 +3100,7 @@ namespace Nuke.Azure
         #region VaultResourceGroup
         /// <summary>
         ///   <p><em>Sets <see cref="AzureSfClusterCreateSettings.VaultResourceGroup"/></em></p>
-        ///   <p>Key vault resource group name,if not given it will be cluster resource group name.</p>
+        ///   <p>Key vault resource group name, if not given it will be cluster resource group name.</p>
         /// </summary>
         [Pure]
         public static AzureSfClusterCreateSettings SetVaultResourceGroup(this AzureSfClusterCreateSettings toolSettings, string vaultResourceGroup)
@@ -3111,7 +3111,7 @@ namespace Nuke.Azure
         }
         /// <summary>
         ///   <p><em>Resets <see cref="AzureSfClusterCreateSettings.VaultResourceGroup"/></em></p>
-        ///   <p>Key vault resource group name,if not given it will be cluster resource group name.</p>
+        ///   <p>Key vault resource group name, if not given it will be cluster resource group name.</p>
         /// </summary>
         [Pure]
         public static AzureSfClusterCreateSettings ResetVaultResourceGroup(this AzureSfClusterCreateSettings toolSettings)
@@ -3719,2817 +3719,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureSfApplicationCertificateAddSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfApplicationCertificateAddSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetClusterName(this AzureSfApplicationCertificateAddSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetClusterName(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetResourceGroup(this AzureSfApplicationCertificateAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetResourceGroup(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateFile
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.CertificateFile"/></em></p>
-        ///   <p>The existing certificate file path for the primary cluster certificate.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetCertificateFile(this AzureSfApplicationCertificateAddSettings toolSettings, string certificateFile)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateFile = certificateFile;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.CertificateFile"/></em></p>
-        ///   <p>The existing certificate file path for the primary cluster certificate.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetCertificateFile(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateFile = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateOutputFolder
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.CertificateOutputFolder"/></em></p>
-        ///   <p>The folder of the new certificate file to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetCertificateOutputFolder(this AzureSfApplicationCertificateAddSettings toolSettings, string certificateOutputFolder)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateOutputFolder = certificateOutputFolder;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.CertificateOutputFolder"/></em></p>
-        ///   <p>The folder of the new certificate file to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetCertificateOutputFolder(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateOutputFolder = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificatePassword
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.CertificatePassword"/></em></p>
-        ///   <p>The password of the certificate file.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetCertificatePassword(this AzureSfApplicationCertificateAddSettings toolSettings, string certificatePassword)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificatePassword = certificatePassword;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.CertificatePassword"/></em></p>
-        ///   <p>The password of the certificate file.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetCertificatePassword(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificatePassword = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateSubjectName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.CertificateSubjectName"/></em></p>
-        ///   <p>The subject name of the certificate to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetCertificateSubjectName(this AzureSfApplicationCertificateAddSettings toolSettings, string certificateSubjectName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateSubjectName = certificateSubjectName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.CertificateSubjectName"/></em></p>
-        ///   <p>The subject name of the certificate to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetCertificateSubjectName(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateSubjectName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SecretIdentifier
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.SecretIdentifier"/></em></p>
-        ///   <p>The existing Azure key vault secret URL.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetSecretIdentifier(this AzureSfApplicationCertificateAddSettings toolSettings, string secretIdentifier)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretIdentifier = secretIdentifier;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.SecretIdentifier"/></em></p>
-        ///   <p>The existing Azure key vault secret URL.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetSecretIdentifier(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretIdentifier = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.VaultName"/></em></p>
-        ///   <p>Azure key vault name, it not given it will be the cluster resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetVaultName(this AzureSfApplicationCertificateAddSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.VaultName"/></em></p>
-        ///   <p>Azure key vault name, it not given it will be the cluster resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetVaultName(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.VaultResourceGroup"/></em></p>
-        ///   <p>Key vault resource group name,if not given it will be cluster resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetVaultResourceGroup(this AzureSfApplicationCertificateAddSettings toolSettings, string vaultResourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultResourceGroup = vaultResourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.VaultResourceGroup"/></em></p>
-        ///   <p>Key vault resource group name,if not given it will be cluster resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetVaultResourceGroup(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetSubscription(this AzureSfApplicationCertificateAddSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetSubscription(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetDebug(this AzureSfApplicationCertificateAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetDebug(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetHelp(this AzureSfApplicationCertificateAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetHelp(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetOutput(this AzureSfApplicationCertificateAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetOutput(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetQuery(this AzureSfApplicationCertificateAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetQuery(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings SetVerbose(this AzureSfApplicationCertificateAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfApplicationCertificateAddSettings ResetVerbose(this AzureSfApplicationCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterCertificateAddSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterCertificateAddSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetClusterName(this AzureSfClusterCertificateAddSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetClusterName(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateFile
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/></em></p>
-        ///   <p>The existing certificate file path for the primary cluster certificate.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetCertificateFile(this AzureSfClusterCertificateAddSettings toolSettings, string certificateFile)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateFile = certificateFile;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/></em></p>
-        ///   <p>The existing certificate file path for the primary cluster certificate.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetCertificateFile(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateFile = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateOutputFolder
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/></em></p>
-        ///   <p>The folder of the new certificate file to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetCertificateOutputFolder(this AzureSfClusterCertificateAddSettings toolSettings, string certificateOutputFolder)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateOutputFolder = certificateOutputFolder;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/></em></p>
-        ///   <p>The folder of the new certificate file to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetCertificateOutputFolder(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateOutputFolder = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificatePassword
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/></em></p>
-        ///   <p>The password of the certificate file.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetCertificatePassword(this AzureSfClusterCertificateAddSettings toolSettings, string certificatePassword)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificatePassword = certificatePassword;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/></em></p>
-        ///   <p>The password of the certificate file.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetCertificatePassword(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificatePassword = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateSubjectName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/></em></p>
-        ///   <p>The subject name of the certificate to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetCertificateSubjectName(this AzureSfClusterCertificateAddSettings toolSettings, string certificateSubjectName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateSubjectName = certificateSubjectName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/></em></p>
-        ///   <p>The subject name of the certificate to be created.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetCertificateSubjectName(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateSubjectName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region SecretIdentifier
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/></em></p>
-        ///   <p>The existing Azure key vault secret URL.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetSecretIdentifier(this AzureSfClusterCertificateAddSettings toolSettings, string secretIdentifier)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretIdentifier = secretIdentifier;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/></em></p>
-        ///   <p>The existing Azure key vault secret URL.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetSecretIdentifier(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SecretIdentifier = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.VaultName"/></em></p>
-        ///   <p>Azure key vault name, it not given it will be the cluster resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetVaultName(this AzureSfClusterCertificateAddSettings toolSettings, string vaultName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = vaultName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.VaultName"/></em></p>
-        ///   <p>Azure key vault name, it not given it will be the cluster resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetVaultName(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VaultResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/></em></p>
-        ///   <p>Key vault resource group name,if not given it will be cluster resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetVaultResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings, string vaultResourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultResourceGroup = vaultResourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/></em></p>
-        ///   <p>Key vault resource group name,if not given it will be cluster resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetVaultResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VaultResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetSubscription(this AzureSfClusterCertificateAddSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetSubscription(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetDebug(this AzureSfClusterCertificateAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetDebug(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetHelp(this AzureSfClusterCertificateAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetHelp(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetOutput(this AzureSfClusterCertificateAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetOutput(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetQuery(this AzureSfClusterCertificateAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetQuery(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings SetVerbose(this AzureSfClusterCertificateAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateAddSettings ResetVerbose(this AzureSfClusterCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterCertificateRemoveSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterCertificateRemoveSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetClusterName(this AzureSfClusterCertificateRemoveSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetClusterName(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetResourceGroup(this AzureSfClusterCertificateRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetResourceGroup(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Thumbprint
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/></em></p>
-        ///   <p>The cluster certificate thumbprint to be removed.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetThumbprint(this AzureSfClusterCertificateRemoveSettings toolSettings, string thumbprint)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Thumbprint = thumbprint;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/></em></p>
-        ///   <p>The cluster certificate thumbprint to be removed.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetThumbprint(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Thumbprint = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetSubscription(this AzureSfClusterCertificateRemoveSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetSubscription(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetDebug(this AzureSfClusterCertificateRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetDebug(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetHelp(this AzureSfClusterCertificateRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetHelp(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetOutput(this AzureSfClusterCertificateRemoveSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetOutput(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetQuery(this AzureSfClusterCertificateRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetQuery(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings SetVerbose(this AzureSfClusterCertificateRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterCertificateRemoveSettings ResetVerbose(this AzureSfClusterCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterClientCertificateAddSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterClientCertificateAddSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetClusterName(this AzureSfClusterClientCertificateAddSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetClusterName(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetResourceGroup(this AzureSfClusterClientCertificateAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetResourceGroup(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region AdminClientThumbprints
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.AdminClientThumbprints"/></em></p>
-        ///   <p>Client certificate thumbprint that only has admin permission.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetAdminClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, string adminClientThumbprints)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdminClientThumbprints = adminClientThumbprints;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.AdminClientThumbprints"/></em></p>
-        ///   <p>Client certificate thumbprint that only has admin permission.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetAdminClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.AdminClientThumbprints = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateCommonName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.CertificateCommonName"/></em></p>
-        ///   <p>Client certificate common name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetCertificateCommonName(this AzureSfClusterClientCertificateAddSettings toolSettings, string certificateCommonName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateCommonName = certificateCommonName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.CertificateCommonName"/></em></p>
-        ///   <p>Client certificate common name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetCertificateCommonName(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateCommonName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateIssuerThumbprint
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.CertificateIssuerThumbprint"/></em></p>
-        ///   <p>Client certificate issuer thumbprint.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetCertificateIssuerThumbprint(this AzureSfClusterClientCertificateAddSettings toolSettings, string certificateIssuerThumbprint)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateIssuerThumbprint = certificateIssuerThumbprint;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.CertificateIssuerThumbprint"/></em></p>
-        ///   <p>Client certificate issuer thumbprint.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetCertificateIssuerThumbprint(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateIssuerThumbprint = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ClientCertificateCommonNames
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ClientCertificateCommonNames"/></em></p>
-        ///   <p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"isAdmin":true, "certificateCommonName": "test.com", "certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetClientCertificateCommonNames(this AzureSfClusterClientCertificateAddSettings toolSettings, string clientCertificateCommonNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientCertificateCommonNames = clientCertificateCommonNames;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.ClientCertificateCommonNames"/></em></p>
-        ///   <p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"isAdmin":true, "certificateCommonName": "test.com", "certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetClientCertificateCommonNames(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientCertificateCommonNames = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IsAdmin
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.IsAdmin"/></em></p>
-        ///   <p>Client authentication type.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetIsAdmin(this AzureSfClusterClientCertificateAddSettings toolSettings, string isAdmin)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsAdmin = isAdmin;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.IsAdmin"/></em></p>
-        ///   <p>Client authentication type.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetIsAdmin(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IsAdmin = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ReadonlyClientThumbprints
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/> to a new list</em></p>
-        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, params string[] readonlyClientThumbprints)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReadonlyClientThumbprintsInternal = readonlyClientThumbprints.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/> to a new list</em></p>
-        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, IEnumerable<string> readonlyClientThumbprints)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReadonlyClientThumbprintsInternal = readonlyClientThumbprints.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
-        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings AddReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, params string[] readonlyClientThumbprints)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReadonlyClientThumbprintsInternal.AddRange(readonlyClientThumbprints);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
-        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings AddReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, IEnumerable<string> readonlyClientThumbprints)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReadonlyClientThumbprintsInternal.AddRange(readonlyClientThumbprints);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
-        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ClearReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ReadonlyClientThumbprintsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
-        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings RemoveReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, params string[] readonlyClientThumbprints)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(readonlyClientThumbprints);
-            toolSettings.ReadonlyClientThumbprintsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
-        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings RemoveReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, IEnumerable<string> readonlyClientThumbprints)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(readonlyClientThumbprints);
-            toolSettings.ReadonlyClientThumbprintsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Thumbprint
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Thumbprint"/></em></p>
-        ///   <p>Client certificate thumbprint.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetThumbprint(this AzureSfClusterClientCertificateAddSettings toolSettings, string thumbprint)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Thumbprint = thumbprint;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Thumbprint"/></em></p>
-        ///   <p>Client certificate thumbprint.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetThumbprint(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Thumbprint = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetSubscription(this AzureSfClusterClientCertificateAddSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetSubscription(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetDebug(this AzureSfClusterClientCertificateAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetDebug(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetHelp(this AzureSfClusterClientCertificateAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetHelp(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetOutput(this AzureSfClusterClientCertificateAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetOutput(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetQuery(this AzureSfClusterClientCertificateAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetQuery(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings SetVerbose(this AzureSfClusterClientCertificateAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateAddSettings ResetVerbose(this AzureSfClusterClientCertificateAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterClientCertificateRemoveSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterClientCertificateRemoveSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetClusterName(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetClusterName(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetResourceGroup(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetResourceGroup(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateCommonName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateCommonName"/></em></p>
-        ///   <p>Client certificate common name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetCertificateCommonName(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string certificateCommonName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateCommonName = certificateCommonName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateCommonName"/></em></p>
-        ///   <p>Client certificate common name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetCertificateCommonName(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateCommonName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region CertificateIssuerThumbprint
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateIssuerThumbprint"/></em></p>
-        ///   <p>Client certificate issuer thumbprint.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetCertificateIssuerThumbprint(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string certificateIssuerThumbprint)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateIssuerThumbprint = certificateIssuerThumbprint;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateIssuerThumbprint"/></em></p>
-        ///   <p>Client certificate issuer thumbprint.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetCertificateIssuerThumbprint(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.CertificateIssuerThumbprint = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ClientCertificateCommonNames
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.ClientCertificateCommonNames"/></em></p>
-        ///   <p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"certificateCommonName": "test.com","certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetClientCertificateCommonNames(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string clientCertificateCommonNames)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientCertificateCommonNames = clientCertificateCommonNames;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.ClientCertificateCommonNames"/></em></p>
-        ///   <p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"certificateCommonName": "test.com","certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetClientCertificateCommonNames(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClientCertificateCommonNames = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Thumbprints
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Thumbprints"/></em></p>
-        ///   <p>A single or Space-separated list of client certificate thumbprint(s) to be remove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetThumbprints(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string thumbprints)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Thumbprints = thumbprints;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Thumbprints"/></em></p>
-        ///   <p>A single or Space-separated list of client certificate thumbprint(s) to be remove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetThumbprints(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Thumbprints = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetSubscription(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetSubscription(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetDebug(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetDebug(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetHelp(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetHelp(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetOutput(this AzureSfClusterClientCertificateRemoveSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetOutput(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetQuery(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetQuery(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings SetVerbose(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterClientCertificateRemoveSettings ResetVerbose(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterDurabilityUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterDurabilityUpdateSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetClusterName(this AzureSfClusterDurabilityUpdateSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetClusterName(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DurabilityLevel
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/></em></p>
-        ///   <p>Durability level.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetDurabilityLevel(this AzureSfClusterDurabilityUpdateSettings toolSettings, SfClusterDurabilityDurabilityLevel durabilityLevel)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DurabilityLevel = durabilityLevel;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/></em></p>
-        ///   <p>Durability level.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetDurabilityLevel(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DurabilityLevel = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NodeType
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/></em></p>
-        ///   <p>The Node type name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetNodeType(this AzureSfClusterDurabilityUpdateSettings toolSettings, string nodeType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = nodeType;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/></em></p>
-        ///   <p>The Node type name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetNodeType(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetResourceGroup(this AzureSfClusterDurabilityUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetResourceGroup(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetSubscription(this AzureSfClusterDurabilityUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetSubscription(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetDebug(this AzureSfClusterDurabilityUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetDebug(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetHelp(this AzureSfClusterDurabilityUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetHelp(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetOutput(this AzureSfClusterDurabilityUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetOutput(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetQuery(this AzureSfClusterDurabilityUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetQuery(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings SetVerbose(this AzureSfClusterDurabilityUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterDurabilityUpdateSettings ResetVerbose(this AzureSfClusterDurabilityUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterNodeTypeAddSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterNodeTypeAddSettingsExtensions
-    {
-        #region Capacity
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Capacity"/></em></p>
-        ///   <p>The capacity tag applied to nodes in the node type. The cluster resource manager uses these tags to understand how much capacity a node has.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetCapacity(this AzureSfClusterNodeTypeAddSettings toolSettings, string capacity)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Capacity = capacity;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Capacity"/></em></p>
-        ///   <p>The capacity tag applied to nodes in the node type. The cluster resource manager uses these tags to understand how much capacity a node has.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetCapacity(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Capacity = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetClusterName(this AzureSfClusterNodeTypeAddSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetClusterName(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NodeType
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.NodeType"/></em></p>
-        ///   <p>The Node type name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetNodeType(this AzureSfClusterNodeTypeAddSettings toolSettings, string nodeType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = nodeType;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.NodeType"/></em></p>
-        ///   <p>The Node type name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetNodeType(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetResourceGroup(this AzureSfClusterNodeTypeAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetResourceGroup(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmPassword
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.VmPassword"/></em></p>
-        ///   <p>The password of the Vm.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetVmPassword(this AzureSfClusterNodeTypeAddSettings toolSettings, string vmPassword)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmPassword = vmPassword;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.VmPassword"/></em></p>
-        ///   <p>The password of the Vm.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetVmPassword(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmPassword = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmUserName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.VmUserName"/></em></p>
-        ///   <p>The user name for logging to Vm. Default will be adminuser.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetVmUserName(this AzureSfClusterNodeTypeAddSettings toolSettings, string vmUserName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmUserName = vmUserName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.VmUserName"/></em></p>
-        ///   <p>The user name for logging to Vm. Default will be adminuser.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetVmUserName(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmUserName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region DurabilityLevel
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.DurabilityLevel"/></em></p>
-        ///   <p>Durability level.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetDurabilityLevel(this AzureSfClusterNodeTypeAddSettings toolSettings, SfClusterDurabilityDurabilityLevel durabilityLevel)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DurabilityLevel = durabilityLevel;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.DurabilityLevel"/></em></p>
-        ///   <p>Durability level.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetDurabilityLevel(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.DurabilityLevel = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmSku
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.VmSku"/></em></p>
-        ///   <p>VM Sku.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetVmSku(this AzureSfClusterNodeTypeAddSettings toolSettings, string vmSku)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmSku = vmSku;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.VmSku"/></em></p>
-        ///   <p>VM Sku.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetVmSku(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmSku = null;
-            return toolSettings;
-        }
-        #endregion
-        #region VmTier
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.VmTier"/></em></p>
-        ///   <p>VM tier.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetVmTier(this AzureSfClusterNodeTypeAddSettings toolSettings, string vmTier)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmTier = vmTier;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.VmTier"/></em></p>
-        ///   <p>VM tier.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetVmTier(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.VmTier = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetSubscription(this AzureSfClusterNodeTypeAddSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetSubscription(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetDebug(this AzureSfClusterNodeTypeAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetDebug(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetHelp(this AzureSfClusterNodeTypeAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetHelp(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetOutput(this AzureSfClusterNodeTypeAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetOutput(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetQuery(this AzureSfClusterNodeTypeAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetQuery(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings SetVerbose(this AzureSfClusterNodeTypeAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeTypeAddSettings ResetVerbose(this AzureSfClusterNodeTypeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterNodeAddSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterNodeAddSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetClusterName(this AzureSfClusterNodeAddSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetClusterName(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NodeType
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.NodeType"/></em></p>
-        ///   <p>The Node type name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetNodeType(this AzureSfClusterNodeAddSettings toolSettings, string nodeType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = nodeType;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.NodeType"/></em></p>
-        ///   <p>The Node type name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetNodeType(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NumberOfNodesToAdd
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/></em></p>
-        ///   <p>Number of nodes to add.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetNumberOfNodesToAdd(this AzureSfClusterNodeAddSettings toolSettings, int? numberOfNodesToAdd)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NumberOfNodesToAdd = numberOfNodesToAdd;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/></em></p>
-        ///   <p>Number of nodes to add.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetNumberOfNodesToAdd(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NumberOfNodesToAdd = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetResourceGroup(this AzureSfClusterNodeAddSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetResourceGroup(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetSubscription(this AzureSfClusterNodeAddSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetSubscription(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetDebug(this AzureSfClusterNodeAddSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetDebug(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetHelp(this AzureSfClusterNodeAddSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetHelp(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetOutput(this AzureSfClusterNodeAddSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetOutput(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetQuery(this AzureSfClusterNodeAddSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetQuery(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings SetVerbose(this AzureSfClusterNodeAddSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeAddSettings ResetVerbose(this AzureSfClusterNodeAddSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureSfClusterNodeRemoveSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureSfTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureSfClusterNodeRemoveSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetClusterName(this AzureSfClusterNodeRemoveSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/></em></p>
-        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetClusterName(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NodeType
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/></em></p>
-        ///   <p>The Node type name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetNodeType(this AzureSfClusterNodeRemoveSettings toolSettings, string nodeType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = nodeType;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/></em></p>
-        ///   <p>The Node type name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetNodeType(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NodeType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NumberOfNodesToRemove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/></em></p>
-        ///   <p>Number of nodes to remove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetNumberOfNodesToRemove(this AzureSfClusterNodeRemoveSettings toolSettings, int? numberOfNodesToRemove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NumberOfNodesToRemove = numberOfNodesToRemove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/></em></p>
-        ///   <p>Number of nodes to remove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetNumberOfNodesToRemove(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NumberOfNodesToRemove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetResourceGroup(this AzureSfClusterNodeRemoveSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/></em></p>
-        ///   <p>The resource group name.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetResourceGroup(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetSubscription(this AzureSfClusterNodeRemoveSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetSubscription(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetDebug(this AzureSfClusterNodeRemoveSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetDebug(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetHelp(this AzureSfClusterNodeRemoveSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetHelp(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetOutput(this AzureSfClusterNodeRemoveSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetOutput(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetQuery(this AzureSfClusterNodeRemoveSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetQuery(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings SetVerbose(this AzureSfClusterNodeRemoveSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureSfClusterNodeRemoveSettings ResetVerbose(this AzureSfClusterNodeRemoveSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureSfClusterReliabilityUpdateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureSfTasks"/>.
@@ -6568,7 +3757,7 @@ namespace Nuke.Azure
         ///   <p>Durability level.</p>
         /// </summary>
         [Pure]
-        public static AzureSfClusterReliabilityUpdateSettings SetReliabilityLevel(this AzureSfClusterReliabilityUpdateSettings toolSettings, SfClusterDurabilityDurabilityLevel reliabilityLevel)
+        public static AzureSfClusterReliabilityUpdateSettings SetReliabilityLevel(this AzureSfClusterReliabilityUpdateSettings toolSettings, SfClusterReliabilityUpdateReliabilityLevel reliabilityLevel)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ReliabilityLevel = reliabilityLevel;
@@ -7352,6 +4541,506 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureSfClusterNodeAddSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterNodeAddSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetClusterName(this AzureSfClusterNodeAddSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetClusterName(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NodeType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.NodeType"/></em></p>
+        ///   <p>The Node type name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetNodeType(this AzureSfClusterNodeAddSettings toolSettings, string nodeType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = nodeType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.NodeType"/></em></p>
+        ///   <p>The Node type name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetNodeType(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NumberOfNodesToAdd
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/></em></p>
+        ///   <p>Number of nodes to add.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetNumberOfNodesToAdd(this AzureSfClusterNodeAddSettings toolSettings, int? numberOfNodesToAdd)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NumberOfNodesToAdd = numberOfNodesToAdd;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.NumberOfNodesToAdd"/></em></p>
+        ///   <p>Number of nodes to add.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetNumberOfNodesToAdd(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NumberOfNodesToAdd = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetResourceGroup(this AzureSfClusterNodeAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetResourceGroup(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetSubscription(this AzureSfClusterNodeAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetSubscription(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetDebug(this AzureSfClusterNodeAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetDebug(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetHelp(this AzureSfClusterNodeAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetHelp(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetOutput(this AzureSfClusterNodeAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetOutput(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetQuery(this AzureSfClusterNodeAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetQuery(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings SetVerbose(this AzureSfClusterNodeAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeAddSettings ResetVerbose(this AzureSfClusterNodeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterNodeRemoveSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterNodeRemoveSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetClusterName(this AzureSfClusterNodeRemoveSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetClusterName(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NodeType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/></em></p>
+        ///   <p>The Node type name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetNodeType(this AzureSfClusterNodeRemoveSettings toolSettings, string nodeType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = nodeType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.NodeType"/></em></p>
+        ///   <p>The Node type name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetNodeType(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NumberOfNodesToRemove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/></em></p>
+        ///   <p>Number of nodes to remove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetNumberOfNodesToRemove(this AzureSfClusterNodeRemoveSettings toolSettings, int? numberOfNodesToRemove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NumberOfNodesToRemove = numberOfNodesToRemove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.NumberOfNodesToRemove"/></em></p>
+        ///   <p>Number of nodes to remove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetNumberOfNodesToRemove(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NumberOfNodesToRemove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetResourceGroup(this AzureSfClusterNodeRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetResourceGroup(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetSubscription(this AzureSfClusterNodeRemoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetSubscription(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetDebug(this AzureSfClusterNodeRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetDebug(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetHelp(this AzureSfClusterNodeRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetHelp(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetOutput(this AzureSfClusterNodeRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetOutput(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetQuery(this AzureSfClusterNodeRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetQuery(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings SetVerbose(this AzureSfClusterNodeRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeRemoveSettings ResetVerbose(this AzureSfClusterNodeRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureSfClusterUpgradeTypeSetSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureSfTasks"/>.
@@ -7602,6 +5291,2317 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureSfClusterClientCertificateAddSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterClientCertificateAddSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetClusterName(this AzureSfClusterClientCertificateAddSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetClusterName(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetResourceGroup(this AzureSfClusterClientCertificateAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetResourceGroup(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AdminClientThumbprints
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.AdminClientThumbprints"/></em></p>
+        ///   <p>Client certificate thumbprint that only has admin permission.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetAdminClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, string adminClientThumbprints)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminClientThumbprints = adminClientThumbprints;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.AdminClientThumbprints"/></em></p>
+        ///   <p>Client certificate thumbprint that only has admin permission.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetAdminClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AdminClientThumbprints = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateCommonName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.CertificateCommonName"/></em></p>
+        ///   <p>Client certificate common name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetCertificateCommonName(this AzureSfClusterClientCertificateAddSettings toolSettings, string certificateCommonName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateCommonName = certificateCommonName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.CertificateCommonName"/></em></p>
+        ///   <p>Client certificate common name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetCertificateCommonName(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateCommonName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateIssuerThumbprint
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.CertificateIssuerThumbprint"/></em></p>
+        ///   <p>Client certificate issuer thumbprint.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetCertificateIssuerThumbprint(this AzureSfClusterClientCertificateAddSettings toolSettings, string certificateIssuerThumbprint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateIssuerThumbprint = certificateIssuerThumbprint;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.CertificateIssuerThumbprint"/></em></p>
+        ///   <p>Client certificate issuer thumbprint.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetCertificateIssuerThumbprint(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateIssuerThumbprint = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ClientCertificateCommonNames
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ClientCertificateCommonNames"/></em></p>
+        ///   <p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"isAdmin":true, "certificateCommonName": "test.com", "certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetClientCertificateCommonNames(this AzureSfClusterClientCertificateAddSettings toolSettings, string clientCertificateCommonNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientCertificateCommonNames = clientCertificateCommonNames;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.ClientCertificateCommonNames"/></em></p>
+        ///   <p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"isAdmin":true, "certificateCommonName": "test.com", "certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetClientCertificateCommonNames(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientCertificateCommonNames = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IsAdmin
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.IsAdmin"/></em></p>
+        ///   <p>Client authentication type.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetIsAdmin(this AzureSfClusterClientCertificateAddSettings toolSettings, string isAdmin)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsAdmin = isAdmin;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.IsAdmin"/></em></p>
+        ///   <p>Client authentication type.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetIsAdmin(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IsAdmin = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ReadonlyClientThumbprints
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/> to a new list</em></p>
+        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, params string[] readonlyClientThumbprints)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReadonlyClientThumbprintsInternal = readonlyClientThumbprints.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/> to a new list</em></p>
+        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, IEnumerable<string> readonlyClientThumbprints)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReadonlyClientThumbprintsInternal = readonlyClientThumbprints.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
+        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings AddReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, params string[] readonlyClientThumbprints)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReadonlyClientThumbprintsInternal.AddRange(readonlyClientThumbprints);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
+        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings AddReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, IEnumerable<string> readonlyClientThumbprints)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReadonlyClientThumbprintsInternal.AddRange(readonlyClientThumbprints);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
+        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ClearReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ReadonlyClientThumbprintsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
+        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings RemoveReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, params string[] readonlyClientThumbprints)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(readonlyClientThumbprints);
+            toolSettings.ReadonlyClientThumbprintsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureSfClusterClientCertificateAddSettings.ReadonlyClientThumbprints"/></em></p>
+        ///   <p>Space-separated list of client certificate thumbprint that has read only permission.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings RemoveReadonlyClientThumbprints(this AzureSfClusterClientCertificateAddSettings toolSettings, IEnumerable<string> readonlyClientThumbprints)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(readonlyClientThumbprints);
+            toolSettings.ReadonlyClientThumbprintsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Thumbprint
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Thumbprint"/></em></p>
+        ///   <p>Client certificate thumbprint.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetThumbprint(this AzureSfClusterClientCertificateAddSettings toolSettings, string thumbprint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Thumbprint = thumbprint;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Thumbprint"/></em></p>
+        ///   <p>Client certificate thumbprint.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetThumbprint(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Thumbprint = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetSubscription(this AzureSfClusterClientCertificateAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetSubscription(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetDebug(this AzureSfClusterClientCertificateAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetDebug(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetHelp(this AzureSfClusterClientCertificateAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetHelp(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetOutput(this AzureSfClusterClientCertificateAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetOutput(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetQuery(this AzureSfClusterClientCertificateAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetQuery(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings SetVerbose(this AzureSfClusterClientCertificateAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateAddSettings ResetVerbose(this AzureSfClusterClientCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterClientCertificateRemoveSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterClientCertificateRemoveSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetClusterName(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetClusterName(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetResourceGroup(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetResourceGroup(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateCommonName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateCommonName"/></em></p>
+        ///   <p>Client certificate common name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetCertificateCommonName(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string certificateCommonName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateCommonName = certificateCommonName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateCommonName"/></em></p>
+        ///   <p>Client certificate common name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetCertificateCommonName(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateCommonName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateIssuerThumbprint
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateIssuerThumbprint"/></em></p>
+        ///   <p>Client certificate issuer thumbprint.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetCertificateIssuerThumbprint(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string certificateIssuerThumbprint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateIssuerThumbprint = certificateIssuerThumbprint;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.CertificateIssuerThumbprint"/></em></p>
+        ///   <p>Client certificate issuer thumbprint.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetCertificateIssuerThumbprint(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateIssuerThumbprint = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ClientCertificateCommonNames
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.ClientCertificateCommonNames"/></em></p>
+        ///   <p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"certificateCommonName": "test.com","certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetClientCertificateCommonNames(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string clientCertificateCommonNames)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientCertificateCommonNames = clientCertificateCommonNames;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.ClientCertificateCommonNames"/></em></p>
+        ///   <p>JSON encoded parameters configuration. Use @{file} to load from a file. For example: [{"certificateCommonName": "test.com","certificateIssuerThumbprint": "22B4AE296B504E512DF880A77A2CAE20200FF922"}].</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetClientCertificateCommonNames(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClientCertificateCommonNames = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Thumbprints
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Thumbprints"/></em></p>
+        ///   <p>A single or Space-separated list of client certificate thumbprint(s) to be remove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetThumbprints(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string thumbprints)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Thumbprints = thumbprints;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Thumbprints"/></em></p>
+        ///   <p>A single or Space-separated list of client certificate thumbprint(s) to be remove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetThumbprints(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Thumbprints = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetSubscription(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetSubscription(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetDebug(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetDebug(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetHelp(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetHelp(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetOutput(this AzureSfClusterClientCertificateRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetOutput(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetQuery(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetQuery(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterClientCertificateRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings SetVerbose(this AzureSfClusterClientCertificateRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterClientCertificateRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterClientCertificateRemoveSettings ResetVerbose(this AzureSfClusterClientCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterNodeTypeAddSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterNodeTypeAddSettingsExtensions
+    {
+        #region Capacity
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Capacity"/></em></p>
+        ///   <p>The capacity tag applied to nodes in the node type. The cluster resource manager uses these tags to understand how much capacity a node has.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetCapacity(this AzureSfClusterNodeTypeAddSettings toolSettings, string capacity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = capacity;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Capacity"/></em></p>
+        ///   <p>The capacity tag applied to nodes in the node type. The cluster resource manager uses these tags to understand how much capacity a node has.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetCapacity(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Capacity = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetClusterName(this AzureSfClusterNodeTypeAddSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetClusterName(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NodeType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.NodeType"/></em></p>
+        ///   <p>The Node type name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetNodeType(this AzureSfClusterNodeTypeAddSettings toolSettings, string nodeType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = nodeType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.NodeType"/></em></p>
+        ///   <p>The Node type name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetNodeType(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetResourceGroup(this AzureSfClusterNodeTypeAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetResourceGroup(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmPassword
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.VmPassword"/></em></p>
+        ///   <p>The password of the Vm.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetVmPassword(this AzureSfClusterNodeTypeAddSettings toolSettings, string vmPassword)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmPassword = vmPassword;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.VmPassword"/></em></p>
+        ///   <p>The password of the Vm.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetVmPassword(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmPassword = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmUserName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.VmUserName"/></em></p>
+        ///   <p>The user name for logging to Vm. Default will be adminuser.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetVmUserName(this AzureSfClusterNodeTypeAddSettings toolSettings, string vmUserName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmUserName = vmUserName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.VmUserName"/></em></p>
+        ///   <p>The user name for logging to Vm. Default will be adminuser.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetVmUserName(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmUserName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DurabilityLevel
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.DurabilityLevel"/></em></p>
+        ///   <p>Durability level.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetDurabilityLevel(this AzureSfClusterNodeTypeAddSettings toolSettings, SfClusterNodeTypeDurabilityLevel durabilityLevel)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DurabilityLevel = durabilityLevel;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.DurabilityLevel"/></em></p>
+        ///   <p>Durability level.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetDurabilityLevel(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DurabilityLevel = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmSku
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.VmSku"/></em></p>
+        ///   <p>VM Sku.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetVmSku(this AzureSfClusterNodeTypeAddSettings toolSettings, string vmSku)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmSku = vmSku;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.VmSku"/></em></p>
+        ///   <p>VM Sku.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetVmSku(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmSku = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VmTier
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.VmTier"/></em></p>
+        ///   <p>VM tier.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetVmTier(this AzureSfClusterNodeTypeAddSettings toolSettings, string vmTier)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmTier = vmTier;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.VmTier"/></em></p>
+        ///   <p>VM tier.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetVmTier(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VmTier = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetSubscription(this AzureSfClusterNodeTypeAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetSubscription(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetDebug(this AzureSfClusterNodeTypeAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetDebug(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetHelp(this AzureSfClusterNodeTypeAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetHelp(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetOutput(this AzureSfClusterNodeTypeAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetOutput(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetQuery(this AzureSfClusterNodeTypeAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetQuery(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterNodeTypeAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings SetVerbose(this AzureSfClusterNodeTypeAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterNodeTypeAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterNodeTypeAddSettings ResetVerbose(this AzureSfClusterNodeTypeAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterDurabilityUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterDurabilityUpdateSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetClusterName(this AzureSfClusterDurabilityUpdateSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetClusterName(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region DurabilityLevel
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/></em></p>
+        ///   <p>Durability level.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetDurabilityLevel(this AzureSfClusterDurabilityUpdateSettings toolSettings, SfClusterNodeTypeDurabilityLevel durabilityLevel)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DurabilityLevel = durabilityLevel;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.DurabilityLevel"/></em></p>
+        ///   <p>Durability level.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetDurabilityLevel(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.DurabilityLevel = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NodeType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/></em></p>
+        ///   <p>The Node type name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetNodeType(this AzureSfClusterDurabilityUpdateSettings toolSettings, string nodeType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = nodeType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.NodeType"/></em></p>
+        ///   <p>The Node type name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetNodeType(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NodeType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetResourceGroup(this AzureSfClusterDurabilityUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetResourceGroup(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetSubscription(this AzureSfClusterDurabilityUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetSubscription(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetDebug(this AzureSfClusterDurabilityUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetDebug(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetHelp(this AzureSfClusterDurabilityUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetHelp(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetOutput(this AzureSfClusterDurabilityUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetOutput(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetQuery(this AzureSfClusterDurabilityUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetQuery(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings SetVerbose(this AzureSfClusterDurabilityUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterDurabilityUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterDurabilityUpdateSettings ResetVerbose(this AzureSfClusterDurabilityUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterCertificateAddSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterCertificateAddSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetClusterName(this AzureSfClusterCertificateAddSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetClusterName(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateFile
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/></em></p>
+        ///   <p>The existing certificate file path for the primary cluster certificate.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetCertificateFile(this AzureSfClusterCertificateAddSettings toolSettings, string certificateFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateFile = certificateFile;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateFile"/></em></p>
+        ///   <p>The existing certificate file path for the primary cluster certificate.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetCertificateFile(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateOutputFolder
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/></em></p>
+        ///   <p>The folder of the new certificate file to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetCertificateOutputFolder(this AzureSfClusterCertificateAddSettings toolSettings, string certificateOutputFolder)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateOutputFolder = certificateOutputFolder;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateOutputFolder"/></em></p>
+        ///   <p>The folder of the new certificate file to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetCertificateOutputFolder(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateOutputFolder = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificatePassword
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/></em></p>
+        ///   <p>The password of the certificate file.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetCertificatePassword(this AzureSfClusterCertificateAddSettings toolSettings, string certificatePassword)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificatePassword = certificatePassword;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificatePassword"/></em></p>
+        ///   <p>The password of the certificate file.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetCertificatePassword(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificatePassword = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateSubjectName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/></em></p>
+        ///   <p>The subject name of the certificate to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetCertificateSubjectName(this AzureSfClusterCertificateAddSettings toolSettings, string certificateSubjectName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateSubjectName = certificateSubjectName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.CertificateSubjectName"/></em></p>
+        ///   <p>The subject name of the certificate to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetCertificateSubjectName(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateSubjectName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SecretIdentifier
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/></em></p>
+        ///   <p>The existing Azure key vault secret URL.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetSecretIdentifier(this AzureSfClusterCertificateAddSettings toolSettings, string secretIdentifier)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretIdentifier = secretIdentifier;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.SecretIdentifier"/></em></p>
+        ///   <p>The existing Azure key vault secret URL.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetSecretIdentifier(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretIdentifier = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.VaultName"/></em></p>
+        ///   <p>Azure key vault name, it not given it will be the cluster resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetVaultName(this AzureSfClusterCertificateAddSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.VaultName"/></em></p>
+        ///   <p>Azure key vault name, it not given it will be the cluster resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetVaultName(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/></em></p>
+        ///   <p>Key vault resource group name, if not given it will be cluster resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetVaultResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings, string vaultResourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultResourceGroup = vaultResourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.VaultResourceGroup"/></em></p>
+        ///   <p>Key vault resource group name, if not given it will be cluster resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetVaultResourceGroup(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetSubscription(this AzureSfClusterCertificateAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetSubscription(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetDebug(this AzureSfClusterCertificateAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetDebug(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetHelp(this AzureSfClusterCertificateAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetHelp(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetOutput(this AzureSfClusterCertificateAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetOutput(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetQuery(this AzureSfClusterCertificateAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetQuery(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings SetVerbose(this AzureSfClusterCertificateAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateAddSettings ResetVerbose(this AzureSfClusterCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfClusterCertificateRemoveSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfClusterCertificateRemoveSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetClusterName(this AzureSfClusterCertificateRemoveSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetClusterName(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetResourceGroup(this AzureSfClusterCertificateRemoveSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetResourceGroup(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Thumbprint
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/></em></p>
+        ///   <p>The cluster certificate thumbprint to be removed.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetThumbprint(this AzureSfClusterCertificateRemoveSettings toolSettings, string thumbprint)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Thumbprint = thumbprint;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Thumbprint"/></em></p>
+        ///   <p>The cluster certificate thumbprint to be removed.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetThumbprint(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Thumbprint = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetSubscription(this AzureSfClusterCertificateRemoveSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetSubscription(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetDebug(this AzureSfClusterCertificateRemoveSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetDebug(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetHelp(this AzureSfClusterCertificateRemoveSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetHelp(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetOutput(this AzureSfClusterCertificateRemoveSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetOutput(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetQuery(this AzureSfClusterCertificateRemoveSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetQuery(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings SetVerbose(this AzureSfClusterCertificateRemoveSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfClusterCertificateRemoveSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfClusterCertificateRemoveSettings ResetVerbose(this AzureSfClusterCertificateRemoveSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureSfApplicationCertificateAddSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureSfApplicationCertificateAddSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetClusterName(this AzureSfApplicationCertificateAddSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.ClusterName"/></em></p>
+        ///   <p>Specify the name of the cluster, if not given it will be same as resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetClusterName(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetResourceGroup(this AzureSfApplicationCertificateAddSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.ResourceGroup"/></em></p>
+        ///   <p>The resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetResourceGroup(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateFile
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.CertificateFile"/></em></p>
+        ///   <p>The existing certificate file path for the primary cluster certificate.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetCertificateFile(this AzureSfApplicationCertificateAddSettings toolSettings, string certificateFile)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateFile = certificateFile;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.CertificateFile"/></em></p>
+        ///   <p>The existing certificate file path for the primary cluster certificate.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetCertificateFile(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateFile = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateOutputFolder
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.CertificateOutputFolder"/></em></p>
+        ///   <p>The folder of the new certificate file to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetCertificateOutputFolder(this AzureSfApplicationCertificateAddSettings toolSettings, string certificateOutputFolder)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateOutputFolder = certificateOutputFolder;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.CertificateOutputFolder"/></em></p>
+        ///   <p>The folder of the new certificate file to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetCertificateOutputFolder(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateOutputFolder = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificatePassword
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.CertificatePassword"/></em></p>
+        ///   <p>The password of the certificate file.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetCertificatePassword(this AzureSfApplicationCertificateAddSettings toolSettings, string certificatePassword)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificatePassword = certificatePassword;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.CertificatePassword"/></em></p>
+        ///   <p>The password of the certificate file.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetCertificatePassword(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificatePassword = null;
+            return toolSettings;
+        }
+        #endregion
+        #region CertificateSubjectName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.CertificateSubjectName"/></em></p>
+        ///   <p>The subject name of the certificate to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetCertificateSubjectName(this AzureSfApplicationCertificateAddSettings toolSettings, string certificateSubjectName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateSubjectName = certificateSubjectName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.CertificateSubjectName"/></em></p>
+        ///   <p>The subject name of the certificate to be created.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetCertificateSubjectName(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.CertificateSubjectName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region SecretIdentifier
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.SecretIdentifier"/></em></p>
+        ///   <p>The existing Azure key vault secret URL.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetSecretIdentifier(this AzureSfApplicationCertificateAddSettings toolSettings, string secretIdentifier)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretIdentifier = secretIdentifier;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.SecretIdentifier"/></em></p>
+        ///   <p>The existing Azure key vault secret URL.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetSecretIdentifier(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SecretIdentifier = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.VaultName"/></em></p>
+        ///   <p>Azure key vault name, it not given it will be the cluster resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetVaultName(this AzureSfApplicationCertificateAddSettings toolSettings, string vaultName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = vaultName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.VaultName"/></em></p>
+        ///   <p>Azure key vault name, it not given it will be the cluster resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetVaultName(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region VaultResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.VaultResourceGroup"/></em></p>
+        ///   <p>Key vault resource group name, if not given it will be cluster resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetVaultResourceGroup(this AzureSfApplicationCertificateAddSettings toolSettings, string vaultResourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultResourceGroup = vaultResourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.VaultResourceGroup"/></em></p>
+        ///   <p>Key vault resource group name, if not given it will be cluster resource group name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetVaultResourceGroup(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.VaultResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetSubscription(this AzureSfApplicationCertificateAddSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetSubscription(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetDebug(this AzureSfApplicationCertificateAddSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetDebug(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetHelp(this AzureSfApplicationCertificateAddSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetHelp(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetOutput(this AzureSfApplicationCertificateAddSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetOutput(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetQuery(this AzureSfApplicationCertificateAddSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetQuery(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSfApplicationCertificateAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings SetVerbose(this AzureSfApplicationCertificateAddSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSfApplicationCertificateAddSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSfApplicationCertificateAddSettings ResetVerbose(this AzureSfApplicationCertificateAddSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region SfClusterCreateOs
     /// <summary>
     ///   Used within <see cref="AzureSfTasks"/>.
@@ -7613,24 +7613,31 @@ namespace Nuke.Azure
     public partial class SfClusterCreateOs : Enumeration
     {
         public static SfClusterCreateOs ubuntuserver1604 = new SfClusterCreateOs { Value = "ubuntuserver1604" };
+        public static SfClusterCreateOs windowsserver1709 = new SfClusterCreateOs { Value = "windowsserver1709" };
+        public static SfClusterCreateOs windowsserver1709withcontainers = new SfClusterCreateOs { Value = "windowsserver1709withcontainers" };
+        public static SfClusterCreateOs windowsserver1803withcontainers = new SfClusterCreateOs { Value = "windowsserver1803withcontainers" };
+        public static SfClusterCreateOs windowsserver1809withcontainers = new SfClusterCreateOs { Value = "windowsserver1809withcontainers" };
         public static SfClusterCreateOs windowsserver2012r2datacenter = new SfClusterCreateOs { Value = "windowsserver2012r2datacenter" };
         public static SfClusterCreateOs windowsserver2016datacenter = new SfClusterCreateOs { Value = "windowsserver2016datacenter" };
         public static SfClusterCreateOs windowsserver2016datacenterwithcontainers = new SfClusterCreateOs { Value = "windowsserver2016datacenterwithcontainers" };
+        public static SfClusterCreateOs windowsserver2019datacenter = new SfClusterCreateOs { Value = "windowsserver2019datacenter" };
+        public static SfClusterCreateOs windowsserver2019datacenterwithcontainers = new SfClusterCreateOs { Value = "windowsserver2019datacenterwithcontainers" };
     }
     #endregion
-    #region SfClusterDurabilityDurabilityLevel
+    #region SfClusterReliabilityUpdateReliabilityLevel
     /// <summary>
     ///   Used within <see cref="AzureSfTasks"/>.
     /// </summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
-    [TypeConverter(typeof(TypeConverter<SfClusterDurabilityDurabilityLevel>))]
-    public partial class SfClusterDurabilityDurabilityLevel : Enumeration
+    [TypeConverter(typeof(TypeConverter<SfClusterReliabilityUpdateReliabilityLevel>))]
+    public partial class SfClusterReliabilityUpdateReliabilityLevel : Enumeration
     {
-        public static SfClusterDurabilityDurabilityLevel bronze = new SfClusterDurabilityDurabilityLevel { Value = "bronze" };
-        public static SfClusterDurabilityDurabilityLevel gold = new SfClusterDurabilityDurabilityLevel { Value = "gold" };
-        public static SfClusterDurabilityDurabilityLevel silver = new SfClusterDurabilityDurabilityLevel { Value = "silver" };
+        public static SfClusterReliabilityUpdateReliabilityLevel bronze = new SfClusterReliabilityUpdateReliabilityLevel { Value = "bronze" };
+        public static SfClusterReliabilityUpdateReliabilityLevel gold = new SfClusterReliabilityUpdateReliabilityLevel { Value = "gold" };
+        public static SfClusterReliabilityUpdateReliabilityLevel platinum = new SfClusterReliabilityUpdateReliabilityLevel { Value = "platinum" };
+        public static SfClusterReliabilityUpdateReliabilityLevel silver = new SfClusterReliabilityUpdateReliabilityLevel { Value = "silver" };
     }
     #endregion
     #region SfClusterUpgradeTypeSetUpgradeMode
@@ -7645,6 +7652,21 @@ namespace Nuke.Azure
     {
         public static SfClusterUpgradeTypeSetUpgradeMode automatic = new SfClusterUpgradeTypeSetUpgradeMode { Value = "automatic" };
         public static SfClusterUpgradeTypeSetUpgradeMode manual = new SfClusterUpgradeTypeSetUpgradeMode { Value = "manual" };
+    }
+    #endregion
+    #region SfClusterNodeTypeDurabilityLevel
+    /// <summary>
+    ///   Used within <see cref="AzureSfTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    [TypeConverter(typeof(TypeConverter<SfClusterNodeTypeDurabilityLevel>))]
+    public partial class SfClusterNodeTypeDurabilityLevel : Enumeration
+    {
+        public static SfClusterNodeTypeDurabilityLevel bronze = new SfClusterNodeTypeDurabilityLevel { Value = "bronze" };
+        public static SfClusterNodeTypeDurabilityLevel gold = new SfClusterNodeTypeDurabilityLevel { Value = "gold" };
+        public static SfClusterNodeTypeDurabilityLevel silver = new SfClusterNodeTypeDurabilityLevel { Value = "silver" };
     }
     #endregion
 }

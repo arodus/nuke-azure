@@ -2,7 +2,8 @@
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-
+## [0.9.0] / 2019-10-15
+- Changed supported version to [Azure CLI v2.0.74](- Changed supported version to [Azure CLI v2.0.74](https://docs.microsoft.com/en-gb/cli/azure/release-notes-azure-cli?toc=%2Fcli%2Fazure%2Ftoc.json&bc=%2Fcli%2Fazure%2Fbreadcrumb%2Ftoc.json&view=azure-cli-latest#september-24-2019).
 ## [0.8.0] / 2019-06-21
 - Changed supported version to [Azure CLI v2.0.67](- Changed supported version to [Azure CLI v2.0.50](https://docs.microsoft.com/cli/azure/release-notes-azure-cli?view=azure-cli-latest#November-6-2018).
 ## [0.7.0] / 2018-11-08

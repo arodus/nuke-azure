@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureRole.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -106,6 +106,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--assignee</c> via <see cref="AzureRoleAssignmentCreateSettings.Assignee"/></li>
         ///     <li><c>--assignee-object-id</c> via <see cref="AzureRoleAssignmentCreateSettings.AssigneeObjectId"/></li>
+        ///     <li><c>--assignee-principal-type</c> via <see cref="AzureRoleAssignmentCreateSettings.AssigneePrincipalType"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureRoleAssignmentCreateSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureRoleAssignmentCreateSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureRoleAssignmentCreateSettings.Output"/></li>
@@ -130,6 +131,7 @@ namespace Nuke.Azure
         ///   <ul>
         ///     <li><c>--assignee</c> via <see cref="AzureRoleAssignmentCreateSettings.Assignee"/></li>
         ///     <li><c>--assignee-object-id</c> via <see cref="AzureRoleAssignmentCreateSettings.AssigneeObjectId"/></li>
+        ///     <li><c>--assignee-principal-type</c> via <see cref="AzureRoleAssignmentCreateSettings.AssigneePrincipalType"/></li>
         ///     <li><c>--debug</c> via <see cref="AzureRoleAssignmentCreateSettings.Debug"/></li>
         ///     <li><c>--help</c> via <see cref="AzureRoleAssignmentCreateSettings.Help"/></li>
         ///     <li><c>--output</c> via <see cref="AzureRoleAssignmentCreateSettings.Output"/></li>
@@ -617,6 +619,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual string AssigneeObjectId { get; internal set; }
         /// <summary>
+        ///   Use with --assignee-object-id to avoid errors caused by propagation latency in AAD Graph.
+        /// </summary>
+        public virtual RoleAssignmentCreateAssigneePrincipalType AssigneePrincipalType { get; internal set; }
+        /// <summary>
         ///   Use it only if the role or assignment was added at the level of a resource group.
         /// </summary>
         public virtual string ResourceGroup { get; internal set; }
@@ -655,6 +661,7 @@ namespace Nuke.Azure
               .Add("--role {value}", Role)
               .Add("--assignee {value}", Assignee)
               .Add("--assignee-object-id {value}", AssigneeObjectId)
+              .Add("--assignee-principal-type {value}", AssigneePrincipalType)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--scope {value}", Scope)
               .Add("--subscription {value}", Subscription)
@@ -1374,6 +1381,30 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.AssigneeObjectId = null;
+            return toolSettings;
+        }
+        #endregion
+        #region AssigneePrincipalType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRoleAssignmentCreateSettings.AssigneePrincipalType"/></em></p>
+        ///   <p>Use with --assignee-object-id to avoid errors caused by propagation latency in AAD Graph.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRoleAssignmentCreateSettings SetAssigneePrincipalType(this AzureRoleAssignmentCreateSettings toolSettings, RoleAssignmentCreateAssigneePrincipalType assigneePrincipalType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssigneePrincipalType = assigneePrincipalType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRoleAssignmentCreateSettings.AssigneePrincipalType"/></em></p>
+        ///   <p>Use with --assignee-object-id to avoid errors caused by propagation latency in AAD Graph.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRoleAssignmentCreateSettings ResetAssigneePrincipalType(this AzureRoleAssignmentCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.AssigneePrincipalType = null;
             return toolSettings;
         }
         #endregion
@@ -3451,6 +3482,28 @@ namespace Nuke.Azure
             return toolSettings;
         }
         #endregion
+    }
+    #endregion
+    #region RoleAssignmentCreateAssigneePrincipalType
+    /// <summary>
+    ///   Used within <see cref="AzureRoleTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [Serializable]
+    [ExcludeFromCodeCoverage]
+    [TypeConverter(typeof(TypeConverter<RoleAssignmentCreateAssigneePrincipalType>))]
+    public partial class RoleAssignmentCreateAssigneePrincipalType : Enumeration
+    {
+        public static RoleAssignmentCreateAssigneePrincipalType application = new RoleAssignmentCreateAssigneePrincipalType { Value = "application" };
+        public static RoleAssignmentCreateAssigneePrincipalType directoryobjectorgroup = new RoleAssignmentCreateAssigneePrincipalType { Value = "directoryobjectorgroup" };
+        public static RoleAssignmentCreateAssigneePrincipalType directoryroletemplate = new RoleAssignmentCreateAssigneePrincipalType { Value = "directoryroletemplate" };
+        public static RoleAssignmentCreateAssigneePrincipalType everyone = new RoleAssignmentCreateAssigneePrincipalType { Value = "everyone" };
+        public static RoleAssignmentCreateAssigneePrincipalType foreigngroup = new RoleAssignmentCreateAssigneePrincipalType { Value = "foreigngroup" };
+        public static RoleAssignmentCreateAssigneePrincipalType group = new RoleAssignmentCreateAssigneePrincipalType { Value = "group" };
+        public static RoleAssignmentCreateAssigneePrincipalType msi = new RoleAssignmentCreateAssigneePrincipalType { Value = "msi" };
+        public static RoleAssignmentCreateAssigneePrincipalType serviceprincipal = new RoleAssignmentCreateAssigneePrincipalType { Value = "serviceprincipal" };
+        public static RoleAssignmentCreateAssigneePrincipalType unknown = new RoleAssignmentCreateAssigneePrincipalType { Value = "unknown" };
+        public static RoleAssignmentCreateAssigneePrincipalType user = new RoleAssignmentCreateAssigneePrincipalType { Value = "user" };
     }
     #endregion
 }

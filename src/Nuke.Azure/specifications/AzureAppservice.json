@@ -1,8 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/appservice.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/appservice/plan.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/appservice.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/appservice/plan.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/appservice/hybrid-connection.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/appservice/vnet-integration.yml"
   ],
   "name": "AzureAppservice",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest",
@@ -287,6 +289,85 @@
             "format": "--set {value}",
             "secret": false,
             "help": "Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "HybridConnectionSetKey",
+      "definiteArgument": "appservice hybrid-connection set-key",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "HybridConnection",
+            "type": "string",
+            "format": "--hybrid-connection {value}",
+            "secret": false,
+            "help": "Hybrid connection name."
+          },
+          {
+            "name": "KeyType",
+            "type": "string",
+            "format": "--key-type {value}",
+            "secret": false,
+            "help": "Which key (primary or secondary) should be used."
+          },
+          {
+            "name": "Namespace",
+            "type": "string",
+            "format": "--namespace {value}",
+            "secret": false,
+            "help": "Hybrid connection namespace."
+          },
+          {
+            "name": "Plan",
+            "type": "string",
+            "format": "--plan {value}",
+            "secret": false,
+            "help": "AppService plan."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "VnetIntegrationList",
+      "definiteArgument": "appservice vnet-integration list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Plan",
+            "type": "string",
+            "format": "--plan {value}",
+            "secret": false,
+            "help": "AppService plan."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
           }
         ]
       }

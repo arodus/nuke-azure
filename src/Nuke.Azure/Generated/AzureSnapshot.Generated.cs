@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureSnapshot.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -61,6 +61,7 @@ namespace Nuke.Azure
         ///     <li><c>--for-upload</c> via <see cref="AzureSnapshotCreateSettings.ForUpload"/></li>
         ///     <li><c>--help</c> via <see cref="AzureSnapshotCreateSettings.Help"/></li>
         ///     <li><c>--hyper-v-generation</c> via <see cref="AzureSnapshotCreateSettings.HyperVGeneration"/></li>
+        ///     <li><c>--incremental</c> via <see cref="AzureSnapshotCreateSettings.Incremental"/></li>
         ///     <li><c>--location</c> via <see cref="AzureSnapshotCreateSettings.Location"/></li>
         ///     <li><c>--name</c> via <see cref="AzureSnapshotCreateSettings.Name"/></li>
         ///     <li><c>--no-wait</c> via <see cref="AzureSnapshotCreateSettings.NoWait"/></li>
@@ -91,6 +92,7 @@ namespace Nuke.Azure
         ///     <li><c>--for-upload</c> via <see cref="AzureSnapshotCreateSettings.ForUpload"/></li>
         ///     <li><c>--help</c> via <see cref="AzureSnapshotCreateSettings.Help"/></li>
         ///     <li><c>--hyper-v-generation</c> via <see cref="AzureSnapshotCreateSettings.HyperVGeneration"/></li>
+        ///     <li><c>--incremental</c> via <see cref="AzureSnapshotCreateSettings.Incremental"/></li>
         ///     <li><c>--location</c> via <see cref="AzureSnapshotCreateSettings.Location"/></li>
         ///     <li><c>--name</c> via <see cref="AzureSnapshotCreateSettings.Name"/></li>
         ///     <li><c>--no-wait</c> via <see cref="AzureSnapshotCreateSettings.NoWait"/></li>
@@ -553,6 +555,10 @@ namespace Nuke.Azure
         /// </summary>
         public virtual SnapshotCreateHyperVGeneration HyperVGeneration { get; internal set; }
         /// <summary>
+        ///   Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.
+        /// </summary>
+        public virtual bool? Incremental { get; internal set; }
+        /// <summary>
         ///   Location. Values from: `az account list-locations`. You can configure the default location using `az configure --defaults location=&amp;lt;location&amp;gt;`.
         /// </summary>
         public virtual string Location { get; internal set; }
@@ -609,6 +615,7 @@ namespace Nuke.Azure
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--for-upload", ForUpload)
               .Add("--hyper-v-generation {value}", HyperVGeneration)
+              .Add("--incremental", Incremental)
               .Add("--location {value}", Location)
               .Add("--no-wait", NoWait)
               .Add("--size-gb {value}", SizeGb)
@@ -1297,6 +1304,63 @@ namespace Nuke.Azure
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HyperVGeneration = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Incremental
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureSnapshotCreateSettings.Incremental"/></em></p>
+        ///   <p>Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSnapshotCreateSettings SetIncremental(this AzureSnapshotCreateSettings toolSettings, bool? incremental)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Incremental = incremental;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureSnapshotCreateSettings.Incremental"/></em></p>
+        ///   <p>Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSnapshotCreateSettings ResetIncremental(this AzureSnapshotCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Incremental = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureSnapshotCreateSettings.Incremental"/></em></p>
+        ///   <p>Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSnapshotCreateSettings EnableIncremental(this AzureSnapshotCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Incremental = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureSnapshotCreateSettings.Incremental"/></em></p>
+        ///   <p>Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSnapshotCreateSettings DisableIncremental(this AzureSnapshotCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Incremental = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureSnapshotCreateSettings.Incremental"/></em></p>
+        ///   <p>Whether a snapshot is incremental. Incremental snapshots on the same disk occupy less space than full snapshots and can be diffed.</p>
+        /// </summary>
+        [Pure]
+        public static AzureSnapshotCreateSettings ToggleIncremental(this AzureSnapshotCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Incremental = !toolSettings.Incremental;
             return toolSettings;
         }
         #endregion
@@ -3942,6 +4006,7 @@ namespace Nuke.Azure
     {
         public static SnapshotSku premium_lrs = new SnapshotSku { Value = "premium_lrs" };
         public static SnapshotSku standard_lrs = new SnapshotSku { Value = "standard_lrs" };
+        public static SnapshotSku standard_zrs = new SnapshotSku { Value = "standard_zrs" };
     }
     #endregion
     #region SnapshotGrantAccessAccessLevel

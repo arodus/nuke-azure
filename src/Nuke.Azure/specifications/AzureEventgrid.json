@@ -1,14 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/domain.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/event-subscription.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/topic-type.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/topic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/domain/key.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/domain/topic.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/eventgrid/topic/key.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/eventgrid.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/eventgrid/topic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/eventgrid/topic-type.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/eventgrid/event-subscription.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/eventgrid/domain.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/eventgrid/topic/key.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/eventgrid/domain/topic.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/eventgrid/domain/key.yml"
   ],
   "name": "AzureEventgrid",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/eventgrid?view=azure-cli-latest",
@@ -21,8 +21,8 @@
       "settingsClass": {}
     },
     {
-      "postfix": "DomainCreate",
-      "definiteArgument": "eventgrid domain create",
+      "postfix": "TopicCreate",
+      "definiteArgument": "eventgrid topic create",
       "settingsClass": {
         "properties": [
           {
@@ -37,7 +37,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the domain."
+            "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
@@ -64,8 +64,8 @@
       }
     },
     {
-      "postfix": "DomainDelete",
-      "definiteArgument": "eventgrid domain delete",
+      "postfix": "TopicDelete",
+      "definiteArgument": "eventgrid topic delete",
       "settingsClass": {
         "properties": [
           {
@@ -81,7 +81,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the domain."
+            "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
@@ -101,8 +101,8 @@
       }
     },
     {
-      "postfix": "DomainList",
-      "definiteArgument": "eventgrid domain list",
+      "postfix": "TopicList",
+      "definiteArgument": "eventgrid topic list",
       "settingsClass": {
         "properties": [
           {
@@ -130,8 +130,8 @@
       }
     },
     {
-      "postfix": "DomainShow",
-      "definiteArgument": "eventgrid domain show",
+      "postfix": "TopicShow",
+      "definiteArgument": "eventgrid topic show",
       "settingsClass": {
         "properties": [
           {
@@ -147,7 +147,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the domain."
+            "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
@@ -167,8 +167,8 @@
       }
     },
     {
-      "postfix": "DomainUpdate",
-      "definiteArgument": "eventgrid domain update",
+      "postfix": "TopicUpdate",
+      "definiteArgument": "eventgrid topic update",
       "settingsClass": {
         "properties": [
           {
@@ -191,7 +191,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the domain."
+            "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
@@ -239,6 +239,65 @@
       }
     },
     {
+      "postfix": "TopicTypeList",
+      "definiteArgument": "eventgrid topic-type list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicTypeListEventTypes",
+      "definiteArgument": "eventgrid topic-type list-event-types",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the topic type."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "TopicTypeShow",
+      "definiteArgument": "eventgrid topic-type show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Name",
+            "type": "string",
+            "format": "--name {value}",
+            "secret": false,
+            "help": "Name of the topic type."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "EventSubscriptionCreate",
       "definiteArgument": "eventgrid event-subscription create",
       "settingsClass": {
@@ -248,7 +307,7 @@
             "type": "string",
             "format": "--endpoint {value}",
             "secret": false,
-            "help": "Endpoint where EventGrid should deliver events matching this event subscription. For webhook endpoint type, this should be the corresponding webhook URL. For other endpoint types, this should be the Azure resource identifier of the endpoint."
+            "help": "Endpoint where EventGrid should deliver events matching this event subscription. For webhook endpoint type, this should be the corresponding webhook URL. For other endpoint types, this should be the Azure resource identifier of the endpoint. It is expected that the destination endpoint to be already created and available for use before executing any Event Grid command."
           },
           {
             "name": "Name",
@@ -567,7 +626,7 @@
             "type": "string",
             "format": "--endpoint {value}",
             "secret": false,
-            "help": "Endpoint where EventGrid should deliver events matching this event subscription. For webhook endpoint type, this should be the corresponding webhook URL. For other endpoint types, this should be the Azure resource identifier of the endpoint."
+            "help": "Endpoint where EventGrid should deliver events matching this event subscription. For webhook endpoint type, this should be the corresponding webhook URL. For other endpoint types, this should be the Azure resource identifier of the endpoint. It is expected that the destination endpoint to be already created and available for use before executing any Event Grid command."
           },
           {
             "name": "EndpointType",
@@ -671,67 +730,8 @@
       }
     },
     {
-      "postfix": "TopicTypeList",
-      "definiteArgument": "eventgrid topic-type list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicTypeListEventTypes",
-      "definiteArgument": "eventgrid topic-type list-event-types",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the topic type."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicTypeShow",
-      "definiteArgument": "eventgrid topic-type show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Name",
-            "type": "string",
-            "format": "--name {value}",
-            "secret": false,
-            "help": "Name of the topic type."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "TopicCreate",
-      "definiteArgument": "eventgrid topic create",
+      "postfix": "DomainCreate",
+      "definiteArgument": "eventgrid domain create",
       "settingsClass": {
         "properties": [
           {
@@ -746,7 +746,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the topic."
+            "help": "Name of the domain."
           },
           {
             "name": "ResourceGroup",
@@ -773,8 +773,8 @@
       }
     },
     {
-      "postfix": "TopicDelete",
-      "definiteArgument": "eventgrid topic delete",
+      "postfix": "DomainDelete",
+      "definiteArgument": "eventgrid domain delete",
       "settingsClass": {
         "properties": [
           {
@@ -790,7 +790,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the topic."
+            "help": "Name of the domain."
           },
           {
             "name": "ResourceGroup",
@@ -810,8 +810,8 @@
       }
     },
     {
-      "postfix": "TopicList",
-      "definiteArgument": "eventgrid topic list",
+      "postfix": "DomainList",
+      "definiteArgument": "eventgrid domain list",
       "settingsClass": {
         "properties": [
           {
@@ -839,8 +839,8 @@
       }
     },
     {
-      "postfix": "TopicShow",
-      "definiteArgument": "eventgrid topic show",
+      "postfix": "DomainShow",
+      "definiteArgument": "eventgrid domain show",
       "settingsClass": {
         "properties": [
           {
@@ -856,7 +856,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the topic."
+            "help": "Name of the domain."
           },
           {
             "name": "ResourceGroup",
@@ -876,8 +876,8 @@
       }
     },
     {
-      "postfix": "TopicUpdate",
-      "definiteArgument": "eventgrid topic update",
+      "postfix": "DomainUpdate",
+      "definiteArgument": "eventgrid domain update",
       "settingsClass": {
         "properties": [
           {
@@ -900,7 +900,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the topic."
+            "help": "Name of the domain."
           },
           {
             "name": "ResourceGroup",
@@ -948,8 +948,8 @@
       }
     },
     {
-      "postfix": "DomainKeyList",
-      "definiteArgument": "eventgrid domain key list",
+      "postfix": "TopicKeyList",
+      "definiteArgument": "eventgrid topic key list",
       "settingsClass": {
         "properties": [
           {
@@ -957,7 +957,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the domain."
+            "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
@@ -977,23 +977,23 @@
       }
     },
     {
-      "postfix": "DomainKeyRegenerate",
-      "definiteArgument": "eventgrid domain key regenerate",
+      "postfix": "TopicKeyRegenerate",
+      "definiteArgument": "eventgrid topic key regenerate",
       "settingsClass": {
         "properties": [
           {
             "name": "KeyName",
-            "type": "string",
+            "type": "EventgridTopicKeyKeyName",
             "format": "--key-name {value}",
             "secret": false,
-            "help": "Key name to regenerate key1 or key2."
+            "help": "Key name to regenerate, which can be either 'key1' or 'key2'."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the domain."
+            "help": "Name of the topic."
           },
           {
             "name": "ResourceGroup",
@@ -1173,8 +1173,8 @@
       }
     },
     {
-      "postfix": "TopicKeyList",
-      "definiteArgument": "eventgrid topic key list",
+      "postfix": "DomainKeyList",
+      "definiteArgument": "eventgrid domain key list",
       "settingsClass": {
         "properties": [
           {
@@ -1182,7 +1182,7 @@
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the topic."
+            "help": "Name of the domain."
           },
           {
             "name": "ResourceGroup",
@@ -1202,23 +1202,23 @@
       }
     },
     {
-      "postfix": "TopicKeyRegenerate",
-      "definiteArgument": "eventgrid topic key regenerate",
+      "postfix": "DomainKeyRegenerate",
+      "definiteArgument": "eventgrid domain key regenerate",
       "settingsClass": {
         "properties": [
           {
             "name": "KeyName",
-            "type": "string",
+            "type": "EventgridTopicKeyKeyName",
             "format": "--key-name {value}",
             "secret": false,
-            "help": "Key name to regenerate key1 or key2."
+            "help": "Key name to regenerate, which can be either 'key1' or 'key2'."
           },
           {
             "name": "Name",
             "type": "string",
             "format": "--name {value}",
             "secret": false,
-            "help": "Name of the topic."
+            "help": "Name of the domain."
           },
           {
             "name": "ResourceGroup",
@@ -1284,6 +1284,13 @@
         "servicebusqueue",
         "storagequeue",
         "webhook"
+      ]
+    },
+    {
+      "name": "EventgridTopicKeyKeyName",
+      "values": [
+        "key1",
+        "key2"
       ]
     }
   ]

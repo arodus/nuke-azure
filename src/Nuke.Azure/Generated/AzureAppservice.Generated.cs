@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureAppservice.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -386,6 +386,118 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureAppservicePlanUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureAppservicePlanUpdate(CombinatorialConfigure<AzureAppservicePlanUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureAppservicePlanUpdate, AzureAppserviceLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage App Service plans.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureAppserviceHybridConnectionSetKey(AzureAppserviceHybridConnectionSetKeySettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureAppserviceHybridConnectionSetKeySettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage App Service plans.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Help"/></li>
+        ///     <li><c>--hybrid-connection</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.HybridConnection"/></li>
+        ///     <li><c>--key-type</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.KeyType"/></li>
+        ///     <li><c>--namespace</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Namespace"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Output"/></li>
+        ///     <li><c>--plan</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Plan"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureAppserviceHybridConnectionSetKey(Configure<AzureAppserviceHybridConnectionSetKeySettings> configurator)
+        {
+            return AzureAppserviceHybridConnectionSetKey(configurator(new AzureAppserviceHybridConnectionSetKeySettings()));
+        }
+        /// <summary>
+        ///   <p>Manage App Service plans.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Help"/></li>
+        ///     <li><c>--hybrid-connection</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.HybridConnection"/></li>
+        ///     <li><c>--key-type</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.KeyType"/></li>
+        ///     <li><c>--namespace</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Namespace"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Output"/></li>
+        ///     <li><c>--plan</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Plan"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAppserviceHybridConnectionSetKeySettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureAppserviceHybridConnectionSetKeySettings Settings, IReadOnlyCollection<Output> Output)> AzureAppserviceHybridConnectionSetKey(CombinatorialConfigure<AzureAppserviceHybridConnectionSetKeySettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureAppserviceHybridConnectionSetKey, AzureAppserviceLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage App Service plans.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureAppserviceVnetIntegrationList(AzureAppserviceVnetIntegrationListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureAppserviceVnetIntegrationListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage App Service plans.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Output"/></li>
+        ///     <li><c>--plan</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Plan"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureAppserviceVnetIntegrationList(Configure<AzureAppserviceVnetIntegrationListSettings> configurator)
+        {
+            return AzureAppserviceVnetIntegrationList(configurator(new AzureAppserviceVnetIntegrationListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage App Service plans.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/appservice?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Output"/></li>
+        ///     <li><c>--plan</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Plan"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureAppserviceVnetIntegrationListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureAppserviceVnetIntegrationListSettings Settings, IReadOnlyCollection<Output> Output)> AzureAppserviceVnetIntegrationList(CombinatorialConfigure<AzureAppserviceVnetIntegrationListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureAppserviceVnetIntegrationList, AzureAppserviceLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureAppserviceListLocationsSettings
@@ -829,6 +941,145 @@ namespace Nuke.Azure
               .Add("--force-string {value}", ForceString)
               .Add("--remove {value}", Remove)
               .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAppserviceHybridConnectionSetKeySettings
+    /// <summary>
+    ///   Used within <see cref="AzureAppserviceTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAppserviceHybridConnectionSetKeySettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureAppservice executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureAppserviceTasks.AzureAppservicePath;
+        public override Action<OutputType, string> CustomLogger => AzureAppserviceTasks.AzureAppserviceLogger;
+        /// <summary>
+        ///   Hybrid connection name.
+        /// </summary>
+        public virtual string HybridConnection { get; internal set; }
+        /// <summary>
+        ///   Which key (primary or secondary) should be used.
+        /// </summary>
+        public virtual string KeyType { get; internal set; }
+        /// <summary>
+        ///   Hybrid connection namespace.
+        /// </summary>
+        public virtual string Namespace { get; internal set; }
+        /// <summary>
+        ///   AppService plan.
+        /// </summary>
+        public virtual string Plan { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("appservice hybrid-connection set-key")
+              .Add("--hybrid-connection {value}", HybridConnection)
+              .Add("--key-type {value}", KeyType)
+              .Add("--namespace {value}", Namespace)
+              .Add("--plan {value}", Plan)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureAppserviceVnetIntegrationListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureAppserviceTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureAppserviceVnetIntegrationListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureAppservice executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureAppserviceTasks.AzureAppservicePath;
+        public override Action<OutputType, string> CustomLogger => AzureAppserviceTasks.AzureAppserviceLogger;
+        /// <summary>
+        ///   AppService plan.
+        /// </summary>
+        public virtual string Plan { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("appservice vnet-integration list")
+              .Add("--plan {value}", Plan)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -2573,6 +2824,482 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureAppservicePlanUpdateSettings ResetVerbose(this AzureAppservicePlanUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAppserviceHybridConnectionSetKeySettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureAppserviceTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAppserviceHybridConnectionSetKeySettingsExtensions
+    {
+        #region HybridConnection
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.HybridConnection"/></em></p>
+        ///   <p>Hybrid connection name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetHybridConnection(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string hybridConnection)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HybridConnection = hybridConnection;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.HybridConnection"/></em></p>
+        ///   <p>Hybrid connection name.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetHybridConnection(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HybridConnection = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.KeyType"/></em></p>
+        ///   <p>Which key (primary or secondary) should be used.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetKeyType(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string keyType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyType = keyType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.KeyType"/></em></p>
+        ///   <p>Which key (primary or secondary) should be used.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetKeyType(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Namespace
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Namespace"/></em></p>
+        ///   <p>Hybrid connection namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetNamespace(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string @namespace)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = @namespace;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Namespace"/></em></p>
+        ///   <p>Hybrid connection namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetNamespace(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Namespace = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Plan
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Plan"/></em></p>
+        ///   <p>AppService plan.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetPlan(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string plan)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Plan = plan;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Plan"/></em></p>
+        ///   <p>AppService plan.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetPlan(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Plan = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetResourceGroup(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetResourceGroup(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetSubscription(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetSubscription(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetDebug(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetDebug(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetHelp(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetHelp(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetOutput(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetOutput(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetQuery(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetQuery(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings SetVerbose(this AzureAppserviceHybridConnectionSetKeySettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceHybridConnectionSetKeySettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceHybridConnectionSetKeySettings ResetVerbose(this AzureAppserviceHybridConnectionSetKeySettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureAppserviceVnetIntegrationListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureAppserviceTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureAppserviceVnetIntegrationListSettingsExtensions
+    {
+        #region Plan
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceVnetIntegrationListSettings.Plan"/></em></p>
+        ///   <p>AppService plan.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings SetPlan(this AzureAppserviceVnetIntegrationListSettings toolSettings, string plan)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Plan = plan;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceVnetIntegrationListSettings.Plan"/></em></p>
+        ///   <p>AppService plan.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings ResetPlan(this AzureAppserviceVnetIntegrationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Plan = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceVnetIntegrationListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings SetResourceGroup(this AzureAppserviceVnetIntegrationListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceVnetIntegrationListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings ResetResourceGroup(this AzureAppserviceVnetIntegrationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceVnetIntegrationListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings SetSubscription(this AzureAppserviceVnetIntegrationListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceVnetIntegrationListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings ResetSubscription(this AzureAppserviceVnetIntegrationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceVnetIntegrationListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings SetDebug(this AzureAppserviceVnetIntegrationListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceVnetIntegrationListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings ResetDebug(this AzureAppserviceVnetIntegrationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceVnetIntegrationListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings SetHelp(this AzureAppserviceVnetIntegrationListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceVnetIntegrationListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings ResetHelp(this AzureAppserviceVnetIntegrationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceVnetIntegrationListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings SetOutput(this AzureAppserviceVnetIntegrationListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceVnetIntegrationListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings ResetOutput(this AzureAppserviceVnetIntegrationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceVnetIntegrationListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings SetQuery(this AzureAppserviceVnetIntegrationListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceVnetIntegrationListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings ResetQuery(this AzureAppserviceVnetIntegrationListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureAppserviceVnetIntegrationListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings SetVerbose(this AzureAppserviceVnetIntegrationListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureAppserviceVnetIntegrationListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureAppserviceVnetIntegrationListSettings ResetVerbose(this AzureAppserviceVnetIntegrationListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

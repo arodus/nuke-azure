@@ -1,14 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/budget.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/marketplace.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/pricesheet.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/reservation.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/usage.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/reservation/detail.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/consumption/reservation/summary.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/consumption.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/consumption/budget.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/consumption/reservation.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/consumption/usage.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/consumption/marketplace.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/consumption/pricesheet.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/consumption/reservation/detail.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/consumption/reservation/summary.yml"
   ],
   "name": "AzureConsumption",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest",
@@ -189,6 +189,68 @@
       }
     },
     {
+      "postfix": "Reservation",
+      "definiteArgument": "consumption reservation",
+      "settingsClass": {}
+    },
+    {
+      "postfix": "UsageList",
+      "definiteArgument": "consumption usage list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "BillingPeriodName",
+            "type": "string",
+            "format": "--billing-period-name {value}",
+            "secret": false,
+            "help": "Name of the billing period to get the usage details that associate with."
+          },
+          {
+            "name": "EndDate",
+            "type": "string",
+            "format": "--end-date {value}",
+            "secret": false,
+            "help": "End date (YYYY-MM-DD in UTC). If specified, also requires --start-date."
+          },
+          {
+            "name": "IncludeAdditionalProperties",
+            "type": "string",
+            "format": "--include-additional-properties {value}",
+            "secret": false,
+            "help": "Include additional properties in the usages."
+          },
+          {
+            "name": "IncludeMeterDetails",
+            "type": "string",
+            "format": "--include-meter-details {value}",
+            "secret": false,
+            "help": "Include meter details in the usages."
+          },
+          {
+            "name": "StartDate",
+            "type": "string",
+            "format": "--start-date {value}",
+            "secret": false,
+            "help": "Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date."
+          },
+          {
+            "name": "Top",
+            "type": "int",
+            "format": "--top {value}",
+            "secret": false,
+            "help": "Maximum number of items to return. Value range: 1-1000."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
       "postfix": "MarketplaceList",
       "definiteArgument": "consumption marketplace list",
       "settingsClass": {
@@ -249,68 +311,6 @@
             "format": "--include-meter-details {value}",
             "secret": false,
             "help": "Include meter details in the price sheet."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "Reservation",
-      "definiteArgument": "consumption reservation",
-      "settingsClass": {}
-    },
-    {
-      "postfix": "UsageList",
-      "definiteArgument": "consumption usage list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "BillingPeriodName",
-            "type": "string",
-            "format": "--billing-period-name {value}",
-            "secret": false,
-            "help": "Name of the billing period to get the usage details that associate with."
-          },
-          {
-            "name": "EndDate",
-            "type": "string",
-            "format": "--end-date {value}",
-            "secret": false,
-            "help": "End date (YYYY-MM-DD in UTC). If specified, also requires --start-date."
-          },
-          {
-            "name": "IncludeAdditionalProperties",
-            "type": "string",
-            "format": "--include-additional-properties {value}",
-            "secret": false,
-            "help": "Include additional properties in the usages."
-          },
-          {
-            "name": "IncludeMeterDetails",
-            "type": "string",
-            "format": "--include-meter-details {value}",
-            "secret": false,
-            "help": "Include meter details in the usages."
-          },
-          {
-            "name": "StartDate",
-            "type": "string",
-            "format": "--start-date {value}",
-            "secret": false,
-            "help": "Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date."
-          },
-          {
-            "name": "Top",
-            "type": "int",
-            "format": "--top {value}",
-            "secret": false,
-            "help": "Maximum number of items to return. Value range: 1-1000."
           },
           {
             "name": "Subscription",

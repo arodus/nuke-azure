@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureRelay.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -387,6 +387,307 @@ namespace Nuke.Azure
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayCreate(AzureRelayWcfrelayCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayCreateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayCreateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayCreateSettings.Query"/></li>
+        ///     <li><c>--relay-type</c> via <see cref="AzureRelayWcfrelayCreateSettings.RelayType"/></li>
+        ///     <li><c>--requires-client-authorization</c> via <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></li>
+        ///     <li><c>--requires-transport-security</c> via <see cref="AzureRelayWcfrelayCreateSettings.RequiresTransportSecurity"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayCreateSettings.Subscription"/></li>
+        ///     <li><c>--user-metadata</c> via <see cref="AzureRelayWcfrelayCreateSettings.UserMetadata"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayCreate(Configure<AzureRelayWcfrelayCreateSettings> configurator)
+        {
+            return AzureRelayWcfrelayCreate(configurator(new AzureRelayWcfrelayCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayCreateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayCreateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayCreateSettings.Query"/></li>
+        ///     <li><c>--relay-type</c> via <see cref="AzureRelayWcfrelayCreateSettings.RelayType"/></li>
+        ///     <li><c>--requires-client-authorization</c> via <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></li>
+        ///     <li><c>--requires-transport-security</c> via <see cref="AzureRelayWcfrelayCreateSettings.RequiresTransportSecurity"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayCreateSettings.Subscription"/></li>
+        ///     <li><c>--user-metadata</c> via <see cref="AzureRelayWcfrelayCreateSettings.UserMetadata"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayWcfrelayCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayCreate(CombinatorialConfigure<AzureRelayWcfrelayCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayWcfrelayCreate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayDelete(AzureRelayWcfrelayDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayDeleteSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayDelete(Configure<AzureRelayWcfrelayDeleteSettings> configurator)
+        {
+            return AzureRelayWcfrelayDelete(configurator(new AzureRelayWcfrelayDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayDeleteSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayWcfrelayDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayDelete(CombinatorialConfigure<AzureRelayWcfrelayDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayWcfrelayDelete, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayList(AzureRelayWcfrelayListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayListSettings.Help"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayList(Configure<AzureRelayWcfrelayListSettings> configurator)
+        {
+            return AzureRelayWcfrelayList(configurator(new AzureRelayWcfrelayListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayListSettings.Help"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayWcfrelayListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayList(CombinatorialConfigure<AzureRelayWcfrelayListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayWcfrelayList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayShow(AzureRelayWcfrelayShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayShowSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayShowSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayShow(Configure<AzureRelayWcfrelayShowSettings> configurator)
+        {
+            return AzureRelayWcfrelayShow(configurator(new AzureRelayWcfrelayShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayShowSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayShowSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayWcfrelayShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayShow(CombinatorialConfigure<AzureRelayWcfrelayShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayWcfrelayShow, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayUpdate(AzureRelayWcfrelayUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureRelayWcfrelayUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayUpdateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Query"/></li>
+        ///     <li><c>--relay-type</c> via <see cref="AzureRelayWcfrelayUpdateSettings.RelayType"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Set"/></li>
+        ///     <li><c>--status</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Status"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Subscription"/></li>
+        ///     <li><c>--user-metadata</c> via <see cref="AzureRelayWcfrelayUpdateSettings.UserMetadata"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayUpdate(Configure<AzureRelayWcfrelayUpdateSettings> configurator)
+        {
+            return AzureRelayWcfrelayUpdate(configurator(new AzureRelayWcfrelayUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureRelayWcfrelayUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayUpdateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Query"/></li>
+        ///     <li><c>--relay-type</c> via <see cref="AzureRelayWcfrelayUpdateSettings.RelayType"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Set"/></li>
+        ///     <li><c>--status</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Status"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Subscription"/></li>
+        ///     <li><c>--user-metadata</c> via <see cref="AzureRelayWcfrelayUpdateSettings.UserMetadata"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayWcfrelayUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayUpdate(CombinatorialConfigure<AzureRelayWcfrelayUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayWcfrelayUpdate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
         public static IReadOnlyCollection<Output> AzureRelayNamespaceCreate(AzureRelayNamespaceCreateSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureRelayNamespaceCreateSettings();
@@ -721,9 +1022,9 @@ namespace Nuke.Azure
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayCreate(AzureRelayWcfrelayCreateSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleCreate(AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayCreateSettings();
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleCreateSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -735,23 +1036,22 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayCreateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayCreateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayCreateSettings.Query"/></li>
-        ///     <li><c>--relay-type</c> via <see cref="AzureRelayWcfrelayCreateSettings.RelayType"/></li>
-        ///     <li><c>--requires-client-authorization</c> via <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayCreateSettings.Subscription"/></li>
-        ///     <li><c>--user-metadata</c> via <see cref="AzureRelayWcfrelayCreateSettings.UserMetadata"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayCreateSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--rights</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Rights"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayCreate(Configure<AzureRelayWcfrelayCreateSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleCreate(Configure<AzureRelayWcfrelayAuthorizationRuleCreateSettings> configurator)
         {
-            return AzureRelayWcfrelayCreate(configurator(new AzureRelayWcfrelayCreateSettings()));
+            return AzureRelayWcfrelayAuthorizationRuleCreate(configurator(new AzureRelayWcfrelayAuthorizationRuleCreateSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -760,31 +1060,30 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayCreateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayCreateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayCreateSettings.Query"/></li>
-        ///     <li><c>--relay-type</c> via <see cref="AzureRelayWcfrelayCreateSettings.RelayType"/></li>
-        ///     <li><c>--requires-client-authorization</c> via <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayCreateSettings.Subscription"/></li>
-        ///     <li><c>--user-metadata</c> via <see cref="AzureRelayWcfrelayCreateSettings.UserMetadata"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayCreateSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--rights</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Rights"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayCreate(CombinatorialConfigure<AzureRelayWcfrelayCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleCreate(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureRelayWcfrelayCreate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleCreate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayDelete(AzureRelayWcfrelayDeleteSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleDelete(AzureRelayWcfrelayAuthorizationRuleDeleteSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayDeleteSettings();
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleDeleteSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -796,21 +1095,22 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayDeleteSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayDelete(Configure<AzureRelayWcfrelayDeleteSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleDelete(Configure<AzureRelayWcfrelayAuthorizationRuleDeleteSettings> configurator)
         {
-            return AzureRelayWcfrelayDelete(configurator(new AzureRelayWcfrelayDeleteSettings()));
+            return AzureRelayWcfrelayAuthorizationRuleDelete(configurator(new AzureRelayWcfrelayAuthorizationRuleDeleteSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -819,29 +1119,30 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayDeleteSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayDeleteSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayDelete(CombinatorialConfigure<AzureRelayWcfrelayDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleDelete(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureRelayWcfrelayDelete, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleDelete, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayList(AzureRelayWcfrelayListSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleList(AzureRelayWcfrelayAuthorizationRuleListSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayListSettings();
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleListSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -853,19 +1154,20 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayListSettings.Help"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayListSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Help"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayList(Configure<AzureRelayWcfrelayListSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleList(Configure<AzureRelayWcfrelayAuthorizationRuleListSettings> configurator)
         {
-            return AzureRelayWcfrelayList(configurator(new AzureRelayWcfrelayListSettings()));
+            return AzureRelayWcfrelayAuthorizationRuleList(configurator(new AzureRelayWcfrelayAuthorizationRuleListSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -874,27 +1176,28 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayListSettings.Help"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayListSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Help"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayList(CombinatorialConfigure<AzureRelayWcfrelayListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleList(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureRelayWcfrelayList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayShow(AzureRelayWcfrelayShowSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleShow(AzureRelayWcfrelayAuthorizationRuleShowSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayShowSettings();
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleShowSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -906,21 +1209,22 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayShowSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayShowSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayShowSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayShow(Configure<AzureRelayWcfrelayShowSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleShow(Configure<AzureRelayWcfrelayAuthorizationRuleShowSettings> configurator)
         {
-            return AzureRelayWcfrelayShow(configurator(new AzureRelayWcfrelayShowSettings()));
+            return AzureRelayWcfrelayAuthorizationRuleShow(configurator(new AzureRelayWcfrelayAuthorizationRuleShowSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -929,29 +1233,30 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayShowSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayShowSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayShowSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayShow(CombinatorialConfigure<AzureRelayWcfrelayShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleShow(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureRelayWcfrelayShow, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleShow, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayUpdate(AzureRelayWcfrelayUpdateSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleUpdate(AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayUpdateSettings();
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleUpdateSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -963,29 +1268,27 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureRelayWcfrelayUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayUpdateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Query"/></li>
-        ///     <li><c>--relay-type</c> via <see cref="AzureRelayWcfrelayUpdateSettings.RelayType"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Remove"/></li>
-        ///     <li><c>--requires-client-authorization</c> via <see cref="AzureRelayWcfrelayUpdateSettings.RequiresClientAuthorization"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Set"/></li>
-        ///     <li><c>--status</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Status"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Subscription"/></li>
-        ///     <li><c>--user-metadata</c> via <see cref="AzureRelayWcfrelayUpdateSettings.UserMetadata"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Verbose"/></li>
+        ///     <li><c>--add</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.RelayName"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--rights</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Rights"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayUpdate(Configure<AzureRelayWcfrelayUpdateSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleUpdate(Configure<AzureRelayWcfrelayAuthorizationRuleUpdateSettings> configurator)
         {
-            return AzureRelayWcfrelayUpdate(configurator(new AzureRelayWcfrelayUpdateSettings()));
+            return AzureRelayWcfrelayAuthorizationRuleUpdate(configurator(new AzureRelayWcfrelayAuthorizationRuleUpdateSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -994,29 +1297,318 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureRelayWcfrelayUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayUpdateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Query"/></li>
-        ///     <li><c>--relay-type</c> via <see cref="AzureRelayWcfrelayUpdateSettings.RelayType"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Remove"/></li>
-        ///     <li><c>--requires-client-authorization</c> via <see cref="AzureRelayWcfrelayUpdateSettings.RequiresClientAuthorization"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Set"/></li>
-        ///     <li><c>--status</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Status"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Subscription"/></li>
-        ///     <li><c>--user-metadata</c> via <see cref="AzureRelayWcfrelayUpdateSettings.UserMetadata"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayUpdateSettings.Verbose"/></li>
+        ///     <li><c>--add</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.RelayName"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--rights</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Rights"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayUpdate(CombinatorialConfigure<AzureRelayWcfrelayUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleUpdate(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureRelayWcfrelayUpdate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleUpdate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleCreate(AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--rights</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleCreate(Configure<AzureRelayNamespaceAuthorizationRuleCreateSettings> configurator)
+        {
+            return AzureRelayNamespaceAuthorizationRuleCreate(configurator(new AzureRelayNamespaceAuthorizationRuleCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--rights</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleCreate(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleCreate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleDelete(AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleDelete(Configure<AzureRelayNamespaceAuthorizationRuleDeleteSettings> configurator)
+        {
+            return AzureRelayNamespaceAuthorizationRuleDelete(configurator(new AzureRelayNamespaceAuthorizationRuleDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleDelete(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleDelete, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleList(AzureRelayNamespaceAuthorizationRuleListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Help"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleList(Configure<AzureRelayNamespaceAuthorizationRuleListSettings> configurator)
+        {
+            return AzureRelayNamespaceAuthorizationRuleList(configurator(new AzureRelayNamespaceAuthorizationRuleListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Help"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleList(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleShow(AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleShow(Configure<AzureRelayNamespaceAuthorizationRuleShowSettings> configurator)
+        {
+            return AzureRelayNamespaceAuthorizationRuleShow(configurator(new AzureRelayNamespaceAuthorizationRuleShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleShow(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleShow, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleUpdate(AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--rights</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleUpdate(Configure<AzureRelayNamespaceAuthorizationRuleUpdateSettings> configurator)
+        {
+            return AzureRelayNamespaceAuthorizationRuleUpdate(configurator(new AzureRelayNamespaceAuthorizationRuleUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Add"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--rights</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Set"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleUpdate(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleUpdate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -1323,9 +1915,9 @@ namespace Nuke.Azure
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleCreate(AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleKeysList(AzureRelayWcfrelayAuthorizationRuleKeysListSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleCreateSettings();
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleKeysListSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -1337,21 +1929,21 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--rights</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleCreate(Configure<AzureRelayNamespaceAuthorizationRuleCreateSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleKeysList(Configure<AzureRelayWcfrelayAuthorizationRuleKeysListSettings> configurator)
         {
-            return AzureRelayNamespaceAuthorizationRuleCreate(configurator(new AzureRelayNamespaceAuthorizationRuleCreateSettings()));
+            return AzureRelayWcfrelayAuthorizationRuleKeysList(configurator(new AzureRelayWcfrelayAuthorizationRuleKeysListSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -1360,29 +1952,29 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--rights</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Help"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleCreate(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleKeysListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleKeysList(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleKeysListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleCreate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleKeysList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleDelete(AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleKeysRenew(AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleDeleteSettings();
+            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -1394,21 +1986,24 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Ids"/></li>
+        ///     <li><c>--key</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Key"/></li>
+        ///     <li><c>--key-value</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.KeyValue"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleDelete(Configure<AzureRelayNamespaceAuthorizationRuleDeleteSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleKeysRenew(Configure<AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings> configurator)
         {
-            return AzureRelayNamespaceAuthorizationRuleDelete(configurator(new AzureRelayNamespaceAuthorizationRuleDeleteSettings()));
+            return AzureRelayWcfrelayAuthorizationRuleKeysRenew(configurator(new AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -1417,619 +2012,24 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Ids"/></li>
+        ///     <li><c>--key</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Key"/></li>
+        ///     <li><c>--key-value</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.KeyValue"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Query"/></li>
+        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.RelayName"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleDelete(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleKeysRenew(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleDelete, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleList(AzureRelayNamespaceAuthorizationRuleListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Help"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleList(Configure<AzureRelayNamespaceAuthorizationRuleListSettings> configurator)
-        {
-            return AzureRelayNamespaceAuthorizationRuleList(configurator(new AzureRelayNamespaceAuthorizationRuleListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Help"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleList(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleShow(AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleShow(Configure<AzureRelayNamespaceAuthorizationRuleShowSettings> configurator)
-        {
-            return AzureRelayNamespaceAuthorizationRuleShow(configurator(new AzureRelayNamespaceAuthorizationRuleShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleShow(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleShow, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleUpdate(AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayNamespaceAuthorizationRuleUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--rights</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayNamespaceAuthorizationRuleUpdate(Configure<AzureRelayNamespaceAuthorizationRuleUpdateSettings> configurator)
-        {
-            return AzureRelayNamespaceAuthorizationRuleUpdate(configurator(new AzureRelayNamespaceAuthorizationRuleUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--rights</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayNamespaceAuthorizationRuleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayNamespaceAuthorizationRuleUpdate(CombinatorialConfigure<AzureRelayNamespaceAuthorizationRuleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayNamespaceAuthorizationRuleUpdate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleCreate(AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--rights</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Rights"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleCreate(Configure<AzureRelayWcfrelayAuthorizationRuleCreateSettings> configurator)
-        {
-            return AzureRelayWcfrelayAuthorizationRuleCreate(configurator(new AzureRelayWcfrelayAuthorizationRuleCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--rights</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Rights"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleCreate(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleCreate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleDelete(AzureRelayWcfrelayAuthorizationRuleDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleDelete(Configure<AzureRelayWcfrelayAuthorizationRuleDeleteSettings> configurator)
-        {
-            return AzureRelayWcfrelayAuthorizationRuleDelete(configurator(new AzureRelayWcfrelayAuthorizationRuleDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleDeleteSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleDelete(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleDelete, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleList(AzureRelayWcfrelayAuthorizationRuleListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Help"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleList(Configure<AzureRelayWcfrelayAuthorizationRuleListSettings> configurator)
-        {
-            return AzureRelayWcfrelayAuthorizationRuleList(configurator(new AzureRelayWcfrelayAuthorizationRuleListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Help"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleList(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleShow(AzureRelayWcfrelayAuthorizationRuleShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleShow(Configure<AzureRelayWcfrelayAuthorizationRuleShowSettings> configurator)
-        {
-            return AzureRelayWcfrelayAuthorizationRuleShow(configurator(new AzureRelayWcfrelayAuthorizationRuleShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleShow(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleShow, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleUpdate(AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.RelayName"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--rights</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Rights"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleUpdate(Configure<AzureRelayWcfrelayAuthorizationRuleUpdateSettings> configurator)
-        {
-            return AzureRelayWcfrelayAuthorizationRuleUpdate(configurator(new AzureRelayWcfrelayAuthorizationRuleUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Add"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.RelayName"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--rights</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Rights"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Set"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleUpdate(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleUpdate, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayHycoAuthorizationRuleKeysList(AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayHycoAuthorizationRuleKeysListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Help"/></li>
-        ///     <li><c>--hybrid-connection-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.HybridConnectionName"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayHycoAuthorizationRuleKeysList(Configure<AzureRelayHycoAuthorizationRuleKeysListSettings> configurator)
-        {
-            return AzureRelayHycoAuthorizationRuleKeysList(configurator(new AzureRelayHycoAuthorizationRuleKeysListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Help"/></li>
-        ///     <li><c>--hybrid-connection-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.HybridConnectionName"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayHycoAuthorizationRuleKeysListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayHycoAuthorizationRuleKeysList(CombinatorialConfigure<AzureRelayHycoAuthorizationRuleKeysListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayHycoAuthorizationRuleKeysList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayHycoAuthorizationRuleKeysRenew(AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureRelayHycoAuthorizationRuleKeysRenewSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Help"/></li>
-        ///     <li><c>--hybrid-connection-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.HybridConnectionName"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></li>
-        ///     <li><c>--key</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Key"/></li>
-        ///     <li><c>--key-value</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.KeyValue"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayHycoAuthorizationRuleKeysRenew(Configure<AzureRelayHycoAuthorizationRuleKeysRenewSettings> configurator)
-        {
-            return AzureRelayHycoAuthorizationRuleKeysRenew(configurator(new AzureRelayHycoAuthorizationRuleKeysRenewSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Help"/></li>
-        ///     <li><c>--hybrid-connection-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.HybridConnectionName"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></li>
-        ///     <li><c>--key</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Key"/></li>
-        ///     <li><c>--key-value</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.KeyValue"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureRelayHycoAuthorizationRuleKeysRenewSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayHycoAuthorizationRuleKeysRenew(CombinatorialConfigure<AzureRelayHycoAuthorizationRuleKeysRenewSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureRelayHycoAuthorizationRuleKeysRenew, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleKeysRenew, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -2151,9 +2151,9 @@ namespace Nuke.Azure
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleKeysList(AzureRelayWcfrelayAuthorizationRuleKeysListSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureRelayHycoAuthorizationRuleKeysList(AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleKeysListSettings();
+            toolSettings = toolSettings ?? new AzureRelayHycoAuthorizationRuleKeysListSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -2165,21 +2165,21 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Help"/></li>
+        ///     <li><c>--hybrid-connection-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.HybridConnectionName"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleKeysList(Configure<AzureRelayWcfrelayAuthorizationRuleKeysListSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureRelayHycoAuthorizationRuleKeysList(Configure<AzureRelayHycoAuthorizationRuleKeysListSettings> configurator)
         {
-            return AzureRelayWcfrelayAuthorizationRuleKeysList(configurator(new AzureRelayWcfrelayAuthorizationRuleKeysListSettings()));
+            return AzureRelayHycoAuthorizationRuleKeysList(configurator(new AzureRelayHycoAuthorizationRuleKeysListSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -2188,29 +2188,29 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Help"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysListSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Help"/></li>
+        ///     <li><c>--hybrid-connection-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.HybridConnectionName"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleKeysListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleKeysList(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleKeysListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureRelayHycoAuthorizationRuleKeysListSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayHycoAuthorizationRuleKeysList(CombinatorialConfigure<AzureRelayHycoAuthorizationRuleKeysListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleKeysList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureRelayHycoAuthorizationRuleKeysList, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/relay?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleKeysRenew(AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings toolSettings = null)
+        public static IReadOnlyCollection<Output> AzureRelayHycoAuthorizationRuleKeysRenew(AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings = null)
         {
-            toolSettings = toolSettings ?? new AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings();
+            toolSettings = toolSettings ?? new AzureRelayHycoAuthorizationRuleKeysRenewSettings();
             var process = ProcessTasks.StartProcess(toolSettings);
             process.AssertZeroExitCode();
             return process.Output;
@@ -2222,24 +2222,24 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Ids"/></li>
-        ///     <li><c>--key</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Key"/></li>
-        ///     <li><c>--key-value</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.KeyValue"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Help"/></li>
+        ///     <li><c>--hybrid-connection-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.HybridConnectionName"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></li>
+        ///     <li><c>--key</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Key"/></li>
+        ///     <li><c>--key-value</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.KeyValue"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IReadOnlyCollection<Output> AzureRelayWcfrelayAuthorizationRuleKeysRenew(Configure<AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings> configurator)
+        public static IReadOnlyCollection<Output> AzureRelayHycoAuthorizationRuleKeysRenew(Configure<AzureRelayHycoAuthorizationRuleKeysRenewSettings> configurator)
         {
-            return AzureRelayWcfrelayAuthorizationRuleKeysRenew(configurator(new AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings()));
+            return AzureRelayHycoAuthorizationRuleKeysRenew(configurator(new AzureRelayHycoAuthorizationRuleKeysRenewSettings()));
         }
         /// <summary>
         ///   <p>Manage Azure Relay Service namespaces, WCF relays, hybrid connections, and rules.</p>
@@ -2248,24 +2248,24 @@ namespace Nuke.Azure
         /// <remarks>
         ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
         ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Ids"/></li>
-        ///     <li><c>--key</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Key"/></li>
-        ///     <li><c>--key-value</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.KeyValue"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Name"/></li>
-        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.NamespaceName"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Query"/></li>
-        ///     <li><c>--relay-name</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.RelayName"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings.Verbose"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Help"/></li>
+        ///     <li><c>--hybrid-connection-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.HybridConnectionName"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></li>
+        ///     <li><c>--key</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Key"/></li>
+        ///     <li><c>--key-value</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.KeyValue"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Name"/></li>
+        ///     <li><c>--namespace-name</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.NamespaceName"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Verbose"/></li>
         ///   </ul>
         /// </remarks>
-        public static IEnumerable<(AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayWcfrelayAuthorizationRuleKeysRenew(CombinatorialConfigure<AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        public static IEnumerable<(AzureRelayHycoAuthorizationRuleKeysRenewSettings Settings, IReadOnlyCollection<Output> Output)> AzureRelayHycoAuthorizationRuleKeysRenew(CombinatorialConfigure<AzureRelayHycoAuthorizationRuleKeysRenewSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
-            return configurator.Invoke(AzureRelayWcfrelayAuthorizationRuleKeysRenew, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
+            return configurator.Invoke(AzureRelayHycoAuthorizationRuleKeysRenew, AzureRelayLogger, degreeOfParallelism, completeOnFailure);
         }
     }
     #region AzureRelaySettings
@@ -2708,6 +2708,409 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureRelayWcfrelayCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayWcfrelayCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Name of WCF Relay.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Relay type.
+        /// </summary>
+        public virtual RelayWcfrelayRelayType RelayType { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Indicates whether client authorization is required.
+        /// </summary>
+        public virtual bool? RequiresClientAuthorization { get; internal set; }
+        /// <summary>
+        ///   Indicates whether transport security is required.
+        /// </summary>
+        public virtual bool? RequiresTransportSecurity { get; internal set; }
+        /// <summary>
+        ///   Endpoint metadata.
+        /// </summary>
+        public virtual string UserMetadata { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay wcfrelay create")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--relay-type {value}", RelayType)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--requires-client-authorization", RequiresClientAuthorization)
+              .Add("--requires-transport-security", RequiresTransportSecurity)
+              .Add("--user-metadata {value}", UserMetadata)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayWcfrelayDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayWcfrelayDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of WCF Relay.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay wcfrelay delete")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayWcfrelayListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayWcfrelayListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay wcfrelay list")
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayWcfrelayShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayWcfrelayShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of WCF Relay.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay wcfrelay show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayWcfrelayUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayWcfrelayUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Relay type.
+        /// </summary>
+        public virtual RelayWcfrelayRelayType RelayType { get; internal set; }
+        /// <summary>
+        ///   Enumerates the possible values for the status of a messaging entity.
+        /// </summary>
+        public virtual RelayHycoStatus Status { get; internal set; }
+        /// <summary>
+        ///   Endpoint metadata.
+        /// </summary>
+        public virtual string UserMetadata { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of WCF Relay.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
+        /// </summary>
+        public virtual string Add { get; internal set; }
+        /// <summary>
+        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+        /// </summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary>
+        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
+        /// </summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary>
+        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
+        /// </summary>
+        public virtual string Set { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay wcfrelay update")
+              .Add("--relay-type {value}", RelayType)
+              .Add("--status {value}", Status)
+              .Add("--user-metadata {value}", UserMetadata)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureRelayNamespaceCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
@@ -3123,1194 +3526,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureRelayWcfrelayCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayWcfrelayCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Name of WCF Relay.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Relay type.
-        /// </summary>
-        public virtual RelayWcfrelayRelayType RelayType { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Indicates whether client authorization is required.
-        /// </summary>
-        public virtual bool? RequiresClientAuthorization { get; internal set; }
-        /// <summary>
-        ///   Endpoint metadata.
-        /// </summary>
-        public virtual string UserMetadata { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay wcfrelay create")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--relay-type {value}", RelayType)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--requires-client-authorization", RequiresClientAuthorization)
-              .Add("--user-metadata {value}", UserMetadata)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayWcfrelayDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayWcfrelayDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of WCF Relay.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay wcfrelay delete")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayWcfrelayListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayWcfrelayListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay wcfrelay list")
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayWcfrelayShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayWcfrelayShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of WCF Relay.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay wcfrelay show")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayWcfrelayUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayWcfrelayUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Relay type.
-        /// </summary>
-        public virtual RelayWcfrelayRelayType RelayType { get; internal set; }
-        /// <summary>
-        ///   Indicates whether client authorization is required.
-        /// </summary>
-        public virtual bool? RequiresClientAuthorization { get; internal set; }
-        /// <summary>
-        ///   Enumerates the possible values for the status of a messaging entity.
-        /// </summary>
-        public virtual RelayHycoStatus Status { get; internal set; }
-        /// <summary>
-        ///   Endpoint metadata.
-        /// </summary>
-        public virtual string UserMetadata { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of WCF Relay.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
-        /// </summary>
-        public virtual string Add { get; internal set; }
-        /// <summary>
-        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-        /// </summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary>
-        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
-        /// </summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary>
-        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
-        /// </summary>
-        public virtual string Set { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay wcfrelay update")
-              .Add("--relay-type {value}", RelayType)
-              .Add("--requires-client-authorization", RequiresClientAuthorization)
-              .Add("--status {value}", Status)
-              .Add("--user-metadata {value}", UserMetadata)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayHycoAuthorizationRuleCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Name of Hybrid Connection.
-        /// </summary>
-        public virtual string HybridConnectionName { get; internal set; }
-        /// <summary>
-        ///   Name of Hybrid Connection Authorization Rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Space-separated list of Authorization rule rights.
-        /// </summary>
-        public virtual IReadOnlyList<RelayHycoAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<RelayHycoAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayHycoAuthorizationRuleRights>();
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay hyco authorization-rule create")
-              .Add("--hybrid-connection-name {value}", HybridConnectionName)
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rights {value}", Rights, separator: ' ')
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayHycoAuthorizationRuleDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Name of Hybrid Connection.
-        /// </summary>
-        public virtual string HybridConnectionName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of Hybrid Connection Authorization Rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay hyco authorization-rule delete")
-              .Add("--hybrid-connection-name {value}", HybridConnectionName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayHycoAuthorizationRuleListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Name of Hybrid Connection.
-        /// </summary>
-        public virtual string HybridConnectionName { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay hyco authorization-rule list")
-              .Add("--hybrid-connection-name {value}", HybridConnectionName)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayHycoAuthorizationRuleShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Name of Hybrid Connection.
-        /// </summary>
-        public virtual string HybridConnectionName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of Hybrid Connection Authorization Rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay hyco authorization-rule show")
-              .Add("--hybrid-connection-name {value}", HybridConnectionName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayHycoAuthorizationRuleUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Space-separated list of Authorization rule rights.
-        /// </summary>
-        public virtual IReadOnlyList<RelayHycoAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<RelayHycoAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayHycoAuthorizationRuleRights>();
-        /// <summary>
-        ///   Name of Hybrid Connection.
-        /// </summary>
-        public virtual string HybridConnectionName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of Hybrid Connection Authorization Rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
-        /// </summary>
-        public virtual string Add { get; internal set; }
-        /// <summary>
-        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-        /// </summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary>
-        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
-        /// </summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary>
-        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
-        /// </summary>
-        public virtual string Set { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay hyco authorization-rule update")
-              .Add("--rights {value}", Rights, separator: ' ')
-              .Add("--hybrid-connection-name {value}", HybridConnectionName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayNamespaceAuthorizationRuleCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Name of Namespace Authorization Rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Space-separated list of Authorization rule rights.
-        /// </summary>
-        public virtual IReadOnlyList<RelayHycoAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<RelayHycoAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayHycoAuthorizationRuleRights>();
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay namespace authorization-rule create")
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--rights {value}", Rights, separator: ' ')
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayNamespaceAuthorizationRuleDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of Namespace Authorization Rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay namespace authorization-rule delete")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayNamespaceAuthorizationRuleListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Name of the Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay namespace authorization-rule list")
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayNamespaceAuthorizationRuleShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of Namespace Authorization Rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay namespace authorization-rule show")
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureRelayNamespaceAuthorizationRuleUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureRelay executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
-        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
-        /// <summary>
-        ///   Space-separated list of Authorization rule rights.
-        /// </summary>
-        public virtual IReadOnlyList<RelayHycoAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<RelayHycoAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayHycoAuthorizationRuleRights>();
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   Name of Namespace Authorization Rule.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of Namespace.
-        /// </summary>
-        public virtual string NamespaceName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
-        /// </summary>
-        public virtual string Add { get; internal set; }
-        /// <summary>
-        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-        /// </summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary>
-        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
-        /// </summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary>
-        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
-        /// </summary>
-        public virtual string Set { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("relay namespace authorization-rule update")
-              .Add("--rights {value}", Rights, separator: ' ')
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--namespace-name {value}", NamespaceName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureRelayWcfrelayAuthorizationRuleCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
@@ -4344,8 +3559,8 @@ namespace Nuke.Azure
         /// <summary>
         ///   Space-separated list of Authorization rule rights.
         /// </summary>
-        public virtual IReadOnlyList<RelayHycoAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<RelayHycoAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayHycoAuthorizationRuleRights>();
+        public virtual IReadOnlyList<RelayWcfrelayAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<RelayWcfrelayAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayWcfrelayAuthorizationRuleRights>();
         /// <summary>
         ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
         /// </summary>
@@ -4629,8 +3844,8 @@ namespace Nuke.Azure
         /// <summary>
         ///   Space-separated list of Authorization rule rights.
         /// </summary>
-        public virtual IReadOnlyList<RelayHycoAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
-        internal List<RelayHycoAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayHycoAuthorizationRuleRights>();
+        public virtual IReadOnlyList<RelayWcfrelayAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<RelayWcfrelayAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayWcfrelayAuthorizationRuleRights>();
         /// <summary>
         ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
         /// </summary>
@@ -4716,14 +3931,14 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureRelayHycoAuthorizationRuleKeysListSettings
+    #region AzureRelayNamespaceAuthorizationRuleCreateSettings
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureRelayHycoAuthorizationRuleKeysListSettings : ToolSettings
+    public partial class AzureRelayNamespaceAuthorizationRuleCreateSettings : ToolSettings
     {
         /// <summary>
         ///   Path to the AzureRelay executable.
@@ -4731,11 +3946,85 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
         public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
         /// <summary>
-        ///   Name of Hybrid Connection.
+        ///   Name of Namespace Authorization Rule.
         /// </summary>
-        public virtual string HybridConnectionName { get; internal set; }
+        public virtual string Name { get; internal set; }
         /// <summary>
-        ///   Name of Hybrid Connection Authorization Rule.
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Space-separated list of Authorization rule rights.
+        /// </summary>
+        public virtual IReadOnlyList<RelayWcfrelayAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<RelayWcfrelayAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayWcfrelayAuthorizationRuleRights>();
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay namespace authorization-rule create")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayNamespaceAuthorizationRuleDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of Namespace Authorization Rule.
         /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
@@ -4773,8 +4062,8 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("relay hyco authorization-rule keys list")
-              .Add("--hybrid-connection-name {value}", HybridConnectionName)
+              .Add("relay namespace authorization-rule delete")
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
@@ -4788,14 +4077,14 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureRelayHycoAuthorizationRuleKeysRenewSettings
+    #region AzureRelayNamespaceAuthorizationRuleListSettings
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureRelayHycoAuthorizationRuleKeysRenewSettings : ToolSettings
+    public partial class AzureRelayNamespaceAuthorizationRuleListSettings : ToolSettings
     {
         /// <summary>
         ///   Path to the AzureRelay executable.
@@ -4803,13 +4092,317 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
         public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
         /// <summary>
-        ///   Specifies Primary or Secondary key needs to be reset.
+        ///   Name of the Namespace.
         /// </summary>
-        public virtual RelayHycoAuthorizationRuleKeysKey Key { get; internal set; }
+        public virtual string NamespaceName { get; internal set; }
         /// <summary>
-        ///   Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
         /// </summary>
-        public virtual string KeyValue { get; internal set; }
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay namespace authorization-rule list")
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayNamespaceAuthorizationRuleShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of Namespace Authorization Rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay namespace authorization-rule show")
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayNamespaceAuthorizationRuleUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Space-separated list of Authorization rule rights.
+        /// </summary>
+        public virtual IReadOnlyList<RelayWcfrelayAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<RelayWcfrelayAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayWcfrelayAuthorizationRuleRights>();
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of Namespace Authorization Rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
+        /// </summary>
+        public virtual string Add { get; internal set; }
+        /// <summary>
+        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+        /// </summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary>
+        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
+        /// </summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary>
+        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
+        /// </summary>
+        public virtual string Set { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay namespace authorization-rule update")
+              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayHycoAuthorizationRuleCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayHycoAuthorizationRuleCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Name of Hybrid Connection.
+        /// </summary>
+        public virtual string HybridConnectionName { get; internal set; }
+        /// <summary>
+        ///   Name of Hybrid Connection Authorization Rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Space-separated list of Authorization rule rights.
+        /// </summary>
+        public virtual IReadOnlyList<RelayWcfrelayAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<RelayWcfrelayAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayWcfrelayAuthorizationRuleRights>();
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay hyco authorization-rule create")
+              .Add("--hybrid-connection-name {value}", HybridConnectionName)
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayHycoAuthorizationRuleDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayHycoAuthorizationRuleDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
         /// <summary>
         ///   Name of Hybrid Connection.
         /// </summary>
@@ -4858,9 +4451,7 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("relay hyco authorization-rule keys renew")
-              .Add("--key {value}", Key)
-              .Add("--key-value {value}", KeyValue)
+              .Add("relay hyco authorization-rule delete")
               .Add("--hybrid-connection-name {value}", HybridConnectionName)
               .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
@@ -4876,14 +4467,14 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureRelayNamespaceAuthorizationRuleKeysListSettings
+    #region AzureRelayHycoAuthorizationRuleListSettings
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureRelayNamespaceAuthorizationRuleKeysListSettings : ToolSettings
+    public partial class AzureRelayHycoAuthorizationRuleListSettings : ToolSettings
     {
         /// <summary>
         ///   Path to the AzureRelay executable.
@@ -4891,7 +4482,83 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
         public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
         /// <summary>
-        ///   Name of Namespace Authorization Rule.
+        ///   Name of Hybrid Connection.
+        /// </summary>
+        public virtual string HybridConnectionName { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay hyco authorization-rule list")
+              .Add("--hybrid-connection-name {value}", HybridConnectionName)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayHycoAuthorizationRuleShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayHycoAuthorizationRuleShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Name of Hybrid Connection.
+        /// </summary>
+        public virtual string HybridConnectionName { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of Hybrid Connection Authorization Rule.
         /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
@@ -4929,7 +4596,9 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("relay namespace authorization-rule keys list")
+              .Add("relay hyco authorization-rule show")
+              .Add("--hybrid-connection-name {value}", HybridConnectionName)
+              .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
@@ -4943,14 +4612,14 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureRelayNamespaceAuthorizationRuleKeysRenewSettings
+    #region AzureRelayHycoAuthorizationRuleUpdateSettings
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
     [Serializable]
-    public partial class AzureRelayNamespaceAuthorizationRuleKeysRenewSettings : ToolSettings
+    public partial class AzureRelayHycoAuthorizationRuleUpdateSettings : ToolSettings
     {
         /// <summary>
         ///   Path to the AzureRelay executable.
@@ -4958,20 +4627,21 @@ namespace Nuke.Azure
         public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
         public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
         /// <summary>
-        ///   Specifies Primary or Secondary key needs to be reset.
+        ///   Space-separated list of Authorization rule rights.
         /// </summary>
-        public virtual RelayHycoAuthorizationRuleKeysKey Key { get; internal set; }
+        public virtual IReadOnlyList<RelayWcfrelayAuthorizationRuleRights> Rights => RightsInternal.AsReadOnly();
+        internal List<RelayWcfrelayAuthorizationRuleRights> RightsInternal { get; set; } = new List<RelayWcfrelayAuthorizationRuleRights>();
         /// <summary>
-        ///   Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.
+        ///   Name of Hybrid Connection.
         /// </summary>
-        public virtual string KeyValue { get; internal set; }
+        public virtual string HybridConnectionName { get; internal set; }
         /// <summary>
         ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
         /// </summary>
         public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
         internal List<string> IdsInternal { get; set; } = new List<string>();
         /// <summary>
-        ///   Name of Namespace Authorization Rule.
+        ///   Name of Hybrid Connection Authorization Rule.
         /// </summary>
         public virtual string Name { get; internal set; }
         /// <summary>
@@ -4986,6 +4656,22 @@ namespace Nuke.Azure
         ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
         /// </summary>
         public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
+        /// </summary>
+        public virtual string Add { get; internal set; }
+        /// <summary>
+        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+        /// </summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary>
+        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
+        /// </summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary>
+        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
+        /// </summary>
+        public virtual string Set { get; internal set; }
         /// <summary>
         ///   Increase logging verbosity to show all debug logs.
         /// </summary>
@@ -5009,14 +4695,18 @@ namespace Nuke.Azure
         protected override Arguments ConfigureArguments(Arguments arguments)
         {
             arguments
-              .Add("relay namespace authorization-rule keys renew")
-              .Add("--key {value}", Key)
-              .Add("--key-value {value}", KeyValue)
+              .Add("relay hyco authorization-rule update")
+              .Add("--rights {value}", Rights, separator: ' ')
+              .Add("--hybrid-connection-name {value}", HybridConnectionName)
               .Add("--ids {value}", Ids, separator: ' ')
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--subscription {value}", Subscription)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -5115,7 +4805,7 @@ namespace Nuke.Azure
         /// <summary>
         ///   Specifies Primary or Secondary key needs to be reset.
         /// </summary>
-        public virtual RelayHycoAuthorizationRuleKeysKey Key { get; internal set; }
+        public virtual RelayWcfrelayAuthorizationRuleKeysKey Key { get; internal set; }
         /// <summary>
         ///   Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.
         /// </summary>
@@ -5175,6 +4865,316 @@ namespace Nuke.Azure
               .Add("--name {value}", Name)
               .Add("--namespace-name {value}", NamespaceName)
               .Add("--relay-name {value}", RelayName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleKeysListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayNamespaceAuthorizationRuleKeysListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Name of Namespace Authorization Rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay namespace authorization-rule keys list")
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleKeysRenewSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayNamespaceAuthorizationRuleKeysRenewSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Specifies Primary or Secondary key needs to be reset.
+        /// </summary>
+        public virtual RelayWcfrelayAuthorizationRuleKeysKey Key { get; internal set; }
+        /// <summary>
+        ///   Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.
+        /// </summary>
+        public virtual string KeyValue { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of Namespace Authorization Rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay namespace authorization-rule keys renew")
+              .Add("--key {value}", Key)
+              .Add("--key-value {value}", KeyValue)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayHycoAuthorizationRuleKeysListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayHycoAuthorizationRuleKeysListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Name of Hybrid Connection.
+        /// </summary>
+        public virtual string HybridConnectionName { get; internal set; }
+        /// <summary>
+        ///   Name of Hybrid Connection Authorization Rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay hyco authorization-rule keys list")
+              .Add("--hybrid-connection-name {value}", HybridConnectionName)
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureRelayHycoAuthorizationRuleKeysRenewSettings
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureRelayHycoAuthorizationRuleKeysRenewSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureRelay executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureRelayTasks.AzureRelayPath;
+        public override Action<OutputType, string> CustomLogger => AzureRelayTasks.AzureRelayLogger;
+        /// <summary>
+        ///   Specifies Primary or Secondary key needs to be reset.
+        /// </summary>
+        public virtual RelayWcfrelayAuthorizationRuleKeysKey Key { get; internal set; }
+        /// <summary>
+        ///   Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.
+        /// </summary>
+        public virtual string KeyValue { get; internal set; }
+        /// <summary>
+        ///   Name of Hybrid Connection.
+        /// </summary>
+        public virtual string HybridConnectionName { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   Name of Hybrid Connection Authorization Rule.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of Namespace.
+        /// </summary>
+        public virtual string NamespaceName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("relay hyco authorization-rule keys renew")
+              .Add("--key {value}", Key)
+              .Add("--key-value {value}", KeyValue)
+              .Add("--hybrid-connection-name {value}", HybridConnectionName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--namespace-name {value}", NamespaceName)
               .Add("--resource-group {value}", ResourceGroup)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
@@ -6947,6 +6947,1685 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureRelayWcfrelayCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayWcfrelayCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Name"/></em></p>
+        ///   <p>Name of WCF Relay.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetName(this AzureRelayWcfrelayCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Name"/></em></p>
+        ///   <p>Name of WCF Relay.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetName(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetNamespaceName(this AzureRelayWcfrelayCreateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetNamespaceName(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RelayType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.RelayType"/></em></p>
+        ///   <p>Relay type.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetRelayType(this AzureRelayWcfrelayCreateSettings toolSettings, RelayWcfrelayRelayType relayType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RelayType = relayType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.RelayType"/></em></p>
+        ///   <p>Relay type.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetRelayType(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RelayType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetResourceGroup(this AzureRelayWcfrelayCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetResourceGroup(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region RequiresClientAuthorization
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
+        ///   <p>Indicates whether client authorization is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings, bool? requiresClientAuthorization)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresClientAuthorization = requiresClientAuthorization;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
+        ///   <p>Indicates whether client authorization is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresClientAuthorization = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
+        ///   <p>Indicates whether client authorization is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings EnableRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresClientAuthorization = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
+        ///   <p>Indicates whether client authorization is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings DisableRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresClientAuthorization = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
+        ///   <p>Indicates whether client authorization is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ToggleRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresClientAuthorization = !toolSettings.RequiresClientAuthorization;
+            return toolSettings;
+        }
+        #endregion
+        #region RequiresTransportSecurity
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.RequiresTransportSecurity"/></em></p>
+        ///   <p>Indicates whether transport security is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetRequiresTransportSecurity(this AzureRelayWcfrelayCreateSettings toolSettings, bool? requiresTransportSecurity)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresTransportSecurity = requiresTransportSecurity;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.RequiresTransportSecurity"/></em></p>
+        ///   <p>Indicates whether transport security is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetRequiresTransportSecurity(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresTransportSecurity = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureRelayWcfrelayCreateSettings.RequiresTransportSecurity"/></em></p>
+        ///   <p>Indicates whether transport security is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings EnableRequiresTransportSecurity(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresTransportSecurity = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureRelayWcfrelayCreateSettings.RequiresTransportSecurity"/></em></p>
+        ///   <p>Indicates whether transport security is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings DisableRequiresTransportSecurity(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresTransportSecurity = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureRelayWcfrelayCreateSettings.RequiresTransportSecurity"/></em></p>
+        ///   <p>Indicates whether transport security is required.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ToggleRequiresTransportSecurity(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RequiresTransportSecurity = !toolSettings.RequiresTransportSecurity;
+            return toolSettings;
+        }
+        #endregion
+        #region UserMetadata
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.UserMetadata"/></em></p>
+        ///   <p>Endpoint metadata.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetUserMetadata(this AzureRelayWcfrelayCreateSettings toolSettings, string userMetadata)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserMetadata = userMetadata;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.UserMetadata"/></em></p>
+        ///   <p>Endpoint metadata.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetUserMetadata(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserMetadata = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetSubscription(this AzureRelayWcfrelayCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetSubscription(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetDebug(this AzureRelayWcfrelayCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetDebug(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetHelp(this AzureRelayWcfrelayCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetHelp(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetOutput(this AzureRelayWcfrelayCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetOutput(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetQuery(this AzureRelayWcfrelayCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetQuery(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings SetVerbose(this AzureRelayWcfrelayCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayCreateSettings ResetVerbose(this AzureRelayWcfrelayCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayWcfrelayDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayWcfrelayDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetIds(this AzureRelayWcfrelayDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetIds(this AzureRelayWcfrelayDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings AddIds(this AzureRelayWcfrelayDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings AddIds(this AzureRelayWcfrelayDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ClearIds(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings RemoveIds(this AzureRelayWcfrelayDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings RemoveIds(this AzureRelayWcfrelayDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Name"/></em></p>
+        ///   <p>Name of WCF Relay.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetName(this AzureRelayWcfrelayDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Name"/></em></p>
+        ///   <p>Name of WCF Relay.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ResetName(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetNamespaceName(this AzureRelayWcfrelayDeleteSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ResetNamespaceName(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetResourceGroup(this AzureRelayWcfrelayDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ResetResourceGroup(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetSubscription(this AzureRelayWcfrelayDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ResetSubscription(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetDebug(this AzureRelayWcfrelayDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ResetDebug(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetHelp(this AzureRelayWcfrelayDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ResetHelp(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetOutput(this AzureRelayWcfrelayDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ResetOutput(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetQuery(this AzureRelayWcfrelayDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ResetQuery(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings SetVerbose(this AzureRelayWcfrelayDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayDeleteSettings ResetVerbose(this AzureRelayWcfrelayDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayWcfrelayListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayWcfrelayListSettingsExtensions
+    {
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings SetNamespaceName(this AzureRelayWcfrelayListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings ResetNamespaceName(this AzureRelayWcfrelayListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings SetResourceGroup(this AzureRelayWcfrelayListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings ResetResourceGroup(this AzureRelayWcfrelayListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings SetSubscription(this AzureRelayWcfrelayListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings ResetSubscription(this AzureRelayWcfrelayListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings SetDebug(this AzureRelayWcfrelayListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings ResetDebug(this AzureRelayWcfrelayListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings SetHelp(this AzureRelayWcfrelayListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings ResetHelp(this AzureRelayWcfrelayListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings SetOutput(this AzureRelayWcfrelayListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings ResetOutput(this AzureRelayWcfrelayListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings SetQuery(this AzureRelayWcfrelayListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings ResetQuery(this AzureRelayWcfrelayListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings SetVerbose(this AzureRelayWcfrelayListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayListSettings ResetVerbose(this AzureRelayWcfrelayListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayWcfrelayShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayWcfrelayShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetIds(this AzureRelayWcfrelayShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetIds(this AzureRelayWcfrelayShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings AddIds(this AzureRelayWcfrelayShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings AddIds(this AzureRelayWcfrelayShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ClearIds(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings RemoveIds(this AzureRelayWcfrelayShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings RemoveIds(this AzureRelayWcfrelayShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Name"/></em></p>
+        ///   <p>Name of WCF Relay.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetName(this AzureRelayWcfrelayShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Name"/></em></p>
+        ///   <p>Name of WCF Relay.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ResetName(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetNamespaceName(this AzureRelayWcfrelayShowSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ResetNamespaceName(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetResourceGroup(this AzureRelayWcfrelayShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ResetResourceGroup(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetSubscription(this AzureRelayWcfrelayShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ResetSubscription(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetDebug(this AzureRelayWcfrelayShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ResetDebug(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetHelp(this AzureRelayWcfrelayShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ResetHelp(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetOutput(this AzureRelayWcfrelayShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ResetOutput(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetQuery(this AzureRelayWcfrelayShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ResetQuery(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings SetVerbose(this AzureRelayWcfrelayShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayShowSettings ResetVerbose(this AzureRelayWcfrelayShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayWcfrelayUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayWcfrelayUpdateSettingsExtensions
+    {
+        #region RelayType
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.RelayType"/></em></p>
+        ///   <p>Relay type.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetRelayType(this AzureRelayWcfrelayUpdateSettings toolSettings, RelayWcfrelayRelayType relayType)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RelayType = relayType;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.RelayType"/></em></p>
+        ///   <p>Relay type.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetRelayType(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RelayType = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Status
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Status"/></em></p>
+        ///   <p>Enumerates the possible values for the status of a messaging entity.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetStatus(this AzureRelayWcfrelayUpdateSettings toolSettings, RelayHycoStatus status)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = status;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Status"/></em></p>
+        ///   <p>Enumerates the possible values for the status of a messaging entity.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetStatus(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Status = null;
+            return toolSettings;
+        }
+        #endregion
+        #region UserMetadata
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.UserMetadata"/></em></p>
+        ///   <p>Endpoint metadata.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetUserMetadata(this AzureRelayWcfrelayUpdateSettings toolSettings, string userMetadata)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserMetadata = userMetadata;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.UserMetadata"/></em></p>
+        ///   <p>Endpoint metadata.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetUserMetadata(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.UserMetadata = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetIds(this AzureRelayWcfrelayUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetIds(this AzureRelayWcfrelayUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings AddIds(this AzureRelayWcfrelayUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings AddIds(this AzureRelayWcfrelayUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ClearIds(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings RemoveIds(this AzureRelayWcfrelayUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings RemoveIds(this AzureRelayWcfrelayUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Name"/></em></p>
+        ///   <p>Name of WCF Relay.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetName(this AzureRelayWcfrelayUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Name"/></em></p>
+        ///   <p>Name of WCF Relay.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetName(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetNamespaceName(this AzureRelayWcfrelayUpdateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetNamespaceName(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetResourceGroup(this AzureRelayWcfrelayUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetResourceGroup(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetSubscription(this AzureRelayWcfrelayUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetSubscription(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetAdd(this AzureRelayWcfrelayUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetAdd(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetForceString(this AzureRelayWcfrelayUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetForceString(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetRemove(this AzureRelayWcfrelayUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetRemove(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetSet(this AzureRelayWcfrelayUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetSet(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetDebug(this AzureRelayWcfrelayUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetDebug(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetHelp(this AzureRelayWcfrelayUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetHelp(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetOutput(this AzureRelayWcfrelayUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetOutput(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetQuery(this AzureRelayWcfrelayUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetQuery(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings SetVerbose(this AzureRelayWcfrelayUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayWcfrelayUpdateSettings ResetVerbose(this AzureRelayWcfrelayUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureRelayNamespaceCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
@@ -8522,5019 +10201,6 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureRelayWcfrelayCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayWcfrelayCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Name"/></em></p>
-        ///   <p>Name of WCF Relay.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetName(this AzureRelayWcfrelayCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Name"/></em></p>
-        ///   <p>Name of WCF Relay.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetName(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetNamespaceName(this AzureRelayWcfrelayCreateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetNamespaceName(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region RelayType
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.RelayType"/></em></p>
-        ///   <p>Relay type.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetRelayType(this AzureRelayWcfrelayCreateSettings toolSettings, RelayWcfrelayRelayType relayType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RelayType = relayType;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.RelayType"/></em></p>
-        ///   <p>Relay type.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetRelayType(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RelayType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetResourceGroup(this AzureRelayWcfrelayCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetResourceGroup(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region RequiresClientAuthorization
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings, bool? requiresClientAuthorization)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = requiresClientAuthorization;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = null;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings EnableRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings DisableRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzureRelayWcfrelayCreateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ToggleRequiresClientAuthorization(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = !toolSettings.RequiresClientAuthorization;
-            return toolSettings;
-        }
-        #endregion
-        #region UserMetadata
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.UserMetadata"/></em></p>
-        ///   <p>Endpoint metadata.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetUserMetadata(this AzureRelayWcfrelayCreateSettings toolSettings, string userMetadata)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserMetadata = userMetadata;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.UserMetadata"/></em></p>
-        ///   <p>Endpoint metadata.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetUserMetadata(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserMetadata = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetSubscription(this AzureRelayWcfrelayCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetSubscription(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetDebug(this AzureRelayWcfrelayCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetDebug(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetHelp(this AzureRelayWcfrelayCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetHelp(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetOutput(this AzureRelayWcfrelayCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetOutput(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetQuery(this AzureRelayWcfrelayCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetQuery(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings SetVerbose(this AzureRelayWcfrelayCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayCreateSettings ResetVerbose(this AzureRelayWcfrelayCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayWcfrelayDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayWcfrelayDeleteSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetIds(this AzureRelayWcfrelayDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetIds(this AzureRelayWcfrelayDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings AddIds(this AzureRelayWcfrelayDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings AddIds(this AzureRelayWcfrelayDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ClearIds(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings RemoveIds(this AzureRelayWcfrelayDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings RemoveIds(this AzureRelayWcfrelayDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Name"/></em></p>
-        ///   <p>Name of WCF Relay.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetName(this AzureRelayWcfrelayDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Name"/></em></p>
-        ///   <p>Name of WCF Relay.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ResetName(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetNamespaceName(this AzureRelayWcfrelayDeleteSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ResetNamespaceName(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetResourceGroup(this AzureRelayWcfrelayDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ResetResourceGroup(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetSubscription(this AzureRelayWcfrelayDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ResetSubscription(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetDebug(this AzureRelayWcfrelayDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ResetDebug(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetHelp(this AzureRelayWcfrelayDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ResetHelp(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetOutput(this AzureRelayWcfrelayDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ResetOutput(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetQuery(this AzureRelayWcfrelayDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ResetQuery(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings SetVerbose(this AzureRelayWcfrelayDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayDeleteSettings ResetVerbose(this AzureRelayWcfrelayDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayWcfrelayListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayWcfrelayListSettingsExtensions
-    {
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings SetNamespaceName(this AzureRelayWcfrelayListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings ResetNamespaceName(this AzureRelayWcfrelayListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings SetResourceGroup(this AzureRelayWcfrelayListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings ResetResourceGroup(this AzureRelayWcfrelayListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings SetSubscription(this AzureRelayWcfrelayListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings ResetSubscription(this AzureRelayWcfrelayListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings SetDebug(this AzureRelayWcfrelayListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings ResetDebug(this AzureRelayWcfrelayListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings SetHelp(this AzureRelayWcfrelayListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings ResetHelp(this AzureRelayWcfrelayListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings SetOutput(this AzureRelayWcfrelayListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings ResetOutput(this AzureRelayWcfrelayListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings SetQuery(this AzureRelayWcfrelayListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings ResetQuery(this AzureRelayWcfrelayListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings SetVerbose(this AzureRelayWcfrelayListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayListSettings ResetVerbose(this AzureRelayWcfrelayListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayWcfrelayShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayWcfrelayShowSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetIds(this AzureRelayWcfrelayShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetIds(this AzureRelayWcfrelayShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings AddIds(this AzureRelayWcfrelayShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings AddIds(this AzureRelayWcfrelayShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ClearIds(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings RemoveIds(this AzureRelayWcfrelayShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings RemoveIds(this AzureRelayWcfrelayShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Name"/></em></p>
-        ///   <p>Name of WCF Relay.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetName(this AzureRelayWcfrelayShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Name"/></em></p>
-        ///   <p>Name of WCF Relay.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ResetName(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetNamespaceName(this AzureRelayWcfrelayShowSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ResetNamespaceName(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetResourceGroup(this AzureRelayWcfrelayShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ResetResourceGroup(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetSubscription(this AzureRelayWcfrelayShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ResetSubscription(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetDebug(this AzureRelayWcfrelayShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ResetDebug(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetHelp(this AzureRelayWcfrelayShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ResetHelp(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetOutput(this AzureRelayWcfrelayShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ResetOutput(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetQuery(this AzureRelayWcfrelayShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ResetQuery(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings SetVerbose(this AzureRelayWcfrelayShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayShowSettings ResetVerbose(this AzureRelayWcfrelayShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayWcfrelayUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayWcfrelayUpdateSettingsExtensions
-    {
-        #region RelayType
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.RelayType"/></em></p>
-        ///   <p>Relay type.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetRelayType(this AzureRelayWcfrelayUpdateSettings toolSettings, RelayWcfrelayRelayType relayType)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RelayType = relayType;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.RelayType"/></em></p>
-        ///   <p>Relay type.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetRelayType(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RelayType = null;
-            return toolSettings;
-        }
-        #endregion
-        #region RequiresClientAuthorization
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetRequiresClientAuthorization(this AzureRelayWcfrelayUpdateSettings toolSettings, bool? requiresClientAuthorization)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = requiresClientAuthorization;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetRequiresClientAuthorization(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = null;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzureRelayWcfrelayUpdateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings EnableRequiresClientAuthorization(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzureRelayWcfrelayUpdateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings DisableRequiresClientAuthorization(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzureRelayWcfrelayUpdateSettings.RequiresClientAuthorization"/></em></p>
-        ///   <p>Indicates whether client authorization is required.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ToggleRequiresClientAuthorization(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RequiresClientAuthorization = !toolSettings.RequiresClientAuthorization;
-            return toolSettings;
-        }
-        #endregion
-        #region Status
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Status"/></em></p>
-        ///   <p>Enumerates the possible values for the status of a messaging entity.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetStatus(this AzureRelayWcfrelayUpdateSettings toolSettings, RelayHycoStatus status)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = status;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Status"/></em></p>
-        ///   <p>Enumerates the possible values for the status of a messaging entity.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetStatus(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Status = null;
-            return toolSettings;
-        }
-        #endregion
-        #region UserMetadata
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.UserMetadata"/></em></p>
-        ///   <p>Endpoint metadata.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetUserMetadata(this AzureRelayWcfrelayUpdateSettings toolSettings, string userMetadata)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserMetadata = userMetadata;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.UserMetadata"/></em></p>
-        ///   <p>Endpoint metadata.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetUserMetadata(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.UserMetadata = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetIds(this AzureRelayWcfrelayUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetIds(this AzureRelayWcfrelayUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings AddIds(this AzureRelayWcfrelayUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings AddIds(this AzureRelayWcfrelayUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ClearIds(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings RemoveIds(this AzureRelayWcfrelayUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayWcfrelayUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings RemoveIds(this AzureRelayWcfrelayUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Name"/></em></p>
-        ///   <p>Name of WCF Relay.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetName(this AzureRelayWcfrelayUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Name"/></em></p>
-        ///   <p>Name of WCF Relay.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetName(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetNamespaceName(this AzureRelayWcfrelayUpdateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetNamespaceName(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetResourceGroup(this AzureRelayWcfrelayUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetResourceGroup(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetSubscription(this AzureRelayWcfrelayUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetSubscription(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetAdd(this AzureRelayWcfrelayUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetAdd(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetForceString(this AzureRelayWcfrelayUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetForceString(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetRemove(this AzureRelayWcfrelayUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetRemove(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetSet(this AzureRelayWcfrelayUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetSet(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetDebug(this AzureRelayWcfrelayUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetDebug(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetHelp(this AzureRelayWcfrelayUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetHelp(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetOutput(this AzureRelayWcfrelayUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetOutput(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetQuery(this AzureRelayWcfrelayUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetQuery(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayWcfrelayUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings SetVerbose(this AzureRelayWcfrelayUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayWcfrelayUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayWcfrelayUpdateSettings ResetVerbose(this AzureRelayWcfrelayUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayHycoAuthorizationRuleCreateSettingsExtensions
-    {
-        #region HybridConnectionName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string hybridConnectionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = hybridConnectionName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Name"/></em></p>
-        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Name"/></em></p>
-        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Rights
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/> to a new list</em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/> to a new list</em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings AddRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings AddRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ClearRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings RemoveRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings RemoveRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetSubscription(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetDebug(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetDebug(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetHelp(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetHelp(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetOutput(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetOutput(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetQuery(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetQuery(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings SetVerbose(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayHycoAuthorizationRuleDeleteSettingsExtensions
-    {
-        #region HybridConnectionName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string hybridConnectionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = hybridConnectionName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings AddIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings AddIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ClearIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings RemoveIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings RemoveIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Name"/></em></p>
-        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Name"/></em></p>
-        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetSubscription(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetDebug(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetDebug(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetHelp(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetHelp(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetOutput(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetOutput(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetQuery(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetQuery(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetVerbose(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayHycoAuthorizationRuleListSettingsExtensions
-    {
-        #region HybridConnectionName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string hybridConnectionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = hybridConnectionName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings SetSubscription(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings SetDebug(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings ResetDebug(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings SetHelp(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings ResetHelp(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings SetOutput(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings ResetOutput(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings SetQuery(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings ResetQuery(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings SetVerbose(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleListSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayHycoAuthorizationRuleShowSettingsExtensions
-    {
-        #region HybridConnectionName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string hybridConnectionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = hybridConnectionName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings AddIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings AddIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ClearIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings RemoveIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings RemoveIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Name"/></em></p>
-        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Name"/></em></p>
-        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetSubscription(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetDebug(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetDebug(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetHelp(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetHelp(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetOutput(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetOutput(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetQuery(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetQuery(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings SetVerbose(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleShowSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayHycoAuthorizationRuleUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayHycoAuthorizationRuleUpdateSettingsExtensions
-    {
-        #region Rights
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/> to a new list</em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/> to a new list</em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings AddRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings AddRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ClearRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region HybridConnectionName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string hybridConnectionName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = hybridConnectionName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.HybridConnectionName"/></em></p>
-        ///   <p>Name of Hybrid Connection.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HybridConnectionName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings AddIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings AddIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ClearIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings RemoveIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings RemoveIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Name"/></em></p>
-        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Name"/></em></p>
-        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetSubscription(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetAdd(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetAdd(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetForceString(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetForceString(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetRemove(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetRemove(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetSet(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetSet(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetDebug(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetDebug(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetHelp(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetHelp(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetOutput(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetOutput(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetQuery(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetQuery(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetVerbose(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayNamespaceAuthorizationRuleCreateSettingsExtensions
-    {
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetName(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetName(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Rights
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/> to a new list</em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/> to a new list</em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings AddRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings AddRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ClearRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings RemoveRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings RemoveRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayNamespaceAuthorizationRuleDeleteSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings AddIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings AddIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ClearIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetName(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetName(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayNamespaceAuthorizationRuleListSettingsExtensions
-    {
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.NamespaceName"/></em></p>
-        ///   <p>Name of the Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.NamespaceName"/></em></p>
-        ///   <p>Name of the Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayNamespaceAuthorizationRuleShowSettingsExtensions
-    {
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings AddIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings AddIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ClearIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetName(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetName(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureRelayNamespaceAuthorizationRuleUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureRelayTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayNamespaceAuthorizationRuleUpdateSettingsExtensions
-    {
-        #region Rights
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/> to a new list</em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/> to a new list</em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal = rights.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings AddRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings AddRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.AddRange(rights);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ClearRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.RightsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
-        ///   <p>Space-separated list of Authorization rule rights.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
-            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings AddIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings AddIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ClearIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetName(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetName(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NamespaceName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = namespaceName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/></em></p>
-        ///   <p>Name of Namespace.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NamespaceName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetAdd(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetAdd(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetForceString(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetForceString(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetRemove(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetRemove(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetSet(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetSet(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
     #region AzureRelayWcfrelayAuthorizationRuleCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
@@ -13645,7 +10311,7 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings SetRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
+        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings SetRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
@@ -13656,7 +10322,7 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings SetRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
+        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings SetRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
@@ -13667,7 +10333,7 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings AddRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
+        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings AddRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
@@ -13678,7 +10344,7 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings AddRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
+        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings AddRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
@@ -13700,10 +10366,10 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings RemoveRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
+        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings RemoveRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
@@ -13712,10 +10378,10 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings RemoveRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
+        public static AzureRelayWcfrelayAuthorizationRuleCreateSettings RemoveRights(this AzureRelayWcfrelayAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
@@ -14768,7 +11434,7 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings SetRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
+        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings SetRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
@@ -14779,7 +11445,7 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings SetRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
+        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings SetRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal = rights.ToList();
@@ -14790,7 +11456,7 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings AddRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
+        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings AddRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
@@ -14801,7 +11467,7 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings AddRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
+        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings AddRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.RightsInternal.AddRange(rights);
@@ -14823,10 +11489,10 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, params RelayHycoAuthorizationRuleRights[] rights)
+        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
@@ -14835,10 +11501,10 @@ namespace Nuke.Azure
         ///   <p>Space-separated list of Authorization rule rights.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayHycoAuthorizationRuleRights> rights)
+        public static AzureRelayWcfrelayAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayWcfrelayAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
         {
             toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<RelayHycoAuthorizationRuleRights>(rights);
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
             toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
             return toolSettings;
         }
@@ -15262,32 +11928,1639 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureRelayHycoAuthorizationRuleKeysListSettingsExtensions
+    #region AzureRelayNamespaceAuthorizationRuleCreateSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayHycoAuthorizationRuleKeysListSettingsExtensions
+    public static partial class AzureRelayNamespaceAuthorizationRuleCreateSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetName(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetName(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Rights
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/> to a new list</em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/> to a new list</em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings AddRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings AddRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ClearRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings RemoveRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings RemoveRights(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleCreateSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayNamespaceAuthorizationRuleDeleteSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings AddIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings AddIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ClearIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetName(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetName(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleDeleteSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayNamespaceAuthorizationRuleListSettingsExtensions
+    {
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.NamespaceName"/></em></p>
+        ///   <p>Name of the Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.NamespaceName"/></em></p>
+        ///   <p>Name of the Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleListSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayNamespaceAuthorizationRuleShowSettingsExtensions
+    {
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings AddIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings AddIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ClearIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetName(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetName(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleShowSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayNamespaceAuthorizationRuleUpdateSettingsExtensions
+    {
+        #region Rights
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/> to a new list</em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/> to a new list</em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings AddRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings AddRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ClearRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings AddIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings AddIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ClearIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetName(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetName(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetAdd(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetAdd(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetForceString(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetForceString(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetRemove(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetRemove(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetSet(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetSet(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleUpdateSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayHycoAuthorizationRuleCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayHycoAuthorizationRuleCreateSettingsExtensions
     {
         #region HybridConnectionName
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.HybridConnectionName"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.HybridConnectionName"/></em></p>
         ///   <p>Name of Hybrid Connection.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string hybridConnectionName)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string hybridConnectionName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HybridConnectionName = hybridConnectionName;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.HybridConnectionName"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.HybridConnectionName"/></em></p>
         ///   <p>Name of Hybrid Connection.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HybridConnectionName = null;
@@ -15296,22 +13569,22 @@ namespace Nuke.Azure
         #endregion
         #region Name
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Name"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Name"/></em></p>
         ///   <p>Name of Hybrid Connection Authorization Rule.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string name)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Name"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Name"/></em></p>
         ///   <p>Name of Hybrid Connection Authorization Rule.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -15320,22 +13593,22 @@ namespace Nuke.Azure
         #endregion
         #region NamespaceName
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.NamespaceName"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.NamespaceName"/></em></p>
         ///   <p>Name of Namespace.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.NamespaceName"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.NamespaceName"/></em></p>
         ///   <p>Name of Namespace.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -15344,46 +13617,127 @@ namespace Nuke.Azure
         #endregion
         #region ResourceGroup
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.ResourceGroup"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.ResourceGroup"/></em></p>
         ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.ResourceGroup"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.ResourceGroup"/></em></p>
         ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
             return toolSettings;
         }
         #endregion
+        #region Rights
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/> to a new list</em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/> to a new list</em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleCreateSettings AddRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleCreateSettings AddRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ClearRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleCreateSettings RemoveRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleCreateSettings RemoveRights(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
         #region Subscription
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Subscription"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetSubscription(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string subscription)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetSubscription(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = subscription;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Subscription"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = null;
@@ -15392,22 +13746,22 @@ namespace Nuke.Azure
         #endregion
         #region Debug
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Debug"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetDebug(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string debug)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetDebug(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Debug"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetDebug(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetDebug(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -15416,22 +13770,22 @@ namespace Nuke.Azure
         #endregion
         #region Help
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Help"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetHelp(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string help)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetHelp(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Help"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetHelp(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetHelp(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -15440,22 +13794,22 @@ namespace Nuke.Azure
         #endregion
         #region Output
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Output"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetOutput(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetOutput(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Output"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetOutput(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetOutput(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -15464,22 +13818,22 @@ namespace Nuke.Azure
         #endregion
         #region Query
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Query"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetQuery(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string query)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetQuery(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Query"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetQuery(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetQuery(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -15488,22 +13842,22 @@ namespace Nuke.Azure
         #endregion
         #region Verbose
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Verbose"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetVerbose(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings SetVerbose(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Verbose"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleCreateSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleCreateSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleCreateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -15512,80 +13866,32 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureRelayHycoAuthorizationRuleKeysRenewSettingsExtensions
+    #region AzureRelayHycoAuthorizationRuleDeleteSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayHycoAuthorizationRuleKeysRenewSettingsExtensions
+    public static partial class AzureRelayHycoAuthorizationRuleDeleteSettingsExtensions
     {
-        #region Key
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Key"/></em></p>
-        ///   <p>Specifies Primary or Secondary key needs to be reset.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetKey(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, RelayHycoAuthorizationRuleKeysKey key)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Key"/></em></p>
-        ///   <p>Specifies Primary or Secondary key needs to be reset.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetKey(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyValue
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.KeyValue"/></em></p>
-        ///   <p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = keyValue;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.KeyValue"/></em></p>
-        ///   <p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = null;
-            return toolSettings;
-        }
-        #endregion
         #region HybridConnectionName
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.HybridConnectionName"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.HybridConnectionName"/></em></p>
         ///   <p>Name of Hybrid Connection.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string hybridConnectionName)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string hybridConnectionName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HybridConnectionName = hybridConnectionName;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.HybridConnectionName"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.HybridConnectionName"/></em></p>
         ///   <p>Name of Hybrid Connection.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.HybridConnectionName = null;
@@ -15594,66 +13900,66 @@ namespace Nuke.Azure
         #endregion
         #region Ids
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/> to a new list</em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/> to a new list</em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/> to a new list</em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/> to a new list</em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings AddIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings AddIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal.AddRange(ids);
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings AddIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings AddIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal.AddRange(ids);
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ClearIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ClearIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal.Clear();
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings RemoveIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings RemoveIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(ids);
@@ -15661,11 +13967,11 @@ namespace Nuke.Azure
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings RemoveIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings RemoveIds(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(ids);
@@ -15675,22 +13981,22 @@ namespace Nuke.Azure
         #endregion
         #region Name
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Name"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Name"/></em></p>
         ///   <p>Name of Hybrid Connection Authorization Rule.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string name)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Name"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Name"/></em></p>
         ///   <p>Name of Hybrid Connection Authorization Rule.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -15699,22 +14005,22 @@ namespace Nuke.Azure
         #endregion
         #region NamespaceName
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.NamespaceName"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.NamespaceName"/></em></p>
         ///   <p>Name of Namespace.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.NamespaceName"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.NamespaceName"/></em></p>
         ///   <p>Name of Namespace.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -15723,22 +14029,22 @@ namespace Nuke.Azure
         #endregion
         #region ResourceGroup
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.ResourceGroup"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.ResourceGroup"/></em></p>
         ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.ResourceGroup"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.ResourceGroup"/></em></p>
         ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -15747,22 +14053,22 @@ namespace Nuke.Azure
         #endregion
         #region Subscription
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Subscription"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetSubscription(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string subscription)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetSubscription(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = subscription;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Subscription"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = null;
@@ -15771,22 +14077,22 @@ namespace Nuke.Azure
         #endregion
         #region Debug
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Debug"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetDebug(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string debug)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetDebug(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Debug"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetDebug(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetDebug(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -15795,22 +14101,22 @@ namespace Nuke.Azure
         #endregion
         #region Help
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Help"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetHelp(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string help)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetHelp(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Help"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetHelp(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetHelp(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -15819,22 +14125,22 @@ namespace Nuke.Azure
         #endregion
         #region Output
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Output"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetOutput(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, AzureOutput output)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetOutput(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Output"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetOutput(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetOutput(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -15843,22 +14149,22 @@ namespace Nuke.Azure
         #endregion
         #region Query
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Query"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetQuery(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string query)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetQuery(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Query"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetQuery(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetQuery(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -15867,22 +14173,22 @@ namespace Nuke.Azure
         #endregion
         #region Verbose
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Verbose"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetVerbose(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings SetVerbose(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Verbose"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleDeleteSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleDeleteSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleDeleteSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -15891,56 +14197,56 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureRelayNamespaceAuthorizationRuleKeysListSettingsExtensions
+    #region AzureRelayHycoAuthorizationRuleListSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayNamespaceAuthorizationRuleKeysListSettingsExtensions
+    public static partial class AzureRelayHycoAuthorizationRuleListSettingsExtensions
     {
-        #region Name
+        #region HybridConnectionName
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetName(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string name)
+        public static AzureRelayHycoAuthorizationRuleListSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string hybridConnectionName)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
+            toolSettings.HybridConnectionName = hybridConnectionName;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetName(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleListSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
+            toolSettings.HybridConnectionName = null;
             return toolSettings;
         }
         #endregion
         #region NamespaceName
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.NamespaceName"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.NamespaceName"/></em></p>
         ///   <p>Name of Namespace.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        public static AzureRelayHycoAuthorizationRuleListSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.NamespaceName"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.NamespaceName"/></em></p>
         ///   <p>Name of Namespace.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleListSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -15949,22 +14255,22 @@ namespace Nuke.Azure
         #endregion
         #region ResourceGroup
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.ResourceGroup"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.ResourceGroup"/></em></p>
         ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        public static AzureRelayHycoAuthorizationRuleListSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.ResourceGroup"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.ResourceGroup"/></em></p>
         ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleListSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -15973,22 +14279,22 @@ namespace Nuke.Azure
         #endregion
         #region Subscription
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Subscription"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string subscription)
+        public static AzureRelayHycoAuthorizationRuleListSettings SetSubscription(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = subscription;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Subscription"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleListSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = null;
@@ -15997,22 +14303,22 @@ namespace Nuke.Azure
         #endregion
         #region Debug
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Debug"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string debug)
+        public static AzureRelayHycoAuthorizationRuleListSettings SetDebug(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Debug"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleListSettings ResetDebug(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -16021,22 +14327,22 @@ namespace Nuke.Azure
         #endregion
         #region Help
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Help"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string help)
+        public static AzureRelayHycoAuthorizationRuleListSettings SetHelp(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Help"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleListSettings ResetHelp(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -16045,22 +14351,22 @@ namespace Nuke.Azure
         #endregion
         #region Output
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Output"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
+        public static AzureRelayHycoAuthorizationRuleListSettings SetOutput(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Output"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleListSettings ResetOutput(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -16069,22 +14375,22 @@ namespace Nuke.Azure
         #endregion
         #region Query
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Query"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string query)
+        public static AzureRelayHycoAuthorizationRuleListSettings SetQuery(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Query"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleListSettings ResetQuery(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -16093,22 +14399,22 @@ namespace Nuke.Azure
         #endregion
         #region Verbose
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Verbose"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        public static AzureRelayHycoAuthorizationRuleListSettings SetVerbose(this AzureRelayHycoAuthorizationRuleListSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Verbose"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleListSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleListSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -16117,124 +14423,100 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
-    #region AzureRelayNamespaceAuthorizationRuleKeysRenewSettingsExtensions
+    #region AzureRelayHycoAuthorizationRuleShowSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [ExcludeFromCodeCoverage]
-    public static partial class AzureRelayNamespaceAuthorizationRuleKeysRenewSettingsExtensions
+    public static partial class AzureRelayHycoAuthorizationRuleShowSettingsExtensions
     {
-        #region Key
+        #region HybridConnectionName
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Key"/></em></p>
-        ///   <p>Specifies Primary or Secondary key needs to be reset.</p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetKey(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, RelayHycoAuthorizationRuleKeysKey key)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string hybridConnectionName)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = key;
+            toolSettings.HybridConnectionName = hybridConnectionName;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Key"/></em></p>
-        ///   <p>Specifies Primary or Secondary key needs to be reset.</p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetKey(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
-            toolSettings.Key = null;
-            return toolSettings;
-        }
-        #endregion
-        #region KeyValue
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/></em></p>
-        ///   <p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = keyValue;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/></em></p>
-        ///   <p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p>
-        /// </summary>
-        [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.KeyValue = null;
+            toolSettings.HybridConnectionName = null;
             return toolSettings;
         }
         #endregion
         #region Ids
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/> to a new list</em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/> to a new list</em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/> to a new list</em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/> to a new list</em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal = ids.ToList();
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings AddIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        public static AzureRelayHycoAuthorizationRuleShowSettings AddIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal.AddRange(ids);
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings AddIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        public static AzureRelayHycoAuthorizationRuleShowSettings AddIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal.AddRange(ids);
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ClearIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ClearIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.IdsInternal.Clear();
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        public static AzureRelayHycoAuthorizationRuleShowSettings RemoveIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, params string[] ids)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(ids);
@@ -16242,11 +14524,11 @@ namespace Nuke.Azure
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Ids"/></em></p>
         ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        public static AzureRelayHycoAuthorizationRuleShowSettings RemoveIds(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, IEnumerable<string> ids)
         {
             toolSettings = toolSettings.NewInstance();
             var hashSet = new HashSet<string>(ids);
@@ -16256,22 +14538,22 @@ namespace Nuke.Azure
         #endregion
         #region Name
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Name"/></em></p>
+        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetName(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string name)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string name)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = name;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Name"/></em></p>
-        ///   <p>Name of Namespace Authorization Rule.</p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Name"/></em></p>
+        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetName(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Name = null;
@@ -16280,22 +14562,22 @@ namespace Nuke.Azure
         #endregion
         #region NamespaceName
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.NamespaceName"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.NamespaceName"/></em></p>
         ///   <p>Name of Namespace.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string namespaceName)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = namespaceName;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.NamespaceName"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.NamespaceName"/></em></p>
         ///   <p>Name of Namespace.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.NamespaceName = null;
@@ -16304,22 +14586,22 @@ namespace Nuke.Azure
         #endregion
         #region ResourceGroup
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.ResourceGroup"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.ResourceGroup"/></em></p>
         ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string resourceGroup)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = resourceGroup;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.ResourceGroup"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.ResourceGroup"/></em></p>
         ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.ResourceGroup = null;
@@ -16328,22 +14610,22 @@ namespace Nuke.Azure
         #endregion
         #region Subscription
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Subscription"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string subscription)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetSubscription(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string subscription)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = subscription;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Subscription"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Subscription"/></em></p>
         ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Subscription = null;
@@ -16352,22 +14634,22 @@ namespace Nuke.Azure
         #endregion
         #region Debug
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Debug"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string debug)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetDebug(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string debug)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = debug;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Debug"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Debug"/></em></p>
         ///   <p>Increase logging verbosity to show all debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetDebug(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Debug = null;
@@ -16376,22 +14658,22 @@ namespace Nuke.Azure
         #endregion
         #region Help
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Help"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string help)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetHelp(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string help)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = help;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Help"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Help"/></em></p>
         ///   <p>Show this help message and exit.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetHelp(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Help = null;
@@ -16400,22 +14682,22 @@ namespace Nuke.Azure
         #endregion
         #region Output
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Output"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, AzureOutput output)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetOutput(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, AzureOutput output)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = output;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Output"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Output"/></em></p>
         ///   <p>Output format.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetOutput(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Output = null;
@@ -16424,22 +14706,22 @@ namespace Nuke.Azure
         #endregion
         #region Query
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Query"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string query)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetQuery(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string query)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = query;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Query"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Query"/></em></p>
         ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetQuery(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Query = null;
@@ -16448,22 +14730,530 @@ namespace Nuke.Azure
         #endregion
         #region Verbose
         /// <summary>
-        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Verbose"/></em></p>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
+        public static AzureRelayHycoAuthorizationRuleShowSettings SetVerbose(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings, string verbose)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = verbose;
             return toolSettings;
         }
         /// <summary>
-        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Verbose"/></em></p>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleShowSettings.Verbose"/></em></p>
         ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        public static AzureRelayHycoAuthorizationRuleShowSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayHycoAuthorizationRuleUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayHycoAuthorizationRuleUpdateSettingsExtensions
+    {
+        #region Rights
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/> to a new list</em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/> to a new list</em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal = rights.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings AddRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings AddRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.AddRange(rights);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ClearRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.RightsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params RelayWcfrelayAuthorizationRuleRights[] rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Rights"/></em></p>
+        ///   <p>Space-separated list of Authorization rule rights.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings RemoveRights(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<RelayWcfrelayAuthorizationRuleRights> rights)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<RelayWcfrelayAuthorizationRuleRights>(rights);
+            toolSettings.RightsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region HybridConnectionName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string hybridConnectionName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HybridConnectionName = hybridConnectionName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HybridConnectionName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings AddIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings AddIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ClearIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings RemoveIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings RemoveIds(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Name"/></em></p>
+        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Name"/></em></p>
+        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetSubscription(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetAdd(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetAdd(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetForceString(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetForceString(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetRemove(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetRemove(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetSet(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetSet(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetDebug(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetDebug(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetHelp(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetHelp(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetOutput(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetOutput(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetQuery(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetQuery(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings SetVerbose(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleUpdateSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleUpdateSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -16736,7 +15526,7 @@ namespace Nuke.Azure
         ///   <p>Specifies Primary or Secondary key needs to be reset.</p>
         /// </summary>
         [Pure]
-        public static AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings SetKey(this AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings toolSettings, RelayHycoAuthorizationRuleKeysKey key)
+        public static AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings SetKey(this AzureRelayWcfrelayAuthorizationRuleKeysRenewSettings toolSettings, RelayWcfrelayAuthorizationRuleKeysKey key)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Key = key;
@@ -17101,6 +15891,1216 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureRelayNamespaceAuthorizationRuleKeysListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayNamespaceAuthorizationRuleKeysListSettingsExtensions
+    {
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetName(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetName(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysListSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayNamespaceAuthorizationRuleKeysRenewSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayNamespaceAuthorizationRuleKeysRenewSettingsExtensions
+    {
+        #region Key
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Key"/></em></p>
+        ///   <p>Specifies Primary or Secondary key needs to be reset.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetKey(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, RelayWcfrelayAuthorizationRuleKeysKey key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Key"/></em></p>
+        ///   <p>Specifies Primary or Secondary key needs to be reset.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetKey(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyValue
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/></em></p>
+        ///   <p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = keyValue;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.KeyValue"/></em></p>
+        ///   <p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings AddIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings AddIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ClearIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings RemoveIds(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetName(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Name"/></em></p>
+        ///   <p>Name of Namespace Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetName(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetSubscription(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetSubscription(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetDebug(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetDebug(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetHelp(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetHelp(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetOutput(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetOutput(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetQuery(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetQuery(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings SetVerbose(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayNamespaceAuthorizationRuleKeysRenewSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayNamespaceAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureRelayNamespaceAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayHycoAuthorizationRuleKeysListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayHycoAuthorizationRuleKeysListSettingsExtensions
+    {
+        #region HybridConnectionName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string hybridConnectionName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HybridConnectionName = hybridConnectionName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HybridConnectionName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Name"/></em></p>
+        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Name"/></em></p>
+        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetSubscription(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetDebug(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetDebug(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetHelp(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetHelp(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetOutput(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetOutput(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetQuery(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetQuery(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings SetVerbose(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysListSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleKeysListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureRelayHycoAuthorizationRuleKeysRenewSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureRelayTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureRelayHycoAuthorizationRuleKeysRenewSettingsExtensions
+    {
+        #region Key
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Key"/></em></p>
+        ///   <p>Specifies Primary or Secondary key needs to be reset.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetKey(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, RelayWcfrelayAuthorizationRuleKeysKey key)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = key;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Key"/></em></p>
+        ///   <p>Specifies Primary or Secondary key needs to be reset.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetKey(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Key = null;
+            return toolSettings;
+        }
+        #endregion
+        #region KeyValue
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.KeyValue"/></em></p>
+        ///   <p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetKeyValue(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string keyValue)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = keyValue;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.KeyValue"/></em></p>
+        ///   <p>Optional, if the key value provided, is set for KeyType or autogenerated Key value set for keyType.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetKeyValue(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.KeyValue = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HybridConnectionName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetHybridConnectionName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string hybridConnectionName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HybridConnectionName = hybridConnectionName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.HybridConnectionName"/></em></p>
+        ///   <p>Name of Hybrid Connection.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetHybridConnectionName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HybridConnectionName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings AddIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings AddIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ClearIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings RemoveIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings RemoveIds(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Name"/></em></p>
+        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Name"/></em></p>
+        ///   <p>Name of Hybrid Connection Authorization Rule.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NamespaceName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetNamespaceName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string namespaceName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = namespaceName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.NamespaceName"/></em></p>
+        ///   <p>Name of Namespace.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetNamespaceName(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NamespaceName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetResourceGroup(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetResourceGroup(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetSubscription(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetSubscription(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetDebug(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetDebug(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetHelp(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetHelp(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetOutput(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetOutput(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetQuery(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetQuery(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings SetVerbose(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureRelayHycoAuthorizationRuleKeysRenewSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureRelayHycoAuthorizationRuleKeysRenewSettings ResetVerbose(this AzureRelayHycoAuthorizationRuleKeysRenewSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region RelayHycoStatus
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
@@ -17131,33 +17131,33 @@ namespace Nuke.Azure
         public static RelayWcfrelayRelayType nettcp = new RelayWcfrelayRelayType { Value = "nettcp" };
     }
     #endregion
-    #region RelayHycoAuthorizationRuleRights
+    #region RelayWcfrelayAuthorizationRuleRights
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
-    [TypeConverter(typeof(TypeConverter<RelayHycoAuthorizationRuleRights>))]
-    public partial class RelayHycoAuthorizationRuleRights : Enumeration
+    [TypeConverter(typeof(TypeConverter<RelayWcfrelayAuthorizationRuleRights>))]
+    public partial class RelayWcfrelayAuthorizationRuleRights : Enumeration
     {
-        public static RelayHycoAuthorizationRuleRights listen = new RelayHycoAuthorizationRuleRights { Value = "listen" };
-        public static RelayHycoAuthorizationRuleRights manage = new RelayHycoAuthorizationRuleRights { Value = "manage" };
-        public static RelayHycoAuthorizationRuleRights send = new RelayHycoAuthorizationRuleRights { Value = "send" };
+        public static RelayWcfrelayAuthorizationRuleRights listen = new RelayWcfrelayAuthorizationRuleRights { Value = "listen" };
+        public static RelayWcfrelayAuthorizationRuleRights manage = new RelayWcfrelayAuthorizationRuleRights { Value = "manage" };
+        public static RelayWcfrelayAuthorizationRuleRights send = new RelayWcfrelayAuthorizationRuleRights { Value = "send" };
     }
     #endregion
-    #region RelayHycoAuthorizationRuleKeysKey
+    #region RelayWcfrelayAuthorizationRuleKeysKey
     /// <summary>
     ///   Used within <see cref="AzureRelayTasks"/>.
     /// </summary>
     [PublicAPI]
     [Serializable]
     [ExcludeFromCodeCoverage]
-    [TypeConverter(typeof(TypeConverter<RelayHycoAuthorizationRuleKeysKey>))]
-    public partial class RelayHycoAuthorizationRuleKeysKey : Enumeration
+    [TypeConverter(typeof(TypeConverter<RelayWcfrelayAuthorizationRuleKeysKey>))]
+    public partial class RelayWcfrelayAuthorizationRuleKeysKey : Enumeration
     {
-        public static RelayHycoAuthorizationRuleKeysKey primarykey = new RelayHycoAuthorizationRuleKeysKey { Value = "primarykey" };
-        public static RelayHycoAuthorizationRuleKeysKey secondarykey = new RelayHycoAuthorizationRuleKeysKey { Value = "secondarykey" };
+        public static RelayWcfrelayAuthorizationRuleKeysKey primarykey = new RelayWcfrelayAuthorizationRuleKeysKey { Value = "primarykey" };
+        public static RelayWcfrelayAuthorizationRuleKeysKey secondarykey = new RelayWcfrelayAuthorizationRuleKeysKey { Value = "secondarykey" };
     }
     #endregion
 }

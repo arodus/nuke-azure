@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureKusto.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -85,6 +85,378 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureKustoSettings Settings, IReadOnlyCollection<Output> Output)> AzureKusto(CombinatorialConfigure<AzureKustoSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureKusto, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseCreate(AzureKustoDatabaseCreateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureKustoDatabaseCreateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseCreateSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseCreateSettings.Help"/></li>
+        ///     <li><c>--hot-cache-period</c> via <see cref="AzureKustoDatabaseCreateSettings.HotCachePeriod"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseCreateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--soft-delete-period</c> via <see cref="AzureKustoDatabaseCreateSettings.SoftDeletePeriod"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseCreate(Configure<AzureKustoDatabaseCreateSettings> configurator)
+        {
+            return AzureKustoDatabaseCreate(configurator(new AzureKustoDatabaseCreateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseCreateSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseCreateSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseCreateSettings.Help"/></li>
+        ///     <li><c>--hot-cache-period</c> via <see cref="AzureKustoDatabaseCreateSettings.HotCachePeriod"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseCreateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseCreateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseCreateSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseCreateSettings.ResourceGroup"/></li>
+        ///     <li><c>--soft-delete-period</c> via <see cref="AzureKustoDatabaseCreateSettings.SoftDeletePeriod"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseCreateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseCreateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureKustoDatabaseCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseCreate(CombinatorialConfigure<AzureKustoDatabaseCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureKustoDatabaseCreate, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseDelete(AzureKustoDatabaseDeleteSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureKustoDatabaseDeleteSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseDeleteSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseDeleteSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="AzureKustoDatabaseDeleteSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseDelete(Configure<AzureKustoDatabaseDeleteSettings> configurator)
+        {
+            return AzureKustoDatabaseDelete(configurator(new AzureKustoDatabaseDeleteSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseDeleteSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseDeleteSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseDeleteSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseDeleteSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseDeleteSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseDeleteSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseDeleteSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseDeleteSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseDeleteSettings.Verbose"/></li>
+        ///     <li><c>--yes</c> via <see cref="AzureKustoDatabaseDeleteSettings.Yes"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureKustoDatabaseDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseDelete(CombinatorialConfigure<AzureKustoDatabaseDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureKustoDatabaseDelete, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseList(AzureKustoDatabaseListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureKustoDatabaseListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseListSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseList(Configure<AzureKustoDatabaseListSettings> configurator)
+        {
+            return AzureKustoDatabaseList(configurator(new AzureKustoDatabaseListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseListSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseListSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseListSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseListSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseListSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseListSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureKustoDatabaseListSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseList(CombinatorialConfigure<AzureKustoDatabaseListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureKustoDatabaseList, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseShow(AzureKustoDatabaseShowSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureKustoDatabaseShowSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseShowSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseShow(Configure<AzureKustoDatabaseShowSettings> configurator)
+        {
+            return AzureKustoDatabaseShow(configurator(new AzureKustoDatabaseShowSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseShowSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseShowSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseShowSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseShowSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseShowSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseShowSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseShowSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseShowSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseShowSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseShowSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureKustoDatabaseShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseShow(CombinatorialConfigure<AzureKustoDatabaseShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureKustoDatabaseShow, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseUpdate(AzureKustoDatabaseUpdateSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureKustoDatabaseUpdateSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureKustoDatabaseUpdateSettings.Add"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseUpdateSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureKustoDatabaseUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseUpdateSettings.Help"/></li>
+        ///     <li><c>--hot-cache-period</c> via <see cref="AzureKustoDatabaseUpdateSettings.HotCachePeriod"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseUpdateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureKustoDatabaseUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureKustoDatabaseUpdateSettings.Set"/></li>
+        ///     <li><c>--soft-delete-period</c> via <see cref="AzureKustoDatabaseUpdateSettings.SoftDeletePeriod"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseUpdate(Configure<AzureKustoDatabaseUpdateSettings> configurator)
+        {
+            return AzureKustoDatabaseUpdate(configurator(new AzureKustoDatabaseUpdateSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--add</c> via <see cref="AzureKustoDatabaseUpdateSettings.Add"/></li>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseUpdateSettings.ClusterName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseUpdateSettings.Debug"/></li>
+        ///     <li><c>--force-string</c> via <see cref="AzureKustoDatabaseUpdateSettings.ForceString"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseUpdateSettings.Help"/></li>
+        ///     <li><c>--hot-cache-period</c> via <see cref="AzureKustoDatabaseUpdateSettings.HotCachePeriod"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseUpdateSettings.Name"/></li>
+        ///     <li><c>--no-wait</c> via <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseUpdateSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseUpdateSettings.Query"/></li>
+        ///     <li><c>--remove</c> via <see cref="AzureKustoDatabaseUpdateSettings.Remove"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseUpdateSettings.ResourceGroup"/></li>
+        ///     <li><c>--set</c> via <see cref="AzureKustoDatabaseUpdateSettings.Set"/></li>
+        ///     <li><c>--soft-delete-period</c> via <see cref="AzureKustoDatabaseUpdateSettings.SoftDeletePeriod"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseUpdateSettings.Subscription"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseUpdateSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureKustoDatabaseUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseUpdate(CombinatorialConfigure<AzureKustoDatabaseUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureKustoDatabaseUpdate, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseWait(AzureKustoDatabaseWaitSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureKustoDatabaseWaitSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseWaitSettings.ClusterName"/></li>
+        ///     <li><c>--created</c> via <see cref="AzureKustoDatabaseWaitSettings.Created"/></li>
+        ///     <li><c>--custom</c> via <see cref="AzureKustoDatabaseWaitSettings.Custom"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseWaitSettings.Debug"/></li>
+        ///     <li><c>--deleted</c> via <see cref="AzureKustoDatabaseWaitSettings.Deleted"/></li>
+        ///     <li><c>--exists</c> via <see cref="AzureKustoDatabaseWaitSettings.Exists"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseWaitSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseWaitSettings.Ids"/></li>
+        ///     <li><c>--interval</c> via <see cref="AzureKustoDatabaseWaitSettings.Interval"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseWaitSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseWaitSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseWaitSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseWaitSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseWaitSettings.Subscription"/></li>
+        ///     <li><c>--timeout</c> via <see cref="AzureKustoDatabaseWaitSettings.Timeout"/></li>
+        ///     <li><c>--updated</c> via <see cref="AzureKustoDatabaseWaitSettings.Updated"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseWaitSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureKustoDatabaseWait(Configure<AzureKustoDatabaseWaitSettings> configurator)
+        {
+            return AzureKustoDatabaseWait(configurator(new AzureKustoDatabaseWaitSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage Azure Kusto resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseWaitSettings.ClusterName"/></li>
+        ///     <li><c>--created</c> via <see cref="AzureKustoDatabaseWaitSettings.Created"/></li>
+        ///     <li><c>--custom</c> via <see cref="AzureKustoDatabaseWaitSettings.Custom"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseWaitSettings.Debug"/></li>
+        ///     <li><c>--deleted</c> via <see cref="AzureKustoDatabaseWaitSettings.Deleted"/></li>
+        ///     <li><c>--exists</c> via <see cref="AzureKustoDatabaseWaitSettings.Exists"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseWaitSettings.Help"/></li>
+        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseWaitSettings.Ids"/></li>
+        ///     <li><c>--interval</c> via <see cref="AzureKustoDatabaseWaitSettings.Interval"/></li>
+        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseWaitSettings.Name"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseWaitSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseWaitSettings.Query"/></li>
+        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseWaitSettings.ResourceGroup"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseWaitSettings.Subscription"/></li>
+        ///     <li><c>--timeout</c> via <see cref="AzureKustoDatabaseWaitSettings.Timeout"/></li>
+        ///     <li><c>--updated</c> via <see cref="AzureKustoDatabaseWaitSettings.Updated"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseWaitSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureKustoDatabaseWaitSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseWait(CombinatorialConfigure<AzureKustoDatabaseWaitSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureKustoDatabaseWait, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage Azure Kusto resources.</p>
@@ -560,378 +932,6 @@ namespace Nuke.Azure
         {
             return configurator.Invoke(AzureKustoClusterWait, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
         }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseCreate(AzureKustoDatabaseCreateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureKustoDatabaseCreateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseCreateSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseCreateSettings.Help"/></li>
-        ///     <li><c>--hot-cache-period</c> via <see cref="AzureKustoDatabaseCreateSettings.HotCachePeriod"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseCreateSettings.Name"/></li>
-        ///     <li><c>--no-wait</c> via <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--soft-delete-period</c> via <see cref="AzureKustoDatabaseCreateSettings.SoftDeletePeriod"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseCreate(Configure<AzureKustoDatabaseCreateSettings> configurator)
-        {
-            return AzureKustoDatabaseCreate(configurator(new AzureKustoDatabaseCreateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseCreateSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseCreateSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseCreateSettings.Help"/></li>
-        ///     <li><c>--hot-cache-period</c> via <see cref="AzureKustoDatabaseCreateSettings.HotCachePeriod"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseCreateSettings.Name"/></li>
-        ///     <li><c>--no-wait</c> via <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseCreateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseCreateSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseCreateSettings.ResourceGroup"/></li>
-        ///     <li><c>--soft-delete-period</c> via <see cref="AzureKustoDatabaseCreateSettings.SoftDeletePeriod"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseCreateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseCreateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureKustoDatabaseCreateSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseCreate(CombinatorialConfigure<AzureKustoDatabaseCreateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureKustoDatabaseCreate, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseDelete(AzureKustoDatabaseDeleteSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureKustoDatabaseDeleteSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseDeleteSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseDeleteSettings.Verbose"/></li>
-        ///     <li><c>--yes</c> via <see cref="AzureKustoDatabaseDeleteSettings.Yes"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseDelete(Configure<AzureKustoDatabaseDeleteSettings> configurator)
-        {
-            return AzureKustoDatabaseDelete(configurator(new AzureKustoDatabaseDeleteSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseDeleteSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseDeleteSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseDeleteSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseDeleteSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseDeleteSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseDeleteSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseDeleteSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseDeleteSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseDeleteSettings.Verbose"/></li>
-        ///     <li><c>--yes</c> via <see cref="AzureKustoDatabaseDeleteSettings.Yes"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureKustoDatabaseDeleteSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseDelete(CombinatorialConfigure<AzureKustoDatabaseDeleteSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureKustoDatabaseDelete, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseList(AzureKustoDatabaseListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureKustoDatabaseListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseListSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseList(Configure<AzureKustoDatabaseListSettings> configurator)
-        {
-            return AzureKustoDatabaseList(configurator(new AzureKustoDatabaseListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseListSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseListSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseListSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseListSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseListSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseListSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureKustoDatabaseListSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseList(CombinatorialConfigure<AzureKustoDatabaseListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureKustoDatabaseList, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseShow(AzureKustoDatabaseShowSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureKustoDatabaseShowSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseShowSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseShow(Configure<AzureKustoDatabaseShowSettings> configurator)
-        {
-            return AzureKustoDatabaseShow(configurator(new AzureKustoDatabaseShowSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseShowSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseShowSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseShowSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseShowSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseShowSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseShowSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseShowSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseShowSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseShowSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseShowSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureKustoDatabaseShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseShow(CombinatorialConfigure<AzureKustoDatabaseShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureKustoDatabaseShow, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseUpdate(AzureKustoDatabaseUpdateSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureKustoDatabaseUpdateSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureKustoDatabaseUpdateSettings.Add"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseUpdateSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureKustoDatabaseUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseUpdateSettings.Help"/></li>
-        ///     <li><c>--hot-cache-period</c> via <see cref="AzureKustoDatabaseUpdateSettings.HotCachePeriod"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseUpdateSettings.Name"/></li>
-        ///     <li><c>--no-wait</c> via <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureKustoDatabaseUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureKustoDatabaseUpdateSettings.Set"/></li>
-        ///     <li><c>--soft-delete-period</c> via <see cref="AzureKustoDatabaseUpdateSettings.SoftDeletePeriod"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseUpdate(Configure<AzureKustoDatabaseUpdateSettings> configurator)
-        {
-            return AzureKustoDatabaseUpdate(configurator(new AzureKustoDatabaseUpdateSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--add</c> via <see cref="AzureKustoDatabaseUpdateSettings.Add"/></li>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseUpdateSettings.ClusterName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseUpdateSettings.Debug"/></li>
-        ///     <li><c>--force-string</c> via <see cref="AzureKustoDatabaseUpdateSettings.ForceString"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseUpdateSettings.Help"/></li>
-        ///     <li><c>--hot-cache-period</c> via <see cref="AzureKustoDatabaseUpdateSettings.HotCachePeriod"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseUpdateSettings.Name"/></li>
-        ///     <li><c>--no-wait</c> via <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseUpdateSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseUpdateSettings.Query"/></li>
-        ///     <li><c>--remove</c> via <see cref="AzureKustoDatabaseUpdateSettings.Remove"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseUpdateSettings.ResourceGroup"/></li>
-        ///     <li><c>--set</c> via <see cref="AzureKustoDatabaseUpdateSettings.Set"/></li>
-        ///     <li><c>--soft-delete-period</c> via <see cref="AzureKustoDatabaseUpdateSettings.SoftDeletePeriod"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseUpdateSettings.Subscription"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseUpdateSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureKustoDatabaseUpdateSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseUpdate(CombinatorialConfigure<AzureKustoDatabaseUpdateSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureKustoDatabaseUpdate, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseWait(AzureKustoDatabaseWaitSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureKustoDatabaseWaitSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseWaitSettings.ClusterName"/></li>
-        ///     <li><c>--created</c> via <see cref="AzureKustoDatabaseWaitSettings.Created"/></li>
-        ///     <li><c>--custom</c> via <see cref="AzureKustoDatabaseWaitSettings.Custom"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseWaitSettings.Debug"/></li>
-        ///     <li><c>--deleted</c> via <see cref="AzureKustoDatabaseWaitSettings.Deleted"/></li>
-        ///     <li><c>--exists</c> via <see cref="AzureKustoDatabaseWaitSettings.Exists"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseWaitSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseWaitSettings.Ids"/></li>
-        ///     <li><c>--interval</c> via <see cref="AzureKustoDatabaseWaitSettings.Interval"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseWaitSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseWaitSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseWaitSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseWaitSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseWaitSettings.Subscription"/></li>
-        ///     <li><c>--timeout</c> via <see cref="AzureKustoDatabaseWaitSettings.Timeout"/></li>
-        ///     <li><c>--updated</c> via <see cref="AzureKustoDatabaseWaitSettings.Updated"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseWaitSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureKustoDatabaseWait(Configure<AzureKustoDatabaseWaitSettings> configurator)
-        {
-            return AzureKustoDatabaseWait(configurator(new AzureKustoDatabaseWaitSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage Azure Kusto resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/kusto?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--cluster-name</c> via <see cref="AzureKustoDatabaseWaitSettings.ClusterName"/></li>
-        ///     <li><c>--created</c> via <see cref="AzureKustoDatabaseWaitSettings.Created"/></li>
-        ///     <li><c>--custom</c> via <see cref="AzureKustoDatabaseWaitSettings.Custom"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureKustoDatabaseWaitSettings.Debug"/></li>
-        ///     <li><c>--deleted</c> via <see cref="AzureKustoDatabaseWaitSettings.Deleted"/></li>
-        ///     <li><c>--exists</c> via <see cref="AzureKustoDatabaseWaitSettings.Exists"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureKustoDatabaseWaitSettings.Help"/></li>
-        ///     <li><c>--ids</c> via <see cref="AzureKustoDatabaseWaitSettings.Ids"/></li>
-        ///     <li><c>--interval</c> via <see cref="AzureKustoDatabaseWaitSettings.Interval"/></li>
-        ///     <li><c>--name</c> via <see cref="AzureKustoDatabaseWaitSettings.Name"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureKustoDatabaseWaitSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureKustoDatabaseWaitSettings.Query"/></li>
-        ///     <li><c>--resource-group</c> via <see cref="AzureKustoDatabaseWaitSettings.ResourceGroup"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureKustoDatabaseWaitSettings.Subscription"/></li>
-        ///     <li><c>--timeout</c> via <see cref="AzureKustoDatabaseWaitSettings.Timeout"/></li>
-        ///     <li><c>--updated</c> via <see cref="AzureKustoDatabaseWaitSettings.Updated"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureKustoDatabaseWaitSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureKustoDatabaseWaitSettings Settings, IReadOnlyCollection<Output> Output)> AzureKustoDatabaseWait(CombinatorialConfigure<AzureKustoDatabaseWaitSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureKustoDatabaseWait, AzureKustoLogger, degreeOfParallelism, completeOnFailure);
-        }
     }
     #region AzureKustoSettings
     /// <summary>
@@ -971,6 +971,517 @@ namespace Nuke.Azure
         {
             arguments
               .Add("kusto")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKustoDatabaseCreateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKustoDatabaseCreateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureKusto executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
+        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   The name of the database.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).
+        /// </summary>
+        public virtual string HotCachePeriod { get; internal set; }
+        /// <summary>
+        ///   Do not wait for the long-running operation to finish.
+        /// </summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary>
+        ///   Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).
+        /// </summary>
+        public virtual string SoftDeletePeriod { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("kusto database create")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--hot-cache-period {value}", HotCachePeriod)
+              .Add("--no-wait", NoWait)
+              .Add("--soft-delete-period {value}", SoftDeletePeriod)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKustoDatabaseDeleteSettings
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKustoDatabaseDeleteSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureKusto executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
+        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
+        /// <summary>
+        ///   Do not prompt for confirmation.
+        /// </summary>
+        public virtual string Yes { get; internal set; }
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the database.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("kusto database delete")
+              .Add("--yes {value}", Yes)
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKustoDatabaseListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKustoDatabaseListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureKusto executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
+        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("kusto database list")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKustoDatabaseShowSettings
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKustoDatabaseShowSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureKusto executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
+        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the database.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("kusto database show")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKustoDatabaseUpdateSettings
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKustoDatabaseUpdateSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureKusto executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
+        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
+        /// <summary>
+        ///   Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).
+        /// </summary>
+        public virtual string SoftDeletePeriod { get; internal set; }
+        /// <summary>
+        ///   Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).
+        /// </summary>
+        public virtual string HotCachePeriod { get; internal set; }
+        /// <summary>
+        ///   Do not wait for the long-running operation to finish.
+        /// </summary>
+        public virtual bool? NoWait { get; internal set; }
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the database.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
+        /// </summary>
+        public virtual string Add { get; internal set; }
+        /// <summary>
+        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
+        /// </summary>
+        public virtual string ForceString { get; internal set; }
+        /// <summary>
+        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
+        /// </summary>
+        public virtual string Remove { get; internal set; }
+        /// <summary>
+        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
+        /// </summary>
+        public virtual string Set { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("kusto database update")
+              .Add("--soft-delete-period {value}", SoftDeletePeriod)
+              .Add("--hot-cache-period {value}", HotCachePeriod)
+              .Add("--no-wait", NoWait)
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--add {value}", Add)
+              .Add("--force-string {value}", ForceString)
+              .Add("--remove {value}", Remove)
+              .Add("--set {value}", Set)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureKustoDatabaseWaitSettings
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureKustoDatabaseWaitSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureKusto executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
+        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
+        /// <summary>
+        ///   The name of the cluster.
+        /// </summary>
+        public virtual string ClusterName { get; internal set; }
+        /// <summary>
+        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
+        /// </summary>
+        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
+        internal List<string> IdsInternal { get; set; } = new List<string>();
+        /// <summary>
+        ///   The name of the database.
+        /// </summary>
+        public virtual string Name { get; internal set; }
+        /// <summary>
+        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
+        /// </summary>
+        public virtual string ResourceGroup { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Wait until created with 'provisioningState' at 'Succeeded'.
+        /// </summary>
+        public virtual string Created { get; internal set; }
+        /// <summary>
+        ///   Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
+        /// </summary>
+        public virtual string Custom { get; internal set; }
+        /// <summary>
+        ///   Wait until deleted.
+        /// </summary>
+        public virtual string Deleted { get; internal set; }
+        /// <summary>
+        ///   Wait until the resource exists.
+        /// </summary>
+        public virtual string Exists { get; internal set; }
+        /// <summary>
+        ///   Polling interval in seconds.
+        /// </summary>
+        public virtual string Interval { get; internal set; }
+        /// <summary>
+        ///   Maximum wait in seconds.
+        /// </summary>
+        public virtual string Timeout { get; internal set; }
+        /// <summary>
+        ///   Wait until updated with provisioningState at 'Succeeded'.
+        /// </summary>
+        public virtual string Updated { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("kusto database wait")
+              .Add("--cluster-name {value}", ClusterName)
+              .Add("--ids {value}", Ids, separator: ' ')
+              .Add("--name {value}", Name)
+              .Add("--resource-group {value}", ResourceGroup)
+              .Add("--subscription {value}", Subscription)
+              .Add("--created {value}", Created)
+              .Add("--custom {value}", Custom)
+              .Add("--deleted {value}", Deleted)
+              .Add("--exists {value}", Exists)
+              .Add("--interval {value}", Interval)
+              .Add("--timeout {value}", Timeout)
+              .Add("--updated {value}", Updated)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
               .Add("--output {value}", Output)
@@ -1607,517 +2118,6 @@ namespace Nuke.Azure
         }
     }
     #endregion
-    #region AzureKustoDatabaseCreateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKustoDatabaseCreateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureKusto executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
-        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   The name of the database.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).
-        /// </summary>
-        public virtual string HotCachePeriod { get; internal set; }
-        /// <summary>
-        ///   Do not wait for the long-running operation to finish.
-        /// </summary>
-        public virtual bool? NoWait { get; internal set; }
-        /// <summary>
-        ///   Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).
-        /// </summary>
-        public virtual string SoftDeletePeriod { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("kusto database create")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--hot-cache-period {value}", HotCachePeriod)
-              .Add("--no-wait", NoWait)
-              .Add("--soft-delete-period {value}", SoftDeletePeriod)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKustoDatabaseDeleteSettings
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKustoDatabaseDeleteSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureKusto executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
-        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
-        /// <summary>
-        ///   Do not prompt for confirmation.
-        /// </summary>
-        public virtual string Yes { get; internal set; }
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the database.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("kusto database delete")
-              .Add("--yes {value}", Yes)
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKustoDatabaseListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKustoDatabaseListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureKusto executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
-        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("kusto database list")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKustoDatabaseShowSettings
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKustoDatabaseShowSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureKusto executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
-        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the database.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("kusto database show")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKustoDatabaseUpdateSettings
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKustoDatabaseUpdateSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureKusto executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
-        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
-        /// <summary>
-        ///   Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).
-        /// </summary>
-        public virtual string SoftDeletePeriod { get; internal set; }
-        /// <summary>
-        ///   Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).
-        /// </summary>
-        public virtual string HotCachePeriod { get; internal set; }
-        /// <summary>
-        ///   Do not wait for the long-running operation to finish.
-        /// </summary>
-        public virtual bool? NoWait { get; internal set; }
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the database.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.
-        /// </summary>
-        public virtual string Add { get; internal set; }
-        /// <summary>
-        ///   When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.
-        /// </summary>
-        public virtual string ForceString { get; internal set; }
-        /// <summary>
-        ///   Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.
-        /// </summary>
-        public virtual string Remove { get; internal set; }
-        /// <summary>
-        ///   Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.
-        /// </summary>
-        public virtual string Set { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("kusto database update")
-              .Add("--soft-delete-period {value}", SoftDeletePeriod)
-              .Add("--hot-cache-period {value}", HotCachePeriod)
-              .Add("--no-wait", NoWait)
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--add {value}", Add)
-              .Add("--force-string {value}", ForceString)
-              .Add("--remove {value}", Remove)
-              .Add("--set {value}", Set)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureKustoDatabaseWaitSettings
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureKustoDatabaseWaitSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureKusto executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureKustoTasks.AzureKustoPath;
-        public override Action<OutputType, string> CustomLogger => AzureKustoTasks.AzureKustoLogger;
-        /// <summary>
-        ///   The name of the cluster.
-        /// </summary>
-        public virtual string ClusterName { get; internal set; }
-        /// <summary>
-        ///   One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.
-        /// </summary>
-        public virtual IReadOnlyList<string> Ids => IdsInternal.AsReadOnly();
-        internal List<string> IdsInternal { get; set; } = new List<string>();
-        /// <summary>
-        ///   The name of the database.
-        /// </summary>
-        public virtual string Name { get; internal set; }
-        /// <summary>
-        ///   Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.
-        /// </summary>
-        public virtual string ResourceGroup { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Wait until created with 'provisioningState' at 'Succeeded'.
-        /// </summary>
-        public virtual string Created { get; internal set; }
-        /// <summary>
-        ///   Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].
-        /// </summary>
-        public virtual string Custom { get; internal set; }
-        /// <summary>
-        ///   Wait until deleted.
-        /// </summary>
-        public virtual string Deleted { get; internal set; }
-        /// <summary>
-        ///   Wait until the resource exists.
-        /// </summary>
-        public virtual string Exists { get; internal set; }
-        /// <summary>
-        ///   Polling interval in seconds.
-        /// </summary>
-        public virtual string Interval { get; internal set; }
-        /// <summary>
-        ///   Maximum wait in seconds.
-        /// </summary>
-        public virtual string Timeout { get; internal set; }
-        /// <summary>
-        ///   Wait until updated with provisioningState at 'Succeeded'.
-        /// </summary>
-        public virtual string Updated { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("kusto database wait")
-              .Add("--cluster-name {value}", ClusterName)
-              .Add("--ids {value}", Ids, separator: ' ')
-              .Add("--name {value}", Name)
-              .Add("--resource-group {value}", ResourceGroup)
-              .Add("--subscription {value}", Subscription)
-              .Add("--created {value}", Created)
-              .Add("--custom {value}", Custom)
-              .Add("--deleted {value}", Deleted)
-              .Add("--exists {value}", Exists)
-              .Add("--interval {value}", Interval)
-              .Add("--timeout {value}", Timeout)
-              .Add("--updated {value}", Updated)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
     #region AzureKustoSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureKustoTasks"/>.
@@ -2240,6 +2240,2160 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureKustoSettings ResetVerbose(this AzureKustoSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKustoDatabaseCreateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKustoDatabaseCreateSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetClusterName(this AzureKustoDatabaseCreateSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetClusterName(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetName(this AzureKustoDatabaseCreateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetName(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetResourceGroup(this AzureKustoDatabaseCreateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetResourceGroup(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HotCachePeriod
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.HotCachePeriod"/></em></p>
+        ///   <p>Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetHotCachePeriod(this AzureKustoDatabaseCreateSettings toolSettings, string hotCachePeriod)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HotCachePeriod = hotCachePeriod;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.HotCachePeriod"/></em></p>
+        ///   <p>Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetHotCachePeriod(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HotCachePeriod = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetNoWait(this AzureKustoDatabaseCreateSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetNoWait(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings EnableNoWait(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings DisableNoWait(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ToggleNoWait(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region SoftDeletePeriod
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.SoftDeletePeriod"/></em></p>
+        ///   <p>Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetSoftDeletePeriod(this AzureKustoDatabaseCreateSettings toolSettings, string softDeletePeriod)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SoftDeletePeriod = softDeletePeriod;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.SoftDeletePeriod"/></em></p>
+        ///   <p>Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetSoftDeletePeriod(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SoftDeletePeriod = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetSubscription(this AzureKustoDatabaseCreateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetSubscription(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetDebug(this AzureKustoDatabaseCreateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetDebug(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetHelp(this AzureKustoDatabaseCreateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetHelp(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetOutput(this AzureKustoDatabaseCreateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetOutput(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetQuery(this AzureKustoDatabaseCreateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetQuery(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings SetVerbose(this AzureKustoDatabaseCreateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseCreateSettings ResetVerbose(this AzureKustoDatabaseCreateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKustoDatabaseDeleteSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKustoDatabaseDeleteSettingsExtensions
+    {
+        #region Yes
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Yes"/></em></p>
+        ///   <p>Do not prompt for confirmation.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetYes(this AzureKustoDatabaseDeleteSettings toolSettings, string yes)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = yes;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Yes"/></em></p>
+        ///   <p>Do not prompt for confirmation.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetYes(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Yes = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetClusterName(this AzureKustoDatabaseDeleteSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetClusterName(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetIds(this AzureKustoDatabaseDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetIds(this AzureKustoDatabaseDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings AddIds(this AzureKustoDatabaseDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings AddIds(this AzureKustoDatabaseDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ClearIds(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings RemoveIds(this AzureKustoDatabaseDeleteSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings RemoveIds(this AzureKustoDatabaseDeleteSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetName(this AzureKustoDatabaseDeleteSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetName(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetResourceGroup(this AzureKustoDatabaseDeleteSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetResourceGroup(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetSubscription(this AzureKustoDatabaseDeleteSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetSubscription(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetDebug(this AzureKustoDatabaseDeleteSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetDebug(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetHelp(this AzureKustoDatabaseDeleteSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetHelp(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetOutput(this AzureKustoDatabaseDeleteSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetOutput(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetQuery(this AzureKustoDatabaseDeleteSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetQuery(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings SetVerbose(this AzureKustoDatabaseDeleteSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseDeleteSettings ResetVerbose(this AzureKustoDatabaseDeleteSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKustoDatabaseListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKustoDatabaseListSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings SetClusterName(this AzureKustoDatabaseListSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings ResetClusterName(this AzureKustoDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings SetResourceGroup(this AzureKustoDatabaseListSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings ResetResourceGroup(this AzureKustoDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings SetSubscription(this AzureKustoDatabaseListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings ResetSubscription(this AzureKustoDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings SetDebug(this AzureKustoDatabaseListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings ResetDebug(this AzureKustoDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings SetHelp(this AzureKustoDatabaseListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings ResetHelp(this AzureKustoDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings SetOutput(this AzureKustoDatabaseListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings ResetOutput(this AzureKustoDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings SetQuery(this AzureKustoDatabaseListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings ResetQuery(this AzureKustoDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings SetVerbose(this AzureKustoDatabaseListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseListSettings ResetVerbose(this AzureKustoDatabaseListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKustoDatabaseShowSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKustoDatabaseShowSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetClusterName(this AzureKustoDatabaseShowSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ResetClusterName(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetIds(this AzureKustoDatabaseShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetIds(this AzureKustoDatabaseShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings AddIds(this AzureKustoDatabaseShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings AddIds(this AzureKustoDatabaseShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ClearIds(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings RemoveIds(this AzureKustoDatabaseShowSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings RemoveIds(this AzureKustoDatabaseShowSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetName(this AzureKustoDatabaseShowSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ResetName(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetResourceGroup(this AzureKustoDatabaseShowSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ResetResourceGroup(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetSubscription(this AzureKustoDatabaseShowSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ResetSubscription(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetDebug(this AzureKustoDatabaseShowSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ResetDebug(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetHelp(this AzureKustoDatabaseShowSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ResetHelp(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetOutput(this AzureKustoDatabaseShowSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ResetOutput(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetQuery(this AzureKustoDatabaseShowSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ResetQuery(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings SetVerbose(this AzureKustoDatabaseShowSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseShowSettings ResetVerbose(this AzureKustoDatabaseShowSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKustoDatabaseUpdateSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKustoDatabaseUpdateSettingsExtensions
+    {
+        #region SoftDeletePeriod
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.SoftDeletePeriod"/></em></p>
+        ///   <p>Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetSoftDeletePeriod(this AzureKustoDatabaseUpdateSettings toolSettings, string softDeletePeriod)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SoftDeletePeriod = softDeletePeriod;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.SoftDeletePeriod"/></em></p>
+        ///   <p>Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetSoftDeletePeriod(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.SoftDeletePeriod = null;
+            return toolSettings;
+        }
+        #endregion
+        #region HotCachePeriod
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.HotCachePeriod"/></em></p>
+        ///   <p>Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetHotCachePeriod(this AzureKustoDatabaseUpdateSettings toolSettings, string hotCachePeriod)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HotCachePeriod = hotCachePeriod;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.HotCachePeriod"/></em></p>
+        ///   <p>Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetHotCachePeriod(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.HotCachePeriod = null;
+            return toolSettings;
+        }
+        #endregion
+        #region NoWait
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetNoWait(this AzureKustoDatabaseUpdateSettings toolSettings, bool? noWait)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = noWait;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetNoWait(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = null;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Enables <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings EnableNoWait(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = true;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Disables <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings DisableNoWait(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = false;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Toggles <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
+        ///   <p>Do not wait for the long-running operation to finish.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ToggleNoWait(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.NoWait = !toolSettings.NoWait;
+            return toolSettings;
+        }
+        #endregion
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetClusterName(this AzureKustoDatabaseUpdateSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetClusterName(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetIds(this AzureKustoDatabaseUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetIds(this AzureKustoDatabaseUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings AddIds(this AzureKustoDatabaseUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings AddIds(this AzureKustoDatabaseUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ClearIds(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings RemoveIds(this AzureKustoDatabaseUpdateSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings RemoveIds(this AzureKustoDatabaseUpdateSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetName(this AzureKustoDatabaseUpdateSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetName(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetResourceGroup(this AzureKustoDatabaseUpdateSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetResourceGroup(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetSubscription(this AzureKustoDatabaseUpdateSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetSubscription(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Add
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetAdd(this AzureKustoDatabaseUpdateSettings toolSettings, string add)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = add;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Add"/></em></p>
+        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetAdd(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Add = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ForceString
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetForceString(this AzureKustoDatabaseUpdateSettings toolSettings, string forceString)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = forceString;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.ForceString"/></em></p>
+        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetForceString(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ForceString = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Remove
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetRemove(this AzureKustoDatabaseUpdateSettings toolSettings, string remove)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = remove;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Remove"/></em></p>
+        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetRemove(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Remove = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Set
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetSet(this AzureKustoDatabaseUpdateSettings toolSettings, string set)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = set;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Set"/></em></p>
+        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetSet(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Set = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetDebug(this AzureKustoDatabaseUpdateSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetDebug(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetHelp(this AzureKustoDatabaseUpdateSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetHelp(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetOutput(this AzureKustoDatabaseUpdateSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetOutput(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetQuery(this AzureKustoDatabaseUpdateSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetQuery(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings SetVerbose(this AzureKustoDatabaseUpdateSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseUpdateSettings ResetVerbose(this AzureKustoDatabaseUpdateSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureKustoDatabaseWaitSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureKustoTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureKustoDatabaseWaitSettingsExtensions
+    {
+        #region ClusterName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetClusterName(this AzureKustoDatabaseWaitSettings toolSettings, string clusterName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = clusterName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.ClusterName"/></em></p>
+        ///   <p>The name of the cluster.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetClusterName(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ClusterName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Ids
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetIds(this AzureKustoDatabaseWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Ids"/> to a new list</em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetIds(this AzureKustoDatabaseWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal = ids.ToList();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings AddIds(this AzureKustoDatabaseWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings AddIds(this AzureKustoDatabaseWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.AddRange(ids);
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Clears <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ClearIds(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IdsInternal.Clear();
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings RemoveIds(this AzureKustoDatabaseWaitSettings toolSettings, params string[] ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
+        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings RemoveIds(this AzureKustoDatabaseWaitSettings toolSettings, IEnumerable<string> ids)
+        {
+            toolSettings = toolSettings.NewInstance();
+            var hashSet = new HashSet<string>(ids);
+            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
+            return toolSettings;
+        }
+        #endregion
+        #region Name
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetName(this AzureKustoDatabaseWaitSettings toolSettings, string name)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = name;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Name"/></em></p>
+        ///   <p>The name of the database.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetName(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Name = null;
+            return toolSettings;
+        }
+        #endregion
+        #region ResourceGroup
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetResourceGroup(this AzureKustoDatabaseWaitSettings toolSettings, string resourceGroup)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = resourceGroup;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.ResourceGroup"/></em></p>
+        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetResourceGroup(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.ResourceGroup = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetSubscription(this AzureKustoDatabaseWaitSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetSubscription(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Created
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Created"/></em></p>
+        ///   <p>Wait until created with 'provisioningState' at 'Succeeded'.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetCreated(this AzureKustoDatabaseWaitSettings toolSettings, string created)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Created = created;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Created"/></em></p>
+        ///   <p>Wait until created with 'provisioningState' at 'Succeeded'.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetCreated(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Created = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Custom
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Custom"/></em></p>
+        ///   <p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetCustom(this AzureKustoDatabaseWaitSettings toolSettings, string custom)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Custom = custom;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Custom"/></em></p>
+        ///   <p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetCustom(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Custom = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Deleted
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Deleted"/></em></p>
+        ///   <p>Wait until deleted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetDeleted(this AzureKustoDatabaseWaitSettings toolSettings, string deleted)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Deleted = deleted;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Deleted"/></em></p>
+        ///   <p>Wait until deleted.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetDeleted(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Deleted = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Exists
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Exists"/></em></p>
+        ///   <p>Wait until the resource exists.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetExists(this AzureKustoDatabaseWaitSettings toolSettings, string exists)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exists = exists;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Exists"/></em></p>
+        ///   <p>Wait until the resource exists.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetExists(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Exists = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Interval
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Interval"/></em></p>
+        ///   <p>Polling interval in seconds.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetInterval(this AzureKustoDatabaseWaitSettings toolSettings, string interval)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = interval;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Interval"/></em></p>
+        ///   <p>Polling interval in seconds.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetInterval(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Interval = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Timeout
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Timeout"/></em></p>
+        ///   <p>Maximum wait in seconds.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetTimeout(this AzureKustoDatabaseWaitSettings toolSettings, string timeout)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = timeout;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Timeout"/></em></p>
+        ///   <p>Maximum wait in seconds.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetTimeout(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Timeout = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Updated
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Updated"/></em></p>
+        ///   <p>Wait until updated with provisioningState at 'Succeeded'.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetUpdated(this AzureKustoDatabaseWaitSettings toolSettings, string updated)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Updated = updated;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Updated"/></em></p>
+        ///   <p>Wait until updated with provisioningState at 'Succeeded'.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetUpdated(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Updated = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetDebug(this AzureKustoDatabaseWaitSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetDebug(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetHelp(this AzureKustoDatabaseWaitSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetHelp(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetOutput(this AzureKustoDatabaseWaitSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetOutput(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetQuery(this AzureKustoDatabaseWaitSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetQuery(this AzureKustoDatabaseWaitSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings SetVerbose(this AzureKustoDatabaseWaitSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureKustoDatabaseWaitSettings ResetVerbose(this AzureKustoDatabaseWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
@@ -4897,2160 +7051,6 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureKustoClusterWaitSettings ResetVerbose(this AzureKustoClusterWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKustoDatabaseCreateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKustoDatabaseCreateSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetClusterName(this AzureKustoDatabaseCreateSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetClusterName(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetName(this AzureKustoDatabaseCreateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetName(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetResourceGroup(this AzureKustoDatabaseCreateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetResourceGroup(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region HotCachePeriod
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.HotCachePeriod"/></em></p>
-        ///   <p>Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetHotCachePeriod(this AzureKustoDatabaseCreateSettings toolSettings, string hotCachePeriod)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HotCachePeriod = hotCachePeriod;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.HotCachePeriod"/></em></p>
-        ///   <p>Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetHotCachePeriod(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HotCachePeriod = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetNoWait(this AzureKustoDatabaseCreateSettings toolSettings, bool? noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetNoWait(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings EnableNoWait(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings DisableNoWait(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzureKustoDatabaseCreateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ToggleNoWait(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = !toolSettings.NoWait;
-            return toolSettings;
-        }
-        #endregion
-        #region SoftDeletePeriod
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.SoftDeletePeriod"/></em></p>
-        ///   <p>Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetSoftDeletePeriod(this AzureKustoDatabaseCreateSettings toolSettings, string softDeletePeriod)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SoftDeletePeriod = softDeletePeriod;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.SoftDeletePeriod"/></em></p>
-        ///   <p>Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetSoftDeletePeriod(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SoftDeletePeriod = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetSubscription(this AzureKustoDatabaseCreateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetSubscription(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetDebug(this AzureKustoDatabaseCreateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetDebug(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetHelp(this AzureKustoDatabaseCreateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetHelp(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetOutput(this AzureKustoDatabaseCreateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetOutput(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetQuery(this AzureKustoDatabaseCreateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetQuery(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings SetVerbose(this AzureKustoDatabaseCreateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseCreateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseCreateSettings ResetVerbose(this AzureKustoDatabaseCreateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKustoDatabaseDeleteSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKustoDatabaseDeleteSettingsExtensions
-    {
-        #region Yes
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Yes"/></em></p>
-        ///   <p>Do not prompt for confirmation.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetYes(this AzureKustoDatabaseDeleteSettings toolSettings, string yes)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = yes;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Yes"/></em></p>
-        ///   <p>Do not prompt for confirmation.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetYes(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Yes = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetClusterName(this AzureKustoDatabaseDeleteSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetClusterName(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetIds(this AzureKustoDatabaseDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetIds(this AzureKustoDatabaseDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings AddIds(this AzureKustoDatabaseDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings AddIds(this AzureKustoDatabaseDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ClearIds(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings RemoveIds(this AzureKustoDatabaseDeleteSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseDeleteSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings RemoveIds(this AzureKustoDatabaseDeleteSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetName(this AzureKustoDatabaseDeleteSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetName(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetResourceGroup(this AzureKustoDatabaseDeleteSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetResourceGroup(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetSubscription(this AzureKustoDatabaseDeleteSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetSubscription(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetDebug(this AzureKustoDatabaseDeleteSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetDebug(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetHelp(this AzureKustoDatabaseDeleteSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetHelp(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetOutput(this AzureKustoDatabaseDeleteSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetOutput(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetQuery(this AzureKustoDatabaseDeleteSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetQuery(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings SetVerbose(this AzureKustoDatabaseDeleteSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseDeleteSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseDeleteSettings ResetVerbose(this AzureKustoDatabaseDeleteSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKustoDatabaseListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKustoDatabaseListSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings SetClusterName(this AzureKustoDatabaseListSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings ResetClusterName(this AzureKustoDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings SetResourceGroup(this AzureKustoDatabaseListSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings ResetResourceGroup(this AzureKustoDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings SetSubscription(this AzureKustoDatabaseListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings ResetSubscription(this AzureKustoDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings SetDebug(this AzureKustoDatabaseListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings ResetDebug(this AzureKustoDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings SetHelp(this AzureKustoDatabaseListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings ResetHelp(this AzureKustoDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings SetOutput(this AzureKustoDatabaseListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings ResetOutput(this AzureKustoDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings SetQuery(this AzureKustoDatabaseListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings ResetQuery(this AzureKustoDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings SetVerbose(this AzureKustoDatabaseListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseListSettings ResetVerbose(this AzureKustoDatabaseListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKustoDatabaseShowSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKustoDatabaseShowSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetClusterName(this AzureKustoDatabaseShowSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ResetClusterName(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetIds(this AzureKustoDatabaseShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetIds(this AzureKustoDatabaseShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings AddIds(this AzureKustoDatabaseShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings AddIds(this AzureKustoDatabaseShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ClearIds(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings RemoveIds(this AzureKustoDatabaseShowSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseShowSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings RemoveIds(this AzureKustoDatabaseShowSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetName(this AzureKustoDatabaseShowSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ResetName(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetResourceGroup(this AzureKustoDatabaseShowSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ResetResourceGroup(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetSubscription(this AzureKustoDatabaseShowSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ResetSubscription(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetDebug(this AzureKustoDatabaseShowSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ResetDebug(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetHelp(this AzureKustoDatabaseShowSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ResetHelp(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetOutput(this AzureKustoDatabaseShowSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ResetOutput(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetQuery(this AzureKustoDatabaseShowSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ResetQuery(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings SetVerbose(this AzureKustoDatabaseShowSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseShowSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseShowSettings ResetVerbose(this AzureKustoDatabaseShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKustoDatabaseUpdateSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKustoDatabaseUpdateSettingsExtensions
-    {
-        #region SoftDeletePeriod
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.SoftDeletePeriod"/></em></p>
-        ///   <p>Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetSoftDeletePeriod(this AzureKustoDatabaseUpdateSettings toolSettings, string softDeletePeriod)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SoftDeletePeriod = softDeletePeriod;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.SoftDeletePeriod"/></em></p>
-        ///   <p>Amount of time that data should be kept so it is available to query. Duration in ISO8601 format (for example, 100 days would be P100D).</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetSoftDeletePeriod(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.SoftDeletePeriod = null;
-            return toolSettings;
-        }
-        #endregion
-        #region HotCachePeriod
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.HotCachePeriod"/></em></p>
-        ///   <p>Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetHotCachePeriod(this AzureKustoDatabaseUpdateSettings toolSettings, string hotCachePeriod)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HotCachePeriod = hotCachePeriod;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.HotCachePeriod"/></em></p>
-        ///   <p>Amount of time that data should be kept in cache.Duration in ISO8601 format (for example, 100 days would be P100D).</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetHotCachePeriod(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.HotCachePeriod = null;
-            return toolSettings;
-        }
-        #endregion
-        #region NoWait
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetNoWait(this AzureKustoDatabaseUpdateSettings toolSettings, bool? noWait)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = noWait;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetNoWait(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = null;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Enables <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings EnableNoWait(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = true;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Disables <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings DisableNoWait(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = false;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Toggles <see cref="AzureKustoDatabaseUpdateSettings.NoWait"/></em></p>
-        ///   <p>Do not wait for the long-running operation to finish.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ToggleNoWait(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.NoWait = !toolSettings.NoWait;
-            return toolSettings;
-        }
-        #endregion
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetClusterName(this AzureKustoDatabaseUpdateSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetClusterName(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetIds(this AzureKustoDatabaseUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetIds(this AzureKustoDatabaseUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings AddIds(this AzureKustoDatabaseUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings AddIds(this AzureKustoDatabaseUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ClearIds(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings RemoveIds(this AzureKustoDatabaseUpdateSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseUpdateSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings RemoveIds(this AzureKustoDatabaseUpdateSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetName(this AzureKustoDatabaseUpdateSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetName(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetResourceGroup(this AzureKustoDatabaseUpdateSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetResourceGroup(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetSubscription(this AzureKustoDatabaseUpdateSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetSubscription(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Add
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetAdd(this AzureKustoDatabaseUpdateSettings toolSettings, string add)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = add;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Add"/></em></p>
-        ///   <p>Add an object to a list of objects by specifying a path and key value pairs.  Example: --add property.listProperty &lt;key=value, string or JSON string&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetAdd(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Add = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ForceString
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetForceString(this AzureKustoDatabaseUpdateSettings toolSettings, string forceString)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = forceString;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.ForceString"/></em></p>
-        ///   <p>When using 'set' or 'add', preserve string literals instead of attempting to convert to JSON.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetForceString(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ForceString = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Remove
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetRemove(this AzureKustoDatabaseUpdateSettings toolSettings, string remove)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = remove;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Remove"/></em></p>
-        ///   <p>Remove a property or an element from a list.  Example: --remove property.list &lt;indexToRemove&gt; OR --remove propertyToRemove.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetRemove(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Remove = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Set
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetSet(this AzureKustoDatabaseUpdateSettings toolSettings, string set)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = set;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Set"/></em></p>
-        ///   <p>Update an object by specifying a property path and value to set.  Example: --set property1.property2=&lt;value&gt;.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetSet(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Set = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetDebug(this AzureKustoDatabaseUpdateSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetDebug(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetHelp(this AzureKustoDatabaseUpdateSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetHelp(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetOutput(this AzureKustoDatabaseUpdateSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetOutput(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetQuery(this AzureKustoDatabaseUpdateSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetQuery(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings SetVerbose(this AzureKustoDatabaseUpdateSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseUpdateSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseUpdateSettings ResetVerbose(this AzureKustoDatabaseUpdateSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureKustoDatabaseWaitSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureKustoTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureKustoDatabaseWaitSettingsExtensions
-    {
-        #region ClusterName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetClusterName(this AzureKustoDatabaseWaitSettings toolSettings, string clusterName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = clusterName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.ClusterName"/></em></p>
-        ///   <p>The name of the cluster.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetClusterName(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ClusterName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Ids
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetIds(this AzureKustoDatabaseWaitSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Ids"/> to a new list</em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetIds(this AzureKustoDatabaseWaitSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal = ids.ToList();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings AddIds(this AzureKustoDatabaseWaitSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Adds values to <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings AddIds(this AzureKustoDatabaseWaitSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.AddRange(ids);
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Clears <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ClearIds(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IdsInternal.Clear();
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings RemoveIds(this AzureKustoDatabaseWaitSettings toolSettings, params string[] ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Removes values from <see cref="AzureKustoDatabaseWaitSettings.Ids"/></em></p>
-        ///   <p>One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings RemoveIds(this AzureKustoDatabaseWaitSettings toolSettings, IEnumerable<string> ids)
-        {
-            toolSettings = toolSettings.NewInstance();
-            var hashSet = new HashSet<string>(ids);
-            toolSettings.IdsInternal.RemoveAll(x => hashSet.Contains(x));
-            return toolSettings;
-        }
-        #endregion
-        #region Name
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetName(this AzureKustoDatabaseWaitSettings toolSettings, string name)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = name;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Name"/></em></p>
-        ///   <p>The name of the database.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetName(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Name = null;
-            return toolSettings;
-        }
-        #endregion
-        #region ResourceGroup
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetResourceGroup(this AzureKustoDatabaseWaitSettings toolSettings, string resourceGroup)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = resourceGroup;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.ResourceGroup"/></em></p>
-        ///   <p>Name of resource group. You can configure the default group using `az configure --defaults group=&amp;lt;name&amp;gt;`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetResourceGroup(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.ResourceGroup = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetSubscription(this AzureKustoDatabaseWaitSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetSubscription(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Created
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Created"/></em></p>
-        ///   <p>Wait until created with 'provisioningState' at 'Succeeded'.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetCreated(this AzureKustoDatabaseWaitSettings toolSettings, string created)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Created = created;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Created"/></em></p>
-        ///   <p>Wait until created with 'provisioningState' at 'Succeeded'.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetCreated(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Created = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Custom
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Custom"/></em></p>
-        ///   <p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetCustom(this AzureKustoDatabaseWaitSettings toolSettings, string custom)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Custom = custom;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Custom"/></em></p>
-        ///   <p>Wait until the condition satisfies a custom JMESPath query. E.g. provisioningState!='InProgress', instanceView.statuses[?code=='PowerState/running'].</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetCustom(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Custom = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Deleted
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Deleted"/></em></p>
-        ///   <p>Wait until deleted.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetDeleted(this AzureKustoDatabaseWaitSettings toolSettings, string deleted)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Deleted = deleted;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Deleted"/></em></p>
-        ///   <p>Wait until deleted.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetDeleted(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Deleted = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Exists
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Exists"/></em></p>
-        ///   <p>Wait until the resource exists.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetExists(this AzureKustoDatabaseWaitSettings toolSettings, string exists)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Exists = exists;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Exists"/></em></p>
-        ///   <p>Wait until the resource exists.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetExists(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Exists = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Interval
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Interval"/></em></p>
-        ///   <p>Polling interval in seconds.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetInterval(this AzureKustoDatabaseWaitSettings toolSettings, string interval)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Interval = interval;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Interval"/></em></p>
-        ///   <p>Polling interval in seconds.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetInterval(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Interval = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Timeout
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Timeout"/></em></p>
-        ///   <p>Maximum wait in seconds.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetTimeout(this AzureKustoDatabaseWaitSettings toolSettings, string timeout)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = timeout;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Timeout"/></em></p>
-        ///   <p>Maximum wait in seconds.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetTimeout(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Timeout = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Updated
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Updated"/></em></p>
-        ///   <p>Wait until updated with provisioningState at 'Succeeded'.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetUpdated(this AzureKustoDatabaseWaitSettings toolSettings, string updated)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Updated = updated;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Updated"/></em></p>
-        ///   <p>Wait until updated with provisioningState at 'Succeeded'.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetUpdated(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Updated = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetDebug(this AzureKustoDatabaseWaitSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetDebug(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetHelp(this AzureKustoDatabaseWaitSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetHelp(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetOutput(this AzureKustoDatabaseWaitSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetOutput(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetQuery(this AzureKustoDatabaseWaitSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetQuery(this AzureKustoDatabaseWaitSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureKustoDatabaseWaitSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings SetVerbose(this AzureKustoDatabaseWaitSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureKustoDatabaseWaitSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureKustoDatabaseWaitSettings ResetVerbose(this AzureKustoDatabaseWaitSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;

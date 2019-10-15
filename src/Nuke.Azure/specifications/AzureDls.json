@@ -1,13 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/nuke-build/common/master/source/Nuke.CodeGeneration/schema.json",
   "references": [
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/account.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/fs.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/account/firewall.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/account/network-rule.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
-    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/a771b9ef9/latest/docs-ref-autogen/dls/fs/access.yml"
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/dls.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/dls/account.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/dls/fs.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/dls/account/network-rule.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/dls/account/trusted-provider.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/dls/account/firewall.yml",
+    "https://raw.githubusercontent.com/Azure/azure-docs-cli-python/b42ce2647/latest/docs-ref-autogen/dls/fs/access.yml"
   ],
   "name": "AzureDls",
   "officialUrl": "https://docs.microsoft.com/en-us/cli/azure/dls?view=azure-cli-latest",
@@ -979,239 +979,6 @@
       }
     },
     {
-      "postfix": "AccountFirewallCreate",
-      "definiteArgument": "dls account firewall create",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "secret": false,
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "EndIpAddress",
-            "type": "string",
-            "format": "--end-ip-address {value}",
-            "secret": false,
-            "help": "The end of the valid ip range for the firewall rule."
-          },
-          {
-            "name": "FirewallRuleName",
-            "type": "string",
-            "format": "--firewall-rule-name {value}",
-            "secret": false,
-            "help": "The name of the firewall rule."
-          },
-          {
-            "name": "StartIpAddress",
-            "type": "string",
-            "format": "--start-ip-address {value}",
-            "secret": false,
-            "help": "The start of the valid ip range for the firewall rule."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountFirewallDelete",
-      "definiteArgument": "dls account firewall delete",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FirewallRuleName",
-            "type": "string",
-            "format": "--firewall-rule-name {value}",
-            "secret": false,
-            "help": "The name of the firewall rule to delete."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          },
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "secret": false,
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountFirewallList",
-      "definiteArgument": "dls account firewall list",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          },
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "secret": false,
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountFirewallShow",
-      "definiteArgument": "dls account firewall show",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FirewallRuleName",
-            "type": "string",
-            "format": "--firewall-rule-name {value}",
-            "secret": false,
-            "help": "The name of the firewall rule to retrieve."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          },
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "secret": false,
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
-      "postfix": "AccountFirewallUpdate",
-      "definiteArgument": "dls account firewall update",
-      "settingsClass": {
-        "properties": [
-          {
-            "name": "FirewallRuleName",
-            "type": "string",
-            "format": "--firewall-rule-name {value}",
-            "secret": false,
-            "help": "The name of the firewall rule to update."
-          },
-          {
-            "name": "EndIpAddress",
-            "type": "string",
-            "format": "--end-ip-address {value}",
-            "secret": false,
-            "help": "The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
-          },
-          {
-            "name": "ResourceGroup",
-            "type": "string",
-            "format": "--resource-group {value}",
-            "secret": false,
-            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
-          },
-          {
-            "name": "StartIpAddress",
-            "type": "string",
-            "format": "--start-ip-address {value}",
-            "secret": false,
-            "help": "The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
-          },
-          {
-            "name": "Account",
-            "type": "string",
-            "format": "--account {value}",
-            "secret": false,
-            "help": "Name of the Data Lake Store account."
-          },
-          {
-            "name": "Ids",
-            "type": "List<string>",
-            "format": "--ids {value}",
-            "separator": " ",
-            "secret": false,
-            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
-          },
-          {
-            "name": "Subscription",
-            "type": "string",
-            "format": "--subscription {value}",
-            "secret": false,
-            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
-          }
-        ]
-      }
-    },
-    {
       "postfix": "AccountNetworkRuleCreate",
       "definiteArgument": "dls account network-rule create",
       "settingsClass": {
@@ -1657,6 +1424,239 @@
             "format": "--resource-group {value}",
             "secret": false,
             "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallCreate",
+      "definiteArgument": "dls account firewall create",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "EndIpAddress",
+            "type": "string",
+            "format": "--end-ip-address {value}",
+            "secret": false,
+            "help": "The end of the valid ip range for the firewall rule."
+          },
+          {
+            "name": "FirewallRuleName",
+            "type": "string",
+            "format": "--firewall-rule-name {value}",
+            "secret": false,
+            "help": "The name of the firewall rule."
+          },
+          {
+            "name": "StartIpAddress",
+            "type": "string",
+            "format": "--start-ip-address {value}",
+            "secret": false,
+            "help": "The start of the valid ip range for the firewall rule."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallDelete",
+      "definiteArgument": "dls account firewall delete",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FirewallRuleName",
+            "type": "string",
+            "format": "--firewall-rule-name {value}",
+            "secret": false,
+            "help": "The name of the firewall rule to delete."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallList",
+      "definiteArgument": "dls account firewall list",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallShow",
+      "definiteArgument": "dls account firewall show",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FirewallRuleName",
+            "type": "string",
+            "format": "--firewall-rule-name {value}",
+            "secret": false,
+            "help": "The name of the firewall rule to retrieve."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "Account",
+            "type": "string",
+            "format": "--account {value}",
+            "secret": false,
+            "help": "Name of the Data Lake Store account."
+          },
+          {
+            "name": "Ids",
+            "type": "List<string>",
+            "format": "--ids {value}",
+            "separator": " ",
+            "secret": false,
+            "help": "One or more resource IDs (space-delimited). If provided, no other 'Resource Id' arguments should be specified."
+          },
+          {
+            "name": "Subscription",
+            "type": "string",
+            "format": "--subscription {value}",
+            "secret": false,
+            "help": "Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`."
+          }
+        ]
+      }
+    },
+    {
+      "postfix": "AccountFirewallUpdate",
+      "definiteArgument": "dls account firewall update",
+      "settingsClass": {
+        "properties": [
+          {
+            "name": "FirewallRuleName",
+            "type": "string",
+            "format": "--firewall-rule-name {value}",
+            "secret": false,
+            "help": "The name of the firewall rule to update."
+          },
+          {
+            "name": "EndIpAddress",
+            "type": "string",
+            "format": "--end-ip-address {value}",
+            "secret": false,
+            "help": "The end IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
+          },
+          {
+            "name": "ResourceGroup",
+            "type": "string",
+            "format": "--resource-group {value}",
+            "secret": false,
+            "help": "If not specified, will attempt to discover the resource group for the specified Data Lake Store account."
+          },
+          {
+            "name": "StartIpAddress",
+            "type": "string",
+            "format": "--start-ip-address {value}",
+            "secret": false,
+            "help": "The start IP address for the firewall rule. This can be either ipv4 or ipv6. Start and End should be in the same protocol."
           },
           {
             "name": "Account",

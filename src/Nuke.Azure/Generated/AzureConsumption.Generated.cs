@@ -1,5 +1,5 @@
 // Generated from https://github.com/nuke-build/azure/blob/master/src/Nuke.Azure/specifications/AzureConsumption.json
-// Generated with Nuke.CodeGeneration version 0.20.1 (Windows,.NETStandard,Version=v2.0)
+// Generated with Nuke.CodeGeneration version 0.20.1 (OSX,.NETStandard,Version=v2.0)
 
 using JetBrains.Annotations;
 using Newtonsoft.Json;
@@ -316,6 +316,114 @@ namespace Nuke.Azure
         ///   <p>Manage consumption of Azure resources.</p>
         ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
         /// </summary>
+        public static IReadOnlyCollection<Output> AzureConsumptionReservation(AzureConsumptionReservationSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureConsumptionReservationSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage consumption of Azure resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureConsumptionReservationSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureConsumptionReservationSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureConsumptionReservationSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureConsumptionReservationSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureConsumptionReservationSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureConsumptionReservation(Configure<AzureConsumptionReservationSettings> configurator)
+        {
+            return AzureConsumptionReservation(configurator(new AzureConsumptionReservationSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage consumption of Azure resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--debug</c> via <see cref="AzureConsumptionReservationSettings.Debug"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureConsumptionReservationSettings.Help"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureConsumptionReservationSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureConsumptionReservationSettings.Query"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureConsumptionReservationSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureConsumptionReservationSettings Settings, IReadOnlyCollection<Output> Output)> AzureConsumptionReservation(CombinatorialConfigure<AzureConsumptionReservationSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureConsumptionReservation, AzureConsumptionLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage consumption of Azure resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        public static IReadOnlyCollection<Output> AzureConsumptionUsageList(AzureConsumptionUsageListSettings toolSettings = null)
+        {
+            toolSettings = toolSettings ?? new AzureConsumptionUsageListSettings();
+            var process = ProcessTasks.StartProcess(toolSettings);
+            process.AssertZeroExitCode();
+            return process.Output;
+        }
+        /// <summary>
+        ///   <p>Manage consumption of Azure resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--billing-period-name</c> via <see cref="AzureConsumptionUsageListSettings.BillingPeriodName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureConsumptionUsageListSettings.Debug"/></li>
+        ///     <li><c>--end-date</c> via <see cref="AzureConsumptionUsageListSettings.EndDate"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureConsumptionUsageListSettings.Help"/></li>
+        ///     <li><c>--include-additional-properties</c> via <see cref="AzureConsumptionUsageListSettings.IncludeAdditionalProperties"/></li>
+        ///     <li><c>--include-meter-details</c> via <see cref="AzureConsumptionUsageListSettings.IncludeMeterDetails"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureConsumptionUsageListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureConsumptionUsageListSettings.Query"/></li>
+        ///     <li><c>--start-date</c> via <see cref="AzureConsumptionUsageListSettings.StartDate"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureConsumptionUsageListSettings.Subscription"/></li>
+        ///     <li><c>--top</c> via <see cref="AzureConsumptionUsageListSettings.Top"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureConsumptionUsageListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IReadOnlyCollection<Output> AzureConsumptionUsageList(Configure<AzureConsumptionUsageListSettings> configurator)
+        {
+            return AzureConsumptionUsageList(configurator(new AzureConsumptionUsageListSettings()));
+        }
+        /// <summary>
+        ///   <p>Manage consumption of Azure resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
+        /// <remarks>
+        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
+        ///   <ul>
+        ///     <li><c>--billing-period-name</c> via <see cref="AzureConsumptionUsageListSettings.BillingPeriodName"/></li>
+        ///     <li><c>--debug</c> via <see cref="AzureConsumptionUsageListSettings.Debug"/></li>
+        ///     <li><c>--end-date</c> via <see cref="AzureConsumptionUsageListSettings.EndDate"/></li>
+        ///     <li><c>--help</c> via <see cref="AzureConsumptionUsageListSettings.Help"/></li>
+        ///     <li><c>--include-additional-properties</c> via <see cref="AzureConsumptionUsageListSettings.IncludeAdditionalProperties"/></li>
+        ///     <li><c>--include-meter-details</c> via <see cref="AzureConsumptionUsageListSettings.IncludeMeterDetails"/></li>
+        ///     <li><c>--output</c> via <see cref="AzureConsumptionUsageListSettings.Output"/></li>
+        ///     <li><c>--query</c> via <see cref="AzureConsumptionUsageListSettings.Query"/></li>
+        ///     <li><c>--start-date</c> via <see cref="AzureConsumptionUsageListSettings.StartDate"/></li>
+        ///     <li><c>--subscription</c> via <see cref="AzureConsumptionUsageListSettings.Subscription"/></li>
+        ///     <li><c>--top</c> via <see cref="AzureConsumptionUsageListSettings.Top"/></li>
+        ///     <li><c>--verbose</c> via <see cref="AzureConsumptionUsageListSettings.Verbose"/></li>
+        ///   </ul>
+        /// </remarks>
+        public static IEnumerable<(AzureConsumptionUsageListSettings Settings, IReadOnlyCollection<Output> Output)> AzureConsumptionUsageList(CombinatorialConfigure<AzureConsumptionUsageListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
+        {
+            return configurator.Invoke(AzureConsumptionUsageList, AzureConsumptionLogger, degreeOfParallelism, completeOnFailure);
+        }
+        /// <summary>
+        ///   <p>Manage consumption of Azure resources.</p>
+        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
+        /// </summary>
         public static IReadOnlyCollection<Output> AzureConsumptionMarketplaceList(AzureConsumptionMarketplaceListSettings toolSettings = null)
         {
             toolSettings = toolSettings ?? new AzureConsumptionMarketplaceListSettings();
@@ -421,114 +529,6 @@ namespace Nuke.Azure
         public static IEnumerable<(AzureConsumptionPricesheetShowSettings Settings, IReadOnlyCollection<Output> Output)> AzureConsumptionPricesheetShow(CombinatorialConfigure<AzureConsumptionPricesheetShowSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
         {
             return configurator.Invoke(AzureConsumptionPricesheetShow, AzureConsumptionLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage consumption of Azure resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureConsumptionReservation(AzureConsumptionReservationSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureConsumptionReservationSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage consumption of Azure resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureConsumptionReservationSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureConsumptionReservationSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureConsumptionReservationSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureConsumptionReservationSettings.Query"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureConsumptionReservationSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureConsumptionReservation(Configure<AzureConsumptionReservationSettings> configurator)
-        {
-            return AzureConsumptionReservation(configurator(new AzureConsumptionReservationSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage consumption of Azure resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--debug</c> via <see cref="AzureConsumptionReservationSettings.Debug"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureConsumptionReservationSettings.Help"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureConsumptionReservationSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureConsumptionReservationSettings.Query"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureConsumptionReservationSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureConsumptionReservationSettings Settings, IReadOnlyCollection<Output> Output)> AzureConsumptionReservation(CombinatorialConfigure<AzureConsumptionReservationSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureConsumptionReservation, AzureConsumptionLogger, degreeOfParallelism, completeOnFailure);
-        }
-        /// <summary>
-        ///   <p>Manage consumption of Azure resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        public static IReadOnlyCollection<Output> AzureConsumptionUsageList(AzureConsumptionUsageListSettings toolSettings = null)
-        {
-            toolSettings = toolSettings ?? new AzureConsumptionUsageListSettings();
-            var process = ProcessTasks.StartProcess(toolSettings);
-            process.AssertZeroExitCode();
-            return process.Output;
-        }
-        /// <summary>
-        ///   <p>Manage consumption of Azure resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--billing-period-name</c> via <see cref="AzureConsumptionUsageListSettings.BillingPeriodName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureConsumptionUsageListSettings.Debug"/></li>
-        ///     <li><c>--end-date</c> via <see cref="AzureConsumptionUsageListSettings.EndDate"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureConsumptionUsageListSettings.Help"/></li>
-        ///     <li><c>--include-additional-properties</c> via <see cref="AzureConsumptionUsageListSettings.IncludeAdditionalProperties"/></li>
-        ///     <li><c>--include-meter-details</c> via <see cref="AzureConsumptionUsageListSettings.IncludeMeterDetails"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureConsumptionUsageListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureConsumptionUsageListSettings.Query"/></li>
-        ///     <li><c>--start-date</c> via <see cref="AzureConsumptionUsageListSettings.StartDate"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureConsumptionUsageListSettings.Subscription"/></li>
-        ///     <li><c>--top</c> via <see cref="AzureConsumptionUsageListSettings.Top"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureConsumptionUsageListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IReadOnlyCollection<Output> AzureConsumptionUsageList(Configure<AzureConsumptionUsageListSettings> configurator)
-        {
-            return AzureConsumptionUsageList(configurator(new AzureConsumptionUsageListSettings()));
-        }
-        /// <summary>
-        ///   <p>Manage consumption of Azure resources.</p>
-        ///   <p>For more details, visit the <a href="https://docs.microsoft.com/en-us/cli/azure/consumption?view=azure-cli-latest">official website</a>.</p>
-        /// </summary>
-        /// <remarks>
-        ///   <p>This is a <a href="http://www.nuke.build/docs/authoring-builds/cli-tools.html#fluent-apis">CLI wrapper with fluent API</a> that allows to modify the following arguments:</p>
-        ///   <ul>
-        ///     <li><c>--billing-period-name</c> via <see cref="AzureConsumptionUsageListSettings.BillingPeriodName"/></li>
-        ///     <li><c>--debug</c> via <see cref="AzureConsumptionUsageListSettings.Debug"/></li>
-        ///     <li><c>--end-date</c> via <see cref="AzureConsumptionUsageListSettings.EndDate"/></li>
-        ///     <li><c>--help</c> via <see cref="AzureConsumptionUsageListSettings.Help"/></li>
-        ///     <li><c>--include-additional-properties</c> via <see cref="AzureConsumptionUsageListSettings.IncludeAdditionalProperties"/></li>
-        ///     <li><c>--include-meter-details</c> via <see cref="AzureConsumptionUsageListSettings.IncludeMeterDetails"/></li>
-        ///     <li><c>--output</c> via <see cref="AzureConsumptionUsageListSettings.Output"/></li>
-        ///     <li><c>--query</c> via <see cref="AzureConsumptionUsageListSettings.Query"/></li>
-        ///     <li><c>--start-date</c> via <see cref="AzureConsumptionUsageListSettings.StartDate"/></li>
-        ///     <li><c>--subscription</c> via <see cref="AzureConsumptionUsageListSettings.Subscription"/></li>
-        ///     <li><c>--top</c> via <see cref="AzureConsumptionUsageListSettings.Top"/></li>
-        ///     <li><c>--verbose</c> via <see cref="AzureConsumptionUsageListSettings.Verbose"/></li>
-        ///   </ul>
-        /// </remarks>
-        public static IEnumerable<(AzureConsumptionUsageListSettings Settings, IReadOnlyCollection<Output> Output)> AzureConsumptionUsageList(CombinatorialConfigure<AzureConsumptionUsageListSettings> configurator, int degreeOfParallelism = 1, bool completeOnFailure = false)
-        {
-            return configurator.Invoke(AzureConsumptionUsageList, AzureConsumptionLogger, degreeOfParallelism, completeOnFailure);
         }
         /// <summary>
         ///   <p>Manage consumption of Azure resources.</p>
@@ -980,6 +980,135 @@ namespace Nuke.Azure
         }
     }
     #endregion
+    #region AzureConsumptionReservationSettings
+    /// <summary>
+    ///   Used within <see cref="AzureConsumptionTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureConsumptionReservationSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureConsumption executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureConsumptionTasks.AzureConsumptionPath;
+        public override Action<OutputType, string> CustomLogger => AzureConsumptionTasks.AzureConsumptionLogger;
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("consumption reservation")
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
+    #region AzureConsumptionUsageListSettings
+    /// <summary>
+    ///   Used within <see cref="AzureConsumptionTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    [Serializable]
+    public partial class AzureConsumptionUsageListSettings : ToolSettings
+    {
+        /// <summary>
+        ///   Path to the AzureConsumption executable.
+        /// </summary>
+        public override string ToolPath => base.ToolPath ?? AzureConsumptionTasks.AzureConsumptionPath;
+        public override Action<OutputType, string> CustomLogger => AzureConsumptionTasks.AzureConsumptionLogger;
+        /// <summary>
+        ///   Name of the billing period to get the usage details that associate with.
+        /// </summary>
+        public virtual string BillingPeriodName { get; internal set; }
+        /// <summary>
+        ///   End date (YYYY-MM-DD in UTC). If specified, also requires --start-date.
+        /// </summary>
+        public virtual string EndDate { get; internal set; }
+        /// <summary>
+        ///   Include additional properties in the usages.
+        /// </summary>
+        public virtual string IncludeAdditionalProperties { get; internal set; }
+        /// <summary>
+        ///   Include meter details in the usages.
+        /// </summary>
+        public virtual string IncludeMeterDetails { get; internal set; }
+        /// <summary>
+        ///   Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date.
+        /// </summary>
+        public virtual string StartDate { get; internal set; }
+        /// <summary>
+        ///   Maximum number of items to return. Value range: 1-1000.
+        /// </summary>
+        public virtual int? Top { get; internal set; }
+        /// <summary>
+        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
+        /// </summary>
+        public virtual string Subscription { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity to show all debug logs.
+        /// </summary>
+        public virtual string Debug { get; internal set; }
+        /// <summary>
+        ///   Show this help message and exit.
+        /// </summary>
+        public virtual string Help { get; internal set; }
+        /// <summary>
+        ///   Output format.
+        /// </summary>
+        public virtual AzureOutput Output { get; internal set; }
+        /// <summary>
+        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
+        /// </summary>
+        public virtual string Query { get; internal set; }
+        /// <summary>
+        ///   Increase logging verbosity. Use --debug for full debug logs.
+        /// </summary>
+        public virtual string Verbose { get; internal set; }
+        protected override Arguments ConfigureArguments(Arguments arguments)
+        {
+            arguments
+              .Add("consumption usage list")
+              .Add("--billing-period-name {value}", BillingPeriodName)
+              .Add("--end-date {value}", EndDate)
+              .Add("--include-additional-properties {value}", IncludeAdditionalProperties)
+              .Add("--include-meter-details {value}", IncludeMeterDetails)
+              .Add("--start-date {value}", StartDate)
+              .Add("--top {value}", Top)
+              .Add("--subscription {value}", Subscription)
+              .Add("--debug {value}", Debug)
+              .Add("--help {value}", Help)
+              .Add("--output {value}", Output)
+              .Add("--query {value}", Query)
+              .Add("--verbose {value}", Verbose);
+            return base.ConfigureArguments(arguments);
+        }
+    }
+    #endregion
     #region AzureConsumptionMarketplaceListSettings
     /// <summary>
     ///   Used within <see cref="AzureConsumptionTasks"/>.
@@ -1104,135 +1233,6 @@ namespace Nuke.Azure
               .Add("consumption pricesheet show")
               .Add("--billing-period-name {value}", BillingPeriodName)
               .Add("--include-meter-details {value}", IncludeMeterDetails)
-              .Add("--subscription {value}", Subscription)
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureConsumptionReservationSettings
-    /// <summary>
-    ///   Used within <see cref="AzureConsumptionTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureConsumptionReservationSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureConsumption executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureConsumptionTasks.AzureConsumptionPath;
-        public override Action<OutputType, string> CustomLogger => AzureConsumptionTasks.AzureConsumptionLogger;
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("consumption reservation")
-              .Add("--debug {value}", Debug)
-              .Add("--help {value}", Help)
-              .Add("--output {value}", Output)
-              .Add("--query {value}", Query)
-              .Add("--verbose {value}", Verbose);
-            return base.ConfigureArguments(arguments);
-        }
-    }
-    #endregion
-    #region AzureConsumptionUsageListSettings
-    /// <summary>
-    ///   Used within <see cref="AzureConsumptionTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    [Serializable]
-    public partial class AzureConsumptionUsageListSettings : ToolSettings
-    {
-        /// <summary>
-        ///   Path to the AzureConsumption executable.
-        /// </summary>
-        public override string ToolPath => base.ToolPath ?? AzureConsumptionTasks.AzureConsumptionPath;
-        public override Action<OutputType, string> CustomLogger => AzureConsumptionTasks.AzureConsumptionLogger;
-        /// <summary>
-        ///   Name of the billing period to get the usage details that associate with.
-        /// </summary>
-        public virtual string BillingPeriodName { get; internal set; }
-        /// <summary>
-        ///   End date (YYYY-MM-DD in UTC). If specified, also requires --start-date.
-        /// </summary>
-        public virtual string EndDate { get; internal set; }
-        /// <summary>
-        ///   Include additional properties in the usages.
-        /// </summary>
-        public virtual string IncludeAdditionalProperties { get; internal set; }
-        /// <summary>
-        ///   Include meter details in the usages.
-        /// </summary>
-        public virtual string IncludeMeterDetails { get; internal set; }
-        /// <summary>
-        ///   Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date.
-        /// </summary>
-        public virtual string StartDate { get; internal set; }
-        /// <summary>
-        ///   Maximum number of items to return. Value range: 1-1000.
-        /// </summary>
-        public virtual int? Top { get; internal set; }
-        /// <summary>
-        ///   Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.
-        /// </summary>
-        public virtual string Subscription { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity to show all debug logs.
-        /// </summary>
-        public virtual string Debug { get; internal set; }
-        /// <summary>
-        ///   Show this help message and exit.
-        /// </summary>
-        public virtual string Help { get; internal set; }
-        /// <summary>
-        ///   Output format.
-        /// </summary>
-        public virtual AzureOutput Output { get; internal set; }
-        /// <summary>
-        ///   JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.
-        /// </summary>
-        public virtual string Query { get; internal set; }
-        /// <summary>
-        ///   Increase logging verbosity. Use --debug for full debug logs.
-        /// </summary>
-        public virtual string Verbose { get; internal set; }
-        protected override Arguments ConfigureArguments(Arguments arguments)
-        {
-            arguments
-              .Add("consumption usage list")
-              .Add("--billing-period-name {value}", BillingPeriodName)
-              .Add("--end-date {value}", EndDate)
-              .Add("--include-additional-properties {value}", IncludeAdditionalProperties)
-              .Add("--include-meter-details {value}", IncludeMeterDetails)
-              .Add("--start-date {value}", StartDate)
-              .Add("--top {value}", Top)
               .Add("--subscription {value}", Subscription)
               .Add("--debug {value}", Debug)
               .Add("--help {value}", Help)
@@ -2669,6 +2669,434 @@ namespace Nuke.Azure
         #endregion
     }
     #endregion
+    #region AzureConsumptionReservationSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureConsumptionTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureConsumptionReservationSettingsExtensions
+    {
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings SetDebug(this AzureConsumptionReservationSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings ResetDebug(this AzureConsumptionReservationSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings SetHelp(this AzureConsumptionReservationSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings ResetHelp(this AzureConsumptionReservationSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings SetOutput(this AzureConsumptionReservationSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings ResetOutput(this AzureConsumptionReservationSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings SetQuery(this AzureConsumptionReservationSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings ResetQuery(this AzureConsumptionReservationSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings SetVerbose(this AzureConsumptionReservationSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionReservationSettings ResetVerbose(this AzureConsumptionReservationSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
+    #region AzureConsumptionUsageListSettingsExtensions
+    /// <summary>
+    ///   Used within <see cref="AzureConsumptionTasks"/>.
+    /// </summary>
+    [PublicAPI]
+    [ExcludeFromCodeCoverage]
+    public static partial class AzureConsumptionUsageListSettingsExtensions
+    {
+        #region BillingPeriodName
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.BillingPeriodName"/></em></p>
+        ///   <p>Name of the billing period to get the usage details that associate with.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetBillingPeriodName(this AzureConsumptionUsageListSettings toolSettings, string billingPeriodName)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BillingPeriodName = billingPeriodName;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.BillingPeriodName"/></em></p>
+        ///   <p>Name of the billing period to get the usage details that associate with.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetBillingPeriodName(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.BillingPeriodName = null;
+            return toolSettings;
+        }
+        #endregion
+        #region EndDate
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.EndDate"/></em></p>
+        ///   <p>End date (YYYY-MM-DD in UTC). If specified, also requires --start-date.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetEndDate(this AzureConsumptionUsageListSettings toolSettings, string endDate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndDate = endDate;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.EndDate"/></em></p>
+        ///   <p>End date (YYYY-MM-DD in UTC). If specified, also requires --start-date.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetEndDate(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.EndDate = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IncludeAdditionalProperties
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.IncludeAdditionalProperties"/></em></p>
+        ///   <p>Include additional properties in the usages.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetIncludeAdditionalProperties(this AzureConsumptionUsageListSettings toolSettings, string includeAdditionalProperties)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IncludeAdditionalProperties = includeAdditionalProperties;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.IncludeAdditionalProperties"/></em></p>
+        ///   <p>Include additional properties in the usages.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetIncludeAdditionalProperties(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IncludeAdditionalProperties = null;
+            return toolSettings;
+        }
+        #endregion
+        #region IncludeMeterDetails
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.IncludeMeterDetails"/></em></p>
+        ///   <p>Include meter details in the usages.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetIncludeMeterDetails(this AzureConsumptionUsageListSettings toolSettings, string includeMeterDetails)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IncludeMeterDetails = includeMeterDetails;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.IncludeMeterDetails"/></em></p>
+        ///   <p>Include meter details in the usages.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetIncludeMeterDetails(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.IncludeMeterDetails = null;
+            return toolSettings;
+        }
+        #endregion
+        #region StartDate
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.StartDate"/></em></p>
+        ///   <p>Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetStartDate(this AzureConsumptionUsageListSettings toolSettings, string startDate)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartDate = startDate;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.StartDate"/></em></p>
+        ///   <p>Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetStartDate(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.StartDate = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Top
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Top"/></em></p>
+        ///   <p>Maximum number of items to return. Value range: 1-1000.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetTop(this AzureConsumptionUsageListSettings toolSettings, int? top)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = top;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Top"/></em></p>
+        ///   <p>Maximum number of items to return. Value range: 1-1000.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetTop(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Top = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Subscription
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetSubscription(this AzureConsumptionUsageListSettings toolSettings, string subscription)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = subscription;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Subscription"/></em></p>
+        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetSubscription(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Subscription = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Debug
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetDebug(this AzureConsumptionUsageListSettings toolSettings, string debug)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = debug;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Debug"/></em></p>
+        ///   <p>Increase logging verbosity to show all debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetDebug(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Debug = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Help
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetHelp(this AzureConsumptionUsageListSettings toolSettings, string help)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = help;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Help"/></em></p>
+        ///   <p>Show this help message and exit.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetHelp(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Help = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Output
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetOutput(this AzureConsumptionUsageListSettings toolSettings, AzureOutput output)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = output;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Output"/></em></p>
+        ///   <p>Output format.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetOutput(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Output = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Query
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetQuery(this AzureConsumptionUsageListSettings toolSettings, string query)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = query;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Query"/></em></p>
+        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetQuery(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Query = null;
+            return toolSettings;
+        }
+        #endregion
+        #region Verbose
+        /// <summary>
+        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings SetVerbose(this AzureConsumptionUsageListSettings toolSettings, string verbose)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = verbose;
+            return toolSettings;
+        }
+        /// <summary>
+        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Verbose"/></em></p>
+        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
+        /// </summary>
+        [Pure]
+        public static AzureConsumptionUsageListSettings ResetVerbose(this AzureConsumptionUsageListSettings toolSettings)
+        {
+            toolSettings = toolSettings.NewInstance();
+            toolSettings.Verbose = null;
+            return toolSettings;
+        }
+        #endregion
+    }
+    #endregion
     #region AzureConsumptionMarketplaceListSettingsExtensions
     /// <summary>
     ///   Used within <see cref="AzureConsumptionTasks"/>.
@@ -3113,434 +3541,6 @@ namespace Nuke.Azure
         /// </summary>
         [Pure]
         public static AzureConsumptionPricesheetShowSettings ResetVerbose(this AzureConsumptionPricesheetShowSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureConsumptionReservationSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureConsumptionTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureConsumptionReservationSettingsExtensions
-    {
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings SetDebug(this AzureConsumptionReservationSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings ResetDebug(this AzureConsumptionReservationSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings SetHelp(this AzureConsumptionReservationSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings ResetHelp(this AzureConsumptionReservationSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings SetOutput(this AzureConsumptionReservationSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings ResetOutput(this AzureConsumptionReservationSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings SetQuery(this AzureConsumptionReservationSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings ResetQuery(this AzureConsumptionReservationSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionReservationSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings SetVerbose(this AzureConsumptionReservationSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionReservationSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionReservationSettings ResetVerbose(this AzureConsumptionReservationSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = null;
-            return toolSettings;
-        }
-        #endregion
-    }
-    #endregion
-    #region AzureConsumptionUsageListSettingsExtensions
-    /// <summary>
-    ///   Used within <see cref="AzureConsumptionTasks"/>.
-    /// </summary>
-    [PublicAPI]
-    [ExcludeFromCodeCoverage]
-    public static partial class AzureConsumptionUsageListSettingsExtensions
-    {
-        #region BillingPeriodName
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.BillingPeriodName"/></em></p>
-        ///   <p>Name of the billing period to get the usage details that associate with.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetBillingPeriodName(this AzureConsumptionUsageListSettings toolSettings, string billingPeriodName)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BillingPeriodName = billingPeriodName;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.BillingPeriodName"/></em></p>
-        ///   <p>Name of the billing period to get the usage details that associate with.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetBillingPeriodName(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.BillingPeriodName = null;
-            return toolSettings;
-        }
-        #endregion
-        #region EndDate
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.EndDate"/></em></p>
-        ///   <p>End date (YYYY-MM-DD in UTC). If specified, also requires --start-date.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetEndDate(this AzureConsumptionUsageListSettings toolSettings, string endDate)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndDate = endDate;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.EndDate"/></em></p>
-        ///   <p>End date (YYYY-MM-DD in UTC). If specified, also requires --start-date.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetEndDate(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.EndDate = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IncludeAdditionalProperties
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.IncludeAdditionalProperties"/></em></p>
-        ///   <p>Include additional properties in the usages.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetIncludeAdditionalProperties(this AzureConsumptionUsageListSettings toolSettings, string includeAdditionalProperties)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IncludeAdditionalProperties = includeAdditionalProperties;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.IncludeAdditionalProperties"/></em></p>
-        ///   <p>Include additional properties in the usages.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetIncludeAdditionalProperties(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IncludeAdditionalProperties = null;
-            return toolSettings;
-        }
-        #endregion
-        #region IncludeMeterDetails
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.IncludeMeterDetails"/></em></p>
-        ///   <p>Include meter details in the usages.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetIncludeMeterDetails(this AzureConsumptionUsageListSettings toolSettings, string includeMeterDetails)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IncludeMeterDetails = includeMeterDetails;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.IncludeMeterDetails"/></em></p>
-        ///   <p>Include meter details in the usages.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetIncludeMeterDetails(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.IncludeMeterDetails = null;
-            return toolSettings;
-        }
-        #endregion
-        #region StartDate
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.StartDate"/></em></p>
-        ///   <p>Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetStartDate(this AzureConsumptionUsageListSettings toolSettings, string startDate)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartDate = startDate;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.StartDate"/></em></p>
-        ///   <p>Start date (YYYY-MM-DD in UTC). If specified, also requires --end-date.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetStartDate(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.StartDate = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Top
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Top"/></em></p>
-        ///   <p>Maximum number of items to return. Value range: 1-1000.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetTop(this AzureConsumptionUsageListSettings toolSettings, int? top)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = top;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Top"/></em></p>
-        ///   <p>Maximum number of items to return. Value range: 1-1000.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetTop(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Top = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Subscription
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetSubscription(this AzureConsumptionUsageListSettings toolSettings, string subscription)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = subscription;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Subscription"/></em></p>
-        ///   <p>Name or ID of subscription. You can configure the default subscription using `az account set -s NAME_OR_ID`.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetSubscription(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Subscription = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Debug
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetDebug(this AzureConsumptionUsageListSettings toolSettings, string debug)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = debug;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Debug"/></em></p>
-        ///   <p>Increase logging verbosity to show all debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetDebug(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Debug = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Help
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetHelp(this AzureConsumptionUsageListSettings toolSettings, string help)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = help;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Help"/></em></p>
-        ///   <p>Show this help message and exit.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetHelp(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Help = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Output
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetOutput(this AzureConsumptionUsageListSettings toolSettings, AzureOutput output)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = output;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Output"/></em></p>
-        ///   <p>Output format.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetOutput(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Output = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Query
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetQuery(this AzureConsumptionUsageListSettings toolSettings, string query)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = query;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Query"/></em></p>
-        ///   <p>JMESPath query string. See <a href="http://jmespath.org/">http://jmespath.org/</a> for more information and examples.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetQuery(this AzureConsumptionUsageListSettings toolSettings)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Query = null;
-            return toolSettings;
-        }
-        #endregion
-        #region Verbose
-        /// <summary>
-        ///   <p><em>Sets <see cref="AzureConsumptionUsageListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings SetVerbose(this AzureConsumptionUsageListSettings toolSettings, string verbose)
-        {
-            toolSettings = toolSettings.NewInstance();
-            toolSettings.Verbose = verbose;
-            return toolSettings;
-        }
-        /// <summary>
-        ///   <p><em>Resets <see cref="AzureConsumptionUsageListSettings.Verbose"/></em></p>
-        ///   <p>Increase logging verbosity. Use --debug for full debug logs.</p>
-        /// </summary>
-        [Pure]
-        public static AzureConsumptionUsageListSettings ResetVerbose(this AzureConsumptionUsageListSettings toolSettings)
         {
             toolSettings = toolSettings.NewInstance();
             toolSettings.Verbose = null;
